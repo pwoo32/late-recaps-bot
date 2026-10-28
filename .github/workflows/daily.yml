@@ -87,6 +87,11 @@ jobs:
           fi
           chmod 600 "$d"/*.json 2>/dev/null || true
 
+      - name: Check YouTube download
+        continue-on-error: true
+        run: |
+          yt-dlp -v --simulate --skip-download "https://www.youtube.com/watch?v=jNQXAC9IVRw" 2>&1 | grep -iE "cookie|logged|login|po.?token|pot|sign in|error|player client|Downloading .*player|bot" | grep -viE "^\[debug\] (Command-line|Encodings|Python|exe|Optional|Proxy|Request Handlers|Plugin directories)" | head -40 || true
+
       - name: Check Claude sign-in
         continue-on-error: true
         run: |
