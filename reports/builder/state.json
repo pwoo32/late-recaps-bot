@@ -1,11 +1,11 @@
 {
  "source_weight": {
-  "jynxzi": 0.8,
-  "kai_cenat": 0.8
+  "jynxzi": 0.68,
+  "kai_cenat": 0.68
  },
  "slot_weight": {
-  "2": 0.8,
-  "21": 1.8
+  "2": 0.68,
+  "21": 2.28
  },
  "used_moments": [
   "L6S9Vb3RLy4@186",
@@ -21,7 +21,10 @@
   "93pD_wVjE9E@6",
   "uQlACpbi4WM@141",
   "uQlACpbi4WM@37",
-  "nJr3HD-fvaY@385"
+  "nJr3HD-fvaY@385",
+  "uQlACpbi4WM@89",
+  "nJr3HD-fvaY@65",
+  "KliV-V6SSF0@70"
  ],
  "queued": {
   "L6S9Vb3RLy4@186": {
@@ -99,6 +102,21 @@
    "title": "Kai Cenat Calls Out His Cameraman Siebe In Japan \ud83d\ude2d",
    "source": "kai_cenat",
    "post_utc": "2026-10-28 21:00"
+  },
+  "uQlACpbi4WM@89": {
+   "title": "Speed JEFFY \ud83e\udd2f",
+   "source": "ishowspeed",
+   "post_utc": "2026-10-29 08:00"
+  },
+  "nJr3HD-fvaY@65": {
+   "title": "Kai Cenat rip japanum Edit2:OMAYGASH THA \ud83e\udd2f",
+   "source": "kai_cenat",
+   "post_utc": "2026-10-28 21:00"
+  },
+  "KliV-V6SSF0@70": {
+   "title": "Speed look closely what is that kid doin \ud83e\udd2f",
+   "source": "ishowspeed",
+   "post_utc": "2026-10-29 04:00"
   }
  },
  "channel": "UCbK9EejOk5UVzI_l8F3f8kA",
@@ -107,8 +125,8 @@
   "@TheDiaryOfACEO": "UCGq-a57w-aPwyi3pW7XLiHw"
  },
  "review": {
-  "at": "2026-10-28 13:01",
-  "report": "C:\\Users\\pjwoo\\Documents\\clip-trend-agent\\reports\\review_2026-10-28_1301\\report.md",
+  "at": "2026-10-28 14:53",
+  "report": "/home/runner/work/late-recaps-bot/late-recaps-bot/reports/review_2026-10-28_1453/report.md",
   "lessons": {
    "titles": [
     "Creator name first, then the setup, never the result. Speed, Jynxzi and Adin all gave away the payoff in the title ('Red Card', 'Copper', 'Hang On').",
@@ -142,42 +160,42 @@
     "views": 0,
     "avg_viewed": null,
     "stayed": null,
-    "verdict": "The moment is clean and usable, but the cut is too long and the clip never got distributed (0 views after 107h), so the data says nothing about the moment itself."
+    "verdict": null
    },
    {
     "title": "Kai Cenat Tells Ray To Stay Behind Him In Japan \ud83d\ude2d\u2764\ufe0f\u200d\ud83e\ude79",
     "views": 0,
     "avg_viewed": null,
     "stayed": null,
-    "verdict": "Pull it or mute the slur. The premise only lands visually, and the audio has an unmuted n-word at the start."
+    "verdict": null
    },
    {
     "title": "Kai Cenat Meets Japan's Most Popular Dog \ud83d\udc15\ud83d\ude2d",
     "views": 1,
     "avg_viewed": null,
     "stayed": null,
-    "verdict": "Too much setup for a small payoff. Recut it to the last 15-20s, or skip moments like this."
+    "verdict": null
    },
    {
     "title": "Jynxzi Calls This Player Copper Off His Name Alone \ud83d\ude2d",
     "views": 1,
     "avg_viewed": null,
     "stayed": null,
-    "verdict": "Strong, cold-friendly premise wasted on a 53s cut and a title that gives the punchline away."
+    "verdict": null
    },
    {
     "title": "Speed Gets a Red Card Against Cole Palmer \ud83d\ude2d",
     "views": 15,
     "avg_viewed": null,
     "stayed": null,
-    "verdict": "Best pick on the channel (15 views, the only clip above 1), but the title spoils the result and the captions garble the stake."
+    "verdict": null
    },
    {
     "title": "Adin Watches YK Osiris Hang On Against Deshae \ud83d\ude2d\ud83e\udd4a",
     "views": 1,
     "avg_viewed": null,
     "stayed": null,
-    "verdict": "Set it to private now. It has repeated unmuted slurs and can't be cleaned without losing most of the audio."
+    "verdict": null
    }
   ]
  },

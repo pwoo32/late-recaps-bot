@@ -126,3 +126,31 @@ Traceback (most recent call last):
         error_details, response_data, retryable=retryable_error
     )
 google.auth.exceptions.RefreshError: ('invalid_grant: Token has been expired or revoked.', {'error': 'invalid_grant', 'error_description': 'Token has been expired or revoked.'})
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] uQlACpbi4WM: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] nJr3HD-fvaY: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] KliV-V6SSF0: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies
+Done. Report: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/track_2026-10-28_1453.md  (quota used: 2)
+[ishowspeed] reading recent streams/videos
+[kai_cenat] reading recent streams/videos
+[jynxzi] reading recent streams/videos
+[adin_ross] reading recent streams/videos
+[n3on] reading recent streams/videos
+Writing scripts...
+  [1] IShowSpeed at 44:38: writing from comments
+  [2] Kai Cenat at 32:47: writing from comments
+  [3] IShowSpeed at 35:04: writing from comments
+Writer claude-code failed (RuntimeError: {"duration_api_ms":0,"stop_reason":"stop_sequence","session_id":"062acc19-6e4e-4052-ab26-a3dd33b8426b","total_cost_usd":0,"usage":{"output_tokens_details":{"thinking_tokens":0},"input_tokens":0,"cache).
+No writer available: using templates (marked draft). See the top of script_agent.py for options.
+Done. Queue: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-10-28_1453/queue.md  (quota used: 48)
+[1] Speed JEFFY 🤯
+Downloading 44:04-44:56 of https://www.youtube.com/watch?v=uQlACpbi4WM
+  skipped: cutting failed (Command '['yt-dlp', '-q', '-f', 'bv*[height<=1080]+ba/b[height<=1080]/b', '--download-sections', '*2644-2696', '--force-keyframes-at-cuts', '--merge-output-format', 'mp4', '-o', '/home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-10-28_1453/clips/01_uQlACpbi4WM_89.source.mp4', 'https://www.youtube.com/watch?v=uQlACpbi4WM']' returned non-zero exit status 1.). Try the backups in queue.md.
+[2] Kai Cenat rip japanum Edit2:OMAYGASH THA 🤯
+Downloading 32:13-33:05 of https://www.youtube.com/watch?v=nJr3HD-fvaY
+  skipped: cutting failed (Command '['yt-dlp', '-q', '-f', 'bv*[height<=1080]+ba/b[height<=1080]/b', '--download-sections', '*1933-1985', '--force-keyframes-at-cuts', '--merge-output-format', 'mp4', '-o', '/home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-10-28_1453/clips/02_nJr3HD_fvaY_65.source.mp4', 'https://www.youtube.com/watch?v=nJr3HD-fvaY']' returned non-zero exit status 1.). Try the backups in queue.md.
+[3] Speed look closely what is that kid doin 🤯
+Downloading 34:30-35:22 of https://www.youtube.com/watch?v=KliV-V6SSF0
+  skipped: cutting failed (Command '['yt-dlp', '-q', '-f', 'bv*[height<=1080]+ba/b[height<=1080]/b', '--download-sections', '*2070-2122', '--force-keyframes-at-cuts', '--merge-output-format', 'mp4', '-o', '/home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-10-28_1453/clips/03_KliV_V6SSF0_70.source.mp4', 'https://www.youtube.com/watch?v=KliV-V6SSF0']' returned non-zero exit status 1.). Try the backups in queue.md.
