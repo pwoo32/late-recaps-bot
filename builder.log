@@ -209,3 +209,30 @@ Downloading 46:04-46:56 of https://www.youtube.com/watch?v=uQlACpbi4WM
 [3] Jynxzi Reacts To A Rocket League Play In Sus Clips 😭🎮
 Downloading 11:11-12:03 of https://www.youtube.com/watch?v=u0iATr7A5KM
   skipped: cutting failed (Command '['yt-dlp', '-q', '-f', 'bv*[height<=1080]+ba/b[height<=1080]/b', '--download-sections', '*671-723', '--force-keyframes-at-cuts', '--merge-output-format', 'mp4', '-o', '/home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-10-28_1529/clips/03_u0iATr7A5KM_23.source.mp4', 'https://www.youtube.com/watch?v=u0iATr7A5KM']' returned non-zero exit status 1.). Try the backups in queue.md.
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] uQlACpbi4WM: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] I14AJ40Jlzs: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] uQlACpbi4WM: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies
+Done. Report: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/track_2026-10-28_1540.md  (quota used: 2)
+[ishowspeed] reading recent streams/videos
+[kai_cenat] reading recent streams/videos
+[jynxzi] reading recent streams/videos
+[adin_ross] reading recent streams/videos
+[n3on] reading recent streams/videos
+Writing scripts...
+  [1] IShowSpeed at 48:19: writing from comments
+  [2] Kai Cenat at 9:13: writing from comments
+  [3] IShowSpeed at 7:25: writing from comments
+Scripts written by claude-code.
+Done. Queue: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-10-28_1540/queue.md  (quota used: 49)
+[1] Speed Hears A Whisper In The Haunted House 😨👀
+Downloading 47:45-48:37 of https://www.youtube.com/watch?v=uQlACpbi4WM
+  skipped: cutting failed (Command '['yt-dlp', '-q', '-f', 'bv*[height<=1080]+ba/b[height<=1080]/b', '--download-sections', '*2865-2917', '--force-keyframes-at-cuts', '--merge-output-format', 'mp4', '-o', '/home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-10-28_1540/clips/01_uQlACpbi4WM_96.source.mp4', 'https://www.youtube.com/watch?v=uQlACpbi4WM']' returned non-zero exit status 1.). Try the backups in queue.md.
+[2] Kai Cenat Floors It In A Japanese Sports Car 🚗😭
+Downloading 8:39-9:31 of https://www.youtube.com/watch?v=I14AJ40Jlzs
+  skipped: cutting failed (Command '['yt-dlp', '-q', '-f', 'bv*[height<=1080]+ba/b[height<=1080]/b', '--download-sections', '*519-571', '--force-keyframes-at-cuts', '--merge-output-format', 'mp4', '-o', '/home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-10-28_1540/clips/02_I14AJ40Jlzs_18.source.mp4', 'https://www.youtube.com/watch?v=I14AJ40Jlzs']' returned non-zero exit status 1.). Try the backups in queue.md.
+[3] Speed Reacts To The Ballon d'Or Winner Reveal 🏆😂
+Downloading 6:51-7:43 of https://www.youtube.com/watch?v=uQlACpbi4WM
+  skipped: cutting failed (Command '['yt-dlp', '-q', '-f', 'bv*[height<=1080]+ba/b[height<=1080]/b', '--download-sections', '*411-463', '--force-keyframes-at-cuts', '--merge-output-format', 'mp4', '-o', '/home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-10-28_1540/clips/03_uQlACpbi4WM_14.source.mp4', 'https://www.youtube.com/watch?v=uQlACpbi4WM']' returned non-zero exit status 1.). Try the backups in queue.md.
