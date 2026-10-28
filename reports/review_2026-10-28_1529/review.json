@@ -1,0 +1,260 @@
+{
+ "channel": {
+  "id": "UCbK9EejOk5UVzI_l8F3f8kA",
+  "title": "Late Recaps",
+  "subs": 0,
+  "views": 18,
+  "videos": 6
+ },
+ "clips": [
+  {
+   "id": "SqcY4ZfXFyI",
+   "title": "Jynxzi Reads Fan Mail About The Art Of Seduction 😭📚",
+   "age_h": 109.5,
+   "privacy": "public",
+   "seconds": 53,
+   "source": "jynxzi",
+   "views": 0,
+   "vph": 0.0,
+   "like_rate": null,
+   "comment_rate": null,
+   "avp": null,
+   "avd": null,
+   "shares": null,
+   "subs": null,
+   "stayed": null,
+   "hold_3s": null,
+   "end": null,
+   "feed_share": null,
+   "findings": [
+    {
+     "kind": "pick",
+     "text": "0.0x your median. Weak pick: the moment or the creator didn't land."
+    }
+   ]
+  },
+  {
+   "id": "fBGYZb4GhpM",
+   "title": "Kai Cenat Tells Ray To Stay Behind Him In Japan 😭❤️‍🩹",
+   "age_h": 114.5,
+   "privacy": "public",
+   "seconds": 53,
+   "source": "kai_cenat",
+   "views": 0,
+   "vph": 0.0,
+   "like_rate": null,
+   "comment_rate": null,
+   "avp": null,
+   "avd": null,
+   "shares": null,
+   "subs": null,
+   "stayed": null,
+   "hold_3s": null,
+   "end": null,
+   "feed_share": null,
+   "findings": [
+    {
+     "kind": "pick",
+     "text": "0.0x your median. Weak pick: the moment or the creator didn't land."
+    }
+   ]
+  },
+  {
+   "id": "VPsWXlECTvY",
+   "title": "Kai Cenat Meets Japan's Most Popular Dog 🐕😭",
+   "age_h": 118.5,
+   "privacy": "public",
+   "seconds": 53,
+   "source": "kai_cenat",
+   "views": 1,
+   "vph": 0.008440189251700054,
+   "like_rate": 0.0,
+   "comment_rate": 0.0,
+   "avp": null,
+   "avd": null,
+   "shares": null,
+   "subs": null,
+   "stayed": null,
+   "hold_3s": null,
+   "end": null,
+   "feed_share": null,
+   "findings": []
+  },
+  {
+   "id": "wEDoM1r7Dy8",
+   "title": "Jynxzi Calls This Player Copper Off His Name Alone 😭",
+   "age_h": 157.5,
+   "privacy": "public",
+   "seconds": 53,
+   "source": "jynxzi",
+   "views": 1,
+   "vph": 0.00634994863040482,
+   "like_rate": 0.0,
+   "comment_rate": 0.0,
+   "avp": null,
+   "avd": null,
+   "shares": null,
+   "subs": null,
+   "stayed": null,
+   "hold_3s": null,
+   "end": null,
+   "feed_share": null,
+   "findings": []
+  },
+  {
+   "id": "BI-meeVnMVE",
+   "title": "Speed Gets a Red Card Against Cole Palmer 😭",
+   "age_h": 162.5,
+   "privacy": "public",
+   "seconds": 53,
+   "source": "ishowspeed",
+   "views": 15,
+   "vph": 0.09231909881651347,
+   "like_rate": 0.0,
+   "comment_rate": 0.0,
+   "avp": null,
+   "avd": null,
+   "shares": null,
+   "subs": null,
+   "stayed": null,
+   "hold_3s": null,
+   "end": null,
+   "feed_share": null,
+   "findings": []
+  },
+  {
+   "id": "8IHtbKb9paU",
+   "title": "Adin Watches YK Osiris Hang On Against Deshae 😭🥊",
+   "age_h": 164.9,
+   "privacy": "public",
+   "seconds": 53,
+   "source": "adin_ross",
+   "views": 1,
+   "vph": 0.006064100368974118,
+   "like_rate": 0.0,
+   "comment_rate": 0.0,
+   "avp": null,
+   "avd": null,
+   "shares": null,
+   "subs": null,
+   "stayed": null,
+   "hold_3s": null,
+   "end": null,
+   "feed_share": null,
+   "findings": []
+  }
+ ],
+ "learned": {
+  "source_score": {},
+  "length_hint": null,
+  "title_style": [],
+  "settled": 6
+ },
+ "written": {
+  "clips": [
+   {
+    "video_id": "SqcY4ZfXFyI",
+    "verdict": "Dead at 0 views after 109h; a reading-a-letter bit is a slow setup that needs context a cold viewer lacks.",
+    "worked": "Narrator line states a clear, odd premise (a fan read a whole book on seduction to write a letter). Title names Jynxzi first.",
+    "hurt": "The hook 'WAIT FOR HIS LIFE ADVICE' is a mood label with no stake. The payoff is the advice itself, which depends on reading text aloud. 53s is too long for a letter. Narrator and hook both tease the same thing.",
+    "better_title": "Jynxzi Reads a Fan's Seduction Book Letter 📚😭",
+    "better_hook": "WHAT DID THE LETTER SAY?"
+   },
+   {
+    "video_id": "fBGYZb4GhpM",
+    "verdict": "Skip-class pick: a visual chase with crosstalk, and it shipped with an unmuted n-word. Fix or pull it.",
+    "worked": "The Kai and Ray pairing is the strongest asset in this niche (the top breakout is a Ray clip). The narrator states a simple stake.",
+    "hurt": "Fans following them is visual and noisy, so there is no spoken premise. The unmuted slur risks limited ads or strikes. 53s with trailing banter. The title gives no joke.",
+    "better_title": "Kai Cenat Promises to Keep Ray Safe in Japan 😭",
+    "better_hook": "CAN KAI PROTECT RAY?"
+   },
+   {
+    "video_id": "VPsWXlECTvY",
+    "verdict": "Trivia pick with a weak hook; the dog-lesson joke is buried.",
+    "worked": "Kai in Japan is a good source stream. The narrator line 'dog lesson' is a real hook for a joke.",
+    "hurt": "The title sells trivia ('Most Popular Dog'), not the joke. The hook asks a question the viewer can't care about before the payoff. Breed talk is crosstalk. 53s is too long for a dog bit.",
+    "better_title": "Kai Cenat Asks If This Dog Is Ever Sad 🐕😭",
+    "better_hook": "WHY IS THIS DOG SAD?"
+   },
+   {
+    "video_id": "wEDoM1r7Dy8",
+    "verdict": "Good premise (guess a rank from a name) but the title gives away the result and the clip has too much runway.",
+    "worked": "The narrator line is the best of the batch: a broken promise to overestimate, in one gamertag. The guessing format is a one-line premise.",
+    "hurt": "The title spoils 'Copper'. The hook 'HE JUDGED HIM BEFORE THE CLIP' is vague. It's 157h old, so it was competing with many other clippers. 53s is too long.",
+    "better_title": "Jynxzi Guesses a Player's Rank From His Name 😭",
+    "better_hook": "GUESS HIS RANK FROM HIS NAME"
+   },
+   {
+    "video_id": "BI-meeVnMVE",
+    "verdict": "Best of the set (15 views) because the Speed vs Palmer bet is a celebrity crossover with a clear stake. It is still tiny.",
+    "worked": "A Speed and athlete crossover with a stream-ending bet is a one-line premise anyone gets. The hook fits the stake.",
+    "hurt": "The title spoils 'Red Card'. The narrator ends on 'and then this happened', which is banned. 53s with banter after the payoff. 15 views means the problem is distribution.",
+    "better_title": "Speed Bets His Whole Stream on Beating Cole Palmer ⚽😭",
+    "better_hook": "IF PALMER SCORES, STREAM ENDS"
+   },
+   {
+    "video_id": "8IHtbKb9paU",
+    "verdict": "Pull or re-cut; it has an unmuted n-word and a weak, visual boxing moment.",
+    "worked": "The narrator joke ('boxing was hugging now') is funny and plain. Adin and a boxing event have an audience.",
+    "hurt": "The title and hook ('Hang On', 'REFUSED TO LET GO') give away the clinch. Source timestamp 12:45 of a long fight is mid-action with no spoken premise. The unmuted slur is an ad-suitability risk. 53s is far too long.",
+    "better_title": "Adin Ross Watches YK Osiris Try to Survive Round One 🥊😭",
+    "better_hook": "CAN HE SURVIVE THIS ROUND?"
+   }
+  ],
+  "lessons": {
+   "titles": [
+    "Creator name first, then the setup in plain verbs. Never put the result in the title (Red Card, Copper, Hang On).",
+    "Sell the joke, not the trivia: 'Asks If This Dog Is Ever Sad' beats 'Japan's Most Popular Dog'. Use 1-2 emoji at the end and claim only what the audio backs up.",
+    "Use names the audience searches for (Speed, Kai, Ray, Jynxzi). Keep titles under 60 characters."
+   ],
+   "hooks": [
+    "Write the hook as the stake or question the clip answers within 15s ('IF PALMER SCORES, STREAM ENDS'), never a mood label like 'WAIT FOR HIS LIFE ADVICE'.",
+    "The narrator states the promise and stops. Ban 'and then this happened'. If the narrator repeats the hook, cut one."
+   ],
+   "clip_picks": [
+    "Pick moments with a one-line spoken premise: a bet, guess, countdown or question. Speed and Kai crossovers with athletes or celebrities come first.",
+    "Skip visual-only moments and crosstalk (fans chasing Kai, breed talk, a boxing clinch). If the transcript is not funny read aloud, skip it.",
+    "Listen to the whole clip before cutting. If an n-word can't be muted without killing the payoff, skip the clip. Two of six shipped with one."
+   ],
+   "length_and_pacing": [
+    "Stop cutting every clip to 53s. Start ≤2s before the stake line and end ≤2s after the payoff. Most of these are 18-30s, and the breakouts are mostly 11-26s.",
+    "End on the payoff line and cut the trailing banter. A clean ending drives loops. Hand-fix burned-in captions on the key line."
+   ],
+   "posting": [
+    "Post 1-2 clips a day within hours of the stream. Clips cut from streams days old compete with hundreds of other clippers.",
+    "0-15 views with n/a analytics after 107-162h points to a distribution problem. Check that the channel isn't limited, that uploads are not duplicates of other clippers' videos, and that the Shorts feed is serving them, before judging picks.",
+    "After 48h, judge each clip on 3s retention and share of views from the Shorts feed, and only once Studio shows those numbers."
+   ]
+  },
+  "money": [
+   {
+    "idea": "Paid clipping campaigns beyond N3on",
+    "why": "The channel already makes Kai, Speed and Jynxzi clips with narrator hooks. Campaigns pay per view on approved clips, so they can earn before YPP, which is far off (18 of 10M Shorts views, 0 of 1000 subs).",
+    "first_step": "Read N3on's campaign rules (allowed sources, payout basis, content limits, whether n-words are banned). Submit 2 short re-cut clips that meet them. Then look for other creators' open clipping programs."
+   },
+   {
+    "idea": "Long-form compilations of one creator's best bets and guesses",
+    "why": "Speed bets and Jynxzi rank guesses are repeatable formats. Compilations of 8-10 min can collect watch time and subs that Shorts at 0 subs are not getting.",
+    "first_step": "After 5 clean Speed or Jynxzi clips are cut tight, assemble one 'every bet Speed lost this week' video and link it from the Shorts."
+   },
+   {
+    "idea": "Affiliate links for streamer-adjacent gear",
+    "why": "Viewers of Jynxzi's Rainbow Six clips care about gaming gear. Affiliate links in descriptions cost nothing and need no subscriber minimum, but they only pay once there are views.",
+    "first_step": "Sign up for one gaming-gear affiliate program, check its terms on channel size, and add a link to the Jynxzi R6 clip descriptions."
+   },
+   {
+    "idea": "Fan-funding and YPP later",
+    "why": "The lower fan-funding tier needs 500 subs and 3M Shorts views, so it's the first reachable milestone. It's not a near-term income source.",
+    "first_step": "Track subs and Shorts views weekly against 500 subs / 3M views, and add a pinned 'follow for same-day recaps' call to action on each clip."
+   }
+  ],
+  "next_actions": [
+   "Diagnose distribution first: confirm the channel has no restrictions, check Studio for impressions on each clip, and compare how the newest uploads are reaching people vs. Speed vs Palmer.",
+   "Pull or re-edit the Kai/Ray and Adin clips to mute the n-words, or delete them. Then re-check the other four for slurs.",
+   "Re-cut the Speed vs Palmer and Jynxzi rank clips to 18-30s, ending on the payoff, with new stake hooks and spoiler-free titles.",
+   "Set up a same-day pipeline: pick 1-2 Speed or Kai bet/guess/question moments from a live stream and post within hours.",
+   "Apply to the N3on campaign terms with two clean, tight clips and check what the payout rules require."
+  ]
+ },
+ "writer": "claude-code"
+}

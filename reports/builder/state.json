@@ -1,11 +1,11 @@
 {
  "source_weight": {
-  "jynxzi": 0.61,
-  "kai_cenat": 0.61
+  "jynxzi": 0.57,
+  "kai_cenat": 0.57
  },
  "slot_weight": {
-  "2": 0.61,
-  "21": 2.57
+  "2": 0.57,
+  "21": 2.74
  },
  "used_moments": [
   "L6S9Vb3RLy4@186",
@@ -27,7 +27,10 @@
   "KliV-V6SSF0@70",
   "uQlACpbi4WM@64",
   "uQlACpbi4WM@144",
-  "NC3U-BGFK00@52"
+  "NC3U-BGFK00@52",
+  "uQlACpbi4WM@118",
+  "uQlACpbi4WM@93",
+  "u0iATr7A5KM@23"
  ],
  "queued": {
   "L6S9Vb3RLy4@186": {
@@ -135,6 +138,21 @@
    "title": "Kai Cenat wtf \ud83e\udd2f",
    "source": "kai_cenat",
    "post_utc": "2026-10-29 04:00"
+  },
+  "uQlACpbi4WM@118": {
+   "title": "Speed Tells Everyone This Haunted House Is Fake \ud83d\udc7b\ud83d\ude2d",
+   "source": "ishowspeed",
+   "post_utc": "2026-10-28 21:00"
+  },
+  "uQlACpbi4WM@93": {
+   "title": "Speed Sees Orbs Flying Around The Haunted House \ud83d\udc7b\ud83d\ude33",
+   "source": "ishowspeed",
+   "post_utc": "2026-10-29 08:00"
+  },
+  "u0iATr7A5KM@23": {
+   "title": "Jynxzi Reacts To A Rocket League Play In Sus Clips \ud83d\ude2d\ud83c\udfae",
+   "source": "jynxzi",
+   "post_utc": "2026-10-29 04:00"
   }
  },
  "channel": "UCbK9EejOk5UVzI_l8F3f8kA",
@@ -143,31 +161,31 @@
   "@TheDiaryOfACEO": "UCGq-a57w-aPwyi3pW7XLiHw"
  },
  "review": {
-  "at": "2026-10-28 15:06",
-  "report": "/home/runner/work/late-recaps-bot/late-recaps-bot/reports/review_2026-10-28_1506/report.md",
+  "at": "2026-10-28 15:29",
+  "report": "/home/runner/work/late-recaps-bot/late-recaps-bot/reports/review_2026-10-28_1529/report.md",
   "lessons": {
    "titles": [
-    "Creator name first, then the setup, never the result. Speed, Jynxzi and Adin all gave away the payoff in the title ('Red Card', 'Copper', 'Hang On').",
-    "Sell the joke, not the trivia. 'Asks If This Dog Is Ever Sad' beats 'Japan's Most Popular Dog'. Plain verbs, 1-2 emoji at the end, and only claims the audio backs up."
+    "Creator name first, then the setup in plain verbs. Never put the result in the title (Red Card, Copper, Hang On).",
+    "Sell the joke, not the trivia: 'Asks If This Dog Is Ever Sad' beats 'Japan's Most Popular Dog'. Use 1-2 emoji at the end and claim only what the audio backs up.",
+    "Use names the audience searches for (Speed, Kai, Ray, Jynxzi). Keep titles under 60 characters."
    ],
    "hooks": [
-    "Write the hook as the question or stake the clip answers within 15s ('IF PALMER SCORES, STREAM ENDS', 'GUESS HIS RANK FROM HIS NAME'), never a mood label.",
-    "The narrator states the promise and stops. Ban 'and then this happened' and any line that hints at the punchline. If the narrator line repeats the hook text, cut one of them."
+    "Write the hook as the stake or question the clip answers within 15s ('IF PALMER SCORES, STREAM ENDS'), never a mood label like 'WAIT FOR HIS LIFE ADVICE'.",
+    "The narrator states the promise and stops. Ban 'and then this happened'. If the narrator repeats the hook, cut one."
    ],
    "clip_picks": [
-    "Pick moments whose premise is one spoken line a cold viewer gets: a bet, a guess, a countdown, a question. Athlete or celebrity crossovers with Speed and Kai first. The Speed vs. Palmer clip is the only one that got any views.",
-    "Listen to the full clip before cutting. Two of these six clips (Kai/Ray and Adin) shipped with unmuted n-words. If a slur can't be muted without killing the payoff, skip the clip.",
-    "Skip moments that only work visually or depend on crosstalk (fans chasing Kai, breed talk). If the transcript doesn't make sense read out loud, a scroller won't get it either."
+    "Pick moments with a one-line spoken premise: a bet, guess, countdown or question. Speed and Kai crossovers with athletes or celebrities come first.",
+    "Skip visual-only moments and crosstalk (fans chasing Kai, breed talk, a boxing clinch). If the transcript is not funny read aloud, skip it.",
+    "Listen to the whole clip before cutting. If an n-word can't be muted without killing the payoff, skip the clip. Two of six shipped with one."
    ],
    "length_and_pacing": [
-    "All six clips are exactly 53s, which looks like a template, not an edit. Cut each clip to its own length: start \u22642s before the stake line, end \u22642s after the payoff. Most of these come out at 18-30s.",
-    "Every clip has 15-25s of trailing banter after the payoff. Ending on the payoff line ('That's a wrap', 'already taken', 'GG's') is what drives loops.",
-    "Hand-fix burned-in captions on the key line whenever the speech is fast or slurred."
+    "Stop cutting every clip to 53s. Start \u22642s before the stake line and end \u22642s after the payoff. Most of these are 18-30s, and the breakouts are mostly 11-26s.",
+    "End on the payoff line and cut the trailing banter. A clean ending drives loops. Hand-fix burned-in captions on the key line."
    ],
    "posting": [
-    "Six clips at 0-15 views with n/a analytics across the board after 107-162h is a distribution problem, not just a clip problem. Fix that before judging any pick.",
-    "Post 1-2 clips a day, within hours of the stream, so you catch people searching for it. Clips from streams days old compete with hundreds of other clippers.",
-    "After 48h, judge each clip on 3s retention and share of views from the Shorts feed, and only once Studio actually shows those numbers."
+    "Post 1-2 clips a day within hours of the stream. Clips cut from streams days old compete with hundreds of other clippers.",
+    "0-15 views with n/a analytics after 107-162h points to a distribution problem. Check that the channel isn't limited, that uploads are not duplicates of other clippers' videos, and that the Shorts feed is serving them, before judging picks.",
+    "After 48h, judge each clip on 3s retention and share of views from the Shorts feed, and only once Studio shows those numbers."
    ]
   },
   "source_score": {},
@@ -178,42 +196,42 @@
     "views": 0,
     "avg_viewed": null,
     "stayed": null,
-    "verdict": null
+    "verdict": "Dead at 0 views after 109h; a reading-a-letter bit is a slow setup that needs context a cold viewer lacks."
    },
    {
     "title": "Kai Cenat Tells Ray To Stay Behind Him In Japan \ud83d\ude2d\u2764\ufe0f\u200d\ud83e\ude79",
     "views": 0,
     "avg_viewed": null,
     "stayed": null,
-    "verdict": null
+    "verdict": "Skip-class pick: a visual chase with crosstalk, and it shipped with an unmuted n-word. Fix or pull it."
    },
    {
     "title": "Kai Cenat Meets Japan's Most Popular Dog \ud83d\udc15\ud83d\ude2d",
     "views": 1,
     "avg_viewed": null,
     "stayed": null,
-    "verdict": null
+    "verdict": "Trivia pick with a weak hook; the dog-lesson joke is buried."
    },
    {
     "title": "Jynxzi Calls This Player Copper Off His Name Alone \ud83d\ude2d",
     "views": 1,
     "avg_viewed": null,
     "stayed": null,
-    "verdict": null
+    "verdict": "Good premise (guess a rank from a name) but the title gives away the result and the clip has too much runway."
    },
    {
     "title": "Speed Gets a Red Card Against Cole Palmer \ud83d\ude2d",
     "views": 15,
     "avg_viewed": null,
     "stayed": null,
-    "verdict": null
+    "verdict": "Best of the set (15 views) because the Speed vs Palmer bet is a celebrity crossover with a clear stake. It is still tiny."
    },
    {
     "title": "Adin Watches YK Osiris Hang On Against Deshae \ud83d\ude2d\ud83e\udd4a",
     "views": 1,
     "avg_viewed": null,
     "stayed": null,
-    "verdict": null
+    "verdict": "Pull or re-cut; it has an unmuted n-word and a weak, visual boxing moment."
    }
   ]
  },
