@@ -106,7 +106,7 @@ jobs:
       - name: Build, cut and post
         run: |
           if [ -z "$ANTHROPIC_API_KEY" ]; then unset ANTHROPIC_API_KEY; fi
-          python channel_builder.py run --publish --niche streamer 2>&1 | tee -a builder.log; exit ${PIPESTATUS[0]}
+          python channel_builder.py run --publish --niche streamer 2>&1 | tee -a builder.log "$RUNNER_TEMP/run.log"; exit ${PIPESTATUS[0]}
 
       - name: Keep TikTok sign-in
         if: always()
@@ -127,7 +127,7 @@ jobs:
       - name: Warn if YouTube cookies expired   # fails the run so GitHub emails you
         if: always()
         run: |
-          if tail -300 builder.log | grep -qE "confirm you.re not a bot|cookies are no longer valid"; then
+          if grep -qE "confirm you.re not a bot|cookies are no longer valid" "$RUNNER_TEMP/run.log" 2>/dev/null; then
             echo "::error::YouTube cookies expired. Export fresh ones from a private Zen window and save them as YT_COOKIES."
             exit 1
           fi
