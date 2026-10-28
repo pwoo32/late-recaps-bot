@@ -1,0 +1,128 @@
+Done. Report: C:\Users\pjwoo\Documents\clip-trend-agent\reports\builder\track_2026-10-22_1300.md  (quota used: 2)
+[ishowspeed] reading recent streams/videos
+[kai_cenat] reading recent streams/videos
+[jynxzi] reading recent streams/videos
+[adin_ross] reading recent streams/videos
+[n3on] reading recent streams/videos
+Writing scripts...
+  [1] Kai Cenat at 6:09: writing from comments
+  [2] Kai Cenat at 23:46: writing from comments
+  [3] IShowSpeed at 1:20:55: writing from comments
+Scripts written by claude-code.
+Done. Queue: C:\Users\pjwoo\Documents\clip-trend-agent\reports\builder\daily_2026-10-22_1300\queue.md  (quota used: 57)
+pip install google-api-python-client google-auth-oauthlib
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+Done. Report: C:\Users\pjwoo\Documents\clip-trend-agent\reports\builder\track_2026-10-23_1300.md  (quota used: 2)
+[ishowspeed] reading recent streams/videos
+[kai_cenat] reading recent streams/videos
+[jynxzi] reading recent streams/videos
+[adin_ross] reading recent streams/videos
+[n3on] reading recent streams/videos
+Writing scripts...
+  [1] Kai Cenat at 1:15:36: writing from captions (162 words)
+  [2] Kai Cenat at 1:05:28: writing from captions (138 words)
+  [3] Jynxzi at 3:17: writing from comments
+Scripts written by claude-code.
+Done. Queue: C:\Users\pjwoo\Documents\clip-trend-agent\reports\builder\daily_2026-10-23_1300\queue.md  (quota used: 56)
+[1] Kai Cenat Gets A Surprise Bodyguard In Japan 😭
+Downloading 1:15:02-1:15:54 of https://www.youtube.com/watch?v=O82vadtsKZE
+Transcribing with whisper small.en (first run downloads the model)...
+Re-writing the script from what's actually said in the clip...
+  [1] Kai Cenat at 1:15:36: writing from transcript (98 words)
+Scripts written by claude-code.
+Done. Video: C:\Users\pjwoo\Documents\clip-trend-agent\reports\builder\daily_2026-10-23_1300\clips\01_O82vadtsKZE_151.mp4
+Title/description: C:\Users\pjwoo\Documents\clip-trend-agent\reports\builder\daily_2026-10-23_1300\clips\01_O82vadtsKZE_151.txt
+  uploaded https://youtube.com/shorts/fBGYZb4GhpM (goes public Fri 05:00 PM ET)
+[2] Kai Cenat Can't Handle Sari's Energy In Japan 😭
+Downloading 1:04:54-1:05:46 of https://www.youtube.com/watch?v=O82vadtsKZE
+Transcribing with whisper small.en (first run downloads the model)...
+Re-writing the script from what's actually said in the clip...
+  [2] Kai Cenat at 1:05:28: writing from transcript (133 words)
+Scripts written by claude-code.
+Done. Video: C:\Users\pjwoo\Documents\clip-trend-agent\reports\builder\daily_2026-10-23_1300\clips\02_O82vadtsKZE_130.mp4
+Title/description: C:\Users\pjwoo\Documents\clip-trend-agent\reports\builder\daily_2026-10-23_1300\clips\02_O82vadtsKZE_130.txt
+  uploaded https://youtube.com/shorts/VPsWXlECTvY (goes public Fri 01:00 PM ET)
+[3] Jynxzi Opens His Craziest Fan Mail Yet 😭
+Downloading 2:43-3:35 of https://www.youtube.com/watch?v=93pD_wVjE9E
+Transcribing with whisper small.en (first run downloads the model)...
+Re-writing the script from what's actually said in the clip...
+  [3] Jynxzi at 3:17: writing from transcript (110 words)
+Scripts written by claude-code.
+Done. Video: C:\Users\pjwoo\Documents\clip-trend-agent\reports\builder\daily_2026-10-23_1300\clips\03_93pD_wVjE9E_6.mp4
+Title/description: C:\Users\pjwoo\Documents\clip-trend-agent\reports\builder\daily_2026-10-23_1300\clips\03_93pD_wVjE9E_6.txt
+  uploaded https://youtube.com/shorts/SqcY4ZfXFyI (goes public Fri 10:00 PM ET)
+  TikTok: [1] draft in your TikTok inbox. Open the notification, paste this caption, post:
+    Kai Cenat Tells Ray To Stay Behind Him In Japan 😭❤️‍🩹 #kaicenat #ray #fyp
+  TikTok: [2] draft in your TikTok inbox. Open the notification, paste this caption, post:
+    Kai Cenat Meets Japan's Most Popular Dog 🐕😭 #kaicenat #funny #fyp
+  TikTok: [3] draft in your TikTok inbox. Open the notification, paste this caption, post:
+    Jynxzi Reads Fan Mail About The Art Of Seduction 😭📚 #jynxzi #funny #fyp
+[streamer] searching: streamer clips
+[streamer] searching: kai cenat
+[streamer] searching: ishowspeed
+[streamer] searching: twitch clips
+Fetching stats for 186 videos
+Fetching subscriber counts for 86 channels
+Done. Report: C:\Users\pjwoo\Documents\clip-trend-agent\reports\2026-10-28_1301\report.md
+searching: streamer clips
+searching: kai cenat
+searching: ishowspeed
+searching: twitch clips
+60 candidate channels
+Done. Report: C:\Users\pjwoo\Documents\clip-trend-agent\reports\channels_streamer_2026-10-28_1301\report.md
+Done. Report: C:\Users\pjwoo\Documents\clip-trend-agent\reports\builder\track_2026-10-28_1301.md  (quota used: 2)
+[ishowspeed] reading recent streams/videos
+[kai_cenat] reading recent streams/videos
+[jynxzi] reading recent streams/videos
+[adin_ross] reading recent streams/videos
+[n3on] reading recent streams/videos
+Writing scripts...
+  [1] IShowSpeed at 1:10:57: writing from captions (102 words)
+  [2] IShowSpeed at 18:55: writing from captions (224 words)
+  [3] Kai Cenat at 3:12:50: writing from captions (170 words)
+Scripts written by claude-code.
+Done. Queue: C:\Users\pjwoo\Documents\clip-trend-agent\reports\builder\daily_2026-10-28_1302\queue.md  (quota used: 69)
+Traceback (most recent call last):
+  File "C:\Users\pjwoo\Documents\clip-trend-agent\channel_builder.py", line 1133, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\pjwoo\Documents\clip-trend-agent\channel_builder.py", line 1127, in main
+    {"plan": cmd_plan, "daily": cmd_daily, "track": cmd_track, "run": cmd_run, "cut": cmd_cut,
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     "publish": cmd_publish, "auth": cmd_auth,
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     "tiktok-auth": cmd_tiktok_auth}[args.cmd](args)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\pjwoo\Documents\clip-trend-agent\channel_builder.py", line 681, in cmd_run
+    cmd_publish(argparse.Namespace(queue=None, ids=None, layout="crop43", whisper="small.en", voice=args.voice,
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                   skip_gate=False))
+                                   ^^^^^^^^^^^^^^^^^
+  File "C:\Users\pjwoo\Documents\clip-trend-agent\channel_builder.py", line 1005, in cmd_publish
+    api = youtube_uploader()
+  File "C:\Users\pjwoo\Documents\clip-trend-agent\channel_builder.py", line 893, in youtube_uploader
+    creds.refresh(Request())
+    ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\pjwoo\AppData\Roaming\Python\Python314\site-packages\google\auth\credentials.py", line 519, in refresh
+    self._perform_refresh_token(request)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\pjwoo\AppData\Roaming\Python\Python314\site-packages\google\oauth2\credentials.py", line 437, in _perform_refresh_token
+    ) = reauth.refresh_grant(
+        ~~~~~~~~~~~~~~~~~~~~^
+        request,
+        ^^^^^^^^
+    ...<6 lines>...
+        enable_reauth_refresh=self._enable_reauth_refresh,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\pjwoo\AppData\Roaming\Python\Python314\site-packages\google\oauth2\reauth.py", line 367, in refresh_grant
+    _client._handle_error_response(response_data, retryable_error)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pjwoo\AppData\Roaming\Python\Python314\site-packages\google\oauth2\_client.py", line 75, in _handle_error_response
+    raise exceptions.RefreshError(
+        error_details, response_data, retryable=retryable_error
+    )
+google.auth.exceptions.RefreshError: ('invalid_grant: Token has been expired or revoked.', {'error': 'invalid_grant', 'error_description': 'Token has been expired or revoked.'})

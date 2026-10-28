@@ -1,0 +1,9 @@
+requests>=2.31
+yt-dlp>=2026.8
+faster-whisper>=1.2
+anthropic>=1.0
+pydantic>=2
+edge-tts>=7
+google-api-python-client>=2.150
+google-auth-oauthlib>=1.2
+tzdata

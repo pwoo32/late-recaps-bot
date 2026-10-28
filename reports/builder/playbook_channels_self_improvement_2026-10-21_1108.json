@@ -1,0 +1,372 @@
+{
+ "study_run": "channels_self_improvement_2026-10-21_1108",
+ "median_seconds": 23,
+ "length": [
+  {
+   "bucket": "0-15s",
+   "videos": 140,
+   "channels": 7,
+   "median_views": 109075,
+   "median_lift": 0.95
+  },
+  {
+   "bucket": "15-30s",
+   "videos": 158,
+   "channels": 8,
+   "median_views": 226304,
+   "median_lift": 1.09
+  },
+  {
+   "bucket": "30-45s",
+   "videos": 37,
+   "channels": 8,
+   "median_views": 533944,
+   "median_lift": 0.82
+  },
+  {
+   "bucket": "45-60s",
+   "videos": 68,
+   "channels": 5,
+   "median_views": 284033,
+   "median_lift": 0.96
+  },
+  {
+   "bucket": "60-90s",
+   "videos": 25,
+   "channels": 3,
+   "median_views": 649754,
+   "median_lift": 0.64
+  },
+  {
+   "bucket": "90-180s",
+   "videos": 70,
+   "channels": 3,
+   "median_views": 1240790,
+   "median_lift": 1.2
+  }
+ ],
+ "cadence_median": 1.495,
+ "cadence_p75": 1.965,
+ "top_hours": [
+  [
+   18,
+   1.8838152490840716
+  ],
+  [
+   5,
+   1.4718971246929635
+  ],
+  [
+   7,
+   1.1768112529347803
+  ],
+  [
+   14,
+   1.119758232665351
+  ]
+ ],
+ "hashtags": [
+  [
+   "#selfimprovement",
+   486
+  ],
+  [
+   "#mindset",
+   451
+  ],
+  [
+   "#motivation",
+   449
+  ],
+  [
+   "#discipline",
+   428
+  ],
+  [
+   "#shorts",
+   221
+  ],
+  [
+   "#grind",
+   213
+  ],
+  [
+   "#mindsetminute",
+   212
+  ],
+  [
+   "#success",
+   194
+  ],
+  [
+   "#mindsetmatters",
+   189
+  ],
+  [
+   "#youtubeshorts",
+   137
+  ],
+  [
+   "#motivationalquotes",
+   101
+  ],
+  [
+   "#quotes",
+   96
+  ]
+ ],
+ "hooks": [
+  [
+   "wait for the",
+   5
+  ],
+  [
+   "wait for bro's",
+   3
+  ],
+  [
+   "when brain meet",
+   2
+  ],
+  [
+   "when instant karma",
+   2
+  ],
+  [
+   "when one small",
+   2
+  ],
+  [
+   "janitor vs the",
+   2
+  ],
+  [
+   "when it comes",
+   2
+  ],
+  [
+   "define aura \ud83d\udc80",
+   2
+  ]
+ ],
+ "title_chars": 83,
+ "title_cmp": {
+  "emoji": [
+   0.84,
+   0.87
+  ],
+  "question": [
+   0.0,
+   0.01
+  ],
+  "exclaim": [
+   0.0,
+   0.02
+  ],
+  "number": [
+   0.06,
+   0.05
+  ],
+  "quote": [
+   0.0,
+   0.0
+  ],
+  "pipe_or_dash": [
+   0.09,
+   0.12
+  ]
+ },
+ "sources": [
+  [
+   "kindness",
+   7
+  ],
+  [
+   "instant",
+   6
+  ],
+  [
+   "husbandwife",
+   6
+  ],
+  [
+   "impossible",
+   6
+  ],
+  [
+   "daughter",
+   6
+  ],
+  [
+   "brother",
+   6
+  ],
+  [
+   "karma",
+   6
+  ],
+  [
+   "hacker",
+   5
+  ],
+  [
+   "strength",
+   5
+  ],
+  [
+   "define aura",
+   5
+  ],
+  [
+   "teamwork",
+   5
+  ],
+  [
+   "mistake",
+   4
+  ],
+  [
+   "insane",
+   4
+  ],
+  [
+   "focus",
+   4
+  ],
+  [
+   "krishna",
+   4
+  ]
+ ],
+ "winners": [
+  {
+   "title": "When Brain Meet Money \ud83e\udde0\ud83d\udcb8 : #selfimprovement #mindset #grind #brain #money",
+   "views": 26938797,
+   "lift": 648.7,
+   "seconds": 25,
+   "channel": "ZONE90-YT"
+  },
+  {
+   "title": "Blessed By God \ud83d\ude4c\u2764\ufe0f #motivation #discipline #selfimprovement #god #faith #shorts",
+   "views": 22608365,
+   "lift": 457.4,
+   "seconds": 36,
+   "channel": "Brave Thinker "
+  },
+  {
+   "title": "They Attacked The One Who Saved Them \ud83e\udd37\ud83d\udc80 #mindset #selfimprovement #motivation #discipline",
+   "views": 26483645,
+   "lift": 257.1,
+   "seconds": 18,
+   "channel": "Zenix Phonk "
+  },
+  {
+   "title": "When instant karma 10x \ud83d\uddff\u26a1: #selfimprovement #mindset #mindsetminute #grind #karma #instant",
+   "views": 5053956,
+   "lift": 121.7,
+   "seconds": 11,
+   "channel": "ZONE90-YT"
+  },
+  {
+   "title": "Manners \ud83e\udd7a #old #selfrespect #respect #lifelessons #girlpower #girl #emotional #youtubeshorts #shorts",
+   "views": 13204230,
+   "lift": 113.8,
+   "seconds": 59,
+   "channel": "Nibha editz...."
+  },
+  {
+   "title": "#edit",
+   "views": 2657280,
+   "lift": 64.0,
+   "seconds": 15,
+   "channel": "ZONE90-YT"
+  },
+  {
+   "title": "Covered By God \u2694\ufe0f #motivation #discipline #god #selfimprovement #mindset",
+   "views": 2893064,
+   "lift": 58.5,
+   "seconds": 24,
+   "channel": "Brave Thinker "
+  },
+  {
+   "title": "Dogesh Aura Day by day  \ud83d\udcc8\ud83d\udc80 #mindset #selfimprovement #motivation #discipline",
+   "views": 5388316,
+   "lift": 52.3,
+   "seconds": 11,
+   "channel": "Zenix Phonk "
+  },
+  {
+   "title": "Raise your sons better \ud83d\udc94 #respectwomen #mother #son #staysafe #lifelessons #emotional #yt #shorts",
+   "views": 5198480,
+   "lift": 44.8,
+   "seconds": 59,
+   "channel": "Nibha editz...."
+  },
+  {
+   "title": "When you haert's is clear Everyone Love you \ud83d\udc95: #selfimprovement #mindset #mindsetminute #grind",
+   "views": 1789548,
+   "lift": 43.1,
+   "seconds": 11,
+   "channel": "ZONE90-YT"
+  },
+  {
+   "title": "Wait for the Marketing. \u2620\ufe0f\ud83d\udd25 #motivation #success #mindset #discipline #selfimprovement",
+   "views": 30933178,
+   "lift": 42.8,
+   "seconds": 24,
+   "channel": "Beyond4verage"
+  },
+  {
+   "title": "Toxic friend \ud83e\udd7a #emotional #friends #friendship #girl #selfrespect #brothersister #shorts #yt",
+   "views": 4605979,
+   "lift": 39.7,
+   "seconds": 59,
+   "channel": "Nibha editz...."
+  }
+ ],
+ "young_channels": [
+  {
+   "name": "Zenix Phonk ",
+   "age_months": 8.4,
+   "median_views": 103018,
+   "views_30d": 52635334,
+   "uploads_per_day": 1.47
+  },
+  {
+   "name": "ZONE90-YT",
+   "age_months": 3.0,
+   "median_views": 41523,
+   "views_30d": 43400897,
+   "uploads_per_day": 2.94
+  },
+  {
+   "name": "Beyond4verage",
+   "age_months": 4.9,
+   "median_views": 721897,
+   "views_30d": 37449174,
+   "uploads_per_day": 1.35
+  },
+  {
+   "name": "Bizo Fan",
+   "age_months": 5.6,
+   "median_views": 261661,
+   "views_30d": 37172466,
+   "uploads_per_day": 2.06
+  },
+  {
+   "name": "Brave Thinker ",
+   "age_months": 4.8,
+   "median_views": 49389,
+   "views_30d": 31478047,
+   "uploads_per_day": 2.92
+  },
+  {
+   "name": "BIZO MOMENTS ",
+   "age_months": 5.4,
+   "median_views": 36752,
+   "views_30d": 18585034,
+   "uploads_per_day": 0.88
+  }
+ ],
+ "benchmark_median_views": 46614
+}

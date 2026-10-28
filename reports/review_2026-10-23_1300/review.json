@@ -1,0 +1,158 @@
+{
+ "channel": {
+  "id": "UCbK9EejOk5UVzI_l8F3f8kA",
+  "title": "Late Recaps",
+  "subs": 0,
+  "views": 2,
+  "videos": 2
+ },
+ "clips": [
+  {
+   "id": "wEDoM1r7Dy8",
+   "title": "Jynxzi Calls This Player Copper Off His Name Alone 😭",
+   "age_h": 35.0,
+   "privacy": "public",
+   "seconds": 53,
+   "source": "jynxzi",
+   "views": 0,
+   "vph": 0.0,
+   "like_rate": null,
+   "comment_rate": null,
+   "avp": null,
+   "avd": null,
+   "shares": null,
+   "subs": null,
+   "stayed": null,
+   "hold_3s": null,
+   "end": null,
+   "feed_share": null,
+   "findings": []
+  },
+  {
+   "id": "BI-meeVnMVE",
+   "title": "Speed Gets a Red Card Against Cole Palmer 😭",
+   "age_h": 40.0,
+   "privacy": "public",
+   "seconds": 53,
+   "source": "ishowspeed",
+   "views": 1,
+   "vph": 0.025005052221833194,
+   "like_rate": 0.0,
+   "comment_rate": 0.0,
+   "avp": null,
+   "avd": null,
+   "shares": null,
+   "subs": null,
+   "stayed": null,
+   "hold_3s": null,
+   "end": null,
+   "feed_share": null,
+   "findings": []
+  },
+  {
+   "id": "8IHtbKb9paU",
+   "title": "Adin Watches YK Osiris Hang On Against Deshae 😭🥊",
+   "age_h": 42.4,
+   "privacy": "public",
+   "seconds": 53,
+   "source": "adin_ross",
+   "views": 1,
+   "vph": 0.023575498770402235,
+   "like_rate": 0.0,
+   "comment_rate": 0.0,
+   "avp": null,
+   "avd": null,
+   "shares": null,
+   "subs": null,
+   "stayed": null,
+   "hold_3s": null,
+   "end": null,
+   "feed_share": null,
+   "findings": []
+  }
+ ],
+ "learned": {
+  "source_score": {},
+  "length_hint": null,
+  "title_style": [],
+  "settled": 3
+ },
+ "written": {
+  "clips": [
+   {
+    "video_id": "wEDoM1r7Dy8",
+    "verdict": "Too early to judge at 35h, but 0 views means the Shorts feed hasn't tested it yet. Check in Studio before blaming the clip.",
+    "worked": "Strong premise for a cold viewer: a streamer calls someone a rank off their gamertag alone. It lands in one line with no context. Jynxzi's 'promised to overestimate' setup is a real contradiction the clip pays off within about 10s.",
+    "hurt": "The title says 'Copper' and the narrator says 'lasted one gamertag', so the punchline is gone before it plays. The clip runs 53s, and everything after 'you're a copper player' (lag check, CS:GO joke) is trailing banter. It should end on the copper line at roughly 25s.",
+    "better_title": "Jynxzi Ranks a Viewer Off His Gamertag Alone 😭",
+    "better_hook": "HE PROMISED TO OVERESTIMATE EVERYONE"
+   },
+   {
+    "video_id": "BI-meeVnMVE",
+    "verdict": "Too early to judge at 40h, and 1 view means it hasn't been tested. This is the best premise of the three, but the packaging gives it away.",
+    "worked": "Speed plus a Premier League star is the top pairing in this niche. 'If he scores, I'm ending my stream' is a concrete stake said on camera in the first seconds.",
+    "hurt": "'Gets a Red Card' gives away the twist, and 'and then this happened' is filler. The audio is fast and slurred ('his bone god', 'the saber'), so the burned-in captions need fixing by hand. 'GG's... I've been doing years' after the red card is dead air. End within 2s of 'why do I have a red card?'",
+    "better_title": "Speed Bets His Whole Stream Against Cole Palmer ⚽😳",
+    "better_hook": "IF PALMER SCORES, STREAM ENDS"
+   },
+   {
+    "video_id": "8IHtbKb9paU",
+    "verdict": "Don't judge this one. Set it to private now, because the audio has an unbleeped racial slur and repeated profanity.",
+    "worked": "A celebrity boxing event with a clear survival countdown ('20 seconds left', '10 seconds') is a stake the clip can pay off.",
+    "hurt": "The audio includes the n-word and 'pussy' yelled several times. That risks restrictions and makes the channel look bad to monetization reviewers. The first ~15s is breath and pore trash talk with no stake. The title and hook ('hang on', 'refused to let go') are mood labels, and the narrator line explains the joke. If you re-cut it, start at '20 seconds left', end at 'That's a wrap', and mute every slur.",
+    "better_title": "Adin Watches YK Osiris Try to Survive Deshae 🥊😳",
+    "better_hook": "CAN OSIRIS LAST 20 MORE SECONDS?"
+   }
+  ],
+  "lessons": {
+   "titles": [
+    "Creator name first, then the setup, never the result: 'Speed Bets His Whole Stream...' instead of '...Gets a Red Card', and 'Ranks a Viewer Off His Gamertag' instead of 'Calls Him Copper'.",
+    "Use plain verbs and 1-2 emoji at the end, like 'Speed Found The Next Mbappé🤣🥶'. Only claim what the audio shows."
+   ],
+   "hooks": [
+    "The hook is a stake or countdown the clip pays off ('IF PALMER SCORES, STREAM ENDS', 'CAN OSIRIS LAST 20 MORE SECONDS?'), not a mood label ('HE REFUSED TO LET GO', 'HE JUDGED HIM BEFORE THE CLIP').",
+    "The narrator states the promise and stops. Ban 'and then this happened' and any line that hints at the punchline ('lasted one gamertag', 'decided boxing was hugging')."
+   ],
+   "clip_picks": [
+    "Pick moments where the premise is one spoken line a cold viewer gets: a bet, a rank guess, a countdown. Speed and athlete or celebrity crossovers come first.",
+    "Listen to the full audio before cutting. Skip the clip, or mute every slur, when it can't be cleaned; the Adin clip should never have gone out as-is.",
+    "Prefer moments with a 5-15s gap between setup and payoff. 7 of the 10 breakouts run 11-26s."
+   ],
+   "length_and_pacing": [
+    "Aim for 20-35s. All three clips are 53s, and each has 15-25s of trailing banter after the payoff.",
+    "Start no more than 2s before the line that sets the stake, and end within 2s of the payoff line (the copper call, the red card, 'That's a wrap').",
+    "Fix burned-in captions by hand when speech is fast or slurred. Speed's clip garbles its key line."
+   ],
+   "posting": [
+    "At 0-1 views after 35-42h, the clips have probably not been put in front of the feed at all. Before posting more, rule out a restriction, copyright claim, 'made for kids' setting, or the clip not being classed as a Short.",
+    "Post 1-2 clips a day, within hours of the stream, while people are searching for it. One post a day over three days gives the algorithm too little to test.",
+    "Judge each clip after 48h on 3s retention and share of views from the Shorts feed, not on raw views."
+   ]
+  },
+  "money": [
+   {
+    "idea": "Paid clipping campaigns (N3on first)",
+    "why": "They pay per view without YPP or subscribers, and the channel already makes this exact format: streamer moment, hook text, short runtime. That's the fastest money while you're at 0/500 subs.",
+    "first_step": "Read the N3on campaign's rules (length, required tags or watermark, banned content, payout threshold). Post 2-3 N3on clips that follow the 20-35s, stake-hook rules and log their views against the payout terms."
+   },
+   {
+    "idea": "Weekly long-form recap ('The Week's Biggest Stream Moments')",
+    "why": "It reuses the clips you already cut, and the channel name 'Late Recaps' fits it. Long-form watch hours also count toward YPP, and a Shorts viewer has a reason to subscribe.",
+    "first_step": "Once you have 8-10 cleaned Shorts, stitch them into an 8-12 minute video with narrator transitions. Link it from each Short's related-video field."
+   },
+   {
+    "idea": "Shopping/affiliate links once fan-funding YPP unlocks",
+    "why": "Gaming clips (Jynxzi, R6) and Speed's football content fit gaming gear and football products. YouTube Shopping only becomes available at the 500-sub tier, so this comes later.",
+    "first_step": "Don't apply now. Keep a list of products creators visibly use in clips that perform well, so you can tag them once you're eligible."
+   }
+  ],
+  "next_actions": [
+   "In YouTube Studio, check each of the three videos for copyright claims, restrictions, the 'made for kids' setting, and whether it's listed as a Short. 0-1 views at 35-42h points to a distribution block, not a weak clip.",
+   "Set the Adin/YK Osiris clip (8IHtbKb9paU) to private. Only re-post it if it's re-cut to the 20s-to-'That's a wrap' window with every slur muted.",
+   "Re-cut the Speed and Jynxzi clips to 20-35s, with the new titles and hooks, hand-fixed captions, and setup-only narrator lines. They have 0-1 views, so a fresh upload costs nothing; set the old versions to private so you don't have duplicates.",
+   "Post 1-2 new clips a day within hours of the source streams, leading with Speed and athlete or celebrity crossovers.",
+   "Sign up for the N3on clipping campaign and post the first compliant clips this week."
+  ]
+ },
+ "writer": "claude-code"
+}

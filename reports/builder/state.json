@@ -1,0 +1,220 @@
+{
+ "source_weight": {
+  "jynxzi": 0.8,
+  "kai_cenat": 0.8
+ },
+ "slot_weight": {
+  "2": 0.8,
+  "21": 1.8
+ },
+ "used_moments": [
+  "L6S9Vb3RLy4@186",
+  "EliIBflaMrk@25",
+  "38WQcaorWv0@9",
+  "GlaSnROMqRY@18",
+  "zB6PhTxnj7U@261",
+  "80OHGI174Vg@12",
+  "80OHGI174Vg@47",
+  "L6S9Vb3RLy4@161",
+  "O82vadtsKZE@151",
+  "O82vadtsKZE@130",
+  "93pD_wVjE9E@6",
+  "uQlACpbi4WM@141",
+  "uQlACpbi4WM@37",
+  "nJr3HD-fvaY@385"
+ ],
+ "queued": {
+  "L6S9Vb3RLy4@186": {
+   "title": "Speed Gets a Red Card Against Cole Palmer \ud83d\ude2d",
+   "source": "ishowspeed",
+   "post_utc": "2026-10-21 21:00",
+   "video_id": "BI-meeVnMVE"
+  },
+  "EliIBflaMrk@25": {
+   "title": "Adin Watches YK Osiris Hang On Against Deshae \ud83d\ude2d\ud83e\udd4a",
+   "source": "adin_ross",
+   "post_utc": "2026-10-21 17:00",
+   "video_id": "8IHtbKb9paU"
+  },
+  "38WQcaorWv0@9": {
+   "title": "Jynxzi Calls This Player Copper Off His Name Alone \ud83d\ude2d",
+   "source": "jynxzi",
+   "post_utc": "2026-10-22 02:00",
+   "video_id": "wEDoM1r7Dy8"
+  },
+  "GlaSnROMqRY@18": {
+   "title": "Steven Bartlett Hears How Dying Patients Start Seeing Visions \ud83d\udd4a\ufe0f",
+   "source": "diary_of_a_ceo",
+   "post_utc": "2026-10-21 18:00"
+  },
+  "zB6PhTxnj7U@261": {
+   "title": "Chris Williamson Cracks Up At Fat Electrician's Vietnamese Story \ud83d\ude02",
+   "source": "modern_wisdom",
+   "post_utc": "2026-10-22 05:00"
+  },
+  "80OHGI174Vg@12": {
+   "title": "Kai Cenat Meets A Fan From Taiwan In Japan \ud83d\ude2d\ud83e\udd23",
+   "source": "kai_cenat",
+   "post_utc": "2026-10-22 21:00"
+  },
+  "80OHGI174Vg@47": {
+   "title": "Kai Cenat Can't Believe The Cars In Tokyo \ud83d\ude97\ud83e\udd2f",
+   "source": "kai_cenat",
+   "post_utc": "2026-10-22 17:00"
+  },
+  "L6S9Vb3RLy4@161": {
+   "title": "Speed Swears Cole Palmer Got Better In One Game \ud83d\ude2d\ud83e\udd76",
+   "source": "ishowspeed",
+   "post_utc": "2026-10-23 02:00"
+  },
+  "O82vadtsKZE@151": {
+   "title": "Kai Cenat Tells Ray To Stay Behind Him In Japan \ud83d\ude2d\u2764\ufe0f\u200d\ud83e\ude79",
+   "source": "kai_cenat",
+   "post_utc": "2026-10-23 21:00",
+   "video_id": "fBGYZb4GhpM"
+  },
+  "O82vadtsKZE@130": {
+   "title": "Kai Cenat Meets Japan's Most Popular Dog \ud83d\udc15\ud83d\ude2d",
+   "source": "kai_cenat",
+   "post_utc": "2026-10-23 17:00",
+   "video_id": "VPsWXlECTvY"
+  },
+  "93pD_wVjE9E@6": {
+   "title": "Jynxzi Reads Fan Mail About The Art Of Seduction \ud83d\ude2d\ud83d\udcda",
+   "source": "jynxzi",
+   "post_utc": "2026-10-24 02:00",
+   "video_id": "SqcY4ZfXFyI"
+  },
+  "uQlACpbi4WM@141": {
+   "title": "Speed Refuses To Get Left Hanging By A Stranger \ud83d\ude2d",
+   "source": "ishowspeed",
+   "post_utc": "2026-10-29 08:00"
+  },
+  "uQlACpbi4WM@37": {
+   "title": "Speed Asks For The Rules Of The Haunted House \ud83d\udc7b\ud83d\ude33",
+   "source": "ishowspeed",
+   "post_utc": "2026-10-29 04:00"
+  },
+  "nJr3HD-fvaY@385": {
+   "title": "Kai Cenat Calls Out His Cameraman Siebe In Japan \ud83d\ude2d",
+   "source": "kai_cenat",
+   "post_utc": "2026-10-28 21:00"
+  }
+ },
+ "channel": "UCbK9EejOk5UVzI_l8F3f8kA",
+ "handles": {
+  "@ChrisWillx": "UCIaH-gZIVC432YRjNVvnyCA",
+  "@TheDiaryOfACEO": "UCGq-a57w-aPwyi3pW7XLiHw"
+ },
+ "review": {
+  "at": "2026-10-28 13:01",
+  "report": "C:\\Users\\pjwoo\\Documents\\clip-trend-agent\\reports\\review_2026-10-28_1301\\report.md",
+  "lessons": {
+   "titles": [
+    "Creator name first, then the setup, never the result. Speed, Jynxzi and Adin all gave away the payoff in the title ('Red Card', 'Copper', 'Hang On').",
+    "Sell the joke, not the trivia. 'Asks If This Dog Is Ever Sad' beats 'Japan's Most Popular Dog'. Plain verbs, 1-2 emoji at the end, and only claims the audio backs up."
+   ],
+   "hooks": [
+    "Write the hook as the question or stake the clip answers within 15s ('IF PALMER SCORES, STREAM ENDS', 'GUESS HIS RANK FROM HIS NAME'), never a mood label.",
+    "The narrator states the promise and stops. Ban 'and then this happened' and any line that hints at the punchline. If the narrator line repeats the hook text, cut one of them."
+   ],
+   "clip_picks": [
+    "Pick moments whose premise is one spoken line a cold viewer gets: a bet, a guess, a countdown, a question. Athlete or celebrity crossovers with Speed and Kai first. The Speed vs. Palmer clip is the only one that got any views.",
+    "Listen to the full clip before cutting. Two of these six clips (Kai/Ray and Adin) shipped with unmuted n-words. If a slur can't be muted without killing the payoff, skip the clip.",
+    "Skip moments that only work visually or depend on crosstalk (fans chasing Kai, breed talk). If the transcript doesn't make sense read out loud, a scroller won't get it either."
+   ],
+   "length_and_pacing": [
+    "All six clips are exactly 53s, which looks like a template, not an edit. Cut each clip to its own length: start \u22642s before the stake line, end \u22642s after the payoff. Most of these come out at 18-30s.",
+    "Every clip has 15-25s of trailing banter after the payoff. Ending on the payoff line ('That's a wrap', 'already taken', 'GG's') is what drives loops.",
+    "Hand-fix burned-in captions on the key line whenever the speech is fast or slurred."
+   ],
+   "posting": [
+    "Six clips at 0-15 views with n/a analytics across the board after 107-162h is a distribution problem, not just a clip problem. Fix that before judging any pick.",
+    "Post 1-2 clips a day, within hours of the stream, so you catch people searching for it. Clips from streams days old compete with hundreds of other clippers.",
+    "After 48h, judge each clip on 3s retention and share of views from the Shorts feed, and only once Studio actually shows those numbers."
+   ]
+  },
+  "source_score": {},
+  "length_hint": null,
+  "clips": [
+   {
+    "title": "Jynxzi Reads Fan Mail About The Art Of Seduction \ud83d\ude2d\ud83d\udcda",
+    "views": 0,
+    "avg_viewed": null,
+    "stayed": null,
+    "verdict": "The moment is clean and usable, but the cut is too long and the clip never got distributed (0 views after 107h), so the data says nothing about the moment itself."
+   },
+   {
+    "title": "Kai Cenat Tells Ray To Stay Behind Him In Japan \ud83d\ude2d\u2764\ufe0f\u200d\ud83e\ude79",
+    "views": 0,
+    "avg_viewed": null,
+    "stayed": null,
+    "verdict": "Pull it or mute the slur. The premise only lands visually, and the audio has an unmuted n-word at the start."
+   },
+   {
+    "title": "Kai Cenat Meets Japan's Most Popular Dog \ud83d\udc15\ud83d\ude2d",
+    "views": 1,
+    "avg_viewed": null,
+    "stayed": null,
+    "verdict": "Too much setup for a small payoff. Recut it to the last 15-20s, or skip moments like this."
+   },
+   {
+    "title": "Jynxzi Calls This Player Copper Off His Name Alone \ud83d\ude2d",
+    "views": 1,
+    "avg_viewed": null,
+    "stayed": null,
+    "verdict": "Strong, cold-friendly premise wasted on a 53s cut and a title that gives the punchline away."
+   },
+   {
+    "title": "Speed Gets a Red Card Against Cole Palmer \ud83d\ude2d",
+    "views": 15,
+    "avg_viewed": null,
+    "stayed": null,
+    "verdict": "Best pick on the channel (15 views, the only clip above 1), but the title spoils the result and the captions garble the stake."
+   },
+   {
+    "title": "Adin Watches YK Osiris Hang On Against Deshae \ud83d\ude2d\ud83e\udd4a",
+    "views": 1,
+    "avg_viewed": null,
+    "stayed": null,
+    "verdict": "Set it to private now. It has repeated unmuted slurs and can't be cleaned without losing most of the audio."
+   }
+  ]
+ },
+ "own_results": [
+  {
+   "title": "Jynxzi Reads Fan Mail About The Art Of Seduction \ud83d\ude2d\ud83d\udcda",
+   "views": 0,
+   "lift": 0.0
+  },
+  {
+   "title": "Kai Cenat Tells Ray To Stay Behind Him In Japan \ud83d\ude2d\u2764\ufe0f\u200d\ud83e\ude79",
+   "views": 0,
+   "lift": 0.0
+  },
+  {
+   "title": "Kai Cenat Meets Japan's Most Popular Dog \ud83d\udc15\ud83d\ude2d",
+   "views": 1,
+   "lift": 1.0
+  },
+  {
+   "title": "Jynxzi Calls This Player Copper Off His Name Alone \ud83d\ude2d",
+   "views": 1,
+   "lift": 1.0
+  },
+  {
+   "title": "Speed Gets a Red Card Against Cole Palmer \ud83d\ude2d",
+   "views": 15,
+   "lift": 15.0
+  },
+  {
+   "title": "Adin Watches YK Osiris Hang On Against Deshae \ud83d\ude2d\ud83e\udd4a",
+   "views": 1,
+   "lift": 1.0
+  }
+ ],
+ "tiktok": {
+  "enabled": true,
+  "mode": "inbox"
+ }
+}

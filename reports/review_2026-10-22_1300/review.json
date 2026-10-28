@@ -1,0 +1,171 @@
+{
+ "channel": {
+  "id": "UCbK9EejOk5UVzI_l8F3f8kA",
+  "title": "Late Recaps",
+  "subs": 0,
+  "views": 0,
+  "videos": 3
+ },
+ "clips": [
+  {
+   "id": "wEDoM1r7Dy8",
+   "title": "Jynxzi Calls This Player Copper Off His Name Alone 😭",
+   "age_h": 11.0,
+   "privacy": "public",
+   "seconds": 53,
+   "source": "jynxzi",
+   "views": 0,
+   "vph": 0.0,
+   "like_rate": null,
+   "comment_rate": null,
+   "avp": null,
+   "avd": null,
+   "shares": null,
+   "subs": null,
+   "stayed": null,
+   "hold_3s": null,
+   "end": null,
+   "feed_share": null,
+   "findings": [
+    {
+     "kind": "info",
+     "text": "Only 11h old; judge it after 48h."
+    }
+   ]
+  },
+  {
+   "id": "BI-meeVnMVE",
+   "title": "Speed Gets a Red Card Against Cole Palmer 😭",
+   "age_h": 16.0,
+   "privacy": "public",
+   "seconds": 53,
+   "source": "ishowspeed",
+   "views": 1,
+   "vph": 0.06253134923213147,
+   "like_rate": 0.0,
+   "comment_rate": 0.0,
+   "avp": null,
+   "avd": null,
+   "shares": null,
+   "subs": null,
+   "stayed": null,
+   "hold_3s": null,
+   "end": null,
+   "feed_share": null,
+   "findings": [
+    {
+     "kind": "info",
+     "text": "Only 16h old; judge it after 48h."
+    }
+   ]
+  },
+  {
+   "id": "8IHtbKb9paU",
+   "title": "Adin Watches YK Osiris Hang On Against Deshae 😭🥊",
+   "age_h": 18.4,
+   "privacy": "public",
+   "seconds": 53,
+   "source": "adin_ross",
+   "views": 1,
+   "vph": 0.054297722804219656,
+   "like_rate": 0.0,
+   "comment_rate": 0.0,
+   "avp": null,
+   "avd": null,
+   "shares": null,
+   "subs": null,
+   "stayed": null,
+   "hold_3s": null,
+   "end": null,
+   "feed_share": null,
+   "findings": [
+    {
+     "kind": "info",
+     "text": "Only 18h old; judge it after 48h."
+    }
+   ]
+  }
+ ],
+ "learned": {
+  "source_score": {},
+  "length_hint": null,
+  "title_style": [],
+  "settled": 0
+ },
+ "written": {
+  "clips": [
+   {
+    "video_id": "wEDoM1r7Dy8",
+    "verdict": "Too early to judge at 11h. Of the three, this one has the strongest premise, but the cut is too long.",
+    "worked": "The 'copper off your name alone' line works with no context, and the narrator sets up the promise to overestimate that the line breaks. That's the right job for the narrator: set the stakes, then let the streamer pay them off.",
+    "hurt": "The hook 'HE JUDGED HIM BEFORE THE CLIP' is vague. The narrator also gives away the twist ('lasted one gamertag') before Jynxzi says it. After the payoff there are about 20s of lag and CS:GO banter, which weakens it. It should end at about 25s, right after 'you're a copper player'. At 48h, check whether 3s retention is above about 70%. If it is, the premise is working and the length is the problem.",
+    "better_title": "Jynxzi Calls Him Copper Off His Gamertag Alone 😭",
+    "better_hook": "HE SWORE HE'D OVERESTIMATE EVERYONE"
+   },
+   {
+    "video_id": "BI-meeVnMVE",
+    "verdict": "Too early to judge at 16h. This is the clip that best fits the niche (Speed plus a celebrity athlete), but the title gives the twist away.",
+    "worked": "The pick is right: Speed vs Cole Palmer is the kind of crossover that leads the breakout list. The stake (he ends the stream if Palmer scores) is concrete and gets stated in the first seconds.",
+    "hurt": "The title gives away the red card, so there's no reason to wait for it. 'And then this happened' is filler. The burned-in captions are garbled ('bone god', 'the saber'), which loses viewers watching on mute. The clip trails off after 'GG's' with no payoff. At 48h, compare the share of views from the Shorts feed and retention at the end against the Jynxzi clip.",
+    "better_title": "Speed Bets His Stream On Cole Palmer Not Scoring ⚽😭",
+    "better_hook": "IF PALMER SCORES, STREAM ENDS"
+   },
+   {
+    "video_id": "8IHtbKb9paU",
+    "verdict": "Don't wait for analytics on this one. It has an unbleeped slur and repeated profanity in the audio, so make it private and recut it.",
+    "worked": "The countdown structure is strong ('they might call the fight', '20 seconds left', '10 seconds'). The narrator's 'decided boxing was hugging now' is the funniest written line on the channel.",
+    "hurt": "An unbleeped slur can get the video limited, and it's a liability once you apply for YPP. The first ~10s ('your breath stinks', 'your pores') is unrelated trash talk. 'HE REFUSED TO LET GO' doesn't promise anything the viewer can watch for. The end is chaotic yelling. Recut it as roughly 25s: start at 'I think he's hurt', run through the countdown, end at 'That's a wrap', and mute the slurs.",
+    "better_title": "Adin Ross Watches YK Osiris Survive Deshae Frost 🥊😭",
+    "better_hook": "CAN OSIRIS LAST 20 MORE SECONDS?"
+   }
+  ],
+  "lessons": {
+   "titles": [
+    "Put the creator first, describe the setup, and hide the twist. 'Speed Bets His Stream...' works; '...Gets a Red Card' gives the moment away.",
+    "Use plain verbs plus 1-2 emoji, like the breakout titles ('Speed Found The Next Mbappé🤣🥶'). Only claim what the audio shows."
+   ],
+   "hooks": [
+    "Make the hook a concrete stake or a countdown the clip pays off ('IF PALMER SCORES, STREAM ENDS'), not a mood label ('HE REFUSED TO LET GO').",
+    "The narrator states the promise or setup and never the result. Cut filler like 'and then this happened' and lines that give the joke away ('lasted one gamertag')."
+   ],
+   "clip_picks": [
+    "Pick moments where the premise lands in one line with no context (a rank guess off a gamertag, a stream-ending bet). Speed and celebrity/athlete crossovers lead this niche.",
+    "Listen to the full audio before posting. Mute or bleep slurs, or skip the clip, because ad-revenue channels can't keep posting them."
+   ],
+   "length_and_pacing": [
+    "All three clips are 53s, while 7 of the 10 breakouts are 11-26s. Aim for 20-35s.",
+    "Start no more than 2s before the first line that matters and end within about 2s of the payoff. Trailing banter (Jynxzi's CS:GO joke, Speed's 'GG's', Adin's yelling) is where viewers leave.",
+    "Fix the burned-in captions by hand when the speech is fast or slurred. A garbled caption is a reason to swipe on mute."
+   ],
+   "posting": [
+    "Post within hours of the stream, while people are searching for it. Speed of posting matters more than the time slot.",
+    "At 0-1 views after 11-18h, the Shorts feed likely hasn't tested these clips yet. Check in Studio that each one is a Short with no restrictions, then post daily so there's something to test. Judge each clip on 3s retention and share of views from the feed after 48h."
+   ]
+  },
+  "money": [
+   {
+    "idea": "Paid clipping campaign for N3on",
+    "why": "Campaigns pay for views now, with no subscriber minimum. YPP is far off at 0/500 subs. The channel already makes streamer moment clips in the format these campaigns want, and it's the fastest income open to it.",
+    "first_step": "Find N3on's official campaign listing and read the rules (allowed platforms, length, required tags). Then post 1-2 N3on clips a day following them while you keep up the regular uploads."
+   },
+   {
+    "idea": "Cross-post the same cuts to TikTok and Instagram Reels",
+    "why": "Campaign payouts and early reach often count views from several platforms. The same 20-35s cuts work there with no extra editing, which multiplies views from every clip you make.",
+    "first_step": "Create 'Late Recaps' accounts on TikTok and Instagram this week and post every recut there on the same day it goes up on YouTube."
+   },
+   {
+    "idea": "YPP fan funding, then Shorts ad revenue share",
+    "why": "These are the long-term payouts, but the channel has 0/500 subs. Every clip with a slur makes approval harder, so keeping the uploads clean now protects this later.",
+    "first_step": "Before applying, go through every upload and mute, recut or make private any clip with slurs. Start with the Adin clip."
+   }
+  ],
+  "next_actions": [
+   "Make the Adin/YK Osiris clip private and recut it to about 25s ('I think he's hurt' → 'That's a wrap') with the slurs muted and the hook 'CAN OSIRIS LAST 20 MORE SECONDS?'.",
+   "In Studio, check that all three clips are registered as Shorts and have no restrictions or copyright claims. That's the likely reason for 0-1 views.",
+   "Change the Speed clip's title to 'Speed Bets His Stream On Cole Palmer Not Scoring ⚽😭' and fix its captions. Cut the Jynxzi clip to end at the copper line (~25s) and use the cut for TikTok/Reels.",
+   "Post 1-2 clips of 20-35s every day, each within hours of the stream, ideally Speed or celebrity crossovers.",
+   "Sign up for the N3on clipping campaign and post the first clip that meets its rules this week."
+  ]
+ },
+ "writer": "claude-code"
+}

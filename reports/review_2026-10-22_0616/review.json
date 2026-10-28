@@ -1,0 +1,175 @@
+{
+ "channel": {
+  "id": "UCbK9EejOk5UVzI_l8F3f8kA",
+  "title": "Late Recaps",
+  "subs": 0,
+  "views": 0,
+  "videos": 3
+ },
+ "clips": [
+  {
+   "id": "wEDoM1r7Dy8",
+   "title": "Jynxzi Calls This Player Copper Off His Name Alone 😭",
+   "age_h": 4.3,
+   "privacy": "public",
+   "seconds": 53,
+   "source": "jynxzi",
+   "views": 0,
+   "vph": 0.0,
+   "like_rate": null,
+   "comment_rate": null,
+   "avp": null,
+   "avd": null,
+   "shares": null,
+   "subs": null,
+   "stayed": null,
+   "hold_3s": null,
+   "end": null,
+   "feed_share": null,
+   "findings": [
+    {
+     "kind": "info",
+     "text": "Only 4h old; judge it after 48h."
+    }
+   ]
+  },
+  {
+   "id": "BI-meeVnMVE",
+   "title": "Speed Gets a Red Card Against Cole Palmer 😭",
+   "age_h": 9.3,
+   "privacy": "public",
+   "seconds": 53,
+   "source": "ishowspeed",
+   "views": 1,
+   "vph": 0.10798952053170364,
+   "like_rate": 0.0,
+   "comment_rate": 0.0,
+   "avp": null,
+   "avd": null,
+   "shares": null,
+   "subs": null,
+   "stayed": null,
+   "hold_3s": null,
+   "end": null,
+   "feed_share": null,
+   "findings": [
+    {
+     "kind": "info",
+     "text": "Only 9h old; judge it after 48h."
+    }
+   ]
+  },
+  {
+   "id": "8IHtbKb9paU",
+   "title": "Adin Watches YK Osiris Hang On Against Deshae 😭🥊",
+   "age_h": 11.7,
+   "privacy": "public",
+   "seconds": 53,
+   "source": "adin_ross",
+   "views": 1,
+   "vph": 0.08557864752920868,
+   "like_rate": 0.0,
+   "comment_rate": 0.0,
+   "avp": null,
+   "avd": null,
+   "shares": null,
+   "subs": null,
+   "stayed": null,
+   "hold_3s": null,
+   "end": null,
+   "feed_share": null,
+   "findings": [
+    {
+     "kind": "info",
+     "text": "Only 12h old; judge it after 48h."
+    }
+   ]
+  }
+ ],
+ "learned": {
+  "source_score": {},
+  "length_hint": null,
+  "title_style": [],
+  "settled": 0
+ },
+ "written": {
+  "clips": [
+   {
+    "video_id": "wEDoM1r7Dy8",
+    "verdict": "Too early to judge at 4h. A good premise is buried under 10+ seconds of setup. After 48h, check how many viewers are still watching at 3s.",
+    "worked": "A clean premise anyone gets without context: ranking someone 'off the gamertag alone'. There's a second punchline too ('This is not CSGO'). The narrator line sets up the irony (he promised to overestimate and broke that promise right away), which the clip's own setup otherwise takes about 8 seconds to do.",
+    "hurt": "The narrator and the transcript say the same thing twice ('overestimate' setup), so the copper line doesn't land until about 12s in. The title gives away the punchline before anyone plays the clip. 'HE JUDGED HIM BEFORE THE CLIP' is vague: 'the clip' could mean the video itself. At 53s it's about twice as long as most of the breakout Shorts listed (11-26s).",
+    "better_title": "Jynxzi Ranks a Viewer Copper Off His Gamertag Alone 😭",
+    "better_hook": "RANKED HIM BEFORE SEEING GAMEPLAY"
+   },
+   {
+    "video_id": "BI-meeVnMVE",
+    "verdict": "Too early to judge at 9h. This is the strongest pick of the three because the stakes are clear and the payoff is surprising. Check the 3s hold and the share of views from the Shorts feed after 48h.",
+    "worked": "Speed and a famous footballer is exactly what the niche's breakout Shorts look like (Speed shows up in 4 of the top 10). The hook 'HE SWORE HE'D END THE STREAM' sets real stakes, and the red card is a twist nobody expects.",
+    "hurt": "The title gives away the red card, which is the twist. The narrator's 'and then this happened' is filler. The transcript is a garbled rant, so captions need cleaning up or viewers lose the thread. The clip runs past the payoff ('GG's... I've been doing years') when it should end on the red-card reaction.",
+    "better_title": "Speed Bets His Stream on Cole Palmer, Then This 😭⚽",
+    "better_hook": "IF PALMER SCORES, STREAM ENDS"
+   },
+   {
+    "video_id": "8IHtbKb9paU",
+    "verdict": "Too early to judge at 12h, but this clip has a real risk on top of that: the audio has slurs and profanity left in. Find out whether YouTube limits it before posting more clips like it.",
+    "worked": "A named fight (Deshae Frost vs YK Osiris) has built-in interest. The narrator line ('decided boxing was hugging now') is the funniest writing on the channel so far.",
+    "hurt": "The first 10s is trash talk with no context. The actual tension ('they might call the fight', '10 seconds') arrives late. Unbleeped slurs make the clip less ad-friendly and can hurt its reach. The title doesn't name what happens. It's a watch-along, so viewers need the fight footage on screen, not just Adin's face.",
+    "better_title": "Adin Ross Watches YK Osiris Clinch Through the End 🥊😭",
+    "better_hook": "HE JUST WOULDN'T LET GO"
+   }
+  ],
+  "lessons": {
+   "titles": [
+    "Name the setup and hide the twist: tell viewers what's at stake ('bets his stream') but don't give away what happens ('gets red card').",
+    "Put the creator's name first, use plain verbs and 1-2 emoji, like the breakout titles ('Speed Found The Next Mbappé🤣🥶')."
+   ],
+   "hooks": [
+    "The hook should state a concrete stake or claim that the clip pays off ('IF PALMER SCORES, STREAM ENDS'), not a vague label ('HE REFUSED TO LET GO').",
+    "The narrator line must not repeat what the streamer says next. Use it to replace setup footage, then cut straight to the moment. Drop filler like 'and then this happened'."
+   ],
+   "clip_picks": [
+    "Pick moments where the premise lands in one line with no context needed (a gamertag guess, a stream-ending bet). Speed and celebrity/athlete crossovers lead the niche's breakouts.",
+    "Skip clips with slurs in the audio, or bleep and mute them before posting. Channels that earn ad revenue can't keep posting them."
+   ],
+   "length_and_pacing": [
+    "All three clips are 53s, while 7 of the 10 breakouts are 11-26s. Aim for 20-35s: start no more than 2s before the first line that matters and end within about 2s of the payoff.",
+    "Clean up the burned-in captions. Garbled transcripts like the one in the Speed clip lose viewers who watch on mute."
+   ],
+   "posting": [
+    "Posting times varied (18:35, 21:00, 02:00 UTC). Speed matters more than the time slot: post within hours of the stream, while people are searching for it.",
+    "Getting 0-1 views after 4-12h means the Shorts feed hasn't tested these clips yet. Check that each one is registered as a Short and has no restrictions in Studio, then post every day so the algorithm has something to test."
+   ]
+  },
+  "money": [
+   {
+    "idea": "Paid N3on clipping campaign",
+    "why": "It's the only income that doesn't need YPP, and these clips (streamer moments with a narrator hook) are the kind of content clipping campaigns pay for. It turns the channel's current output into money now, not after 1,000 subs.",
+    "first_step": "Pull up the N3on campaign's actual brief and check the rate, the minimum views, the account requirements and any banned content. Then post 3 N3on clips this week in the 20-35s format."
+   },
+   {
+    "idea": "YPP Shorts revenue (long-term)",
+    "why": "0/1000 subs and 2/10M views puts this a long way off. The bigger risk is getting rejected for reused content. Your original narrator lines and edits are what make these clips your own content, and they're your defense.",
+    "first_step": "Write a one-line original take for every clip, like the YK Osiris 'boxing was hugging now' line, not a recap. Keep the narrator in every clip."
+   },
+   {
+    "idea": "Long-form weekly recap compilations",
+    "why": "These creators stream every day, and a channel called 'Late Recaps' fits a weekly 'what you missed' video. Long-form watch hours also count toward YPP, and the extra effort makes it easier to argue the content is original.",
+    "first_step": "Once you have 15+ Shorts, cut a 8-10 minute 'Speed/Jynxzi week recap' from the same moments plus narrator transitions."
+   },
+   {
+    "idea": "Gaming gear affiliate links on Jynxzi/R6 clips",
+    "why": "Viewers of Rainbow Six clips are gamers, and linking gear in the pinned comment or description costs nothing to set up.",
+    "first_step": "Hold off until a clip gets traction. Once one does, sign up for an affiliate program you can verify (e.g. Amazon Associates) and pin a gear link on the gaming clips that perform best."
+   }
+  ],
+  "next_actions": [
+   "Open Studio for all 3 clips and check that each one is classified as a Short, has no restrictions or age limits, and is getting impressions from the Shorts feed. If you get under 50 views at 24h, it isn't being distributed.",
+   "Re-cut the Speed/Cole Palmer clip to about 25s: start on the 'if he scores, I'm ending my stream' line, end on the red-card reaction, fix the captions and post it under the new title and hook. Leave the original up.",
+   "Pull the N3on campaign brief and post 3 compliant N3on clips this week.",
+   "Post 1-2 Shorts a day, cut within hours of the stream, each 20-35s. Lean toward Speed and celebrity crossovers and one-line premises.",
+   "Bleep or skip clips with slurs from now on. Re-check the YK Osiris clip's ad status at 48h before choosing more Adin watch-along clips."
+  ]
+ },
+ "writer": "claude-code"
+}

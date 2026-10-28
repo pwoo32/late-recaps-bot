@@ -1,0 +1,96 @@
+# Daily run in the cloud: review yesterday's clips, refresh the trend/channel reports when stale, build the
+# queue, write scripts, cut, upload to YouTube and send to TikTok. Same steps as run_daily.cmd on the PC.
+name: Late Recaps daily
+
+on:
+  schedule:
+    - cron: "0 13 * * *"   # 9 AM Eastern (8 AM in winter)
+  workflow_dispatch:
+
+concurrency: daily
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      PYTHONUTF8: "1"
+      CUDA_VISIBLE_DEVICES: "-1"
+      YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+      TIKTOK_CLIENT_KEY: ${{ secrets.TIKTOK_CLIENT_KEY }}
+      TIKTOK_CLIENT_SECRET: ${{ secrets.TIKTOK_CLIENT_SECRET }}
+      CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - uses: denoland/setup-deno@v2   # JavaScript runtime yt-dlp needs for YouTube
+        with:
+          deno-version: v2.x
+
+      - name: Install tools
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg fonts-liberation
+          pip install -q -r requirements.txt
+          npm install -g @anthropic-ai/claude-code   # script writer, runs on your Claude plan via CLAUDE_CODE_OAUTH_TOKEN
+
+      - name: Whisper model cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/clip-builder/whisper
+          key: whisper-small.en
+
+      - name: TikTok sign-in cache   # TikTok can hand out a new refresh token; the newest one is kept here
+        uses: actions/cache/restore@v4
+        with:
+          path: ~/.config/clip-builder/tiktok_token.json
+          key: tiktok-token-${{ github.run_id }}
+          restore-keys: tiktok-token-
+
+      - name: Sign-ins and cookies
+        env:
+          YOUTUBE_TOKEN: ${{ secrets.YOUTUBE_TOKEN }}
+          REVIEW_TOKEN: ${{ secrets.REVIEW_TOKEN }}
+          TIKTOK_TOKEN: ${{ secrets.TIKTOK_TOKEN }}
+          YT_COOKIES: ${{ secrets.YT_COOKIES }}
+        run: |
+          d=~/.config/clip-builder; mkdir -p "$d"
+          [ -n "$YOUTUBE_TOKEN" ] && printf '%s' "$YOUTUBE_TOKEN" > "$d/youtube_token.json"
+          [ -n "$REVIEW_TOKEN" ] && printf '%s' "$REVIEW_TOKEN" > "$d/review_token.json"
+          [ ! -f "$d/tiktok_token.json" ] && [ -n "$TIKTOK_TOKEN" ] && printf '%s' "$TIKTOK_TOKEN" > "$d/tiktok_token.json"
+          if [ -n "$YT_COOKIES" ]; then   # signed-in YouTube cookies, if downloads get bot-blocked
+            printf '%s' "$YT_COOKIES" > "$RUNNER_TEMP/cookies.txt"
+            mkdir -p ~/.config/yt-dlp && echo "--cookies $RUNNER_TEMP/cookies.txt" > ~/.config/yt-dlp/config
+          fi
+          chmod 600 "$d"/*.json 2>/dev/null || true
+
+      - name: Review agent
+        continue-on-error: true   # the pre-post check holds posting if the review didn't run
+        run: python review_agent.py 2>&1 | tee -a review.log
+
+      - name: Build, cut and post
+        run: python channel_builder.py run --publish --niche streamer 2>&1 | tee -a builder.log; exit ${PIPESTATUS[0]}
+
+      - name: Keep TikTok sign-in
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: ~/.config/clip-builder/tiktok_token.json
+          key: tiktok-token-${{ github.run_id }}
+
+      - name: Save reports and state
+        if: always()
+        run: |
+          git config user.name "late-recaps-bot"
+          git config user.email "late-recaps-bot@users.noreply.github.com"
+          git add -A reports builder.log review.log
+          git diff --cached --quiet || git commit -qm "Daily run $(date -u +%F)"
+          git push -q || (git pull -q --rebase && git push -q)
