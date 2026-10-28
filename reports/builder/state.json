@@ -1,11 +1,11 @@
 {
  "source_weight": {
-  "jynxzi": 0.68,
-  "kai_cenat": 0.68
+  "jynxzi": 0.61,
+  "kai_cenat": 0.61
  },
  "slot_weight": {
-  "2": 0.68,
-  "21": 2.28
+  "2": 0.61,
+  "21": 2.57
  },
  "used_moments": [
   "L6S9Vb3RLy4@186",
@@ -24,7 +24,10 @@
   "nJr3HD-fvaY@385",
   "uQlACpbi4WM@89",
   "nJr3HD-fvaY@65",
-  "KliV-V6SSF0@70"
+  "KliV-V6SSF0@70",
+  "uQlACpbi4WM@64",
+  "uQlACpbi4WM@144",
+  "NC3U-BGFK00@52"
  ],
  "queued": {
   "L6S9Vb3RLy4@186": {
@@ -117,6 +120,21 @@
    "title": "Speed look closely what is that kid doin \ud83e\udd2f",
    "source": "ishowspeed",
    "post_utc": "2026-10-29 04:00"
+  },
+  "uQlACpbi4WM@64": {
+   "title": "Speed Annabelle \ud83e\udd2f",
+   "source": "ishowspeed",
+   "post_utc": "2026-10-28 21:00"
+  },
+  "uQlACpbi4WM@144": {
+   "title": "Speed One more tip for speaking Indonesi \ud83e\udd2f",
+   "source": "ishowspeed",
+   "post_utc": "2026-10-29 08:00"
+  },
+  "NC3U-BGFK00@52": {
+   "title": "Kai Cenat wtf \ud83e\udd2f",
+   "source": "kai_cenat",
+   "post_utc": "2026-10-29 04:00"
   }
  },
  "channel": "UCbK9EejOk5UVzI_l8F3f8kA",
@@ -125,8 +143,8 @@
   "@TheDiaryOfACEO": "UCGq-a57w-aPwyi3pW7XLiHw"
  },
  "review": {
-  "at": "2026-10-28 14:53",
-  "report": "/home/runner/work/late-recaps-bot/late-recaps-bot/reports/review_2026-10-28_1453/report.md",
+  "at": "2026-10-28 15:06",
+  "report": "/home/runner/work/late-recaps-bot/late-recaps-bot/reports/review_2026-10-28_1506/report.md",
   "lessons": {
    "titles": [
     "Creator name first, then the setup, never the result. Speed, Jynxzi and Adin all gave away the payoff in the title ('Red Card', 'Copper', 'Hang On').",
