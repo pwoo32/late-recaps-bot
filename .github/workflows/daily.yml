@@ -77,7 +77,12 @@ jobs:
             echo "--proxy $YT_PROXY" >> ~/.config/yt-dlp/config
           fi
           if [ -n "$YT_COOKIES" ]; then   # signed-in YouTube cookies, the free alternative
-            printf '%s' "$YT_COOKIES" > "$RUNNER_TEMP/cookies.txt"
+            if printf '%s' "$YT_COOKIES" | head -c 200 | grep -q '[[:space:]]'; then   # plain cookies.txt
+              printf '%s' "$YT_COOKIES" > "$RUNNER_TEMP/cookies.txt"
+            else   # gzipped + base64, to fit GitHub's 48 KB secret limit
+              printf '%s' "$YT_COOKIES" | base64 -d | gunzip > "$RUNNER_TEMP/cookies.txt"
+            fi
+            echo "YouTube cookies: $(grep -c youtube.com "$RUNNER_TEMP/cookies.txt") lines"
             echo "--cookies $RUNNER_TEMP/cookies.txt" >> ~/.config/yt-dlp/config
           fi
           chmod 600 "$d"/*.json 2>/dev/null || true
