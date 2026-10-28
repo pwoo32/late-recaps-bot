@@ -1,11 +1,11 @@
 {
  "source_weight": {
-  "jynxzi": 0.52,
-  "kai_cenat": 0.52
+  "jynxzi": 0.51,
+  "kai_cenat": 0.51
  },
  "slot_weight": {
-  "2": 0.52,
-  "21": 2.9
+  "2": 0.51,
+  "21": 2.94
  },
  "used_moments": [
   "L6S9Vb3RLy4@186",
@@ -36,7 +36,10 @@
   "uQlACpbi4WM@14",
   "KliV-V6SSF0@14",
   "uQlACpbi4WM@235",
-  "I14AJ40Jlzs@46"
+  "I14AJ40Jlzs@46",
+  "G36NRLWdjzE@180",
+  "KliV-V6SSF0@4",
+  "-5fg-_92oaI@15"
  ],
  "queued": {
   "L6S9Vb3RLy4@186": {
@@ -189,6 +192,21 @@
    "title": "Kai Cenat Pulls Up In A Godzilla Car In Japan \ud83d\ude97",
    "source": "kai_cenat",
    "post_utc": "2026-10-29 04:00"
+  },
+  "G36NRLWdjzE@180": {
+   "title": "Speed Offers $250,000 To Whoever Finds Him \ud83d\udcb0\ud83d\ude33",
+   "source": "ishowspeed",
+   "post_utc": "2026-10-29 21:00"
+  },
+  "KliV-V6SSF0@4": {
+   "title": "Speed Goes Out To Buy The New iPhone Duo \ud83d\udcf1\ud83d\ude2d",
+   "source": "ishowspeed",
+   "post_utc": "2026-10-29 08:00"
+  },
+  "-5fg-_92oaI@15": {
+   "title": "Kai Cenat Asks What This Item Is While Shopping In Japan \ud83d\ude2d",
+   "source": "kai_cenat",
+   "post_utc": "2026-10-29 04:00"
   }
  },
  "channel": "UCbK9EejOk5UVzI_l8F3f8kA",
@@ -197,23 +215,21 @@
   "@TheDiaryOfACEO": "UCGq-a57w-aPwyi3pW7XLiHw"
  },
  "review": {
-  "at": "2026-10-28 21:52",
-  "report": "/home/runner/work/late-recaps-bot/late-recaps-bot/reports/review_2026-10-28_2152/report.md",
+  "at": "2026-10-28 22:03",
+  "report": "/home/runner/work/late-recaps-bot/late-recaps-bot/reports/review_2026-10-28_2203/report.md",
   "lessons": {
    "titles": [
-    "Creator name first, then the setup in plain verbs. Never put the result in the title (Red Card, Copper, Hang On).",
-    "Sell the joke the clip answers, e.g. 'Asks If This Dog Is Ever Happy', not trivia or the outcome.",
-    "Keep titles under 60 characters with 1-2 emoji at the end."
+    "Creator name first, then the setup in plain verbs, with no result in the title (Red Card, Copper, Hang On all gave it away).",
+    "Write the title as the question or bet the clip answers, e.g. 'Asks If This Dog Is Ever Happy'. Never use trivia like 'Japan's Most Popular Dog'."
    ],
    "hooks": [
-    "Max 6 words, written as the stake or question the clip answers within 15s (e.g. 'IF PALMER SCORES, STREAM ENDS').",
-    "Don't restate the narrator. If hook and narrator say the same thing, cut one. No mood labels or vague teases like 'WAIT FOR LIFE ADVICE'.",
-    "Ban 'and then this happened' in narrator lines; state the promise and stop."
+    "Max 6 words, stated as a stake or question the clip answers within 15s. Cut vague teases like 'WAIT FOR HIS LIFE ADVICE'.",
+    "Hook and narrator must not say the same thing. Let the narrator set up the premise and the hook add the stake, or cut one."
    ],
    "clip_picks": [
-    "Only pick moments with a one-line spoken premise (bet, guess, countdown, question). Speed and Kai crossovers with athletes or celebrities come first, then Kai with Ray.",
-    "Skip visual-only or crosstalk moments (fans chasing Kai, a clinch, a dog). If the transcript isn't funny read aloud, skip it.",
-    "Listen to the full clip for n-words before cutting; if muting kills the payoff, skip."
+    "Only cut moments with a one-line spoken premise (bet, guess, countdown, question). Speed and Kai crossovers with athletes or celebrities come first, then Kai with Ray.",
+    "Skip visual-only moments such as fans chasing Kai, a clinch, or a dog. If the transcript isn't funny read aloud, skip it.",
+    "Jynxzi guessing ranks is a repeatable spoken format worth mining, but only when the premise is stated up front."
    ],
    "length_and_pacing": [
     "Stop cutting every clip to 53s. Start \u22642s before the stake line and end \u22642s after the payoff. Aim for 15-30s, since the breakouts are mostly 11-26s.",
@@ -221,7 +237,7 @@
    ],
    "posting": [
     "Post 1-2 clips a day within hours of the stream. Clips 5-7 days old compete with hundreds of other clippers.",
-    "All six clips sit at 0-15 views with n/a analytics, which points to distribution, not just picks. Check the channel for limits, duplicate-content flags and Shorts-feed serving before judging any clip.",
+    "All six clips sit at 0-15 views with n/a analytics, which points to distribution, not just picks. Check Studio for limits, duplicate-content flags and Shorts-feed serving before judging any clip.",
     "After 48h, judge on 3s retention and Shorts-feed share, but only once Studio shows those numbers."
    ]
   },
@@ -233,42 +249,42 @@
     "views": 0,
     "avg_viewed": null,
     "stayed": null,
-    "verdict": "Dead at 0 views after 116h; the premise is decent but it's too old and the channel isn't being served, so the pick can't be judged yet."
+    "verdict": "Dead on arrival at 0 views after 116h; a reading-aloud premise with a vague hook, and too old to judge on anything but distribution."
    },
    {
     "title": "Kai Cenat Tells Ray To Stay Behind Him In Japan \ud83d\ude2d\u2764\ufe0f\u200d\ud83e\ude79",
     "views": 0,
     "avg_viewed": null,
     "stayed": null,
-    "verdict": "Early-distribution failure with 0 views; the pick itself is weak because it's mostly visual crowd chaos with no spoken premise."
+    "verdict": "Weak pick: fans chasing Kai is visual crosstalk with no spoken premise, so it was unlikely to land even with distribution."
    },
    {
     "title": "Kai Cenat Meets Japan's Most Popular Dog \ud83d\udc15\ud83d\ude2d",
     "views": 1,
     "avg_viewed": null,
     "stayed": null,
-    "verdict": "Near-zero views; a visual dog moment with a weak spoken premise, so skip this kind of pick."
+    "verdict": "Visual-only dog moment that breaks our own skip rule; 1 view is the expected result."
    },
    {
     "title": "Jynxzi Calls This Player Copper Off His Name Alone \ud83d\ude2d",
     "views": 1,
     "avg_viewed": null,
     "stayed": null,
-    "verdict": "1 view; the guess-the-rank premise is a good format, but the title and length undermine it."
+    "verdict": "Best premise of the batch (a guessing-game joke with a spoken payoff), but the result is in the title and it ran 53s."
    },
    {
     "title": "Speed Gets a Red Card Against Cole Palmer \ud83d\ude2d",
     "views": 15,
     "avg_viewed": null,
     "stayed": null,
-    "verdict": "Best of the batch at 15 views, which is still negligible; the bet premise is the right type of pick."
+    "verdict": "Right kind of pick (Speed vs a celebrity athlete with a stated stake) and the only clip with any views (15), but the execution gave away the best part."
    },
    {
     "title": "Adin Watches YK Osiris Hang On Against Deshae \ud83d\ude2d\ud83e\udd4a",
     "views": 1,
     "avg_viewed": null,
     "stayed": null,
-    "verdict": "1 view; a boxing clinch is visual with no spoken premise, and it's a weak pick."
+    "verdict": "Visual clinch with no spoken premise, so there was nothing for a scroller to wait for."
    }
   ]
  },
