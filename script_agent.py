@@ -276,9 +276,10 @@ def _claude_code(prompt):
         return None
     r = subprocess.run([exe, "-p", "--output-format", "json", "--json-schema", json.dumps(SCHEMA), "--tools", ""],
                        input=prompt, capture_output=True, text=True, encoding="utf-8", timeout=600)
-    if r.returncode != 0:
-        raise RuntimeError(r.stderr.strip()[:300] or r.stdout.strip()[:300])
-    out = json.loads(r.stdout)
+    try:
+        out = json.loads(r.stdout)
+    except ValueError:
+        raise RuntimeError(r.stderr.strip()[:300] or r.stdout.strip()[:300] or f"exit {r.returncode}")
     if out.get("is_error"):
         raise RuntimeError(str(out.get("result"))[:300])
     return out.get("structured_output") or parse_json(out["result"])
