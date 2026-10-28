@@ -324,3 +324,49 @@ Downloading 3:43:38-3:44:30 of https://www.youtube.com/watch?v=G36NRLWdjzE
 [3] Kai Cenat Runs A Script In Japan 🇯🇵
 Downloading 3:14:46-3:15:38 of https://www.youtube.com/watch?v=nJr3HD-fvaY
   skipped: cutting failed (Command '['yt-dlp', '-q', '-f', 'bv*[height<=1080]+ba/b[height<=1080]/b', '--download-sections', '*11686-11738', '--force-keyframes-at-cuts', '--merge-output-format', 'mp4', '-o', '/home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-10-28_2219/clips/03_nJr3HD_fvaY_390.source.mp4', 'https://www.youtube.com/watch?v=nJr3HD-fvaY']' returned non-zero exit status 1.). Try the backups in queue.md.
+[0;93m2026-10-28 22:34:20.837013211 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+Done. Report: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/track_2026-10-28_2229.md  (quota used: 2)
+[ishowspeed] reading recent streams/videos
+[kai_cenat] reading recent streams/videos
+[jynxzi] reading recent streams/videos
+[adin_ross] reading recent streams/videos
+[n3on] reading recent streams/videos
+Writing scripts...
+  [1] IShowSpeed at 3:37:40: writing from comments
+  [2] IShowSpeed at 3:47:53: writing from comments
+  [3] Jynxzi at 10:33:48: writing from captions (12 words)
+Scripts written by claude-code.
+Done. Queue: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-10-28_2229/queue.md  (quota used: 51)
+[1] Speed Hears Indonesia Is Watching His Premiere Stream 😭
+Downloading 3:37:06-3:37:58 of https://www.youtube.com/watch?v=G36NRLWdjzE
+Transcribing with whisper small.en (first run downloads the model)...
+Re-writing the script from what's actually said in the clip...
+  [1] IShowSpeed at 3:37:40: writing from transcript (117 words)
+Scripts written by claude-code.
+Done. Video: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-10-28_2229/clips/01_G36NRLWdjzE_435.mp4
+Title/description: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-10-28_2229/clips/01_G36NRLWdjzE_435.txt
+  uploaded https://youtube.com/shorts/EfEnV35MiRA (goes public Thu 05:00 PM ET)
+[2] Speed Walks Into His Movie Premiere Like He Owns It 😎
+Downloading 3:47:19-3:48:11 of https://www.youtube.com/watch?v=G36NRLWdjzE
+Transcribing with whisper small.en (first run downloads the model)...
+Re-writing the script from what's actually said in the clip...
+  [2] IShowSpeed at 3:47:53: writing from transcript (24 words)
+Scripts written by claude-code.
+Done. Video: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-10-28_2229/clips/02_G36NRLWdjzE_455.mp4
+Title/description: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-10-28_2229/clips/02_G36NRLWdjzE_455.txt
+  uploaded https://youtube.com/shorts/iHwu_lGD17w (goes public Thu 04:00 AM ET)
+[3] Jynxzi Gets Crushed Again By Promised Consort Radahn 😭
+Downloading 10:33:14-10:34:06 of https://www.youtube.com/watch?v=OT-gVk8hfUI
+Transcribing with whisper small.en (first run downloads the model)...
+Re-writing the script from what's actually said in the clip...
+  [3] Jynxzi at 10:33:48: writing from transcript (8 words)
+Scripts written by claude-code.
+Done. Video: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-10-28_2229/clips/03_OT_gVk8hfUI_1267.mp4
+Title/description: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-10-28_2229/clips/03_OT_gVk8hfUI_1267.txt
+  uploaded https://youtube.com/shorts/avg_CY5SDWA (goes public Thu 12:00 AM ET)
+  TikTok: [1] draft in your TikTok inbox. Open the notification, paste this caption, post:
+    Speed Argues He's Taller Than Everyone 😭 #ishowspeed #speed #funny #fyp
+  TikTok: [2] draft in your TikTok inbox. Open the notification, paste this caption, post:
+    Speed Finds His Own Name On The Premiere Wall 😭 #ishowspeed #speed #fyp
+  TikTok: [3] draft in your TikTok inbox. Open the notification, paste this caption, post:
+    Jynxzi Pushes Through Promised Consort Radahn 😭 #jynxzi #eldenring #fyp

@@ -5,7 +5,7 @@
  },
  "slot_weight": {
   "2": 0.51,
-  "21": 2.96
+  "21": 2.98
  },
  "used_moments": [
   "L6S9Vb3RLy4@186",
@@ -42,7 +42,10 @@
   "-5fg-_92oaI@15",
   "G36NRLWdjzE@303",
   "G36NRLWdjzE@448",
-  "nJr3HD-fvaY@390"
+  "nJr3HD-fvaY@390",
+  "G36NRLWdjzE@435",
+  "G36NRLWdjzE@455",
+  "OT-gVk8hfUI@1267"
  ],
  "queued": {
   "L6S9Vb3RLy4@186": {
@@ -225,6 +228,24 @@
    "title": "Kai Cenat Runs A Script In Japan \ud83c\uddef\ud83c\uddf5",
    "source": "kai_cenat",
    "post_utc": "2026-10-29 04:00"
+  },
+  "G36NRLWdjzE@435": {
+   "title": "Speed Argues He's Taller Than Everyone \ud83d\ude2d",
+   "source": "ishowspeed",
+   "post_utc": "2026-10-29 21:00",
+   "video_id": "EfEnV35MiRA"
+  },
+  "G36NRLWdjzE@455": {
+   "title": "Speed Finds His Own Name On The Premiere Wall \ud83d\ude2d",
+   "source": "ishowspeed",
+   "post_utc": "2026-10-29 08:00",
+   "video_id": "iHwu_lGD17w"
+  },
+  "OT-gVk8hfUI@1267": {
+   "title": "Jynxzi Pushes Through Promised Consort Radahn \ud83d\ude2d",
+   "source": "jynxzi",
+   "post_utc": "2026-10-29 04:00",
+   "video_id": "avg_CY5SDWA"
   }
  },
  "channel": "UCbK9EejOk5UVzI_l8F3f8kA",
@@ -233,30 +254,29 @@
   "@TheDiaryOfACEO": "UCGq-a57w-aPwyi3pW7XLiHw"
  },
  "review": {
-  "at": "2026-10-28 22:19",
-  "report": "/home/runner/work/late-recaps-bot/late-recaps-bot/reports/review_2026-10-28_2219/report.md",
+  "at": "2026-10-28 22:29",
+  "report": "/home/runner/work/late-recaps-bot/late-recaps-bot/reports/review_2026-10-28_2229/report.md",
   "lessons": {
    "titles": [
-    "Creator name first, then the setup in plain verbs. Keep the result out of the title (Red Card, Copper, Hang On all gave it away).",
-    "Phrase the title as the bet or question the clip answers, e.g. 'Asks If This Dog Is Ever Happy'. Never use trivia like 'Japan's Most Popular Dog'."
+    "Creator name first, then the bet or question in plain verbs, max 6 words. Never put the result in the title; Red Card, Copper and Hang On all spoiled the payoff.",
+    "Use the question form for the stake ('Asks If This Dog Is Ever Happy') and avoid trivia like 'Japan's Most Popular Dog'."
    ],
    "hooks": [
-    "Max 6 words, stated as a stake the clip answers within 15s. Cut vague teases like 'WAIT FOR HIS LIFE ADVICE'.",
-    "Hook and narrator must not say the same thing. The narrator sets up the premise and the hook adds the stake, or cut one."
+    "Max 6 words and add the stake the narrator didn't. If the hook and narrator say the same thing, cut one.",
+    "Cut vague teases like 'WAIT FOR HIS LIFE ADVICE'. State what is on the line or what will break ('LOSE AND THE STREAM ENDS')."
    ],
    "clip_picks": [
-    "Only cut moments with a one-line spoken premise (bet, guess, countdown, question). Speed and Kai crossovers with athletes or celebrities come first, then Kai with Ray.",
-    "Skip visual-only moments (fans chasing Kai, a clinch, a dog). If the transcript isn't funny read aloud, skip it.",
-    "Mine Jynxzi rank guessing as a repeatable format, but only when the premise is stated up front."
+    "Only cut moments with a one-line spoken premise (bet, guess, countdown, question). Speed and Kai with athletes or celebrities first, then Kai with Ray.",
+    "Skip visual-only moments (fans chasing, a clinch, a dog). If the transcript isn't funny read aloud, skip it.",
+    "Mine Jynxzi rank guessing as a repeatable series, but state the premise up front."
    ],
    "length_and_pacing": [
-    "Stop cutting every clip to 53s. Start \u22642s before the stake line and end \u22642s after the payoff. Aim for 15-30s, since the breakouts are mostly 11-26s.",
+    "Stop cutting every clip to 53s. Start \u22642s before the stake line, end \u22642s after the payoff, and aim for 15-30s. The breakouts are mostly 11-26s.",
     "End on the payoff line and cut trailing banter so the clip loops cleanly."
    ],
    "posting": [
     "Post 1-2 clips a day within hours of the stream. Clips 5-7 days old compete with hundreds of other clippers.",
-    "All six clips sit at 0-15 views with n/a analytics, which points to distribution. Check Studio for limits, duplicate-content flags and Shorts-feed serving before judging any clip.",
-    "After 48h, judge on 3s retention and Shorts-feed share, but only once Studio shows those numbers."
+    "All six clips sit at 0-15 views with n/a analytics, so check Studio for limits, duplicate-content flags and Shorts-feed serving before judging any clip. After 48h, judge on 3s retention and Shorts-feed share."
    ]
   },
   "source_score": {},
@@ -267,42 +287,42 @@
     "views": 0,
     "avg_viewed": null,
     "stayed": null,
-    "verdict": "Dead at 0 views after 116h; the premise is funny but the hook is a vague tease and the clip is too long."
+    "verdict": "Dead on arrival: 0 views, vague hook, and a reading-aloud moment with no stake, posted 116h ago."
    },
    {
     "title": "Kai Cenat Tells Ray To Stay Behind Him In Japan \ud83d\ude2d\u2764\ufe0f\u200d\ud83e\ude79",
     "views": 0,
     "avg_viewed": null,
     "stayed": null,
-    "verdict": "Visual chase moment with no spoken premise; 0 views, skip this type."
+    "verdict": "Visual-only chase moment with no spoken premise; skip this type, though the Kai and Ray pairing is the right pairing."
    },
    {
     "title": "Kai Cenat Meets Japan's Most Popular Dog \ud83d\udc15\ud83d\ude2d",
     "views": 1,
     "avg_viewed": null,
     "stayed": null,
-    "verdict": "Weak pick: a dog moment is visual with no spoken stake, and the title is trivia."
+    "verdict": "Weak pick: a dog is a visual moment, and the title is trivia."
    },
    {
     "title": "Jynxzi Calls This Player Copper Off His Name Alone \ud83d\ude2d",
     "views": 1,
     "avg_viewed": null,
     "stayed": null,
-    "verdict": "Best format on the channel (Jynxzi rank guessing) but the title gives away the result and the clip is too long."
+    "verdict": "Best format of the six: rank guessing has a stated premise, but the title spoils the punchline and the clip is too long."
    },
    {
     "title": "Speed Gets a Red Card Against Cole Palmer \ud83d\ude2d",
     "views": 15,
     "avg_viewed": null,
     "stayed": null,
-    "verdict": "Highest views (15) and the strongest premise (Speed vs Cole Palmer with the stream on the line), but the title spoils it and the clip is stale."
+    "verdict": "Right pick (Speed with a celebrity, a stated bet), but wasted by a spoiler title and 53s length. It's the only clip with any views, and just 15."
    },
    {
     "title": "Adin Watches YK Osiris Hang On Against Deshae \ud83d\ude2d\ud83e\udd4a",
     "views": 1,
     "avg_viewed": null,
     "stayed": null,
-    "verdict": "A clinch is a visual moment with no spoken premise, and Adin is only watching, so it's a weak pick."
+    "verdict": "Skip: a visual clinch with a spoiler title, from a stream with a lot of competing clippers."
    }
   ]
  },
