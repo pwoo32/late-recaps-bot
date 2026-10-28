@@ -123,3 +123,11 @@ jobs:
           git add -A reports builder.log review.log
           git diff --cached --quiet || git commit -qm "Daily run $(date -u +%F)"
           git push -q || (git pull -q --rebase && git push -q)
+
+      - name: Warn if YouTube cookies expired   # fails the run so GitHub emails you
+        if: always()
+        run: |
+          if tail -300 builder.log | grep -qE "confirm you.re not a bot|cookies are no longer valid"; then
+            echo "::error::YouTube cookies expired. Export fresh ones from a private Zen window and save them as YT_COOKIES."
+            exit 1
+          fi
