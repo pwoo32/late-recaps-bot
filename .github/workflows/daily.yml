@@ -66,14 +66,19 @@ jobs:
           REVIEW_TOKEN: ${{ secrets.REVIEW_TOKEN }}
           TIKTOK_TOKEN: ${{ secrets.TIKTOK_TOKEN }}
           YT_COOKIES: ${{ secrets.YT_COOKIES }}
+          YT_PROXY: ${{ secrets.YT_PROXY }}
         run: |
           d=~/.config/clip-builder; mkdir -p "$d"
           [ -n "$YOUTUBE_TOKEN" ] && printf '%s' "$YOUTUBE_TOKEN" > "$d/youtube_token.json"
           [ -n "$REVIEW_TOKEN" ] && printf '%s' "$REVIEW_TOKEN" > "$d/review_token.json"
           [ ! -f "$d/tiktok_token.json" ] && [ -n "$TIKTOK_TOKEN" ] && printf '%s' "$TIKTOK_TOKEN" > "$d/tiktok_token.json"
-          if [ -n "$YT_COOKIES" ]; then   # signed-in YouTube cookies, if downloads get bot-blocked
+          mkdir -p ~/.config/yt-dlp; : > ~/.config/yt-dlp/config
+          if [ -n "$YT_PROXY" ]; then   # home-internet proxy: YouTube bot-blocks downloads from cloud servers
+            echo "--proxy $YT_PROXY" >> ~/.config/yt-dlp/config
+          fi
+          if [ -n "$YT_COOKIES" ]; then   # signed-in YouTube cookies, the free alternative
             printf '%s' "$YT_COOKIES" > "$RUNNER_TEMP/cookies.txt"
-            mkdir -p ~/.config/yt-dlp && echo "--cookies $RUNNER_TEMP/cookies.txt" > ~/.config/yt-dlp/config
+            echo "--cookies $RUNNER_TEMP/cookies.txt" >> ~/.config/yt-dlp/config
           fi
           chmod 600 "$d"/*.json 2>/dev/null || true
 
