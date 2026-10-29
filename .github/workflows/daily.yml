@@ -108,6 +108,18 @@ jobs:
           if [ -z "$ANTHROPIC_API_KEY" ]; then unset ANTHROPIC_API_KEY; fi
           python channel_builder.py run --publish --niche streamer 2>&1 | tee -a builder.log "$RUNNER_TEMP/run.log"; exit ${PIPESTATUS[0]}
 
+      - name: Today's clips (download from the run page to post by hand)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: clips-${{ github.run_number }}
+          path: |
+            reports/builder/daily_*/clips/[0-9][0-9]_*.mp4
+            reports/builder/daily_*/clips/[0-9][0-9]_*.txt
+            !reports/builder/daily_*/clips/*.source.mp4
+          retention-days: 7
+          if-no-files-found: ignore
+
       - name: Keep TikTok sign-in
         if: always()
         uses: actions/cache/save@v4
