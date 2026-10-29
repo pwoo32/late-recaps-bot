@@ -370,3 +370,49 @@ Title/description: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/bui
     Speed Finds His Own Name On The Premiere Wall 😭 #ishowspeed #speed #fyp
   TikTok: [3] draft in your TikTok inbox. Open the notification, paste this caption, post:
     Jynxzi Pushes Through Promised Consort Radahn 😭 #jynxzi #eldenring #fyp
+[0;93m2026-10-29 18:53:11.227411335 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+Done. Report: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/track_2026-10-29_1848.md  (quota used: 2)
+[ishowspeed] reading recent streams/videos
+[kai_cenat] reading recent streams/videos
+[jynxzi] reading recent streams/videos
+[adin_ross] reading recent streams/videos
+[n3on] reading recent streams/videos
+Writing scripts...
+  [1] IShowSpeed at 3:14:25: writing from captions (160 words)
+  [2] IShowSpeed at 3:44:38: writing from captions (121 words)
+  [3] Jynxzi at 6:00: writing from captions (150 words)
+Scripts written by claude-code.
+Done. Queue: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-10-29_1848/queue.md  (quota used: 55)
+[1] Speed Walks In On Strangers Making Dubstep 🎧
+Downloading 3:13:51-3:14:43 of https://www.youtube.com/watch?v=G36NRLWdjzE
+Transcribing with whisper small.en (first run downloads the model)...
+Re-writing the script from what's actually said in the clip...
+  [1] IShowSpeed at 3:14:25: writing from transcript (97 words)
+Scripts written by claude-code.
+Done. Video: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-10-29_1848/clips/01_G36NRLWdjzE_388.mp4
+Title/description: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-10-29_1848/clips/01_G36NRLWdjzE_388.txt
+  uploaded https://youtube.com/shorts/fAr4J59O1i4 (goes public Thu 05:00 PM ET)
+[2] Speed Calls His Whole Family In For A Photo 📸
+Downloading 3:44:04-3:44:56 of https://www.youtube.com/watch?v=G36NRLWdjzE
+Transcribing with whisper small.en (first run downloads the model)...
+Re-writing the script from what's actually said in the clip...
+  [2] IShowSpeed at 3:44:38: writing from transcript (76 words)
+Scripts written by claude-code.
+Done. Video: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-10-29_1848/clips/02_G36NRLWdjzE_449.mp4
+Title/description: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-10-29_1848/clips/02_G36NRLWdjzE_449.txt
+  uploaded https://youtube.com/shorts/bsTfKfehLEY (goes public Fri 04:00 AM ET)
+[3] Jynxzi Watches Teammates Fight For One HP 😭
+Downloading 5:26-6:18 of https://www.youtube.com/watch?v=yTjFkUmcVM4
+Transcribing with whisper small.en (first run downloads the model)...
+Re-writing the script from what's actually said in the clip...
+  [3] Jynxzi at 6:00: writing from transcript (53 words)
+Scripts written by claude-code.
+Done. Video: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-10-29_1848/clips/03_yTjFkUmcVM4_12.mp4
+Title/description: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-10-29_1848/clips/03_yTjFkUmcVM4_12.txt
+  uploaded https://youtube.com/shorts/ZonsrNShgXw (goes public Fri 12:00 AM ET)
+  TikTok: [1] draft in your TikTok inbox. Open the notification, paste this caption, post:
+    Speed Meets Two Strangers Making Dubstep 🎧😂 #ishowspeed #speed #fyp
+  TikTok: [2] draft in your TikTok inbox. Open the notification, paste this caption, post:
+    Speed Takes A Family Photo At His Movie Premiere 📸 #ishowspeed #speed #fyp
+  TikTok: [3] draft in your TikTok inbox. Open the notification, paste this caption, post:
+    Jynxzi Begs His Teammate To Get Inside 😭 #jynxzi #funny #fyp
