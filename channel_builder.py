@@ -679,7 +679,7 @@ def cmd_run(args):
         cmd_track(argparse.Namespace(channel=None, niche=args.niche))
     cmd_daily(args)
     if args.publish:
-        cmd_publish(argparse.Namespace(queue=None, ids=None, layout="crop43", whisper="small.en", voice=args.voice,
+        cmd_publish(argparse.Namespace(queue=None, ids=None, layout="face34", whisper="small.en", voice=args.voice,
                                        skip_gate=False))
 
 
@@ -694,8 +694,27 @@ def ass_escape(s):
     return re.sub(r"[\U000E0000-\U000E007F\U0001F000-\U0001F2FF]", "", s).strip()  # flags/tags render as boxes
 
 
+def caption_chunks(words):
+    """1-3 word chunks, broken on pauses and punctuation."""
+    chunks, chunk = [], []
+    for i, w in enumerate(words):
+        chunk.append(w)
+        nxt = words[i + 1] if i + 1 < len(words) else None
+        if len(chunk) == 3 or not nxt or nxt["start"] - w["end"] > 0.35 or re.search(r"[.!?,]$", w["word"]):
+            chunks.append((chunk, nxt))
+            chunk = []
+    return chunks
+
+
+STOPWORDS = set("a an and are as at be but by do for from he her him his i i'm if in is it it's me my no not of on "
+                "or so that the this to up was we what with yo you your".split())
+KEY_COLOURS = ["&H0033FF66&", "&H0000E5FF&", "&H003C3CFF&", "&H00FFD24A&"]  # ASS is BGR: green, yellow, red, blue
+
+
 def write_ass(path, words, hook, context, length, offset=0.0):
-    """Captions: 1-3 word chunks centre-low; hook pinned top; context line for the first 3.5s."""
+    """Captions like the big clip channels: 1-3 word chunks mid-screen, each word appearing as it is said,
+    the chunk's key word in a colour that changes chunk to chunk; hook pinned top; context line for the
+    first 3.5s."""
     head = """[Script Info]
 ScriptType: v4.00+
 PlayResX: 1080
@@ -703,9 +722,9 @@ PlayResY: 1920
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Cap,Arial,86,&H00FFFFFF,&H00FFFFFF,&H00000000,&H64000000,-1,0,0,0,100,100,0,0,1,7,2,2,60,60,560,1
-Style: Hook,Arial,74,&H0000E5FF,&H00FFFFFF,&H00000000,&HB4000000,-1,0,0,0,100,100,0,0,3,18,0,8,60,60,190,1
-Style: Ctx,Arial,44,&H00FFFFFF,&H00FFFFFF,&H00000000,&HB4000000,0,0,0,0,100,100,0,0,3,12,0,8,80,80,420,1
+Style: Cap,Arial,96,&H00FFFFFF,&H00FFFFFF,&H00000000,&H96000000,-1,0,0,0,100,100,2,0,1,8,4,2,50,50,640,1
+Style: Hook,Arial,74,&H0000E5FF,&H00FFFFFF,&H00000000,&HB4000000,-1,0,0,0,100,100,0,0,3,18,0,8,60,60,150,1
+Style: Ctx,Arial,44,&H00FFFFFF,&H00FFFFFF,&H00000000,&HB4000000,0,0,0,0,100,100,0,0,3,12,0,8,80,80,215,1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
@@ -715,17 +734,68 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
         ev.append(f"Dialogue: 1,{ass_time(0)},{ass_time(length)},Hook,,0,0,0,,{ass_escape(hook.upper())}")
     if context:
         ev.append(f"Dialogue: 1,{ass_time(0)},{ass_time(min(3.5, length))},Ctx,,0,0,0,,{ass_escape(context)}")
-    chunk = []
-    for i, w in enumerate(words):
-        chunk.append(w)
-        nxt = words[i + 1] if i + 1 < len(words) else None
-        if len(chunk) == 3 or not nxt or nxt["start"] - w["end"] > 0.35 or re.search(r"[.!?,]$", w["word"]):
-            s, e = max(chunk[0]["start"] + offset, 0), min((nxt["start"] if nxt else chunk[-1]["end"] + 0.3) + offset, length)
-            text = " ".join(c["word"].strip() for c in chunk).upper()
-            if e > s:
-                ev.append(f"Dialogue: 0,{ass_time(s)},{ass_time(e)},Cap,,0,0,0,,{ass_escape(text)}")
-            chunk = []
+    for n, (chunk, nxt) in enumerate(caption_chunks(words)):
+        texts = [ass_escape(c["word"].strip().upper()) for c in chunk]
+        bare = [re.sub(r"[^a-z']", "", t.lower()) for t in texts]
+        key = max(range(len(texts)), key=lambda k: (bare[k] not in STOPWORDS, len(bare[k])))
+        if bare[key] in STOPWORDS:
+            key = -1
+        texts = [r"{\c" + KEY_COLOURS[n % len(KEY_COLOURS)] + "}" + t + r"{\c&HFFFFFF&}" if k == key else t
+                 for k, t in enumerate(texts)]
+        chunk_end = min((nxt["start"] if nxt else chunk[-1]["end"] + 0.3) + offset, length)
+        for j, w in enumerate(chunk):  # one event per word: the line builds up as it is said
+            s = max(w["start"] + offset, 0)
+            e = min(chunk[j + 1]["start"] + offset, chunk_end) if j + 1 < len(chunk) else chunk_end
+            line = " ".join(t for t in texts[:j + 1] if t)
+            if e > s and line:
+                pop = r"{\fscx120\fscy120\t(0,100,\fscx100\fscy100)}" if j == 0 else ""
+                ev.append(f"Dialogue: 0,{ass_time(s)},{ass_time(e)},Cap,,0,0,0,,{pop}{line}")
     Path(path).write_text(head + "\n".join(ev) + "\n", encoding="utf-8")
+
+
+def dead_air(words, length, gap=0.6, pad=0.15):
+    """Jump cuts: the stretches of silence longer than `gap` between words (keeping `pad` either side).
+    Returns the (start, end) spans to keep. Silence before the first and after the last word stays, since
+    that is usually the action or the reaction."""
+    keep, s = [], 0.0
+    for a, b in zip(words, words[1:]):
+        if b["start"] - a["end"] > gap:
+            keep.append((s, a["end"] + pad))
+            s = b["start"] - pad
+    keep.append((s, length))
+    return [(a, min(b, length)) for a, b in keep if min(b, length) > a]
+
+
+def retime(t, keep):
+    """Where second t of the source lands once only the `keep` spans are left."""
+    out = 0.0
+    for a, b in keep:
+        if t <= b:
+            return out + max(t - a, 0)
+        out += b - a
+    return out
+
+
+def zoom_expr(beats, length, push=0.06, punch=0.14):
+    """Scale factor over time: a slow push-in across the clip, punching in/out on each beat so the frame
+    changes every couple of seconds and jump cuts don't look like glitches."""
+    toggles = "+".join(f"gte(t,{b:.2f})" for b in beats) or "0"
+    return f"1+{push}*t/{max(length, 1):.2f}+{punch}*mod({toggles},2)"
+
+
+def zoom_beats(words, cuts, min_gap=1.6, max_gap=3.0):
+    """Moments to punch in or out: every jump cut, plus a caption-chunk start whenever the frame has held
+    for `max_gap` seconds. Never closer than `min_gap`."""
+    cuts = {round(c, 2) for c in cuts}
+    starts = sorted(cuts | {round(ch[0]["start"], 2) for ch, _ in caption_chunks(words)})
+    beats, last = [], 0.0
+    for t in starts:
+        if t - last < min_gap:
+            continue
+        if t in cuts or t - last >= max_gap:
+            beats.append(t)
+            last = t
+    return beats
 
 
 def whisper_model_dir(name):
@@ -799,6 +869,36 @@ def narrate(text, out_base, voice):
     return None
 
 
+LOUD = "loudnorm=I=-10:TP=-1:LRA=9,aresample=48000"  # top clip channels master loud (the reference sits near -5 LUFS)
+
+
+def face_x(path, samples=15):
+    """Where the main face sits across the clip, as a fraction of the width (median of the biggest face in
+    a few sampled frames), or None without OpenCV or a face."""
+    try:
+        import cv2
+    except ImportError:
+        return None
+    if not hasattr(cv2, "CascadeClassifier"):  # OpenCV 5 moved the face cascades out
+        return None
+    cap = cv2.VideoCapture(str(path))
+    total = int(cap.get(cv2.CAP_PROP_FRAME_COUNT)) or 1
+    det = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
+    xs = []
+    for i in range(samples):
+        cap.set(cv2.CAP_PROP_POS_FRAMES, int(total * (i + 0.5) / samples))
+        ok, frame = cap.read()
+        if not ok:
+            continue
+        gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+        faces = det.detectMultiScale(gray, 1.1, 6, minSize=(gray.shape[0] // 12, gray.shape[0] // 12))
+        if len(faces):
+            x, y, w, h = max(faces, key=lambda f: f[2] * f[3])
+            xs.append((x + w / 2) / gray.shape[1])
+    cap.release()
+    return statistics.median(xs) if len(xs) >= max(3, samples // 4) else None
+
+
 def cmd_cut(args):
     for tool in ["ffmpeg", "ffprobe"]:
         if not shutil.which(tool):
@@ -840,26 +940,71 @@ def cmd_cut(args):
     if words and not args.no_script and clip.get("script_source") != "transcript":
         print("Re-writing the script from what's actually said in the clip...")  # hook/context get burned in below
         script_agent.script_queue(qdir, queue, ids=[clip["id"]], transcripts={clip["id"]: "".join(w["word"] for w in words).strip()})
+    probe = json.loads(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "stream=codec_type,width,height", "-of", "json",
+                                       str(raw)], capture_output=True, text=True).stdout or "{}").get("streams", [])
+    vs = next((st for st in probe if st.get("codec_type") == "video"), {})
+    has_audio = any(st.get("codec_type") == "audio" for st in probe)
+
+    # Retention edit (what top clip channels do): cut dead air between lines, and punch the frame in/out
+    # every couple of seconds so the picture keeps changing. --plain turns both off.
+    plain = getattr(args, "plain", False)
+    keep = dead_air(words, length) if words and not plain else [(0.0, length)]
+    if len(keep) > 1:
+        words = [dict(w, start=retime(w["start"], keep), end=retime(w["end"], keep)) for w in words]
+        cuts = [retime(b, keep) for _, b in keep[:-1]]
+        print(f"Cut {length - sum(b - a for a, b in keep):.1f}s of dead air ({len(cuts)} jump cuts).")
+        length = sum(b - a for a, b in keep)
+    else:
+        cuts = []
     ass = base.with_suffix(".ass")
     write_ass(ass, words, clip["hook"], clip["context"], length)
 
-    # 9:16: blurred full-frame background + the stream cropped/scaled big in the middle.
-    fg = {"crop43": "crop='min(iw,ih*4/3)':ih,scale=1080:-2",
-          "fit": "scale=1080:-2",
-          "fill": "crop='min(iw,ih*9/16)':ih,scale=1080:1920"}[args.layout]
-    vf = (f"[0:v]split[a][b];[a]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,gblur=sigma=40,"
+    n = len(keep)
+    if n > 1:
+        trims = "".join(f"[v{i}]trim={a:.3f}:{b:.3f},setpts=PTS-STARTPTS[s{i}];" for i, (a, b) in enumerate(keep))
+        src = f"[0:v]fps=30,split={n}" + "".join(f"[v{i}]" for i in range(n)) + ";" + trims
+        if has_audio:
+            src += f"[0:a]asplit={n}" + "".join(f"[a{i}]" for i in range(n)) + ";" + "".join(
+                f"[a{i}]atrim={a:.3f}:{b:.3f},asetpts=PTS-STARTPTS,afade=t=in:d=0.02,"
+                f"afade=t=out:st={max(b - a - 0.02, 0):.3f}:d=0.02[t{i}];" for i, (a, b) in enumerate(keep))
+        src += "".join(f"[s{i}]" + (f"[t{i}]" if has_audio else "") for i in range(n))
+        src += f"concat=n={n}:v=1:a={int(has_audio)}[src]" + ("[srca];" if has_audio else ";")
+        vin, ain = "[src]", "[srca]"
+    else:
+        src, vin, ain = "", "[0:v]", "[0:a]"
+
+    # 9:16: blurred full-frame background + the stream cropped/scaled big in the middle. face34 (default)
+    # is a tall 3:4 crop that follows the streamer's face and fills three quarters of the screen.
+    sw, sh = vs.get("width") or 1920, vs.get("height") or 1080
+    cw = {"face34": min(sw, sh * 3 / 4), "crop43": min(sw, sh * 4 / 3), "fit": sw, "fill": min(sw, sh * 9 / 16)}[args.layout]
+    fw, fh = (1080, 1920) if args.layout == "fill" else (1080, int(round(1080 * sh / cw / 2)) * 2)
+    if args.layout == "face34":
+        fx = face_x(raw)
+        cx = (fx if fx is not None else 0.5) * sw - cw / 2
+        fg = f"crop={int(cw) // 2 * 2}:ih:{int(min(max(cx, 0), sw - cw))}:0"
+        print(f"Framing on the face at {fx:.0%} across." if fx is not None else "No face found; framing the centre.")
+    else:
+        fg = {"crop43": "crop='min(iw,ih*4/3)':ih", "fit": "null", "fill": "crop='min(iw,ih*9/16)':ih"}[args.layout]
+    fg += f",scale={fw}:{fh}"
+    if not plain:
+        z = zoom_expr(zoom_beats(words, cuts), length)
+        fg += (f",scale=w='2*trunc({fw}*({z})/2)':h='2*trunc({fh}*({z})/2)':eval=frame,crop={fw}:{fh},"
+               f"eq=saturation=1.25:contrast=1.06,unsharp=5:5:0.6")  # punchier colour, like the big clip channels
+    vf = (src + f"{vin}split[a][b];[a]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,gblur=sigma=40,"
           f"eq=brightness=-0.12[bg];[b]{fg}[fg];[bg][fg]overlay=(W-w)/2:(H-h)/2,"
           f"subtitles='{ass.resolve().as_posix().replace(':', chr(92) + ':')}'[v]")  # escape C: on Windows
     cmd = ["ffmpeg", "-y", "-loglevel", "error", "-i", str(raw)]
     if not args.voiceover and not args.no_voice and clip.get("take"):
         args.voiceover = narrate(clip["take"], base, args.voice)
-    if args.voiceover:  # your take over the opening, stream audio ducked under it
+    if args.voiceover and has_audio:  # your take over the opening, stream audio ducked under it
         dur = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0",
                                     str(args.voiceover)], capture_output=True, text=True).stdout.strip() or 0)
         cmd += ["-i", str(args.voiceover)]
-        af = (f"[0:a]volume='if(lt(t,{dur:.2f}),0.25,1)':eval=frame[s];[1:a]volume=1.6[vo];"
-              f"[s][vo]amix=inputs=2:duration=first:normalize=0[aud]")
+        af = (f"{ain}volume='if(lt(t,{dur:.2f}),0.25,1)':eval=frame[s];[1:a]volume=1.6[vo];"
+              f"[s][vo]amix=inputs=2:duration=first:normalize=0" + ("[mix];[mix]" + LOUD if not plain else "") + "[aud]")
         cmd += ["-filter_complex", vf + ";" + af, "-map", "[v]", "-map", "[aud]"]
+    elif has_audio and (n > 1 or not plain):
+        cmd += ["-filter_complex", vf + ";" + ain + (LOUD if not plain else "anull") + "[aud]", "-map", "[v]", "-map", "[aud]"]
     else:
         cmd += ["-filter_complex", vf, "-map", "[v]", "-map", "0:a?"]
     out = base.with_suffix(".mp4")
@@ -1134,13 +1279,14 @@ def main():
     p.add_argument("--end", type=float, help="override end second in the source")
     p.add_argument("--video", help="use a local source file instead of downloading")
     p.add_argument("--voiceover", help="audio file with your take, mixed over the opening")
-    p.add_argument("--layout", default="crop43", choices=["crop43", "fit", "fill"])
+    p.add_argument("--layout", default="face34", choices=["face34", "crop43", "fit", "fill"])
     p.add_argument("--whisper", default="small.en", help="faster-whisper model for captions")
     p.add_argument("--transcript", help="word timings JSON [{word,start,end}] instead of whisper")
     p.add_argument("--no-captions", action="store_true")
     p.add_argument("--voice", default="en-US-AndrewNeural", help="edge-tts narrator voice (edge-tts --list-voices)")
     p.add_argument("--no-voice", action="store_true", help="no narrator")
     p.add_argument("--no-script", action="store_true", help="keep the queue's script, don't re-write it from the transcript")
+    p.add_argument("--plain", action="store_true", help="no jump cuts over dead air and no punch-in zooms")
     sub.add_parser("auth")
     p = sub.add_parser("tiktok-auth")
     p.add_argument("--mode", choices=["inbox", "direct"], help="inbox = drafts you post in the app; direct = posts itself")
@@ -1152,7 +1298,7 @@ def main():
     p = sub.add_parser("publish")
     p.add_argument("ids", type=int, nargs="*", help="queue items (default: all not yet uploaded)")
     p.add_argument("--queue", help="queue folder (default: latest daily_*)")
-    p.add_argument("--layout", default="crop43", choices=["crop43", "fit", "fill"])
+    p.add_argument("--layout", default="face34", choices=["face34", "crop43", "fit", "fill"])
     p.add_argument("--whisper", default="small.en")
     p.add_argument("--voice", default="en-US-AndrewNeural")
     p.add_argument("--skip-gate", action="store_true", help="post without the every-agent check (not recommended)")

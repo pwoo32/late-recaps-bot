@@ -91,6 +91,10 @@ python channel_builder.py run --publish  # the whole day hands-off: refresh repo
 - Scripts come from `script_agent.py` (above). Optional keys: `TWITCH_CLIENT_ID`/`TWITCH_CLIENT_SECRET` (dev.twitch.tv, free; adds Twitch-only creators like
   Kai Cenat via their most-viewed Twitch clips).
 - `cut` downloads only the needed seconds with yt-dlp (or `--video` a file you already have) and captions with faster-whisper.
+  It edits like the big clip channels: a tall 3:4 frame that follows the streamer's face (OpenCV), jump cuts over
+  dead air, a punch-in/out zoom every 2-3s, captions that build word by word with a coloured key word, a colour
+  boost, and loud mastering (-10 LUFS). `--plain` turns off the cuts, zooms, grade and mastering;
+  `--layout crop43` gives the old wide crop.
 - The narrator is a free Microsoft neural voice via edge-tts (`--voice en-US-AndrewNeural`; list others with
   `edge-tts --list-voices`). Falls back to macOS `say` or espeak-ng. Pass `--voiceover file.m4a` to use your own.
 - Quota: plan ~25 units, daily ~20-60, track ~2. Outputs: `reports/builder/`.
