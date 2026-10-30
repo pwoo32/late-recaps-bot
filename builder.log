@@ -416,3 +416,89 @@ Title/description: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/bui
     Speed Takes A Family Photo At His Movie Premiere 📸 #ishowspeed #speed #fyp
   TikTok: [3] draft in your TikTok inbox. Open the notification, paste this caption, post:
     Jynxzi Begs His Teammate To Get Inside 😭 #jynxzi #funny #fyp
+[0;93m2026-10-30 18:25:12.453499523 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+Done. Report: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/track_2026-10-30_1820.md  (quota used: 2)
+[ishowspeed] reading recent streams/videos
+[kai_cenat] reading recent streams/videos
+[jynxzi] reading recent streams/videos
+[adin_ross] reading recent streams/videos
+[n3on] reading recent streams/videos
+Writing scripts...
+  [1] IShowSpeed at 3:14:30: writing from captions (173 words)
+  [2] IShowSpeed at 3:04:34: writing from captions (78 words)
+  [3] Kai Cenat at 8:21: writing from captions (149 words)
+Scripts written by claude-code.
+Done. Queue: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-10-30_1820/queue.md  (quota used: 52)
+[1] Speed Meets Two Producers Making Dubstep 🎧
+Downloading 3:13:56-3:14:48 of https://www.youtube.com/watch?v=G36NRLWdjzE
+Transcribing with whisper small.en (first run downloads the model)...
+Re-writing the script from what's actually said in the clip...
+  [1] IShowSpeed at 3:14:30: writing from transcript (110 words)
+Scripts written by claude-code.
+edge-tts failed (NoAudioReceived); trying a local voice.
+No text-to-speech available (pip install edge-tts): clip will have no narrator.
+Done. Video: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-10-30_1820/clips/01_G36NRLWdjzE_389.mp4
+Title/description: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-10-30_1820/clips/01_G36NRLWdjzE_389.txt
+  uploaded https://youtube.com/shorts/bj9EzdPPHxI (goes public Fri 05:00 PM ET)
+[2] Speed Raps To A Random Stranger 🎤😭
+Downloading 3:04:00-3:04:52 of https://www.youtube.com/watch?v=G36NRLWdjzE
+Transcribing with whisper small.en (first run downloads the model)...
+Re-writing the script from what's actually said in the clip...
+  [2] IShowSpeed at 3:04:34: writing from transcript (64 words)
+Scripts written by claude-code.
+edge-tts failed (NoAudioReceived); trying a local voice.
+No text-to-speech available (pip install edge-tts): clip will have no narrator.
+Done. Video: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-10-30_1820/clips/02_G36NRLWdjzE_369.mp4
+Title/description: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-10-30_1820/clips/02_G36NRLWdjzE_369.txt
+Traceback (most recent call last):
+  File "/home/runner/work/late-recaps-bot/late-recaps-bot/channel_builder.py", line 1160, in <module>
+    main()
+  File "/home/runner/work/late-recaps-bot/late-recaps-bot/channel_builder.py", line 1154, in main
+    {"plan": cmd_plan, "daily": cmd_daily, "track": cmd_track, "run": cmd_run, "cut": cmd_cut,
+  File "/home/runner/work/late-recaps-bot/late-recaps-bot/channel_builder.py", line 681, in cmd_run
+    cmd_publish(argparse.Namespace(queue=None, ids=None, layout="crop43", whisper="small.en", voice=args.voice,
+  File "/home/runner/work/late-recaps-bot/late-recaps-bot/channel_builder.py", line 1025, in cmd_publish
+    vid, scheduled = upload_clip(api, path, c)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/late-recaps-bot/late-recaps-bot/channel_builder.py", line 928, in upload_clip
+    _, resp = req.next_chunk()
+              ^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/googleapiclient/_helpers.py", line 130, in positional_wrapper
+    return wrapped(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/googleapiclient/http.py", line 1087, in next_chunk
+    resp, content = _retry_request(
+                    ^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/googleapiclient/http.py", line 222, in _retry_request
+    raise exception
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/googleapiclient/http.py", line 191, in _retry_request
+    resp, content = http.request(uri, method, *args, **kwargs)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/google_auth_httplib2.py", line 214, in request
+    response, content = self.http.request(
+                        ^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/httplib2/__init__.py", line 1755, in request
+    (response, content) = self._request(
+                          ^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/httplib2/__init__.py", line 1475, in _request
+    (response, content) = self._conn_request(conn, request_uri, method, body, headers)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/httplib2/__init__.py", line 1398, in _conn_request
+    conn.request(method, request_uri, body, headers)
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/http/client.py", line 1386, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/http/client.py", line 1432, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/http/client.py", line 1381, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/http/client.py", line 1141, in _send_output
+    self.send(msg)
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/http/client.py", line 1105, in send
+    self.sock.sendall(data)
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/ssl.py", line 1223, in sendall
+    v = self.send(byte_view[count:])
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/ssl.py", line 1192, in send
+    return self._sslobj.write(data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+ssl.SSLEOFError: EOF occurred in violation of protocol (_ssl.c:2427)

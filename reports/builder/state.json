@@ -1,10 +1,11 @@
 {
  "source_weight": {
-  "jynxzi": 0.91,
-  "kai_cenat": 0.51
+  "jynxzi": 0.67,
+  "kai_cenat": 0.71,
+  "ishowspeed": 1.8
  },
  "slot_weight": {
-  "2": 0.91,
+  "2": 1.75,
   "21": 2.99
  },
  "used_moments": [
@@ -48,7 +49,10 @@
   "OT-gVk8hfUI@1267",
   "G36NRLWdjzE@388",
   "G36NRLWdjzE@449",
-  "yTjFkUmcVM4@12"
+  "yTjFkUmcVM4@12",
+  "G36NRLWdjzE@389",
+  "G36NRLWdjzE@369",
+  "qLo64OdLKBE@16"
  ],
  "queued": {
   "L6S9Vb3RLy4@186": {
@@ -267,6 +271,22 @@
    "source": "jynxzi",
    "post_utc": "2026-10-30 04:00",
    "video_id": "ZonsrNShgXw"
+  },
+  "G36NRLWdjzE@389": {
+   "title": "Speed Meets Two Fans Making Dubstep \ud83c\udfa7\ud83d\ude02",
+   "source": "ishowspeed",
+   "post_utc": "2026-10-30 21:00",
+   "video_id": "bj9EzdPPHxI"
+  },
+  "G36NRLWdjzE@369": {
+   "title": "Speed Raps Ready or Not To a Random Fan \ud83c\udfa4\ud83d\ude2d",
+   "source": "ishowspeed",
+   "post_utc": "2026-10-31 08:00"
+  },
+  "qLo64OdLKBE@16": {
+   "title": "Kai Cenat Tours A Wild Japan Room \ud83d\ude2d",
+   "source": "kai_cenat",
+   "post_utc": "2026-10-31 04:00"
   }
  },
  "channel": "UCbK9EejOk5UVzI_l8F3f8kA",
@@ -275,82 +295,107 @@
   "@TheDiaryOfACEO": "UCGq-a57w-aPwyi3pW7XLiHw"
  },
  "review": {
-  "at": "2026-10-29 18:48",
-  "report": "/home/runner/work/late-recaps-bot/late-recaps-bot/reports/review_2026-10-29_1848/report.md",
+  "at": "2026-10-30 18:20",
+  "report": "/home/runner/work/late-recaps-bot/late-recaps-bot/reports/review_2026-10-30_1820/report.md",
   "lessons": {
    "titles": [
-    "Creator name first, then the bet or question in plain verbs, max 6 words. Never put the result in the title; Red Card, Copper and Hang On all gave away the payoff.",
-    "Use the question form for the stake ('Asks If This Dog Is Ever Happy') and avoid trivia like 'Japan's Most Popular Dog'.",
-    "Use one or two emoji at the end only. Don't stack flags or pairs that don't mean anything."
+    "Creator name first, then the bet or question in plain verbs, max 6 words. Never put the result in the title: 'Red Card', 'Copper' and 'Hang On' all gave away the payoff.",
+    "Phrase the stake as a question ('Can Kai Get Ray Through?'). Skip trivia ('Japan's Most Popular Dog') and vague teases ('Can't Believe What Happens').",
+    "Use one or two emoji at the end only. Drop the flag stacks."
    ],
    "hooks": [
-    "Max 6 words and add the stake the narrator didn't. If the hook and narrator say the same thing, cut one.",
-    "Cut vague teases like 'WAIT FOR HIS LIFE ADVICE'. State what is on the line or what will break ('LOSE AND THE STREAM ENDS').",
-    "Don't write hooks that announce the outcome, like 'ONE HIT AWAY'; ask whether it happens."
+    "Max 6 words, and add the stake the narrator didn't. If the hook and narrator say the same thing, cut one.",
+    "Ask whether it happens; never announce the outcome ('ONE HIT AWAY', 'HIS NAME IS REALLY UP THERE'). State what's on the line ('LOSE AND THE STREAM ENDS').",
+    "Cut vague teases like 'WAIT FOR HIS LIFE ADVICE'."
    ],
    "clip_picks": [
-    "Only cut moments with a one-line spoken premise (bet, guess, countdown, question). Speed and Kai with athletes or celebrities come first, then Kai with Ray.",
-    "Skip visual-only moments (fans chasing, a clinch, a dog, a boss fight buildup). If the transcript isn't funny read aloud, skip it.",
-    "Mine Jynxzi rank guessing as a repeatable series, but state the premise up front."
+    "Only cut moments with a one-line spoken premise (bet, guess, countdown, question, argument). Speed or Kai with athletes and celebrities come first, then Kai with Ray.",
+    "Skip visual-only moments (crowds, dogs, clinches, boss-fight buildups, walk-ins). If it isn't funny read aloud, skip it.",
+    "Don't post two clips of the same moment (the two dubstep clips). Pick the one with the named guest.",
+    "Mine Jynxzi rank guessing as a series, but state the premise in the first line."
    ],
    "length_and_pacing": [
-    "Stop cutting every clip to 53s. Start \u22642s before the stake line, end \u22642s after the payoff, and aim for 15-30s. The breakouts are mostly 11-26s.",
-    "End on the payoff line and cut trailing banter so the clip loops cleanly."
+    "Stop cutting every clip to 53s. Start \u22642s before the stake line, end \u22642s after the payoff, and aim for 15-30s. Most breakouts run 11-26s.",
+    "End on the payoff line and cut trailing banter so the clip loops."
    ],
    "posting": [
-    "Post 1-2 clips a day within hours of the stream. Clips 5-7 days old compete with hundreds of other clippers.",
-    "All clips sit at 0-15 views with n/a analytics, so check Studio for limits, duplicate-content flags and Shorts-feed serving before judging. After 48h, judge on 3s retention and Shorts-feed share.",
-    "Check that scheduled clips actually went public; four are still private."
+    "Post 1-2 clips a day within hours of the stream. Clips 5-7 days old compete with hundreds of other clippers and sit at 0 views.",
+    "Check Studio for limits, duplicate-content flags and Shorts-feed serving, since every clip sits at 0-16 views with n/a analytics. After 48h, judge on 3s retention and Shorts-feed share.",
+    "Confirm scheduled clips went public. The earlier review flagged four as private."
    ]
   },
   "source_score": {},
   "length_hint": null,
   "clips": [
    {
+    "title": "Speed Finds His Own Name On The Premiere Wall \ud83d\ude2d",
+    "views": 0,
+    "avg_viewed": null,
+    "stayed": null,
+    "verdict": "Flop at 34h and 0 views. A visual walk-in with no stake."
+   },
+   {
+    "title": "Jynxzi Pushes Through Promised Consort Radahn \ud83d\ude2d",
+    "views": 0,
+    "avg_viewed": null,
+    "stayed": null,
+    "verdict": "Flop at 38h and 0 views. A boss-fight buildup with the payoff outside the clip."
+   },
+   {
     "title": "Jynxzi Reads Fan Mail About The Art Of Seduction \ud83d\ude2d\ud83d\udcda",
     "views": 0,
     "avg_viewed": null,
     "stayed": null,
-    "verdict": "Weak. 0 views after 137h; the premise is a vague tease and it's now too old to rescue."
+    "verdict": "Dead at 160h and 0 views. Matches the weak-pick flag."
    },
    {
     "title": "Kai Cenat Tells Ray To Stay Behind Him In Japan \ud83d\ude2d\u2764\ufe0f\u200d\ud83e\ude79",
     "views": 0,
     "avg_viewed": null,
     "stayed": null,
-    "verdict": "Weak. 0 views at 142h; a visual fans-chasing moment with no spoken premise."
+    "verdict": "Dead at 165h and 0 views. Visual crowd moment with no spoken premise."
    },
    {
     "title": "Kai Cenat Meets Japan's Most Popular Dog \ud83d\udc15\ud83d\ude2d",
     "views": 1,
     "avg_viewed": null,
     "stayed": null,
-    "verdict": "Weak. 1 view at 146h; trivia title and a visual dog moment."
+    "verdict": "Dead at 169h and 1 view. A dog clip is trivia without a stake."
    },
    {
     "title": "Jynxzi Calls This Player Copper Off His Name Alone \ud83d\ude2d",
     "views": 3,
     "avg_viewed": null,
     "stayed": null,
-    "verdict": "Weak but the best series candidate. 3 views at 185h, with a repeatable rank-guess premise."
+    "verdict": "Weak at 208h and 3 views. The rank-guessing series idea is good, but this clip isn't framed as one."
    },
    {
     "title": "Speed Gets a Red Card Against Cole Palmer \ud83d\ude2d",
     "views": 15,
     "avg_viewed": null,
     "stayed": null,
-    "verdict": "Best of the set at 15 views, but that's still negligible. A famous name and a stake carried it slightly."
+    "verdict": "Best of the old batch (15 views) but still tiny. The premise is right (celebrity plus stakes) and the execution is wrong."
    },
    {
     "title": "Adin Watches YK Osiris Hang On Against Deshae \ud83d\ude2d\ud83e\udd4a",
     "views": 1,
     "avg_viewed": null,
     "stayed": null,
-    "verdict": "Weak. 1 view at 192h; Adin isn't the actor and the boxing is visual."
+    "verdict": "Weak at 216h and 1 view. A fight clinch is visual and Adin Ross is off-niche for this channel."
    }
   ]
  },
  "own_results": [
+  {
+   "title": "Speed Finds His Own Name On The Premiere Wall \ud83d\ude2d",
+   "views": 0,
+   "lift": 0.0
+  },
+  {
+   "title": "Jynxzi Pushes Through Promised Consort Radahn \ud83d\ude2d",
+   "views": 0,
+   "lift": 0.0
+  },
   {
    "title": "Jynxzi Reads Fan Mail About The Art Of Seduction \ud83d\ude2d\ud83d\udcda",
    "views": 0,
@@ -364,22 +409,22 @@
   {
    "title": "Kai Cenat Meets Japan's Most Popular Dog \ud83d\udc15\ud83d\ude2d",
    "views": 1,
-   "lift": 1.0
+   "lift": 2.0
   },
   {
    "title": "Jynxzi Calls This Player Copper Off His Name Alone \ud83d\ude2d",
    "views": 3,
-   "lift": 3.0
+   "lift": 6.0
   },
   {
    "title": "Speed Gets a Red Card Against Cole Palmer \ud83d\ude2d",
    "views": 15,
-   "lift": 15.0
+   "lift": 30.0
   },
   {
    "title": "Adin Watches YK Osiris Hang On Against Deshae \ud83d\ude2d\ud83e\udd4a",
    "views": 1,
-   "lift": 1.0
+   "lift": 2.0
   }
  ],
  "tiktok": {
