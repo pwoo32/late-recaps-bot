@@ -502,3 +502,51 @@ Traceback (most recent call last):
     return self._sslobj.write(data)
            ^^^^^^^^^^^^^^^^^^^^^^^^
 ssl.SSLEOFError: EOF occurred in violation of protocol (_ssl.c:2427)
+[0;93m2026-10-30 18:55:40.529226004 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+Done. Report: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/track_2026-10-30_1851.md  (quota used: 2)
+[ishowspeed] reading recent streams/videos
+[kai_cenat] reading recent streams/videos
+[jynxzi] reading recent streams/videos
+[adin_ross] reading recent streams/videos
+[n3on] reading recent streams/videos
+Writing scripts...
+  [1] IShowSpeed at 1:25:12: writing from captions (204 words)
+  [2] IShowSpeed at 3:16:06: writing from captions (45 words)
+  [3] Kai Cenat at 4:04: writing from captions (179 words)
+Scripts written by claude-code.
+Done. Queue: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-10-30_1851/queue.md  (quota used: 52)
+[1] Speed Hunts For The Winner Of $250,000 😳
+Downloading 1:24:38-1:25:30 of https://www.youtube.com/watch?v=G36NRLWdjzE
+Transcribing with whisper small.en (first run downloads the model)...
+Re-writing the script from what's actually said in the clip...
+  [1] IShowSpeed at 1:25:12: writing from transcript (142 words)
+Scripts written by claude-code.
+Done. Video: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-10-30_1851/clips/01_G36NRLWdjzE_170.mp4
+Title/description: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-10-30_1851/clips/01_G36NRLWdjzE_170.txt
+  uploaded https://youtube.com/shorts/z6RINvtUOKY (goes public Fri 05:00 PM ET)
+[2] Speed Gets Pushed To Freestyle On A Beat 🎤
+Downloading 3:15:32-3:16:24 of https://www.youtube.com/watch?v=G36NRLWdjzE
+Transcribing with whisper small.en (first run downloads the model)...
+Re-writing the script from what's actually said in the clip...
+  [2] IShowSpeed at 3:16:06: writing from transcript (18 words)
+Scripts written by claude-code.
+Done. Video: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-10-30_1851/clips/02_G36NRLWdjzE_392.mp4
+Title/description: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-10-30_1851/clips/02_G36NRLWdjzE_392.txt
+  uploaded https://youtube.com/shorts/q7Yq52iK_xE (goes public Sat 04:00 AM ET)
+[3] Kai Cenat Rates Train Food In Japan 🍳
+Downloading 3:30-4:22 of https://www.youtube.com/watch?v=qLo64OdLKBE
+Transcribing with whisper small.en (first run downloads the model)...
+Re-writing the script from what's actually said in the clip...
+  [3] Kai Cenat at 4:04: writing from transcript (157 words)
+Scripts written by claude-code.
+edge-tts failed (NoAudioReceived); trying a local voice.
+No text-to-speech available (pip install edge-tts): clip will have no narrator.
+Done. Video: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-10-30_1851/clips/03_qLo64OdLKBE_8.mp4
+Title/description: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-10-30_1851/clips/03_qLo64OdLKBE_8.txt
+  uploaded https://youtube.com/shorts/ZoyRKpMD62s (goes public Fri 10:00 PM ET)
+  TikTok: [1] draft in your TikTok inbox. Open the notification, paste this caption, post:
+    Speed Checks Who Really Won His $250,000 Giveaway 💰 #ishowspeed #speed #fyp
+  TikTok: [2] draft in your TikTok inbox. Open the notification, paste this caption, post:
+    Speed Hears Dubstep And Instantly Starts Vibing 😂 #ishowspeed #speed #fyp
+  TikTok: [3] draft in your TikTok inbox. Open the notification, paste this caption, post:
+    Kai Cenat Rates Japanese Train Breakfast 🍳 #kaicenat #funny #fyp
