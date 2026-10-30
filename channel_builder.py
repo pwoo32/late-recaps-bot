@@ -706,15 +706,9 @@ def caption_chunks(words):
     return chunks
 
 
-STOPWORDS = set("a an and are as at be but by do for from he her him his i i'm if in is it it's me my no not of on "
-                "or so that the this to up was we what with yo you your".split())
-KEY_COLOURS = ["&H0033FF66&", "&H0000E5FF&", "&H003C3CFF&", "&H00FFD24A&"]  # ASS is BGR: green, yellow, red, blue
-
-
 def write_ass(path, words, hook, context, length, offset=0.0):
-    """Captions like the big clip channels: 1-3 word chunks mid-screen, each word appearing as it is said,
-    the chunk's key word in a colour that changes chunk to chunk; hook pinned top; context line for the
-    first 3.5s."""
+    """Captions: 1-3 word chunks, big with a heavy outline, the word being spoken in yellow; hook pinned top;
+    context line for the first 3.5s."""
     head = """[Script Info]
 ScriptType: v4.00+
 PlayResX: 1080
@@ -734,22 +728,15 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
         ev.append(f"Dialogue: 1,{ass_time(0)},{ass_time(length)},Hook,,0,0,0,,{ass_escape(hook.upper())}")
     if context:
         ev.append(f"Dialogue: 1,{ass_time(0)},{ass_time(min(3.5, length))},Ctx,,0,0,0,,{ass_escape(context)}")
-    for n, (chunk, nxt) in enumerate(caption_chunks(words)):
+    for chunk, nxt in caption_chunks(words):
         texts = [ass_escape(c["word"].strip().upper()) for c in chunk]
-        bare = [re.sub(r"[^a-z']", "", t.lower()) for t in texts]
-        key = max(range(len(texts)), key=lambda k: (bare[k] not in STOPWORDS, len(bare[k])))
-        if bare[key] in STOPWORDS:
-            key = -1
-        texts = [r"{\c" + KEY_COLOURS[n % len(KEY_COLOURS)] + "}" + t + r"{\c&HFFFFFF&}" if k == key else t
-                 for k, t in enumerate(texts)]
         chunk_end = min((nxt["start"] if nxt else chunk[-1]["end"] + 0.3) + offset, length)
-        for j, w in enumerate(chunk):  # one event per word: the line builds up as it is said
-            s = max(w["start"] + offset, 0)
+        for j, w in enumerate(chunk):  # one event per word, so the highlight moves with the speech
+            s = max(w["start"] + offset, 0) if j else max(chunk[0]["start"] + offset, 0)
             e = min(chunk[j + 1]["start"] + offset, chunk_end) if j + 1 < len(chunk) else chunk_end
-            line = " ".join(t for t in texts[:j + 1] if t)
+            line = " ".join(r"{\c&H00E5FF&}" + t + r"{\c&HFFFFFF&}" if k == j else t for k, t in enumerate(texts) if t)
             if e > s and line:
-                pop = r"{\fscx120\fscy120\t(0,100,\fscx100\fscy100)}" if j == 0 else ""
-                ev.append(f"Dialogue: 0,{ass_time(s)},{ass_time(e)},Cap,,0,0,0,,{pop}{line}")
+                ev.append(f"Dialogue: 0,{ass_time(s)},{ass_time(e)},Cap,,0,0,0,,{line}")
     Path(path).write_text(head + "\n".join(ev) + "\n", encoding="utf-8")
 
 
@@ -783,7 +770,7 @@ def zoom_expr(beats, length, push=0.06, punch=0.14):
     return f"1+{push}*t/{max(length, 1):.2f}+{punch}*mod({toggles},2)"
 
 
-def zoom_beats(words, cuts, min_gap=1.6, max_gap=3.0):
+def zoom_beats(words, cuts, min_gap=1.5, max_gap=2.5):
     """Moments to punch in or out: every jump cut, plus a caption-chunk start whenever the frame has held
     for `max_gap` seconds. Never closer than `min_gap`."""
     cuts = {round(c, 2) for c in cuts}
@@ -869,9 +856,6 @@ def narrate(text, out_base, voice):
     return None
 
 
-LOUD = "loudnorm=I=-10:TP=-1:LRA=9,aresample=48000"  # top clip channels master loud (the reference sits near -5 LUFS)
-
-
 def face_x(path, samples=15):
     """Where the main face sits across the clip, as a fraction of the width (median of the biggest face in
     a few sampled frames), or None without OpenCV or a face."""
@@ -945,8 +929,8 @@ def cmd_cut(args):
     vs = next((st for st in probe if st.get("codec_type") == "video"), {})
     has_audio = any(st.get("codec_type") == "audio" for st in probe)
 
-    # Retention edit (what top clip channels do): cut dead air between lines, and punch the frame in/out
-    # every couple of seconds so the picture keeps changing. --plain turns both off.
+    # Retention edit: cut dead air between lines, and punch the frame in/out every couple of seconds so the
+    # picture keeps changing. --plain turns both off.
     plain = getattr(args, "plain", False)
     keep = dead_air(words, length) if words and not plain else [(0.0, length)]
     if len(keep) > 1:
@@ -988,8 +972,7 @@ def cmd_cut(args):
     fg += f",scale={fw}:{fh}"
     if not plain:
         z = zoom_expr(zoom_beats(words, cuts), length)
-        fg += (f",scale=w='2*trunc({fw}*({z})/2)':h='2*trunc({fh}*({z})/2)':eval=frame,crop={fw}:{fh},"
-               f"eq=saturation=1.25:contrast=1.06,unsharp=5:5:0.6")  # punchier colour, like the big clip channels
+        fg += f",scale=w='2*trunc({fw}*({z})/2)':h='2*trunc({fh}*({z})/2)':eval=frame,crop={fw}:{fh}"
     vf = (src + f"{vin}split[a][b];[a]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,gblur=sigma=40,"
           f"eq=brightness=-0.12[bg];[b]{fg}[fg];[bg][fg]overlay=(W-w)/2:(H-h)/2,"
           f"subtitles='{ass.resolve().as_posix().replace(':', chr(92) + ':')}'[v]")  # escape C: on Windows
@@ -1001,10 +984,10 @@ def cmd_cut(args):
                                     str(args.voiceover)], capture_output=True, text=True).stdout.strip() or 0)
         cmd += ["-i", str(args.voiceover)]
         af = (f"{ain}volume='if(lt(t,{dur:.2f}),0.25,1)':eval=frame[s];[1:a]volume=1.6[vo];"
-              f"[s][vo]amix=inputs=2:duration=first:normalize=0" + ("[mix];[mix]" + LOUD if not plain else "") + "[aud]")
+              f"[s][vo]amix=inputs=2:duration=first:normalize=0[aud]")
         cmd += ["-filter_complex", vf + ";" + af, "-map", "[v]", "-map", "[aud]"]
-    elif has_audio and (n > 1 or not plain):
-        cmd += ["-filter_complex", vf + ";" + ain + (LOUD if not plain else "anull") + "[aud]", "-map", "[v]", "-map", "[aud]"]
+    elif n > 1 and has_audio:
+        cmd += ["-filter_complex", vf, "-map", "[v]", "-map", ain]
     else:
         cmd += ["-filter_complex", vf, "-map", "[v]", "-map", "0:a?"]
     out = base.with_suffix(".mp4")
