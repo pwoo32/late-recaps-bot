@@ -34,6 +34,7 @@ import shutil
 import statistics
 import subprocess
 import sys
+import time
 from collections import Counter, defaultdict
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -923,9 +924,16 @@ def upload_clip(api, path, clip):
     }
     req = api.videos().insert(part="snippet,status", body=body,
                               media_body=MediaFileUpload(str(path), mimetype="video/mp4", resumable=True, chunksize=8 << 20))
-    resp = None
+    resp, tries = None, 0
     while resp is None:
-        _, resp = req.next_chunk()
+        try:
+            _, resp = req.next_chunk()
+        except OSError as e:  # dropped connection mid-upload: the upload is resumable, so wait and pick up where it left off
+            tries += 1
+            if tries > 5:
+                raise
+            print(f"  upload hiccup ({type(e).__name__}), retrying...")
+            time.sleep(5 * tries)
     return resp["id"], scheduled
 
 
@@ -1030,7 +1038,8 @@ def cmd_publish(args):
             if "uploadLimitExceeded" in str(e) or "quotaExceeded" in str(e):
                 print("  YouTube's daily upload limit is hit; the rest go up on the next run.")
                 break
-            raise
+            print(f"  skipped: upload failed ({type(e).__name__}: {str(e)[:200]}). It goes up on the next run.")
+            continue
         c["youtube_id"] = vid
         state["queued"].setdefault(c["key"], {}).update(video_id=vid, title=c["title"], source=c["source"])
         qfile.write_text(json.dumps(queue, indent=1, ensure_ascii=False), encoding="utf-8")
