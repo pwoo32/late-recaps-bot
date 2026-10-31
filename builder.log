@@ -550,3 +550,58 @@ Title/description: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/bui
     Speed Hears Dubstep And Instantly Starts Vibing 😂 #ishowspeed #speed #fyp
   TikTok: [3] draft in your TikTok inbox. Open the notification, paste this caption, post:
     Kai Cenat Rates Japanese Train Breakfast 🍳 #kaicenat #funny #fyp
+[streamer] searching: streamer clips
+[streamer] searching: kai cenat
+[streamer] searching: ishowspeed
+[streamer] searching: twitch clips
+Fetching stats for 192 videos
+Fetching subscriber counts for 88 channels
+Done. Report: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/2026-10-31_1606/report.md
+[0;93m2026-10-31 16:10:43.337474466 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+Done. Report: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/track_2026-10-31_1606.md  (quota used: 2)
+[ishowspeed] reading recent streams/videos
+[kai_cenat] reading recent streams/videos
+[jynxzi] reading recent streams/videos
+[adin_ross] reading recent streams/videos
+[n3on] reading recent streams/videos
+Writing scripts...
+  [1] Kai Cenat at 39:45: writing from comments
+  [2] Kai Cenat at 1:38:33: writing from comments
+  [3] Jynxzi at 4:03: writing from captions (157 words)
+Scripts written by claude-code.
+Done. Queue: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-10-31_1606/queue.md  (quota used: 49)
+[1] Kai Cenat Reacts To A Rose Toy At The Party 😭
+Downloading 39:11-40:03 of https://www.youtube.com/watch?v=SZA_mBnRNNc
+Transcribing with whisper small.en (first run downloads the model)...
+Re-writing the script from what's actually said in the clip...
+  [1] Kai Cenat at 39:45: writing from transcript (18 words)
+Scripts written by claude-code.
+edge-tts failed (NoAudioReceived); trying a local voice.
+No text-to-speech available (pip install edge-tts): clip will have no narrator.
+Done. Video: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-10-31_1606/clips/01_SZA_mBnRNNc_79.mp4
+Title/description: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-10-31_1606/clips/01_SZA_mBnRNNc_79.txt
+  uploaded https://youtube.com/shorts/aXwQ5wo-rVs (goes public Sat 05:00 PM ET)
+[2] Duke Dennis Roasts Rakai In Front Of Kai Cenat 😭
+Downloading 1:37:59-1:38:51 of https://www.youtube.com/watch?v=SZA_mBnRNNc
+Transcribing with whisper small.en (first run downloads the model)...
+Re-writing the script from what's actually said in the clip...
+  [2] Kai Cenat at 1:38:33: writing from transcript (84 words)
+Scripts written by claude-code.
+Done. Video: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-10-31_1606/clips/02_SZA_mBnRNNc_197.mp4
+Title/description: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-10-31_1606/clips/02_SZA_mBnRNNc_197.txt
+  uploaded https://youtube.com/shorts/aofHIq4a-Q8 (goes public Sat 10:00 PM ET)
+[3] Jynxzi Forgets His Keybinds In A 1v1 For $1000 🎮
+Downloading 3:29-4:21 of https://www.youtube.com/watch?v=HbsX4WRbYLM
+Transcribing with whisper small.en (first run downloads the model)...
+Re-writing the script from what's actually said in the clip...
+  [3] Jynxzi at 4:03: writing from transcript (106 words)
+Scripts written by claude-code.
+Done. Video: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-10-31_1606/clips/03_HbsX4WRbYLM_8.mp4
+Title/description: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-10-31_1606/clips/03_HbsX4WRbYLM_8.txt
+  uploaded https://youtube.com/shorts/mEtPhzxRKuA (goes public Sun 03:00 AM ET)
+  TikTok: [1] draft in your TikTok inbox. Open the notification, paste this caption, post:
+    Kai Cenat Tells A Guest He's A Rose Boy 🌹😭 #kaicenat #funny #fyp
+  TikTok: [2] draft in your TikTok inbox. Open the notification, paste this caption, post:
+    Kai Cenat Keeps Rakai Out Of The Halloween Party 🎃😭 #kaicenat #rakai #funny #fyp
+  TikTok: [3] draft in your TikTok inbox. Open the notification, paste this caption, post:
+    Jynxzi Explains Why Hearing Wins In Rainbow Six 🎧 #jynxzi #rainbowsix #fyp
