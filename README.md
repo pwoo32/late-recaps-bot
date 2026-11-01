@@ -80,7 +80,7 @@ python channel_builder.py plan           # channel kit: niche, free @handle idea
 python channel_builder.py daily          # today's queue: exact stream moments + cut points, titles, hooks, descriptions, post times
 python channel_builder.py cut 1          # queue item 1 -> 1080x1920 Short: captions, hook, AI narrator over the opening
 python channel_builder.py track --channel @yourhandle   # score your uploads; re-weights creators and post hours for tomorrow
-python channel_builder.py publish        # cut + narrate + upload every queued clip, scheduled for its post time
+python channel_builder.py publish        # cut + upload every queued clip, scheduled for its post time
 python channel_builder.py run --publish  # the whole day hands-off: refresh reports, track, queue, cut, upload
 ```
 
@@ -91,8 +91,13 @@ python channel_builder.py run --publish  # the whole day hands-off: refresh repo
 - Scripts come from `script_agent.py` (above). Optional keys: `TWITCH_CLIENT_ID`/`TWITCH_CLIENT_SECRET` (dev.twitch.tv, free; adds Twitch-only creators like
   Kai Cenat via their most-viewed Twitch clips).
 - `cut` downloads only the needed seconds with yt-dlp (or `--video` a file you already have) and captions with faster-whisper.
-- The narrator is a free Microsoft neural voice via edge-tts (`--voice en-US-AndrewNeural`; list others with
-  `edge-tts --list-voices`). Falls back to macOS `say` or espeak-ng. Pass `--voiceover file.m4a` to use your own.
+  It edits for retention: a tall 3:4 frame that follows the streamer's face (OpenCV), jump cuts over dead air,
+  a punch-in/out zoom every 1.5-2.5s, and big captions with the spoken word highlighted. `--plain` turns off the
+  cuts and zooms; `--layout crop43` gives the old wide crop.
+- No narrator by default: 33 of the 36 top streamer-clip Shorts we audited open straight on the stream's audio.
+  `--narrate` adds one, a free Microsoft neural voice via edge-tts (`--voice en-US-BrianMultilingualNeural`, about
+  170 words a minute; list others with `edge-tts --list-voices`). Falls back to macOS `say` or espeak-ng. Pass
+  `--voiceover file.m4a` to use your own.
 - Quota: plan ~25 units, daily ~20-60, track ~2. Outputs: `reports/builder/`.
 
 ### Uploading (one-time setup, ~10 minutes)
