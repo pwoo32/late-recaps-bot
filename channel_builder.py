@@ -680,7 +680,7 @@ def cmd_run(args):
     cmd_daily(args)
     if args.publish:
         cmd_publish(argparse.Namespace(queue=None, ids=None, layout="face34", whisper="small.en", voice=args.voice,
-                                       skip_gate=False))
+                                       narrate=args.narrate, skip_gate=False))
 
 
 # ---------- cutting ----------
@@ -832,7 +832,8 @@ def transcribe(path, model_name):
 
 
 def narrate(text, out_base, voice):
-    """Speak the take with a default AI voice. Tries edge-tts (natural Microsoft neural voices, free),
+    """Speak the take with an AI voice (default Brian: casual, about 170 words a minute, the pace guides
+    recommend for Shorts narration). Tries edge-tts (natural Microsoft neural voices, free),
     then macOS `say`, then espeak-ng. Returns the audio path, or None if no voice is available."""
     text = EMOJI.sub("", text).strip()
     if not text:
@@ -841,7 +842,7 @@ def narrate(text, out_base, voice):
         import asyncio
         import edge_tts
         out = out_base.with_suffix(".take.mp3")
-        asyncio.run(edge_tts.Communicate(text, voice, rate="+8%").save(str(out)))
+        asyncio.run(edge_tts.Communicate(text, voice).save(str(out)))
         if out.exists() and out.stat().st_size > 1000:
             return out
     except Exception as e:
@@ -977,7 +978,8 @@ def cmd_cut(args):
           f"eq=brightness=-0.12[bg];[b]{fg}[fg];[bg][fg]overlay=(W-w)/2:(H-h)/2,"
           f"subtitles='{ass.resolve().as_posix().replace(':', chr(92) + ':')}'[v]")  # escape C: on Windows
     cmd = ["ffmpeg", "-y", "-loglevel", "error", "-i", str(raw)]
-    if not args.voiceover and not args.no_voice and clip.get("take"):
+    # No narrator unless asked: 33 of 36 top streamer-clip Shorts open straight on the stream's own audio.
+    if not args.voiceover and getattr(args, "narrate", False) and clip.get("take"):
         args.voiceover = narrate(clip["take"], base, args.voice)
     if args.voiceover and has_audio:  # your take over the opening, stream audio ducked under it
         dur = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0",
@@ -1123,7 +1125,7 @@ def hold(qdir, problems):
 
 
 def cmd_publish(args):
-    """Cut, narrate and upload every clip in the queue that isn't on YouTube yet."""
+    """Cut (narrate with --narrate) and upload every clip in the queue that isn't on YouTube yet."""
     qdir = Path(args.queue) if args.queue else max(BUILDER_DIR.glob("daily_*"), key=lambda p: p.stat().st_mtime, default=None)
     if not qdir:
         sys.exit("No queue yet. Run `python channel_builder.py daily` first.")
@@ -1149,7 +1151,7 @@ def cmd_publish(args):
         try:
             path = cmd_cut(argparse.Namespace(
                 id=c["id"], queue=str(qdir), start=None, end=None, video=None, voiceover=None, layout=args.layout,
-                whisper=args.whisper, transcript=None, no_captions=False, voice=args.voice, no_voice=False, no_script=False))
+                whisper=args.whisper, transcript=None, no_captions=False, voice=args.voice, narrate=args.narrate, no_script=False))
             c.update(next(x for x in json.loads(qfile.read_text(encoding="utf-8")) if x["id"] == c["id"]))  # cut's new script
             problem = None if getattr(args, "skip_gate", False) else clip_problem(qdir, c)
             if problem:
@@ -1251,8 +1253,9 @@ def main():
             p.add_argument("--hours", type=int, default=168, help="look at streams/videos from the last N hours")
             p.add_argument("--length", type=int, help="clip length in seconds (default: from the channel study)")
         if name == "run":
-            p.add_argument("--publish", action="store_true", help="also cut, narrate and upload the queue")
-            p.add_argument("--voice", default="en-US-AndrewNeural", help="edge-tts narrator voice")
+            p.add_argument("--publish", action="store_true", help="also cut and upload the queue")
+            p.add_argument("--narrate", action="store_true", help="add the AI narrator over the opening (off by default)")
+            p.add_argument("--voice", default="en-US-BrianMultilingualNeural", help="edge-tts narrator voice")
         if name == "track":
             p.add_argument("--channel", help="your channel @handle or UC... id (remembered after the first run)")
     p = sub.add_parser("cut")
@@ -1266,8 +1269,9 @@ def main():
     p.add_argument("--whisper", default="small.en", help="faster-whisper model for captions")
     p.add_argument("--transcript", help="word timings JSON [{word,start,end}] instead of whisper")
     p.add_argument("--no-captions", action="store_true")
-    p.add_argument("--voice", default="en-US-AndrewNeural", help="edge-tts narrator voice (edge-tts --list-voices)")
-    p.add_argument("--no-voice", action="store_true", help="no narrator")
+    p.add_argument("--narrate", action="store_true", help="add the AI narrator over the opening (off by default: "
+                   "top clip channels open straight on the stream's audio)")
+    p.add_argument("--voice", default="en-US-BrianMultilingualNeural", help="edge-tts narrator voice (edge-tts --list-voices)")
     p.add_argument("--no-script", action="store_true", help="keep the queue's script, don't re-write it from the transcript")
     p.add_argument("--plain", action="store_true", help="no jump cuts over dead air and no punch-in zooms")
     sub.add_parser("auth")
@@ -1283,7 +1287,8 @@ def main():
     p.add_argument("--queue", help="queue folder (default: latest daily_*)")
     p.add_argument("--layout", default="face34", choices=["face34", "crop43", "fit", "fill"])
     p.add_argument("--whisper", default="small.en")
-    p.add_argument("--voice", default="en-US-AndrewNeural")
+    p.add_argument("--narrate", action="store_true", help="add the AI narrator over the opening")
+    p.add_argument("--voice", default="en-US-BrianMultilingualNeural")
     p.add_argument("--skip-gate", action="store_true", help="post without the every-agent check (not recommended)")
     args = ap.parse_args()
 
