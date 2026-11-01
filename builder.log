@@ -649,3 +649,28 @@ No writer available: using templates (marked draft). See the top of script_agent
 Done. Video: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-11-01_1707/clips/03_R6gKMvetXUU_45.mp4
 Title/description: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-11-01_1707/clips/03_R6gKMvetXUU_45.txt
   held, not posted: script agent: only a fill-in template, no writer ran
+[streamer] searching: streamer clips
+[streamer] searching: kai cenat
+[streamer] searching: ishowspeed
+[streamer] searching: twitch clips
+Fetching stats for 187 videos
+Fetching subscriber counts for 88 channels
+Done. Report: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/2026-11-01_2226/report.md
+Done. Report: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/track_2026-11-01_2226.md  (quota used: 2)
+[ishowspeed] reading recent streams/videos
+  reading the room on "HALLOWEEN SPIDER-MAN SPEED-VERSE IRL STREAM 🎃🕷" (chat replay, most replayed)
+[kai_cenat] reading recent streams/videos
+  reading the room on "🎃AMP HALLOWEEN PARTY🎃" (chat replay, most replayed)
+    6 chat spikes
+[jynxzi] reading recent streams/videos
+  reading the room on "HAPPY HALLOWEEN + JYNXZI CUP LATER" (chat replay, most replayed)
+  reading the room on "FREAKY FRIDAY STREAM" (chat replay, most replayed)
+    6 chat spikes
+[adin_ross] reading recent streams/videos
+[n3on] reading recent streams/videos
+Writing scripts...
+  [1] IShowSpeed at 31:40: writing from captions (70 words)
+  [2] Kai Cenat at 55:08: writing from comments
+  [3] Kai Cenat at 19:34: writing from comments
+Scripts written by ollama.
+Done. Queue: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-11-01_2226/queue.md  (quota used: 51)

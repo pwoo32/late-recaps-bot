@@ -1,0 +1,130 @@
+[
+ {
+  "id": 1,
+  "source": "ishowspeed",
+  "creator": "IShowSpeed",
+  "platform": "youtube",
+  "video_id": "IkhjzYsvCmw",
+  "video_title": "HALLOWEEN SPIDER-MAN SPEED-VERSE IRL STREAM 🎃🕷",
+  "url": "https://www.youtube.com/watch?v=IkhjzYsvCmw&t=1900s",
+  "moment": "31:40",
+  "start": 1880,
+  "end": 1910,
+  "rank": 8.23,
+  "signal": "2 timestamp comments, 7 likes",
+  "signals": [
+   "comments"
+  ],
+  "quotes": [
+   "best decision",
+   "thank you speed oh my goodness"
+  ],
+  "stream_age_h": 22.9,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": null
+  },
+  "post_utc": "2026-11-02 22:00",
+  "post_local": "Mon 05:00 PM ET",
+  "title": "Speed best decision 🤯",
+  "hook": "BEST DECISION",
+  "context": "IShowSpeed live, HALLOWEEN SPIDER-MAN SPEED-VERSE IRL STREAM 🎃🕷",
+  "take": "Speed really thought this was a good idea.",
+  "draft": true,
+  "description": "IShowSpeed live, HALLOWEEN SPIDER-MAN SPEED-VERSE IRL STREAM 🎃🕷\n\nFull stream by IShowSpeed: https://www.youtube.com/watch?v=IkhjzYsvCmw&t=1900s\nGo support IShowSpeed, all credit to them.\n\n#ishowspeed #speed #edit #shorts #kaicenat",
+  "key": "IkhjzYsvCmw@63",
+  "permission": "fan clipping is widespread and tolerated; no official paid program found (Oct 2026)"
+ },
+ {
+  "id": 2,
+  "source": "kai_cenat",
+  "creator": "Kai Cenat",
+  "platform": "youtube",
+  "video_id": "SZA_mBnRNNc",
+  "video_title": "🎃AMP HALLOWEEN PARTY🎃",
+  "url": "https://www.youtube.com/watch?v=SZA_mBnRNNc&t=3308s",
+  "moment": "55:08",
+  "start": 3288,
+  "end": 3318,
+  "rank": 7.7,
+  "signal": "2 timestamp comments, 1 likes; chat went 2.5x its normal pace",
+  "signals": [
+   "comments",
+   "chat spike"
+  ],
+  "quotes": [
+   "see what he did there",
+   "Also find the @ for hogwarts girl too chat"
+  ],
+  "stream_age_h": 42.5,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.08,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": "punch"
+  },
+  "post_utc": "2026-11-02 07:00",
+  "post_local": "Mon 02:00 AM ET",
+  "title": "Kai Cenat see what he did there 🤯",
+  "hook": "SEE WHAT HE DID THERE",
+  "context": "Kai Cenat live, 🎃AMP HALLOWEEN PARTY🎃",
+  "take": "Kai Cenat had no idea what was about to happen.",
+  "draft": true,
+  "description": "Kai Cenat live, 🎃AMP HALLOWEEN PARTY🎃\n\nFull stream by Kai Cenat: https://www.youtube.com/watch?v=SZA_mBnRNNc&t=3308s\nGo support Kai Cenat, all credit to them.\n\n#kaicenat #kai #ishowspeed #edit #shorts",
+  "key": "SZA_mBnRNNc@110",
+  "permission": "fan clipping is widespread and tolerated; no official paid program found (Oct 2026)"
+ },
+ {
+  "id": 3,
+  "source": "kai_cenat",
+  "creator": "Kai Cenat",
+  "platform": "youtube",
+  "video_id": "SZA_mBnRNNc",
+  "video_title": "🎃AMP HALLOWEEN PARTY🎃",
+  "url": "https://www.youtube.com/watch?v=SZA_mBnRNNc&t=1174s",
+  "moment": "19:34",
+  "start": 1154,
+  "end": 1184,
+  "rank": 7.47,
+  "signal": "chat went 3.5x its normal pace",
+  "signals": [
+   "chat spike"
+  ],
+  "quotes": [
+   "W",
+   "W",
+   "W"
+  ],
+  "stream_age_h": 42.5,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "fast",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": "beat"
+  },
+  "post_utc": "2026-11-02 02:00",
+  "post_local": "Sun 09:00 PM ET",
+  "title": "Kai Cenat W 🤯",
+  "hook": "W",
+  "context": "Kai Cenat live, 🎃AMP HALLOWEEN PARTY🎃",
+  "take": "Kai Cenat had no idea what was about to happen.",
+  "draft": true,
+  "description": "Kai Cenat live, 🎃AMP HALLOWEEN PARTY🎃\n\nFull stream by Kai Cenat: https://www.youtube.com/watch?v=SZA_mBnRNNc&t=1174s\nGo support Kai Cenat, all credit to them.\n\n#kaicenat #kai #ishowspeed #edit #shorts",
+  "key": "SZA_mBnRNNc@39",
+  "permission": "fan clipping is widespread and tolerated; no official paid program found (Oct 2026)"
+ }
+]
