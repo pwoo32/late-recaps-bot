@@ -66,7 +66,9 @@
   "R6gKMvetXUU@45",
   "IkhjzYsvCmw@63",
   "IkhjzYsvCmw@220",
-  "R6gKMvetXUU@3"
+  "R6gKMvetXUU@3",
+  "SZA_mBnRNNc@110",
+  "SZA_mBnRNNc@39"
  ],
  "queued": {
   "L6S9Vb3RLy4@186": {
@@ -370,6 +372,34 @@
    "source": "kai_cenat",
    "post_utc": "2026-11-02 02:00",
    "video_id": "EL06wqyVyBs"
+  },
+  "SZA_mBnRNNc@110": {
+   "title": "Kai Cenat Finds Hidden Camera \ud83d\udd75\ufe0f\u200d\u2642\ufe0f",
+   "source": "kai_cenat",
+   "post_utc": "2026-11-02 07:00",
+   "recipe": {
+    "length": 30,
+    "punch": 0.08,
+    "beat": "normal",
+    "caption_words": 3,
+    "gap": 0.6,
+    "layout": "face34",
+    "test": "punch"
+   }
+  },
+  "SZA_mBnRNNc@39": {
+   "title": "Kai Cenat Sees Something W \ud83e\udddf",
+   "source": "kai_cenat",
+   "post_utc": "2026-11-02 02:00",
+   "recipe": {
+    "length": 30,
+    "punch": 0.14,
+    "beat": "fast",
+    "caption_words": 3,
+    "gap": 0.6,
+    "layout": "face34",
+    "test": "beat"
+   }
   }
  },
  "channel": "UCbK9EejOk5UVzI_l8F3f8kA",
@@ -653,5 +683,151 @@
  "tiktok": {
   "enabled": true,
   "mode": "inbox"
+ },
+ "chat_spikes": {
+  "IkhjzYsvCmw": [],
+  "SZA_mBnRNNc": [
+   {
+    "t": 1174,
+    "ratio": 3.5,
+    "msgs": 304,
+    "sample": [
+     "W",
+     "W",
+     "W"
+    ]
+   },
+   {
+    "t": 1899,
+    "ratio": 3.2,
+    "msgs": 226,
+    "sample": [
+     "what changed from his face",
+     "Nah"
+    ]
+   },
+   {
+    "t": 1349,
+    "ratio": 2.8,
+    "msgs": 199,
+    "sample": [
+     "w",
+     " The nails crazy ",
+     "hell nahhhhh"
+    ]
+   },
+   {
+    "t": 4274,
+    "ratio": 2.6,
+    "msgs": 189,
+    "sample": [
+     "w",
+     "w",
+     "ww"
+    ]
+   },
+   {
+    "t": 7854,
+    "ratio": 2.5,
+    "msgs": 203,
+    "sample": [
+     "LMAOO",
+     "WTF",
+     "yo",
+     "bro sweaty",
+     "WTF"
+    ]
+   },
+   {
+    "t": 3309,
+    "ratio": 2.5,
+    "msgs": 135,
+    "sample": [
+     "W",
+     "W ",
+     "W ANGLES",
+     "W",
+     "w angles "
+    ]
+   }
+  ],
+  "xGWaMnF6bVc": [],
+  "nltIgsramMI": [
+   {
+    "t": 17384,
+    "ratio": 23.8,
+    "msgs": 69,
+    "sample": [
+     "Ww",
+     "Ww",
+     "W",
+     "W",
+     "W"
+    ]
+   },
+   {
+    "t": 21234,
+    "ratio": 13.2,
+    "msgs": 54,
+    "sample": [
+     "w",
+     "w",
+     "w",
+     "w",
+     "w"
+    ]
+   },
+   {
+    "t": 1884,
+    "ratio": 13.1,
+    "msgs": 88,
+    "sample": [
+     "l",
+     "W",
+     "L",
+     "L",
+     "L"
+    ]
+   },
+   {
+    "t": 16914,
+    "ratio": 12.7,
+    "msgs": 55,
+    "sample": [
+     "L",
+     "L",
+     "L",
+     "L",
+     "L"
+    ]
+   },
+   {
+    "t": 15314,
+    "ratio": 11.8,
+    "msgs": 59,
+    "sample": [
+     "L",
+     "L",
+     "L",
+     "L",
+     "L"
+    ]
+   },
+   {
+    "t": 12569,
+    "ratio": 10.3,
+    "msgs": 36,
+    "sample": [
+     "Hayden watching a bro cry over game.. ",
+     "wattup jynxy this is my first time on yo live bro I love yo fanmail vids man",
+     "w",
+     "w",
+     "w"
+    ]
+   }
+  ]
+ },
+ "edit": {
+  "stats": {}
  }
 }

@@ -25,8 +25,8 @@ Usage:
     python review_agent.py --no-llm      # rules only, skip the written review
 
 Without `auth` it still runs on public stats (YOUTUBE_API_KEY, 2-3 quota units), but can't see retention, private
-clips or subscribers gained. The written review uses the same writers as script_agent.py (Claude Code on this
-PC, Ollama, or ANTHROPIC_API_KEY); without one you get the rule-based review only.
+clips or subscribers gained. The written review uses a free local Ollama model when one is running (Claude Code or
+ANTHROPIC_API_KEY only if you pick them with --writer); without one you get the rule-based review only.
 """
 
 import argparse
@@ -49,6 +49,7 @@ from channel_agent import ChannelYouTube, video_record
 from niches import NICHES
 from sources import SOURCES
 import script_agent
+import tuner
 
 BUILDER_DIR = REPORTS_DIR / "builder"
 STATE_FILE = BUILDER_DIR / "state.json"
@@ -99,7 +100,7 @@ def save_state(state):
 
 
 def latest(pattern):
-    runs = sorted(REPORTS_DIR.glob(pattern), key=lambda p: p.stat().st_mtime)
+    runs = sorted(REPORTS_DIR.glob(pattern), key=lambda p: (p.stat().st_mtime, str(p)))  # a fresh checkout gives every file the same mtime: the dated name breaks ties
     return runs[-1] if runs else None
 
 
@@ -209,7 +210,7 @@ def channel_and_uploads(args, state, g, creds):
 def queue_entries():
     """Every clip the builder queued that made it to YouTube, by video id, with the queue folder it lives in."""
     out = {}
-    for qfile in sorted(BUILDER_DIR.glob("daily_*/queue.json")):
+    for qfile in sorted(BUILDER_DIR.glob("*_20*/queue.json")):
         try:
             for c in json.loads(qfile.read_text(encoding="utf-8")):
                 if c.get("youtube_id"):
@@ -305,7 +306,8 @@ def collect(args, state):
         if v["id"] in queued:
             qdir, c = queued[v["id"]]
             v["clip"] = {k: c.get(k) for k in ("source", "creator", "video_title", "moment", "start", "end", "hook",
-                                               "context", "take", "post_utc", "post_local", "quotes", "rank", "writer")}
+                                               "context", "take", "post_utc", "post_local", "quotes", "rank", "writer", "recipe",
+                                               "signals", "spike")}
             v["transcript"] = script_agent.cut_transcript(qdir, c)
         else:
             low = v["title"].lower()
@@ -594,7 +596,7 @@ def _ollama(prompt):
         return None
     model = os.environ.get("OLLAMA_MODEL") or tags[0]["name"]
     r = requests.post(f"{host}/api/generate", timeout=900, json={
-        "model": model, "prompt": prompt, "format": REVIEW_SCHEMA, "stream": False, "options": {"temperature": 0.4}})
+        "model": model, "prompt": prompt, "format": REVIEW_SCHEMA, "stream": False, "options": {"temperature": 0.4, "num_ctx": 8192}})
     r.raise_for_status()
     return script_agent.parse_json(r.json()["response"])
 
@@ -612,10 +614,11 @@ def _api(prompt):
 
 
 WRITERS = {"claude-code": _claude_code, "ollama": _ollama, "api": _api}
+AUTO = ["ollama"]  # free by default; Claude only when picked with --writer or SCRIPT_WRITER
 
 
 def written_review(prompt, writer=None):
-    order = [writer] if writer in WRITERS else list(WRITERS)
+    order = [writer] if writer in WRITERS else AUTO
     for name in order:
         try:
             out = WRITERS[name](prompt)
@@ -750,7 +753,7 @@ def cmd_review(args):
     bench = (pb or {}).get("benchmark_median_views")
     ms = [metrics(v) for v in vids]
     settled = [m["views"] for v, m in zip(vids, ms) if v["age_h"] >= 24 and v["privacy"] == "public"]
-    base = statistics.median(settled) if settled else None
+    base = max(statistics.median(settled), 1) if settled else None  # a channel stuck at 0 views still learns
     diags = [diagnose(v, m, base, bench) for v, m in zip(vids, ms)]
     learned = learn(vids, ms, base)
     cash = money(data, vids, ms, niche)
@@ -784,9 +787,22 @@ def cmd_review(args):
                    "verdict": next((c["verdict"] for c in (llm or {}).get("clips", []) if c["video_id"] == s["id"]), None)}
                   for s in snapshot if s["age_h"] >= 24 and s["privacy"] == "public"][:20],
     }
+    # score each clip's edit recipe once it's settled, so tomorrow's edits follow what held viewers
+    recipe_of = {v["id"]: (v.get("clip") or {}).get("recipe") for v in vids}
+    scored = 0
+    for snap in snapshot:
+        if snap["age_h"] >= SETTLED_H and snap["privacy"] == "public" and recipe_of.get(snap["id"]):
+            scored += tuner.credit(state, snap["id"], recipe_of[snap["id"]],
+                                   tuner.score(snap["views"], snap["avp"], snap["stayed"], base))
+    if scored:
+        print(f"Edit tuner: scored {scored} clip(s). Settings now: {tuner.best_recipe(state)}")
     if not state.get("channel"):
         state["channel"] = data["channel"]["id"]  # lets `channel_builder.py run` start its daily `track` too
     save_state(state)
+    with open(out_dir / "report.md", "a", encoding="utf-8") as f:  # how the analytics are steering the edit
+        f.write("\n## Edit settings the analytics picked\n\nScore per setting (views vs your median, plus retention), "
+                "averaged over the clips that used it. The best one is used on tomorrow's top clip; the other clips "
+                "each test one change.\n\n" + "\n".join(tuner.summary(state)) + "\n")
     print(f"Done. Report: {out_dir / 'report.md'}" + ("" if data["signed_in"] else f"  (quota used: {data['units']} units)"))
 
 

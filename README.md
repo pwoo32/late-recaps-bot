@@ -65,9 +65,41 @@ re-write each clip from its real transcript right before rendering, so the hook 
 `cut --no-script` keeps a script you edited by hand. Run it yourself to redo a queue: `python script_agent.py`
 (or `--ids 2`, `--dry-run`). Everything lands in the queue's `queue.json` plus a readable `scripts.md`.
 
-Writers, tried in order (pick one with `--writer` or `SCRIPT_WRITER`): `claude-code` (Claude Code installed on this
-PC, uses your Claude plan, no API key), `ollama` (free local model), `api` (`ANTHROPIC_API_KEY`). No writer at all?
+Writers. Only free ones run unless you ask: `ollama` (a free local model; the cloud run installs Ollama and
+`qwen2.5:7b`, change it with the repo variable `OLLAMA_MODEL`), then `free` (`free_writer.py`: rules and templates built
+from the transcript, viewer comments, chat and the trend scan, no model at all, never fails). `claude-code` (your
+Claude plan) and `api` (`ANTHROPIC_API_KEY`) only run if you pick them with `--writer` or `SCRIPT_WRITER`.
 `--prompt-only` saves a prompt to paste into claude.ai and `--import answer.json` loads its reply. No YouTube quota used.
+
+## Hands-off in the cloud, no Claude
+
+`.github/workflows/daily.yml` runs everything on GitHub Actions (free for this public repo) without using Claude or
+anything paid:
+
+- **Daily run (~7 AM ET, retried at ~1:47 PM ET if nothing posted):** the review agent scores yesterday's clips and
+  feeds the edit tuner, the trend scan refreshes (who's spiking, what's viral), the builder finds today's moments, a
+  free local model writes the scripts, and each clip is cut and posted to YouTube, TikTok, Instagram and Facebook.
+- **Spike checks (every 3 hours):** if something on a creator's stream is going nuts right now (chat flooding, a
+  Twitch clip racing up), it's clipped and posted straight away. At most 2 a day (`spike --max-per-day`), because
+  YouTube's API quota caps uploads.
+- Run either by hand from the Actions tab (Run workflow). Untick "Post the clips" for a test that cuts but doesn't
+  upload.
+
+Where moments come from (`live_moments.py`, all free, no YouTube quota):
+- comment timestamps on the creator's recent streams and videos (as before)
+- **chat spikes** on their newest stream VODs: the live chat replay, where chat suddenly floods with LMAO/NO WAY/💀
+- **most replayed**: YouTube's replay graph, which boosts moments in the hottest part of a stream
+- **Twitch clips**, including ones from a stream that's still live (cut straight from the clip), weighted by how fast
+  they're gaining views. Needs the free `TWITCH_CLIENT_ID`/`TWITCH_CLIENT_SECRET` secrets (dev.twitch.tv → Register
+  your application, any redirect URL, Confidential).
+- the daily trend scan boosts creators whose clip demand jumped since the last scan (and allows them 3 clips that
+  day) and moments that match words in their fastest-growing clips this week.
+
+**Edit tuner** (`tuner.py`): the new format (face-tracked frame, jump cuts, zoom punches, word-highlight captions, no
+narrator) stays the default. Each day the best clip gets the best settings found so far and the others each test one
+change: length (20/30/45s), zoom strength and pace, 2- or 3-word captions, how much silence gets cut, face-tracked vs
+wide framing. After 48 hours the review agent scores every clip (views vs your median plus retention) and credits its
+settings. A setting takes over once it beats the default on 3+ clips. The review report shows the scores.
 
 ## Channel builder
 
@@ -155,6 +187,23 @@ The written review uses the same writer as the script agent (Claude Code, Ollama
 
 Without the sign-in it still runs: it uses the uploader's login (sees private clips, no retention) or your API key
 (public clips only). Analytics lag a day or two, so judge a clip after about 48 hours.
+
+### Instagram and Facebook Reels (optional, free)
+
+Every clip that goes to YouTube also goes up as an Instagram Reel and a Facebook Page Reel once these secrets exist
+(`meta_upload.py`, Meta's official Graph API):
+
+1. Switch your Instagram account to a Professional (Creator or Business) account and link it to a Facebook Page
+   (Instagram app → Settings → Account type and tools; then Accounts Center → link the Page).
+2. At https://developers.facebook.com create an app (type Business), add the **Instagram Graph API** /
+   "Instagram API with Facebook Login" and **Facebook Login for Business** products.
+3. In the Graph API Explorer pick your app, add the permissions `instagram_basic`, `instagram_content_publish`,
+   `pages_show_list`, `pages_read_engagement`, `pages_manage_posts`, generate a User token, then exchange it for a
+   long-lived one (Access Token Debugger → Extend). Call `/me/accounts` with it: the `access_token` there is a Page
+   token that doesn't expire, and `id` is the Page ID. Call `/<page id>?fields=instagram_business_account` for the
+   Instagram user ID.
+4. Save them as repo secrets: `META_ACCESS_TOKEN` (the Page token), `FB_PAGE_ID`, `IG_USER_ID`. Leave either ID out to
+   skip that platform. Your own app in development mode can post to accounts you admin; no app review needed.
 
 ### TikTok (optional cross-posting)
 

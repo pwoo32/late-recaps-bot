@@ -5,6 +5,7 @@ any time you sign in again. Values go straight from this PC to GitHub and are ne
 
 Needs the GitHub CLI, signed in:  winget install GitHub.cli   then   gh auth login
 Usage:  python cloud_setup.py            (repo defaults to <your GitHub user>/late-recaps-bot)
+        Twitch and Meta (Instagram/Facebook) keys are read from the environment variables of the same names.
 """
 
 import getpass
@@ -26,16 +27,22 @@ def main():
         sys.exit("Install the GitHub CLI first: winget install GitHub.cli   then: gh auth login")
     if gh("auth", "status").returncode:
         sys.exit("Sign in to GitHub first: gh auth login")
-    repo = sys.argv[1] if len(sys.argv) > 1 else f"{gh('api', 'user', '--jq', '.login').stdout.strip()}/late-recaps-bot"
+    args = [a for a in sys.argv[1:] if not a.startswith("--")]
+    repo = args[0] if args else f"{gh('api', 'user', '--jq', '.login').stdout.strip()}/late-recaps-bot"
     values = {
         "YOUTUBE_API_KEY": os.environ.get("YOUTUBE_API_KEY"),
         "TIKTOK_CLIENT_KEY": os.environ.get("TIKTOK_CLIENT_KEY"),
         "TIKTOK_CLIENT_SECRET": os.environ.get("TIKTOK_CLIENT_SECRET"),
+        "TWITCH_CLIENT_ID": os.environ.get("TWITCH_CLIENT_ID"),
+        "TWITCH_CLIENT_SECRET": os.environ.get("TWITCH_CLIENT_SECRET"),
+        "META_ACCESS_TOKEN": os.environ.get("META_ACCESS_TOKEN"),
+        "IG_USER_ID": os.environ.get("IG_USER_ID"),
+        "FB_PAGE_ID": os.environ.get("FB_PAGE_ID"),
         "YOUTUBE_TOKEN": (TOKENS / "youtube_token.json").read_text() if (TOKENS / "youtube_token.json").exists() else None,
         "REVIEW_TOKEN": (TOKENS / "review_token.json").read_text() if (TOKENS / "review_token.json").exists() else None,
         "TIKTOK_TOKEN": (TOKENS / "tiktok_token.json").read_text() if (TOKENS / "tiktok_token.json").exists() else None,
     }
-    if "--skip-claude" not in sys.argv:
+    if "--with-claude" in sys.argv:  # not needed: the cloud run writes scripts with a free local model
         print("For the script writer: run `claude setup-token` in another window, then paste the token here.")
         values["CLAUDE_CODE_OAUTH_TOKEN"] = getpass.getpass("Claude token (hidden, Enter to skip): ").strip() or None
     for name, value in values.items():

@@ -1,12 +1,26 @@
-# Daily run in the cloud: review yesterday's clips, refresh the trend/channel reports when stale, build the
-# queue, write scripts, cut, upload to YouTube and send to TikTok. Same steps as run_daily.cmd on the PC.
+# The whole channel, hands-off, with no Claude and nothing paid:
+# - daily run: review yesterday's clips (analytics steer the edit), scan what's trending, find today's moments
+#   (comment timestamps, chat spikes, most-replayed, Twitch clips), write scripts with a free local model (Ollama),
+#   cut, and post to YouTube, TikTok, Instagram and Facebook.
+# - spike checks every 3 hours: if something on a stream is going nuts right now, clip it and post it straight away.
 name: Late Recaps daily
 
 on:
   schedule:
-    - cron: "17 11 * * *"   # ~7 AM Eastern; GitHub often starts scheduled runs hours late, and off-the-hour minutes are delayed less
-    - cron: "47 17 * * *"   # retry: only runs if nothing was posted yet today (e.g. the Claude plan limit was hit)
+    - cron: "17 11 * * *"           # daily run, ~7 AM Eastern (GitHub often starts scheduled runs late)
+    - cron: "47 17 * * *"           # retry: only runs if nothing was posted yet today
+    - cron: "23 2,5,8,14,20,23 * * *"   # spike checks
   workflow_dispatch:
+    inputs:
+      mode:
+        description: "daily = full run, spike = only clip what's blowing up right now"
+        type: choice
+        options: [daily, spike]
+        default: daily
+      post:
+        description: "Post the clips (untick for a test run that builds and cuts but doesn't upload)"
+        type: boolean
+        default: true
 
 concurrency: daily
 
@@ -16,7 +30,7 @@ permissions:
 jobs:
   run:
     runs-on: ubuntu-latest
-    timeout-minutes: 120
+    timeout-minutes: 170
     services:
       pot:   # makes YouTube "proof of origin" tokens so downloads from cloud servers look less like a bot
         image: brainicism/bgutil-ytdlp-pot-provider
@@ -28,41 +42,50 @@ jobs:
       YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
       TIKTOK_CLIENT_KEY: ${{ secrets.TIKTOK_CLIENT_KEY }}
       TIKTOK_CLIENT_SECRET: ${{ secrets.TIKTOK_CLIENT_SECRET }}
-      CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
-      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      TWITCH_CLIENT_ID: ${{ secrets.TWITCH_CLIENT_ID }}           # free, dev.twitch.tv: live Twitch clips
+      TWITCH_CLIENT_SECRET: ${{ secrets.TWITCH_CLIENT_SECRET }}
+      META_ACCESS_TOKEN: ${{ secrets.META_ACCESS_TOKEN }}         # Instagram + Facebook Reels (README)
+      IG_USER_ID: ${{ secrets.IG_USER_ID }}
+      FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+      OLLAMA_MODEL: ${{ vars.OLLAMA_MODEL || 'qwen2.5:7b' }}     # free local script writer; no Claude
+      OLLAMA_MODELS: /home/runner/.ollama-models
     steps:
       - uses: actions/checkout@v4
 
-      - name: Skip if today's clips are already out   # a late scheduled run after a manual one shouldn't double-post
-        id: today
+      - name: Which run is this
+        id: mode
         run: |
-          # only a run that actually uploaded counts; "Daily run DATE (nothing posted)" lets the retry go ahead
-          if [ "${{ github.event_name }}" = schedule ] && git log -20 --since="36 hours ago" --format=%s | grep -qx "Daily run $(date -u +%F)"; then
-            echo "Already ran today; skipping."; echo "skip=true" >> "$GITHUB_OUTPUT"
+          mode=daily
+          if [ "${{ github.event.schedule }}" = "23 2,5,8,14,20,23 * * *" ] || [ "${{ inputs.mode }}" = spike ]; then mode=spike; fi
+          post=true
+          if [ "${{ github.event_name }}" = workflow_dispatch ] && [ "${{ inputs.post }}" != true ]; then post=false; fi
+          skip=false
+          # a late scheduled daily run after one that already posted shouldn't double-post
+          if [ $mode = daily ] && [ "${{ github.event_name }}" = schedule ] && git log -20 --since="36 hours ago" --format=%s | grep -qx "Daily run $(date -u +%F)"; then
+            echo "Already ran today; skipping."; skip=true
           fi
+          echo "mode=$mode" >> "$GITHUB_OUTPUT"; echo "post=$post" >> "$GITHUB_OUTPUT"; echo "skip=$skip" >> "$GITHUB_OUTPUT"
+          echo "Mode: $mode, post: $post, skip: $skip"
 
       - uses: actions/setup-python@v5
+        if: steps.mode.outputs.skip != 'true'
         with:
           python-version: "3.12"
           cache: pip
 
       - uses: denoland/setup-deno@v2   # JavaScript runtime yt-dlp needs for YouTube
+        if: steps.mode.outputs.skip != 'true'
         with:
           deno-version: v2.x
 
       - name: Install tools
+        if: steps.mode.outputs.skip != 'true'
         run: |
           sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg fonts-liberation
           pip install -q -r requirements.txt bgutil-ytdlp-pot-provider
-          npm install -g @anthropic-ai/claude-code   # script writer, runs on your Claude plan via CLAUDE_CODE_OAUTH_TOKEN
-
-      - name: Whisper model cache
-        uses: actions/cache@v4
-        with:
-          path: ~/.cache/clip-builder/whisper
-          key: whisper-small.en
 
       - name: TikTok sign-in cache   # TikTok can hand out a new refresh token; the newest one is kept here
+        if: steps.mode.outputs.skip != 'true'
         uses: actions/cache/restore@v4
         with:
           path: ~/.config/clip-builder/tiktok_token.json
@@ -70,6 +93,7 @@ jobs:
           restore-keys: tiktok-token-
 
       - name: Sign-ins and cookies
+        if: steps.mode.outputs.skip != 'true'
         env:
           YOUTUBE_TOKEN: ${{ secrets.YOUTUBE_TOKEN }}
           REVIEW_TOKEN: ${{ secrets.REVIEW_TOKEN }}
@@ -97,59 +121,103 @@ jobs:
           chmod 600 "$d"/*.json 2>/dev/null || true
 
       - name: Check YouTube download
+        if: steps.mode.outputs.skip != 'true' && steps.mode.outputs.mode == 'daily'
         continue-on-error: true
         run: |
           yt-dlp -v --simulate --skip-download "https://www.youtube.com/watch?v=jNQXAC9IVRw" 2>&1 | grep -iE "cookie|logged|login|po.?token|pot|sign in|error|player client|Downloading .*player|bot" | grep -viE "^\[debug\] (Command-line|Encodings|Python|exe|Optional|Proxy|Request Handlers|Plugin directories)" | head -40 || true
 
-      - name: Check Claude sign-in
+      # ----- spike check: cheap look first; the heavy tools below only load if something is blowing up -----
+      - name: Anything blowing up right now?
+        id: spike
+        if: steps.mode.outputs.skip != 'true' && steps.mode.outputs.mode == 'spike'
         continue-on-error: true
         run: |
-          if [ -z "$ANTHROPIC_API_KEY" ]; then unset ANTHROPIC_API_KEY; fi
-          claude --version
-          echo 'Reply with the word ok.' | claude -p --output-format json --tools "" | python -c "import json,sys; d=json.load(sys.stdin); print('Claude:', 'error' if d.get('is_error') else 'ok', str(d.get('result'))[:300])"
+          python channel_builder.py spike 2>&1 | tee -a builder.log "$RUNNER_TEMP/run.log"
+          q=$(grep -oE "Queue: [^ ]+queue.md" "$RUNNER_TEMP/run.log" | tail -1 | sed -E 's/^Queue: //; s#/queue.md$##')
+          echo "queue=$q" >> "$GITHUB_OUTPUT"
+
+      - name: Whisper model cache
+        if: steps.mode.outputs.skip != 'true' && (steps.mode.outputs.mode == 'daily' || steps.spike.outputs.queue != '')
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/clip-builder/whisper
+          key: whisper-small.en
+
+      - name: Script-writer model cache
+        if: steps.mode.outputs.skip != 'true' && (steps.mode.outputs.mode == 'daily' || steps.spike.outputs.queue != '')
+        uses: actions/cache@v4
+        with:
+          path: /home/runner/.ollama-models
+          key: ollama-${{ env.OLLAMA_MODEL }}
+
+      - name: Start the free script writer (Ollama)
+        if: steps.mode.outputs.skip != 'true' && (steps.mode.outputs.mode == 'daily' || steps.spike.outputs.queue != '')
+        continue-on-error: true   # without it the scripts come from free_writer.py instead, still no Claude
+        run: |
+          curl -fsSL https://ollama.com/install.sh | sh
+          sudo systemctl stop ollama 2>/dev/null || true
+          nohup ollama serve > "$RUNNER_TEMP/ollama.log" 2>&1 &
+          for i in $(seq 1 30); do curl -sf http://localhost:11434/api/tags >/dev/null && break; sleep 1; done
+          ollama pull "$OLLAMA_MODEL"
+          ollama list
 
       - name: Review agent
+        if: steps.mode.outputs.skip != 'true' && steps.mode.outputs.mode == 'daily'
         continue-on-error: true   # the pre-post check holds posting if the review didn't run
-        run: python review_agent.py 2>&1 | tee -a review.log
+        # --no-llm: on the runner's CPU the written review takes 15+ minutes and times out; the numbers, diagnoses
+        # and the edit tuner's scoring (what actually steers tomorrow) are all rule-based and still run
+        run: python review_agent.py --no-llm 2>&1 | tee -a review.log
 
       - name: Build, cut and post
+        if: steps.mode.outputs.skip != 'true' && steps.mode.outputs.mode == 'daily'
         run: |
-          if [ -z "$ANTHROPIC_API_KEY" ]; then unset ANTHROPIC_API_KEY; fi
-          if [ "${{ steps.today.outputs.skip }}" = true ]; then exit 0; fi
-          python channel_builder.py run --publish --niche streamer 2>&1 | tee -a builder.log "$RUNNER_TEMP/run.log"; exit ${PIPESTATUS[0]}
+          flag=--publish; [ "${{ steps.mode.outputs.post }}" = true ] || flag=
+          python channel_builder.py run $flag --niche streamer 2>&1 | tee -a builder.log "$RUNNER_TEMP/run.log"; exit ${PIPESTATUS[0]}
+
+      - name: Post the spike clip
+        if: steps.spike.outputs.queue != '' && steps.mode.outputs.post == 'true'
+        run: |
+          python channel_builder.py publish --queue "${{ steps.spike.outputs.queue }}" 2>&1 | tee -a builder.log "$RUNNER_TEMP/run.log"; exit ${PIPESTATUS[0]}
+
+      - name: Cut the spike clip (test run, not posted)
+        if: steps.spike.outputs.queue != '' && steps.mode.outputs.post != 'true'
+        run: |
+          for id in $(python -c "import json,sys; print(' '.join(str(c['id']) for c in json.load(open(sys.argv[1]))))" "${{ steps.spike.outputs.queue }}/queue.json"); do
+            python channel_builder.py cut "$id" --queue "${{ steps.spike.outputs.queue }}" 2>&1 | tee -a "$RUNNER_TEMP/run.log"
+          done
 
       - name: Today's clips (download from the run page to post by hand)
-        if: always()
+        if: always() && steps.mode.outputs.skip != 'true'
         uses: actions/upload-artifact@v4
         with:
           name: clips-${{ github.run_number }}
           path: |
-            reports/builder/daily_*/clips/[0-9][0-9]_*.mp4
-            reports/builder/daily_*/clips/[0-9][0-9]_*.txt
-            !reports/builder/daily_*/clips/*.source.mp4
+            reports/builder/*_20*/clips/[0-9][0-9]_*.mp4
+            reports/builder/*_20*/clips/[0-9][0-9]_*.txt
+            !reports/builder/*_20*/clips/*.source.mp4
           retention-days: 7
           if-no-files-found: ignore
 
       - name: Keep TikTok sign-in
-        if: always()
+        if: always() && steps.mode.outputs.skip != 'true'
         uses: actions/cache/save@v4
         with:
           path: ~/.config/clip-builder/tiktok_token.json
           key: tiktok-token-${{ github.run_id }}
 
       - name: Save reports and state
-        if: always()
+        if: always() && steps.mode.outputs.skip != 'true'
         run: |
           git config user.name "late-recaps-bot"
           git config user.email "late-recaps-bot@users.noreply.github.com"
           git add -A reports builder.log review.log
-          msg="Daily run $(date -u +%F)"
+          if [ "${{ steps.mode.outputs.mode }}" = spike ]; then msg="Spike check $(date -u +%F)"; else msg="Daily run $(date -u +%F)"; fi
           grep -q "  uploaded https://youtube.com/shorts/" "$RUNNER_TEMP/run.log" 2>/dev/null || msg="$msg (nothing posted)"
           git diff --cached --quiet || git commit -qm "$msg"
           git push -q || (git pull -q --rebase && git push -q)
 
       - name: Warn if YouTube cookies expired   # fails the run so GitHub emails you
-        if: always()
+        if: always() && steps.mode.outputs.skip != 'true'
         run: |
           if grep -qE "confirm you.re not a bot|cookies are no longer valid" "$RUNNER_TEMP/run.log" 2>/dev/null; then
             echo "::error::YouTube cookies expired. Export fresh ones from a private Zen window and save them as YT_COOKIES."

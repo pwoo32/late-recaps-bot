@@ -1,0 +1,221 @@
+[
+ {
+  "id": 1,
+  "source": "ishowspeed",
+  "creator": "IShowSpeed",
+  "platform": "youtube",
+  "video_id": "IkhjzYsvCmw",
+  "video_title": "HALLOWEEN SPIDER-MAN SPEED-VERSE IRL STREAM 🎃🕷",
+  "url": "https://www.youtube.com/watch?v=IkhjzYsvCmw&t=1900s",
+  "moment": "31:40",
+  "start": 1880,
+  "end": 1910,
+  "rank": 8.23,
+  "signal": "2 timestamp comments, 7 likes",
+  "signals": [
+   "comments"
+  ],
+  "quotes": [
+   "best decision",
+   "thank you speed oh my goodness"
+  ],
+  "stream_age_h": 22.9,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": null
+  },
+  "post_utc": "2026-11-02 22:00",
+  "post_local": "Mon 05:00 PM ET",
+  "title": "Speed Decides Not To Save The City 🛡️",
+  "hook": "SPEED LOSES",
+  "context": "Speed vs Cole Palmer, Halloween Stream",
+  "take": "Speed weighs the risk before deciding.",
+  "draft": false,
+  "description": "Speed faces a tough decision during his Halloween stream, choosing not to save the city.\n\nFull stream by IShowSpeed: https://www.youtube.com/watch?v=IkhjzYsvCmw&t=1900s\nGo support IShowSpeed, all credit to them.\n\n#ishowspeed #speed #halloween #shorts",
+  "key": "IkhjzYsvCmw@63",
+  "permission": "fan clipping is widespread and tolerated; no official paid program found (Oct 2026)",
+  "summary": "Speed faces a tough decision during his Halloween stream, choosing not to save the city.",
+  "hashtags": [
+   "#ishowspeed",
+   "#speed",
+   "#halloween"
+  ],
+  "tags": [
+   "ishowspeed",
+   "speed",
+   "halloween",
+   "cole palmer",
+   "decision",
+   "risk",
+   "city",
+   "stream"
+  ],
+  "writer": "ollama",
+  "script_source": "captions",
+  "upload_tags": [
+   "ishowspeed",
+   "speed",
+   "halloween",
+   "cole palmer",
+   "decision",
+   "risk",
+   "city",
+   "stream",
+   "shorts"
+  ]
+ },
+ {
+  "id": 2,
+  "source": "kai_cenat",
+  "creator": "Kai Cenat",
+  "platform": "youtube",
+  "video_id": "SZA_mBnRNNc",
+  "video_title": "🎃AMP HALLOWEEN PARTY🎃",
+  "url": "https://www.youtube.com/watch?v=SZA_mBnRNNc&t=3308s",
+  "moment": "55:08",
+  "start": 3288,
+  "end": 3318,
+  "rank": 7.7,
+  "signal": "2 timestamp comments, 1 likes; chat went 2.5x its normal pace",
+  "signals": [
+   "comments",
+   "chat spike"
+  ],
+  "quotes": [
+   "see what he did there",
+   "Also find the @ for hogwarts girl too chat"
+  ],
+  "stream_age_h": 42.5,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.08,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": "punch"
+  },
+  "post_utc": "2026-11-02 07:00",
+  "post_local": "Mon 02:00 AM ET",
+  "title": "Kai Cenat Finds Hidden Camera 🕵️‍♂️",
+  "hook": "KAI SEES",
+  "context": "Kai Cenat's Halloween Party",
+  "take": "Kai's reaction is priceless.",
+  "draft": false,
+  "description": "Kai Cenat discovers a hidden camera at his Halloween party.\n\nFull stream by Kai Cenat: https://www.youtube.com/watch?v=SZA_mBnRNNc&t=3308s\nGo support Kai Cenat, all credit to them.\n\n#kaicenat #halloween #party #kai #shorts",
+  "key": "SZA_mBnRNNc@110",
+  "permission": "fan clipping is widespread and tolerated; no official paid program found (Oct 2026)",
+  "summary": "Kai Cenat discovers a hidden camera at his Halloween party.",
+  "hashtags": [
+   "#kaicenat",
+   "#halloween",
+   "#party"
+  ],
+  "tags": [
+   "kaicenat",
+   "halloween",
+   "party",
+   "hidden",
+   "camera",
+   "reaction",
+   "find",
+   "discovery"
+  ],
+  "writer": "ollama",
+  "script_source": "comments",
+  "upload_tags": [
+   "kaicenat",
+   "halloween",
+   "party",
+   "hidden",
+   "camera",
+   "reaction",
+   "find",
+   "discovery",
+   "kai cenat",
+   "kai",
+   "shorts"
+  ]
+ },
+ {
+  "id": 3,
+  "source": "kai_cenat",
+  "creator": "Kai Cenat",
+  "platform": "youtube",
+  "video_id": "SZA_mBnRNNc",
+  "video_title": "🎃AMP HALLOWEEN PARTY🎃",
+  "url": "https://www.youtube.com/watch?v=SZA_mBnRNNc&t=1174s",
+  "moment": "19:34",
+  "start": 1154,
+  "end": 1184,
+  "rank": 7.47,
+  "signal": "chat went 3.5x its normal pace",
+  "signals": [
+   "chat spike"
+  ],
+  "quotes": [
+   "W",
+   "W",
+   "W"
+  ],
+  "stream_age_h": 42.5,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "fast",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": "beat"
+  },
+  "post_utc": "2026-11-02 02:00",
+  "post_local": "Sun 09:00 PM ET",
+  "title": "Kai Cenat Sees Something W 🧟",
+  "hook": "KAI SEES",
+  "context": "Kai Cenat's Halloween Party",
+  "take": "Kai's eyes widen as he spots something.",
+  "draft": false,
+  "description": "Kai Cenat encounters something unexpected at his Halloween party.\n\nFull stream by Kai Cenat: https://www.youtube.com/watch?v=SZA_mBnRNNc&t=1174s\nGo support Kai Cenat, all credit to them.\n\n#kaicenat #halloween #party #kai #shorts",
+  "key": "SZA_mBnRNNc@39",
+  "permission": "fan clipping is widespread and tolerated; no official paid program found (Oct 2026)",
+  "summary": "Kai Cenat encounters something unexpected at his Halloween party.",
+  "hashtags": [
+   "#kaicenat",
+   "#halloween",
+   "#party"
+  ],
+  "tags": [
+   "kaicenat",
+   "halloween",
+   "party",
+   "something",
+   "unexpected",
+   "w",
+   "reaction",
+   "spook"
+  ],
+  "writer": "ollama",
+  "script_source": "comments",
+  "upload_tags": [
+   "kaicenat",
+   "halloween",
+   "party",
+   "something",
+   "unexpected",
+   "w",
+   "reaction",
+   "spook",
+   "kai cenat",
+   "kai",
+   "shorts"
+  ]
+ }
+]
