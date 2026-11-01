@@ -34,6 +34,8 @@ Done. Report: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/review_2
 Reviewer claude-code failed (RuntimeError: {"duration_api_ms":0,"stop_reason":"stop_sequence","session_id":"fa13170d-36f5-4438-a277-9e6994fdb835","total_cost_usd":0,"usage":{"output_tokens_details":{"thinking_tokens":0},"input_tokens":0,"cache).
 No reviewer available: rule-based review only (see the top of script_agent.py for writer options).
 Done. Report: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/review_2026-11-01_1707/report.md
+Written review by claude-code.
+Done. Report: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/review_2026-11-01_2142/report.md
 Reviewer ollama failed (ReadTimeout: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=900)).
 No reviewer available: rule-based review only (see the top of script_agent.py for writer options).
 Done. Report: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/review_2026-11-01_2226/report.md
