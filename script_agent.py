@@ -28,12 +28,15 @@ Usage:
     python script_agent.py --prompt-only       # save script_prompt.txt to paste into claude.ai yourself...
     python script_agent.py --import answer.json   # ...then save the JSON it gives back as answer.json
 
-Writers (tried in this order unless you pick one with --writer or SCRIPT_WRITER):
-- claude-code: the Claude Code CLI on this computer (`claude -p`), on your Claude plan. No API key.
-- ollama:      a free local model through Ollama (https://ollama.com, then `ollama pull qwen2.5:14b`).
-               OLLAMA_MODEL picks the model, OLLAMA_HOST the server.
-- api:         the Anthropic API if ANTHROPIC_API_KEY is set (a few cents a day).
-- template:    fill-in-the-blank fallback so the queue never breaks. Marked draft.
+Writers. By default only free ones run, in this order:
+- ollama:      a free local model through Ollama (https://ollama.com, then `ollama pull qwen2.5:7b`). The cloud run
+               installs it. OLLAMA_MODEL picks the model, OLLAMA_HOST the server.
+- free:        free_writer.py, rules and templates built from the transcript, comments and trend scan. No model at
+               all, never fails, so the day's clips always post.
+Only if you pick them with --writer or SCRIPT_WRITER (they use your Claude plan or API credit):
+- claude-code: the Claude Code CLI on this computer (`claude -p`), on your Claude plan.
+- api:         the Anthropic API with ANTHROPIC_API_KEY.
+- template:    the old fill-in-the-blank draft.
 
 No YouTube API quota is used. Captions need yt-dlp (already in requirements.txt).
 """
@@ -80,7 +83,7 @@ def fmt_ts(sec):
 
 
 def latest(pattern):
-    runs = sorted(REPORTS_DIR.glob(pattern), key=lambda p: p.stat().st_mtime)
+    runs = sorted(REPORTS_DIR.glob(pattern), key=lambda p: (p.stat().st_mtime, str(p)))  # a fresh checkout gives every file the same mtime: the dated name breaks ties
     return runs[-1] if runs else None
 
 
@@ -297,7 +300,7 @@ def _ollama(prompt):
         return None
     model = os.environ.get("OLLAMA_MODEL") or tags[0]["name"]
     r = requests.post(f"{host}/api/generate", timeout=900, json={
-        "model": model, "prompt": prompt, "format": SCHEMA, "stream": False, "options": {"temperature": 0.7}})
+        "model": model, "prompt": prompt, "format": SCHEMA, "stream": False, "options": {"temperature": 0.7, "num_ctx": 8192}})
     r.raise_for_status()
     return parse_json(r.json()["response"])
 
@@ -330,6 +333,7 @@ def _api(prompt):
 
 
 WRITERS = {"claude-code": _claude_code, "ollama": _ollama, "api": _api}
+AUTO = ["ollama", "free"]  # what runs when no writer is picked: both free. Claude only when you ask for it by name.
 
 
 def template_script(c, pb):
@@ -372,12 +376,24 @@ def to_scripts(out, clips, pb, writer):
     return scripts
 
 
+def free_scripts(clips, pb, niche):
+    """The no-model writer (free_writer.py): never fails, never costs anything."""
+    import free_writer
+    _, by_creator = trending(niche, clips)
+    out = free_writer.write_batch(clips, src_of, by_creator, (review_notes() or {}).get("lessons"))
+    return to_scripts(out, clips, pb, "free")
+
+
 def write_scripts(clips, pb, niche, writer=None):
     if writer == "template":
         return [template_script(c, pb) for c in clips]
+    if writer == "free":
+        return free_scripts(clips, pb, niche)
     prompt = build_prompt(clips, pb, niche)
-    order = [writer] if writer in WRITERS else list(WRITERS)
+    order = [writer] if writer in WRITERS else AUTO
     for name in order:
+        if name == "free":
+            break
         try:
             out = WRITERS[name](prompt)
         except Exception as e:  # a writer failing should never stop the day's clips
@@ -385,18 +401,24 @@ def write_scripts(clips, pb, niche, writer=None):
             continue
         if out:
             print(f"Scripts written by {name}.")
-            return to_scripts(out, clips, pb, name)
+            scripts = to_scripts(out, clips, pb, name)
+            missing = [i for i, s in enumerate(scripts) if s.get("draft")]
+            if missing:  # the model skipped some clips: the free writer fills those in
+                free = free_scripts([clips[i] for i in missing], pb, niche)
+                for i, f in zip(missing, free):
+                    scripts[i] = f
+            return scripts
         if writer:
-            print(f"Writer {name} isn't set up on this computer (see the top of script_agent.py).")
-    print("No writer available: using templates (marked draft). See the top of script_agent.py for options.")
-    return [template_script(c, pb) for c in clips]
+            print(f"Writer {name} isn't set up here (see the top of script_agent.py).")
+    print("Scripts written by the free writer (no AI model).")
+    return free_scripts(clips, pb, niche)
 
 
 # ---------- applying and saving ----------
 
 def description(c):
     src = src_of(c)
-    kind = "stream" if c["platform"] == "twitch" or "live" in c["video_title"].lower() else "video"
+    kind = "stream" if c["platform"].startswith("twitch") or c.get("signals") or "live" in c["video_title"].lower() else "video"
     tags = list(dict.fromkeys(c.get("hashtags", []) + src.get("hashtags", []) + ["#shorts"]))[:6]
     return (f"{c.get('summary') or c['context']}\n\nFull {kind} by {src['name']}: {c['url']}\n"
             f"Go support {src['name']}, all credit to them.\n\n" + " ".join(tags))
@@ -483,7 +505,7 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--queue", help="queue folder (default: latest reports/builder/daily_*)")
     ap.add_argument("--ids", type=int, nargs="*", help="only these queue items")
-    ap.add_argument("--writer", choices=[*WRITERS, "template"], default=os.environ.get("SCRIPT_WRITER"))
+    ap.add_argument("--writer", choices=[*WRITERS, "free", "template"], default=os.environ.get("SCRIPT_WRITER"))
     ap.add_argument("--no-captions", action="store_true", help="don't fetch YouTube captions")
     ap.add_argument("--dry-run", action="store_true", help="print the scripts, don't save them")
     ap.add_argument("--prompt-only", action="store_true", help="save the prompt to paste into claude.ai")

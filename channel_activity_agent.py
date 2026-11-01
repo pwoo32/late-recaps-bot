@@ -193,7 +193,7 @@ def schedule_check(vids, now, quiet_hours):
 
 
 def latest_hold():
-    holds = sorted((REPORTS_DIR / "builder").glob("daily_*/HOLD.md"), key=lambda p: p.stat().st_mtime)
+    holds = sorted((REPORTS_DIR / "builder").glob("*_20*/HOLD.md"), key=lambda p: p.stat().st_mtime)
     if holds and datetime.now().timestamp() - holds[-1].stat().st_mtime < 36 * 3600:
         return holds[-1]
     return None

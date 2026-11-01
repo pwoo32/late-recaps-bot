@@ -17,8 +17,8 @@ viewed Twitch clips. Moments are weighted by how hot the creator is in the lates
 by how that creator's clips did on your own channel.
 
 Scripts (title, hook, context line, narrator's take, description, tags) come from script_agent.py, which daily
-and cut run for you. It uses Claude Code on this computer, a local Ollama model or ANTHROPIC_API_KEY, whichever is
-set up; without any of them you get rough templates. `cut` needs ffmpeg + yt-dlp, faster-whisper for
+and cut run for you. It uses a free local Ollama model, and free_writer.py (no model at all) when Ollama isn't
+running; Claude only if you ask for it with SCRIPT_WRITER. `cut` needs ffmpeg + yt-dlp, faster-whisper for
 captions, and edge-tts for the default narrator voice. `publish` needs a Google OAuth client (see README).
 
 Quota: plan ~30 units, daily ~30-60 units, track ~3 units. Outputs land in reports/builder/.
@@ -46,7 +46,9 @@ from agent import REPORTS_DIR, iso_duration_seconds
 from channel_agent import ChannelYouTube, analyze_channel, study, video_record
 from niches import NICHES
 from sources import SOURCES
+import live_moments as LM
 import script_agent
+import tuner
 
 BUILDER_DIR = REPORTS_DIR / "builder"
 STATE_FILE = BUILDER_DIR / "state.json"
@@ -76,7 +78,7 @@ def fmt_ts(sec):
 
 
 def latest(pattern):
-    runs = sorted(REPORTS_DIR.glob(pattern), key=lambda p: p.stat().st_mtime)
+    runs = sorted(REPORTS_DIR.glob(pattern), key=lambda p: (p.stat().st_mtime, str(p)))  # a fresh checkout gives every file the same mtime: the dated name breaks ties
     return runs[-1] if runs else None
 
 
@@ -89,6 +91,13 @@ def run_age_days(run_dir):
 
 
 class BuilderYouTube(ChannelYouTube):
+    def videos(self, ids):  # same 1 unit per 50, plus when a stream started/ended
+        out = []
+        for i in range(0, len(ids), 50):
+            out += self._get("videos", 1, part="snippet,statistics,contentDetails,liveStreamingDetails",
+                             id=",".join(ids[i:i + 50])).get("items", [])
+        return out
+
     def channel_id(self, ref, state):
         if ref.startswith("UC"):
             return ref
@@ -267,52 +276,111 @@ def comment_moments(comments, duration):
     return out
 
 
-def youtube_candidates(yt, key, src, state, since, now):
+def youtube_candidates(yt, key, src, state, since, now, chat_budget=240, live_streams=2):
+    """Moments in a creator's recent long videos/stream VODs: timestamps viewers comment, plus, for their newest
+    live streams, where chat flooded and what YouTube's "most replayed" graph shows."""
     cid = yt.channel_id(src["youtube"], state)
     ids = yt.recent_uploads("UU" + cid[2:], n=15)
-    out = []
+    out, streams_read = [], 0
     for it in yt.videos(ids):
         sec = iso_duration_seconds(it["contentDetails"]["duration"])
         published = datetime.fromisoformat(it["snippet"]["publishedAt"].replace("Z", "+00:00"))
         if sec < MIN_SOURCE_SECONDS or published < since:
             continue
         views = int(it.get("statistics", {}).get("viewCount", 0))
-        age_h = (now - published).total_seconds() / 3600
-        for m in comment_moments(yt.comments(it["id"]), sec):
-            m.update(source=key, platform="youtube", video_id=it["id"], video_title=it["snippet"]["title"],
-                     video_views=views, age_h=round(age_h, 1),
-                     url=f"https://www.youtube.com/watch?v={it['id']}&t={m['t']}s")
-            out.append(m)
+        live = it.get("liveStreamingDetails") or {}
+        ended = live.get("actualEndTime")
+        age_h = (now - datetime.fromisoformat((ended or it["snippet"]["publishedAt"]).replace("Z", "+00:00"))).total_seconds() / 3600
+        base = dict(source=key, platform="youtube", video_id=it["id"], video_title=it["snippet"]["title"],
+                    video_views=views, age_h=round(age_h, 1), was_live=bool(ended))
+        moments = [dict(m, **base, signals=["comments"]) for m in comment_moments(yt.comments(it["id"]), sec)]
+        if ended and age_h <= 72 and streams_read < live_streams:  # the creator's newest streams: read the room
+            streams_read += 1
+            print(f"  reading the room on \"{it['snippet']['title'][:60]}\" (chat replay, most replayed)")
+            cache = state.setdefault("chat_spikes", {})
+            spikes = cache.get(it["id"])
+            if spikes is None or ended is None:  # a finished stream's chat never changes: read it once
+                spikes = LM.chat_spikes(LM.chat_messages(it["id"], chat_budget), sec)
+                cache[it["id"]] = spikes
+                for k in list(cache)[:-40]:
+                    del cache[k]
+            for sp in spikes:
+                near = next((m for m in moments if abs(m["t"] - sp["t"]) <= 45), None)
+                if near:  # viewers timestamped it AND chat went off: strongest signal there is
+                    near["score"] = round(near["score"] + LM.spike_score(sp["ratio"]), 2)
+                    near["chat_ratio"] = sp["ratio"]
+                    near["signals"].append("chat spike")
+                else:
+                    moments.append(dict(base, t=sp["t"], score=LM.spike_score(sp["ratio"]), comments=0, likes=sp["msgs"],
+                                        quotes=sp["sample"], chat_ratio=sp["ratio"], signals=["chat spike"]))
+            heat = (LM.video_info(it["id"]) or {}).get("heatmap") or []
+            for m in moments:
+                h = LM.heat_at(heat, m["t"])
+                if h is not None:
+                    m["heat"] = round(h, 2)
+            for pk in LM.heat_peaks(heat):
+                if all(abs(m["t"] - pk["t"]) > 45 for m in moments):
+                    moments.append(dict(base, t=pk["t"], score=round(8 * pk["value"], 2), comments=0, likes=0, quotes=[],
+                                        heat=pk["value"], signals=["most replayed"]))
+            if spikes or heat:
+                print(f"    {len(spikes)} chat spikes" + (", most-replayed graph read" if heat else ""))
+        for m in moments:
+            m["url"] = f"https://www.youtube.com/watch?v={it['id']}&t={m['t']}s"
+        out += moments
     return out
 
 
-def twitch_candidates(key, src, since, now):
-    cid, secret = os.environ.get("TWITCH_CLIENT_ID"), os.environ.get("TWITCH_CLIENT_SECRET")
-    if not (cid and secret and src.get("twitch")):
+def twitch_candidates(key, src, since, now, h=None):
+    """The creator's most-viewed Twitch clips: what viewers clipped while the stream was live. Clips whose VOD is
+    up are cut from the VOD (so the length can be tuned); fresh ones from a stream still running are used as is."""
+    if not src.get("twitch"):
         return []
-    tok = requests.post("https://id.twitch.tv/oauth2/token", timeout=30, data=dict(
-        client_id=cid, client_secret=secret, grant_type="client_credentials")).json()["access_token"]
-    h = {"Client-Id": cid, "Authorization": f"Bearer {tok}"}
-    users = requests.get("https://api.twitch.tv/helix/users", params={"login": src["twitch"]}, headers=h, timeout=30).json()
-    if not users.get("data"):
+    h = h or LM.twitch_headers()
+    if not h:
         return []
-    clips = requests.get("https://api.twitch.tv/helix/clips", headers=h, timeout=30, params=dict(
-        broadcaster_id=users["data"][0]["id"], started_at=since.strftime("%Y-%m-%dT%H:%M:%SZ"), first=20)).json()
+    uid = LM.twitch_user(h, src["twitch"])
+    if not uid:
+        return []
     out = []
-    for c in clips.get("data", []):
-        if not c.get("video_id") or c.get("vod_offset") is None:
-            continue  # VOD gone or not processed yet
+    for c in LM.twitch_clips(h, uid, since):
         created = datetime.fromisoformat(c["created_at"].replace("Z", "+00:00"))
-        t = int(c["vod_offset"] + c["duration"] * 0.7)  # clips end on the payoff; centre near it
-        out.append({"t": t, "score": round(math.log2(2 + c["view_count"]) * 1.5, 2), "comments": 0,
-                    "likes": c["view_count"], "quotes": [c["title"]], "source": key, "platform": "twitch",
-                    "video_id": c["video_id"], "video_title": c["title"], "video_views": c["view_count"],
-                    "age_h": round((now - created).total_seconds() / 3600, 1),
-                    "url": f"https://www.twitch.tv/videos/{c['video_id']}?t={t // 3600}h{t % 3600 // 60}m{t % 60}s"})
+        vph = LM.clip_velocity(c, now)
+        score = round(math.log2(2 + c["view_count"]) * 1.5 * (1 + min(vph / 20000, 1)), 2)
+        common = dict(score=score, comments=0, likes=c["view_count"], quotes=[c["title"]], source=key,
+                      video_title=c["title"], video_views=c["view_count"], clip_vph=round(vph),
+                      age_h=round((now - created).total_seconds() / 3600, 1), signals=["twitch clip"], was_live=True)
+        if c.get("video_id") and c.get("vod_offset") is not None:
+            t = int(c["vod_offset"] + c["duration"] * 0.7)  # clips end on the payoff; centre near it
+            out.append(dict(common, t=t, platform="twitch", video_id=c["video_id"],
+                            url=f"https://www.twitch.tv/videos/{c['video_id']}?t={t // 3600}h{t % 3600 // 60}m{t % 60}s"))
+        else:  # still live (or no VOD): the clip itself is the footage
+            out.append(dict(common, t=0, platform="twitch_clip", video_id=c["id"], duration=c["duration"], url=c["url"]))
     return out
 
 
-def rank_moments(moments, demand, state):
+def trend_words(videos, niche):
+    """Per creator: the words in their fastest-growing clips this week (who they're with, what they're doing)."""
+    from free_writer import STOP as stop
+    out = {}
+    pool = sorted(videos.get(niche, []), key=lambda v: -v.get("views_per_hour", 0))
+    for key, src in SOURCES.items():
+        hits = [v for v in pool if any(re.search(rf"(?<![a-z]){re.escape(a)}(?![a-z])", v["title"].lower()) for a in src["aliases"])][:15]
+        words = Counter(w for v in hits for w in set(re.findall(r"[a-z0-9$]{3,}", v["title"].lower()))
+                        if w not in stop and not any(w in a for a in src["aliases"]))
+        out[key] = {w for w, n in words.items() if n >= 2}
+    return out
+
+
+def demand_change(niche):
+    """Per creator: clip demand in the newest trend run vs the one before (2.0 = doubled). Who's spiking."""
+    runs = sorted(REPORTS_DIR.glob("[0-9]*_*/videos.json"), key=lambda p: (p.stat().st_mtime, str(p)))[-2:]
+    if len(runs) < 2:
+        return {}
+    old, new = (source_demand(json.loads(r.read_text(encoding="utf-8")), niche) for r in runs)
+    return {k: (new.get(k, 0) + 50) / (old.get(k, 0) + 50) for k in new}
+
+
+def rank_moments(moments, demand, state, words=None, change=None):
     top_demand = max(demand.values() or [0]) or 1
     used = set(state["used_moments"])
     for m in moments:
@@ -323,7 +391,11 @@ def rank_moments(moments, demand, state):
         fresh = 0.5 ** (m["age_h"] / 72)  # older streams are more picked over by other clippers
         reach = 0.5 + min(math.log10(max(m["video_views"], 10)) / 7, 1)
         paid = 1.25 if src.get("campaign_cpm") else 1.0
-        m["rank"] = round(m["score"] * hot * learned * fresh * reach * paid, 2)
+        rising = min(max((change or {}).get(m["source"], 1.0), 0.7), 1.8)  # creator spiking in today's trend scan
+        text = " ".join(m["quotes"] + [m["video_title"]]).lower()
+        topical = 1 + 0.15 * min(sum(1 for w in (words or {}).get(m["source"], ()) if w in text), 3)  # what's viral now
+        heat = 0.8 + 0.6 * m["heat"] if m.get("heat") is not None else 1.0  # most-replayed part of the stream
+        m["rank"] = round(m["score"] * hot * learned * fresh * reach * paid * rising * topical * heat, 2)
         m["key"] = f"{m['video_id']}@{m['t'] // 30}"
         m["used"] = m["key"] in used
     return sorted((m for m in moments if not m["used"]), key=lambda m: m["rank"], reverse=True)
@@ -352,12 +424,18 @@ def description(m, meta, pb):
     src = SOURCES[m["source"]]
     tags = list(dict.fromkeys(src["hashtags"] + [h for h, _ in pb["hashtags"][:4]] + ["#shorts"]))[:6]
     return (f"{meta['context']}\n\n"
-            f"Full {'stream' if m['platform'] == 'twitch' or 'live' in m['video_title'].lower() else 'video'} "
+            f"Full {'stream' if m['platform'].startswith('twitch') or m.get('was_live') or 'live' in m['video_title'].lower() else 'video'} "
             f"by {src['name']}: {m['url']}\n"
             f"Go support {src['name']}, all credit to them.\n\n" + " ".join(tags))
 
 
 # ---------- commands ----------
+
+def is_spike(m, min_chat=4.0, min_vph=8000):
+    """A moment that's going nuts right now: chat flooded several times its normal pace, or a Twitch clip of it is
+    pulling thousands of views an hour."""
+    return m["age_h"] <= 18 and ((m.get("chat_ratio") or 0) >= min_chat or (m.get("clip_vph") or 0) >= min_vph)
+
 
 def cmd_daily(args, yt=None, state=None):
     yt = yt or BuilderYouTube(os.environ["YOUTUBE_API_KEY"])
@@ -366,22 +444,34 @@ def cmd_daily(args, yt=None, state=None):
     niche = args.niche
     pb, study_dir = playbook(yt, niche, state)
     demand = source_demand(videos, niche)
+    change = demand_change(niche)
     now = datetime.now(timezone.utc)
-    since = now - timedelta(hours=args.hours)
+    spike = getattr(args, "spike", False)
+    since = now - timedelta(hours=18 if spike else args.hours)
 
     moments = []
+    th = LM.twitch_headers() if any(s.get("twitch") for s in SOURCES.values()) else None
     for key, src in SOURCES.items():
         if src["niche"] != niche or "blocked" in src["permission"].lower():
             continue
         print(f"[{key}] reading recent streams/videos")
-        if src.get("youtube"):
-            moments += youtube_candidates(yt, key, src, state, since, now)
-        moments += twitch_candidates(key, src, since, now)
-    ranked = rank_moments(moments, demand, state)
+        try:
+            if src.get("youtube"):
+                moments += youtube_candidates(yt, key, src, state, since, now, live_streams=1 if spike else 2)
+            moments += twitch_candidates(key, src, since, now, th)
+        except Exception as e:  # one creator's trouble shouldn't stop the day
+            print(f"  skipped {key}: {type(e).__name__}: {str(e)[:200]}")
+    ranked = rank_moments(moments, demand, state, trend_words(videos, niche), change)
+    if spike:
+        ranked = [m for m in ranked if is_spike(m)]
+        if not ranked:
+            print("Nothing is spiking right now.")
+            return None
 
     picks, per_source = [], Counter()
-    for m in ranked:  # max 2 per creator a day so the channel isn't one-note
-        if per_source[m["source"]] < 2:
+    for m in ranked:  # max 2 per creator a day so the channel isn't one-note (3 when they're blowing up)
+        cap = 3 if change.get(m["source"], 1) >= 1.5 else 2
+        if per_source[m["source"]] < cap and all(m["video_id"] != p["video_id"] or abs(m["t"] - p["t"]) > 90 for p in picks):
             picks.append(m)
             per_source[m["source"]] += 1
         if len(picks) == args.count:
@@ -389,36 +479,52 @@ def cmd_daily(args, yt=None, state=None):
     if not picks:
         sys.exit(f"No moments found in the last {args.hours}h. Try --hours 168, or add sources in sources.py.")
 
-    length = args.length or best_length(pb, state)
-    pre = round(length * 0.65)
+    edits = tuner.recipes(state, len(picks), now.strftime("%Y-%m-%d") + ("spike" if spike else ""))
     metas = {}  # scripts are written by script_agent below, once the queue exists
     slots = post_slots(pb, state, len(picks))
     today = (now.astimezone(LOCAL_TZ)).date()
     queue = []
     for i, m in enumerate(picks):
+        recipe = edits[i]
+        length = args.length or recipe["length"]
         meta = metas.get(i) or template_meta(m, pb)
-        h = slots[i % len(slots)]
-        when = datetime.combine(today, datetime.min.time(), tzinfo=timezone.utc).replace(hour=h)
-        if when < now:
-            when += timedelta(days=1)
-        start = max(0, m["t"] - pre)
+        if spike:
+            when = now  # it's blowing up now: post now
+        else:
+            h = slots[i % len(slots)]
+            when = datetime.combine(today, datetime.min.time(), tzinfo=timezone.utc).replace(hour=h)
+            if when < now:
+                when += timedelta(days=1)
+        if m["platform"] == "twitch_clip":
+            start, end = 0, min(m.get("duration") or length, 60)
+        else:
+            start = max(0, m["t"] - round(length * 0.65))
+            end = start + length
+        signal = (f"{m['comments']} timestamp comments, {m['likes']:,} likes" if m["comments"] else
+                  f"Twitch clip, {m['likes']:,} views ({m.get('clip_vph', 0):,}/h)" if "twitch clip" in m.get("signals", [])
+                  else "")
+        if m.get("chat_ratio"):
+            signal += ("; " if signal else "") + f"chat went {m['chat_ratio']}x its normal pace"
+        if m.get("heat") is not None:
+            signal += ("; " if signal else "") + f"most-replayed {m['heat']:.0%}"
         clip = {
             "id": i + 1, "source": m["source"], "creator": SOURCES[m["source"]]["name"],
             "platform": m["platform"], "video_id": m["video_id"], "video_title": m["video_title"],
-            "url": m["url"], "moment": fmt_ts(m["t"]), "start": start, "end": start + length,
-            "rank": m["rank"], "signal": f"{m['comments']} timestamp comments, {m['likes']:,} likes"
-            if m["platform"] == "youtube" else f"Twitch clip, {m['likes']:,} views",
-            "quotes": m["quotes"][:3], "stream_age_h": m["age_h"],
+            "url": m["url"], "moment": fmt_ts(m["t"]), "start": start, "end": end,
+            "rank": m["rank"], "signal": signal or "most replayed", "signals": m.get("signals", []),
+            "quotes": m["quotes"][:3], "stream_age_h": m["age_h"], "spike": spike,
+            "recipe": recipe,
             "post_utc": when.strftime("%Y-%m-%d %H:%M"), "post_local": when.astimezone(LOCAL_TZ).strftime("%a %I:%M %p ET"),
             **meta, "description": description(m, meta, pb), "key": m["key"],
             "permission": SOURCES[m["source"]]["permission"],
         }
         queue.append(clip)
-        state["queued"][m["key"]] = {"title": clip["title"], "source": m["source"], "post_utc": clip["post_utc"]}
+        state["queued"][m["key"]] = {"title": clip["title"], "source": m["source"], "post_utc": clip["post_utc"],
+                                     "recipe": recipe}
         state["used_moments"].append(m["key"])
     state["used_moments"] = state["used_moments"][-500:]
 
-    out_dir = BUILDER_DIR / f"daily_{now.strftime('%Y-%m-%d_%H%M')}"
+    out_dir = BUILDER_DIR / f"{'spike' if spike else 'daily'}_{now.strftime('%Y-%m-%d_%H%M')}"
     out_dir.mkdir(parents=True, exist_ok=True)
     (out_dir / "queue.json").write_text(json.dumps(queue, indent=1, ensure_ascii=False), encoding="utf-8")
     print("Writing scripts...")
@@ -437,7 +543,8 @@ def write_daily(out_dir, queue, ranked, demand, niche, pb, trend_dir, study_dir,
     L = [f"# Clip queue, {now.astimezone(LOCAL_TZ):%a %b %d %Y}", "",
          f"Niche **{NICHES[niche]['label']}**. Inputs: trend report `{trend_dir.name}`, channel study `{study_dir.name}`. "
          f"Looked at streams/videos from the last {args.hours}h; found {len(ranked)} unused moments. "
-         f"API quota used: {units} units." + ("" if llm else " Some scripts are templates (no writer set up, see script_agent.py): edit before posting."), "",
+         f"API quota used: {units} units." + ("" if llm else " Some scripts are templates: edit before posting."), "",
+         "Scripts written by: " + ", ".join(sorted({c.get("writer") or "template" for c in queue})) + ".", "",
          "Creator demand right now (views/hour on recent clips naming them): "
          + ", ".join(f"{SOURCES[k]['name']} {v:,.0f}" for k, v in sorted(demand.items(), key=lambda kv: -kv[1])), ""]
     for c in queue:
@@ -448,7 +555,10 @@ def write_daily(out_dir, queue, ranked, demand, niche, pb, trend_dir, study_dir,
               f"- **Why:** {c['signal']}. Viewers said: " + " / ".join(f"\"{q}\"" for q in c["quotes"]),
               f"- **On-screen hook:** {c['hook']}",
               f"- **Context line (first 3s):** {c['context']}",
-              f"- **Narrator take (AI voice):** {c['take']}",
+              f"- **Narrator take (AI voice, off unless --narrate):** {c['take']}",
+              f"- **Edit:** {c['recipe']['length']}s, punch {c['recipe']['punch']}, {c['recipe']['beat']} zooms, "
+              f"{c['recipe']['caption_words']}-word captions, cut silences over {c['recipe']['gap']}s, {c['recipe']['layout']}"
+              + (f" (testing {c['recipe']['test']})" if c['recipe'].get('test') else " (best settings so far)"),
               f"- **Permission:** {c['permission']}",
               f"- **Make it:** `python channel_builder.py cut {c['id']}` (or `publish` to cut and upload all)",
               "", "Description:", "", "```", c["description"], "```", ""]
@@ -573,7 +683,7 @@ def cmd_plan(args):
     for label, mv, views, ads, cmp_ in scen:
         L.append(f"| {label} | {mv:,} | {views:,} | ${ads:,.0f} | ${cmp_:,.0f} |")
     L += ["", "These are scenarios, not forecasts: the views come from channels that already won. Expect weeks of low views "
-          "while the algorithm learns the channel. Costs: $0 for the API keys; Claude-written titles are a few cents a day.", ""]
+          "while the algorithm learns the channel. Costs: $0 for the API keys; scripts come from a free local model.", ""]
 
     L += ["## 8. Rules that keep the channel alive", "",
           "- Clip from the creator's own full stream/VOD, never re-upload another clip channel's Short.",
@@ -669,8 +779,10 @@ def cmd_run(args):
     """Daily driver: refresh the other agents' reports when they're stale, then build the queue."""
     here = Path(__file__).parent
     trend = latest("[0-9]*_*/niches.json")
-    if not trend or run_age_days(trend.parent) > 3:
-        subprocess.run([sys.executable, str(here / "agent.py"), "--niches", args.niche, "--days", "3"], check=True)
+    if not trend or run_age_days(trend.parent) > 0.8:  # every day: what's viral and who's spiking right now
+        r = subprocess.run([sys.executable, str(here / "agent.py"), "--niches", args.niche, "--days", "3"])
+        if r.returncode and not trend:
+            sys.exit("Trend scan failed and there's no earlier one to use.")
     study_run = latest(f"channels_{args.niche}_*/channels.json")
     if not study_run or run_age_days(study_run.parent) > 7:
         subprocess.run([sys.executable, str(here / "channel_agent.py"), "--niche", args.niche], check=True)
@@ -679,7 +791,7 @@ def cmd_run(args):
         cmd_track(argparse.Namespace(channel=None, niche=args.niche))
     cmd_daily(args)
     if args.publish:
-        cmd_publish(argparse.Namespace(queue=None, ids=None, layout="face34", whisper="small.en", voice=args.voice,
+        cmd_publish(argparse.Namespace(queue=None, ids=None, layout=None, whisper="small.en", voice=args.voice,
                                        narrate=args.narrate, skip_gate=False))
 
 
@@ -694,19 +806,19 @@ def ass_escape(s):
     return re.sub(r"[\U000E0000-\U000E007F\U0001F000-\U0001F2FF]", "", s).strip()  # flags/tags render as boxes
 
 
-def caption_chunks(words):
-    """1-3 word chunks, broken on pauses and punctuation."""
+def caption_chunks(words, size=3):
+    """1-`size` word chunks, broken on pauses and punctuation."""
     chunks, chunk = [], []
     for i, w in enumerate(words):
         chunk.append(w)
         nxt = words[i + 1] if i + 1 < len(words) else None
-        if len(chunk) == 3 or not nxt or nxt["start"] - w["end"] > 0.35 or re.search(r"[.!?,]$", w["word"]):
+        if len(chunk) >= size or not nxt or nxt["start"] - w["end"] > 0.35 or re.search(r"[.!?,]$", w["word"]):
             chunks.append((chunk, nxt))
             chunk = []
     return chunks
 
 
-def write_ass(path, words, hook, context, length, offset=0.0):
+def write_ass(path, words, hook, context, length, offset=0.0, size=3):
     """Captions: 1-3 word chunks, big with a heavy outline, the word being spoken in yellow; hook pinned top;
     context line for the first 3.5s."""
     head = """[Script Info]
@@ -728,7 +840,7 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
         ev.append(f"Dialogue: 1,{ass_time(0)},{ass_time(length)},Hook,,0,0,0,,{ass_escape(hook.upper())}")
     if context:
         ev.append(f"Dialogue: 1,{ass_time(0)},{ass_time(min(3.5, length))},Ctx,,0,0,0,,{ass_escape(context)}")
-    for chunk, nxt in caption_chunks(words):
+    for chunk, nxt in caption_chunks(words, size):
         texts = [ass_escape(c["word"].strip().upper()) for c in chunk]
         chunk_end = min((nxt["start"] if nxt else chunk[-1]["end"] + 0.3) + offset, length)
         for j, w in enumerate(chunk):  # one event per word, so the highlight moves with the speech
@@ -770,11 +882,11 @@ def zoom_expr(beats, length, push=0.06, punch=0.14):
     return f"1+{push}*t/{max(length, 1):.2f}+{punch}*mod({toggles},2)"
 
 
-def zoom_beats(words, cuts, min_gap=1.5, max_gap=2.5):
+def zoom_beats(words, cuts, min_gap=1.5, max_gap=2.5, size=3):
     """Moments to punch in or out: every jump cut, plus a caption-chunk start whenever the frame has held
     for `max_gap` seconds. Never closer than `min_gap`."""
     cuts = {round(c, 2) for c in cuts}
-    starts = sorted(cuts | {round(ch[0]["start"], 2) for ch, _ in caption_chunks(words)})
+    starts = sorted(cuts | {round(ch[0]["start"], 2) for ch, _ in caption_chunks(words, size)})
     beats, last = [], 0.0
     for t in starts:
         if t - last < min_gap:
@@ -913,12 +1025,17 @@ def cmd_cut(args):
     else:
         if not shutil.which("yt-dlp"):
             sys.exit("yt-dlp is not installed (pip install yt-dlp), or pass --video with the source file.")
-        src_url = (f"https://www.youtube.com/watch?v={clip['video_id']}" if clip["platform"] == "youtube"
-                   else f"https://www.twitch.tv/videos/{clip['video_id']}")
-        print(f"Downloading {fmt_ts(start)}-{fmt_ts(end)} of {src_url}")
-        subprocess.run(["yt-dlp", "-q", "-f", "bv*[height<=1080]+ba/b[height<=1080]/b", "--download-sections",
-                        f"*{start}-{end}", "--force-keyframes-at-cuts", "--merge-output-format", "mp4",
-                        "-o", str(raw), src_url], check=True)
+        if clip["platform"] == "twitch_clip":  # a clip from a stream that may still be live: take it whole
+            print(f"Downloading Twitch clip {clip['url']}")
+            subprocess.run(["yt-dlp", "-q", "-f", "b[height<=1080]/b", "--merge-output-format", "mp4", "-o", str(raw),
+                            clip["url"]], check=True)
+        else:
+            src_url = (f"https://www.youtube.com/watch?v={clip['video_id']}" if clip["platform"] == "youtube"
+                       else f"https://www.twitch.tv/videos/{clip['video_id']}")
+            print(f"Downloading {fmt_ts(start)}-{fmt_ts(end)} of {src_url}")
+            subprocess.run(["yt-dlp", "-q", "-f", "bv*[height<=1080]+ba/b[height<=1080]/b", "--download-sections",
+                            f"*{start}-{end}", "--force-keyframes-at-cuts", "--merge-output-format", "mp4",
+                            "-o", str(raw), src_url], check=True)
 
     words = json.loads(Path(args.transcript).read_text(encoding="utf-8")) if args.transcript else (
         [] if args.no_captions else transcribe(raw, args.whisper))
@@ -933,7 +1050,9 @@ def cmd_cut(args):
     # Retention edit: cut dead air between lines, and punch the frame in/out every couple of seconds so the
     # picture keeps changing. --plain turns both off.
     plain = getattr(args, "plain", False)
-    keep = dead_air(words, length) if words and not plain else [(0.0, length)]
+    recipe = {**tuner.default_recipe(), **(clip.get("recipe") or {})}  # the edit tuner's settings for this clip
+    layout = args.layout or recipe["layout"]
+    keep = dead_air(words, length, gap=recipe["gap"]) if words and not plain else [(0.0, length)]
     if len(keep) > 1:
         words = [dict(w, start=retime(w["start"], keep), end=retime(w["end"], keep)) for w in words]
         cuts = [retime(b, keep) for _, b in keep[:-1]]
@@ -942,7 +1061,7 @@ def cmd_cut(args):
     else:
         cuts = []
     ass = base.with_suffix(".ass")
-    write_ass(ass, words, clip["hook"], clip["context"], length)
+    write_ass(ass, words, clip["hook"], clip["context"], length, size=recipe["caption_words"])
 
     n = len(keep)
     if n > 1:
@@ -961,18 +1080,19 @@ def cmd_cut(args):
     # 9:16: blurred full-frame background + the stream cropped/scaled big in the middle. face34 (default)
     # is a tall 3:4 crop that follows the streamer's face and fills three quarters of the screen.
     sw, sh = vs.get("width") or 1920, vs.get("height") or 1080
-    cw = {"face34": min(sw, sh * 3 / 4), "crop43": min(sw, sh * 4 / 3), "fit": sw, "fill": min(sw, sh * 9 / 16)}[args.layout]
-    fw, fh = (1080, 1920) if args.layout == "fill" else (1080, int(round(1080 * sh / cw / 2)) * 2)
-    if args.layout == "face34":
+    cw = {"face34": min(sw, sh * 3 / 4), "crop43": min(sw, sh * 4 / 3), "fit": sw, "fill": min(sw, sh * 9 / 16)}[layout]
+    fw, fh = (1080, 1920) if layout == "fill" else (1080, int(round(1080 * sh / cw / 2)) * 2)
+    if layout == "face34":
         fx = face_x(raw)
         cx = (fx if fx is not None else 0.5) * sw - cw / 2
         fg = f"crop={int(cw) // 2 * 2}:ih:{int(min(max(cx, 0), sw - cw))}:0"
         print(f"Framing on the face at {fx:.0%} across." if fx is not None else "No face found; framing the centre.")
     else:
-        fg = {"crop43": "crop='min(iw,ih*4/3)':ih", "fit": "null", "fill": "crop='min(iw,ih*9/16)':ih"}[args.layout]
+        fg = {"crop43": "crop='min(iw,ih*4/3)':ih", "fit": "null", "fill": "crop='min(iw,ih*9/16)':ih"}[layout]
     fg += f",scale={fw}:{fh}"
     if not plain:
-        z = zoom_expr(zoom_beats(words, cuts), length)
+        lo, hi = tuner.BEATS.get(recipe["beat"], (1.5, 2.5))
+        z = zoom_expr(zoom_beats(words, cuts, lo, hi, recipe["caption_words"]), length, punch=recipe["punch"])
         fg += f",scale=w='2*trunc({fw}*({z})/2)':h='2*trunc({fh}*({z})/2)':eval=frame,crop={fw}:{fh}"
     vf = (src + f"{vin}split[a][b];[a]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,gblur=sigma=40,"
           f"eq=brightness=-0.12[bg];[b]{fg}[fg];[bg][fg]overlay=(W-w)/2:(H-h)/2,"
@@ -1139,6 +1259,7 @@ def cmd_publish(args):
         print("Everything in this queue is already on YouTube.")
         if tt.get("enabled"):
             post_tiktok(qdir, queue, picked, tt)
+        post_meta(qdir, queue, picked)
         return
     niche = SOURCES.get(todo[0]["source"], {}).get("niche", "streamer")
     problems = [] if getattr(args, "skip_gate", False) else agents_ready(niche)
@@ -1172,12 +1293,35 @@ def cmd_publish(args):
             continue
         c["youtube_id"] = vid
         state["queued"].setdefault(c["key"], {}).update(video_id=vid, title=c["title"], source=c["source"])
+        if qdir.name.startswith("spike_"):  # counts toward the spike checks' daily limit
+            day = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+            state.setdefault("spike_posts", {})[day] = state["spike_posts"].get(day, 0) + 1
         qfile.write_text(json.dumps(queue, indent=1, ensure_ascii=False), encoding="utf-8")
         save_state(state)
         print(f"  uploaded https://youtube.com/shorts/{vid} "
               + (f"(goes public {c['post_local']})" if scheduled else "(public now)"))
     if tt.get("enabled"):
         post_tiktok(qdir, queue, picked, tt)
+    post_meta(qdir, queue, picked)
+
+
+def post_meta(qdir, queue, clips):
+    """Instagram Reels and Facebook Reels for every clip that went to YouTube (on when the META_* secrets are set)."""
+    import meta_upload
+    if not meta_upload.enabled():
+        return
+    qfile = qdir / "queue.json"
+    for c in clips:
+        path = qdir / "clips" / f"{c['id']:02d}_{re.sub(r'[^A-Za-z0-9]+', '_', c['key'])}.mp4"
+        if not c.get("youtube_id") or not path.exists():
+            continue
+        for k, v in meta_upload.post(path, c).items():
+            if k.endswith("_error"):
+                print(f"  {k.split('_')[0].title()} skipped for [{c['id']}]: {v}")
+            else:
+                c[k] = v
+                print(f"  {k.split('_')[0].title()}: [{c['id']}] posted ({v})")
+        qfile.write_text(json.dumps(queue, indent=1, ensure_ascii=False), encoding="utf-8")
 
 
 def post_tiktok(qdir, queue, clips, tt):
@@ -1202,6 +1346,27 @@ def post_tiktok(qdir, queue, clips, tt):
               f"\n    {c['tiktok_caption']}")
 
 
+def cmd_spike(args):
+    """Every few hours: if something on a creator's stream is going nuts right now (chat flood, a Twitch clip
+    racing up), clip it and post it straight away instead of waiting for tomorrow's run."""
+    state = load_state()
+    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    done = state.setdefault("spike_posts", {})
+    for d in [d for d in done if d < today]:
+        del done[d]
+    left = args.max_per_day - done.get(today, 0)
+    if left <= 0:
+        print(f"Already posted {done[today]} spike clips today; the limit is {args.max_per_day}.")
+        return
+    qdir = cmd_daily(argparse.Namespace(niche=args.niche, count=min(left, args.count), hours=18, length=args.length, spike=True),
+                     state=state)
+    if not qdir:
+        return
+    if args.publish:
+        cmd_publish(argparse.Namespace(queue=str(qdir), ids=None, layout=None, whisper="small.en", voice=args.voice,
+                                       narrate=False, skip_gate=False))
+
+
 def cmd_tiktok_auth(args):
     """Sign in to TikTok once; --enable turns cross-posting on in the daily run, --disable turns it off."""
     state = load_state()
@@ -1223,7 +1388,7 @@ def cmd_tiktok_auth(args):
 def cmd_tiktok_status(args):
     """What TikTok did with each clip sent from the last few queues."""
     import tiktok_upload
-    queues = sorted(BUILDER_DIR.glob("daily_*"), key=lambda p: p.stat().st_mtime)[-args.days:]
+    queues = sorted((q for q in BUILDER_DIR.glob("*_20*") if (q / "queue.json").exists()), key=lambda p: p.stat().st_mtime)[-args.days:]
     sent = 0
     for qdir in queues:
         for c in json.loads((qdir / "queue.json").read_text(encoding="utf-8")):
@@ -1258,6 +1423,13 @@ def main():
             p.add_argument("--voice", default="en-US-BrianMultilingualNeural", help="edge-tts narrator voice")
         if name == "track":
             p.add_argument("--channel", help="your channel @handle or UC... id (remembered after the first run)")
+    p = sub.add_parser("spike", help="clip and post anything going nuts on a stream right now")
+    p.add_argument("--niche", default="streamer", choices=sorted({s["niche"] for s in SOURCES.values()}))
+    p.add_argument("--count", type=int, default=1, help="clips per check")
+    p.add_argument("--max-per-day", type=int, default=2, help="spike clips per day at most (YouTube upload quota)")
+    p.add_argument("--length", type=int, help="clip length in seconds (default: the edit tuner's)")
+    p.add_argument("--publish", action="store_true", help="cut and post right away")
+    p.add_argument("--voice", default="en-US-BrianMultilingualNeural")
     p = sub.add_parser("cut")
     p.add_argument("id", type=int, help="queue item number")
     p.add_argument("--queue", help="queue folder (default: latest daily_*)")
@@ -1265,7 +1437,7 @@ def main():
     p.add_argument("--end", type=float, help="override end second in the source")
     p.add_argument("--video", help="use a local source file instead of downloading")
     p.add_argument("--voiceover", help="audio file with your take, mixed over the opening")
-    p.add_argument("--layout", default="face34", choices=["face34", "crop43", "fit", "fill"])
+    p.add_argument("--layout", choices=["face34", "crop43", "fit", "fill"], help="framing (default: the edit tuner's pick, face34)")
     p.add_argument("--whisper", default="small.en", help="faster-whisper model for captions")
     p.add_argument("--transcript", help="word timings JSON [{word,start,end}] instead of whisper")
     p.add_argument("--no-captions", action="store_true")
@@ -1285,7 +1457,7 @@ def main():
     p = sub.add_parser("publish")
     p.add_argument("ids", type=int, nargs="*", help="queue items (default: all not yet uploaded)")
     p.add_argument("--queue", help="queue folder (default: latest daily_*)")
-    p.add_argument("--layout", default="face34", choices=["face34", "crop43", "fit", "fill"])
+    p.add_argument("--layout", choices=["face34", "crop43", "fit", "fill"], help="framing (default: the edit tuner's pick, face34)")
     p.add_argument("--whisper", default="small.en")
     p.add_argument("--narrate", action="store_true", help="add the AI narrator over the opening")
     p.add_argument("--voice", default="en-US-BrianMultilingualNeural")
@@ -1294,7 +1466,7 @@ def main():
 
     if args.cmd not in ("cut", "publish", "auth", "tiktok-auth", "tiktok-status") and not os.environ.get("YOUTUBE_API_KEY"):
         sys.exit("Set YOUTUBE_API_KEY first.")
-    {"plan": cmd_plan, "daily": cmd_daily, "track": cmd_track, "run": cmd_run, "cut": cmd_cut,
+    {"plan": cmd_plan, "daily": cmd_daily, "track": cmd_track, "run": cmd_run, "cut": cmd_cut, "spike": cmd_spike,
      "publish": cmd_publish, "auth": cmd_auth,
      "tiktok-auth": cmd_tiktok_auth, "tiktok-status": cmd_tiktok_status}[args.cmd](args)
 
