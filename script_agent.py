@@ -235,13 +235,14 @@ How our recent clips held viewers:
 {verdict_lines}
 """ if verdict_lines else "") + f"""
 Title pattern: the creator's name first, then exactly what happens in plain, punchy words, about
-{min(pb['title_chars'], 55)} characters and never over 70, title case, one or two fitting emoji at the end. Example of the target quality:
-"Speed Crashes Out After Cole Palmer Scores Again 😭". No questions, no hashtags, no ALL-CAPS words, no clickbait the
+{min(pb['title_chars'], 55)} characters and never over 70, title case, one or two fitting emoji at the end. The shape to aim
+for (the names here are placeholders, never copy them): "<Creator> Crashes Out After <Person> Scores Again 😭". No questions, no hashtags, no ALL-CAPS words, no clickbait the
 clip doesn't deliver.
 
 Use the stream title, the viewer comments and the transcript together to work out what actually happens in each clip.
 Use only what they support. Don't invent names, scores or events. If what happens is unclear, describe the
-reaction (e.g. "Speed Can't Believe What Cole Palmer Just Did 😭").
+reaction (e.g. "<Creator> Can't Believe What Just Happened 😭"). Only name a person who appears in that clip's stream
+title, comments or transcript.
 
 For every clip write:
 - title: in that pattern.

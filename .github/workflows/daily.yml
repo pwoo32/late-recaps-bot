@@ -164,7 +164,9 @@ jobs:
       - name: Review agent
         if: steps.mode.outputs.skip != 'true' && steps.mode.outputs.mode == 'daily'
         continue-on-error: true   # the pre-post check holds posting if the review didn't run
-        run: python review_agent.py 2>&1 | tee -a review.log
+        # --no-llm: on the runner's CPU the written review takes 15+ minutes and times out; the numbers, diagnoses
+        # and the edit tuner's scoring (what actually steers tomorrow) are all rule-based and still run
+        run: python review_agent.py --no-llm 2>&1 | tee -a review.log
 
       - name: Build, cut and post
         if: steps.mode.outputs.skip != 'true' && steps.mode.outputs.mode == 'daily'
