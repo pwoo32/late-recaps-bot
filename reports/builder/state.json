@@ -1,14 +1,14 @@
 {
  "source_weight": {
-  "jynxzi": 0.43,
-  "kai_cenat": 0.62,
-  "ishowspeed": 1.77
+  "jynxzi": 0.38,
+  "kai_cenat": 0.49,
+  "ishowspeed": 1.18
  },
  "slot_weight": {
-  "2": 1.95,
-  "21": 2.99,
-  "8": 0.72,
-  "4": 0.72
+  "2": 1.29,
+  "21": 1.91,
+  "8": 0.55,
+  "4": 0.55
  },
  "used_moments": [
   "L6S9Vb3RLy4@186",
@@ -60,7 +60,10 @@
   "qLo64OdLKBE@8",
   "SZA_mBnRNNc@79",
   "SZA_mBnRNNc@197",
-  "HbsX4WRbYLM@8"
+  "HbsX4WRbYLM@8",
+  "IkhjzYsvCmw@36",
+  "IkhjzYsvCmw@236",
+  "R6gKMvetXUU@45"
  ],
  "queued": {
   "L6S9Vb3RLy4@186": {
@@ -331,6 +334,21 @@
    "source": "jynxzi",
    "post_utc": "2026-11-01 08:00",
    "video_id": "mEtPhzxRKuA"
+  },
+  "IkhjzYsvCmw@36": {
+   "title": "Speed the kick here was personal \ud83e\udd2f",
+   "source": "ishowspeed",
+   "post_utc": "2026-11-01 21:00"
+  },
+  "IkhjzYsvCmw@236": {
+   "title": "Speed First streamer to ever do a IRL mo \ud83e\udd2f",
+   "source": "ishowspeed",
+   "post_utc": "2026-11-02 07:00"
+  },
+  "R6gKMvetXUU@45": {
+   "title": "Kai Cenat duke. Only saw da as \ud83e\udd2f",
+   "source": "kai_cenat",
+   "post_utc": "2026-11-02 02:00"
   }
  },
  "channel": "UCbK9EejOk5UVzI_l8F3f8kA",
@@ -339,8 +357,8 @@
   "@TheDiaryOfACEO": "UCGq-a57w-aPwyi3pW7XLiHw"
  },
  "review": {
-  "at": "2026-10-31 16:06",
-  "report": "/home/runner/work/late-recaps-bot/late-recaps-bot/reports/review_2026-10-31_1606/report.md",
+  "at": "2026-11-01 17:07",
+  "report": "/home/runner/work/late-recaps-bot/late-recaps-bot/reports/review_2026-11-01_1707/report.md",
   "lessons": {
    "titles": [
     "Put the creator first, then a bet or question in plain verbs. Never put the result in the title, as 'Red Card', 'Copper' and 'Hang On' did.",
@@ -371,113 +389,161 @@
   "length_hint": null,
   "clips": [
    {
+    "title": "Speed Hears Dubstep And Instantly Starts Vibing \ud83d\ude02",
+    "views": 0,
+    "avg_viewed": null,
+    "stayed": null,
+    "verdict": null
+   },
+   {
+    "title": "Kai Cenat Rates Japanese Train Breakfast \ud83c\udf73",
+    "views": 0,
+    "avg_viewed": null,
+    "stayed": null,
+    "verdict": null
+   },
+   {
+    "title": "Speed Meets Two Fans Making Dubstep \ud83c\udfa7\ud83d\ude02",
+    "views": 0,
+    "avg_viewed": null,
+    "stayed": null,
+    "verdict": null
+   },
+   {
+    "title": "Speed Checks Who Really Won His $250,000 Giveaway \ud83d\udcb0",
+    "views": 0,
+    "avg_viewed": null,
+    "stayed": null,
+    "verdict": null
+   },
+   {
     "title": "Speed Takes A Family Photo At His Movie Premiere \ud83d\udcf8",
     "views": 1,
     "avg_viewed": null,
     "stayed": null,
-    "verdict": "Weak: 32h and 1 view. A photo retake is a visual moment with no spoken stake."
+    "verdict": null
    },
    {
     "title": "Speed Won't Stop Waving Until A Stranger Answers \ud83d\udc4b\ud83c\uddee\ud83c\udde9",
     "views": 0,
     "avg_viewed": null,
     "stayed": null,
-    "verdict": "Weak: 32h, 0 views, and it shipped with no hook or context line."
+    "verdict": null
    },
    {
     "title": "Jynxzi Begs His Teammate To Get Inside \ud83d\ude2d",
     "views": 0,
     "avg_viewed": null,
     "stayed": null,
-    "verdict": "Weak: 36h and 0 views. A teammate stalling is a gameplay moment that needs the clip to be funny read aloud."
+    "verdict": null
    },
    {
     "title": "Kai Cenat Can't Believe What Happens In Japan \ud83d\ude31",
     "views": 0,
     "avg_viewed": null,
     "stayed": null,
-    "verdict": "Weak: 36h and 0 views. It has a vague title, no hook and no context line."
+    "verdict": null
    },
    {
     "title": "Speed Gets Invited To Cook Up Dubstep With Frost Children \ud83c\udfa7",
-    "views": 21,
+    "views": 22,
     "avg_viewed": null,
     "stayed": null,
-    "verdict": "Weak: 43h and 21 views (the channel's top clip), but 21 is still noise. It's a duplicate dubstep scene."
+    "verdict": null
    },
    {
     "title": "Speed Argues He's Taller Than Everyone \ud83d\ude2d",
     "views": 0,
     "avg_viewed": null,
     "stayed": null,
-    "verdict": "Weak: 43h and 0 views, but the premise (an argument about height) is the right type of moment."
+    "verdict": null
    },
    {
     "title": "Speed Meets Two Strangers Making Dubstep \ud83c\udfa7\ud83d\ude02",
     "views": 5,
     "avg_viewed": null,
     "stayed": null,
-    "verdict": "Weak: 43h and 5 views, and it's a duplicate of the dubstep scene."
+    "verdict": null
    },
    {
     "title": "Speed Finds His Own Name On The Premiere Wall \ud83d\ude2d",
     "views": 0,
     "avg_viewed": null,
     "stayed": null,
-    "verdict": "Weak: 56h and 0 views. A walk-in and a name on a wall is visual, with no spoken premise."
+    "verdict": null
    },
    {
     "title": "Jynxzi Pushes Through Promised Consort Radahn \ud83d\ude2d",
     "views": 0,
     "avg_viewed": null,
     "stayed": null,
-    "verdict": "Weak: 60h and 0 views. A boss-fight buildup is visual and the title announces the win."
+    "verdict": null
    },
    {
     "title": "Jynxzi Reads Fan Mail About The Art Of Seduction \ud83d\ude2d\ud83d\udcda",
     "views": 0,
     "avg_viewed": null,
     "stayed": null,
-    "verdict": "Stale: 182h and 0 views. The fan mail premise is funny, but the clip is a week old."
+    "verdict": null
    },
    {
     "title": "Kai Cenat Tells Ray To Stay Behind Him In Japan \ud83d\ude2d\u2764\ufe0f\u200d\ud83e\ude79",
     "views": 0,
     "avg_viewed": null,
     "stayed": null,
-    "verdict": "Stale: 187h and 0 views. It's the right kind of premise (Kai and Ray), but a week late."
+    "verdict": null
    },
    {
     "title": "Kai Cenat Meets Japan's Most Popular Dog \ud83d\udc15\ud83d\ude2d",
-    "views": 1,
+    "views": 2,
     "avg_viewed": null,
     "stayed": null,
-    "verdict": "Stale: 191h and 1 view. It's dog trivia with no stake."
+    "verdict": null
    },
    {
     "title": "Jynxzi Calls This Player Copper Off His Name Alone \ud83d\ude2d",
     "views": 3,
     "avg_viewed": null,
     "stayed": null,
-    "verdict": "Stale: 230h and 3 views, but the rank guessing premise is a good series."
+    "verdict": null
    },
    {
     "title": "Speed Gets a Red Card Against Cole Palmer \ud83d\ude2d",
     "views": 15,
     "avg_viewed": null,
     "stayed": null,
-    "verdict": "Stale: 235h and 15 views. It has a real bet and a famous opponent, but the title spoils it."
+    "verdict": null
    },
    {
     "title": "Adin Watches YK Osiris Hang On Against Deshae \ud83d\ude2d\ud83e\udd4a",
     "views": 1,
     "avg_viewed": null,
     "stayed": null,
-    "verdict": "Stale: 238h and 1 view. A clinch is visual and the title gives away the payoff."
+    "verdict": null
    }
   ]
  },
  "own_results": [
+  {
+   "title": "Speed Hears Dubstep And Instantly Starts Vibing \ud83d\ude02",
+   "views": 0,
+   "lift": 0.0
+  },
+  {
+   "title": "Kai Cenat Rates Japanese Train Breakfast \ud83c\udf73",
+   "views": 0,
+   "lift": 0.0
+  },
+  {
+   "title": "Speed Meets Two Fans Making Dubstep \ud83c\udfa7\ud83d\ude02",
+   "views": 0,
+   "lift": 0.0
+  },
+  {
+   "title": "Speed Checks Who Really Won His $250,000 Giveaway \ud83d\udcb0",
+   "views": 0,
+   "lift": 0.0
+  },
   {
    "title": "Speed Takes A Family Photo At His Movie Premiere \ud83d\udcf8",
    "views": 1,
@@ -500,8 +566,8 @@
   },
   {
    "title": "Speed Gets Invited To Cook Up Dubstep With Frost Children \ud83c\udfa7",
-   "views": 21,
-   "lift": 21.0
+   "views": 22,
+   "lift": 22.0
   },
   {
    "title": "Speed Argues He's Taller Than Everyone \ud83d\ude2d",
@@ -535,8 +601,8 @@
   },
   {
    "title": "Kai Cenat Meets Japan's Most Popular Dog \ud83d\udc15\ud83d\ude2d",
-   "views": 1,
-   "lift": 1.0
+   "views": 2,
+   "lift": 2.0
   },
   {
    "title": "Jynxzi Calls This Player Copper Off His Name Alone \ud83d\ude2d",

@@ -605,3 +605,47 @@ Title/description: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/bui
     Kai Cenat Keeps Rakai Out Of The Halloween Party 🎃😭 #kaicenat #rakai #funny #fyp
   TikTok: [3] draft in your TikTok inbox. Open the notification, paste this caption, post:
     Jynxzi Explains Why Hearing Wins In Rainbow Six 🎧 #jynxzi #rainbowsix #fyp
+[0;93m2026-11-01 17:11:08.052558504 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+Done. Report: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/track_2026-11-01_1707.md  (quota used: 2)
+[ishowspeed] reading recent streams/videos
+[kai_cenat] reading recent streams/videos
+[jynxzi] reading recent streams/videos
+[adin_ross] reading recent streams/videos
+[n3on] reading recent streams/videos
+Writing scripts...
+  [1] IShowSpeed at 18:25: writing from captions (164 words)
+  [2] IShowSpeed at 1:58:23: writing from captions (47 words)
+  [3] Kai Cenat at 22:31: writing from captions (102 words)
+Writer claude-code failed (RuntimeError: You've hit your 5-hour limit · resets 9:20pm (UTC)).
+No writer available: using templates (marked draft). See the top of script_agent.py for options.
+Done. Queue: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-11-01_1707/queue.md  (quota used: 51)
+[1] Speed the kick here was personal 🤯
+Downloading 17:51-18:43 of https://www.youtube.com/watch?v=IkhjzYsvCmw
+Transcribing with whisper small.en (first run downloads the model)...
+Re-writing the script from what's actually said in the clip...
+  [1] IShowSpeed at 18:25: writing from transcript (79 words)
+Writer claude-code failed (RuntimeError: You've hit your 5-hour limit · resets 9:20pm (UTC)).
+No writer available: using templates (marked draft). See the top of script_agent.py for options.
+Done. Video: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-11-01_1707/clips/01_IkhjzYsvCmw_36.mp4
+Title/description: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-11-01_1707/clips/01_IkhjzYsvCmw_36.txt
+  held, not posted: script agent: only a fill-in template, no writer ran
+[2] Speed First streamer to ever do a IRL mo 🤯
+Downloading 1:57:49-1:58:41 of https://www.youtube.com/watch?v=IkhjzYsvCmw
+Transcribing with whisper small.en (first run downloads the model)...
+Re-writing the script from what's actually said in the clip...
+  [2] IShowSpeed at 1:58:23: writing from transcript (25 words)
+Writer claude-code failed (RuntimeError: You've hit your 5-hour limit · resets 9:20pm (UTC)).
+No writer available: using templates (marked draft). See the top of script_agent.py for options.
+Done. Video: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-11-01_1707/clips/02_IkhjzYsvCmw_236.mp4
+Title/description: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-11-01_1707/clips/02_IkhjzYsvCmw_236.txt
+  held, not posted: script agent: only a fill-in template, no writer ran
+[3] Kai Cenat duke. Only saw da as 🤯
+Downloading 21:57-22:49 of https://www.youtube.com/watch?v=R6gKMvetXUU
+Transcribing with whisper small.en (first run downloads the model)...
+Re-writing the script from what's actually said in the clip...
+  [3] Kai Cenat at 22:31: writing from transcript (34 words)
+Writer claude-code failed (RuntimeError: You've hit your 5-hour limit · resets 9:20pm (UTC)).
+No writer available: using templates (marked draft). See the top of script_agent.py for options.
+Done. Video: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-11-01_1707/clips/03_R6gKMvetXUU_45.mp4
+Title/description: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-11-01_1707/clips/03_R6gKMvetXUU_45.txt
+  held, not posted: script agent: only a fill-in template, no writer ran
