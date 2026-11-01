@@ -649,3 +649,51 @@ No writer available: using templates (marked draft). See the top of script_agent
 Done. Video: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-11-01_1707/clips/03_R6gKMvetXUU_45.mp4
 Title/description: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-11-01_1707/clips/03_R6gKMvetXUU_45.txt
   held, not posted: script agent: only a fill-in template, no writer ran
+[0;93m2026-11-01 21:47:23.671225841 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+Done. Report: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/track_2026-11-01_2142.md  (quota used: 2)
+[ishowspeed] reading recent streams/videos
+[kai_cenat] reading recent streams/videos
+[jynxzi] reading recent streams/videos
+[adin_ross] reading recent streams/videos
+[n3on] reading recent streams/videos
+Writing scripts...
+  [1] IShowSpeed at 31:40: writing from captions (88 words)
+  [2] IShowSpeed at 1:50:09: writing from captions (90 words)
+  [3] Kai Cenat at 1:41: writing from captions (116 words)
+Scripts written by claude-code.
+Done. Queue: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-11-01_2142/queue.md  (quota used: 51)
+[1] Speed Refuses To Risk It As Spider-Man 🕷️
+Downloading 31:06-31:58 of https://www.youtube.com/watch?v=IkhjzYsvCmw
+Transcribing with whisper small.en (first run downloads the model)...
+Re-writing the script from what's actually said in the clip...
+  [1] IShowSpeed at 31:40: writing from transcript (60 words)
+Scripts written by claude-code.
+edge-tts failed (NoAudioReceived); trying a local voice.
+No text-to-speech available (pip install edge-tts): clip will have no narrator.
+Done. Video: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-11-01_2142/clips/01_IkhjzYsvCmw_63.mp4
+Title/description: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-11-01_2142/clips/01_IkhjzYsvCmw_63.txt
+  uploaded https://youtube.com/shorts/Ef7SUJlTI_8 (public now)
+[2] Speed Chases Down Miles' Uncle As Spider-Man 🕷️
+Downloading 1:49:35-1:50:27 of https://www.youtube.com/watch?v=IkhjzYsvCmw
+Transcribing with whisper small.en (first run downloads the model)...
+Re-writing the script from what's actually said in the clip...
+  [2] IShowSpeed at 1:50:09: writing from transcript (16 words)
+Scripts written by claude-code.
+Done. Video: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-11-01_2142/clips/02_IkhjzYsvCmw_220.mp4
+Title/description: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-11-01_2142/clips/02_IkhjzYsvCmw_220.txt
+  uploaded https://youtube.com/shorts/P2M-AXHJlOw (goes public Mon 02:00 AM ET)
+[3] Kai Cenat Gives A Tour Of The AMP House Party 🎃
+Downloading 1:07-1:59 of https://www.youtube.com/watch?v=R6gKMvetXUU
+Transcribing with whisper small.en (first run downloads the model)...
+Re-writing the script from what's actually said in the clip...
+  [3] Kai Cenat at 1:41: writing from transcript (52 words)
+Scripts written by claude-code.
+Done. Video: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-11-01_2142/clips/03_R6gKMvetXUU_3.mp4
+Title/description: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-11-01_2142/clips/03_R6gKMvetXUU_3.txt
+  uploaded https://youtube.com/shorts/EL06wqyVyBs (goes public Sun 09:00 PM ET)
+  TikTok: [1] draft in your TikTok inbox. Open the notification, paste this caption, post:
+    Speed Won't Go Down There In Spider-Man Suit 🕷️ #ishowspeed #speed #fyp
+  TikTok: [2] draft in your TikTok inbox. Open the notification, paste this caption, post:
+    Speed Spots Someone In The Crowd And Chases Them 🕷️😭 #ishowspeed #speed #fyp
+  TikTok: [3] draft in your TikTok inbox. Open the notification, paste this caption, post:
+    Kai Cenat Shows Off The AMP House Halloween Party 🎃 #kaicenat #funny #fyp
