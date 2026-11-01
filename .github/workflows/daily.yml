@@ -5,6 +5,7 @@ name: Late Recaps daily
 on:
   schedule:
     - cron: "17 11 * * *"   # ~7 AM Eastern; GitHub often starts scheduled runs hours late, and off-the-hour minutes are delayed less
+    - cron: "47 17 * * *"   # retry: only runs if nothing was posted yet today (e.g. the Claude plan limit was hit)
   workflow_dispatch:
 
 concurrency: daily
@@ -35,7 +36,8 @@ jobs:
       - name: Skip if today's clips are already out   # a late scheduled run after a manual one shouldn't double-post
         id: today
         run: |
-          if [ "${{ github.event_name }}" = schedule ] && git log -1 --format=%s | grep -q "Daily run $(date -u +%F)"; then
+          # only a run that actually uploaded counts; "Daily run DATE (nothing posted)" lets the retry go ahead
+          if [ "${{ github.event_name }}" = schedule ] && git log -20 --since="36 hours ago" --format=%s | grep -qx "Daily run $(date -u +%F)"; then
             echo "Already ran today; skipping."; echo "skip=true" >> "$GITHUB_OUTPUT"
           fi
 
@@ -141,7 +143,9 @@ jobs:
           git config user.name "late-recaps-bot"
           git config user.email "late-recaps-bot@users.noreply.github.com"
           git add -A reports builder.log review.log
-          git diff --cached --quiet || git commit -qm "Daily run $(date -u +%F)"
+          msg="Daily run $(date -u +%F)"
+          grep -q "  uploaded https://youtube.com/shorts/" "$RUNNER_TEMP/run.log" 2>/dev/null || msg="$msg (nothing posted)"
+          git diff --cached --quiet || git commit -qm "$msg"
           git push -q || (git pull -q --rebase && git push -q)
 
       - name: Warn if YouTube cookies expired   # fails the run so GitHub emails you
