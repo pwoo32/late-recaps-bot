@@ -385,6 +385,29 @@ def free_scripts(clips, pb, niche):
     return to_scripts(out, clips, pb, "free")
 
 
+REACTION_WORDS = set("""believe cant can't loses lost reacts reaction gets got shocked speechless crashes crash laughing laugh
+finally again after when just what this that than with from into over about never ever every insane crazy wild
+moment moments reacts tries trying tried hears sees watches finds realizes realised realizes cant couldn't won't
+stop stops leaves left goes going makes made takes took asks asked tells told says said gets meets meet face
+first time last back down without while still really actually completely totally instantly""".split())
+
+
+def ungrounded(clip, script):
+    """True when a model's title rests on nothing: the clip has almost no words to go on, or the title brings in two
+    or more things (names, events) that appear nowhere in the stream title, comments or transcript."""
+    transcript = clip.get("transcript") or ""
+    source = " ".join([transcript, clip.get("video_title", ""), clip.get("creator", "")] + (clip.get("quotes") or [])
+                      + src_of(clip).get("aliases", [])).lower()
+    words = re.findall(r"[a-z][a-z']{3,}", (script.get("title") or "").lower())
+    invented = [w for w in words if w not in REACTION_WORDS and w[:5] not in source]  # "snapping" ~ "snapped"
+    thin = len(transcript.split()) < 25 and max((len(q.split()) for q in clip.get("quotes") or []), default=0) < 8
+    if thin or len(invented) >= 2:
+        print(f"  [{clip.get('id')}] model title \"{script.get('title')}\" isn't backed by what's said"
+              + (f" ({', '.join(invented)})" if invented else " (too little to go on)") + "; using the free writer")
+        return True
+    return False
+
+
 def write_scripts(clips, pb, niche, writer=None):
     if writer == "template":
         return [template_script(c, pb) for c in clips]
@@ -403,8 +426,8 @@ def write_scripts(clips, pb, niche, writer=None):
         if out:
             print(f"Scripts written by {name}.")
             scripts = to_scripts(out, clips, pb, name)
-            missing = [i for i, s in enumerate(scripts) if s.get("draft")]
-            if missing:  # the model skipped some clips: the free writer fills those in
+            missing = [i for i, s in enumerate(scripts) if s.get("draft") or ungrounded(clips[i], s)]
+            if missing:  # the model skipped or made up some clips: the free writer (which never invents) redoes those
                 free = free_scripts([clips[i] for i in missing], pb, niche)
                 for i, f in zip(missing, free):
                     scripts[i] = f
