@@ -46,6 +46,7 @@ from agent import REPORTS_DIR, iso_duration_seconds
 from channel_agent import ChannelYouTube, analyze_channel, study, video_record
 from niches import NICHES
 from sources import SOURCES
+import council
 import live_moments as LM
 import script_agent
 import tuner
@@ -468,14 +469,27 @@ def cmd_daily(args, yt=None, state=None):
             print("Nothing is spiking right now.")
             return None
 
-    picks, per_source = [], Counter()
-    for m in ranked:  # max 2 per creator a day so the channel isn't one-note (3 when they're blowing up)
+    def allowed(m, picks):  # max 2 per creator a day so the channel isn't one-note (3 when they're blowing up)
         cap = 3 if change.get(m["source"], 1) >= 1.5 else 2
-        if per_source[m["source"]] < cap and all(m["video_id"] != p["video_id"] or abs(m["t"] - p["t"]) > 90 for p in picks):
-            picks.append(m)
-            per_source[m["source"]] += 1
-        if len(picks) == args.count:
+        return (sum(p["source"] == m["source"] for p in picks) < cap and
+                all(m["video_id"] != p["video_id"] or abs(m["t"] - p["t"]) > 90 for p in picks))
+
+    # Every agent weighs in on the top candidates; a free local model chairs and picks (council.py).
+    out_dir = BUILDER_DIR / f"{'spike' if spike else 'daily'}_{now.strftime('%Y-%m-%d_%H%M')}"
+    out_dir.mkdir(parents=True, exist_ok=True)
+    shortlist = []
+    for m in ranked:  # a few per creator, so the meeting sees the whole field, not one stream
+        if sum(x["source"] == m["source"] for x in shortlist) < 4 and allowed(m, [x for x in shortlist if x["video_id"] == m["video_id"]]):
+            shortlist.append(m)
+        if len(shortlist) >= 16:
             break
+    print(f"Clip council: {len(shortlist)} candidates, every agent votes...")
+    ctx = {"state": state, "pb": pb, "demand": demand, "change": change, "words": trend_words(videos, niche),
+           "hot": script_agent.trending(niche, [{"source": k, "creator": s["name"]} for k, s in SOURCES.items()])[1],
+           "asks": council.audience_asks(yt, state)}
+    picks = council.decide(shortlist, args.count, ctx, cap=allowed, use_chair=not spike, out_dir=out_dir)
+    for m in picks:
+        print(f"  picked {SOURCES[m['source']]['short']} at {fmt_ts(m['t'])} (council {m['council']:.2f}): {m['council_why'][:120]}")
     if not picks:
         sys.exit(f"No moments found in the last {args.hours}h. Try --hours 168, or add sources in sources.py.")
 
@@ -513,19 +527,18 @@ def cmd_daily(args, yt=None, state=None):
             "url": m["url"], "moment": fmt_ts(m["t"]), "start": start, "end": end,
             "rank": m["rank"], "signal": signal or "most replayed", "signals": m.get("signals", []),
             "quotes": m["quotes"][:3], "stream_age_h": m["age_h"], "spike": spike,
-            "recipe": recipe,
+            "recipe": recipe, "council": {k: v["score"] for k, v in m.get("votes", {}).items()},
+            "council_why": m.get("council_why"),
             "post_utc": when.strftime("%Y-%m-%d %H:%M"), "post_local": when.astimezone(LOCAL_TZ).strftime("%a %I:%M %p ET"),
             **meta, "description": description(m, meta, pb), "key": m["key"],
             "permission": SOURCES[m["source"]]["permission"],
         }
         queue.append(clip)
         state["queued"][m["key"]] = {"title": clip["title"], "source": m["source"], "post_utc": clip["post_utc"],
-                                     "recipe": recipe}
+                                     "recipe": recipe, "council": clip["council"]}
         state["used_moments"].append(m["key"])
     state["used_moments"] = state["used_moments"][-500:]
 
-    out_dir = BUILDER_DIR / f"{'spike' if spike else 'daily'}_{now.strftime('%Y-%m-%d_%H%M')}"
-    out_dir.mkdir(parents=True, exist_ok=True)
     (out_dir / "queue.json").write_text(json.dumps(queue, indent=1, ensure_ascii=False), encoding="utf-8")
     print("Writing scripts...")
     script_agent.script_queue(out_dir, queue)
@@ -553,6 +566,7 @@ def write_daily(out_dir, queue, ranked, demand, niche, pb, trend_dir, study_dir,
               f"- **Source:** {c['creator']}, [{c['video_title']}]({c['url']}) at **{c['moment']}** "
               f"(stream is {c['stream_age_h']:.0f}h old). Cut {fmt_ts(c['start'])} to {fmt_ts(c['end'])}.",
               f"- **Why:** {c['signal']}. Viewers said: " + " / ".join(f"\"{q}\"" for q in c["quotes"]),
+              f"- **Council:** {c.get('council_why') or '-'} (every agent's notes in council.md)",
               f"- **On-screen hook:** {c['hook']}",
               f"- **Context line (first 3s):** {c['context']}",
               f"- **Narrator take (AI voice, off unless --narrate):** {c['take']}",
