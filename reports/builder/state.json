@@ -1,14 +1,14 @@
 {
  "source_weight": {
-  "jynxzi": 0.35,
-  "kai_cenat": 0.41,
-  "ishowspeed": 0.83
+  "jynxzi": 0.33,
+  "kai_cenat": 0.37,
+  "ishowspeed": 0.7
  },
  "slot_weight": {
-  "2": 1.17,
-  "21": 1.27,
-  "8": 0.45,
-  "4": 0.45
+  "2": 0.9,
+  "21": 0.88,
+  "8": 0.67,
+  "4": 0.39
  },
  "used_moments": [
   "L6S9Vb3RLy4@186",
@@ -68,7 +68,10 @@
   "IkhjzYsvCmw@220",
   "R6gKMvetXUU@3",
   "SZA_mBnRNNc@110",
-  "SZA_mBnRNNc@39"
+  "SZA_mBnRNNc@39",
+  "SZA_mBnRNNc@261",
+  "SZA_mBnRNNc@46",
+  "IkhjzYsvCmw@28"
  ],
  "queued": {
   "L6S9Vb3RLy4@186": {
@@ -400,6 +403,51 @@
     "layout": "face34",
     "test": "beat"
    }
+  },
+  "SZA_mBnRNNc@261": {
+   "title": "Kai Cenat Can't Believe Chat Failed Again \ud83d\ude2d",
+   "source": "kai_cenat",
+   "post_utc": "2026-11-03 08:00",
+   "recipe": {
+    "length": 30,
+    "punch": 0.14,
+    "beat": "normal",
+    "caption_words": 3,
+    "gap": 0.6,
+    "layout": "face34",
+    "test": null
+   },
+   "video_id": "L9Xb6nIoGXc"
+  },
+  "SZA_mBnRNNc@46": {
+   "title": "Kai Cenat Can't Believe Pooh Shiesty Bro Snapping \ud83e\uddd0\ud83d\ude2d",
+   "source": "kai_cenat",
+   "post_utc": "2026-11-02 22:00",
+   "recipe": {
+    "length": 30,
+    "punch": 0.14,
+    "beat": "normal",
+    "caption_words": 2,
+    "gap": 0.6,
+    "layout": "face34",
+    "test": "caption_words"
+   },
+   "video_id": "RPppa2R0pKc"
+  },
+  "IkhjzYsvCmw@28": {
+   "title": "Speed Can't Believe Vinny Just Robbed His Uncle's Store \ud83d\ude2d",
+   "source": "ishowspeed",
+   "post_utc": "2026-11-03 02:00",
+   "recipe": {
+    "length": 30,
+    "punch": 0.14,
+    "beat": "normal",
+    "caption_words": 3,
+    "gap": 1.0,
+    "layout": "face34",
+    "test": "gap"
+   },
+   "video_id": "ixvja1AyEbw"
   }
  },
  "channel": "UCbK9EejOk5UVzI_l8F3f8kA",
@@ -408,8 +456,8 @@
   "@TheDiaryOfACEO": "UCGq-a57w-aPwyi3pW7XLiHw"
  },
  "review": {
-  "at": "2026-11-01 21:42",
-  "report": "/home/runner/work/late-recaps-bot/late-recaps-bot/reports/review_2026-11-01_2142/report.md",
+  "at": "2026-11-02 19:43",
+  "report": "/home/runner/work/late-recaps-bot/late-recaps-bot/reports/review_2026-11-02_1943/report.md",
   "lessons": {
    "titles": [
     "Creator name first, then a bet or question in plain verbs, and never the result. Add a named guest or celebrity when one exists.",
@@ -437,148 +485,158 @@
   "length_hint": null,
   "clips": [
    {
+    "title": "Jynxzi Explains Why Hearing Wins In Rainbow Six \ud83c\udfa7",
+    "views": 2,
+    "avg_viewed": null,
+    "stayed": null,
+    "verdict": null
+   },
+   {
+    "title": "Kai Cenat Keeps Rakai Out Of The Halloween Party \ud83c\udf83\ud83d\ude2d",
+    "views": 0,
+    "avg_viewed": null,
+    "stayed": null,
+    "verdict": null
+   },
+   {
     "title": "Kai Cenat Tells A Guest He's A Rose Boy \ud83c\udf39\ud83d\ude2d",
     "views": 0,
     "avg_viewed": null,
     "stayed": null,
-    "verdict": "Too early (25h); watch 3s retention, because the nickname reveal needs a fast setup."
+    "verdict": null
    },
    {
     "title": "Speed Hears Dubstep And Instantly Starts Vibing \ud83d\ude02",
-    "views": 0,
+    "views": 1,
     "avg_viewed": null,
     "stayed": null,
-    "verdict": "Weak: it is the second dubstep cut of this scene and the clip is mostly visual."
+    "verdict": null
    },
    {
     "title": "Kai Cenat Rates Japanese Train Breakfast \ud83c\udf73",
     "views": 1,
     "avg_viewed": null,
     "stayed": null,
-    "verdict": "Weak: a food rating has no conflict and 44h of analytics show nothing."
+    "verdict": null
    },
    {
     "title": "Speed Meets Two Fans Making Dubstep \ud83c\udfa7\ud83d\ude02",
     "views": 0,
     "avg_viewed": null,
     "stayed": null,
-    "verdict": "Weak: a duplicate dubstep cut, and it was private earlier."
+    "verdict": null
    },
    {
     "title": "Speed Checks Who Really Won His $250,000 Giveaway \ud83d\udcb0",
     "views": 0,
     "avg_viewed": null,
     "stayed": null,
-    "verdict": "Promising premise ($250k, who won), but the title doesn't carry it."
+    "verdict": null
    },
    {
     "title": "Speed Takes A Family Photo At His Movie Premiere \ud83d\udcf8",
     "views": 1,
     "avg_viewed": null,
     "stayed": null,
-    "verdict": "Weak: a family photo is visual and emotional, with no one-line premise."
+    "verdict": null
    },
    {
     "title": "Speed Won't Stop Waving Until A Stranger Answers \ud83d\udc4b\ud83c\uddee\ud83c\udde9",
     "views": 0,
     "avg_viewed": null,
     "stayed": null,
-    "verdict": "Weak: it shipped with no hook or context line and has no named person."
+    "verdict": null
    },
    {
     "title": "Jynxzi Begs His Teammate To Get Inside \ud83d\ude2d",
     "views": 0,
     "avg_viewed": null,
     "stayed": null,
-    "verdict": "Weak: teammate stalling is a gameplay buildup, with a vague 'who' in the title."
+    "verdict": null
    },
    {
     "title": "Kai Cenat Can't Believe What Happens In Japan \ud83d\ude31",
     "views": 0,
     "avg_viewed": null,
     "stayed": null,
-    "verdict": "Weak: it shipped with no hook or context, and the title is a vague clickbait promise."
+    "verdict": null
    },
    {
     "title": "Speed Gets Invited To Cook Up Dubstep With Frost Children \ud83c\udfa7",
-    "views": 22,
+    "views": 24,
     "avg_viewed": null,
     "stayed": null,
-    "verdict": "Best so far at 22 views, which is still noise but suggests that naming the guest helps."
+    "verdict": null
    },
    {
     "title": "Speed Argues He's Taller Than Everyone \ud83d\ude2d",
     "views": 0,
     "avg_viewed": null,
     "stayed": null,
-    "verdict": "Good premise (a height argument) but 0 views at 73h."
+    "verdict": null
    },
    {
     "title": "Speed Meets Two Strangers Making Dubstep \ud83c\udfa7\ud83d\ude02",
-    "views": 5,
+    "views": 7,
     "avg_viewed": null,
     "stayed": null,
-    "verdict": "Weak: a duplicate dubstep cut with 5 views."
+    "verdict": null
    },
    {
     "title": "Speed Finds His Own Name On The Premiere Wall \ud83d\ude2d",
     "views": 0,
     "avg_viewed": null,
     "stayed": null,
-    "verdict": "Weak: a walk-in and name search is visual and offers no premise."
+    "verdict": null
    },
    {
     "title": "Jynxzi Pushes Through Promised Consort Radahn \ud83d\ude2d",
     "views": 0,
     "avg_viewed": null,
     "stayed": null,
-    "verdict": "Weak: a boss-fight buildup, which earlier lessons say to skip."
+    "verdict": null
    },
    {
     "title": "Jynxzi Reads Fan Mail About The Art Of Seduction \ud83d\ude2d\ud83d\udcda",
     "views": 0,
     "avg_viewed": null,
     "stayed": null,
-    "verdict": "Dead at 212h with 0 views. Don't spend time on it."
+    "verdict": null
    },
    {
     "title": "Kai Cenat Tells Ray To Stay Behind Him In Japan \ud83d\ude2d\u2764\ufe0f\u200d\ud83e\ude79",
     "views": 0,
     "avg_viewed": null,
     "stayed": null,
-    "verdict": "Dead at 217h; Kai plus Ray is the right pairing, but the clip is a crowd walk."
+    "verdict": null
    },
    {
     "title": "Kai Cenat Meets Japan's Most Popular Dog \ud83d\udc15\ud83d\ude2d",
     "views": 2,
     "avg_viewed": null,
     "stayed": null,
-    "verdict": "Dead at 221h with 2 views; a dog clip is skipped by the rules."
+    "verdict": null
    },
    {
     "title": "Jynxzi Calls This Player Copper Off His Name Alone \ud83d\ude2d",
     "views": 3,
     "avg_viewed": null,
     "stayed": null,
-    "verdict": "Dead at 260h with 3 views, but the rank guessing premise is a good series."
-   },
-   {
-    "title": "Speed Gets a Red Card Against Cole Palmer \ud83d\ude2d",
-    "views": 15,
-    "avg_viewed": null,
-    "stayed": null,
-    "verdict": "Dead at 265h with 15 views. The premise was strong but the title spoiled it."
-   },
-   {
-    "title": "Adin Watches YK Osiris Hang On Against Deshae \ud83d\ude2d\ud83e\udd4a",
-    "views": 1,
-    "avg_viewed": null,
-    "stayed": null,
-    "verdict": "Dead at 267h with 1 view; boxing clinches are visual."
+    "verdict": null
    }
   ]
  },
  "own_results": [
+  {
+   "title": "Jynxzi Explains Why Hearing Wins In Rainbow Six \ud83c\udfa7",
+   "views": 2,
+   "lift": 2.0
+  },
+  {
+   "title": "Kai Cenat Keeps Rakai Out Of The Halloween Party \ud83c\udf83\ud83d\ude2d",
+   "views": 0,
+   "lift": 0.0
+  },
   {
    "title": "Kai Cenat Tells A Guest He's A Rose Boy \ud83c\udf39\ud83d\ude2d",
    "views": 0,
@@ -586,8 +644,8 @@
   },
   {
    "title": "Speed Hears Dubstep And Instantly Starts Vibing \ud83d\ude02",
-   "views": 0,
-   "lift": 0.0
+   "views": 1,
+   "lift": 1.0
   },
   {
    "title": "Kai Cenat Rates Japanese Train Breakfast \ud83c\udf73",
@@ -626,8 +684,8 @@
   },
   {
    "title": "Speed Gets Invited To Cook Up Dubstep With Frost Children \ud83c\udfa7",
-   "views": 22,
-   "lift": 22.0
+   "views": 24,
+   "lift": 24.0
   },
   {
    "title": "Speed Argues He's Taller Than Everyone \ud83d\ude2d",
@@ -636,8 +694,8 @@
   },
   {
    "title": "Speed Meets Two Strangers Making Dubstep \ud83c\udfa7\ud83d\ude02",
-   "views": 5,
-   "lift": 5.0
+   "views": 7,
+   "lift": 7.0
   },
   {
    "title": "Speed Finds His Own Name On The Premiere Wall \ud83d\ude2d",
@@ -825,7 +883,8 @@
      "w"
     ]
    }
-  ]
+  ],
+  "xyeuADJsOw4": []
  },
  "edit": {
   "stats": {}

@@ -1,0 +1,125 @@
+[
+ {
+  "id": 1,
+  "source": "kai_cenat",
+  "creator": "Kai Cenat",
+  "platform": "youtube",
+  "video_id": "SZA_mBnRNNc",
+  "video_title": "🎃AMP HALLOWEEN PARTY🎃",
+  "url": "https://www.youtube.com/watch?v=SZA_mBnRNNc&t=7834s",
+  "moment": "2:10:34",
+  "start": 7814,
+  "end": 7844,
+  "rank": 3.45,
+  "signal": "1 timestamp comments, 2 likes; chat went 2.5x its normal pace",
+  "signals": [
+   "comments",
+   "chat spike"
+  ],
+  "quotes": [],
+  "stream_age_h": 63.8,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": null
+  },
+  "post_utc": "2026-11-03 08:00",
+  "post_local": "Tue 03:00 AM ET",
+  "title": "Kai Cenat moment 🤯",
+  "hook": "MOMENT",
+  "context": "Kai Cenat live, 🎃AMP HALLOWEEN PARTY🎃",
+  "take": "Kai Cenat had no idea what was about to happen.",
+  "draft": true,
+  "description": "Kai Cenat live, 🎃AMP HALLOWEEN PARTY🎃\n\nFull stream by Kai Cenat: https://www.youtube.com/watch?v=SZA_mBnRNNc&t=7834s\nGo support Kai Cenat, all credit to them.\n\n#kaicenat #kai #ishowspeed #edit #shorts",
+  "key": "SZA_mBnRNNc@261",
+  "permission": "fan clipping is widespread and tolerated; no official paid program found (Oct 2026)"
+ },
+ {
+  "id": 2,
+  "source": "kai_cenat",
+  "creator": "Kai Cenat",
+  "platform": "youtube",
+  "video_id": "SZA_mBnRNNc",
+  "video_title": "🎃AMP HALLOWEEN PARTY🎃",
+  "url": "https://www.youtube.com/watch?v=SZA_mBnRNNc&t=1388s",
+  "moment": "23:08",
+  "start": 1368,
+  "end": 1398,
+  "rank": 3.37,
+  "signal": "1 timestamp comments, 0 likes; chat went 2.8x its normal pace",
+  "signals": [
+   "comments",
+   "chat spike"
+  ],
+  "quotes": [
+   "I’m too lock in on POOH SHIESTY BRO SNAPPING"
+  ],
+  "stream_age_h": 63.8,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 2,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": "caption_words"
+  },
+  "post_utc": "2026-11-02 22:00",
+  "post_local": "Mon 05:00 PM ET",
+  "title": "Kai Cenat I’m too lock in on POOH SHIESTY 🤯",
+  "hook": "I’M TOO LOCK IN ON POOH SHIESTY SNAPPING",
+  "context": "Kai Cenat live, 🎃AMP HALLOWEEN PARTY🎃",
+  "take": "Kai Cenat had no idea what was about to happen.",
+  "draft": true,
+  "description": "Kai Cenat live, 🎃AMP HALLOWEEN PARTY🎃\n\nFull stream by Kai Cenat: https://www.youtube.com/watch?v=SZA_mBnRNNc&t=1388s\nGo support Kai Cenat, all credit to them.\n\n#kaicenat #kai #ishowspeed #edit #shorts",
+  "key": "SZA_mBnRNNc@46",
+  "permission": "fan clipping is widespread and tolerated; no official paid program found (Oct 2026)"
+ },
+ {
+  "id": 3,
+  "source": "ishowspeed",
+  "creator": "IShowSpeed",
+  "platform": "youtube",
+  "video_id": "IkhjzYsvCmw",
+  "video_title": "HALLOWEEN SPIDER-MAN SPEED-VERSE IRL STREAM 🎃🕷",
+  "url": "https://www.youtube.com/watch?v=IkhjzYsvCmw&t=858s",
+  "moment": "14:18",
+  "start": 838,
+  "end": 868,
+  "rank": 2.89,
+  "signal": "1 timestamp comments, 7 likes",
+  "signals": [
+   "comments"
+  ],
+  "quotes": [
+   "visited my uncles store !!"
+  ],
+  "stream_age_h": 44.2,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 1.0,
+   "layout": "face34",
+   "test": "gap"
+  },
+  "post_utc": "2026-11-03 02:00",
+  "post_local": "Mon 09:00 PM ET",
+  "title": "Speed visited my uncles store 🤯",
+  "hook": "VISITED MY UNCLES STORE",
+  "context": "IShowSpeed live, HALLOWEEN SPIDER-MAN SPEED-VERSE IRL STREAM 🎃🕷",
+  "take": "Speed really thought this was a good idea.",
+  "draft": true,
+  "description": "IShowSpeed live, HALLOWEEN SPIDER-MAN SPEED-VERSE IRL STREAM 🎃🕷\n\nFull stream by IShowSpeed: https://www.youtube.com/watch?v=IkhjzYsvCmw&t=858s\nGo support IShowSpeed, all credit to them.\n\n#ishowspeed #speed #edit #shorts #kaicenat",
+  "key": "IkhjzYsvCmw@28",
+  "permission": "fan clipping is widespread and tolerated; no official paid program found (Oct 2026)"
+ }
+]

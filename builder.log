@@ -729,3 +729,66 @@ Done. Queue: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/d
 [adin_ross] reading recent streams/videos
 [n3on] reading recent streams/videos
 Nothing is spiking right now.
+[streamer] searching: streamer clips
+[streamer] searching: kai cenat
+[streamer] searching: ishowspeed
+[streamer] searching: twitch clips
+Fetching stats for 189 videos
+Fetching subscriber counts for 92 channels
+Done. Report: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/2026-11-02_1943/report.md
+[0;93m2026-11-02 19:56:13.957585979 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+Done. Report: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/track_2026-11-02_1943.md  (quota used: 2)
+[ishowspeed] reading recent streams/videos
+  reading the room on "HALLOWEEN SPIDER-MAN SPEED-VERSE IRL STREAM 🎃🕷" (chat replay, most replayed)
+[kai_cenat] reading recent streams/videos
+  reading the room on "🎃AMP HALLOWEEN PARTY🎃" (chat replay, most replayed)
+    6 chat spikes
+[jynxzi] reading recent streams/videos
+  reading the room on "SPECTACULAR SUNDAY STREAM" (chat replay, most replayed)
+  reading the room on "HAPPY HALLOWEEN + JYNXZI CUP LATER" (chat replay, most replayed)
+[adin_ross] reading recent streams/videos
+[n3on] reading recent streams/videos
+Writing scripts...
+  [1] Kai Cenat at 2:10:34: writing from comments
+  [2] Kai Cenat at 23:08: writing from comments
+  [3] IShowSpeed at 14:18: writing from captions (31 words)
+Scripts written by ollama.
+Done. Queue: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-11-02_1943/queue.md  (quota used: 53)
+[1] Kai Cenat Is No Longer Slapping His Cameraman! 😭❤️‍🩹
+Downloading 2:10:14-2:10:44 of https://www.youtube.com/watch?v=SZA_mBnRNNc
+Transcribing with whisper small.en (first run downloads the model)...
+Re-writing the script from what's actually said in the clip...
+  [1] Kai Cenat at 2:10:34: writing from transcript (41 words)
+Scripts written by ollama.
+Cut 10.9s of dead air (7 jump cuts).
+Framing on the face at 94% across.
+Done. Video: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-11-02_1943/clips/01_SZA_mBnRNNc_261.mp4
+Title/description: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-11-02_1943/clips/01_SZA_mBnRNNc_261.txt
+  uploaded https://youtube.com/shorts/L9Xb6nIoGXc (goes public Tue 03:00 AM ET)
+[2] Kai Cenat Realizes POOH SHIESTY Bro Snapped Him 🤦‍♂️
+Downloading 22:48-23:18 of https://www.youtube.com/watch?v=SZA_mBnRNNc
+Transcribing with whisper small.en (first run downloads the model)...
+Re-writing the script from what's actually said in the clip...
+  [2] Kai Cenat at 23:08: writing from transcript (85 words)
+Scripts written by ollama.
+Cut 3.6s of dead air (2 jump cuts).
+Framing on the face at 35% across.
+Done. Video: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-11-02_1943/clips/02_SZA_mBnRNNc_46.mp4
+Title/description: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-11-02_1943/clips/02_SZA_mBnRNNc_46.txt
+  uploaded https://youtube.com/shorts/RPppa2R0pKc (goes public Mon 05:00 PM ET)
+[3] Speed Asks Did "What Are You Doing Here, Man?" 😱
+Downloading 13:58-14:28 of https://www.youtube.com/watch?v=IkhjzYsvCmw
+Transcribing with whisper small.en (first run downloads the model)...
+Re-writing the script from what's actually said in the clip...
+  [3] IShowSpeed at 14:18: writing from transcript (8 words)
+Scripts written by ollama.
+Framing on the face at 43% across.
+Done. Video: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-11-02_1943/clips/03_IkhjzYsvCmw_28.mp4
+Title/description: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-11-02_1943/clips/03_IkhjzYsvCmw_28.txt
+  uploaded https://youtube.com/shorts/ixvja1AyEbw (goes public Mon 09:00 PM ET)
+  TikTok: [1] draft in your TikTok inbox. Open the notification, paste this caption, post:
+    Kai Cenat Can't Believe Chat Failed Again 😭 #kaicenat #halloweenparty #chatfailure #fyp
+  TikTok: [2] draft in your TikTok inbox. Open the notification, paste this caption, post:
+    Kai Cenat Can't Believe Pooh Shiesty Bro Snapping 🧐😭 #kaicenat #ishowspeed #fyp
+  TikTok: [3] draft in your TikTok inbox. Open the notification, paste this caption, post:
+    Speed Can't Believe Vinny Just Robbed His Uncle's Store 😭 #ishowspeed #halloween #fyp

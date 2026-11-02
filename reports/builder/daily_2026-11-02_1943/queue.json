@@ -1,0 +1,209 @@
+[
+ {
+  "id": 1,
+  "source": "kai_cenat",
+  "creator": "Kai Cenat",
+  "platform": "youtube",
+  "video_id": "SZA_mBnRNNc",
+  "video_title": "🎃AMP HALLOWEEN PARTY🎃",
+  "url": "https://www.youtube.com/watch?v=SZA_mBnRNNc&t=7834s",
+  "moment": "2:10:34",
+  "start": 7814,
+  "end": 7844,
+  "rank": 3.45,
+  "signal": "1 timestamp comments, 2 likes; chat went 2.5x its normal pace",
+  "signals": [
+   "comments",
+   "chat spike"
+  ],
+  "quotes": [],
+  "stream_age_h": 63.8,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": null
+  },
+  "post_utc": "2026-11-03 08:00",
+  "post_local": "Tue 03:00 AM ET",
+  "title": "Kai Cenat Can't Believe Chat Failed Again 😭",
+  "hook": "CHAT NOT WORKING?",
+  "context": "Kai Cenat Tries To Use Chat During Halloween Party",
+  "take": "Chat's not cooperating, Kai Cenat's losing it!",
+  "draft": false,
+  "description": "Kai Cenat struggles with the chat during his Halloween party.\n\nFull stream by Kai Cenat: https://www.youtube.com/watch?v=SZA_mBnRNNc&t=7834s\nGo support Kai Cenat, all credit to them.\n\n#kaicenat #halloweenparty #chatfailure #kai #shorts",
+  "key": "SZA_mBnRNNc@261",
+  "permission": "fan clipping is widespread and tolerated; no official paid program found (Oct 2026)",
+  "summary": "Kai Cenat struggles with the chat during his Halloween party.",
+  "hashtags": [
+   "#kaicenat",
+   "#halloweenparty",
+   "#chatfailure"
+  ],
+  "tags": [
+   "Kai Cenat",
+   "Halloween Party",
+   "Chat",
+   "Failed",
+   "Trouble",
+   "Halloween",
+   "Party"
+  ],
+  "writer": "ollama",
+  "script_source": "transcript",
+  "upload_tags": [
+   "Kai Cenat",
+   "Halloween Party",
+   "Chat",
+   "Failed",
+   "Trouble",
+   "Halloween",
+   "Party",
+   "kai cenat",
+   "kai",
+   "kaicenat",
+   "shorts"
+  ],
+  "youtube_id": "L9Xb6nIoGXc",
+  "tiktok_id": "v_inbox_file~v2.7703669744917891086",
+  "tiktok_caption": "Kai Cenat Can't Believe Chat Failed Again 😭 #kaicenat #halloweenparty #chatfailure #fyp"
+ },
+ {
+  "id": 2,
+  "source": "kai_cenat",
+  "creator": "Kai Cenat",
+  "platform": "youtube",
+  "video_id": "SZA_mBnRNNc",
+  "video_title": "🎃AMP HALLOWEEN PARTY🎃",
+  "url": "https://www.youtube.com/watch?v=SZA_mBnRNNc&t=1388s",
+  "moment": "23:08",
+  "start": 1368,
+  "end": 1398,
+  "rank": 3.37,
+  "signal": "1 timestamp comments, 0 likes; chat went 2.8x its normal pace",
+  "signals": [
+   "comments",
+   "chat spike"
+  ],
+  "quotes": [
+   "I’m too lock in on POOH SHIESTY BRO SNAPPING"
+  ],
+  "stream_age_h": 63.8,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 2,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": "caption_words"
+  },
+  "post_utc": "2026-11-02 22:00",
+  "post_local": "Mon 05:00 PM ET",
+  "title": "Kai Cenat Can't Believe Pooh Shiesty Bro Snapping 🧐😭",
+  "hook": "POOH SHIESTY SNAPPING",
+  "context": "Kai Cenat's Halloween Party, Pooh Shiesty Bro Snaps",
+  "take": "Pooh Shiesty, snap that pose!",
+  "draft": false,
+  "description": "Kai Cenat tries to snap a photo, but Pooh Shiesty Bro doesn’t cooperate, causing chaos at the Halloween party.\n\nFull stream by Kai Cenat: https://www.youtube.com/watch?v=SZA_mBnRNNc&t=1388s\nGo support Kai Cenat, all credit to them.\n\n#kaicenat #ishowspeed #shorts #kai",
+  "key": "SZA_mBnRNNc@46",
+  "permission": "fan clipping is widespread and tolerated; no official paid program found (Oct 2026)",
+  "summary": "Kai Cenat tries to snap a photo, but Pooh Shiesty Bro doesn’t cooperate, causing chaos at the Halloween party.",
+  "hashtags": [
+   "#kaicenat",
+   "#ishowspeed",
+   "#shorts"
+  ],
+  "tags": [
+   "Kai Cenat",
+   "Pooh Shiesty Bro",
+   "Halloween Party"
+  ],
+  "writer": "ollama",
+  "script_source": "transcript",
+  "upload_tags": [
+   "Kai Cenat",
+   "Pooh Shiesty Bro",
+   "Halloween Party",
+   "kai cenat",
+   "kai",
+   "kaicenat",
+   "shorts"
+  ],
+  "youtube_id": "RPppa2R0pKc",
+  "tiktok_id": "v_inbox_file~v2.7703669724780988429",
+  "tiktok_caption": "Kai Cenat Can't Believe Pooh Shiesty Bro Snapping 🧐😭 #kaicenat #ishowspeed #fyp"
+ },
+ {
+  "id": 3,
+  "source": "ishowspeed",
+  "creator": "IShowSpeed",
+  "platform": "youtube",
+  "video_id": "IkhjzYsvCmw",
+  "video_title": "HALLOWEEN SPIDER-MAN SPEED-VERSE IRL STREAM 🎃🕷",
+  "url": "https://www.youtube.com/watch?v=IkhjzYsvCmw&t=858s",
+  "moment": "14:18",
+  "start": 838,
+  "end": 868,
+  "rank": 2.89,
+  "signal": "1 timestamp comments, 7 likes",
+  "signals": [
+   "comments"
+  ],
+  "quotes": [
+   "visited my uncles store !!"
+  ],
+  "stream_age_h": 44.2,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 1.0,
+   "layout": "face34",
+   "test": "gap"
+  },
+  "post_utc": "2026-11-03 02:00",
+  "post_local": "Mon 09:00 PM ET",
+  "title": "Speed Can't Believe Vinny Just Robbed His Uncle's Store 😭",
+  "hook": "STORE ROBBERY!",
+  "context": "Speed is visiting his uncle's store during Halloween.",
+  "take": "Speed's jaw drops as he witnesses something shocking.",
+  "draft": false,
+  "description": "Speed visits his uncle's store and is left speechless when he discovers Vinny has just robbed it.\n\nFull stream by IShowSpeed: https://www.youtube.com/watch?v=IkhjzYsvCmw&t=858s\nGo support IShowSpeed, all credit to them.\n\n#ishowspeed #shorts #halloween #speed",
+  "key": "IkhjzYsvCmw@28",
+  "permission": "fan clipping is widespread and tolerated; no official paid program found (Oct 2026)",
+  "summary": "Speed visits his uncle's store and is left speechless when he discovers Vinny has just robbed it.",
+  "hashtags": [
+   "#ishowspeed",
+   "#shorts",
+   "#halloween"
+  ],
+  "tags": [
+   "Speed",
+   "Vinny",
+   "Uncle's Store",
+   "Robbery"
+  ],
+  "writer": "ollama",
+  "script_source": "transcript",
+  "upload_tags": [
+   "Speed",
+   "Vinny",
+   "Uncle's Store",
+   "Robbery",
+   "ishowspeed",
+   "speed",
+   "shorts"
+  ],
+  "youtube_id": "ixvja1AyEbw",
+  "tiktok_id": "v_inbox_file~v2.7703669760659146765",
+  "tiktok_caption": "Speed Can't Believe Vinny Just Robbed His Uncle's Store 😭 #ishowspeed #halloween #fyp"
+ }
+]
