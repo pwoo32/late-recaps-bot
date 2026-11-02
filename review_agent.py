@@ -49,6 +49,7 @@ from channel_agent import ChannelYouTube, video_record
 from niches import NICHES
 from sources import SOURCES
 import script_agent
+import council
 import tuner
 
 BUILDER_DIR = REPORTS_DIR / "builder"
@@ -307,7 +308,7 @@ def collect(args, state):
             qdir, c = queued[v["id"]]
             v["clip"] = {k: c.get(k) for k in ("source", "creator", "video_title", "moment", "start", "end", "hook",
                                                "context", "take", "post_utc", "post_local", "quotes", "rank", "writer", "recipe",
-                                               "signals", "spike")}
+                                               "signals", "spike", "council")}
             v["transcript"] = script_agent.cut_transcript(qdir, c)
         else:
             low = v["title"].lower()
@@ -788,12 +789,16 @@ def cmd_review(args):
                   for s in snapshot if s["age_h"] >= 24 and s["privacy"] == "public"][:20],
     }
     # score each clip's edit recipe once it's settled, so tomorrow's edits follow what held viewers
+    # and each council agent's vote on it, so the agents whose judgment matches real results count for more
     recipe_of = {v["id"]: (v.get("clip") or {}).get("recipe") for v in vids}
+    votes_of = {v["id"]: (v.get("clip") or {}).get("council") for v in vids}
     scored = 0
     for snap in snapshot:
         if snap["age_h"] >= SETTLED_H and snap["privacy"] == "public" and recipe_of.get(snap["id"]):
-            scored += tuner.credit(state, snap["id"], recipe_of[snap["id"]],
-                                   tuner.score(snap["views"], snap["avp"], snap["stayed"], base))
+            outcome = tuner.score(snap["views"], snap["avp"], snap["stayed"], base)
+            if tuner.credit(state, snap["id"], recipe_of[snap["id"]], outcome):
+                scored += 1
+                council.learn(state, votes_of.get(snap["id"]), outcome)
     if scored:
         print(f"Edit tuner: scored {scored} clip(s). Settings now: {tuner.best_recipe(state)}")
     if not state.get("channel"):
@@ -802,7 +807,10 @@ def cmd_review(args):
     with open(out_dir / "report.md", "a", encoding="utf-8") as f:  # how the analytics are steering the edit
         f.write("\n## Edit settings the analytics picked\n\nScore per setting (views vs your median, plus retention), "
                 "averaged over the clips that used it. The best one is used on tomorrow's top clip; the other clips "
-                "each test one change.\n\n" + "\n".join(tuner.summary(state)) + "\n")
+                "each test one change.\n\n" + "\n".join(tuner.summary(state)) + "\n"
+                "\n## Clip council weights\n\nHow much each agent's vote counts when picking clips, learned from how "
+                "the clips they backed did:\n\n" + "\n".join(f"- {council.AGENTS[k]}: {w:.2f}"
+                                                            for k, w in council.weights(state).items()) + "\n")
     print(f"Done. Report: {out_dir / 'report.md'}" + ("" if data["signed_in"] else f"  (quota used: {data['units']} units)"))
 
 

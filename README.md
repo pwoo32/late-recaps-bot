@@ -95,6 +95,16 @@ Where moments come from (`live_moments.py`, all free, no YouTube quota):
 - the daily trend scan boosts creators whose clip demand jumped since the last scan (and allows them 3 clips that
   day) and moments that match words in their fastest-growing clips this week.
 
+**Clip council** (`council.py`): before anything is picked, every agent weighs in on the top ~16 candidate moments
+and scores each 0-1 with a one-line reason: the trend researcher (is the creator hot and rising, does it match what's
+viral), the channel study (do top channels break out with this creator), the analytics reviewer (how this creator does
+on our channel, does the moment have a spoken premise, is it fresh), the live scout (chat flood, most replayed, Twitch
+clip speed, timestamp comments), the script writer (can it write a strong title from what's said) and the audience
+(our own comments asking for a creator). A free local model chairs the meeting, reads every agent's notes and picks
+the day's clips with a reason; without it the weighted vote decides. The whole meeting is saved as `council.md` in the
+day's queue folder. Each agent's weight learns: when a clip settles, agents that rated it in line with how it did
+gain weight and the others lose some (shown at the bottom of the review report).
+
 **Edit tuner** (`tuner.py`): the new format (face-tracked frame, jump cuts, zoom punches, word-highlight captions, no
 narrator) stays the default. Each day the best clip gets the best settings found so far and the others each test one
 change: length (20/30/45s), zoom strength and pace, 2- or 3-word captions, how much silence gets cut, face-tracked vs

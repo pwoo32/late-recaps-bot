@@ -19,7 +19,7 @@ Usage:
     python channel_activity_agent.py --post        # check, draft and post in one go (what run_activity.cmd does)
     python channel_activity_agent.py --no-llm      # schedule check only, no drafting
 
-Drafts are written by the same writers as script_agent.py (Claude Code on this PC, Ollama, or ANTHROPIC_API_KEY).
+Drafts are written by a free local Ollama model (Claude Code or ANTHROPIC_API_KEY only if picked with --writer).
 Quota: reading costs ~3-6 units; each posted reply/comment/hold costs 50, capped by --max-replies (default 20).
 Its login is its own file (~/.config/clip-builder/activity_token.json), so uploading and reviewing are never affected.
 """
@@ -316,7 +316,7 @@ WRITERS = {"claude-code": _claude_code, "ollama": _ollama, "api": _api}
 
 
 def draft(prompt, writer=None):
-    for name in ([writer] if writer in WRITERS else list(WRITERS)):
+    for name in ([writer] if writer in WRITERS else ["ollama"]):  # free by default; Claude only if picked
         try:
             out = WRITERS[name](prompt)
         except Exception as e:
