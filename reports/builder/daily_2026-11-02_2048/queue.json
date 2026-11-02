@@ -1,0 +1,231 @@
+[
+ {
+  "id": 1,
+  "source": "ishowspeed",
+  "creator": "IShowSpeed",
+  "platform": "youtube",
+  "video_id": "IkhjzYsvCmw",
+  "video_title": "HALLOWEEN SPIDER-MAN SPEED-VERSE IRL STREAM 🎃🕷",
+  "url": "https://www.youtube.com/watch?v=IkhjzYsvCmw&t=1160s",
+  "moment": "19:20",
+  "start": 1140,
+  "end": 1170,
+  "rank": 1.85,
+  "signal": "1 timestamp comments, 3 likes",
+  "signals": [
+   "comments"
+  ],
+  "quotes": [
+   "The look on the face of the girl at is PRICELESS LOL"
+  ],
+  "stream_age_h": 45.3,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": null
+  },
+  "council": {
+   "trend": 0.77,
+   "study": 1.0,
+   "analytics": 0.61,
+   "live": 0.2,
+   "script": 0.9,
+   "audience": 0.5
+  },
+  "council_why": "highest combined vote",
+  "post_utc": "2026-11-03 08:00",
+  "post_local": "Tue 03:00 AM ET",
+  "title": "Speed Can't Believe The Look On Her Face 😭",
+  "hook": "PRICELESS REACTION",
+  "context": "Speed faces a hilarious moment during his Halloween Spider-Man IRL stream.",
+  "take": "Check out this moment that's going viral on Speed's stream!",
+  "draft": false,
+  "description": "Speed faces a hilarious moment during his Halloween Spider-Man IRL stream. The look on the girl’s face is priceless.\n\nFull stream by IShowSpeed: https://www.youtube.com/watch?v=IkhjzYsvCmw&t=1160s\nGo support IShowSpeed, all credit to them.\n\n#ishowspeed #halloween #shorts #speed",
+  "key": "IkhjzYsvCmw@38",
+  "permission": "fan clipping is widespread and tolerated; no official paid program found (Oct 2026)",
+  "summary": "Speed faces a hilarious moment during his Halloween Spider-Man IRL stream. The look on the girl’s face is priceless.",
+  "hashtags": [
+   "#ishowspeed",
+   "#halloween",
+   "#shorts"
+  ],
+  "tags": [
+   "Speed",
+   "Ishowspeed",
+   "Halloween Spider-Man",
+   "girl's reaction"
+  ],
+  "writer": "ollama",
+  "script_source": "transcript",
+  "upload_tags": [
+   "Speed",
+   "Ishowspeed",
+   "Halloween Spider-Man",
+   "girl's reaction",
+   "ishowspeed",
+   "speed",
+   "shorts"
+  ],
+  "youtube_id": "6Mmo2ERjIks",
+  "tiktok_id": "v_inbox_file~v2.7703688509974349838",
+  "tiktok_caption": "Speed Can't Believe The Look On Her Face 😭 #ishowspeed #halloween #fyp"
+ },
+ {
+  "id": 2,
+  "source": "jynxzi",
+  "creator": "Jynxzi",
+  "platform": "youtube",
+  "video_id": "HbsX4WRbYLM",
+  "video_title": "Beat Me In a 1v1, Get $1000",
+  "url": "https://www.youtube.com/watch?v=HbsX4WRbYLM&t=2445s",
+  "moment": "40:45",
+  "start": 2425,
+  "end": 2455,
+  "rank": 1.35,
+  "signal": "1 timestamp comments, 44 likes",
+  "signals": [
+   "comments"
+  ],
+  "quotes": [
+   "\"I'm gonna hear you when you're smiling\" Junko's kinda mad scary"
+  ],
+  "stream_age_h": 70.1,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 2,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": "caption_words"
+  },
+  "council": {
+   "trend": 1.0,
+   "study": 0.35,
+   "analytics": 0.49,
+   "live": 0.37,
+   "script": 1.0,
+   "audience": 0.5
+  },
+  "council_why": "highest combined vote",
+  "post_utc": "2026-11-02 22:00",
+  "post_local": "Mon 05:00 PM ET",
+  "title": "Jynxzi Can't Believe What Just Happened 😭",
+  "hook": "SMILE OR HEAR ME!",
+  "context": "Jynxzi challenges someone to a 1v1 and listens closely.",
+  "take": "Jynxzi can't hear a thing! What's the secret?",
+  "draft": false,
+  "description": "Jynxzi challenges someone to a 1v1 and listens closely, but can't hear a thing. The challenger smiles and Jynxzi is shocked.\n\nFull stream by Jynxzi: https://www.youtube.com/watch?v=HbsX4WRbYLM&t=2445s\nGo support Jynxzi, all credit to them.\n\n#jynxzi #funny #shorts",
+  "key": "HbsX4WRbYLM@81",
+  "permission": "fan clipping tolerated; check for a Whop campaign",
+  "summary": "Jynxzi challenges someone to a 1v1 and listens closely, but can't hear a thing. The challenger smiles and Jynxzi is shocked.",
+  "hashtags": [
+   "#jynxzi",
+   "#funny",
+   "#shorts"
+  ],
+  "tags": [
+   "jynxzi",
+   "challenge",
+   "listening",
+   "smile",
+   "1v1"
+  ],
+  "writer": "ollama",
+  "script_source": "transcript",
+  "upload_tags": [
+   "jynxzi",
+   "challenge",
+   "listening",
+   "smile",
+   "1v1",
+   "shorts"
+  ],
+  "youtube_id": "jXk5oswaOu4",
+  "tiktok_id": "v_inbox_file~v2.7703688509974382606",
+  "tiktok_caption": "Jynxzi Can't Believe What Just Happened 😭 #jynxzi #funny #fyp"
+ },
+ {
+  "id": 3,
+  "source": "jynxzi",
+  "creator": "Jynxzi",
+  "platform": "youtube",
+  "video_id": "HbsX4WRbYLM",
+  "video_title": "Beat Me In a 1v1, Get $1000",
+  "url": "https://www.youtube.com/watch?v=HbsX4WRbYLM&t=696s",
+  "moment": "11:36",
+  "start": 676,
+  "end": 706,
+  "rank": 1.89,
+  "signal": "3 timestamp comments, 17 likes",
+  "signals": [
+   "comments"
+  ],
+  "quotes": [
+   "pause",
+   "this man right here officer",
+   "why we leaning that way"
+  ],
+  "stream_age_h": 70.1,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 1.0,
+   "layout": "face34",
+   "test": "gap"
+  },
+  "council": {
+   "trend": 1.0,
+   "study": 0.35,
+   "analytics": 0.49,
+   "live": 0.31,
+   "script": 1.0,
+   "audience": 0.5
+  },
+  "council_why": "highest combined vote",
+  "post_utc": "2026-11-03 02:00",
+  "post_local": "Mon 09:00 PM ET",
+  "title": "Jynxzi Plays For $1000 And Goes Off 🔥",
+  "hook": "$1000 ON THE LINE",
+  "context": "Jynxzi live: Beat Me in a 1v1, Get $1000",
+  "take": "Jynxzi had no idea what was about to happen.",
+  "draft": false,
+  "description": "Jynxzi during \"Beat Me In a 1v1, Get $1000\". this man right here officer.\n\nFull stream by Jynxzi: https://www.youtube.com/watch?v=HbsX4WRbYLM&t=696s\nGo support Jynxzi, all credit to them.\n\n#jynxzi #viral #shorts",
+  "key": "HbsX4WRbYLM@23",
+  "permission": "fan clipping tolerated; check for a Whop campaign",
+  "summary": "Jynxzi during \"Beat Me In a 1v1, Get $1000\". this man right here officer.",
+  "hashtags": [
+   "#jynxzi",
+   "#viral"
+  ],
+  "tags": [
+   "jynxzi",
+   "beat",
+   "$1000",
+   "jynxzi clips",
+   "streamer clips"
+  ],
+  "writer": "free",
+  "script_source": "transcript",
+  "upload_tags": [
+   "jynxzi",
+   "beat",
+   "$1000",
+   "jynxzi clips",
+   "streamer clips",
+   "shorts"
+  ],
+  "youtube_id": "5cY8zJsbGvw",
+  "tiktok_id": "v_inbox_file~v2.7703688509974464526",
+  "tiktok_caption": "Jynxzi Plays For $1000 And Goes Off 🔥 #jynxzi #viral #fyp"
+ }
+]

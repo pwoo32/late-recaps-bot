@@ -1,14 +1,14 @@
 {
  "source_weight": {
-  "jynxzi": 0.33,
-  "kai_cenat": 0.37,
-  "ishowspeed": 0.7
+  "jynxzi": 0.32,
+  "kai_cenat": 0.34,
+  "ishowspeed": 0.62
  },
  "slot_weight": {
-  "2": 0.9,
-  "21": 0.88,
-  "8": 0.67,
-  "4": 0.39
+  "2": 0.74,
+  "21": 0.65,
+  "8": 0.8,
+  "4": 0.35
  },
  "used_moments": [
   "L6S9Vb3RLy4@186",
@@ -71,7 +71,10 @@
   "SZA_mBnRNNc@39",
   "SZA_mBnRNNc@261",
   "SZA_mBnRNNc@46",
-  "IkhjzYsvCmw@28"
+  "IkhjzYsvCmw@28",
+  "IkhjzYsvCmw@38",
+  "HbsX4WRbYLM@81",
+  "HbsX4WRbYLM@23"
  ],
  "queued": {
   "L6S9Vb3RLy4@186": {
@@ -448,6 +451,75 @@
     "test": "gap"
    },
    "video_id": "ixvja1AyEbw"
+  },
+  "IkhjzYsvCmw@38": {
+   "title": "Speed Can't Believe The Look On Her Face \ud83d\ude2d",
+   "source": "ishowspeed",
+   "post_utc": "2026-11-03 08:00",
+   "recipe": {
+    "length": 30,
+    "punch": 0.14,
+    "beat": "normal",
+    "caption_words": 3,
+    "gap": 0.6,
+    "layout": "face34",
+    "test": null
+   },
+   "council": {
+    "trend": 0.77,
+    "study": 1.0,
+    "analytics": 0.61,
+    "live": 0.2,
+    "script": 0.9,
+    "audience": 0.5
+   },
+   "video_id": "6Mmo2ERjIks"
+  },
+  "HbsX4WRbYLM@81": {
+   "title": "Jynxzi Can't Believe What Just Happened \ud83d\ude2d",
+   "source": "jynxzi",
+   "post_utc": "2026-11-02 22:00",
+   "recipe": {
+    "length": 30,
+    "punch": 0.14,
+    "beat": "normal",
+    "caption_words": 2,
+    "gap": 0.6,
+    "layout": "face34",
+    "test": "caption_words"
+   },
+   "council": {
+    "trend": 1.0,
+    "study": 0.35,
+    "analytics": 0.49,
+    "live": 0.37,
+    "script": 1.0,
+    "audience": 0.5
+   },
+   "video_id": "jXk5oswaOu4"
+  },
+  "HbsX4WRbYLM@23": {
+   "title": "Jynxzi Plays For $1000 And Goes Off \ud83d\udd25",
+   "source": "jynxzi",
+   "post_utc": "2026-11-03 02:00",
+   "recipe": {
+    "length": 30,
+    "punch": 0.14,
+    "beat": "normal",
+    "caption_words": 3,
+    "gap": 1.0,
+    "layout": "face34",
+    "test": "gap"
+   },
+   "council": {
+    "trend": 1.0,
+    "study": 0.35,
+    "analytics": 0.49,
+    "live": 0.31,
+    "script": 1.0,
+    "audience": 0.5
+   },
+   "video_id": "5cY8zJsbGvw"
   }
  },
  "channel": "UCbK9EejOk5UVzI_l8F3f8kA",
@@ -456,8 +528,8 @@
   "@TheDiaryOfACEO": "UCGq-a57w-aPwyi3pW7XLiHw"
  },
  "review": {
-  "at": "2026-11-02 19:43",
-  "report": "/home/runner/work/late-recaps-bot/late-recaps-bot/reports/review_2026-11-02_1943/report.md",
+  "at": "2026-11-02 20:48",
+  "report": "/home/runner/work/late-recaps-bot/late-recaps-bot/reports/review_2026-11-02_2048/report.md",
   "lessons": {
    "titles": [
     "Creator name first, then a bet or question in plain verbs, and never the result. Add a named guest or celebrity when one exists.",

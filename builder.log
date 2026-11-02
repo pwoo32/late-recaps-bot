@@ -792,3 +792,65 @@ Title/description: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/bui
     Kai Cenat Can't Believe Pooh Shiesty Bro Snapping 🧐😭 #kaicenat #ishowspeed #fyp
   TikTok: [3] draft in your TikTok inbox. Open the notification, paste this caption, post:
     Speed Can't Believe Vinny Just Robbed His Uncle's Store 😭 #ishowspeed #halloween #fyp
+[0;93m2026-11-02 21:10:53.274494584 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+Done. Report: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/track_2026-11-02_2048.md  (quota used: 2)
+[ishowspeed] reading recent streams/videos
+  reading the room on "HALLOWEEN SPIDER-MAN SPEED-VERSE IRL STREAM 🎃🕷" (chat replay, most replayed)
+[kai_cenat] reading recent streams/videos
+  reading the room on "🎃AMP HALLOWEEN PARTY🎃" (chat replay, most replayed)
+    6 chat spikes
+[jynxzi] reading recent streams/videos
+  reading the room on "SPECTACULAR SUNDAY STREAM" (chat replay, most replayed)
+  reading the room on "HAPPY HALLOWEEN + JYNXZI CUP LATER" (chat replay, most replayed)
+[adin_ross] reading recent streams/videos
+[n3on] reading recent streams/videos
+Clip council: 16 candidates, every agent votes...
+  the chair (Ollama) couldn't decide (ReadTimeout); the vote decides.
+  picked Speed at 19:20 (council 0.62): highest combined vote
+  picked Jynxzi at 40:45 (council 0.62): highest combined vote
+  picked Jynxzi at 11:36 (council 0.60): highest combined vote
+Writing scripts...
+  [1] IShowSpeed at 19:20: writing from captions (16 words)
+  [2] Jynxzi at 40:45: writing from captions (113 words)
+  [3] Jynxzi at 11:36: writing from captions (84 words)
+Scripts written by ollama.
+Done. Queue: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-11-02_2048/queue.md  (quota used: 54)
+[1] Speed Can't Believe The Girl's Reaction 🤭
+Downloading 19:00-19:30 of https://www.youtube.com/watch?v=IkhjzYsvCmw
+Transcribing with whisper small.en (first run downloads the model)...
+Re-writing the script from what's actually said in the clip...
+  [1] IShowSpeed at 19:20: writing from transcript (3 words)
+Scripts written by ollama.
+Framing on the face at 46% across.
+Done. Video: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-11-02_2048/clips/01_IkhjzYsvCmw_38.mp4
+Title/description: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-11-02_2048/clips/01_IkhjzYsvCmw_38.txt
+  uploaded https://youtube.com/shorts/6Mmo2ERjIks (goes public Tue 03:00 AM ET)
+[2] Jynxzi Can't Hear You When You're Smiling 😱
+Downloading 40:25-40:55 of https://www.youtube.com/watch?v=HbsX4WRbYLM
+Transcribing with whisper small.en (first run downloads the model)...
+Re-writing the script from what's actually said in the clip...
+  [2] Jynxzi at 40:45: writing from transcript (55 words)
+Scripts written by ollama.
+Cut 6.4s of dead air (2 jump cuts).
+Framing on the face at 15% across.
+Done. Video: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-11-02_2048/clips/02_HbsX4WRbYLM_81.mp4
+Title/description: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-11-02_2048/clips/02_HbsX4WRbYLM_81.txt
+  uploaded https://youtube.com/shorts/jXk5oswaOu4 (goes public Mon 05:00 PM ET)
+[3] Jynxzi Loses a Game to a Kid 😭
+Downloading 11:16-11:46 of https://www.youtube.com/watch?v=HbsX4WRbYLM
+Transcribing with whisper small.en (first run downloads the model)...
+Re-writing the script from what's actually said in the clip...
+  [3] Jynxzi at 11:36: writing from transcript (62 words)
+Scripts written by ollama.
+  [3] model title "Jynxzi Loses Game After Opponent Scores Again 😭" isn't backed by what's said (opponent, scores); using the free writer
+Cut 5.6s of dead air (4 jump cuts).
+Framing on the face at 15% across.
+Done. Video: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-11-02_2048/clips/03_HbsX4WRbYLM_23.mp4
+Title/description: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-11-02_2048/clips/03_HbsX4WRbYLM_23.txt
+  uploaded https://youtube.com/shorts/5cY8zJsbGvw (goes public Mon 09:00 PM ET)
+  TikTok: [1] draft in your TikTok inbox. Open the notification, paste this caption, post:
+    Speed Can't Believe The Look On Her Face 😭 #ishowspeed #halloween #fyp
+  TikTok: [2] draft in your TikTok inbox. Open the notification, paste this caption, post:
+    Jynxzi Can't Believe What Just Happened 😭 #jynxzi #funny #fyp
+  TikTok: [3] draft in your TikTok inbox. Open the notification, paste this caption, post:
+    Jynxzi Plays For $1000 And Goes Off 🔥 #jynxzi #viral #fyp

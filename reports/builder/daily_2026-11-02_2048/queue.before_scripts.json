@@ -1,0 +1,154 @@
+[
+ {
+  "id": 1,
+  "source": "ishowspeed",
+  "creator": "IShowSpeed",
+  "platform": "youtube",
+  "video_id": "IkhjzYsvCmw",
+  "video_title": "HALLOWEEN SPIDER-MAN SPEED-VERSE IRL STREAM 🎃🕷",
+  "url": "https://www.youtube.com/watch?v=IkhjzYsvCmw&t=1160s",
+  "moment": "19:20",
+  "start": 1140,
+  "end": 1170,
+  "rank": 1.85,
+  "signal": "1 timestamp comments, 3 likes",
+  "signals": [
+   "comments"
+  ],
+  "quotes": [
+   "The look on the face of the girl at is PRICELESS LOL"
+  ],
+  "stream_age_h": 45.3,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": null
+  },
+  "council": {
+   "trend": 0.77,
+   "study": 1.0,
+   "analytics": 0.61,
+   "live": 0.2,
+   "script": 0.9,
+   "audience": 0.5
+  },
+  "council_why": "highest combined vote",
+  "post_utc": "2026-11-03 08:00",
+  "post_local": "Tue 03:00 AM ET",
+  "title": "Speed The look on the face of the girl at 😭",
+  "hook": "THE LOOK ON THE FACE OF THE GIRL AT IS P",
+  "context": "IShowSpeed live, HALLOWEEN SPIDER-MAN SPEED-VERSE IRL STREAM 🎃🕷",
+  "take": "Speed really thought this was a good idea.",
+  "draft": true,
+  "description": "IShowSpeed live, HALLOWEEN SPIDER-MAN SPEED-VERSE IRL STREAM 🎃🕷\n\nFull stream by IShowSpeed: https://www.youtube.com/watch?v=IkhjzYsvCmw&t=1160s\nGo support IShowSpeed, all credit to them.\n\n#ishowspeed #speed #edit #shorts #kaicenat",
+  "key": "IkhjzYsvCmw@38",
+  "permission": "fan clipping is widespread and tolerated; no official paid program found (Oct 2026)"
+ },
+ {
+  "id": 2,
+  "source": "jynxzi",
+  "creator": "Jynxzi",
+  "platform": "youtube",
+  "video_id": "HbsX4WRbYLM",
+  "video_title": "Beat Me In a 1v1, Get $1000",
+  "url": "https://www.youtube.com/watch?v=HbsX4WRbYLM&t=2445s",
+  "moment": "40:45",
+  "start": 2425,
+  "end": 2455,
+  "rank": 1.35,
+  "signal": "1 timestamp comments, 44 likes",
+  "signals": [
+   "comments"
+  ],
+  "quotes": [
+   "\"I'm gonna hear you when you're smiling\" Junko's kinda mad scary"
+  ],
+  "stream_age_h": 70.1,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 2,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": "caption_words"
+  },
+  "council": {
+   "trend": 1.0,
+   "study": 0.35,
+   "analytics": 0.49,
+   "live": 0.37,
+   "script": 1.0,
+   "audience": 0.5
+  },
+  "council_why": "highest combined vote",
+  "post_utc": "2026-11-02 22:00",
+  "post_local": "Mon 05:00 PM ET",
+  "title": "Jynxzi I'm gonna hear you when you're smil 🤯",
+  "hook": "I'M GONNA HEAR YOU WHEN YOU'RE SMILING\" ",
+  "context": "Jynxzi live, Beat Me In a 1v1, Get $1000",
+  "take": "Jynxzi really thought this was a good idea.",
+  "draft": true,
+  "description": "Jynxzi live, Beat Me In a 1v1, Get $1000\n\nFull video by Jynxzi: https://www.youtube.com/watch?v=HbsX4WRbYLM&t=2445s\nGo support Jynxzi, all credit to them.\n\n#jynxzi #ishowspeed #edit #shorts #kaicenat",
+  "key": "HbsX4WRbYLM@81",
+  "permission": "fan clipping tolerated; check for a Whop campaign"
+ },
+ {
+  "id": 3,
+  "source": "jynxzi",
+  "creator": "Jynxzi",
+  "platform": "youtube",
+  "video_id": "HbsX4WRbYLM",
+  "video_title": "Beat Me In a 1v1, Get $1000",
+  "url": "https://www.youtube.com/watch?v=HbsX4WRbYLM&t=696s",
+  "moment": "11:36",
+  "start": 676,
+  "end": 706,
+  "rank": 1.89,
+  "signal": "3 timestamp comments, 17 likes",
+  "signals": [
+   "comments"
+  ],
+  "quotes": [
+   "pause",
+   "this man right here officer",
+   "why we leaning that way"
+  ],
+  "stream_age_h": 70.1,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 1.0,
+   "layout": "face34",
+   "test": "gap"
+  },
+  "council": {
+   "trend": 1.0,
+   "study": 0.35,
+   "analytics": 0.49,
+   "live": 0.31,
+   "script": 1.0,
+   "audience": 0.5
+  },
+  "council_why": "highest combined vote",
+  "post_utc": "2026-11-03 02:00",
+  "post_local": "Mon 09:00 PM ET",
+  "title": "Jynxzi pause 🤯",
+  "hook": "PAUSE",
+  "context": "Jynxzi live, Beat Me In a 1v1, Get $1000",
+  "take": "Jynxzi really thought this was a good idea.",
+  "draft": true,
+  "description": "Jynxzi live, Beat Me In a 1v1, Get $1000\n\nFull video by Jynxzi: https://www.youtube.com/watch?v=HbsX4WRbYLM&t=696s\nGo support Jynxzi, all credit to them.\n\n#jynxzi #ishowspeed #edit #shorts #kaicenat",
+  "key": "HbsX4WRbYLM@23",
+  "permission": "fan clipping tolerated; check for a Whop campaign"
+ }
+]
