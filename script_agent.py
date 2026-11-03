@@ -393,13 +393,22 @@ first time last back down without while still really actually completely totally
 
 
 def ungrounded(clip, script):
-    """True when a model's title rests on nothing: the clip has almost no words to go on, or the title brings in two
-    or more things (names, events) that appear nowhere in the stream title, comments or transcript."""
+    """True when a model's script can't be trusted on screen: it uses a word moderation reads as crime, violence, drugs
+    or sex; the clip has almost no words to go on; or the title, hook and context line bring in two or more things
+    (names, events) that appear nowhere in the stream title, comments or transcript."""
     transcript = clip.get("transcript") or ""
     source = " ".join([transcript, clip.get("video_title", ""), clip.get("creator", "")] + (clip.get("quotes") or [])
                       + src_of(clip).get("aliases", [])).lower()
-    words = re.findall(r"[a-z][a-z']{3,}", (script.get("title") or "").lower())
+    import free_writer
+    written = " ".join(script.get(k) or "" for k in ("title", "hook", "context", "take", "summary"))
+    if free_writer.risky(written):  # crime/violence/drug words in our text get clips taken down, even when said in jest
+        print(f"  [{clip.get('id')}] model script uses a word moderation flags "
+              f"(\"{free_writer.RISKY.search(written).group(0)}\"); using the free writer")
+        return True
+    words = re.findall(r"[a-z][a-z']{3,}", " ".join(script.get(k) or "" for k in ("title", "hook")).lower())
     invented = [w for w in words if w not in REACTION_WORDS and w[:5] not in source]  # "snapping" ~ "snapped"
+    ctx = re.findall(r"[a-z][a-z']{3,}", (script.get("context") or "").lower())
+    invented += [w for w in ctx if w not in REACTION_WORDS and w not in free_writer.STOP and w[:5] not in source]
     thin = len(transcript.split()) < 25 and max((len(q.split()) for q in clip.get("quotes") or []), default=0) < 8
     if thin or len(invented) >= 2:
         print(f"  [{clip.get('id')}] model title \"{script.get('title')}\" isn't backed by what's said"

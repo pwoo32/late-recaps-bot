@@ -26,6 +26,23 @@ man guys guy dude haha hahaha lmaooo omg wtf deadass really thing things stuff k
 SLANG = re.compile(r"\b(bro|lmao+|lol+|lmfao|fr|ngl|bruh|deadass|ong|frfr|af|tbh|istg|💀+)\b", re.I)
 EMOJI = re.compile("[\U0001F300-\U0001FAFF☀-➿‍️\U0001F000-\U0001F2FF\U000E0000-\U000E007F]")
 MONEY = re.compile(r"\$\s?\d[\d,.]*\s?(?:k|m|million|thousand)?\b", re.I)
+# Words TikTok's and YouTube's moderation reads as crime, violence, weapons, drugs or sex. A clip's title, hook, context
+# line or caption never uses them, even when the streamer says them as a joke: on-screen text claiming a crime got a
+# clip removed from TikTok (Nov 2026: "STORE ROBBERY!" on a clip where nothing was robbed).
+RISKY = re.compile(r"\b(rob|robs|robbed|robber(?:y|ies|s)?|robbing|steal(?:s|ing)?|stole|stolen|shoplift\w*|theft|thie(?:f|ves)|"
+                   r"burglar\w*|loot(?:ed|ing)?|heist|scam(?:s|med|mer)?|shoot(?:s|ing|er)?|shot|guns?|glock|pistol|rifle|"
+                   r"firearm|weapon\w*|knife|knives|stab\w*|kill(?:s|ed|ing|er)?|murder\w*|dead|dies?|died|death|suicid\w*|"
+                   r"kys|assault\w*|attack(?:s|ed|ing)?|beat(?:s|ing)? up|beaten|punch(?:es|ed|ing)?|brawl\w*|jumped|"
+                   r"fights?|fighting|arrest\w*|cops?|police|jail(?:ed)?|prison|handcuff\w*|crim(?:e|es|inal)|illegal|"
+                   r"drugs?|weed|cocaine|crack|meth|high af|drunk|vap(?:e|es|ing)|alcohol|sex\w*|nude|naked|porn\w*|strip\w*|"
+                   r"kidnap\w*|hostage|bomb\w*|terror\w*|blood\w*|racis\w*|hate crime|swat(?:ted|ting)?)\b", re.I)
+
+
+def risky(text):
+    """True when text uses a word moderation reads as crime, violence, weapons, drugs or sex."""
+    return bool(RISKY.search(text or ""))
+
+
 VERSUS = re.compile(r"\b(1v1|1 v 1|vs\.?|versus|race|battle|contest|challenge|bet|duel|fight|match)\b", re.I)
 
 MOODS = [  # (mood, pattern over comments + transcript, emoji)
@@ -140,12 +157,19 @@ def write(clip, src, hot_titles=(), lessons=None):
     money = money.group(0).replace(" ", "") if money else None
     md, emoji = mood(raw_text)
     line, kind = spoken_line(transcript)
+    if risky(line):
+        line, kind = None, None
+    quotes = [q for q in quotes if not risky(q)]
+    people = [p for p in people if not risky(p)]
+    guest = people[0] if people else None
+    if risky(event):
+        event = "stream"
     seed = clip.get("video_id", "") + str(clip.get("moment", ""))
 
     # title: creator first, then what happens, guest named when there is one, emoji at the end
     q = quotes[0] if quotes else ""
     said = re.search(r'"([^"]{6,60})"', " ".join(clip.get("quotes") or []))  # a viewer quoting what was said
-    said = _clean(said.group(1)) if said else None
+    said = _clean(said.group(1)) if said and not risky(said.group(1)) else None
     react = {"funny": ["Can't Stop Laughing", "Loses It", "Can't Hold It In"],
              "shock": ["Can't Believe What Just Happened", "Is Left Speechless", "Didn't See This Coming"],
              "rage": ["Crashes Out", "Completely Loses It", "Is Fuming"],
@@ -206,6 +230,10 @@ def write(clip, src, hot_titles=(), lessons=None):
                               + [f"{short.lower()} clips", "streamer clips"]))[:12]
     hashtags = list(dict.fromkeys(src.get("hashtags", [])[:2] + ([f"#{re.sub(r'[^a-z0-9]', '', people[0].lower())}"] if people else [])
                                   + ["#funny" if md == "funny" else "#viral"]))[:3]
+    tags = [t for t in tags if not risky(t)]
+    if risky(" ".join([title, hook, context, summary])):  # e.g. a risky word in the stream title: say nothing specific
+        title, hook = f"{short} {_pick(react, seed)} {emoji}", "WAIT FOR IT"
+        context, summary = f"{full} live", f"{full} live."
     return {"title": title, "hook": hook, "context": context[:140], "narrator": narrator, "description": summary,
             "hashtags": hashtags, "tags": tags}
 
