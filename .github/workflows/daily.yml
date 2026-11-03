@@ -56,6 +56,8 @@ jobs:
       OLLAMA_MODELS: /home/runner/.ollama-models
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 50   # the already-posted-today check reads recent commits; a 1-commit clone can't see them
 
       - name: Which run is this
         id: mode
@@ -66,7 +68,7 @@ jobs:
           if [ "${{ github.event_name }}" = workflow_dispatch ] && [ "${{ inputs.post }}" != true ]; then post=false; fi
           skip=false
           # a late scheduled daily run after one that already posted shouldn't double-post
-          if [ $mode = daily ] && [ "${{ github.event_name }}" = schedule ] && git log -20 --since="36 hours ago" --format=%s | grep -qx "Daily run $(date -u +%F)"; then
+          if [ $mode = daily ] && [ "${{ github.event_name }}" = schedule ] && git log -20 --since="36 hours ago" --format=%s | grep -qx "Daily run $(TZ=America/New_York date +%F)"; then
             echo "Already ran today; skipping."; skip=true
           fi
           echo "mode=$mode" >> "$GITHUB_OUTPUT"; echo "post=$post" >> "$GITHUB_OUTPUT"; echo "skip=$skip" >> "$GITHUB_OUTPUT"
@@ -216,7 +218,7 @@ jobs:
           git config user.name "late-recaps-bot"
           git config user.email "late-recaps-bot@users.noreply.github.com"
           git add -A reports builder.log review.log
-          if [ "${{ steps.mode.outputs.mode }}" = spike ]; then msg="Spike check $(date -u +%F)"; else msg="Daily run $(date -u +%F)"; fi
+          if [ "${{ steps.mode.outputs.mode }}" = spike ]; then msg="Spike check $(TZ=America/New_York date +%F)"; else msg="Daily run $(TZ=America/New_York date +%F)"; fi   # the channel's day is Eastern
           grep -q "  uploaded https://youtube.com/shorts/" "$RUNNER_TEMP/run.log" 2>/dev/null || msg="$msg (nothing posted)"
           git diff --cached --quiet || git commit -qm "$msg"
           git push -q || (git pull -q --rebase && git push -q)
