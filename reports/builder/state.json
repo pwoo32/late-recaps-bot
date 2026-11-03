@@ -1,14 +1,14 @@
 {
  "source_weight": {
-  "jynxzi": 0.32,
-  "kai_cenat": 0.34,
-  "ishowspeed": 0.62
+  "jynxzi": 0.31,
+  "kai_cenat": 0.32,
+  "ishowspeed": 0.49
  },
  "slot_weight": {
-  "2": 0.74,
-  "21": 0.65,
-  "8": 0.8,
-  "4": 0.35
+  "2": 0.64,
+  "21": 0.51,
+  "8": 0.6,
+  "4": 0.33
  },
  "used_moments": [
   "L6S9Vb3RLy4@186",
@@ -74,7 +74,10 @@
   "IkhjzYsvCmw@28",
   "IkhjzYsvCmw@38",
   "HbsX4WRbYLM@81",
-  "HbsX4WRbYLM@23"
+  "HbsX4WRbYLM@23",
+  "yTjFkUmcVM4@23",
+  "TTFWbsT1jlM@6",
+  "IkhjzYsvCmw@14"
  ],
  "queued": {
   "L6S9Vb3RLy4@186": {
@@ -520,6 +523,75 @@
     "audience": 0.5
    },
    "video_id": "5cY8zJsbGvw"
+  },
+  "yTjFkUmcVM4@23": {
+   "title": "Jynxzi Can't Believe What Just Happened \ud83d\ude2d",
+   "source": "jynxzi",
+   "post_utc": "2026-11-03 22:00",
+   "recipe": {
+    "length": 30,
+    "punch": 0.14,
+    "beat": "normal",
+    "caption_words": 3,
+    "gap": 0.6,
+    "layout": "face34",
+    "test": null
+   },
+   "council": {
+    "trend": 1.0,
+    "study": 0.35,
+    "analytics": 0.46,
+    "live": 0.33,
+    "script": 1.0,
+    "audience": 0.5
+   },
+   "video_id": "eUHjyRj5QAY"
+  },
+  "TTFWbsT1jlM@6": {
+   "title": "N3on: \"Face Each Other?\" \ud83d\udd25",
+   "source": "n3on",
+   "post_utc": "2026-11-03 08:00",
+   "recipe": {
+    "length": 30,
+    "punch": 0.14,
+    "beat": "normal",
+    "caption_words": 2,
+    "gap": 0.6,
+    "layout": "face34",
+    "test": "caption_words"
+   },
+   "council": {
+    "trend": 1.0,
+    "study": 0.25,
+    "analytics": 0.88,
+    "live": 0.1,
+    "script": 1.0,
+    "audience": 0.5
+   },
+   "video_id": "bCReu9_ZtZQ"
+  },
+  "IkhjzYsvCmw@14": {
+   "title": "Speed Can't Believe The Cops Are Outside \ud83e\udd28",
+   "source": "ishowspeed",
+   "post_utc": "2026-11-03 02:00",
+   "recipe": {
+    "length": 30,
+    "punch": 0.14,
+    "beat": "normal",
+    "caption_words": 3,
+    "gap": 1.0,
+    "layout": "face34",
+    "test": "gap"
+   },
+   "council": {
+    "trend": 0.77,
+    "study": 1.0,
+    "analytics": 0.57,
+    "live": 0.15,
+    "script": 1.0,
+    "audience": 0.5
+   },
+   "video_id": "d1M-YQDFTaU"
   }
  },
  "channel": "UCbK9EejOk5UVzI_l8F3f8kA",
@@ -528,8 +600,8 @@
   "@TheDiaryOfACEO": "UCGq-a57w-aPwyi3pW7XLiHw"
  },
  "review": {
-  "at": "2026-11-02 20:48",
-  "report": "/home/runner/work/late-recaps-bot/late-recaps-bot/reports/review_2026-11-02_2048/report.md",
+  "at": "2026-11-03 00:05",
+  "report": "/home/runner/work/late-recaps-bot/late-recaps-bot/reports/review_2026-11-03_0005/report.md",
   "lessons": {
    "titles": [
     "Creator name first, then a bet or question in plain verbs, and never the result. Add a named guest or celebrity when one exists.",
@@ -557,6 +629,13 @@
   "length_hint": null,
   "clips": [
    {
+    "title": "Speed Won't Go Down There In Spider-Man Suit \ud83d\udd77\ufe0f",
+    "views": 0,
+    "avg_viewed": null,
+    "stayed": null,
+    "verdict": null
+   },
+   {
     "title": "Jynxzi Explains Why Hearing Wins In Rainbow Six \ud83c\udfa7",
     "views": 2,
     "avg_viewed": null,
@@ -579,7 +658,7 @@
    },
    {
     "title": "Speed Hears Dubstep And Instantly Starts Vibing \ud83d\ude02",
-    "views": 1,
+    "views": 0,
     "avg_viewed": null,
     "stayed": null,
     "verdict": null
@@ -688,17 +767,15 @@
     "avg_viewed": null,
     "stayed": null,
     "verdict": null
-   },
-   {
-    "title": "Jynxzi Calls This Player Copper Off His Name Alone \ud83d\ude2d",
-    "views": 3,
-    "avg_viewed": null,
-    "stayed": null,
-    "verdict": null
    }
   ]
  },
  "own_results": [
+  {
+   "title": "Speed Won't Go Down There In Spider-Man Suit \ud83d\udd77\ufe0f",
+   "views": 0,
+   "lift": 0.0
+  },
   {
    "title": "Jynxzi Explains Why Hearing Wins In Rainbow Six \ud83c\udfa7",
    "views": 2,
@@ -716,8 +793,8 @@
   },
   {
    "title": "Speed Hears Dubstep And Instantly Starts Vibing \ud83d\ude02",
-   "views": 1,
-   "lift": 1.0
+   "views": 0,
+   "lift": 0.0
   },
   {
    "title": "Kai Cenat Rates Japanese Train Breakfast \ud83c\udf73",

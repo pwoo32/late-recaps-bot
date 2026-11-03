@@ -1,0 +1,236 @@
+[
+ {
+  "id": 1,
+  "source": "jynxzi",
+  "creator": "Jynxzi",
+  "platform": "youtube",
+  "video_id": "yTjFkUmcVM4",
+  "video_title": "YOU vs The RANK You \"Deserve\"... (Rainbow Six Siege)",
+  "url": "https://www.youtube.com/watch?v=yTjFkUmcVM4&t=719s",
+  "moment": "11:59",
+  "start": 699,
+  "end": 729,
+  "rank": 1.6,
+  "signal": "6 timestamp comments, 24 likes",
+  "signals": [
+   "comments"
+  ],
+  "quotes": [
+   "when spoit wallbanged why is everyone so surprised he literally just heard him",
+   "genuinely crazy hearing",
+   "how can you even hear that well ts is insane"
+  ],
+  "stream_age_h": 121.6,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": null
+  },
+  "council": {
+   "trend": 1.0,
+   "study": 0.35,
+   "analytics": 0.46,
+   "live": 0.33,
+   "script": 1.0,
+   "audience": 0.5
+  },
+  "council_why": "Jynxzi's clips are performing exceptionally well and have a clear, engaging premise that can quickly grab a viewer's attention.",
+  "post_utc": "2026-11-03 22:00",
+  "post_local": "Tue 05:00 PM ET",
+  "title": "Jynxzi Can't Believe What Just Happened 😭",
+  "hook": "HEARING THAT WELL",
+  "context": "Jynxzi plays Rainbow Six Siege with a RANK. He hears a c4 placement.",
+  "take": "Listen to this unbelievable hearing!",
+  "draft": false,
+  "description": "Jynxzi hears a c4 placement in Rainbow Six Siege. A moment of shock and disbelief.\n\nFull stream by Jynxzi: https://www.youtube.com/watch?v=yTjFkUmcVM4&t=719s\nGo support Jynxzi, all credit to them.\n\n#jynxzi #hear #rainbow6 #shorts",
+  "key": "yTjFkUmcVM4@23",
+  "permission": "fan clipping tolerated; check for a Whop campaign",
+  "summary": "Jynxzi hears a c4 placement in Rainbow Six Siege. A moment of shock and disbelief.",
+  "hashtags": [
+   "#jynxzi",
+   "#hear",
+   "#rainbow6"
+  ],
+  "tags": [
+   "Jynxzi",
+   "Rainbow Six Siege",
+   "c4",
+   "hearing"
+  ],
+  "writer": "ollama",
+  "script_source": "transcript",
+  "upload_tags": [
+   "Jynxzi",
+   "Rainbow Six Siege",
+   "c4",
+   "hearing",
+   "jynxzi",
+   "shorts"
+  ],
+  "youtube_id": "eUHjyRj5QAY"
+ },
+ {
+  "id": 2,
+  "source": "n3on",
+  "creator": "N3on",
+  "platform": "youtube",
+  "video_id": "TTFWbsT1jlM",
+  "video_title": "N3on & Crystal Get Put Through Bootcamp!",
+  "url": "https://www.youtube.com/watch?v=TTFWbsT1jlM&t=205s",
+  "moment": "3:25",
+  "start": 185,
+  "end": 215,
+  "rank": 1.22,
+  "signal": "1 timestamp comments, 0 likes",
+  "signals": [
+   "comments"
+  ],
+  "quotes": [
+   "he said ew"
+  ],
+  "stream_age_h": 2.0,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 2,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": "caption_words"
+  },
+  "council": {
+   "trend": 1.0,
+   "study": 0.25,
+   "analytics": 0.88,
+   "live": 0.1,
+   "script": 1.0,
+   "audience": 0.5
+  },
+  "council_why": "N3on's clips are showing significant growth in popularity, and the stream is fresh, which could drive more views.",
+  "post_utc": "2026-11-03 08:00",
+  "post_local": "Tue 03:00 AM ET",
+  "title": "N3on: \"Face Each Other?\" 🔥",
+  "hook": "FACE EACH OTHER?",
+  "context": "N3on live: N3on & Crystal Get Put Through Bootcamp",
+  "take": "Nobody in the room saw this coming.",
+  "draft": false,
+  "description": "N3on during \"N3on & Crystal Get Put Through Bootcamp\". he said ew.\n\nFull stream by N3on: https://www.youtube.com/watch?v=TTFWbsT1jlM&t=205s\nGo support N3on, all credit to them.\n\n#n3on #viral #shorts",
+  "key": "TTFWbsT1jlM@6",
+  "permission": "official paid clipping program via his Discord (creatordb.app, 2026)",
+  "summary": "N3on during \"N3on & Crystal Get Put Through Bootcamp\". he said ew.",
+  "hashtags": [
+   "#n3on",
+   "#viral"
+  ],
+  "tags": [
+   "n3on",
+   "neon",
+   "crystal",
+   "through",
+   "bootcamp",
+   "n3on clips",
+   "streamer clips"
+  ],
+  "writer": "free",
+  "script_source": "transcript",
+  "upload_tags": [
+   "n3on",
+   "neon",
+   "crystal",
+   "through",
+   "bootcamp",
+   "n3on clips",
+   "streamer clips",
+   "shorts"
+  ],
+  "youtube_id": "bCReu9_ZtZQ"
+ },
+ {
+  "id": 3,
+  "source": "ishowspeed",
+  "creator": "IShowSpeed",
+  "platform": "youtube",
+  "video_id": "IkhjzYsvCmw",
+  "video_title": "HALLOWEEN SPIDER-MAN SPEED-VERSE IRL STREAM 🎃🕷",
+  "url": "https://www.youtube.com/watch?v=IkhjzYsvCmw&t=425s",
+  "moment": "7:05",
+  "start": 405,
+  "end": 435,
+  "rank": 0.97,
+  "signal": "1 timestamp comments, 1 likes",
+  "signals": [
+   "comments"
+  ],
+  "quotes": [
+   "Spiderman with big brains"
+  ],
+  "stream_age_h": 48.6,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 1.0,
+   "layout": "face34",
+   "test": "gap"
+  },
+  "council": {
+   "trend": 0.77,
+   "study": 1.0,
+   "analytics": 0.57,
+   "live": 0.15,
+   "script": 1.0,
+   "audience": 0.5
+  },
+  "council_why": "IShowSpeed's clips are consistently popular, and the stream is older, giving more time for views to accumulate.",
+  "post_utc": "2026-11-03 02:00",
+  "post_local": "Mon 09:00 PM ET",
+  "title": "Speed Can't Believe The Cops Are Outside 🤨",
+  "hook": "SURPRISE!",
+  "context": "Speed's Halloween Spider-Man IRL Stream.",
+  "take": "Speed's got a real-life spiderweb of trouble. Can you guess what it is?",
+  "draft": false,
+  "description": "Speed, dressed as Spider-Man, encounters an unexpected surprise when the cops show up at his door.\n\nFull stream by IShowSpeed: https://www.youtube.com/watch?v=IkhjzYsvCmw&t=425s\nGo support IShowSpeed, all credit to them.\n\n#ishowspeed #halloween #spiderman #speed #shorts",
+  "key": "IkhjzYsvCmw@14",
+  "permission": "fan clipping is widespread and tolerated; no official paid program found (Oct 2026)",
+  "summary": "Speed, dressed as Spider-Man, encounters an unexpected surprise when the cops show up at his door.",
+  "hashtags": [
+   "#ishowspeed",
+   "#halloween",
+   "#spiderman"
+  ],
+  "tags": [
+   "Speed",
+   "Spider-Man",
+   "Cops",
+   "Halloween",
+   "Spider-Man IRL",
+   "COPs",
+   "Halloween Stream",
+   "Spider-Man Halloween"
+  ],
+  "writer": "ollama",
+  "script_source": "transcript",
+  "upload_tags": [
+   "Speed",
+   "Spider-Man",
+   "Cops",
+   "Halloween",
+   "Spider-Man IRL",
+   "COPs",
+   "Halloween Stream",
+   "Spider-Man Halloween",
+   "ishowspeed",
+   "speed",
+   "shorts"
+  ],
+  "youtube_id": "d1M-YQDFTaU"
+ }
+]

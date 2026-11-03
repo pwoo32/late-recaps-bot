@@ -860,3 +860,60 @@ Title/description: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/bui
 [adin_ross] reading recent streams/videos
 [n3on] reading recent streams/videos
 Nothing is spiking right now.
+[0;93m2026-11-03 00:28:10.198252228 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+Done. Report: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/track_2026-11-03_0005.md  (quota used: 2)
+[ishowspeed] reading recent streams/videos
+  reading the room on "HALLOWEEN SPIDER-MAN SPEED-VERSE IRL STREAM 🎃🕷" (chat replay, most replayed)
+[kai_cenat] reading recent streams/videos
+  reading the room on "🎃AMP HALLOWEEN PARTY🎃" (chat replay, most replayed)
+    6 chat spikes
+[jynxzi] reading recent streams/videos
+  reading the room on "SPECTACULAR SUNDAY STREAM" (chat replay, most replayed)
+  reading the room on "HAPPY HALLOWEEN + JYNXZI CUP LATER" (chat replay, most replayed)
+[adin_ross] reading recent streams/videos
+[n3on] reading recent streams/videos
+Clip council: 16 candidates, every agent votes...
+  picked Jynxzi at 11:59 (council 0.60): Jynxzi's clips are performing exceptionally well and have a clear, engaging premise that can quickly grab a viewer's att
+  picked N3on at 3:25 (council 0.61): N3on's clips are showing significant growth in popularity, and the stream is fresh, which could drive more views.
+  picked Speed at 7:05 (council 0.62): IShowSpeed's clips are consistently popular, and the stream is older, giving more time for views to accumulate.
+Writing scripts...
+  [1] Jynxzi at 11:59: writing from captions (92 words)
+  [2] N3on at 3:25: writing from captions (97 words)
+  [3] IShowSpeed at 7:05: writing from captions (60 words)
+Scripts written by ollama.
+Done. Queue: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-11-03_0005/queue.md  (quota used: 56)
+[1] Jynxzi Can't Believe Spoit Heard Him So Well 😭
+Downloading 11:39-12:09 of https://www.youtube.com/watch?v=yTjFkUmcVM4
+Transcribing with whisper small.en (first run downloads the model)...
+Re-writing the script from what's actually said in the clip...
+  [1] Jynxzi at 11:59: writing from transcript (57 words)
+Scripts written by ollama.
+Cut 6.1s of dead air (6 jump cuts).
+Framing on the face at 14% across.
+Done. Video: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-11-03_0005/clips/01_yTjFkUmcVM4_23.mp4
+Title/description: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-11-03_0005/clips/01_yTjFkUmcVM4_23.txt
+  uploaded https://youtube.com/shorts/eUHjyRj5QAY (goes public Tue 05:00 PM ET)
+[2] N3on Says Ew At Crystal 😂
+Downloading 3:05-3:35 of https://www.youtube.com/watch?v=TTFWbsT1jlM
+Transcribing with whisper small.en (first run downloads the model)...
+Re-writing the script from what's actually said in the clip...
+  [2] N3on at 3:25: writing from transcript (81 words)
+Scripts written by ollama.
+  [2] model title "N3on Can't Believe Crystal Scores A Goal 😭" isn't backed by what's said (scores, goal); using the free writer
+Cut 5.4s of dead air (7 jump cuts).
+Framing on the face at 38% across.
+Done. Video: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-11-03_0005/clips/02_TTFWbsT1jlM_6.mp4
+Title/description: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-11-03_0005/clips/02_TTFWbsT1jlM_6.txt
+  uploaded https://youtube.com/shorts/bCReu9_ZtZQ (goes public Tue 03:00 AM ET)
+[3] Speed Can't Believe He Saw Spider-Man 🕷️
+Downloading 6:45-7:15 of https://www.youtube.com/watch?v=IkhjzYsvCmw
+Transcribing with whisper small.en (first run downloads the model)...
+Re-writing the script from what's actually said in the clip...
+  [3] IShowSpeed at 7:05: writing from transcript (25 words)
+Scripts written by ollama.
+Cut 10.4s of dead air (5 jump cuts).
+Framing on the face at 50% across.
+Done. Video: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-11-03_0005/clips/03_IkhjzYsvCmw_14.mp4
+Title/description: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-11-03_0005/clips/03_IkhjzYsvCmw_14.txt
+  uploaded https://youtube.com/shorts/d1M-YQDFTaU (goes public Mon 09:00 PM ET)
+  TikTok skipped for [1]: TikTok /post/publish/inbox/video/init/: spam_risk_too_many_pending_share spam_risk_too_many_pending_share
