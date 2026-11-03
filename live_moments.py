@@ -180,6 +180,32 @@ def twitch_clips(h, user_id, since, first=20):
     return d.get("data", [])
 
 
+def twitch_clips_keyless(login, since, timeout=120):
+    """The same clip list without Twitch API keys: yt-dlp reads the channel's public clips page (top clips of the last
+    7 days), and we keep the ones made since `since`. Same fields as twitch_clips(), minus the VOD link, so each one
+    is used as-is (downloaded whole)."""
+    if not _yt_dlp():
+        return []
+    try:
+        r = subprocess.run([_yt_dlp(), "-J", "--flat-playlist", "--no-warnings", "--playlist-end", "40",
+                            f"https://www.twitch.tv/{login}/clips?filter=clips&range=7d"],
+                           capture_output=True, text=True, timeout=timeout)
+        entries = (json.loads(r.stdout).get("entries") or []) if r.returncode == 0 and r.stdout.strip() else []
+    except (subprocess.SubprocessError, OSError, ValueError):
+        return []
+    out = []
+    for e in entries:
+        if not e or not e.get("url") or not e.get("timestamp"):
+            continue
+        made = datetime.fromtimestamp(e["timestamp"], timezone.utc)
+        if made < since:
+            continue
+        out.append({"id": e.get("id") or e["url"].rstrip("/").rsplit("/", 1)[-1], "url": e["url"],
+                    "title": e.get("title") or "", "view_count": e.get("view_count") or 0,
+                    "created_at": made.strftime("%Y-%m-%dT%H:%M:%SZ"), "duration": e.get("duration") or 30})
+    return out
+
+
 def clip_velocity(clip, now=None):
     """Views per hour since the clip was made: how fast a moment is spreading."""
     now = now or datetime.now(timezone.utc)

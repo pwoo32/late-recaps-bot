@@ -331,22 +331,26 @@ def youtube_candidates(yt, key, src, state, since, now, chat_budget=240, live_st
     return out
 
 
+TWITCH_BOOST = 1.3  # favour moments viewers clipped live on Twitch (asked for Nov 2026)
+
+
 def twitch_candidates(key, src, since, now, h=None):
     """The creator's most-viewed Twitch clips: what viewers clipped while the stream was live. Clips whose VOD is
     up are cut from the VOD (so the length can be tuned); fresh ones from a stream still running are used as is."""
     if not src.get("twitch"):
         return []
-    h = h or LM.twitch_headers()
-    if not h:
-        return []
-    uid = LM.twitch_user(h, src["twitch"])
-    if not uid:
-        return []
+    if h:
+        uid = LM.twitch_user(h, src["twitch"])
+        clips = LM.twitch_clips(h, uid, since) if uid else []
+    else:  # no Twitch API keys: read the public clips page with yt-dlp instead
+        clips = LM.twitch_clips_keyless(src["twitch"], since)
+    if clips:
+        print(f"  {len(clips)} Twitch clips from {src['twitch']}")
     out = []
-    for c in LM.twitch_clips(h, uid, since):
+    for c in clips:
         created = datetime.fromisoformat(c["created_at"].replace("Z", "+00:00"))
         vph = LM.clip_velocity(c, now)
-        score = round(math.log2(2 + c["view_count"]) * 1.5 * (1 + min(vph / 20000, 1)), 2)
+        score = round(math.log2(2 + c["view_count"]) * 1.5 * (1 + min(vph / 20000, 1)) * TWITCH_BOOST, 2)
         common = dict(score=score, comments=0, likes=c["view_count"], quotes=[c["title"]], source=key,
                       video_title=c["title"], video_views=c["view_count"], clip_vph=round(vph),
                       age_h=round((now - created).total_seconds() / 3600, 1), signals=["twitch clip"], was_live=True)
@@ -451,7 +455,11 @@ def cmd_daily(args, yt=None, state=None):
     since = now - timedelta(hours=18 if spike else args.hours)
 
     moments = []
-    th = LM.twitch_headers() if any(s.get("twitch") for s in SOURCES.values()) else None
+    try:
+        th = LM.twitch_headers() if any(s.get("twitch") for s in SOURCES.values()) else None
+    except Exception as e:  # bad keys: fall back to reading the public clips pages
+        print(f"Twitch API login failed ({type(e).__name__}); reading public clips pages instead")
+        th = None
     for key, src in SOURCES.items():
         if src["niche"] != niche or "blocked" in src["permission"].lower():
             continue
