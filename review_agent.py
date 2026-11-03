@@ -301,6 +301,9 @@ def collect(args, state):
         st = it.get("status", {})
         v["privacy"] = st.get("privacyStatus", "public")  # an API key only ever sees public videos
         v["publish_at"] = st.get("publishAt")
+        v["upload_status"], v["rejection"], v["failure"] = st.get("uploadStatus"), st.get("rejectionReason"), st.get("failureReason")
+        rr = it.get("contentDetails", {}).get("regionRestriction", {})
+        v["blocked_in"] = len(rr.get("blocked", [])) or (249 - len(rr["allowed"]) if "allowed" in rr else 0)
         v["age_h"] = v["age_days"] * 24
         if args.days and v["age_days"] > args.days:
             continue
@@ -323,6 +326,15 @@ def collect(args, state):
                         "views": int(ch["statistics"].get("viewCount", 0)),
                         "videos": int(ch["statistics"].get("videoCount", 0))},
             "videos": vids, "analytics": False, "notes": [], "units": units, "signed_in": bool(creds)}
+    settled = [v for v in vids if v["privacy"] == "public" and v["age_h"] >= 48]
+    if len(settled) >= 8 and statistics.median(v["views"] for v in settled) <= 5:
+        data["notes"].append(
+            f"{len(settled)} public clips older than 2 days have a median of "
+            f"{statistics.median(v['views'] for v in settled):g} views. Even a brand-new channel's Shorts usually get "
+            "a few hundred test views, so the Shorts feed isn't showing these at all. The usual causes: the clips are "
+            "reposted from the creators' own YouTube uploads with too little added (reused content), copyright claims, "
+            "or near-duplicate posts. Check YouTube Studio > Content > Restrictions, and Analytics > Content > "
+            "'How viewers find your Shorts'.")
     if not creds:
         data["notes"].append("Not signed in: public stats only. Run `python review_agent.py auth` for retention and private clips.")
     elif not has_analytics(creds):
@@ -383,6 +395,11 @@ def diagnose(v, m, base, bench):
             out.append(("fix", f"Still {v['privacy']}: nobody can see it. Unaudited API projects lock uploads to private; "
                                "flip it to Public in YouTube Studio (and apply for the API audit, README: Uploading)."))
             return out
+    if v.get("upload_status") in ("rejected", "failed", "deleted"):
+        out.append(("fix", f"YouTube {v['upload_status']} this upload ({v.get('rejection') or v.get('failure') or 'no reason given'})."))
+    if v.get("blocked_in"):
+        out.append(("fix", f"Blocked in {v['blocked_in']} countries: that is a copyright claim (Content ID). Claimed Shorts "
+                           "get little or no feed reach. Check YouTube Studio > Content > Restrictions for who claimed it."))
     if v["age_h"] < 24:
         out.append(("info", f"Only {v['age_h']:.0f}h old; judge it after {SETTLED_H}h."))
     if m["stayed"] is not None and m["stayed"] < 0.55:
