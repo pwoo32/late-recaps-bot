@@ -77,7 +77,8 @@
   "HbsX4WRbYLM@23",
   "yTjFkUmcVM4@23",
   "TTFWbsT1jlM@6",
-  "IkhjzYsvCmw@14"
+  "IkhjzYsvCmw@14",
+  "DqVN39N0uXc@483"
  ],
  "queued": {
   "L6S9Vb3RLy4@186": {
@@ -592,6 +593,29 @@
     "audience": 0.5
    },
    "video_id": "d1M-YQDFTaU"
+  },
+  "DqVN39N0uXc@483": {
+   "title": "Jynxzi: \"Chat What's My Kd?\" \ud83d\udd25",
+   "source": "jynxzi",
+   "post_utc": "2026-11-03 03:58",
+   "recipe": {
+    "length": 30,
+    "punch": 0.14,
+    "beat": "normal",
+    "caption_words": 3,
+    "gap": 0.6,
+    "layout": "face34",
+    "test": null
+   },
+   "council": {
+    "trend": 1.0,
+    "study": 0.35,
+    "analytics": 0.72,
+    "live": 0.55,
+    "script": 1.0,
+    "audience": 0.5
+   },
+   "video_id": "J7NcAGVrUUs"
   }
  },
  "channel": "UCbK9EejOk5UVzI_l8F3f8kA",
@@ -1033,9 +1057,74 @@
     ]
    }
   ],
-  "xyeuADJsOw4": []
+  "xyeuADJsOw4": [],
+  "DqVN39N0uXc": [
+   {
+    "t": 14514,
+    "ratio": 9.6,
+    "msgs": 50,
+    "sample": [
+     "mod's????",
+     "L",
+     "L",
+     "L",
+     "L"
+    ]
+   },
+   {
+    "t": 7439,
+    "ratio": 9.6,
+    "msgs": 56,
+    "sample": [
+     "W",
+     "w",
+     "w",
+     "w",
+     "w"
+    ]
+   },
+   {
+    "t": 9074,
+    "ratio": 8.9,
+    "msgs": 31,
+    "sample": [
+     "bro blind deaf and dumb",
+     "lll",
+     "l",
+     "l",
+     "ll"
+    ]
+   },
+   {
+    "t": 6729,
+    "ratio": 8.1,
+    "msgs": 56,
+    "sample": [
+     "W",
+     "ll",
+     "l",
+     "W",
+     "l"
+    ]
+   },
+   {
+    "t": 2614,
+    "ratio": 6.8,
+    "msgs": 42,
+    "sample": [
+     "w",
+     "w",
+     "w",
+     "w",
+     "w"
+    ]
+   }
+  ]
  },
  "edit": {
   "stats": {}
+ },
+ "spike_posts": {
+  "2026-11-03": 1
  }
 }

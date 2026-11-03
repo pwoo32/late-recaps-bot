@@ -1,0 +1,79 @@
+[
+ {
+  "id": 1,
+  "source": "jynxzi",
+  "creator": "Jynxzi",
+  "platform": "youtube",
+  "video_id": "DqVN39N0uXc",
+  "video_title": "MONDAY NIGHT MIRACLE STREAM",
+  "url": "https://www.youtube.com/watch?v=DqVN39N0uXc&t=14514s",
+  "moment": "4:01:54",
+  "start": 14494,
+  "end": 14524,
+  "rank": 8.62,
+  "signal": "chat went 9.6x its normal pace",
+  "signals": [
+   "chat spike"
+  ],
+  "quotes": [
+   "mod's????",
+   "L",
+   "L"
+  ],
+  "stream_age_h": 3.7,
+  "spike": true,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": null
+  },
+  "council": {
+   "trend": 1.0,
+   "study": 0.35,
+   "analytics": 0.72,
+   "live": 0.55,
+   "script": 1.0,
+   "audience": 0.5
+  },
+  "council_why": "highest combined vote",
+  "post_utc": "2026-11-03 03:58",
+  "post_local": "Mon 10:58 PM ET",
+  "title": "Jynxzi: \"Chat What's My Kd?\" 🔥",
+  "hook": "CHAT WHAT'S MY KD?",
+  "context": "Jynxzi live: Monday Night Miracle",
+  "take": "This is why chat can't stop clipping Jynxzi.",
+  "draft": false,
+  "description": "Jynxzi during \"MONDAY NIGHT MIRACLE STREAM\".\n\nFull stream by Jynxzi: https://www.youtube.com/watch?v=DqVN39N0uXc&t=14514s\nGo support Jynxzi, all credit to them.\n\n#jynxzi #viral #shorts",
+  "key": "DqVN39N0uXc@483",
+  "permission": "fan clipping tolerated; check for a Whop campaign",
+  "summary": "Jynxzi during \"MONDAY NIGHT MIRACLE STREAM\".",
+  "hashtags": [
+   "#jynxzi",
+   "#viral"
+  ],
+  "tags": [
+   "jynxzi",
+   "monday",
+   "miracle",
+   "jynxzi clips",
+   "streamer clips"
+  ],
+  "writer": "free",
+  "script_source": "transcript",
+  "upload_tags": [
+   "jynxzi",
+   "monday",
+   "miracle",
+   "jynxzi clips",
+   "streamer clips",
+   "shorts"
+  ],
+  "youtube_id": "J7NcAGVrUUs",
+  "tiktok_id": "v_inbox_file~v2.7703792707248818190",
+  "tiktok_caption": "Jynxzi: \"Chat What's My Kd?\" 🔥 #jynxzi #viral #fyp"
+ }
+]

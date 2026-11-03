@@ -917,3 +917,31 @@ Done. Video: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/d
 Title/description: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-11-03_0005/clips/03_IkhjzYsvCmw_14.txt
   uploaded https://youtube.com/shorts/d1M-YQDFTaU (goes public Mon 09:00 PM ET)
   TikTok skipped for [1]: TikTok /post/publish/inbox/video/init/: spam_risk_too_many_pending_share spam_risk_too_many_pending_share
+[ishowspeed] reading recent streams/videos
+[kai_cenat] reading recent streams/videos
+[jynxzi] reading recent streams/videos
+  reading the room on "MONDAY NIGHT MIRACLE STREAM" (chat replay, most replayed)
+    5 chat spikes
+[adin_ross] reading recent streams/videos
+[n3on] reading recent streams/videos
+Clip council: 3 candidates, every agent votes...
+  picked Jynxzi at 4:01:54 (council 0.70): highest combined vote
+Writing scripts...
+  [1] Jynxzi at 4:01:54: writing from captions (65 words)
+Scripts written by the free writer (no AI model).
+Done. Queue: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/spike_2026-11-03_0358/queue.md  (quota used: 16)
+[0;93m2026-11-03 04:02:13.683442951 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+[1] Jynxzi Asks Pleasure "Hopefully Conor McDavid Wins a Ring, Eh?" 🔥
+Downloading 4:01:34-4:02:04 of https://www.youtube.com/watch?v=DqVN39N0uXc
+Transcribing with whisper small.en (first run downloads the model)...
+Re-writing the script from what's actually said in the clip...
+  [1] Jynxzi at 4:01:54: writing from transcript (41 words)
+Scripts written by ollama.
+  [1] model title "Jynxzi Scores Twice In A Row 😭" isn't backed by what's said (scores, twice, plays, game, scores, twice, boosting); using the free writer
+Cut 3.9s of dead air (3 jump cuts).
+Framing on the face at 14% across.
+Done. Video: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/spike_2026-11-03_0358/clips/01_DqVN39N0uXc_483.mp4
+Title/description: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/spike_2026-11-03_0358/clips/01_DqVN39N0uXc_483.txt
+  uploaded https://youtube.com/shorts/J7NcAGVrUUs (public now)
+  TikTok: [1] draft in your TikTok inbox. Open the notification, paste this caption, post:
+    Jynxzi: "Chat What's My Kd?" 🔥 #jynxzi #viral #fyp
