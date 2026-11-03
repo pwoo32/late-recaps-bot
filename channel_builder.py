@@ -395,6 +395,11 @@ def demand_change(niche):
 def rank_moments(moments, demand, state, words=None, change=None):
     top_demand = max(demand.values() or [0]) or 1
     used = set(state["used_moments"])
+    used_at = {}  # video_id -> 30s buckets already clipped, so a moment a minute away from an old post counts as used
+    for k in used:
+        vid, _, b = k.rpartition("@")
+        if b.isdigit():
+            used_at.setdefault(vid, set()).add(int(b))
     for m in moments:
         src = SOURCES[m["source"]]
         hot = 0.6 + 0.8 * demand.get(m["source"], 0) / top_demand
@@ -409,7 +414,8 @@ def rank_moments(moments, demand, state, words=None, change=None):
         heat = 0.8 + 0.6 * m["heat"] if m.get("heat") is not None else 1.0  # most-replayed part of the stream
         m["rank"] = round(m["score"] * hot * learned * fresh * reach * paid * rising * topical * heat, 2)
         m["key"] = f"{m['video_id']}@{m['t'] // 30}"
-        m["used"] = m["key"] in used
+        b = m["t"] // 30  # same scene: within 3 buckets (~90s) of something already posted from this stream
+        m["used"] = m["key"] in used or any(abs(b - u) <= 3 for u in used_at.get(m["video_id"], ()))
     return sorted((m for m in moments if not m["used"]), key=lambda m: m["rank"], reverse=True)
 
 
