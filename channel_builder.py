@@ -1248,6 +1248,10 @@ def clip_problem(qdir, c):
     text = " ".join([c.get(k) or "" for k in ("title", "hook", "context", "take", "description")] + [said])
     if SLURS.search(text):
         return "content: a slur is said or shown in this clip"
+    import free_writer
+    shown = " ".join(c.get(k) or "" for k in ("title", "hook", "context", "take", "tiktok_caption"))
+    if free_writer.risky(shown):  # last check before posting: our own text never claims a crime, violence or drugs
+        return f"content: the title/hook/caption says \"{free_writer.RISKY.search(shown).group(0)}\", which gets clips taken down"
     return None
 
 
