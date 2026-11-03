@@ -3,9 +3,9 @@
 Each source needs at least one place to find full streams/videos:
 - youtube: channel ID (UC...) or @handle. Full live-stream VODs or long videos there are mined
   for the moments viewers timestamp in the comments.
-- twitch: login name. Used only if TWITCH_CLIENT_ID / TWITCH_CLIENT_SECRET are set (free at
-  dev.twitch.tv); the builder then pulls the creator's most-viewed Twitch clips of the last 2 days,
-  which point at the exact second in the VOD.
+- twitch: login name. The builder pulls the creator's most-viewed Twitch clips (what viewers clipped live).
+  With TWITCH_CLIENT_ID / TWITCH_CLIENT_SECRET set (free at dev.twitch.tv) they point at the exact second in
+  the VOD; without keys, yt-dlp reads the public clips page and each clip is used whole.
 
 permission: what you know about clipping rights. Set it to "blocked" to stop the builder from ever
 picking or downloading that creator. Update it when you join a creator's clipping program.
