@@ -1,5 +1,5 @@
 requests>=2.31
-yt-dlp[default]>=2026.8   # [default] adds the challenge solver YouTube now needs
+yt-dlp[default,curl-cffi]>=2026.8   # [default]: YouTube challenge solver; curl-cffi: reads Kick clips
 faster-whisper>=1.2
 anthropic>=1.0
 pydantic>=2

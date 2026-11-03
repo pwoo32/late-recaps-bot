@@ -337,15 +337,19 @@ TWITCH_BOOST = 1.3  # favour moments viewers clipped live on Twitch (asked for N
 def twitch_candidates(key, src, since, now, h=None):
     """The creator's most-viewed Twitch clips: what viewers clipped while the stream was live. Clips whose VOD is
     up are cut from the VOD (so the length can be tuned); fresh ones from a stream still running are used as is."""
-    if not src.get("twitch"):
-        return []
-    if h:
-        uid = LM.twitch_user(h, src["twitch"])
-        clips = LM.twitch_clips(h, uid, since) if uid else []
-    else:  # no Twitch API keys: read the public clips page with yt-dlp instead
-        clips = LM.twitch_clips_keyless(src["twitch"], since)
-    if clips:
-        print(f"  {len(clips)} Twitch clips from {src['twitch']}")
+    clips = []
+    if src.get("twitch"):
+        if h:
+            uid = LM.twitch_user(h, src["twitch"])
+            tw = LM.twitch_clips(h, uid, since) if uid else []
+        else:  # no Twitch API keys: read the public clips page with yt-dlp instead
+            tw = LM.twitch_clips_keyless(src["twitch"], since)
+        print(f"  {len(tw)} Twitch clips from {src['twitch']}")
+        clips += [dict(c, _site="twitch") for c in tw]
+    if src.get("kick"):
+        kk = LM.kick_clips(src["kick"], since)
+        print(f"  {len(kk)} Kick clips from {src['kick']}")
+        clips += [dict(c, _site="kick") for c in kk]
     out = []
     for c in clips:
         created = datetime.fromisoformat(c["created_at"].replace("Z", "+00:00"))
@@ -354,6 +358,9 @@ def twitch_candidates(key, src, since, now, h=None):
         common = dict(score=score, comments=0, likes=c["view_count"], quotes=[c["title"]], source=key,
                       video_title=c["title"], video_views=c["view_count"], clip_vph=round(vph),
                       age_h=round((now - created).total_seconds() / 3600, 1), signals=["twitch clip"], was_live=True)
+        if c["_site"] == "kick":
+            out.append(dict(common, t=0, platform="kick_clip", video_id=c["id"], duration=c["duration"], url=c["url"]))
+            continue
         if c.get("video_id") and c.get("vod_offset") is not None:
             t = int(c["vod_offset"] + c["duration"] * 0.7)  # clips end on the payoff; centre near it
             out.append(dict(common, t=t, platform="twitch", video_id=c["video_id"],
@@ -429,7 +436,7 @@ def description(m, meta, pb):
     src = SOURCES[m["source"]]
     tags = list(dict.fromkeys(src["hashtags"] + [h for h, _ in pb["hashtags"][:4]] + ["#shorts"]))[:6]
     return (f"{meta['context']}\n\n"
-            f"Full {'stream' if m['platform'].startswith('twitch') or m.get('was_live') or 'live' in m['video_title'].lower() else 'video'} "
+            f"Full {'stream' if m['platform'].startswith(('twitch', 'kick')) or m.get('was_live') or 'live' in m['video_title'].lower() else 'video'} "
             f"by {src['name']}: {m['url']}\n"
             f"Go support {src['name']}, all credit to them.\n\n" + " ".join(tags))
 
@@ -517,7 +524,7 @@ def cmd_daily(args, yt=None, state=None):
             when = datetime.combine(today, datetime.min.time(), tzinfo=timezone.utc).replace(hour=h)
             if when < now:
                 when += timedelta(days=1)
-        if m["platform"] == "twitch_clip":
+        if m["platform"] in ("twitch_clip", "kick_clip"):
             start, end = 0, min(m.get("duration") or length, 60)
         else:
             start = max(0, m["t"] - round(length * 0.65))
@@ -678,7 +685,7 @@ def cmd_plan(args):
           "|---|---|---|---|---|"]
     for k in sorted(demand, key=lambda k: -demand[k]):
         s = SOURCES[k]
-        where = ", ".join(p for p in ["YouTube" if s.get("youtube") else "", "Twitch" if s.get("twitch") else ""] if p)
+        where = ", ".join(p for p in ["YouTube" if s.get("youtube") else "", "Twitch" if s.get("twitch") else "", "Kick" if s.get("kick") else ""] if p)
         L.append(f"| {s['name']} | {demand[k]:,.0f} | {where} | {s['permission']} | "
                  f"{'$' + format(s['campaign_cpm'], '.2f') if s.get('campaign_cpm') else '-'} |")
     if pb["sources"]:
@@ -1047,8 +1054,8 @@ def cmd_cut(args):
     else:
         if not shutil.which("yt-dlp"):
             sys.exit("yt-dlp is not installed (pip install yt-dlp), or pass --video with the source file.")
-        if clip["platform"] == "twitch_clip":  # a clip from a stream that may still be live: take it whole
-            print(f"Downloading Twitch clip {clip['url']}")
+        if clip["platform"] in ("twitch_clip", "kick_clip"):  # a clip from a stream that may still be live: take it whole
+            print(f"Downloading {clip['platform'].split('_')[0].title()} clip {clip['url']}")
             subprocess.run(["yt-dlp", "-q", "-f", "b[height<=1080]/b", "--merge-output-format", "mp4", "-o", str(raw),
                             clip["url"]], check=True)
         else:
@@ -1120,8 +1127,9 @@ def cmd_cut(args):
           f"eq=brightness=-0.12[bg];[b]{fg}[fg];[bg][fg]overlay=(W-w)/2:(H-h)/2,"
           f"subtitles='{ass.resolve().as_posix().replace(':', chr(92) + ':')}'[v]")  # escape C: on Windows
     cmd = ["ffmpeg", "-y", "-loglevel", "error", "-i", str(raw)]
-    # No narrator unless asked: 33 of 36 top streamer-clip Shorts open straight on the stream's own audio.
-    if not args.voiceover and getattr(args, "narrate", False) and clip.get("take"):
+    # The edit tuner turns the narrator on or off per clip; it starts on (an own voice layer makes reposted stream
+    # footage original enough for the Shorts feed) and turns off if clips without it do better.
+    if not args.voiceover and (getattr(args, "narrate", False) or recipe.get("narrate") == "on") and clip.get("take"):
         args.voiceover = narrate(clip["take"], base, args.voice)
     if args.voiceover and has_audio:  # your take over the opening, stream audio ducked under it
         dur = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0",
@@ -1440,7 +1448,7 @@ def main():
         p = sub.add_parser(name)
         p.add_argument("--niche", default="streamer", choices=sorted({s["niche"] for s in SOURCES.values()}))
         if name in ("daily", "run"):
-            p.add_argument("--count", type=int, default=3, help="clips to queue")
+            p.add_argument("--count", type=int, default=2, help="clips to queue (2 a day: fewer, better clips get more reach)")
             p.add_argument("--hours", type=int, default=168, help="look at streams/videos from the last N hours")
             p.add_argument("--length", type=int, help="clip length in seconds (default: from the channel study)")
         if name == "run":
@@ -1452,7 +1460,7 @@ def main():
     p = sub.add_parser("spike", help="clip and post anything going nuts on a stream right now")
     p.add_argument("--niche", default="streamer", choices=sorted({s["niche"] for s in SOURCES.values()}))
     p.add_argument("--count", type=int, default=1, help="clips per check")
-    p.add_argument("--max-per-day", type=int, default=2, help="spike clips per day at most (YouTube upload quota)")
+    p.add_argument("--max-per-day", type=int, default=1, help="spike clips per day at most (YouTube upload quota)")
     p.add_argument("--length", type=int, help="clip length in seconds (default: the edit tuner's)")
     p.add_argument("--publish", action="store_true", help="cut and post right away")
     p.add_argument("--voice", default="en-US-BrianMultilingualNeural")
@@ -1467,8 +1475,8 @@ def main():
     p.add_argument("--whisper", default="small.en", help="faster-whisper model for captions")
     p.add_argument("--transcript", help="word timings JSON [{word,start,end}] instead of whisper")
     p.add_argument("--no-captions", action="store_true")
-    p.add_argument("--narrate", action="store_true", help="add the AI narrator over the opening (off by default: "
-                   "top clip channels open straight on the stream's audio)")
+    p.add_argument("--narrate", action="store_true", help="always add the AI narrator over the opening (otherwise the edit tuner decides; "
+                   "it starts on)")
     p.add_argument("--voice", default="en-US-BrianMultilingualNeural", help="edge-tts narrator voice (edge-tts --list-voices)")
     p.add_argument("--no-script", action="store_true", help="keep the queue's script, don't re-write it from the transcript")
     p.add_argument("--plain", action="store_true", help="no jump cuts over dead air and no punch-in zooms")

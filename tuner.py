@@ -24,6 +24,7 @@ PARAMS = {
     "caption_words": (3, [2, 3]),
     "gap": (0.6, [0.35, 0.6, 1.0]),            # silence longer than this gets jump-cut
     "layout": ("face34", ["face34", "crop43"]),
+    "narrate": ("on", ["on", "off"]),          # the AI narrator's line over the opening
 }
 BEATS = {"fast": (1.0, 1.8), "normal": (1.5, 2.5), "slow": (2.2, 3.5)}
 MIN_TRIES = 3     # a setting needs this many scored clips before it can replace the default

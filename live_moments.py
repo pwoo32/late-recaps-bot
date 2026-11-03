@@ -184,11 +184,21 @@ def twitch_clips_keyless(login, since, timeout=120):
     """The same clip list without Twitch API keys: yt-dlp reads the channel's public clips page (top clips of the last
     7 days), and we keep the ones made since `since`. Same fields as twitch_clips(), minus the VOD link, so each one
     is used as-is (downloaded whole)."""
+    return clips_page(f"https://www.twitch.tv/{login}/clips?filter=clips&range=7d", since, timeout)
+
+
+def kick_clips(slug, since, timeout=120):
+    """A Kick channel's most-viewed clips of the last week (yt-dlp, no keys; needs curl_cffi to get past Kick's
+    bot check). Same fields as twitch_clips_keyless()."""
+    return clips_page(f"https://kick.com/{slug}/clips?sort=view&range=week", since, timeout)
+
+
+def clips_page(url, since, timeout=120):
+    """[{id, url, title, view_count, created_at, duration}] from a public clips page, newer than `since`."""
     if not _yt_dlp():
         return []
     try:
-        r = subprocess.run([_yt_dlp(), "-J", "--flat-playlist", "--no-warnings", "--playlist-end", "40",
-                            f"https://www.twitch.tv/{login}/clips?filter=clips&range=7d"],
+        r = subprocess.run([_yt_dlp(), "-J", "--flat-playlist", "--no-warnings", "--playlist-end", "40", url],
                            capture_output=True, text=True, timeout=timeout)
         entries = (json.loads(r.stdout).get("entries") or []) if r.returncode == 0 and r.stdout.strip() else []
     except (subprocess.SubprocessError, OSError, ValueError):

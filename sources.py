@@ -6,6 +6,7 @@ Each source needs at least one place to find full streams/videos:
 - twitch: login name. The builder pulls the creator's most-viewed Twitch clips (what viewers clipped live).
   With TWITCH_CLIENT_ID / TWITCH_CLIENT_SECRET set (free at dev.twitch.tv) they point at the exact second in
   the VOD; without keys, yt-dlp reads the public clips page and each clip is used whole.
+- kick: channel slug. The builder pulls the most-viewed Kick clips of the week (yt-dlp, no keys) and uses each whole.
 
 permission: what you know about clipping rights. Set it to "blocked" to stop the builder from ever
 picking or downloading that creator. Update it when you join a creator's clipping program.
@@ -44,6 +45,7 @@ SOURCES = {
     "adin_ross": {
         "name": "Adin Ross", "short": "Adin", "niche": "streamer",
         "youtube": "UCey-eDTR5J6xU6pZ2f4guoA",   # Adin Live: full Brand Risk streams
+        "kick": "adinross",                       # streams live on Kick
         "aliases": ["adin ross", "adin", "brand risk"],
         "hashtags": ["#adinross", "#brandrisk"],
         "permission": "runs clipping groups on Discord; join to get paid",
@@ -52,10 +54,53 @@ SOURCES = {
     "n3on": {
         "name": "N3on", "short": "N3on", "niche": "streamer",
         "youtube": "UCsiqlKIUDHZJVG4smMvhF4w",
+        "kick": "n3on",
         "aliases": ["n3on", "neon"],
         "hashtags": ["#n3on"],
         "permission": "official paid clipping program via his Discord (creatordb.app, 2026)",
         "campaign_cpm": 0.40,   # reported $40 per 100k views
+    },
+    # Big live streamers with no YouTube VOD channel: clips come from what viewers clip on Twitch/Kick, ranked by views,
+    # so whoever is pulling the most views that day gets clipped.
+    "caseoh": {
+        "name": "CaseOh", "short": "CaseOh", "niche": "streamer",
+        "twitch": "caseoh_",
+        "aliases": ["caseoh", "case oh"],
+        "hashtags": ["#caseoh"],
+        "permission": "fan clipping is widespread and tolerated; no official program checked (Nov 2026)",
+        "campaign_cpm": None,
+    },
+    "xqc": {
+        "name": "xQc", "short": "xQc", "niche": "streamer",
+        "twitch": "xqc", "kick": "xqc",
+        "aliases": ["xqc"],
+        "hashtags": ["#xqc"],
+        "permission": "fan clipping is widespread and tolerated; no official program checked (Nov 2026)",
+        "campaign_cpm": None,
+    },
+    "lacy": {
+        "name": "Lacy", "short": "Lacy", "niche": "streamer",
+        "twitch": "lacy",
+        "aliases": ["lacy"],
+        "hashtags": ["#lacy"],
+        "permission": "fan clipping is widespread and tolerated; no official program checked (Nov 2026)",
+        "campaign_cpm": None,
+    },
+    "plaqueboymax": {
+        "name": "PlaqueBoyMax", "short": "Max", "niche": "streamer",
+        "twitch": "plaqueboymax",
+        "aliases": ["plaqueboymax", "plaque boy max"],
+        "hashtags": ["#plaqueboymax"],
+        "permission": "fan clipping is widespread and tolerated; no official program checked (Nov 2026)",
+        "campaign_cpm": None,
+    },
+    "stableronaldo": {
+        "name": "Stable Ronaldo", "short": "Ronaldo", "niche": "streamer",
+        "twitch": "stableronaldo",
+        "aliases": ["stableronaldo", "stable ronaldo"],
+        "hashtags": ["#stableronaldo"],
+        "permission": "fan clipping is widespread and tolerated; no official program checked (Nov 2026)",
+        "campaign_cpm": None,
     },
     # Self-improvement runner-up niche: long podcasts with timestamped comments clip well.
     "modern_wisdom": {
