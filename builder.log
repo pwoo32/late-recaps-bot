@@ -945,3 +945,34 @@ Title/description: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/bui
   uploaded https://youtube.com/shorts/J7NcAGVrUUs (public now)
   TikTok: [1] draft in your TikTok inbox. Open the notification, paste this caption, post:
     Jynxzi: "Chat What's My Kd?" 🔥 #jynxzi #viral #fyp
+[ishowspeed] reading recent streams/videos
+[kai_cenat] reading recent streams/videos
+  reading the room on "PLEASE DON’T WATCH THIS STREAM" (chat replay, most replayed)
+    6 chat spikes
+[jynxzi] reading recent streams/videos
+  reading the room on "MONDAY NIGHT MIRACLE STREAM" (chat replay, most replayed)
+    5 chat spikes
+[adin_ross] reading recent streams/videos
+[n3on] reading recent streams/videos
+Clip council: 5 candidates, every agent votes...
+  picked Jynxzi at 2:31:14 (council 0.69): highest combined vote
+Writing scripts...
+  [1] Jynxzi at 2:31:14: writing from captions (60 words)
+Scripts written by the free writer (no AI model).
+Done. Queue: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/spike_2026-11-03_1254/queue.md  (quota used: 22)
+WARNING: [youtube] DqVN39N0uXc: Some web_embedded client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for your account. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[0;93m2026-11-03 13:00:16.096861206 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+[1] Jynxzi: "What Is That?" 🔥
+Downloading 2:30:54-2:31:24 of https://www.youtube.com/watch?v=DqVN39N0uXc
+Transcribing with whisper small.en (first run downloads the model)...
+Re-writing the script from what's actually said in the clip...
+  [1] Jynxzi at 2:31:14: writing from transcript (46 words)
+Scripts written by ollama.
+  [1] model title "Jynxzi Can't Believe What Just Happened 😭" isn't backed by what's said (happened, unexpected, surprising, catches, attention); using the free writer
+Cut 10.6s of dead air (3 jump cuts).
+Framing on the face at 12% across.
+Done. Video: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/spike_2026-11-03_1254/clips/01_DqVN39N0uXc_302.mp4
+Title/description: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/spike_2026-11-03_1254/clips/01_DqVN39N0uXc_302.txt
+  uploaded https://youtube.com/shorts/Hrx-nQ8xhpU (public now)
+  TikTok: [1] draft in your TikTok inbox. Open the notification, paste this caption, post:
+    Jynxzi: "What Is It?" 🔥 #jynxzi #viral #fyp

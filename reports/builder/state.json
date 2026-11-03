@@ -78,7 +78,8 @@
   "yTjFkUmcVM4@23",
   "TTFWbsT1jlM@6",
   "IkhjzYsvCmw@14",
-  "DqVN39N0uXc@483"
+  "DqVN39N0uXc@483",
+  "DqVN39N0uXc@302"
  ],
  "queued": {
   "L6S9Vb3RLy4@186": {
@@ -616,6 +617,29 @@
     "audience": 0.5
    },
    "video_id": "J7NcAGVrUUs"
+  },
+  "DqVN39N0uXc@302": {
+   "title": "Jynxzi: \"What Is It?\" \ud83d\udd25",
+   "source": "jynxzi",
+   "post_utc": "2026-11-03 12:54",
+   "recipe": {
+    "length": 30,
+    "punch": 0.14,
+    "beat": "normal",
+    "caption_words": 3,
+    "gap": 0.6,
+    "layout": "face34",
+    "test": null
+   },
+   "council": {
+    "trend": 1.0,
+    "study": 0.35,
+    "analytics": 0.66,
+    "live": 0.55,
+    "script": 1.0,
+    "audience": 0.5
+   },
+   "video_id": "Hrx-nQ8xhpU"
   }
  },
  "channel": "UCbK9EejOk5UVzI_l8F3f8kA",
@@ -1119,12 +1143,76 @@
      "w"
     ]
    }
+  ],
+  "jdV0drr9PsA": [
+   {
+    "t": 2794,
+    "ratio": 5.1,
+    "msgs": 169,
+    "sample": []
+   },
+   {
+    "t": 16029,
+    "ratio": 4.2,
+    "msgs": 17,
+    "sample": [
+     "W",
+     "W",
+     "W",
+     "W"
+    ]
+   },
+   {
+    "t": 4184,
+    "ratio": 4.1,
+    "msgs": 149,
+    "sample": [
+     "W",
+     "W",
+     "W",
+     "w",
+     "w"
+    ]
+   },
+   {
+    "t": 14444,
+    "ratio": 4.0,
+    "msgs": 18,
+    "sample": [
+     "YOOOOOOOO KAI",
+     "W",
+     "Ww",
+     "Ww",
+     "W"
+    ]
+   },
+   {
+    "t": 10629,
+    "ratio": 3.8,
+    "msgs": 150,
+    "sample": [
+     "w",
+     "W",
+     "W",
+     "w",
+     "w"
+    ]
+   },
+   {
+    "t": 14804,
+    "ratio": 3.8,
+    "msgs": 32,
+    "sample": [
+     "AYO",
+     "w in the chat (im fcked up ts game is DC Universe online I'm might be cooked:broken_heart::wilted_flower::pensive_face:)"
+    ]
+   }
   ]
  },
  "edit": {
   "stats": {}
  },
  "spike_posts": {
-  "2026-11-03": 1
+  "2026-11-03": 2
  }
 }

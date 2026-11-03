@@ -1,0 +1,79 @@
+[
+ {
+  "id": 1,
+  "source": "jynxzi",
+  "creator": "Jynxzi",
+  "platform": "youtube",
+  "video_id": "DqVN39N0uXc",
+  "video_title": "MONDAY NIGHT MIRACLE STREAM",
+  "url": "https://www.youtube.com/watch?v=DqVN39N0uXc&t=9074s",
+  "moment": "2:31:14",
+  "start": 9054,
+  "end": 9084,
+  "rank": 7.7,
+  "signal": "chat went 8.9x its normal pace",
+  "signals": [
+   "chat spike"
+  ],
+  "quotes": [
+   "bro blind deaf and dumb",
+   "lll",
+   "l"
+  ],
+  "stream_age_h": 12.6,
+  "spike": true,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": null
+  },
+  "council": {
+   "trend": 1.0,
+   "study": 0.35,
+   "analytics": 0.66,
+   "live": 0.55,
+   "script": 1.0,
+   "audience": 0.5
+  },
+  "council_why": "highest combined vote",
+  "post_utc": "2026-11-03 12:54",
+  "post_local": "Tue 07:54 AM ET",
+  "title": "Jynxzi: \"What Is It?\" 🔥",
+  "hook": "WHAT IS IT?",
+  "context": "Jynxzi live: Monday Night Miracle",
+  "take": "Jynxzi had no idea what was about to happen.",
+  "draft": false,
+  "description": "Jynxzi during \"MONDAY NIGHT MIRACLE STREAM\". blind deaf and dumb.\n\nFull stream by Jynxzi: https://www.youtube.com/watch?v=DqVN39N0uXc&t=9074s\nGo support Jynxzi, all credit to them.\n\n#jynxzi #viral #shorts",
+  "key": "DqVN39N0uXc@302",
+  "permission": "fan clipping tolerated; check for a Whop campaign",
+  "summary": "Jynxzi during \"MONDAY NIGHT MIRACLE STREAM\". blind deaf and dumb.",
+  "hashtags": [
+   "#jynxzi",
+   "#viral"
+  ],
+  "tags": [
+   "jynxzi",
+   "monday",
+   "miracle",
+   "jynxzi clips",
+   "streamer clips"
+  ],
+  "writer": "free",
+  "script_source": "transcript",
+  "upload_tags": [
+   "jynxzi",
+   "monday",
+   "miracle",
+   "jynxzi clips",
+   "streamer clips",
+   "shorts"
+  ],
+  "youtube_id": "Hrx-nQ8xhpU",
+  "tiktok_id": "v_inbox_file~v2.7703930262727444493",
+  "tiktok_caption": "Jynxzi: \"What Is It?\" 🔥 #jynxzi #viral #fyp"
+ }
+]

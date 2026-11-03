@@ -1,0 +1,54 @@
+[
+ {
+  "id": 1,
+  "source": "jynxzi",
+  "creator": "Jynxzi",
+  "platform": "youtube",
+  "video_id": "DqVN39N0uXc",
+  "video_title": "MONDAY NIGHT MIRACLE STREAM",
+  "url": "https://www.youtube.com/watch?v=DqVN39N0uXc&t=9074s",
+  "moment": "2:31:14",
+  "start": 9054,
+  "end": 9084,
+  "rank": 7.7,
+  "signal": "chat went 8.9x its normal pace",
+  "signals": [
+   "chat spike"
+  ],
+  "quotes": [
+   "bro blind deaf and dumb",
+   "lll",
+   "l"
+  ],
+  "stream_age_h": 12.6,
+  "spike": true,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": null
+  },
+  "council": {
+   "trend": 1.0,
+   "study": 0.35,
+   "analytics": 0.66,
+   "live": 0.55,
+   "script": 1.0,
+   "audience": 0.5
+  },
+  "council_why": "highest combined vote",
+  "post_utc": "2026-11-03 12:54",
+  "post_local": "Tue 07:54 AM ET",
+  "title": "Jynxzi blind deaf and dumb 🤯",
+  "hook": "BLIND DEAF AND DUMB",
+  "context": "Jynxzi live, MONDAY NIGHT MIRACLE STREAM",
+  "take": "Nobody in the room saw this coming.",
+  "draft": true,
+  "description": "Jynxzi live, MONDAY NIGHT MIRACLE STREAM\n\nFull stream by Jynxzi: https://www.youtube.com/watch?v=DqVN39N0uXc&t=9074s\nGo support Jynxzi, all credit to them.\n\n#jynxzi #ishowspeed #edit #shorts #kaicenat",
+  "key": "DqVN39N0uXc@302",
+  "permission": "fan clipping tolerated; check for a Whop campaign"
+ }
+]
