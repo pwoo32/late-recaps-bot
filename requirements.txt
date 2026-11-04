@@ -3,7 +3,9 @@ yt-dlp[default,curl-cffi]>=2026.8   # [default]: YouTube challenge solver; curl-
 faster-whisper>=1.2
 anthropic>=1.0
 pydantic>=2
-edge-tts>=7
+kokoro-onnx>=0.4   # narrator voice: open Kokoro model, the most human-sounding free one
+soundfile>=0.12
+edge-tts>=7        # narrator fallback
 google-api-python-client>=2.150
 google-auth-oauthlib>=1.2
 tzdata
