@@ -230,7 +230,8 @@ def write(clip, src, hot_titles=(), lessons=None):
                       "sweet": ["THIS ONE HITS DIFFERENT", "WAIT FOR HIS ANSWER", "HE MEANT EVERY WORD"]}[md], seed)
     hook = _cap_words(hook, 6)
 
-    context = f"{full} live: {event}" + (f", with {guest}" if guest else "")
+    site = {"twitch_clip": " on Twitch", "kick_clip": " on Kick"}.get(clip.get("platform"), "")
+    context = (f"{full} live{site}" if event == "stream" else f"{full} live: {event}") + (f", with {guest}" if guest else "")
     narrator = _pick([f"Bro, {short} had no idea what was about to happen.", f"Okay, keep your eyes on {short} right here.",
                       f"This is exactly why chat can't stop clipping {short}.", "Nobody in the room saw this coming. Watch."],
                      seed)
