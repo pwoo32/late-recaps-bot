@@ -983,11 +983,18 @@ KOKORO_FILES = {  # Kokoro v1.0 (Apache-2.0): an 82M-parameter open voice model,
     "kokoro-v1.0.onnx": "https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/kokoro-v1.0.onnx",
     "voices-v1.0.bin": "https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/voices-v1.0.bin",
 }
-NARRATOR_VOICE = os.environ.get("NARRATOR_VOICE", "am_michael")  # Kokoro voice; an en-US-... name means edge-tts
+NARRATOR_VOICE = os.environ.get("NARRATOR_VOICE", "am_fenrir")  # Kokoro voice; an en-US-... name means edge-tts
 
 
 SAY_AS = {"N3on": "Neon", "xQc": "X Q C", "Jynxzi": "Jinxy", "CaseOh": "Case Oh", "PlaqueBoyMax": "Plaque Boy Max",
           "IShowSpeed": "I Show Speed", "Kai Cenat": "Kai Senat"}
+
+
+# Voice polish: cut rumble and hiss, a little low-mid warmth and presence like a real mic, gentle compression, a very
+# small room so it isn't studio-dry, then loudness matched to the stream.
+VOICE_CHAIN = ("highpass=f=85,lowpass=f=11500,equalizer=f=180:t=q:w=1:g=2,equalizer=f=3200:t=q:w=1.2:g=2.5,"
+               "acompressor=threshold=-20dB:ratio=3:attack=5:release=120,aecho=0.9:0.5:18|31:0.1|0.06,"
+               "loudnorm=I=-15:TP=-1.5:LRA=7")
 
 
 def speakable(text):
@@ -1022,9 +1029,33 @@ def kokoro_voice(text, out, voice, speed=1.08):
                         fh.write(chunk)
             tmp.replace(f)
     k = Kokoro(str(KOKORO_DIR / "kokoro-v1.0.onnx"), str(KOKORO_DIR / "voices-v1.0.bin"))
-    samples, sr = k.create(text, voice=voice, speed=speed, lang="en-us" if voice[:1] == "a" else "en-gb")
+    samples, sr = human_read(k, text, voice, speed)
     soundfile.write(str(out), samples, sr)
     return out
+
+
+def human_read(k, text, voice, speed=1.08):
+    """Read the line phrase by phrase the way a person talks: each phrase at a slightly different pace (a touch quicker
+    on a question or exclamation, slower on the last words), with short, uneven breaths between phrases instead of
+    the model's evenly spaced pauses. Seeded by the text, so the same line always comes out the same."""
+    import random
+    import numpy as np
+    rnd = random.Random(text)
+    lang = "en-us" if voice[:1] == "a" else "en-gb"
+    phrases = [p for p in re.split(r"(?<=[,.!?;:])\s+", text) if p.strip()]
+    out, sr = [], 24000
+    for i, ph in enumerate(phrases):
+        last = i == len(phrases) - 1
+        pace = speed * rnd.uniform(0.96, 1.06) * (1.04 if ph[-1:] in "!?" else 1.0) * (0.96 if last else 1.0)
+        audio, sr = k.create(ph, voice=voice, speed=round(pace, 3), lang=lang)
+        loud = np.flatnonzero(np.abs(audio) > 0.01)  # trim the model's own padding, then add our own gap
+        if loud.size:
+            audio = audio[max(0, loud[0] - int(0.02 * sr)): loud[-1] + int(0.06 * sr)]
+        out.append(audio)
+        if not last:
+            gap = rnd.uniform(0.28, 0.42) if ph[-1] in ".!?" else rnd.uniform(0.1, 0.2)
+            out.append(np.zeros(int(gap * sr), dtype=audio.dtype))
+    return np.concatenate(out), sr
 
 
 def narrate(text, out_base, voice=None):
@@ -1205,8 +1236,7 @@ def cmd_cut(args):
         lead, d = 0.25, dur + 0.25
         duck = (f"if(lt(t,{lead}),1-0.7*t/{lead},if(lt(t,{d:.2f}),0.3,if(lt(t,{d + 0.5:.2f}),0.3+0.7*(t-{d:.2f})/0.5,1)))")
         af = (f"{ain}volume='{duck}':eval=frame[s];"
-              f"[1:a]aresample=48000,highpass=f=90,lowpass=f=12000,acompressor=threshold=-20dB:ratio=3:attack=5:release=120,"
-              f"loudnorm=I=-15:TP=-1.5:LRA=7,adelay={int(lead * 1000)}|{int(lead * 1000)},volume=1.1[vo];"
+              f"[1:a]aresample=48000,{VOICE_CHAIN},adelay={int(lead * 1000)}|{int(lead * 1000)},volume=1.1[vo];"
               f"[s][vo]amix=inputs=2:duration=first:normalize=0[aud]")
         cmd += ["-filter_complex", vf + ";" + af, "-map", "[v]", "-map", "[aud]"]
     elif n > 1 and has_audio:
