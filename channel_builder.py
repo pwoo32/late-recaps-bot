@@ -284,6 +284,8 @@ def youtube_candidates(yt, key, src, state, since, now, chat_budget=240, live_st
     ids = yt.recent_uploads("UU" + cid[2:], n=15)
     out, streams_read = [], 0
     for it in yt.videos(ids):
+        if not it.get("contentDetails", {}).get("duration"):  # live right now or upcoming: no VOD to cut from yet
+            continue
         sec = iso_duration_seconds(it["contentDetails"]["duration"])
         published = datetime.fromisoformat(it["snippet"]["publishedAt"].replace("Z", "+00:00"))
         if sec < MIN_SOURCE_SECONDS or published < since:
