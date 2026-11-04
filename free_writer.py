@@ -220,8 +220,9 @@ def write(clip, src, hot_titles=(), lessons=None):
     hook = _cap_words(hook, 6)
 
     context = f"{full} live: {event}" + (f", with {guest}" if guest else "")
-    narrator = _pick([f"{short} had no idea what was about to happen.", f"Keep your eyes on {short} right here.",
-                      f"This is why chat can't stop clipping {short}.", "Nobody in the room saw this coming."], seed)
+    narrator = _pick([f"Bro, {short} had no idea what was about to happen.", f"Okay, keep your eyes on {short} right here.",
+                      f"This is exactly why chat can't stop clipping {short}.", "Nobody in the room saw this coming. Watch."],
+                     seed)
     summary = f"{full} during \"{_clean(clip.get('video_title', ''))[:80]}\"" + (f" with {', '.join(people[:2])}" if people else "") + "."
     if q:
         summary += f" {q[:120].rstrip('.')}." if not q.endswith("?") else f" {q[:120]}"

@@ -978,18 +978,76 @@ def transcribe(path, model_name):
     return [{"word": w.word, "start": w.start, "end": w.end} for s in segs for w in (s.words or [])]
 
 
-def narrate(text, out_base, voice):
-    """Speak the take with an AI voice (default Brian: casual, about 170 words a minute, the pace guides
-    recommend for Shorts narration). Tries edge-tts (natural Microsoft neural voices, free),
-    then macOS `say`, then espeak-ng. Returns the audio path, or None if no voice is available."""
-    text = EMOJI.sub("", text).strip()
-    if not text:
+KOKORO_DIR = Path.home() / ".cache" / "clip-builder" / "kokoro"
+KOKORO_FILES = {  # Kokoro v1.0 (Apache-2.0): an 82M-parameter open voice model, the most human-sounding free one
+    "kokoro-v1.0.onnx": "https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/kokoro-v1.0.onnx",
+    "voices-v1.0.bin": "https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/voices-v1.0.bin",
+}
+NARRATOR_VOICE = os.environ.get("NARRATOR_VOICE", "am_michael")  # Kokoro voice; an en-US-... name means edge-tts
+
+
+SAY_AS = {"N3on": "Neon", "xQc": "X Q C", "Jynxzi": "Jinxy", "CaseOh": "Case Oh", "PlaqueBoyMax": "Plaque Boy Max",
+          "IShowSpeed": "I Show Speed", "Kai Cenat": "Kai Senat"}
+
+
+def speakable(text):
+    """The take as a person would say it: no emoji or hashtags, no ALL-CAPS words (voices spell those out),
+    symbols said as words, and a full stop so the voice lands the line instead of trailing off."""
+    text = EMOJI.sub("", re.sub(r"[#@]\w+", "", text or ""))
+    text = re.sub(r"\b[A-Z]{2,}\b", lambda m: m.group(0) if m.group(0) in ("OK", "TV", "NBA", "NFL", "GTA", "IRL")
+                  else m.group(0).lower(), text)
+    text = re.sub(r"\$(\d[\d,]*)\s?[kK]\b", lambda m: f"{m.group(1)} thousand dollars", text)
+    text = re.sub(r"\$(\d[\d,]*)", lambda m: f"{m.group(1)} dollars", text)
+    for name, said in SAY_AS.items():  # streamer names voices get wrong
+        text = re.sub(rf"\b{re.escape(name)}\b", said, text, flags=re.I)
+    text = re.sub(r"\bvs\.?\b", "versus", text, flags=re.I).replace("&", " and ").replace('"', "")
+    text = re.sub(r"\s+", " ", text).strip(" -")
+    return text + ("" if not text or text[-1] in ".!?" else ".")
+
+
+def kokoro_voice(text, out, voice, speed=1.08):
+    """Kokoro on the CPU (a couple of seconds a line). Downloads the model (~350 MB) once into the cache."""
+    import soundfile
+    from kokoro_onnx import Kokoro
+    KOKORO_DIR.mkdir(parents=True, exist_ok=True)
+    for name, url in KOKORO_FILES.items():
+        f = KOKORO_DIR / name
+        if not f.exists() or f.stat().st_size < 1_000_000:
+            print(f"Downloading the narrator voice model ({name})...")
+            tmp = f.with_suffix(".part")
+            with requests.get(url, stream=True, timeout=120) as r:
+                r.raise_for_status()
+                with open(tmp, "wb") as fh:
+                    for chunk in r.iter_content(1 << 20):
+                        fh.write(chunk)
+            tmp.replace(f)
+    k = Kokoro(str(KOKORO_DIR / "kokoro-v1.0.onnx"), str(KOKORO_DIR / "voices-v1.0.bin"))
+    samples, sr = k.create(text, voice=voice, speed=speed, lang="en-us" if voice[:1] == "a" else "en-gb")
+    soundfile.write(str(out), samples, sr)
+    return out
+
+
+def narrate(text, out_base, voice=None):
+    """Speak the take in the most human free voice available. Kokoro first (an open model that sounds like a person
+    talking, not a reader), then edge-tts (Microsoft neural voices, slightly brisk), then macOS `say`, then espeak-ng.
+    Returns the audio path, or None if no voice is available. The mix (EQ, compression, ducking) happens in cut."""
+    text = speakable(text)
+    if len(text) < 3:
         return None
+    voice = voice or NARRATOR_VOICE
+    if not voice.startswith("en-"):
+        try:
+            out = kokoro_voice(text, out_base.with_suffix(".take.wav"), voice)
+            if out.exists() and out.stat().st_size > 1000:
+                return out
+        except Exception as e:
+            print(f"Kokoro voice failed ({type(e).__name__}: {str(e)[:120]}); trying edge-tts.")
+        voice = "en-US-AndrewMultilingualNeural"
     try:
         import asyncio
         import edge_tts
         out = out_base.with_suffix(".take.mp3")
-        asyncio.run(edge_tts.Communicate(text, voice).save(str(out)))
+        asyncio.run(edge_tts.Communicate(text, voice, rate="+6%").save(str(out)))
         if out.exists() and out.stat().st_size > 1000:
             return out
     except Exception as e:
@@ -1000,7 +1058,7 @@ def narrate(text, out_base, voice):
             out = out_base.with_suffix(".take.aiff" if tool == "say" else ".take.wav")
             if subprocess.run(cmd(out)).returncode == 0 and out.exists():
                 return out
-    print("No text-to-speech available (pip install edge-tts): clip will have no narrator.")
+    print("No text-to-speech available (pip install kokoro-onnx soundfile): clip will have no narrator.")
     return None
 
 
@@ -1141,7 +1199,14 @@ def cmd_cut(args):
         dur = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0",
                                     str(args.voiceover)], capture_output=True, text=True).stdout.strip() or 0)
         cmd += ["-i", str(args.voiceover)]
-        af = (f"{ain}volume='if(lt(t,{dur:.2f}),0.25,1)':eval=frame[s];[1:a]volume=1.6[vo];"
+        # Sound like someone talking over the stream, not a voice pasted on top: the voice comes in a beat late,
+        # gets the low rumble cut, gentle compression and a level matched to the stream, and the stream dips
+        # under it smoothly and swells back over half a second instead of snapping.
+        lead, d = 0.25, dur + 0.25
+        duck = (f"if(lt(t,{lead}),1-0.7*t/{lead},if(lt(t,{d:.2f}),0.3,if(lt(t,{d + 0.5:.2f}),0.3+0.7*(t-{d:.2f})/0.5,1)))")
+        af = (f"{ain}volume='{duck}':eval=frame[s];"
+              f"[1:a]aresample=48000,highpass=f=90,lowpass=f=12000,acompressor=threshold=-20dB:ratio=3:attack=5:release=120,"
+              f"loudnorm=I=-15:TP=-1.5:LRA=7,adelay={int(lead * 1000)}|{int(lead * 1000)},volume=1.1[vo];"
               f"[s][vo]amix=inputs=2:duration=first:normalize=0[aud]")
         cmd += ["-filter_complex", vf + ";" + af, "-map", "[v]", "-map", "[aud]"]
     elif n > 1 and has_audio:
@@ -1460,7 +1525,7 @@ def main():
         if name == "run":
             p.add_argument("--publish", action="store_true", help="also cut and upload the queue")
             p.add_argument("--narrate", action="store_true", help="add the AI narrator over the opening (off by default)")
-            p.add_argument("--voice", default="en-US-BrianMultilingualNeural", help="edge-tts narrator voice")
+            p.add_argument("--voice", default=None, help="narrator voice (Kokoro name, or en-US-... for edge-tts)")
         if name == "track":
             p.add_argument("--channel", help="your channel @handle or UC... id (remembered after the first run)")
     p = sub.add_parser("spike", help="clip and post anything going nuts on a stream right now")
@@ -1469,7 +1534,7 @@ def main():
     p.add_argument("--max-per-day", type=int, default=1, help="spike clips per day at most (YouTube upload quota)")
     p.add_argument("--length", type=int, help="clip length in seconds (default: the edit tuner's)")
     p.add_argument("--publish", action="store_true", help="cut and post right away")
-    p.add_argument("--voice", default="en-US-BrianMultilingualNeural")
+    p.add_argument("--voice", default=None)
     p = sub.add_parser("cut")
     p.add_argument("id", type=int, help="queue item number")
     p.add_argument("--queue", help="queue folder (default: latest daily_*)")
@@ -1483,7 +1548,7 @@ def main():
     p.add_argument("--no-captions", action="store_true")
     p.add_argument("--narrate", action="store_true", help="always add the AI narrator over the opening (otherwise the edit tuner decides; "
                    "it starts on)")
-    p.add_argument("--voice", default="en-US-BrianMultilingualNeural", help="edge-tts narrator voice (edge-tts --list-voices)")
+    p.add_argument("--voice", default=None, help="narrator voice: a Kokoro voice (am_michael, am_puck, af_heart...) or an edge-tts name (en-US-...)")
     p.add_argument("--no-script", action="store_true", help="keep the queue's script, don't re-write it from the transcript")
     p.add_argument("--plain", action="store_true", help="no jump cuts over dead air and no punch-in zooms")
     sub.add_parser("auth")
@@ -1500,7 +1565,7 @@ def main():
     p.add_argument("--layout", choices=["face34", "crop43", "fit", "fill"], help="framing (default: the edit tuner's pick, face34)")
     p.add_argument("--whisper", default="small.en")
     p.add_argument("--narrate", action="store_true", help="add the AI narrator over the opening")
-    p.add_argument("--voice", default="en-US-BrianMultilingualNeural")
+    p.add_argument("--voice", default=None)
     p.add_argument("--skip-gate", action="store_true", help="post without the every-agent check (not recommended)")
     args = ap.parse_args()
 

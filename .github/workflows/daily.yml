@@ -143,6 +143,13 @@ jobs:
           q=$(grep -oE "Queue: [^ ]+queue.md" "$RUNNER_TEMP/run.log" | tail -1 | sed -E 's/^Queue: //; s#/queue.md$##')
           echo "queue=$q" >> "$GITHUB_OUTPUT"
 
+      - name: Narrator voice cache
+        if: steps.mode.outputs.skip != 'true' && (steps.mode.outputs.mode == 'daily' || steps.spike.outputs.queue != '')
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/clip-builder/kokoro
+          key: kokoro-v1.0
+
       - name: Whisper model cache
         if: steps.mode.outputs.skip != 'true' && (steps.mode.outputs.mode == 'daily' || steps.spike.outputs.queue != '')
         uses: actions/cache@v4
