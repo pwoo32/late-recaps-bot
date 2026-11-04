@@ -113,11 +113,17 @@ def _post(path, access, body):
 
 
 def caption(clip):
-    tags = [t for t in clip.get("hashtags", []) if t.startswith("#") and t.lower() != "#shorts"]
+    """TikTok ranks and searches on the caption's words, so it says who and what in plain words (the first line of
+    the description) and uses topic hashtags, not #fyp/#viral, which tell TikTok nothing about the clip."""
+    skip = {"#shorts", "#fyp", "#foryou", "#foryoupage", "#viral"}
+    tags = [t for t in clip.get("hashtags", []) if t.startswith("#") and t.lower() not in skip]
     if not tags:
-        tags = [w for w in clip.get("description", "").split() if w.startswith("#") and w.lower() != "#shorts"]
-    tags = list(dict.fromkeys(tags + ["#fyp"]))[:6]
-    return f"{clip['title']} {' '.join(tags)}".strip()[:2200]
+        tags = [w for w in clip.get("description", "").split() if w.startswith("#") and w.lower() not in skip]
+    where = {"twitch": "#twitchclips", "twitch_clip": "#twitchclips", "kick_clip": "#kickclips"}.get(clip.get("platform"))
+    tags = list(dict.fromkeys(tags + [t for t in (where, "#streamer", "#streamerclips") if t]))[:5]
+    about = (clip.get("description") or "").split("\n", 1)[0].strip()
+    about = "" if about.lower() in clip["title"].lower() else about[:150]
+    return " ".join(p for p in (clip["title"], about, " ".join(tags)) if p).strip()[:2200]
 
 
 def upload(path, clip, mode="inbox"):

@@ -389,7 +389,8 @@ REACTION_WORDS = set("""believe cant can't loses lost reacts reaction gets got s
 finally again after when just what this that than with from into over about never ever every insane crazy wild
 moment moments reacts tries trying tried hears sees watches finds realizes realised realizes cant couldn't won't
 stop stops leaves left goes going makes made takes took asks asked tells told says said gets meets meet face
-first time last back down without while still really actually completely totally instantly""".split())
+first time last back down without while still really actually completely totally instantly
+something someone seeing seen sees gives give gave shock shocks shocked""".split())
 
 
 def ungrounded(clip, script):
