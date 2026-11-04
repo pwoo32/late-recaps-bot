@@ -85,6 +85,13 @@ jobs:
         with:
           deno-version: v2.x
 
+      - name: Free disk space   # the narrator, script and caption models need ~15 GB; the runner image ships ~30 GB of SDKs we never use
+        if: steps.mode.outputs.skip != 'true'
+        run: |
+          sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc /opt/hostedtoolcache/CodeQL /usr/local/share/boost \
+            /usr/share/swift /usr/local/.ghcup /usr/local/share/powershell /usr/local/share/chromium || true
+          df -h / | tail -1
+
       - name: Install tools
         if: steps.mode.outputs.skip != 'true'
         run: |
