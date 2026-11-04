@@ -17,7 +17,12 @@ jobs:
       - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
       - run: |
           pip install -q torch torchaudio --index-url https://download.pytorch.org/whl/cpu
-          pip install -q -r requirements.txt chatterbox-tts --extra-index-url https://download.pytorch.org/whl/cpu
+          pip install -q -r requirements.txt
+          # chatterbox's full deps drag in Chinese/Japanese tokenizers and a web UI that don't build here; English needs these
+          pip install -q --no-deps chatterbox-tts
+          pip install -q "numpy<2" librosa==0.11.0 s3tokenizer transformers==5.2.0 diffusers==0.29.0 resemble-perth \
+            conformer==0.3.2 safetensors==0.5.3 pyloudnorm omegaconf torch==2.6.0 torchaudio==2.6.0 \
+            --extra-index-url https://download.pytorch.org/whl/cpu
       - run: python tools/voice_test.py
       - run: |
           git config user.name late-recaps-bot
