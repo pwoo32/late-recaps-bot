@@ -162,6 +162,15 @@ def write(clip, src, hot_titles=(), lessons=None):
     quotes = [q for q in quotes if not risky(q)]
     people = [p for p in people if not risky(p)]
     guest = people[0] if people else None
+    # A Twitch/Kick clip's title is what the viewer who clipped it saw happen, not the stream's name: use it as the
+    # topic and don't tack it on as "At <event>" (that gave titles like "Left Speechless At Was Shook From Ai").
+    clip_topic = None
+    if clip.get("platform") in ("twitch_clip", "kick_clip"):
+        ct = _clean(clip.get("video_title", ""))
+        ct = re.sub(rf"^(?:{'|'.join(map(re.escape, sorted(creator_words, key=len, reverse=True)))})\b[\s:,-]*", "", ct, flags=re.I).strip()
+        if 2 <= len(ct.split()) <= 9 and not risky(ct) and re.search(r"[a-z]{3}", ct, re.I):
+            clip_topic = ct
+        event = "stream"
     if risky(event):
         event = "stream"
     seed = clip.get("video_id", "") + str(clip.get("moment", ""))
@@ -191,6 +200,8 @@ def write(clip, src, hot_titles=(), lessons=None):
         title = _pick(with_guest, seed).format(s=short, g=guest)
     elif money and versus:
         title = f"{short} Plays For {money} And {_pick(react, seed)}"
+    elif clip_topic:
+        title = f"{short}: \"{_title_case(clip_topic.lower())}\""
     elif said and len(said.split()) <= 9:
         title = f"{short}: \"{_title_case(said)}\""
     elif line and kind in ("question", "exclaim"):
