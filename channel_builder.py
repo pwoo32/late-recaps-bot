@@ -332,6 +332,10 @@ def youtube_candidates(yt, key, src, state, since, now, chat_budget=240, live_st
 
 
 TWITCH_BOOST = 1.3  # favour moments viewers clipped live on Twitch (asked for Nov 2026)
+# Cuts of a creator's own YouTube VOD re-upload footage YouTube already has. All 36 Shorts up to Nov 4 2026 were
+# YouTube VOD cuts and the Shorts feed showed almost none of them (median 0 views), so they rank well below moments
+# from Twitch/Kick, and a day posts at most one.
+YOUTUBE_VOD_WEIGHT = 0.5
 
 
 def twitch_candidates(key, src, since, now, h=None):
@@ -412,7 +416,8 @@ def rank_moments(moments, demand, state, words=None, change=None):
         text = " ".join(m["quotes"] + [m["video_title"]]).lower()
         topical = 1 + 0.15 * min(sum(1 for w in (words or {}).get(m["source"], ()) if w in text), 3)  # what's viral now
         heat = 0.8 + 0.6 * m["heat"] if m.get("heat") is not None else 1.0  # most-replayed part of the stream
-        m["rank"] = round(m["score"] * hot * learned * fresh * reach * paid * rising * topical * heat, 2)
+        offsite = YOUTUBE_VOD_WEIGHT if m["platform"] == "youtube" else 1.0
+        m["rank"] = round(m["score"] * hot * learned * fresh * reach * paid * rising * topical * heat * offsite, 2)
         m["key"] = f"{m['video_id']}@{m['t'] // 30}"
         b = m["t"] // 30  # same scene: within 3 buckets (~90s) of something already posted from this stream
         m["used"] = m["key"] in used or any(abs(b - u) <= 3 for u in used_at.get(m["video_id"], ()))
@@ -508,7 +513,10 @@ def cmd_daily(args, yt=None, state=None):
     ctx = {"state": state, "pb": pb, "demand": demand, "change": change, "words": trend_words(videos, niche),
            "hot": script_agent.trending(niche, [{"source": k, "creator": s["name"]} for k, s in SOURCES.items()])[1],
            "asks": council.audience_asks(yt, state)}
-    picks = council.decide(shortlist, args.count, ctx, cap=allowed, use_chair=not spike, out_dir=out_dir)
+    def pick_ok(m, picks):  # and at most one cut of a YouTube VOD a run (see YOUTUBE_VOD_WEIGHT)
+        return allowed(m, picks) and not (m["platform"] == "youtube" and any(p["platform"] == "youtube" for p in picks))
+
+    picks = council.decide(shortlist, args.count, ctx, cap=pick_ok, use_chair=not spike, out_dir=out_dir)
     for m in picks:
         print(f"  picked {SOURCES[m['source']]['short']} at {fmt_ts(m['t'])} (council {m['council']:.2f}): {m['council_why'][:120]}")
     if not picks:

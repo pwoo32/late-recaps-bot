@@ -31,10 +31,10 @@ MONEY = re.compile(r"\$\s?\d[\d,.]*\s?(?:k|m|million|thousand)?\b", re.I)
 # clip removed from TikTok (Nov 2026: "STORE ROBBERY!" on a clip where nothing was robbed).
 RISKY = re.compile(r"\b(rob|robs|robbed|robber(?:y|ies|s)?|robbing|steal(?:s|ing)?|stole|stolen|shoplift\w*|theft|thie(?:f|ves)|"
                    r"burglar\w*|loot(?:ed|ing)?|heist|scam(?:s|med|mer)?|shoot(?:s|ing|er)?|shot|guns?|glock|pistol|rifle|"
-                   r"firearm|weapon\w*|knife|knives|stab\w*|kill(?:s|ed|ing|er)?|murder\w*|dead|dies?|died|death|suicid\w*|"
+                   r"firearm|weapon\w*|knife|knives|stab(?:s|bed|bing)?|kill(?:s|ed|ing|er)?|murder\w*|dead|dies?|died|death|suicid\w*|"
                    r"kys|assault\w*|attack(?:s|ed|ing)?|beat(?:s|ing)? up|beaten|punch(?:es|ed|ing)?|brawl\w*|jumped|"
                    r"fights?|fighting|arrest\w*|cops?|police|jail(?:ed)?|prison|handcuff\w*|crim(?:e|es|inal)|illegal|"
-                   r"drugs?|weed|cocaine|crack|meth|high af|drunk|vap(?:e|es|ing)|alcohol|sex\w*|nude|naked|porn\w*|strip\w*|"
+                   r"drugs?|weed|cocaine|crack|meth|high af|drunk|vap(?:e|es|ing)|alcohol|sex\w*|nude|naked|porn\w*|strip(?:s|ped|per|pers|ping|club)?|"
                    r"kidnap\w*|hostage|bomb\w*|terror\w*|blood\w*|racis\w*|hate crime|swat(?:ted|ting)?)\b", re.I)
 
 
@@ -58,7 +58,7 @@ def _clean(s):
     s = EMOJI.sub("", s or "")
     s = SLANG.sub("", s)
     s = re.sub(r"https?://\S+|[#@]\w+", "", s)
-    return re.sub(r"\s+", " ", s).strip(" .,!-|:\"'")
+    return re.sub(r"\s+", " ", s).strip(" .,!-|:\"'…")
 
 
 def _title_case(s):
@@ -165,6 +165,10 @@ def write(clip, src, hot_titles=(), lessons=None):
     if risky(event):
         event = "stream"
     seed = clip.get("video_id", "") + str(clip.get("moment", ""))
+    clip_title = None
+    if clip.get("platform") in ("twitch_clip", "kick_clip"):
+        ct = _clean(clip.get("video_title", ""))
+        clip_title = ct if 2 <= len(ct.split()) <= 8 and not any(w.lower() in creator_words for w in ct.split()) else None
 
     # title: creator first, then what happens, guest named when there is one, emoji at the end
     q = quotes[0] if quotes else ""
@@ -191,6 +195,8 @@ def write(clip, src, hot_titles=(), lessons=None):
         title = _pick(with_guest, seed).format(s=short, g=guest)
     elif money and versus:
         title = f"{short} Plays For {money} And {_pick(react, seed)}"
+    elif clip_title and not risky(clip_title):  # a Twitch/Kick clip's own title is what viewers called the moment
+        title = f"{short}: \"{_title_case(clip_title)}\""
     elif said and len(said.split()) <= 9:
         title = f"{short}: \"{_title_case(said)}\""
     elif line and kind in ("question", "exclaim"):
@@ -224,7 +230,7 @@ def write(clip, src, hot_titles=(), lessons=None):
                       f"This is exactly why chat can't stop clipping {short}.", "Nobody in the room saw this coming. Watch."],
                      seed)
     summary = f"{full} during \"{_clean(clip.get('video_title', ''))[:80]}\"" + (f" with {', '.join(people[:2])}" if people else "") + "."
-    if q:
+    if q and q.lower() not in _clean(clip.get("video_title", "")).lower():
         summary += f" {q[:120].rstrip('.')}." if not q.endswith("?") else f" {q[:120]}"
     tags = list(dict.fromkeys(src.get("aliases", []) + [p.lower() for p in people[:3]]
                               + [w.lower() for w in re.findall(r"[A-Za-z0-9$]{4,}", event) if w.lower() not in STOP][:4]
