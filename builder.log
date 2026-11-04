@@ -1043,3 +1043,34 @@ Scripts written by ollama.
   [1] model title "CaseOh Crashes Out After Seeing Something Spooky 😱" isn't backed by what's said (seeing, something, spooky, spooky, something, gives, shock); using the free writer
   [2] model script uses a word moderation flags ("stable"); using the free writer
 Done. Queue: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-11-04_0419/queue.md  (quota used: 61)
+[ishowspeed] reading recent streams/videos
+[kai_cenat] reading recent streams/videos
+  0 Twitch clips from kaicenat
+[jynxzi] reading recent streams/videos
+  reading the room on "TYPICAL TUESDAY STREAM" (chat replay, most replayed)
+    6 chat spikes
+  3 Twitch clips from jynxzi
+[adin_ross] reading recent streams/videos
+  1 Kick clips from adinross
+[n3on] reading recent streams/videos
+  0 Kick clips from n3on
+[caseoh] reading recent streams/videos
+  1 Twitch clips from caseoh_
+[xqc] reading recent streams/videos
+  4 Twitch clips from xqc
+  6 Kick clips from xqc
+[lacy] reading recent streams/videos
+  1 Twitch clips from lacy
+[plaqueboymax] reading recent streams/videos
+  0 Twitch clips from plaqueboymax
+[stableronaldo] reading recent streams/videos
+  13 Twitch clips from stableronaldo
+Clip council: 2 candidates, every agent votes...
+  picked Jynxzi at 5:12:19 (council 0.51): highest combined vote
+Writing scripts...
+  [1] Jynxzi at 5:12:19: writing from captions (126 words)
+Scripts written by the free writer (no AI model).
+Done. Queue: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/spike_2026-11-04_1308/queue.md  (quota used: 14)
+Posting held, nothing uploaded:
+  channel study: no channel study from the last 7 days
+  (/home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/spike_2026-11-04_1308/HOLD.md)

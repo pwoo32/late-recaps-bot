@@ -82,7 +82,8 @@
   "DqVN39N0uXc@483",
   "DqVN39N0uXc@302",
   "605908200@0",
-  "jdV0drr9PsA@93"
+  "jdV0drr9PsA@93",
+  "ohQXEHnv_mE@624"
  ],
  "queued": {
   "L6S9Vb3RLy4@186": {
@@ -687,6 +688,29 @@
     "analytics": 0.61,
     "live": 0.55,
     "script": 0.85,
+    "audience": 0.5
+   }
+  },
+  "ohQXEHnv_mE@624": {
+   "title": "Jynxzi: \">> a Multi-million Dollar Deal or What?\" \ud83d\udd25",
+   "source": "jynxzi",
+   "post_utc": "2026-11-04 13:08",
+   "recipe": {
+    "length": 30,
+    "punch": 0.14,
+    "beat": "normal",
+    "caption_words": 3,
+    "gap": 0.6,
+    "layout": "face34",
+    "narrate": "on",
+    "test": null
+   },
+   "council": {
+    "trend": 0.0,
+    "study": 0.35,
+    "analytics": 0.67,
+    "live": 0.55,
+    "script": 1.0,
     "audience": 0.5
    }
   }
@@ -1366,7 +1390,5 @@
  "edit": {
   "stats": {}
  },
- "spike_posts": {
-  "2026-11-03": 2
- }
+ "spike_posts": {}
 }

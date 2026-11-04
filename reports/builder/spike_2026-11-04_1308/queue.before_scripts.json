@@ -1,0 +1,55 @@
+[
+ {
+  "id": 1,
+  "source": "jynxzi",
+  "creator": "Jynxzi",
+  "platform": "youtube",
+  "video_id": "ohQXEHnv_mE",
+  "video_title": "TYPICAL TUESDAY STREAM",
+  "url": "https://www.youtube.com/watch?v=ohQXEHnv_mE&t=18739s",
+  "moment": "5:12:19",
+  "start": 18719,
+  "end": 18749,
+  "rank": 4.13,
+  "signal": "chat went 20.2x its normal pace",
+  "signals": [
+   "chat spike"
+  ],
+  "quotes": [
+   "W",
+   "w",
+   "W"
+  ],
+  "stream_age_h": 10.4,
+  "spike": true,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "narrate": "on",
+   "test": null
+  },
+  "council": {
+   "trend": 0.0,
+   "study": 0.35,
+   "analytics": 0.67,
+   "live": 0.55,
+   "script": 1.0,
+   "audience": 0.5
+  },
+  "council_why": "highest combined vote",
+  "post_utc": "2026-11-04 13:08",
+  "post_local": "Wed 08:08 AM ET",
+  "title": "Jynxzi W 🤯",
+  "hook": "W",
+  "context": "Jynxzi live, TYPICAL TUESDAY STREAM",
+  "take": "Keep your eyes on Jynxzi right here.",
+  "draft": true,
+  "description": "Jynxzi live, TYPICAL TUESDAY STREAM\n\nFull stream by Jynxzi: https://www.youtube.com/watch?v=ohQXEHnv_mE&t=18739s\nGo support Jynxzi, all credit to them.\n\n#jynxzi #ishowspeed #edit #shorts #kaicenat",
+  "key": "ohQXEHnv_mE@624",
+  "permission": "fan clipping tolerated; check for a Whop campaign"
+ }
+]
