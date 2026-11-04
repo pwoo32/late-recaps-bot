@@ -1058,14 +1058,52 @@ def human_read(k, text, voice, speed=1.08):
     return np.concatenate(out), sr
 
 
+REF_LINE = ("Okay so, this is the part everybody's been talking about. Honestly, I did not see this coming, "
+            "and neither did chat. Just watch.")
+_TURBO = []
+
+
+def chatterbox_voice(text, out, voice):
+    """Chatterbox Turbo (MIT, runs on the CPU in about 30s a line): natural rises and falls, and it can chuckle.
+    It speaks in the Kokoro voice picked for the channel, cloned from a reference line rendered once by Kokoro, so
+    the channel keeps one recognisable voice."""
+    import random
+    import torchaudio
+    from chatterbox.tts_turbo import ChatterboxTurboTTS
+    ref = KOKORO_DIR / f"ref_{voice}.wav"
+    if not ref.exists():
+        one = kokoro_voice(REF_LINE, KOKORO_DIR / f"ref1_{voice}.wav", voice)
+        subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", str(one), "-i", str(one), "-filter_complex",
+                        "[0:a][1:a]concat=n=2:v=0:a=1", "-ar", "24000", "-ac", "1", str(ref)], check=True)
+    if not _TURBO:
+        _TURBO.append(ChatterboxTurboTTS.from_pretrained(device="cpu"))
+    m = _TURBO[0]
+    rnd = random.Random(text)
+    said = text
+    if "," in text and rnd.random() < 0.4:  # a chuckle after the first phrase now and then, like a person reacting
+        head, tail = text.split(",", 1)
+        said = f"{head}, [chuckle]{tail}"
+    wav = m.generate(said, audio_prompt_path=str(ref))
+    torchaudio.save(str(out), wav, m.sr)
+    return out
+
+
 def narrate(text, out_base, voice=None):
-    """Speak the take in the most human free voice available. Kokoro first (an open model that sounds like a person
-    talking, not a reader), then edge-tts (Microsoft neural voices, slightly brisk), then macOS `say`, then espeak-ng.
-    Returns the audio path, or None if no voice is available. The mix (EQ, compression, ducking) happens in cut."""
+    """Speak the take in the most human free voice available: Chatterbox Turbo in the channel's voice, then Kokoro
+    (an open model that sounds like a person talking, read phrase by phrase), then edge-tts (Microsoft neural voices),
+    then macOS `say`, then espeak-ng. Returns the audio path, or None if no voice is available. The mix (EQ,
+    compression, ducking) happens in cut. NARRATOR_ENGINE=kokoro skips Chatterbox."""
     text = speakable(text)
     if len(text) < 3:
         return None
     voice = voice or NARRATOR_VOICE
+    if not voice.startswith("en-") and os.environ.get("NARRATOR_ENGINE", "chatterbox") == "chatterbox":
+        try:
+            out = chatterbox_voice(text, out_base.with_suffix(".take.wav"), voice)
+            if out.exists() and out.stat().st_size > 1000:
+                return out
+        except Exception as e:
+            print(f"Chatterbox voice failed ({type(e).__name__}: {str(e)[:120]}); using Kokoro.")
     if not voice.startswith("en-"):
         try:
             out = kokoro_voice(text, out_base.with_suffix(".take.wav"), voice)

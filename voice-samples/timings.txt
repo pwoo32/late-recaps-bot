@@ -1,5 +1,0 @@
-kokoro fenrir: 9.3s
-turbo load: 36.6s
-2_turbo_builtin: 43.1s for 8.1s of audio
-3_turbo_fenrir_clone: 29.3s for 6.6s of audio
-4_turbo_fenrir_clone_plain: 25.3s for 6.1s of audio
