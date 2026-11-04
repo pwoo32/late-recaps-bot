@@ -90,6 +90,12 @@ jobs:
         run: |
           sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg fonts-liberation
           pip install -q -r requirements.txt bgutil-ytdlp-pot-provider
+          # Narrator voice (Chatterbox Turbo, CPU). Its full dependency list drags in Chinese/Japanese tokenizers and a
+          # web UI that don't build here; English needs only these. If any of it fails, the narrator falls back to Kokoro.
+          pip install -q --no-deps chatterbox-tts || true
+          pip install -q librosa==0.11.0 s3tokenizer transformers==5.2.0 diffusers==0.29.0 resemble-perth conformer==0.3.2 \
+            safetensors==0.5.3 pyloudnorm omegaconf torch==2.6.0 torchaudio==2.6.0 \
+            --extra-index-url https://download.pytorch.org/whl/cpu || true
 
       - name: TikTok sign-in cache   # TikTok can hand out a new refresh token; the newest one is kept here
         if: steps.mode.outputs.skip != 'true'
@@ -147,8 +153,10 @@ jobs:
         if: steps.mode.outputs.skip != 'true' && (steps.mode.outputs.mode == 'daily' || steps.spike.outputs.queue != '')
         uses: actions/cache@v4
         with:
-          path: ~/.cache/clip-builder/kokoro
-          key: kokoro-v1.0
+          path: |
+            ~/.cache/clip-builder/kokoro
+            ~/.cache/huggingface
+          key: narrator-kokoro-v1.0-chatterbox-turbo
 
       - name: Whisper model cache
         if: steps.mode.outputs.skip != 'true' && (steps.mode.outputs.mode == 'daily' || steps.spike.outputs.queue != '')
