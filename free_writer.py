@@ -31,10 +31,10 @@ MONEY = re.compile(r"\$\s?\d[\d,.]*\s?(?:k|m|million|thousand)?\b", re.I)
 # clip removed from TikTok (Nov 2026: "STORE ROBBERY!" on a clip where nothing was robbed).
 RISKY = re.compile(r"\b(rob|robs|robbed|robber(?:y|ies|s)?|robbing|steal(?:s|ing)?|stole|stolen|shoplift\w*|theft|thie(?:f|ves)|"
                    r"burglar\w*|loot(?:ed|ing)?|heist|scam(?:s|med|mer)?|shoot(?:s|ing|er)?|shot|guns?|glock|pistol|rifle|"
-                   r"firearm|weapon\w*|knife|knives|stab\w*|kill(?:s|ed|ing|er)?|murder\w*|dead|dies?|died|death|suicid\w*|"
+                   r"firearm|weapon\w*|knife|knives|stab(?:s|bed|bing)?|kill(?:s|ed|ing|er)?|murder\w*|dead|dies?|died|death|suicid\w*|"
                    r"kys|assault\w*|attack(?:s|ed|ing)?|beat(?:s|ing)? up|beaten|punch(?:es|ed|ing)?|brawl\w*|jumped|"
                    r"fights?|fighting|arrest\w*|cops?|police|jail(?:ed)?|prison|handcuff\w*|crim(?:e|es|inal)|illegal|"
-                   r"drugs?|weed|cocaine|crack|meth|high af|drunk|vap(?:e|es|ing)|alcohol|sex\w*|nude|naked|porn\w*|strip\w*|"
+                   r"drugs?|weed|cocaine|crack|meth|high af|drunk|vap(?:e|es|ing)|alcohol|sex\w*|nude|naked|porn\w*|strip(?:per|pers|ping| club|tease)|"
                    r"kidnap\w*|hostage|bomb\w*|terror\w*|blood\w*|racis\w*|hate crime|swat(?:ted|ting)?)\b", re.I)
 
 

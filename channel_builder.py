@@ -819,7 +819,7 @@ def cmd_run(args):
         if r.returncode and not trend:
             sys.exit("Trend scan failed and there's no earlier one to use.")
     study_run = latest(f"channels_{args.niche}_*/channels.json")
-    if not study_run or run_age_days(study_run.parent) > 7:
+    if not study_run or run_age_days(study_run.parent) > 5:  # refresh well before the posting gate (10 days) trips
         subprocess.run([sys.executable, str(here / "channel_agent.py"), "--niche", args.niche], check=True)
     state = load_state()
     if state.get("channel"):
@@ -1379,8 +1379,8 @@ def agents_ready(niche):
     if not trend or run_age_days(trend.parent) > 3:
         problems.append("trend agent: no trend report from the last 3 days")
     study = latest(f"channels_{niche}_*/channels.json")
-    if not study or run_age_days(study.parent) > 7:
-        problems.append("channel study: no channel study from the last 7 days")
+    if not study or run_age_days(study.parent) > 10:  # the daily run refreshes it after 5 days
+        problems.append("channel study: no channel study from the last 10 days")
     at = (load_state().get("review") or {}).get("at")
     age_h = ((datetime.now(timezone.utc) - datetime.strptime(at, "%Y-%m-%d %H:%M").replace(tzinfo=timezone.utc))
              .total_seconds() / 3600) if at else None
