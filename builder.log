@@ -999,3 +999,47 @@ Already posted 2 spike clips today; the limit is 2.
 [stableronaldo] reading recent streams/videos
   5 Twitch clips from stableronaldo
 Nothing is spiking right now.
+[streamer] searching: streamer clips
+[streamer] searching: kai cenat
+[streamer] searching: ishowspeed
+[streamer] searching: twitch clips
+Fetching stats for 186 videos
+Fetching subscriber counts for 85 channels
+Done. Report: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/2026-11-04_0419/report.md
+Done. Report: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/track_2026-11-04_0419.md  (quota used: 2)
+[ishowspeed] reading recent streams/videos
+[kai_cenat] reading recent streams/videos
+  reading the room on "PLEASE DON’T WATCH THIS STREAM" (chat replay, most replayed)
+    6 chat spikes
+  40 Twitch clips from kaicenat
+[jynxzi] reading recent streams/videos
+  reading the room on "TYPICAL TUESDAY STREAM" (chat replay, most replayed)
+    6 chat spikes
+  reading the room on "MONDAY NIGHT MIRACLE STREAM" (chat replay, most replayed)
+    5 chat spikes
+  40 Twitch clips from jynxzi
+[adin_ross] reading recent streams/videos
+  40 Kick clips from adinross
+[n3on] reading recent streams/videos
+  40 Kick clips from n3on
+[caseoh] reading recent streams/videos
+  40 Twitch clips from caseoh_
+[xqc] reading recent streams/videos
+  40 Twitch clips from xqc
+  36 Kick clips from xqc
+[lacy] reading recent streams/videos
+  40 Twitch clips from lacy
+[plaqueboymax] reading recent streams/videos
+  40 Twitch clips from plaqueboymax
+[stableronaldo] reading recent streams/videos
+  40 Twitch clips from stableronaldo
+Clip council: 16 candidates, every agent votes...
+  picked CaseOh at 0:00 (council 0.45): CaseOh's clips have the highest trend researcher score and a significant increase in views, indicating strong potential.
+  picked Kai Cenat at 46:34 (council 0.69): Kai Cenat's clips have a strong track record with the top channels and a high council score, suggesting a high likelihoo
+Writing scripts...
+  [1] CaseOh at 0:00: writing from comments
+  [2] Kai Cenat at 46:34: writing from captions (97 words)
+Scripts written by ollama.
+  [1] model title "CaseOh Crashes Out After Seeing Something Spooky 😱" isn't backed by what's said (seeing, something, spooky, spooky, something, gives, shock); using the free writer
+  [2] model script uses a word moderation flags ("stable"); using the free writer
+Done. Queue: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-11-04_0419/queue.md  (quota used: 61)

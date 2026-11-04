@@ -1,0 +1,102 @@
+[
+ {
+  "id": 1,
+  "source": "caseoh",
+  "creator": "CaseOh",
+  "platform": "twitch_clip",
+  "video_id": "605908200",
+  "video_title": "😳…That Was Creepy😱",
+  "url": "https://www.twitch.tv/caseoh_/clip/ReliableTangibleSparrowDoritosChip-Ibh1dzbuHqMkKnzM",
+  "moment": "0:00",
+  "start": 0,
+  "end": 40.0,
+  "rank": 20.91,
+  "signal": "Twitch clip, 4,078 views (182/h)",
+  "signals": [
+   "twitch clip"
+  ],
+  "quotes": [
+   "😳…That Was Creepy😱"
+  ],
+  "stream_age_h": 22.5,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "narrate": "on",
+   "test": null
+  },
+  "council": {
+   "trend": 1.0,
+   "study": 0.25,
+   "analytics": 0.51,
+   "live": 0.11,
+   "script": 0.35,
+   "audience": 0.5
+  },
+  "council_why": "CaseOh's clips have the highest trend researcher score and a significant increase in views, indicating strong potential. The council score is also high, and while there's no track record, the clear premise and high chat engagement support its likelihood of success.",
+  "post_utc": "2026-11-04 07:00",
+  "post_local": "Wed 02:00 AM ET",
+  "title": "CaseOh 😳…That Was Creepy😱 🤯",
+  "hook": "😳…THAT WAS CREEPY😱",
+  "context": "CaseOh live, 😳…That Was Creepy😱",
+  "take": "This is why chat can't stop clipping CaseOh.",
+  "draft": true,
+  "description": "CaseOh live, 😳…That Was Creepy😱\n\nFull stream by CaseOh: https://www.twitch.tv/caseoh_/clip/ReliableTangibleSparrowDoritosChip-Ibh1dzbuHqMkKnzM\nGo support CaseOh, all credit to them.\n\n#caseoh #ishowspeed #edit #shorts #kaicenat",
+  "key": "605908200@0",
+  "permission": "fan clipping is widespread and tolerated; no official program checked (Nov 2026)"
+ },
+ {
+  "id": 2,
+  "source": "kai_cenat",
+  "creator": "Kai Cenat",
+  "platform": "youtube",
+  "video_id": "jdV0drr9PsA",
+  "video_title": "PLEASE DON’T WATCH THIS STREAM",
+  "url": "https://www.youtube.com/watch?v=jdV0drr9PsA&t=2794s",
+  "moment": "46:34",
+  "start": 2781,
+  "end": 2801,
+  "rank": 9.52,
+  "signal": "chat went 5.1x its normal pace",
+  "signals": [
+   "chat spike"
+  ],
+  "quotes": [],
+  "stream_age_h": 21.8,
+  "spike": false,
+  "recipe": {
+   "length": 20,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "narrate": "on",
+   "test": "length"
+  },
+  "council": {
+   "trend": 0.74,
+   "study": 0.93,
+   "analytics": 0.61,
+   "live": 0.55,
+   "script": 0.85,
+   "audience": 0.5
+  },
+  "council_why": "Kai Cenat's clips have a strong track record with the top channels and a high council score, suggesting a high likelihood of success. His clips also have a clear premise and strong viewer reaction, further supporting their potential.",
+  "post_utc": "2026-11-04 22:00",
+  "post_local": "Wed 05:00 PM ET",
+  "title": "Kai Cenat moment 🤯",
+  "hook": "MOMENT",
+  "context": "Kai Cenat live, PLEASE DON’T WATCH THIS STREAM",
+  "take": "Kai Cenat had no idea what was about to happen.",
+  "draft": true,
+  "description": "Kai Cenat live, PLEASE DON’T WATCH THIS STREAM\n\nFull stream by Kai Cenat: https://www.youtube.com/watch?v=jdV0drr9PsA&t=2794s\nGo support Kai Cenat, all credit to them.\n\n#kaicenat #kai #ishowspeed #edit #shorts",
+  "key": "jdV0drr9PsA@93",
+  "permission": "fan clipping is widespread and tolerated; no official paid program found (Oct 2026)"
+ }
+]

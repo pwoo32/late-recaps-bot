@@ -1,14 +1,15 @@
 {
  "source_weight": {
   "jynxzi": 0.31,
-  "kai_cenat": 0.32,
-  "ishowspeed": 0.49
+  "kai_cenat": 0.31,
+  "ishowspeed": 0.41
  },
  "slot_weight": {
-  "2": 0.64,
-  "21": 0.51,
-  "8": 0.6,
-  "4": 0.33
+  "2": 0.5,
+  "21": 0.43,
+  "8": 0.48,
+  "4": 0.32,
+  "22": 0.72
  },
  "used_moments": [
   "L6S9Vb3RLy4@186",
@@ -79,7 +80,9 @@
   "TTFWbsT1jlM@6",
   "IkhjzYsvCmw@14",
   "DqVN39N0uXc@483",
-  "DqVN39N0uXc@302"
+  "DqVN39N0uXc@302",
+  "605908200@0",
+  "jdV0drr9PsA@93"
  ],
  "queued": {
   "L6S9Vb3RLy4@186": {
@@ -640,6 +643,52 @@
     "audience": 0.5
    },
    "video_id": "Hrx-nQ8xhpU"
+  },
+  "605908200@0": {
+   "title": "CaseOh Can't Believe What Just Happened At \u2026that Was Creepy \ud83d\ude31",
+   "source": "caseoh",
+   "post_utc": "2026-11-04 07:00",
+   "recipe": {
+    "length": 30,
+    "punch": 0.14,
+    "beat": "normal",
+    "caption_words": 3,
+    "gap": 0.6,
+    "layout": "face34",
+    "narrate": "on",
+    "test": null
+   },
+   "council": {
+    "trend": 1.0,
+    "study": 0.25,
+    "analytics": 0.51,
+    "live": 0.11,
+    "script": 0.35,
+    "audience": 0.5
+   }
+  },
+  "jdV0drr9PsA@93": {
+   "title": "Kai Cenat: \"Where's Your Camera?\" \ud83d\ude31",
+   "source": "kai_cenat",
+   "post_utc": "2026-11-04 22:00",
+   "recipe": {
+    "length": 20,
+    "punch": 0.14,
+    "beat": "normal",
+    "caption_words": 3,
+    "gap": 0.6,
+    "layout": "face34",
+    "narrate": "on",
+    "test": "length"
+   },
+   "council": {
+    "trend": 0.74,
+    "study": 0.93,
+    "analytics": 0.61,
+    "live": 0.55,
+    "script": 0.85,
+    "audience": 0.5
+   }
   }
  },
  "channel": "UCbK9EejOk5UVzI_l8F3f8kA",
@@ -648,8 +697,8 @@
   "@TheDiaryOfACEO": "UCGq-a57w-aPwyi3pW7XLiHw"
  },
  "review": {
-  "at": "2026-11-03 00:05",
-  "report": "/home/runner/work/late-recaps-bot/late-recaps-bot/reports/review_2026-11-03_0005/report.md",
+  "at": "2026-11-04 04:19",
+  "report": "/home/runner/work/late-recaps-bot/late-recaps-bot/reports/review_2026-11-04_0419/report.md",
   "lessons": {
    "titles": [
     "Creator name first, then a bet or question in plain verbs, and never the result. Add a named guest or celebrity when one exists.",
@@ -674,8 +723,64 @@
    ]
   },
   "source_score": {},
-  "length_hint": null,
+  "length_hint": 22,
   "clips": [
+   {
+    "title": "Jynxzi: \"Chat What's My Kd?\" \ud83d\udd25",
+    "views": 0,
+    "avg_viewed": null,
+    "stayed": null,
+    "verdict": null
+   },
+   {
+    "title": "Speed Can't Believe The Cops Are Outside \ud83e\udd28",
+    "views": 0,
+    "avg_viewed": null,
+    "stayed": null,
+    "verdict": null
+   },
+   {
+    "title": "Speed Can't Believe Vinny Just Robbed His Uncle's Store \ud83d\ude2d",
+    "views": 0,
+    "avg_viewed": null,
+    "stayed": null,
+    "verdict": null
+   },
+   {
+    "title": "Jynxzi Plays For $1000 And Goes Off \ud83d\udd25",
+    "views": 0,
+    "avg_viewed": null,
+    "stayed": null,
+    "verdict": null
+   },
+   {
+    "title": "Kai Cenat Can't Believe Pooh Shiesty Bro Snapping \ud83e\uddd0\ud83d\ude2d",
+    "views": 0,
+    "avg_viewed": null,
+    "stayed": null,
+    "verdict": null
+   },
+   {
+    "title": "Jynxzi Can't Believe What Just Happened \ud83d\ude2d",
+    "views": 0,
+    "avg_viewed": null,
+    "stayed": null,
+    "verdict": null
+   },
+   {
+    "title": "Speed Spots Someone In The Crowd And Chases Them \ud83d\udd77\ufe0f\ud83d\ude2d",
+    "views": 1,
+    "avg_viewed": null,
+    "stayed": null,
+    "verdict": null
+   },
+   {
+    "title": "Kai Cenat Shows Off The AMP House Halloween Party \ud83c\udf83",
+    "views": 0,
+    "avg_viewed": null,
+    "stayed": null,
+    "verdict": null
+   },
    {
     "title": "Speed Won't Go Down There In Spider-Man Suit \ud83d\udd77\ufe0f",
     "views": 0,
@@ -685,7 +790,7 @@
    },
    {
     "title": "Jynxzi Explains Why Hearing Wins In Rainbow Six \ud83c\udfa7",
-    "views": 2,
+    "views": 5,
     "avg_viewed": null,
     "stayed": null,
     "verdict": null
@@ -759,66 +864,50 @@
     "avg_viewed": null,
     "stayed": null,
     "verdict": null
-   },
-   {
-    "title": "Speed Gets Invited To Cook Up Dubstep With Frost Children \ud83c\udfa7",
-    "views": 24,
-    "avg_viewed": null,
-    "stayed": null,
-    "verdict": null
-   },
-   {
-    "title": "Speed Argues He's Taller Than Everyone \ud83d\ude2d",
-    "views": 0,
-    "avg_viewed": null,
-    "stayed": null,
-    "verdict": null
-   },
-   {
-    "title": "Speed Meets Two Strangers Making Dubstep \ud83c\udfa7\ud83d\ude02",
-    "views": 7,
-    "avg_viewed": null,
-    "stayed": null,
-    "verdict": null
-   },
-   {
-    "title": "Speed Finds His Own Name On The Premiere Wall \ud83d\ude2d",
-    "views": 0,
-    "avg_viewed": null,
-    "stayed": null,
-    "verdict": null
-   },
-   {
-    "title": "Jynxzi Pushes Through Promised Consort Radahn \ud83d\ude2d",
-    "views": 0,
-    "avg_viewed": null,
-    "stayed": null,
-    "verdict": null
-   },
-   {
-    "title": "Jynxzi Reads Fan Mail About The Art Of Seduction \ud83d\ude2d\ud83d\udcda",
-    "views": 0,
-    "avg_viewed": null,
-    "stayed": null,
-    "verdict": null
-   },
-   {
-    "title": "Kai Cenat Tells Ray To Stay Behind Him In Japan \ud83d\ude2d\u2764\ufe0f\u200d\ud83e\ude79",
-    "views": 0,
-    "avg_viewed": null,
-    "stayed": null,
-    "verdict": null
-   },
-   {
-    "title": "Kai Cenat Meets Japan's Most Popular Dog \ud83d\udc15\ud83d\ude2d",
-    "views": 2,
-    "avg_viewed": null,
-    "stayed": null,
-    "verdict": null
    }
   ]
  },
  "own_results": [
+  {
+   "title": "Jynxzi: \"Chat What's My Kd?\" \ud83d\udd25",
+   "views": 0,
+   "lift": 0.0
+  },
+  {
+   "title": "Speed Can't Believe The Cops Are Outside \ud83e\udd28",
+   "views": 0,
+   "lift": 0.0
+  },
+  {
+   "title": "Speed Can't Believe Vinny Just Robbed His Uncle's Store \ud83d\ude2d",
+   "views": 0,
+   "lift": 0.0
+  },
+  {
+   "title": "Jynxzi Plays For $1000 And Goes Off \ud83d\udd25",
+   "views": 0,
+   "lift": 0.0
+  },
+  {
+   "title": "Kai Cenat Can't Believe Pooh Shiesty Bro Snapping \ud83e\uddd0\ud83d\ude2d",
+   "views": 0,
+   "lift": 0.0
+  },
+  {
+   "title": "Jynxzi Can't Believe What Just Happened \ud83d\ude2d",
+   "views": 0,
+   "lift": 0.0
+  },
+  {
+   "title": "Speed Spots Someone In The Crowd And Chases Them \ud83d\udd77\ufe0f\ud83d\ude2d",
+   "views": 1,
+   "lift": 1.0
+  },
+  {
+   "title": "Kai Cenat Shows Off The AMP House Halloween Party \ud83c\udf83",
+   "views": 0,
+   "lift": 0.0
+  },
   {
    "title": "Speed Won't Go Down There In Spider-Man Suit \ud83d\udd77\ufe0f",
    "views": 0,
@@ -826,8 +915,8 @@
   },
   {
    "title": "Jynxzi Explains Why Hearing Wins In Rainbow Six \ud83c\udfa7",
-   "views": 2,
-   "lift": 2.0
+   "views": 5,
+   "lift": 5.0
   },
   {
    "title": "Kai Cenat Keeps Rakai Out Of The Halloween Party \ud83c\udf83\ud83d\ude2d",
@@ -881,13 +970,13 @@
   },
   {
    "title": "Speed Gets Invited To Cook Up Dubstep With Frost Children \ud83c\udfa7",
-   "views": 24,
-   "lift": 24.0
+   "views": 26,
+   "lift": 26.0
   },
   {
    "title": "Speed Argues He's Taller Than Everyone \ud83d\ude2d",
-   "views": 0,
-   "lift": 0.0
+   "views": 1,
+   "lift": 1.0
   },
   {
    "title": "Speed Meets Two Strangers Making Dubstep \ud83c\udfa7\ud83d\ude02",
@@ -901,8 +990,8 @@
   },
   {
    "title": "Jynxzi Pushes Through Promised Consort Radahn \ud83d\ude2d",
-   "views": 0,
-   "lift": 0.0
+   "views": 1,
+   "lift": 1.0
   },
   {
    "title": "Jynxzi Reads Fan Mail About The Art Of Seduction \ud83d\ude2d\ud83d\udcda",
@@ -928,11 +1017,6 @@
    "title": "Speed Gets a Red Card Against Cole Palmer \ud83d\ude2d",
    "views": 15,
    "lift": 15.0
-  },
-  {
-   "title": "Adin Watches YK Osiris Hang On Against Deshae \ud83d\ude2d\ud83e\udd4a",
-   "views": 1,
-   "lift": 1.0
   }
  ],
  "tiktok": {
@@ -1205,6 +1289,76 @@
     "sample": [
      "AYO",
      "w in the chat (im fcked up ts game is DC Universe online I'm might be cooked:broken_heart::wilted_flower::pensive_face:)"
+    ]
+   }
+  ],
+  "ohQXEHnv_mE": [
+   {
+    "t": 24019,
+    "ratio": 33.0,
+    "msgs": 102,
+    "sample": [
+     "L",
+     "w",
+     "w",
+     "w",
+     "w"
+    ]
+   },
+   {
+    "t": 18739,
+    "ratio": 20.2,
+    "msgs": 63,
+    "sample": [
+     "W",
+     "w",
+     "W",
+     "W",
+     "W"
+    ]
+   },
+   {
+    "t": 2414,
+    "ratio": 16.6,
+    "msgs": 59,
+    "sample": [
+     "yo",
+     "w",
+     "w",
+     "W",
+     "w"
+    ]
+   },
+   {
+    "t": 3824,
+    "ratio": 16.1,
+    "msgs": 80,
+    "sample": [
+     "w",
+     "w",
+     "w",
+     "w",
+     "w"
+    ]
+   },
+   {
+    "t": 27479,
+    "ratio": 15.5,
+    "msgs": 24,
+    "sample": [
+     "LMAOOO"
+    ]
+   },
+   {
+    "t": 3419,
+    "ratio": 15.4,
+    "msgs": 87,
+    "sample": [
+     "w",
+     "L too",
+     "w",
+     "L",
+     "w"
     ]
    }
   ]
