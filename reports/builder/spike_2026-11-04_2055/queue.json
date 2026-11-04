@@ -1,0 +1,89 @@
+[
+ {
+  "id": 1,
+  "source": "ishowspeed",
+  "creator": "IShowSpeed",
+  "platform": "youtube",
+  "video_id": "vYuLOp5GISE",
+  "video_title": "I Tried Becoming a Pro Baseball Player ft. Derek Jeter!",
+  "url": "https://www.youtube.com/watch?v=vYuLOp5GISE&t=769s",
+  "moment": "12:49",
+  "start": 749,
+  "end": 779,
+  "rank": 6.46,
+  "signal": "chat went 4.5x its normal pace",
+  "signals": [
+   "chat spike"
+  ],
+  "quotes": [
+   "what what what what what what what what what what what what what what what what what what what what what what what what what what what what what what what what what what what what what what what what ",
+   "W",
+   "W"
+  ],
+  "stream_age_h": 3.4,
+  "spike": true,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "narrate": "on",
+   "test": null
+  },
+  "council": {
+   "trend": 0.64,
+   "study": 1.0,
+   "analytics": 0.74,
+   "live": 0.55,
+   "script": 0.75,
+   "audience": 0.5
+  },
+  "council_why": "highest combined vote",
+  "post_utc": "2026-11-04 20:55",
+  "post_local": "Wed 03:55 PM ET",
+  "title": "Speed And Derek Jeter Can't Believe It 🔥",
+  "hook": "DEREK JETER WASN'T READY",
+  "context": "IShowSpeed live: I Tried Becoming a Pro Baseball Player Ft. Derek Jeter, with Derek Jeter",
+  "take": "Nobody in the room saw this coming. Watch.",
+  "draft": false,
+  "description": "IShowSpeed during \"I Tried Becoming a Pro Baseball Player ft. Derek Jeter\" with Derek Jeter. what what what what what what what what what what what what what what what what what what what what what what what what .\n\nFull stream by IShowSpeed: https://www.youtube.com/watch?v=vYuLOp5GISE&t=769s\nGo support IShowSpeed, all credit to them.\n\n#ishowspeed #speed #derekjeter #shorts",
+  "key": "vYuLOp5GISE@25",
+  "permission": "fan clipping is widespread and tolerated; no official paid program found (Oct 2026)",
+  "summary": "IShowSpeed during \"I Tried Becoming a Pro Baseball Player ft. Derek Jeter\" with Derek Jeter. what what what what what what what what what what what what what what what what what what what what what what what what .",
+  "hashtags": [
+   "#ishowspeed",
+   "#speed",
+   "#derekjeter"
+  ],
+  "tags": [
+   "ishowspeed",
+   "speed",
+   "derek jeter",
+   "tried",
+   "becoming",
+   "baseball",
+   "player",
+   "speed clips",
+   "streamer clips"
+  ],
+  "writer": "free",
+  "script_source": "transcript",
+  "upload_tags": [
+   "ishowspeed",
+   "speed",
+   "derek jeter",
+   "tried",
+   "becoming",
+   "baseball",
+   "player",
+   "speed clips",
+   "streamer clips",
+   "shorts"
+  ],
+  "youtube_id": "7m3klzp0Bls",
+  "tiktok_id": "v_inbox_file~v2.7704426897186768910",
+  "tiktok_caption": "Speed And Derek Jeter Can't Believe It 🔥 #ishowspeed #speed #derekjeter #fyp"
+ }
+]

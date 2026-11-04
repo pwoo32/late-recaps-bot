@@ -85,7 +85,8 @@
   "jdV0drr9PsA@93",
   "ohQXEHnv_mE@624",
   "2333520884@0",
-  "clip_01M6JPN6XX7X2GN1YRZ3E77X7C@0"
+  "clip_01M6JPN6XX7X2GN1YRZ3E77X7C@0",
+  "vYuLOp5GISE@25"
  ],
  "queued": {
   "L6S9Vb3RLy4@186": {
@@ -763,6 +764,30 @@
     "audience": 0.5
    },
    "video_id": "aMNTMyi6SAs"
+  },
+  "vYuLOp5GISE@25": {
+   "title": "Speed And Derek Jeter Can't Believe It \ud83d\udd25",
+   "source": "ishowspeed",
+   "post_utc": "2026-11-04 20:55",
+   "recipe": {
+    "length": 30,
+    "punch": 0.14,
+    "beat": "normal",
+    "caption_words": 3,
+    "gap": 0.6,
+    "layout": "face34",
+    "narrate": "on",
+    "test": null
+   },
+   "council": {
+    "trend": 0.64,
+    "study": 1.0,
+    "analytics": 0.74,
+    "live": 0.55,
+    "script": 0.75,
+    "audience": 0.5
+   },
+   "video_id": "7m3klzp0Bls"
   }
  },
  "channel": "UCbK9EejOk5UVzI_l8F3f8kA",
@@ -1435,10 +1460,50 @@
      "w"
     ]
    }
+  ],
+  "vYuLOp5GISE": [
+   {
+    "t": 769,
+    "ratio": 4.5,
+    "msgs": 115,
+    "sample": [
+     "what what what what what what what what what what what what what what what what what what what what what what what what what what what what what what what what what what what what what what what what ",
+     "W",
+     "W",
+     "W",
+     "W"
+    ]
+   },
+   {
+    "t": 944,
+    "ratio": 4.1,
+    "msgs": 96,
+    "sample": [
+     "W",
+     "W",
+     "W",
+     "w",
+     "W"
+    ]
+   },
+   {
+    "t": 1604,
+    "ratio": 3.1,
+    "msgs": 90,
+    "sample": [
+     "????",
+     "fix yo swing ",
+     "W",
+     "WHAT....",
+     "W"
+    ]
+   }
   ]
  },
  "edit": {
   "stats": {}
  },
- "spike_posts": {}
+ "spike_posts": {
+  "2026-11-04": 1
+ }
 }
