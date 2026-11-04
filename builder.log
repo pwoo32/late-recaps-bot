@@ -1074,3 +1074,80 @@ Done. Queue: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/s
 Posting held, nothing uploaded:
   channel study: no channel study from the last 7 days
   (/home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/spike_2026-11-04_1308/HOLD.md)
+searching: streamer clips
+searching: kai cenat
+searching: ishowspeed
+searching: twitch clips
+60 candidate channels
+Done. Report: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/channels_streamer_2026-11-04_1604/report.md
+[0;93m2026-11-04 16:18:56.057250154 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+Done. Report: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/track_2026-11-04_1605.md  (quota used: 2)
+[ishowspeed] reading recent streams/videos
+  skipped ishowspeed: KeyError: 'duration'
+[kai_cenat] reading recent streams/videos
+  reading the room on "PLEASE DON’T WATCH THIS STREAM" (chat replay, most replayed)
+    6 chat spikes
+  40 Twitch clips from kaicenat
+[jynxzi] reading recent streams/videos
+  reading the room on "TYPICAL TUESDAY STREAM" (chat replay, most replayed)
+    6 chat spikes
+  reading the room on "MONDAY NIGHT MIRACLE STREAM" (chat replay, most replayed)
+    5 chat spikes
+  20 Twitch clips from jynxzi
+[adin_ross] reading recent streams/videos
+  35 Kick clips from adinross
+[n3on] reading recent streams/videos
+  37 Kick clips from n3on
+[caseoh] reading recent streams/videos
+  20 Twitch clips from caseoh_
+[xqc] reading recent streams/videos
+  40 Twitch clips from xqc
+  35 Kick clips from xqc
+[lacy] reading recent streams/videos
+  40 Twitch clips from lacy
+[plaqueboymax] reading recent streams/videos
+  40 Twitch clips from plaqueboymax
+[stableronaldo] reading recent streams/videos
+  40 Twitch clips from stableronaldo
+Clip council: 16 candidates, every agent votes...
+  picked Kai Cenat at 0:00 (council 0.45): Kai Cenat has a strong track record of breakout Shorts, with clips pulling 539,575 views/hour and being featured in 118 
+  picked xQc at 0:00 (council 0.46): xQc is currently very popular, with clips pulling 424 views/hour and a significant increase in views since the last scan
+Writing scripts...
+  [1] Kai Cenat at 0:00: writing from comments
+  [2] xQc at 0:00: writing from comments
+Scripts written by ollama.
+  [1] model title "Kai Cenat Shook By AI Video 😱" isn't backed by what's said (too little to go on); using the free writer
+Done. Queue: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-11-04_1605/queue.md  (quota used: 70)
+[1] Kai Cenat Is Left Speechless At Was Shook From Ai 😱
+Downloading Twitch clip https://www.twitch.tv/kaicenat/clip/DignifiedBlindingDragonBudStar-cOqruszKfbJ1B5Ti
+Transcribing with whisper small.en (first run downloads the model)...
+Re-writing the script from what's actually said in the clip...
+  [1] Kai Cenat at 0:00: writing from transcript (5 words)
+Scripts written by ollama.
+  [1] model title "Kai Cenat Shook After AI Video 😱" isn't backed by what's said (too little to go on); using the free writer
+Framing on the face at 49% across.
+Downloading the narrator voice model (kokoro-v1.0.onnx)...
+Downloading the narrator voice model (voices-v1.0.bin)...
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Fetching 10 files:  50%|█████     | 5/10 [00:00<00:00, 37.01it/s]Fetching 10 files:  70%|███████   | 7/10 [00:10<00:00, 37.01it/s]Fetching 10 files:  70%|███████   | 7/10 [00:31<00:13,  4.46s/it]
+Chatterbox voice failed (RuntimeError: Task error: File reconstruction error: IO Error: No space left on device (os error 28)); using Kokoro.
+Done. Video: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-11-04_1605/clips/01_2333520884_0.mp4
+Title/description: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-11-04_1605/clips/01_2333520884_0.txt
+  uploaded https://youtube.com/shorts/ubOFmdf5ecA (goes public Wed 12:00 PM ET)
+[2] xQc Is Left Speechless At X Presses Lang 😱
+Downloading Kick clip https://kick.com/xqc/clips/clip_01M6JPN6XX7X2GN1YRZ3E77X7C
+Transcribing with whisper small.en (first run downloads the model)...
+Re-writing the script from what's actually said in the clip...
+  [2] xQc at 0:00: writing from transcript (105 words)
+Scripts written by ollama.
+  [2] model title "xQc Loses His Cool After Buddy Fails Test 😠" isn't backed by what's said (cool, fails, test, angry, teaches, fails); using the free writer
+Framing on the face at 15% across.
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files:  70%|███████   | 7/10 [00:21<00:09,  3.13s/it]
+Chatterbox voice failed (RuntimeError: Task error: File reconstruction error: IO Error: No space left on device (os error 28)); using Kokoro.
+Done. Video: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-11-04_1605/clips/02_clip_01M6JPN6XX7X2GN1YRZ3E77X7C_0.mp4
+Title/description: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-11-04_1605/clips/02_clip_01M6JPN6XX7X2GN1YRZ3E77X7C_0.txt
+  uploaded https://youtube.com/shorts/aMNTMyi6SAs (goes public Thu 03:00 AM ET)
+  TikTok: [1] draft in your TikTok inbox. Open the notification, paste this caption, post:
+    Kai Cenat Is Left Speechless At Was Shook From Ai 😱 #kaicenat #kai #viral #fyp
+  TikTok: [2] draft in your TikTok inbox. Open the notification, paste this caption, post:
+    xQc Can't Believe He Pulled This Off At X Presses Lang 🔥 #xqc #viral #fyp

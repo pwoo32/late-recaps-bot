@@ -1,0 +1,104 @@
+[
+ {
+  "id": 1,
+  "source": "kai_cenat",
+  "creator": "Kai Cenat",
+  "platform": "twitch_clip",
+  "video_id": "2333520884",
+  "video_title": "Kai was Shook from ai video",
+  "url": "https://www.twitch.tv/kaicenat/clip/DignifiedBlindingDragonBudStar-cOqruszKfbJ1B5Ti",
+  "moment": "0:00",
+  "start": 0,
+  "end": 41.0,
+  "rank": 9.92,
+  "signal": "Twitch clip, 7,237 views (192/h)",
+  "signals": [
+   "twitch clip"
+  ],
+  "quotes": [
+   "Kai was Shook from ai video"
+  ],
+  "stream_age_h": 37.8,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "narrate": "on",
+   "test": null
+  },
+  "council": {
+   "trend": 0.74,
+   "study": 0.95,
+   "analytics": 0.3,
+   "live": 0.11,
+   "script": 0.35,
+   "audience": 0.5
+  },
+  "council_why": "Kai Cenat has a strong track record of breakout Shorts, with clips pulling 539,575 views/hour and being featured in 118 of the top channels' recent titles. His content is clearly premised and engaging, making it highly likely to perform well.",
+  "post_utc": "2026-11-04 17:00",
+  "post_local": "Wed 12:00 PM ET",
+  "title": "Kai Cenat Kai was Shook from ai video 🤯",
+  "hook": "KAI WAS SHOOK FROM AI VIDEO",
+  "context": "Kai Cenat live, Kai was Shook from ai video",
+  "take": "Nobody in the room saw this coming.",
+  "draft": true,
+  "description": "Kai Cenat live, Kai was Shook from ai video\n\nFull stream by Kai Cenat: https://www.twitch.tv/kaicenat/clip/DignifiedBlindingDragonBudStar-cOqruszKfbJ1B5Ti\nGo support Kai Cenat, all credit to them.\n\n#kaicenat #kai #shorts #ishowspeed #edit",
+  "key": "2333520884@0",
+  "permission": "fan clipping is widespread and tolerated; no official paid program found (Oct 2026)"
+ },
+ {
+  "id": 2,
+  "source": "xqc",
+  "creator": "xQc",
+  "platform": "kick_clip",
+  "video_id": "clip_01M6JPN6XX7X2GN1YRZ3E77X7C",
+  "video_title": "X Presses Lang",
+  "url": "https://kick.com/xqc/clips/clip_01M6JPN6XX7X2GN1YRZ3E77X7C",
+  "moment": "0:00",
+  "start": 0,
+  "end": 36,
+  "rank": 21.8,
+  "signal": "Twitch clip, 2,469 views (281/h)",
+  "signals": [
+   "twitch clip"
+  ],
+  "quotes": [
+   "X Presses Lang"
+  ],
+  "stream_age_h": 8.8,
+  "spike": false,
+  "recipe": {
+   "length": 20,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "narrate": "on",
+   "test": "length"
+  },
+  "council": {
+   "trend": 1.0,
+   "study": 0.25,
+   "analytics": 0.58,
+   "live": 0.11,
+   "script": 0.35,
+   "audience": 0.5
+  },
+  "council_why": "xQc is currently very popular, with clips pulling 424 views/hour and a significant increase in views since the last scan. While his content may be visual-only, the high trend score and recent popularity suggest strong potential for views.",
+  "post_utc": "2026-11-05 08:00",
+  "post_local": "Thu 03:00 AM ET",
+  "title": "xQc X Presses Lang 🤯",
+  "hook": "X PRESSES LANG",
+  "context": "xQc live, X Presses Lang",
+  "take": "Keep your eyes on xQc right here.",
+  "draft": true,
+  "description": "xQc live, X Presses Lang\n\nFull stream by xQc: https://kick.com/xqc/clips/clip_01M6JPN6XX7X2GN1YRZ3E77X7C\nGo support xQc, all credit to them.\n\n#xqc #shorts #ishowspeed #edit #kaicenat",
+  "key": "clip_01M6JPN6XX7X2GN1YRZ3E77X7C@0",
+  "permission": "fan clipping is widespread and tolerated; no official program checked (Nov 2026)"
+ }
+]

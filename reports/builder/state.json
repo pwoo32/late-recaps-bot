@@ -2,14 +2,14 @@
  "source_weight": {
   "jynxzi": 0.31,
   "kai_cenat": 0.31,
-  "ishowspeed": 0.41
+  "ishowspeed": 0.37
  },
  "slot_weight": {
-  "2": 0.5,
-  "21": 0.43,
-  "8": 0.48,
-  "4": 0.32,
-  "22": 0.72
+  "2": 0.42,
+  "21": 0.38,
+  "8": 0.41,
+  "4": 0.31,
+  "22": 0.55
  },
  "used_moments": [
   "L6S9Vb3RLy4@186",
@@ -83,7 +83,9 @@
   "DqVN39N0uXc@302",
   "605908200@0",
   "jdV0drr9PsA@93",
-  "ohQXEHnv_mE@624"
+  "ohQXEHnv_mE@624",
+  "2333520884@0",
+  "clip_01M6JPN6XX7X2GN1YRZ3E77X7C@0"
  ],
  "queued": {
   "L6S9Vb3RLy4@186": {
@@ -713,6 +715,54 @@
     "script": 1.0,
     "audience": 0.5
    }
+  },
+  "2333520884@0": {
+   "title": "Kai Cenat Is Left Speechless At Was Shook From Ai \ud83d\ude31",
+   "source": "kai_cenat",
+   "post_utc": "2026-11-04 17:00",
+   "recipe": {
+    "length": 30,
+    "punch": 0.14,
+    "beat": "normal",
+    "caption_words": 3,
+    "gap": 0.6,
+    "layout": "face34",
+    "narrate": "on",
+    "test": null
+   },
+   "council": {
+    "trend": 0.74,
+    "study": 0.95,
+    "analytics": 0.3,
+    "live": 0.11,
+    "script": 0.35,
+    "audience": 0.5
+   },
+   "video_id": "ubOFmdf5ecA"
+  },
+  "clip_01M6JPN6XX7X2GN1YRZ3E77X7C@0": {
+   "title": "xQc Can't Believe He Pulled This Off At X Presses Lang \ud83d\udd25",
+   "source": "xqc",
+   "post_utc": "2026-11-05 08:00",
+   "recipe": {
+    "length": 20,
+    "punch": 0.14,
+    "beat": "normal",
+    "caption_words": 3,
+    "gap": 0.6,
+    "layout": "face34",
+    "narrate": "on",
+    "test": "length"
+   },
+   "council": {
+    "trend": 1.0,
+    "study": 0.25,
+    "analytics": 0.58,
+    "live": 0.11,
+    "script": 0.35,
+    "audience": 0.5
+   },
+   "video_id": "aMNTMyi6SAs"
   }
  },
  "channel": "UCbK9EejOk5UVzI_l8F3f8kA",
@@ -721,8 +771,8 @@
   "@TheDiaryOfACEO": "UCGq-a57w-aPwyi3pW7XLiHw"
  },
  "review": {
-  "at": "2026-11-04 04:19",
-  "report": "/home/runner/work/late-recaps-bot/late-recaps-bot/reports/review_2026-11-04_0419/report.md",
+  "at": "2026-11-04 16:04",
+  "report": "/home/runner/work/late-recaps-bot/late-recaps-bot/reports/review_2026-11-04_1604/report.md",
   "lessons": {
    "titles": [
     "Creator name first, then a bet or question in plain verbs, and never the result. Add a named guest or celebrity when one exists.",
@@ -749,6 +799,34 @@
   "source_score": {},
   "length_hint": 22,
   "clips": [
+   {
+    "title": "Jynxzi: \"What Is It?\" \ud83d\udd25",
+    "views": 17,
+    "avg_viewed": null,
+    "stayed": null,
+    "verdict": null
+   },
+   {
+    "title": "N3on: \"Face Each Other?\" \ud83d\udd25",
+    "views": 0,
+    "avg_viewed": null,
+    "stayed": null,
+    "verdict": null
+   },
+   {
+    "title": "Speed Can't Believe The Look On Her Face \ud83d\ude2d",
+    "views": 0,
+    "avg_viewed": null,
+    "stayed": null,
+    "verdict": null
+   },
+   {
+    "title": "Kai Cenat Can't Believe Chat Failed Again \ud83d\ude2d",
+    "views": 0,
+    "avg_viewed": null,
+    "stayed": null,
+    "verdict": null
+   },
    {
     "title": "Jynxzi: \"Chat What's My Kd?\" \ud83d\udd25",
     "views": 0,
@@ -814,7 +892,7 @@
    },
    {
     "title": "Jynxzi Explains Why Hearing Wins In Rainbow Six \ud83c\udfa7",
-    "views": 5,
+    "views": 7,
     "avg_viewed": null,
     "stayed": null,
     "verdict": null
@@ -860,38 +938,30 @@
     "avg_viewed": null,
     "stayed": null,
     "verdict": null
-   },
-   {
-    "title": "Speed Takes A Family Photo At His Movie Premiere \ud83d\udcf8",
-    "views": 1,
-    "avg_viewed": null,
-    "stayed": null,
-    "verdict": null
-   },
-   {
-    "title": "Speed Won't Stop Waving Until A Stranger Answers \ud83d\udc4b\ud83c\uddee\ud83c\udde9",
-    "views": 0,
-    "avg_viewed": null,
-    "stayed": null,
-    "verdict": null
-   },
-   {
-    "title": "Jynxzi Begs His Teammate To Get Inside \ud83d\ude2d",
-    "views": 0,
-    "avg_viewed": null,
-    "stayed": null,
-    "verdict": null
-   },
-   {
-    "title": "Kai Cenat Can't Believe What Happens In Japan \ud83d\ude31",
-    "views": 0,
-    "avg_viewed": null,
-    "stayed": null,
-    "verdict": null
    }
   ]
  },
  "own_results": [
+  {
+   "title": "Jynxzi: \"What Is It?\" \ud83d\udd25",
+   "views": 17,
+   "lift": 17.0
+  },
+  {
+   "title": "N3on: \"Face Each Other?\" \ud83d\udd25",
+   "views": 0,
+   "lift": 0.0
+  },
+  {
+   "title": "Speed Can't Believe The Look On Her Face \ud83d\ude2d",
+   "views": 0,
+   "lift": 0.0
+  },
+  {
+   "title": "Kai Cenat Can't Believe Chat Failed Again \ud83d\ude2d",
+   "views": 0,
+   "lift": 0.0
+  },
   {
    "title": "Jynxzi: \"Chat What's My Kd?\" \ud83d\udd25",
    "views": 0,
@@ -939,8 +1009,8 @@
   },
   {
    "title": "Jynxzi Explains Why Hearing Wins In Rainbow Six \ud83c\udfa7",
-   "views": 5,
-   "lift": 5.0
+   "views": 7,
+   "lift": 7.0
   },
   {
    "title": "Kai Cenat Keeps Rakai Out Of The Halloween Party \ud83c\udf83\ud83d\ude2d",
@@ -974,8 +1044,8 @@
   },
   {
    "title": "Speed Takes A Family Photo At His Movie Premiere \ud83d\udcf8",
-   "views": 1,
-   "lift": 1.0
+   "views": 2,
+   "lift": 2.0
   },
   {
    "title": "Speed Won't Stop Waving Until A Stranger Answers \ud83d\udc4b\ud83c\uddee\ud83c\udde9",
@@ -994,8 +1064,8 @@
   },
   {
    "title": "Speed Gets Invited To Cook Up Dubstep With Frost Children \ud83c\udfa7",
-   "views": 26,
-   "lift": 26.0
+   "views": 27,
+   "lift": 27.0
   },
   {
    "title": "Speed Argues He's Taller Than Everyone \ud83d\ude2d",
@@ -1004,8 +1074,8 @@
   },
   {
    "title": "Speed Meets Two Strangers Making Dubstep \ud83c\udfa7\ud83d\ude02",
-   "views": 7,
-   "lift": 7.0
+   "views": 8,
+   "lift": 8.0
   },
   {
    "title": "Speed Finds His Own Name On The Premiere Wall \ud83d\ude2d",
@@ -1021,26 +1091,6 @@
    "title": "Jynxzi Reads Fan Mail About The Art Of Seduction \ud83d\ude2d\ud83d\udcda",
    "views": 0,
    "lift": 0.0
-  },
-  {
-   "title": "Kai Cenat Tells Ray To Stay Behind Him In Japan \ud83d\ude2d\u2764\ufe0f\u200d\ud83e\ude79",
-   "views": 0,
-   "lift": 0.0
-  },
-  {
-   "title": "Kai Cenat Meets Japan's Most Popular Dog \ud83d\udc15\ud83d\ude2d",
-   "views": 2,
-   "lift": 2.0
-  },
-  {
-   "title": "Jynxzi Calls This Player Copper Off His Name Alone \ud83d\ude2d",
-   "views": 3,
-   "lift": 3.0
-  },
-  {
-   "title": "Speed Gets a Red Card Against Cole Palmer \ud83d\ude2d",
-   "views": 15,
-   "lift": 15.0
   }
  ],
  "tiktok": {
