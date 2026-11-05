@@ -221,7 +221,8 @@ Every clip that goes to YouTube also goes up as an Instagram Reel and a Facebook
 
 ### TikTok (optional cross-posting)
 
-Every clip that goes to YouTube can also go to TikTok through TikTok's official Content Posting API. It's off until
+Every council-approved rendered clip can also go to TikTok through TikTok's official Content Posting API, even if
+its YouTube upload fails or is held. It's off until
 you turn it on.
 
 1. Create an app at https://developers.tiktok.com (Manage apps → Connect an app). Add the **Login Kit** and
@@ -242,3 +243,4 @@ Modes:
   hashtags; the builder does not append generic `#fyp` or `#viral` tags.
 - `direct`: posts on its own, with the caption. Until TikTok audits the app, posts are private-only, and the
   TikTok account itself must be private. Apply for the audit from the app's page, then switch modes.
+
