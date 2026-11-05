@@ -1203,3 +1203,54 @@ Title/description: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/bui
   uploaded https://youtube.com/shorts/7m3klzp0Bls (public now)
   TikTok: [1] draft in your TikTok inbox. Open the notification, paste this caption, post:
     Speed And Derek Jeter Can't Believe It 🔥 #ishowspeed #speed #derekjeter #fyp
+[ishowspeed] reading recent streams/videos
+  reading the room on "I Tried Becoming a Pro Baseball Player ft. Derek Jeter!" (chat replay, most replayed)
+    3 chat spikes
+[kai_cenat] reading recent streams/videos
+  0 Twitch clips from kaicenat
+[jynxzi] reading recent streams/videos
+  reading the room on "WHIMSICAL WEDNESDAY" (chat replay, most replayed)
+    6 chat spikes
+  3 Twitch clips from jynxzi
+[adin_ross] reading recent streams/videos
+  3 Kick clips from adinross
+[n3on] reading recent streams/videos
+  0 Kick clips from n3on
+[caseoh] reading recent streams/videos
+  1 Twitch clips from caseoh_
+[xqc] reading recent streams/videos
+  2 Twitch clips from xqc
+  2 Kick clips from xqc
+[lacy] reading recent streams/videos
+  3 Twitch clips from lacy
+[plaqueboymax] reading recent streams/videos
+  0 Twitch clips from plaqueboymax
+[stableronaldo] reading recent streams/videos
+  1 Twitch clips from stableronaldo
+Clip council: 3 candidates, every agent votes...
+  picked Speed at 15:44 (council 0.68): highest combined vote
+Writing scripts...
+  [1] IShowSpeed at 15:44: writing from captions (125 words)
+Scripts written by the free writer (no AI model).
+Done. Queue: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/spike_2026-11-05_0337/queue.md  (quota used: 18)
+WARNING: [youtube] vYuLOp5GISE: Some web_embedded client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for your account. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[0;93m2026-11-05 03:42:39.233735639 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+[1] Speed And Derek Jeter Go Crazy 🔥
+Downloading 15:24-15:54 of https://www.youtube.com/watch?v=vYuLOp5GISE
+Transcribing with whisper small.en (first run downloads the model)...
+Re-writing the script from what's actually said in the clip...
+  [1] IShowSpeed at 15:44: writing from transcript (95 words)
+Scripts written by ollama.
+  [1] model script uses a word moderation flags ("weapon"); using the free writer
+Cut 6.4s of dead air (8 jump cuts).
+Framing on the face at 43% across.
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Fetching 10 files:  80%|████████  | 8/10 [00:30<00:07,  3.82s/it]Fetching 10 files: 100%|██████████| 10/10 [00:32<00:00,  3.07s/it]Fetching 10 files: 100%|██████████| 10/10 [00:32<00:00,  3.25s/it]
+/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/diffusers/models/lora.py:393: FutureWarning: `LoRACompatibleLinear` is deprecated and will be removed in version 1.0.0. Use of `LoRACompatibleLinear` is deprecated. Please switch to PEFT backend by installing PEFT: `pip install peft`.
+  deprecate("LoRACompatibleLinear", "1.0.0", deprecation_message)
+Chatterbox voice failed (TypeError: 'NoneType' object is not callable); using Kokoro.
+Done. Video: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/spike_2026-11-05_0337/clips/01_vYuLOp5GISE_31.mp4
+Title/description: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/spike_2026-11-05_0337/clips/01_vYuLOp5GISE_31.txt
+  uploaded https://youtube.com/shorts/I1VuWL5Pji0 (public now)
+  TikTok: [1] draft in your TikTok inbox. Open the notification, paste this caption, post:
+    Speed in Tried Becoming a Pro. #ishowspeed #derekjeter #triedbecomingpro

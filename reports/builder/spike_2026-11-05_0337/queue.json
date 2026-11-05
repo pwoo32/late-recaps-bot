@@ -1,0 +1,117 @@
+[
+ {
+  "id": 1,
+  "source": "ishowspeed",
+  "creator": "IShowSpeed",
+  "platform": "youtube",
+  "video_id": "vYuLOp5GISE",
+  "video_title": "I Tried Becoming a Pro Baseball Player ft. Derek Jeter!",
+  "url": "https://www.youtube.com/watch?v=vYuLOp5GISE&t=944s",
+  "moment": "15:44",
+  "start": 924,
+  "end": 954,
+  "rank": 6.14,
+  "signal": "chat went 4.1x its normal pace",
+  "signals": [
+   "chat spike"
+  ],
+  "quotes": [
+   "W",
+   "W",
+   "W"
+  ],
+  "stream_age_h": 10.1,
+  "spike": true,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "narrate": "on",
+   "test": null
+  },
+  "council": {
+   "trend": 0.64,
+   "study": 1.0,
+   "analytics": 0.69,
+   "live": 0.55,
+   "script": 0.75,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 0.64,
+    "why": "Speed clips pull 552,821 views/hour this week, down 29% since the last scan"
+   },
+   "study": {
+    "score": 1.0,
+    "why": "5 of the top channels' breakout Shorts are Speed clips; Speed is in 133 of their recent titles"
+   },
+   "analytics": {
+    "score": 0.69,
+    "why": "Speed clips do 0.4x our usual; has a spoken premise (bet/question/challenge); stream is 10h old (fresh)"
+   },
+   "live": {
+    "score": 0.55,
+    "why": "chat went 4.1x"
+   },
+   "script": {
+    "score": 0.75,
+    "why": "draft title: \"Derek Jeter Hypes Up Speed 🔥\""
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": false,
+  "council_meeting_at": "2026-11-05T03:37:22Z",
+  "council_why": "highest combined vote",
+  "post_utc": "2026-11-05 03:37",
+  "post_local": "Wed 10:37 PM ET",
+  "title": "Speed And Derek Jeter Go Crazy 🔥",
+  "hook": "WAIT FOR DEREK JETER",
+  "context": "IShowSpeed live: I Tried Becoming a Pro Baseball Player Ft. Derek Jeter, with Derek Jeter",
+  "take": "The exchange between Speed and Derek Jeter is the story here; watch the reaction.",
+  "draft": false,
+  "description": "IShowSpeed during \"I Tried Becoming a Pro Baseball Player ft. Derek Jeter\" with Derek Jeter.\n\nFull stream by IShowSpeed: https://www.youtube.com/watch?v=vYuLOp5GISE&t=944s\nGo support IShowSpeed, all credit to them.\n\n#ishowspeed #derekjeter #triedbecomingpro #speed #shorts",
+  "key": "vYuLOp5GISE@31",
+  "permission": "fan clipping is widespread and tolerated; no official paid program found (Oct 2026)",
+  "summary": "IShowSpeed during \"I Tried Becoming a Pro Baseball Player ft. Derek Jeter\" with Derek Jeter.",
+  "tiktok_caption": "Speed in Tried Becoming a Pro. #ishowspeed #derekjeter #triedbecomingpro",
+  "hashtags": [
+   "#ishowspeed",
+   "#derekjeter",
+   "#triedbecomingpro"
+  ],
+  "tags": [
+   "ishowspeed",
+   "speed",
+   "derek jeter",
+   "tried",
+   "becoming",
+   "baseball",
+   "player",
+   "speed clips",
+   "streamer clips"
+  ],
+  "writer": "free",
+  "script_source": "transcript",
+  "upload_tags": [
+   "ishowspeed",
+   "speed",
+   "derek jeter",
+   "tried",
+   "becoming",
+   "baseball",
+   "player",
+   "speed clips",
+   "streamer clips",
+   "shorts"
+  ],
+  "youtube_id": "I1VuWL5Pji0",
+  "tiktok_id": "v_inbox_file~v2.7704530480250750989"
+ }
+]

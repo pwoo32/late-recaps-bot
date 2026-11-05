@@ -86,7 +86,8 @@
   "ohQXEHnv_mE@624",
   "2333520884@0",
   "clip_01M6JPN6XX7X2GN1YRZ3E77X7C@0",
-  "vYuLOp5GISE@25"
+  "vYuLOp5GISE@25",
+  "vYuLOp5GISE@31"
  ],
  "queued": {
   "L6S9Vb3RLy4@186": {
@@ -788,6 +789,30 @@
     "audience": 0.5
    },
    "video_id": "7m3klzp0Bls"
+  },
+  "vYuLOp5GISE@31": {
+   "title": "Speed And Derek Jeter Go Crazy \ud83d\udd25",
+   "source": "ishowspeed",
+   "post_utc": "2026-11-05 03:37",
+   "recipe": {
+    "length": 30,
+    "punch": 0.14,
+    "beat": "normal",
+    "caption_words": 3,
+    "gap": 0.6,
+    "layout": "face34",
+    "narrate": "on",
+    "test": null
+   },
+   "council": {
+    "trend": 0.64,
+    "study": 1.0,
+    "analytics": 0.69,
+    "live": 0.55,
+    "script": 0.75,
+    "audience": 0.5
+   },
+   "video_id": "I1VuWL5Pji0"
   }
  },
  "channel": "UCbK9EejOk5UVzI_l8F3f8kA",
@@ -1498,12 +1523,82 @@
      "W"
     ]
    }
+  ],
+  "lWDwj15NJWw": [
+   {
+    "t": 3654,
+    "ratio": 23.1,
+    "msgs": 110,
+    "sample": [
+     "W",
+     "W",
+     "W",
+     "W",
+     "W"
+    ]
+   },
+   {
+    "t": 10109,
+    "ratio": 16.9,
+    "msgs": 54,
+    "sample": [
+     "w",
+     "w",
+     "w",
+     "w",
+     "w"
+    ]
+   },
+   {
+    "t": 8059,
+    "ratio": 14.6,
+    "msgs": 95,
+    "sample": [
+     "w",
+     "l",
+     "w",
+     "w",
+     "l"
+    ]
+   },
+   {
+    "t": 7229,
+    "ratio": 12.6,
+    "msgs": 54,
+    "sample": [
+     "w",
+     "w",
+     "w",
+     "w",
+     "Happy Birthday!!! :party_popper::partying_face::confetti_ball:"
+    ]
+   },
+   {
+    "t": 6909,
+    "ratio": 10.6,
+    "msgs": 50,
+    "sample": [
+     "is jynxzi just here to larp around????"
+    ]
+   },
+   {
+    "t": 34,
+    "ratio": 9.2,
+    "msgs": 53,
+    "sample": [
+     "Yo",
+     "Yo",
+     "Yo",
+     "yooo",
+     "broo"
+    ]
+   }
   ]
  },
  "edit": {
   "stats": {}
  },
  "spike_posts": {
-  "2026-11-04": 1
+  "2026-11-05": 1
  }
 }
