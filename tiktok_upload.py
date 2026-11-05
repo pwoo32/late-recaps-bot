@@ -15,11 +15,13 @@ import hashlib
 import http.server
 import json
 import os
+import re
 import secrets
 import sys
 import time
 import urllib.parse
 import webbrowser
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 import requests
@@ -29,6 +31,7 @@ REDIRECT_PORT = 8723
 REDIRECT_URI = f"http://localhost:{REDIRECT_PORT}/callback/"
 SCOPES = {"inbox": "user.info.basic,video.upload", "direct": "user.info.basic,video.upload,video.publish"}
 TOKEN_FILE = Path.home() / ".config" / "clip-builder" / "tiktok_token.json"
+MAX_PENDING_INBOX_DRAFTS = 4  # TikTok allows 5 pending drafts per 24h; leave one slot as a safety buffer.
 
 
 def _client():
@@ -113,11 +116,15 @@ def _post(path, access, body):
 
 
 def caption(clip):
-    tags = [t for t in clip.get("hashtags", []) if t.startswith("#") and t.lower() != "#shorts"]
+    tags = [t for t in clip.get("hashtags", []) if t.startswith("#")
+            and t.lower() not in {"#shorts", "#fyp", "#viral"}]
     if not tags:
-        tags = [w for w in clip.get("description", "").split() if w.startswith("#") and w.lower() != "#shorts"]
-    tags = list(dict.fromkeys(tags + ["#fyp"]))[:6]
-    return f"{clip['title']} {' '.join(tags)}".strip()[:2200]
+        tags = [w for w in clip.get("description", "").split() if w.startswith("#")
+                and w.lower() not in {"#shorts", "#fyp", "#viral"}]
+    tags = list(dict.fromkeys(tags))[:4]
+    copy = clip.get("tiktok_caption") or ". ".join(
+        part for part in (clip.get("title"), clip.get("context") or clip.get("summary")) if part)
+    return f"{copy} {' '.join(tags)}".strip()[:2200]
 
 
 def upload(path, clip, mode="inbox"):
@@ -152,3 +159,49 @@ def status(publish_id):
     if not access:
         raise RuntimeError("Not signed in to TikTok: run `python channel_builder.py tiktok-auth`.")
     return _post("/post/publish/status/fetch/", access, {"publish_id": publish_id})
+
+
+def pending_inbox_drafts(builder_dir, exclude_queue=None, now=None, stop_at=MAX_PENDING_INBOX_DRAFTS):
+    """Count recent, tracked inbox uploads that still need the creator to finish posting them.
+
+    Queue folder timestamps are UTC. Unknown status is reported separately so the caller can pause safely instead
+    of sending more drafts while it cannot verify the pending count.
+    """
+    now = now or datetime.now(timezone.utc)
+    cutoff = now - timedelta(hours=24)
+    excluded = Path(exclude_queue).resolve() if exclude_queue else None
+    pending, unknown, seen = 0, [], set()
+    for qdir in sorted(Path(builder_dir).glob("*_20*"), key=lambda p: p.name, reverse=True):
+        if excluded and qdir.resolve() == excluded:
+            continue
+        stamp = re.search(r"(\d{4}-\d{2}-\d{2}_\d{4})$", qdir.name)
+        if not stamp:
+            continue
+        try:
+            created = datetime.strptime(stamp.group(1), "%Y-%m-%d_%H%M").replace(tzinfo=timezone.utc)
+        except ValueError:
+            continue
+        if created < cutoff or created > now + timedelta(minutes=5):
+            continue
+        qfile = qdir / "queue.json"
+        if not qfile.exists():
+            continue
+        try:
+            queue = json.loads(qfile.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            continue
+        for clip in queue:
+            publish_id = clip.get("tiktok_id")
+            if not publish_id or publish_id in seen:
+                continue
+            seen.add(publish_id)
+            try:
+                state = status(publish_id).get("status")
+            except Exception as exc:
+                unknown.append(f"{publish_id}: {type(exc).__name__}")
+                return pending, unknown
+            if state not in ("PUBLISH_COMPLETE", "FAILED"):
+                pending += 1
+                if pending >= stop_at:
+                    return pending, unknown
+    return pending, unknown
