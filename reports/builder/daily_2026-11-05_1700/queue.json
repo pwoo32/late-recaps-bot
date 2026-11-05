@@ -1,0 +1,207 @@
+[
+ {
+  "id": 1,
+  "source": "caseoh",
+  "creator": "CaseOh",
+  "platform": "twitch_clip",
+  "video_id": "912079449",
+  "video_title": "😭Crazy Viewer😭",
+  "url": "https://www.twitch.tv/caseoh_/clip/AbstruseWildWaspPermaSmug-5Gv9KT0tgRcumIVd",
+  "moment": "0:00",
+  "start": 0,
+  "end": 30.0,
+  "rank": 18.79,
+  "signal": "Twitch clip, 3,468 views (324/h)",
+  "signals": [
+   "twitch clip"
+  ],
+  "quotes": [
+   "😭Crazy Viewer😭"
+  ],
+  "stream_age_h": 10.7,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "narrate": "on",
+   "test": null
+  },
+  "council": {
+   "trend": 0.25,
+   "study": 0.25,
+   "analytics": 0.57,
+   "live": 0.12,
+   "script": 0.6,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 0.25,
+    "why": "CaseOh clips pull 1,779 views/hour this week, up 47% since the last scan"
+   },
+   "study": {
+    "score": 0.25,
+    "why": "top channels rarely break out with CaseOh"
+   },
+   "analytics": {
+    "score": 0.57,
+    "why": "no track record for CaseOh on our channel yet; no clear premise, may be visual-only; stream is 11h old (fresh)"
+   },
+   "live": {
+    "score": 0.12,
+    "why": "Twitch clip at 324/h"
+   },
+   "script": {
+    "score": 0.6,
+    "why": "draft title: \"CaseOh: \"Crazy Viewer\" 😭\"; no captions yet, writing blind"
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-05T17:00:11Z",
+  "council_why": "CaseOh's clips have a strong trend of high views, and the stream is fresh with high engagement, making it a strong candidate.",
+  "post_utc": "2026-11-06 17:00",
+  "post_local": "Fri 12:00 PM ET",
+  "title": "CaseOh: \"Crazy Viewer\" 😭",
+  "hook": "THIS WENT WRONG FAST",
+  "context": "CaseOh live on Twitch",
+  "take": "This is about Crazy Viewer; CaseOh's reaction is what makes the moment land.",
+  "draft": false,
+  "description": "CaseOh during \"Crazy Viewer\". Crazy Viewer.\n\nFull stream by CaseOh: https://www.twitch.tv/caseoh_/clip/AbstruseWildWaspPermaSmug-5Gv9KT0tgRcumIVd\nGo support CaseOh, all credit to them.\n\n#caseoh #crazyviewer #funny #shorts",
+  "key": "912079449@0",
+  "permission": "fan clipping is widespread and tolerated; no official program checked (Nov 2026)",
+  "summary": "CaseOh during \"Crazy Viewer\". Crazy Viewer.",
+  "tiktok_caption": "CaseOh in Crazy Viewer. #caseoh #crazyviewer #funny",
+  "hashtags": [
+   "#caseoh",
+   "#crazyviewer",
+   "#funny"
+  ],
+  "tags": [
+   "caseoh",
+   "case oh",
+   "caseoh clips",
+   "streamer clips"
+  ],
+  "writer": "free",
+  "script_source": "transcript",
+  "upload_tags": [
+   "caseoh",
+   "case oh",
+   "caseoh clips",
+   "streamer clips",
+   "shorts"
+  ],
+  "youtube_id": "jnTt9Z_Ghhw",
+  "tiktok_id": "v_inbox_file~v2.7704739465419720717"
+ },
+ {
+  "id": 2,
+  "source": "stableronaldo",
+  "creator": "Stable Ronaldo",
+  "platform": "twitch_clip",
+  "video_id": "1799409111",
+  "video_title": "laiys. says word",
+  "url": "https://www.twitch.tv/stableronaldo/clip/TransparentGoldenPlumageTooSpicy-gq8TfuooAwFIZzql",
+  "moment": "0:00",
+  "start": 0,
+  "end": 30.0,
+  "rank": 13.56,
+  "signal": "Twitch clip, 1,441 views (118/h)",
+  "signals": [
+   "twitch clip"
+  ],
+  "quotes": [
+   "laiys. says word"
+  ],
+  "stream_age_h": 12.2,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "slow",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "narrate": "on",
+   "test": "beat"
+  },
+  "council": {
+   "trend": 0.24,
+   "study": 0.25,
+   "analytics": 0.56,
+   "live": 0.11,
+   "script": 0.6,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 0.24,
+    "why": "Ronaldo clips pull 35,223 views/hour this week, up 13% since the last scan"
+   },
+   "study": {
+    "score": 0.25,
+    "why": "top channels rarely break out with Ronaldo"
+   },
+   "analytics": {
+    "score": 0.56,
+    "why": "no track record for Ronaldo on our channel yet; no clear premise, may be visual-only; stream is 12h old"
+   },
+   "live": {
+    "score": 0.11,
+    "why": "Twitch clip at 118/h"
+   },
+   "script": {
+    "score": 0.6,
+    "why": "draft title: \"Ronaldo: \"Laiys. Says Word\" 😱\"; no captions yet, writing blind"
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-05T17:00:11Z",
+  "council_why": "Stable Ronaldo's clips have a significantly higher view rate compared to others, and the stream is relatively new with potential for growth.",
+  "post_utc": "2026-11-06 08:00",
+  "post_local": "Fri 03:00 AM ET",
+  "title": "Ronaldo: \"Laiys. Says Word\" 😱",
+  "hook": "YO, WHY IS IT MOVING, ?",
+  "context": "Stable Ronaldo live on Twitch",
+  "take": "That question, “Yo, why is it?” sets up the moment. Listen to what follows.",
+  "draft": false,
+  "description": "Stable Ronaldo during \"laiys. says word\". laiys. says word.\n\nFull stream by Stable Ronaldo: https://www.twitch.tv/stableronaldo/clip/TransparentGoldenPlumageTooSpicy-gq8TfuooAwFIZzql\nGo support Stable Ronaldo, all credit to them.\n\n#stableronaldo #laiysword #shorts",
+  "key": "1799409111@0",
+  "permission": "fan clipping is widespread and tolerated; no official program checked (Nov 2026)",
+  "summary": "Stable Ronaldo during \"laiys. says word\". laiys. says word.",
+  "tiktok_caption": "Ronaldo in laiys. says word. #stableronaldo #laiysword",
+  "hashtags": [
+   "#stableronaldo",
+   "#laiysword"
+  ],
+  "tags": [
+   "stableronaldo",
+   "stable ronaldo",
+   "ronaldo clips",
+   "streamer clips"
+  ],
+  "writer": "free",
+  "script_source": "transcript",
+  "upload_tags": [
+   "stableronaldo",
+   "stable ronaldo",
+   "ronaldo clips",
+   "streamer clips",
+   "shorts"
+  ],
+  "youtube_id": "XrIA9z88oeo",
+  "tiktok_id": "v_inbox_file~v2.7704739567320238093"
+ }
+]

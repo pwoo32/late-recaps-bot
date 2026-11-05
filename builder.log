@@ -1255,3 +1255,87 @@ Title/description: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/bui
   TikTok: [1] draft in your TikTok inbox. Open the notification, paste this caption, post:
     Speed in Tried Becoming a Pro. #ishowspeed #derekjeter #triedbecomingpro
 Already posted 1 spike clips today; the limit is 1.
+[streamer] searching: streamer clips
+[streamer] searching: kai cenat
+[streamer] searching: ishowspeed
+[streamer] searching: twitch clips
+Fetching stats for 192 videos
+Fetching subscriber counts for 87 channels
+Done. Report: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/2026-11-05_1700/report.md
+[0;93m2026-11-05 17:15:48.172344268 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+Done. Report: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/track_2026-11-05_1700.md  (quota used: 2)
+[ishowspeed] reading recent streams/videos
+  reading the room on "I Tried Becoming a Pro Baseball Player ft. Derek Jeter!" (chat replay, most replayed)
+    3 chat spikes
+[kai_cenat] reading recent streams/videos
+  reading the room on "PLEASE DON’T WATCH THIS STREAM" (chat replay, most replayed)
+    6 chat spikes
+  40 Twitch clips from kaicenat
+[jynxzi] reading recent streams/videos
+  reading the room on "WHIMSICAL WEDNESDAY" (chat replay, most replayed)
+    6 chat spikes
+  reading the room on "TYPICAL TUESDAY STREAM" (chat replay, most replayed)
+    6 chat spikes
+  40 Twitch clips from jynxzi
+[adin_ross] reading recent streams/videos
+  36 Kick clips from adinross
+[n3on] reading recent streams/videos
+  22 Kick clips from n3on
+[caseoh] reading recent streams/videos
+  40 Twitch clips from caseoh_
+[xqc] reading recent streams/videos
+  40 Twitch clips from xqc
+  38 Kick clips from xqc
+[lacy] reading recent streams/videos
+  40 Twitch clips from lacy
+[plaqueboymax] reading recent streams/videos
+  40 Twitch clips from plaqueboymax
+[stableronaldo] reading recent streams/videos
+  40 Twitch clips from stableronaldo
+Clip council: 16 candidates, every agent votes...
+  picked CaseOh at 0:00 (council 0.34): CaseOh's clips have a strong trend of high views, and the stream is fresh with high engagement, making it a strong candi
+  picked Ronaldo at 0:00 (council 0.33): Stable Ronaldo's clips have a significantly higher view rate compared to others, and the stream is relatively new with p
+Writing scripts...
+  [1] CaseOh at 0:00: writing from comments
+  [2] Stable Ronaldo at 0:00: writing from comments
+Scripts written by ollama.
+  [1] model title "CaseOh Crashes Out After Crazy Viewer Says Word 😭" isn't backed by what's said (word, happened, comment); using the free writer
+  [2] model title "Stable Ronaldo Can't Believe laiys. Says Word 😭" isn't backed by what's said (what's, surprised, viewer's, comment); using the free writer
+Done. Queue: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-11-05_1700/queue.md  (quota used: 57)
+[1] CaseOh: "Crazy Viewer" 😭
+Downloading Twitch clip https://www.twitch.tv/caseoh_/clip/AbstruseWildWaspPermaSmug-5Gv9KT0tgRcumIVd
+Transcribing with whisper small.en (first run downloads the model)...
+Re-writing the script from what's actually said in the clip...
+  [1] CaseOh at 0:00: writing from transcript (20 words)
+Scripts written by ollama.
+  [1] model title "CaseOh Crashes Out After Viewer Scores Again 😭" isn't backed by what's said (scores, scores, surprising); using the free writer
+Cut 20.0s of dead air (3 jump cuts).
+No face found; framing the centre.
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Fetching 10 files:  80%|████████  | 8/10 [00:16<00:04,  2.12s/it]Fetching 10 files:  90%|█████████ | 9/10 [00:22<00:02,  2.63s/it]Fetching 10 files: 100%|██████████| 10/10 [00:30<00:00,  3.61s/it]Fetching 10 files: 100%|██████████| 10/10 [00:30<00:00,  3.06s/it]
+/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/diffusers/models/lora.py:393: FutureWarning: `LoRACompatibleLinear` is deprecated and will be removed in version 1.0.0. Use of `LoRACompatibleLinear` is deprecated. Please switch to PEFT backend by installing PEFT: `pip install peft`.
+  deprecate("LoRACompatibleLinear", "1.0.0", deprecation_message)
+Chatterbox voice failed (TypeError: 'NoneType' object is not callable); using Kokoro.
+Done. Video: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-11-05_1700/clips/01_912079449_0.mp4
+Title/description: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-11-05_1700/clips/01_912079449_0.txt
+  uploaded https://youtube.com/shorts/jnTt9Z_Ghhw (goes public Fri 12:00 PM ET)
+[2] Ronaldo: "Laiys. Says Word" 😱
+Downloading Twitch clip https://www.twitch.tv/stableronaldo/clip/TransparentGoldenPlumageTooSpicy-gq8TfuooAwFIZzql
+Transcribing with whisper small.en (first run downloads the model)...
+Re-writing the script from what's actually said in the clip...
+  [2] Stable Ronaldo at 0:00: writing from transcript (25 words)
+Scripts written by ollama.
+  [2] model title "Stable Ronaldo Can't Believe What Just Happened 😭" isn't backed by what's said (happened, looks, awkward, checks, during, livestream); using the free writer
+Cut 6.8s of dead air (2 jump cuts).
+Framing on the face at 51% across.
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 694.86it/s]
+/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/diffusers/models/lora.py:393: FutureWarning: `LoRACompatibleLinear` is deprecated and will be removed in version 1.0.0. Use of `LoRACompatibleLinear` is deprecated. Please switch to PEFT backend by installing PEFT: `pip install peft`.
+  deprecate("LoRACompatibleLinear", "1.0.0", deprecation_message)
+Chatterbox voice failed (TypeError: 'NoneType' object is not callable); using Kokoro.
+Done. Video: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-11-05_1700/clips/02_1799409111_0.mp4
+Title/description: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-11-05_1700/clips/02_1799409111_0.txt
+  uploaded https://youtube.com/shorts/XrIA9z88oeo (goes public Fri 03:00 AM ET)
+  TikTok: [1] draft in your TikTok inbox. Open the notification, paste this caption, post:
+    CaseOh in Crazy Viewer. #caseoh #crazyviewer #funny
+  TikTok: [2] draft in your TikTok inbox. Open the notification, paste this caption, post:
+    Ronaldo in laiys. says word. #stableronaldo #laiysword
