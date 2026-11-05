@@ -249,7 +249,7 @@ def decide(cands, n, ctx, cap=None, use_chair=True, out_dir=None):
 
     ok = cap or (lambda m, picks: True)
     picks, reasons = [], {}
-    chaired = chair(shortlist, n) if use_chair and len(shortlist) > n else None
+    chaired = chair(shortlist, n) if use_chair else None
     for i, why in chaired or []:
         m = shortlist[i]
         if ok(m, picks) and len(picks) < n:
@@ -262,6 +262,7 @@ def decide(cands, n, ctx, cap=None, use_chair=True, out_dir=None):
             picks.append(m)
     for m in picks:
         m["council_why"] = reasons.get(id(m)) or "highest combined vote"
+        m["council_chair"] = bool(chaired)
     if out_dir:
         write_minutes(out_dir, shortlist, picks, w, bool(chaired))
     return picks

@@ -510,7 +510,7 @@ def cmd_daily(args, yt=None, state=None):
     ctx = {"state": state, "pb": pb, "demand": demand, "change": change, "words": trend_words(videos, niche),
            "hot": script_agent.trending(niche, [{"source": k, "creator": s["name"]} for k, s in SOURCES.items()])[1],
            "asks": council.audience_asks(yt, state)}
-    picks = council.decide(shortlist, args.count, ctx, cap=allowed, use_chair=not spike, out_dir=out_dir)
+    picks = council.decide(shortlist, args.count, ctx, cap=allowed, use_chair=True, out_dir=out_dir)
     for m in picks:
         print(f"  picked {SOURCES[m['source']]['short']} at {fmt_ts(m['t'])} (council {m['council']:.2f}): {m['council_why'][:120]}")
     if not picks:
@@ -551,6 +551,8 @@ def cmd_daily(args, yt=None, state=None):
             "rank": m["rank"], "signal": signal or "most replayed", "signals": m.get("signals", []),
             "quotes": m["quotes"][:3], "stream_age_h": m["age_h"], "spike": spike,
             "recipe": recipe, "council": {k: v["score"] for k, v in m.get("votes", {}).items()},
+            "council_votes": m.get("votes", {}), "council_chair": bool(m.get("council_chair")),
+            "council_meeting_at": now.strftime("%Y-%m-%dT%H:%M:%SZ"),
             "council_why": m.get("council_why"),
             "post_utc": when.strftime("%Y-%m-%d %H:%M"), "post_local": when.astimezone(LOCAL_TZ).strftime("%a %I:%M %p ET"),
             **meta, "description": description(m, meta, pb), "key": m["key"],
@@ -1412,11 +1414,42 @@ def clip_problem(qdir, c):
     return None
 
 
-def hold(qdir, problems):
+def hold(qdir, problems, next_step="Fix these and run `python channel_builder.py publish` again."):
     note = qdir / "HOLD.md"
     note.write_text("# Posting held\n\n" + "\n".join(f"- {p}" for p in problems) +
-                    "\n\nFix these and run `python channel_builder.py publish` again.\n", encoding="utf-8")
+                    f"\n\n{next_step}\n", encoding="utf-8")
     print("Posting held, nothing uploaded:\n  " + "\n  ".join(problems) + f"\n  ({note})")
+
+
+def council_problem(clip):
+    """A post needs a recent, completed vote from every council agent in its queue record."""
+    meeting_at = clip.get("council_meeting_at")
+    try:
+        meeting_time = datetime.strptime(meeting_at, "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)
+    except (TypeError, ValueError):
+        return "council: no timestamped meeting for this clip"
+    age = (datetime.now(timezone.utc) - meeting_time).total_seconds()
+    if age < -300 or age > 24 * 60 * 60:
+        return "council: this clip's meeting is more than 24 hours old; convene again before posting"
+    votes = clip.get("council_votes")
+    if not isinstance(votes, dict):
+        return "council: this queue has no recorded meeting from every agent"
+    missing = [council.AGENTS[k] for k in council.AGENTS if not isinstance(votes.get(k), dict)]
+    if missing:
+        return "council: missing votes from " + ", ".join(missing)
+    incomplete, failed = [], []
+    for key, agent in council.AGENTS.items():
+        vote = votes[key]
+        score, why = vote.get("score"), vote.get("why")
+        if not isinstance(score, (int, float)) or not 0 <= score <= 1 or not isinstance(why, str) or not why.strip():
+            incomplete.append(agent)
+        elif why.startswith("(couldn't judge:"):
+            failed.append(agent)
+    if incomplete:
+        return "council: incomplete vote from " + ", ".join(incomplete)
+    if failed:
+        return "council: agent couldn't evaluate this clip: " + ", ".join(failed)
+    return None
 
 
 def cmd_publish(args):
@@ -1429,6 +1462,11 @@ def cmd_publish(args):
     state = load_state()
     tt = state.get("tiktok", {})
     picked = [c for c in queue if not args.ids or c["id"] in args.ids]
+    council_problems = [f"[{c['id']}] {problem}" for c in picked if (problem := council_problem(c))]
+    if council_problems:
+        hold(qdir, council_problems,
+             "Regenerate the queue with `daily` or `spike` so every agent can meet, then publish the new queue.")
+        sys.exit(1)
     todo = [c for c in picked if not c.get("youtube_id")]
     if not todo:
         print("Everything in this queue is already on YouTube.")
@@ -1636,7 +1674,7 @@ def main():
     p.add_argument("--whisper", default="small.en")
     p.add_argument("--narrate", action="store_true", help="add the AI narrator over the opening")
     p.add_argument("--voice", default=None)
-    p.add_argument("--skip-gate", action="store_true", help="post without the every-agent check (not recommended)")
+    p.add_argument("--skip-gate", action="store_true", help="skip freshness/content checks; council votes are still required")
     args = ap.parse_args()
 
     if args.cmd not in ("cut", "publish", "auth", "tiktok-auth", "tiktok-status") and not os.environ.get("YOUTUBE_API_KEY"):
