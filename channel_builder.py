@@ -1107,13 +1107,15 @@ def narrate(text, out_base, voice=None):
     if len(text) < 3:
         return None
     voice = voice or NARRATOR_VOICE
-    if not voice.startswith("en-") and os.environ.get("NARRATOR_ENGINE", "chatterbox") == "chatterbox":
+    if not voice.startswith("en-") and os.environ.get("NARRATOR_ENGINE", "chatterbox").lower() == "chatterbox":
         try:
             out = chatterbox_voice(text, out_base.with_suffix(".take.wav"), voice)
             if out.exists() and out.stat().st_size > 1000:
                 return out
         except Exception as e:
             print(f"Chatterbox voice failed ({type(e).__name__}: {str(e)[:120]}); using Kokoro.")
+            import traceback
+            traceback.print_exc()
     if not voice.startswith("en-"):
         try:
             out = kokoro_voice(text, out_base.with_suffix(".take.wav"), voice)
@@ -1559,7 +1561,9 @@ def post_tiktok(qdir, queue, clips, tt):
             return
     for c in clips:
         path = qdir / "clips" / f"{c['id']:02d}_{re.sub(r'[^A-Za-z0-9]+', '_', c['key'])}.mp4"
-        if c.get("tiktok_id") or not c.get("youtube_id") or not path.exists():
+        # TikTok is an independent destination: a YouTube upload failure or quota
+        # hold must not prevent an approved, rendered clip from reaching TikTok.
+        if c.get("tiktok_id") or not path.exists():
             continue
         if inbox and pending >= tiktok_upload.MAX_PENDING_INBOX_DRAFTS:
             print(f"  TikTok inbox paused: safety limit is {tiktok_upload.MAX_PENDING_INBOX_DRAFTS} pending drafts; finish some before sending more.")
@@ -1708,3 +1712,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

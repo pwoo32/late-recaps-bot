@@ -9,4 +9,5 @@ edge-tts>=7        # narrator fallback
 google-api-python-client>=2.150
 google-auth-oauthlib>=1.2
 tzdata
-opencv-python-headless>=4.8,<5   # finds the streamer's face to frame the clip on
+opencv-python-headless>=4.8,<4.12   # compatible with the NumPy 1.x version Chatterbox requires
+
