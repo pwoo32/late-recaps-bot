@@ -54,8 +54,8 @@ It studies what works; it never downloads or reuploads anyone's videos (that get
 ## Script agent
 
 `script_agent.py` writes everything that goes out with each clip: a real title in the breakout pattern
-("Speed Crashes Out After Cole Palmer Scores Again 😭"), the on-screen hook, the 3-second context line, the narrator
-line, the description and the YouTube tags. It pulls from every other agent: the trend report (which clips of that
+("Speed Crashes Out After Cole Palmer Scores Again 😭"), the on-screen hook, the 3-second context line, a clip-specific
+narrator take, YouTube description/tags, and a TikTok caption with searchable context. It pulls from every other agent: the trend report (which clips of that
 creator are blowing up this week), the channel study (breakout titles, title length, hashtags), the builder's queue
 (stream title, what viewers said at that timestamp), `track` (which of your own titles beat your median), and the clip
 itself (YouTube captions, then the whisper transcript once it's cut).
@@ -236,6 +236,9 @@ you turn it on.
 Modes:
 - `inbox` (default): each clip lands in your TikTok inbox as a draft. Tap the notification, paste the caption
   (`publish` prints it and saves it in queue.json as `tiktok_caption`), and post. This works before TikTok's audit.
-  TikTok allows 5 pending drafts per 24 hours.
+  TikTok allows 5 pending drafts per 24 hours. The builder checks recent tracked draft statuses and pauses at 4
+  pending drafts to leave a safety slot. If a status check fails, it pauses until drafts can be checked again.
+  Finish or clear pending drafts in TikTok before retrying. Captions use the generated clip context and relevant
+  hashtags; the builder does not append generic `#fyp` or `#viral` tags.
 - `direct`: posts on its own, with the caption. Until TikTok audits the app, posts are private-only, and the
   TikTok account itself must be private. Apply for the audit from the app's page, then switch modes.

@@ -232,22 +232,46 @@ def write(clip, src, hot_titles=(), lessons=None):
 
     site = {"twitch_clip": " on Twitch", "kick_clip": " on Kick"}.get(clip.get("platform"), "")
     context = (f"{full} live{site}" if event == "stream" else f"{full} live: {event}") + (f", with {guest}" if guest else "")
-    narrator = _pick([f"Bro, {short} had no idea what was about to happen.", f"Okay, keep your eyes on {short} right here.",
-                      f"This is exactly why chat can't stop clipping {short}.", "Nobody in the room saw this coming. Watch."],
-                     seed)
+    # Make the channel's voice say something specific to this clip, not a stock reaction line.
+    if money and versus:
+        narrator = f"There's {money} at stake, so the next move matters. Watch how {short} handles it."
+    elif guest and versus:
+        narrator = f"It's {short} against {guest}; this exchange turns on the next response."
+    elif line and kind == "question":
+        quote = " ".join(line.rstrip("?").split()[:4])
+        narrator = f"That question, “{quote}?” sets up the moment. Listen to what follows."
+    elif guest:
+        narrator = f"The exchange between {short} and {guest} is the story here; watch the reaction."
+    elif clip_topic:
+        narrator = f"This is about {clip_topic}; {short}'s reaction is what makes the moment land."
+    else:
+        narrator = f"Listen to {short}'s exact words, then watch how the moment changes."
     summary = f"{full} during \"{_clean(clip.get('video_title', ''))[:80]}\"" + (f" with {', '.join(people[:2])}" if people else "") + "."
     if q:
         summary += f" {q[:120].rstrip('.')}." if not q.endswith("?") else f" {q[:120]}"
     tags = list(dict.fromkeys(src.get("aliases", []) + [p.lower() for p in people[:3]]
                               + [w.lower() for w in re.findall(r"[A-Za-z0-9$]{4,}", event) if w.lower() not in STOP][:4]
                               + [f"{short.lower()} clips", "streamer clips"]))[:12]
-    hashtags = list(dict.fromkeys(src.get("hashtags", [])[:2] + ([f"#{re.sub(r'[^a-z0-9]', '', people[0].lower())}"] if people else [])
-                                  + ["#funny" if md == "funny" else "#viral"]))[:3]
+    topic_words = [w for w in re.findall(r"[A-Za-z0-9]+", clip_topic or event)
+                   if w.lower() not in STOP][:3]
+    topic_tag = "#" + "".join(w[:1].upper() + w[1:] for w in topic_words) if topic_words else None
+    topic_tag = topic_tag if topic_tag and not risky(topic_tag) else None
+    hashtags = list(dict.fromkeys(src.get("hashtags", [])[:1]
+                                  + ([f"#{re.sub(r'[^a-z0-9]', '', people[0].lower())}"] if people else [])
+                                  + ([topic_tag] if topic_tag else [])
+                                  + (["#funny"] if md == "funny" else [])))[:3]
     tags = [t for t in tags if not risky(t)]
-    if risky(" ".join([title, hook, context, summary])):  # e.g. a risky word in the stream title: say nothing specific
+    tiktok_caption = f"{short} in {clip_topic or short_event or event}."
+    if money and versus:
+        tiktok_caption += " Who takes this matchup?"
+    elif guest and versus:
+        tiktok_caption += " Who had the better moment?"
+    if risky(" ".join([title, hook, context, summary, tiktok_caption])):  # e.g. a risky word in the stream title: say nothing specific
         title, hook = f"{short} {_pick(react, seed)} {emoji}", "WAIT FOR IT"
         context, summary = f"{full} live", f"{full} live."
+        tiktok_caption = f"{short} reacts during a live stream."
     return {"title": title, "hook": hook, "context": context[:140], "narrator": narrator, "description": summary,
+            "tiktok_caption": tiktok_caption[:180],
             "hashtags": hashtags, "tags": tags}
 
 
