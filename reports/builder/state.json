@@ -89,7 +89,8 @@
   "vYuLOp5GISE@25",
   "vYuLOp5GISE@31",
   "912079449@0",
-  "1799409111@0"
+  "1799409111@0",
+  "lWDwj15NJWw@121"
  ],
  "queued": {
   "L6S9Vb3RLy4@186": {
@@ -863,6 +864,29 @@
     "audience": 0.5
    },
    "video_id": "XrIA9z88oeo"
+  },
+  "lWDwj15NJWw@121": {
+   "title": "Jynxzi Goes Crazy At Whimsical Wednesday \ud83d\udd25",
+   "source": "jynxzi",
+   "post_utc": "2026-11-05 17:42",
+   "recipe": {
+    "length": 30,
+    "punch": 0.14,
+    "beat": "normal",
+    "caption_words": 3,
+    "gap": 0.6,
+    "layout": "face34",
+    "narrate": "on",
+    "test": null
+   },
+   "council": {
+    "trend": 0.0,
+    "study": 0.25,
+    "analytics": 0.41,
+    "live": 0.55,
+    "script": 0.35,
+    "audience": 0.5
+   }
   }
  },
  "channel": "UCbK9EejOk5UVzI_l8F3f8kA",

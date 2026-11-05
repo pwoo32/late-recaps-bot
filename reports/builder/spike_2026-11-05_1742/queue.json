@@ -1,0 +1,106 @@
+[
+ {
+  "id": 1,
+  "source": "jynxzi",
+  "creator": "Jynxzi",
+  "platform": "youtube",
+  "video_id": "lWDwj15NJWw",
+  "video_title": "WHIMSICAL WEDNESDAY",
+  "url": "https://www.youtube.com/watch?v=lWDwj15NJWw&t=3654s",
+  "moment": "1:00:54",
+  "start": 3634,
+  "end": 3664,
+  "rank": 5.09,
+  "signal": "chat went 23.1x its normal pace",
+  "signals": [
+   "chat spike"
+  ],
+  "quotes": [
+   "W",
+   "W",
+   "W"
+  ],
+  "stream_age_h": 15.2,
+  "spike": true,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "narrate": "on",
+   "test": null
+  },
+  "council": {
+   "trend": 0.0,
+   "study": 0.25,
+   "analytics": 0.41,
+   "live": 0.55,
+   "script": 0.35,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 0.0,
+    "why": "Jynxzi clips pull 0 views/hour this week, down 89% since the last scan"
+   },
+   "study": {
+    "score": 0.25,
+    "why": "top channels rarely break out with Jynxzi"
+   },
+   "analytics": {
+    "score": 0.41,
+    "why": "Jynxzi clips do 0.4x our usual; no clear premise, may be visual-only; stream is 15h old"
+   },
+   "live": {
+    "score": 0.55,
+    "why": "chat went 23.1x"
+   },
+   "script": {
+    "score": 0.35,
+    "why": "draft title: \"Jynxzi Goes Off At Whimsical Wednesday 🔥\"; no captions yet, writing blind"
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": false,
+  "council_meeting_at": "2026-11-05T17:42:36Z",
+  "council_why": "highest combined vote",
+  "post_utc": "2026-11-05 17:42",
+  "post_local": "Thu 12:42 PM ET",
+  "title": "Jynxzi Goes Crazy At Whimsical Wednesday 🔥",
+  "hook": "DID HE REALLY DO THAT",
+  "context": "Jynxzi live: Whimsical Wednesday",
+  "take": "Listen to Jynxzi's exact words, then watch how the moment changes.",
+  "draft": false,
+  "description": "Jynxzi during \"WHIMSICAL WEDNESDAY\".\n\nFull stream by Jynxzi: https://www.youtube.com/watch?v=lWDwj15NJWw&t=3654s\nGo support Jynxzi, all credit to them.\n\n#jynxzi #whimsicalwednesday #shorts",
+  "key": "lWDwj15NJWw@121",
+  "permission": "fan clipping tolerated; check for a Whop campaign",
+  "summary": "Jynxzi during \"WHIMSICAL WEDNESDAY\".",
+  "tiktok_caption": "Jynxzi in Whimsical Wednesday.",
+  "hashtags": [
+   "#jynxzi",
+   "#whimsicalwednesday"
+  ],
+  "tags": [
+   "jynxzi",
+   "whimsical",
+   "wednesday",
+   "jynxzi clips",
+   "streamer clips"
+  ],
+  "writer": "free",
+  "script_source": "transcript",
+  "upload_tags": [
+   "jynxzi",
+   "whimsical",
+   "wednesday",
+   "jynxzi clips",
+   "streamer clips",
+   "shorts"
+  ]
+ }
+]
