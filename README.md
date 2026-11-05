@@ -105,6 +105,10 @@ the day's clips with a reason; without it the weighted vote decides. The whole m
 day's queue folder. Each agent's weight learns: when a clip settles, agents that rated it in line with how it did
 gain weight and the others lose some (shown at the bottom of the review report).
 
+Before any platform posts a clip, the publish gate requires a timestamped meeting from the last 24 hours with a
+completed vote and reason from every council agent. Spike queues also invite the local model chair. Queues without
+complete votes are held and must be rebuilt through `daily` or `spike` before publishing.
+
 **Edit tuner** (`tuner.py`): the new format (face-tracked frame, jump cuts, zoom punches, word-highlight captions, no
 narrator) stays the default. Each day the best clip gets the best settings found so far and the others each test one
 change: length (20/30/45s), zoom strength and pace, 2- or 3-word captions, how much silence gets cut, face-tracked vs
