@@ -595,6 +595,7 @@ def write_daily(out_dir, queue, ranked, demand, niche, pb, trend_dir, study_dir,
               f"- **On-screen hook:** {c['hook']}",
               f"- **Context line (first 3s):** {c['context']}",
               f"- **Narrator take (AI voice, off unless --narrate):** {c['take']}",
+              f"- **TikTok caption:** {c.get('tiktok_caption', '')}",
               f"- **Edit:** {c['recipe']['length']}s, punch {c['recipe']['punch']}, {c['recipe']['beat']} zooms, "
               f"{c['recipe']['caption_words']}-word captions, cut silences over {c['recipe']['gap']}s, {c['recipe']['layout']}"
               + (f" (testing {c['recipe']['test']})" if c['recipe'].get('test') else " (best settings so far)"),
@@ -1541,10 +1542,23 @@ def post_tiktok(qdir, queue, clips, tt):
     """Send every rendered clip that isn't on TikTok yet (enabled with `tiktok-auth --enable`)."""
     import tiktok_upload
     qfile = qdir / "queue.json"
+    inbox = tt.get("mode", "inbox") == "inbox"
+    pending = 0
+    if inbox:
+        pending, unknown = tiktok_upload.pending_inbox_drafts(BUILDER_DIR, exclude_queue=qdir)
+        if unknown:
+            print("  TikTok inbox paused: couldn't verify recent draft status; clear or check the drafts, then retry.")
+            return
+        if pending >= tiktok_upload.MAX_PENDING_INBOX_DRAFTS:
+            print(f"  TikTok inbox paused: {pending} recent drafts are still pending. Finish or clear drafts before sending more.")
+            return
     for c in clips:
         path = qdir / "clips" / f"{c['id']:02d}_{re.sub(r'[^A-Za-z0-9]+', '_', c['key'])}.mp4"
         if c.get("tiktok_id") or not c.get("youtube_id") or not path.exists():
             continue
+        if inbox and pending >= tiktok_upload.MAX_PENDING_INBOX_DRAFTS:
+            print(f"  TikTok inbox paused: safety limit is {tiktok_upload.MAX_PENDING_INBOX_DRAFTS} pending drafts; finish some before sending more.")
+            break
         try:
             c["tiktok_id"] = tiktok_upload.upload(path, c, tt.get("mode", "inbox"))
         except Exception as e:  # TikTok trouble never blocks YouTube
@@ -1554,6 +1568,8 @@ def post_tiktok(qdir, queue, clips, tt):
             continue
         c["tiktok_caption"] = tiktok_upload.caption(c)
         qfile.write_text(json.dumps(queue, indent=1, ensure_ascii=False), encoding="utf-8")
+        if inbox:
+            pending += 1
         print(f"  TikTok: [{c['id']}] " + ("posted" if tt.get("mode") == "direct" else
               "draft in your TikTok inbox. Open the notification, paste this caption, post:") +
               f"\n    {c['tiktok_caption']}")
