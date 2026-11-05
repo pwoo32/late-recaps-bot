@@ -1,15 +1,16 @@
 {
  "source_weight": {
-  "jynxzi": 0.39,
+  "jynxzi": 0.43,
   "kai_cenat": 0.31,
-  "ishowspeed": 0.34
+  "ishowspeed": 0.32
  },
  "slot_weight": {
-  "2": 0.37,
-  "21": 0.35,
-  "8": 0.37,
+  "2": 0.34,
+  "21": 0.33,
+  "8": 0.34,
   "4": 0.31,
-  "22": 0.45
+  "22": 0.39,
+  "17": 1.0
  },
  "used_moments": [
   "L6S9Vb3RLy4@186",
@@ -895,8 +896,8 @@
   "@TheDiaryOfACEO": "UCGq-a57w-aPwyi3pW7XLiHw"
  },
  "review": {
-  "at": "2026-11-05 17:00",
-  "report": "/home/runner/work/late-recaps-bot/late-recaps-bot/reports/review_2026-11-05_1700/report.md",
+  "at": "2026-11-05 18:31",
+  "report": "/home/runner/work/late-recaps-bot/late-recaps-bot/reports/review_2026-11-05_1831/report.md",
   "lessons": {
    "titles": [
     "Creator name first, then a bet or question in plain verbs, and never the result. Add a named guest or celebrity when one exists.",
@@ -921,7 +922,7 @@
    ]
   },
   "source_score": {},
-  "length_hint": 22,
+  "length_hint": 37,
   "clips": [
    {
     "title": "Kai Cenat Is Left Speechless At Was Shook From Ai \ud83d\ude31",
@@ -1067,6 +1068,11 @@
  },
  "own_results": [
   {
+   "title": "Kai Cenat Is Left Speechless At Was Shook From Ai \ud83d\ude31",
+   "views": 0,
+   "lift": 0.0
+  },
+  {
    "title": "Jynxzi Can't Believe What Just Happened \ud83d\ude2d",
    "views": 2,
    "lift": 2.0
@@ -1210,11 +1216,6 @@
    "title": "Speed Finds His Own Name On The Premiere Wall \ud83d\ude2d",
    "views": 0,
    "lift": 0.0
-  },
-  {
-   "title": "Jynxzi Pushes Through Promised Consort Radahn \ud83d\ude2d",
-   "views": 1,
-   "lift": 1.0
   }
  ],
  "tiktok": {

@@ -1,0 +1,160 @@
+[
+ {
+  "id": 1,
+  "source": "stableronaldo",
+  "creator": "Stable Ronaldo",
+  "platform": "twitch_clip",
+  "video_id": "3799471451",
+  "video_title": "Cuffem plugs in the Kinect mic MONSTA",
+  "url": "https://www.twitch.tv/stableronaldo/clip/AstuteCrackySwallowDxAbomb-OF59RtyO3tnAxoYk",
+  "moment": "0:00",
+  "start": 0,
+  "end": 40.0,
+  "rank": 9.32,
+  "signal": "Twitch clip, 667 views (20/h)",
+  "signals": [
+   "twitch clip"
+  ],
+  "quotes": [
+   "Cuffem plugs in the Kinect mic MONSTA"
+  ],
+  "stream_age_h": 33.7,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "narrate": "on",
+   "test": null
+  },
+  "council": {
+   "trend": 0.24,
+   "study": 0.25,
+   "analytics": 0.46,
+   "live": 0.1,
+   "script": 0.6,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 0.24,
+    "why": "Ronaldo clips pull 35,223 views/hour this week, up 13% since the last scan"
+   },
+   "study": {
+    "score": 0.25,
+    "why": "top channels rarely break out with Ronaldo"
+   },
+   "analytics": {
+    "score": 0.46,
+    "why": "no track record for Ronaldo on our channel yet; no clear premise, may be visual-only; stream is 34h old"
+   },
+   "live": {
+    "score": 0.1,
+    "why": "Twitch clip at 20/h"
+   },
+   "script": {
+    "score": 0.6,
+    "why": "draft title: \"Ronaldo: \"Cuffem Plugs in the Kinect Mic Monsta\" 😱\"; no captions yet, writing blind"
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-05T18:31:15Z",
+  "council_why": "Stable Ronaldo's clips have a significantly higher view rate (35,223 views/hour) compared to Jynxzi's, and the stream is relatively recent (34h old).",
+  "post_utc": "2026-11-06 17:00",
+  "post_local": "Fri 12:00 PM ET",
+  "title": "Ronaldo Cuffem plugs in the Kinect mic MONS 🤯",
+  "hook": "CUFFEM PLUGS IN THE KINECT MIC MONSTA",
+  "context": "Stable Ronaldo live, Cuffem plugs in the Kinect mic MONSTA",
+  "take": "Ronaldo had no idea what was about to happen.",
+  "draft": true,
+  "description": "Stable Ronaldo live, Cuffem plugs in the Kinect mic MONSTA\n\nFull stream by Stable Ronaldo: https://www.twitch.tv/stableronaldo/clip/AstuteCrackySwallowDxAbomb-OF59RtyO3tnAxoYk\nGo support Stable Ronaldo, all credit to them.\n\n#stableronaldo #shorts #ishowspeed #edit #kaicenat",
+  "key": "3799471451@0",
+  "permission": "fan clipping is widespread and tolerated; no official program checked (Nov 2026)"
+ },
+ {
+  "id": 2,
+  "source": "caseoh",
+  "creator": "CaseOh",
+  "platform": "twitch_clip",
+  "video_id": "3094383167",
+  "video_title": "SNAPPED UP",
+  "url": "https://www.twitch.tv/caseoh_/clip/AnnoyingSavoryDaikonM4xHeh-6PRYx2zddReRbHZA",
+  "moment": "0:00",
+  "start": 0,
+  "end": 31.0,
+  "rank": 12.02,
+  "signal": "Twitch clip, 521 views (34/h)",
+  "signals": [
+   "twitch clip"
+  ],
+  "quotes": [
+   "SNAPPED UP"
+  ],
+  "stream_age_h": 15.3,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "slow",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "narrate": "on",
+   "test": "beat"
+  },
+  "council": {
+   "trend": 0.25,
+   "study": 0.25,
+   "analytics": 0.54,
+   "live": 0.1,
+   "script": 0.6,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 0.25,
+    "why": "CaseOh clips pull 1,779 views/hour this week, up 47% since the last scan"
+   },
+   "study": {
+    "score": 0.25,
+    "why": "top channels rarely break out with CaseOh"
+   },
+   "analytics": {
+    "score": 0.54,
+    "why": "no track record for CaseOh on our channel yet; no clear premise, may be visual-only; stream is 15h old"
+   },
+   "live": {
+    "score": 0.1,
+    "why": "Twitch clip at 34/h"
+   },
+   "script": {
+    "score": 0.6,
+    "why": "draft title: \"CaseOh: \"Snapped Up\" 😱\"; no captions yet, writing blind"
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-05T18:31:15Z",
+  "council_why": "CaseOh's clips have a strong recent trend (1,779 views/hour) and the stream is also relatively recent (15h old), making them a strong contender for high views.",
+  "post_utc": "2026-11-06 08:00",
+  "post_local": "Fri 03:00 AM ET",
+  "title": "CaseOh SNAPPED UP 🤯",
+  "hook": "SNAPPED UP",
+  "context": "CaseOh live, SNAPPED UP",
+  "take": "CaseOh really thought this was a good idea.",
+  "draft": true,
+  "description": "CaseOh live, SNAPPED UP\n\nFull stream by CaseOh: https://www.twitch.tv/caseoh_/clip/AnnoyingSavoryDaikonM4xHeh-6PRYx2zddReRbHZA\nGo support CaseOh, all credit to them.\n\n#caseoh #shorts #ishowspeed #edit #kaicenat",
+  "key": "3094383167@0",
+  "permission": "fan clipping is widespread and tolerated; no official program checked (Nov 2026)"
+ }
+]
