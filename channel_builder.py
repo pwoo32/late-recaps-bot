@@ -1545,7 +1545,7 @@ def post_tiktok(qdir, queue, clips, tt):
     inbox = tt.get("mode", "inbox") == "inbox"
     pending = 0
     if inbox:
-        pending, unknown = tiktok_upload.pending_inbox_drafts(BUILDER_DIR, exclude_queue=qdir)
+        pending, unknown = tiktok_upload.pending_inbox_drafts(BUILDER_DIR)
         if unknown:
             print("  TikTok inbox paused: couldn't verify recent draft status; clear or check the drafts, then retry.")
             return
