@@ -65,9 +65,10 @@ SCHEMA = {
         "type": "object",
         "properties": {"index": {"type": "integer"}, "title": {"type": "string"}, "hook": {"type": "string"},
                        "context": {"type": "string"}, "narrator": {"type": "string"}, "description": {"type": "string"},
+                       "tiktok_caption": {"type": "string"},
                        "hashtags": {"type": "array", "items": {"type": "string"}},
                        "tags": {"type": "array", "items": {"type": "string"}}},
-        "required": ["index", "title", "hook", "context", "narrator", "description", "hashtags", "tags"]}}},
+        "required": ["index", "title", "hook", "context", "narrator", "description", "tiktok_caption", "hashtags", "tags"]}}},
     "required": ["clips"],
 }
 
@@ -250,11 +251,15 @@ For every clip write:
   spoiling it.
 - context: one short line shown for the first 3 seconds so a new viewer gets the setup (who, where, what's going on).
 - narrator: one sentence (8-16 words) the narrator voice says over the opening. The channel's own voice: a setup,
-  joke or reaction about THIS clip that adds something, written to be spoken aloud. Never generic ("watch this",
-  "you won't believe"). No emoji, no hashtags, no "subscribe".
+  joke or reaction about THIS clip that adds an original observation, grounded in its transcript, comments, and
+  visible context. Give each clip its own editorial angle; do not reuse generic setup lines or merely narrate the
+  title. Never generic ("watch this", "you won't believe"). No emoji, hashtags, or "subscribe".
 - description: 1-2 plain sentences for the YouTube description saying what happens and who's in it, with the names
   people search for. Describe the clip itself; don't mention viewers, chat or comments. No hashtags, no links (the
   credit and link are added for you).
+- tiktok_caption: one short, natural caption with accurate creator and topic/game/event wording viewers might search.
+  Add a specific question only when the clip clearly supports one; otherwise leave out engagement bait. No hashtags
+  or generic #fyp (those are added separately when relevant).
 - hashtags: 3 hashtags for the description (the top channels use: {tags_seen}). Include the creator.
 - tags: 8-12 YouTube search tags: creator names and nicknames, other people in the clip, the game/event/topic.
 
@@ -263,7 +268,7 @@ Clips:
 """ + "\n\n".join(blocks) + """
 
 Return only JSON: {"clips": [{"index": 0, "title": "...", "hook": "...", "context": "...", "narrator": "...",
-"description": "...", "hashtags": ["#..."], "tags": ["..."]}, ...]} with one entry per clip."""
+"description": "...", "tiktok_caption": "...", "hashtags": ["#..."], "tags": ["..."]}, ...]} with one entry per clip."""
 
 
 def parse_json(text):
@@ -319,6 +324,7 @@ def _api(prompt):
         context: str
         narrator: str
         description: str
+        tiktok_caption: str
         hashtags: list[str]
         tags: list[str]
 
@@ -347,7 +353,8 @@ def template_script(c, pb):
             "hook": quote[:40].upper() or f"{src['short'].upper()} LOST IT",
             "context": f"{src['name']} live, {c['video_title'][:60]}",
             "take": TEMPLATE_TAKES[sum(map(ord, c.get("video_id", "x"))) % len(TEMPLATE_TAKES)].format(n=src["short"]),
-            "summary": f"{src['name']} live: {c['video_title']}", "hashtags": [], "tags": [],
+            "summary": f"{src['name']} live: {c['video_title']}",
+            "tiktok_caption": f"{src['short']} in {c['video_title'][:100]}.", "hashtags": [], "tags": [],
             "draft": True, "writer": "template"}
 
 
@@ -371,6 +378,7 @@ def to_scripts(out, clips, pb, writer):
                         "context": clean(s.get("context"), 140),
                         "take": re.sub(r"[#@]\w+", "", s.get("narrator") or s.get("take") or "").strip(),
                         "summary": re.sub(r"https?://\S+|#[A-Za-z]\w*", "", s.get("description") or "").strip()[:600],
+                        "tiktok_caption": clean(s.get("tiktok_caption") or s.get("title"), 180),
                         "hashtags": ["#" + re.sub(r"\W", "", h).lower() for h in s.get("hashtags") or [] if re.sub(r"\W", "", h)][:3],
                         "tags": [t.strip()[:60] for t in s.get("tags") or [] if t.strip()][:12],
                         "draft": False, "writer": writer})
@@ -400,7 +408,7 @@ def ungrounded(clip, script):
     source = " ".join([transcript, clip.get("video_title", ""), clip.get("creator", "")] + (clip.get("quotes") or [])
                       + src_of(clip).get("aliases", [])).lower()
     import free_writer
-    written = " ".join(script.get(k) or "" for k in ("title", "hook", "context", "take", "summary"))
+    written = " ".join(script.get(k) or "" for k in ("title", "hook", "context", "take", "summary", "tiktok_caption"))
     if free_writer.risky(written):  # crime/violence/drug words in our text get clips taken down, even when said in jest
         print(f"  [{clip.get('id')}] model script uses a word moderation flags "
               f"(\"{free_writer.RISKY.search(written).group(0)}\"); using the free writer")
@@ -497,6 +505,7 @@ def save(qdir, queue):
                   f"- **On-screen hook:** {c['hook']}",
                   f"- **Context line (first 3s):** {c['context']}",
                   f"- **Narrator:** {c['take']}",
+                  f"- **TikTok caption:** {c.get('tiktok_caption', '')}",
                   f"- **Tags:** {', '.join(c.get('upload_tags', []))}",
                   f"- **Written by:** {c.get('writer', 'template')} from {c.get('script_source', 'comments')}"
                   + (" (draft: edit before posting)" if c.get("draft") else ""),
