@@ -14,7 +14,7 @@ on:
     - cron: "41 14 * * *"
     - cron: "53 20 * * *"
     - cron: "11 23 * * *"
-    - cron: "23 2,5,8,14,20,23 * * *"   # spike checks
+    - cron: "23 0,3,6,9,12,15,18,21 * * *"   # spike check every 3 hours, every day
   workflow_dispatch:
     inputs:
       mode:
@@ -63,7 +63,7 @@ jobs:
         id: mode
         run: |
           mode=daily
-          if [ "${{ github.event.schedule }}" = "23 2,5,8,14,20,23 * * *" ] || [ "${{ inputs.mode }}" = spike ]; then mode=spike; fi
+          if [ "${{ github.event.schedule }}" = "23 0,3,6,9,12,15,18,21 * * *" ] || [ "${{ inputs.mode }}" = spike ]; then mode=spike; fi
           post=true
           if [ "${{ github.event_name }}" = workflow_dispatch ] && [ "${{ inputs.post }}" != true ]; then post=false; fi
           skip=false
@@ -150,7 +150,6 @@ jobs:
       - name: Anything blowing up right now?
         id: spike
         if: steps.mode.outputs.skip != 'true' && steps.mode.outputs.mode == 'spike'
-        continue-on-error: true
         run: |
           python channel_builder.py spike 2>&1 | tee -a builder.log "$RUNNER_TEMP/run.log"
           q=$(grep -oE "Queue: [^ ]+queue.md" "$RUNNER_TEMP/run.log" | tail -1 | sed -E 's/^Queue: //; s#/queue.md$##')

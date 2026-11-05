@@ -815,17 +815,22 @@ def cmd_track(args):
     print(f"Done. Report: {out}  (quota used: {yt.units})")
 
 
-def cmd_run(args):
-    """Daily driver: refresh the other agents' reports when they're stale, then build the queue."""
+def refresh_inputs(niche):
+    """Refresh trend and channel-study reports when stale, for daily and spike runs."""
     here = Path(__file__).parent
     trend = latest("[0-9]*_*/niches.json")
     if not trend or run_age_days(trend.parent) > 0.8:  # every day: what's viral and who's spiking right now
-        r = subprocess.run([sys.executable, str(here / "agent.py"), "--niches", args.niche, "--days", "3"])
+        r = subprocess.run([sys.executable, str(here / "agent.py"), "--niches", niche, "--days", "3"])
         if r.returncode and not trend:
             sys.exit("Trend scan failed and there's no earlier one to use.")
-    study_run = latest(f"channels_{args.niche}_*/channels.json")
+    study_run = latest(f"channels_{niche}_*/channels.json")
     if not study_run or run_age_days(study_run.parent) > 5:  # refresh well before the posting gate (10 days) trips
-        subprocess.run([sys.executable, str(here / "channel_agent.py"), "--niche", args.niche], check=True)
+        subprocess.run([sys.executable, str(here / "channel_agent.py"), "--niche", niche], check=True)
+
+
+def cmd_run(args):
+    """Daily driver: refresh the other agents' reports when they're stale, then build the queue."""
+    refresh_inputs(args.niche)
     state = load_state()
     if state.get("channel"):
         cmd_track(argparse.Namespace(channel=None, niche=args.niche))
@@ -1508,7 +1513,7 @@ def cmd_publish(args):
         c["youtube_id"] = vid
         state["queued"].setdefault(c["key"], {}).update(video_id=vid, title=c["title"], source=c["source"])
         if qdir.name.startswith("spike_"):  # counts toward the spike checks' daily limit
-            day = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+            day = datetime.now(LOCAL_TZ).date().isoformat()
             state.setdefault("spike_posts", {})[day] = state["spike_posts"].get(day, 0) + 1
         qfile.write_text(json.dumps(queue, indent=1, ensure_ascii=False), encoding="utf-8")
         save_state(state)
@@ -1579,7 +1584,7 @@ def cmd_spike(args):
     """Every few hours: if something on a creator's stream is going nuts right now (chat flood, a Twitch clip
     racing up), clip it and post it straight away instead of waiting for tomorrow's run."""
     state = load_state()
-    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    today = datetime.now(LOCAL_TZ).date().isoformat()
     done = state.setdefault("spike_posts", {})
     for d in [d for d in done if d < today]:
         del done[d]
@@ -1587,6 +1592,7 @@ def cmd_spike(args):
     if left <= 0:
         print(f"Already posted {done[today]} spike clips today; the limit is {args.max_per_day}.")
         return
+    refresh_inputs(args.niche)
     qdir = cmd_daily(argparse.Namespace(niche=args.niche, count=min(left, args.count), hours=18, length=args.length, spike=True),
                      state=state)
     if not qdir:
@@ -1655,7 +1661,7 @@ def main():
     p = sub.add_parser("spike", help="clip and post anything going nuts on a stream right now")
     p.add_argument("--niche", default="streamer", choices=sorted({s["niche"] for s in SOURCES.values()}))
     p.add_argument("--count", type=int, default=1, help="clips per check")
-    p.add_argument("--max-per-day", type=int, default=1, help="spike clips per day at most (YouTube upload quota)")
+    p.add_argument("--max-per-day", type=int, default=2, help="spike clips per day at most (YouTube upload quota)")
     p.add_argument("--length", type=int, help="clip length in seconds (default: the edit tuner's)")
     p.add_argument("--publish", action="store_true", help="cut and post right away")
     p.add_argument("--voice", default=None)
