@@ -1,0 +1,105 @@
+[
+ {
+  "id": 1,
+  "source": "kai_cenat",
+  "creator": "Kai Cenat",
+  "platform": "youtube",
+  "video_id": "rykn3opnCyQ",
+  "video_title": "🎮 PLAYING EVERY GTA UNTIL I BEAT IT: Grand Theft Auto VICE CITY🎮",
+  "url": "https://www.youtube.com/watch?v=rykn3opnCyQ&t=27629s",
+  "moment": "7:40:29",
+  "start": 27609,
+  "end": 27639,
+  "rank": 8.19,
+  "signal": "chat went 5.2x its normal pace",
+  "signals": [
+   "chat spike"
+  ],
+  "quotes": [
+   "What?"
+  ],
+  "stream_age_h": 2.7,
+  "spike": true,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "narrate": "on",
+   "test": null
+  },
+  "council": {
+   "trend": 0.75,
+   "study": 0.95,
+   "analytics": 0.72,
+   "live": 0.55,
+   "script": 0.35,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 0.75,
+    "why": "Kai Cenat clips pull 247,959 views/hour this week, down 24% since the last scan; matches what's viral now: gta"
+   },
+   "study": {
+    "score": 0.95,
+    "why": "4 of the top channels' breakout Shorts are Kai Cenat clips; Kai Cenat is in 118 of their recent titles"
+   },
+   "analytics": {
+    "score": 0.72,
+    "why": "Kai Cenat clips do 0.3x our usual; has a spoken premise (bet/question/challenge); stream is 3h old (fresh)"
+   },
+   "live": {
+    "score": 0.55,
+    "why": "chat went 5.2x"
+   },
+   "script": {
+    "score": 0.35,
+    "why": "draft title: \"Kai Cenat Didn't See This Coming 😱\"; no captions yet, writing blind"
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": false,
+  "council_meeting_at": "2026-11-06T23:18:06Z",
+  "council_why": "highest combined vote",
+  "post_utc": "2026-11-06 23:18",
+  "post_local": "Fri 06:18 PM ET",
+  "title": "Kai Cenat Can't Believe What Just Happened 😱",
+  "hook": "WAIT FOR IT",
+  "context": "Kai Cenat live",
+  "take": "That question, “Chat a y'all opinion?” sets up the moment. Listen to what follows.",
+  "draft": false,
+  "description": "Kai Cenat live.\n\nFull stream by Kai Cenat: https://www.youtube.com/watch?v=rykn3opnCyQ&t=27629s\nGo support Kai Cenat, all credit to them.\n\n#kaicenat #kai #shorts",
+  "key": "rykn3opnCyQ@920",
+  "permission": "fan clipping is widespread and tolerated; no official paid program found (Oct 2026)",
+  "summary": "Kai Cenat live.",
+  "tiktok_caption": "Kai Cenat reacts during a live stream. #kaicenat",
+  "hashtags": [
+   "#kaicenat"
+  ],
+  "tags": [
+   "kai cenat",
+   "kai",
+   "kaicenat",
+   "kai cenat clips",
+   "streamer clips"
+  ],
+  "writer": "free",
+  "script_source": "transcript",
+  "upload_tags": [
+   "kai cenat",
+   "kai",
+   "kaicenat",
+   "kai cenat clips",
+   "streamer clips",
+   "shorts"
+  ],
+  "youtube_id": "GrM3WhdRMxk",
+  "tiktok_id": "v_inbox_file~v2.7705206882637776909"
+ }
+]

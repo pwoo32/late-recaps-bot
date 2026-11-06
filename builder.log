@@ -1442,3 +1442,55 @@ Done. Report: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/2026-11-
 [stableronaldo] reading recent streams/videos
   5 Twitch clips from stableronaldo
 Nothing is spiking right now.
+[ishowspeed] reading recent streams/videos
+  reading the room on "ONE PIECE IS IN FORTNITE! 🤯🏴‍☠️ + Speed Vs. Dele Alli ⚽🏴󠁧󠁢󠁥󠁮" (chat replay, most replayed)
+[kai_cenat] reading recent streams/videos
+  reading the room on "🎮 PLAYING EVERY GTA UNTIL I BEAT IT: Grand Theft Auto VICE C" (chat replay, most replayed)
+    6 chat spikes
+  4 Twitch clips from kaicenat
+[jynxzi] reading recent streams/videos
+  2 Twitch clips from jynxzi
+[adin_ross] reading recent streams/videos
+  2 Kick clips from adinross
+[n3on] reading recent streams/videos
+  0 Kick clips from n3on
+[caseoh] reading recent streams/videos
+  0 Twitch clips from caseoh_
+[xqc] reading recent streams/videos
+  4 Twitch clips from xqc
+  5 Kick clips from xqc
+[lacy] reading recent streams/videos
+  1 Twitch clips from lacy
+[plaqueboymax] reading recent streams/videos
+  0 Twitch clips from plaqueboymax
+[stableronaldo] reading recent streams/videos
+  2 Twitch clips from stableronaldo
+Clip council: 2 candidates, every agent votes...
+  picked Kai Cenat at 7:40:29 (council 0.64): highest combined vote
+Writing scripts...
+  [1] Kai Cenat at 7:40:29: writing from comments
+Scripts written by the free writer (no AI model).
+Done. Queue: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/spike_2026-11-06_2318/queue.md  (quota used: 17)
+WARNING: [youtube] rykn3opnCyQ: Some web_embedded client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for your account. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[0;93m2026-11-06 23:26:47.535066688 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+[1] Kai Cenat Can't Believe What Just Happened 😱
+Downloading 7:40:09-7:40:39 of https://www.youtube.com/watch?v=rykn3opnCyQ
+Transcribing with whisper small.en (first run downloads the model)...
+Re-writing the script from what's actually said in the clip...
+  [1] Kai Cenat at 7:40:29: writing from transcript (34 words)
+Scripts written by ollama.
+  [1] model title "Kai Cenat Can't Believe Chat Failed Again 😭" isn't backed by what's said (failed, loser, stream, ends, debates, fans); using the free writer
+Cut 10.0s of dead air (5 jump cuts).
+Framing on the face at 13% across.
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Fetching 10 files:  80%|████████  | 8/10 [00:41<00:10,  5.17s/it]Fetching 10 files: 100%|██████████| 10/10 [00:41<00:00,  4.13s/it]
+/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/diffusers/models/lora.py:393: FutureWarning: `LoRACompatibleLinear` is deprecated and will be removed in version 1.0.0. Use of `LoRACompatibleLinear` is deprecated. Please switch to PEFT backend by installing PEFT: `pip install peft`.
+  deprecate("LoRACompatibleLinear", "1.0.0", deprecation_message)
+  0%|          | 0/1000 [00:00<?, ?it/s]  0%|          | 2/1000 [00:00<01:19, 12.56it/s]  0%|          | 4/1000 [00:00<01:14, 13.34it/s]  1%|          | 6/1000 [00:00<01:13, 13.52it/s]  1%|          | 8/1000 [00:00<01:13, 13.44it/s]  1%|          | 10/1000 [00:00<01:13, 13.49it/s]  1%|          | 12/1000 [00:00<01:13, 13.53it/s]  1%|▏         | 14/1000 [00:01<01:12, 13.58it/s]  2%|▏         | 16/1000 [00:01<01:12, 13.60it/s]  2%|▏         | 18/1000 [00:01<01:12, 13.49it/s]  2%|▏         | 20/1000 [00:01<01:13, 13.40it/s]  2%|▏         | 22/1000 [00:01<01:13, 13.23it/s]  2%|▏         | 24/1000 [00:01<01:13, 13.25it/s]  3%|▎         | 26/1000 [00:01<01:13, 13.32it/s]  3%|▎         | 28/1000 [00:02<01:12, 13.39it/s]  3%|▎         | 30/1000 [00:02<01:11, 13.49it/s]  3%|▎         | 32/1000 [00:02<01:11, 13.59it/s]  3%|▎         | 34/1000 [00:02<01:10, 13.65it/s]  4%|▎         | 36/1000 [00:02<01:10, 13.66it/s]  4%|▍         | 38/1000 [00:02<01:10, 13.64it/s]  4%|▍         | 40/1000 [00:02<01:10, 13.61it/s]  4%|▍         | 42/1000 [00:03<01:10, 13.58it/s]  4%|▍         | 44/1000 [00:03<01:10, 13.56it/s]  5%|▍         | 46/1000 [00:03<01:11, 13.35it/s]  5%|▍         | 48/1000 [00:03<01:11, 13.31it/s]  5%|▌         | 50/1000 [00:03<01:11, 13.36it/s]  5%|▌         | 52/1000 [00:03<01:10, 13.44it/s]  5%|▌         | 54/1000 [00:04<01:10, 13.38it/s]  6%|▌         | 56/1000 [00:04<01:11, 13.29it/s]  6%|▌         | 58/1000 [00:04<01:10, 13.29it/s]  6%|▌         | 60/1000 [00:04<01:11, 13.08it/s]  6%|▌         | 62/1000 [00:04<01:12, 13.01it/s]  6%|▋         | 64/1000 [00:04<01:11, 13.00it/s]  7%|▋         | 66/1000 [00:04<01:11, 13.14it/s]  7%|▋         | 68/1000 [00:05<01:10, 13.22it/s]  7%|▋         | 70/1000 [00:05<01:10, 13.28it/s]  7%|▋         | 72/1000 [00:05<01:09, 13.29it/s]  7%|▋         | 74/1000 [00:05<01:10, 13.14it/s]  8%|▊         | 76/1000 [00:05<01:10, 13.18it/s]  8%|▊         | 78/1000 [00:05<01:10, 13.01it/s]  8%|▊         | 80/1000 [00:05<01:10, 13.08it/s]  8%|▊         | 82/1000 [00:06<01:11, 12.77it/s]  8%|▊         | 84/1000 [00:06<01:10, 12.95it/s]  9%|▊         | 86/1000 [00:06<01:09, 13.12it/s]  9%|▉         | 88/1000 [00:06<01:09, 13.19it/s]  9%|▉         | 90/1000 [00:06<01:08, 13.22it/s]  9%|▉         | 92/1000 [00:06<01:08, 13.29it/s]  9%|▉         | 94/1000 [00:07<01:07, 13.35it/s] 10%|▉         | 96/1000 [00:07<01:07, 13.41it/s] 10%|▉         | 98/1000 [00:07<01:06, 13.49it/s] 10%|█         | 100/1000 [00:07<01:06, 13.57it/s] 10%|█         | 102/1000 [00:07<01:06, 13.53it/s] 10%|█         | 104/1000 [00:07<01:06, 13.40it/s] 11%|█         | 106/1000 [00:07<01:07, 13.32it/s] 11%|█         | 108/1000 [00:08<01:07, 13.29it/s] 11%|█         | 110/1000 [00:08<01:06, 13.30it/s] 11%|█         | 112/1000 [00:08<01:07, 13.22it/s] 11%|█▏        | 114/1000 [00:08<01:07, 13.15it/s] 12%|█▏        | 115/1000 [00:08<01:07, 13.20it/s]
+S3 Token -> Mel Inference...
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:02<00:02,  2.29s/it]100%|██████████| 2/2 [00:04<00:00,  2.27s/it]100%|██████████| 2/2 [00:04<00:00,  2.28s/it]
+Done. Video: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/spike_2026-11-06_2318/clips/01_rykn3opnCyQ_920.mp4
+Title/description: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/spike_2026-11-06_2318/clips/01_rykn3opnCyQ_920.txt
+  uploaded https://youtube.com/shorts/GrM3WhdRMxk (public now)
+  TikTok: [1] draft in your TikTok inbox. Open the notification, paste this caption, post:
+    Kai Cenat reacts during a live stream. #kaicenat

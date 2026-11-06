@@ -91,7 +91,8 @@
   "vYuLOp5GISE@31",
   "912079449@0",
   "1799409111@0",
-  "lWDwj15NJWw@121"
+  "lWDwj15NJWw@121",
+  "rykn3opnCyQ@920"
  ],
  "queued": {
   "L6S9Vb3RLy4@186": {
@@ -888,6 +889,30 @@
     "script": 0.35,
     "audience": 0.5
    }
+  },
+  "rykn3opnCyQ@920": {
+   "title": "Kai Cenat Can't Believe What Just Happened \ud83d\ude31",
+   "source": "kai_cenat",
+   "post_utc": "2026-11-06 23:18",
+   "recipe": {
+    "length": 30,
+    "punch": 0.14,
+    "beat": "normal",
+    "caption_words": 3,
+    "gap": 0.6,
+    "layout": "face34",
+    "narrate": "on",
+    "test": null
+   },
+   "council": {
+    "trend": 0.75,
+    "study": 0.95,
+    "analytics": 0.72,
+    "live": 0.55,
+    "script": 0.35,
+    "audience": 0.5
+   },
+   "video_id": "GrM3WhdRMxk"
   }
  },
  "channel": "UCbK9EejOk5UVzI_l8F3f8kA",
@@ -1668,6 +1693,71 @@
      "broo"
     ]
    }
+  ],
+  "Kyv61l2vF6M": [],
+  "rykn3opnCyQ": [
+   {
+    "t": 32729,
+    "ratio": 6.7,
+    "msgs": 58,
+    "sample": [
+     "W",
+     "W",
+     "W",
+     ".W",
+     "W"
+    ]
+   },
+   {
+    "t": 27629,
+    "ratio": 5.2,
+    "msgs": 103,
+    "sample": [
+     "What?"
+    ]
+   },
+   {
+    "t": 40804,
+    "ratio": 5.0,
+    "msgs": 64,
+    "sample": [
+     "w",
+     "w",
+     "w",
+     "w",
+     "w"
+    ]
+   },
+   {
+    "t": 31644,
+    "ratio": 4.6,
+    "msgs": 85,
+    "sample": [
+     "w",
+     "yooo",
+     "w",
+     "lmao",
+     "w"
+    ]
+   },
+   {
+    "t": 20484,
+    "ratio": 4.4,
+    "msgs": 21,
+    "sample": [
+     "w fake sleeper",
+     "GUESS WHAT",
+     "GUESS WHAT",
+     "w fake sleeper",
+     "GUESS WHAT"
+    ]
+   },
+   {
+    "t": 25164,
+    "ratio": 4.2,
+    "msgs": 141,
+    "sample": []
+   }
   ]
  },
  "edit": {
@@ -1784,7 +1874,7 @@
   }
  },
  "spike_posts": {
-  "2026-11-05": 1
+  "2026-11-06": 1
  },
  "council": {
   "weights": {
