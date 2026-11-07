@@ -92,7 +92,8 @@
   "912079449@0",
   "1799409111@0",
   "lWDwj15NJWw@121",
-  "rykn3opnCyQ@920"
+  "rykn3opnCyQ@920",
+  "rykn3opnCyQ@1090"
  ],
  "queued": {
   "L6S9Vb3RLy4@186": {
@@ -913,6 +914,30 @@
     "audience": 0.5
    },
    "video_id": "GrM3WhdRMxk"
+  },
+  "rykn3opnCyQ@1090": {
+   "title": "Kai Cenat Goes Crazy \ud83d\udd25",
+   "source": "kai_cenat",
+   "post_utc": "2026-11-07 06:12",
+   "recipe": {
+    "length": 30,
+    "punch": 0.14,
+    "beat": "normal",
+    "caption_words": 3,
+    "gap": 0.6,
+    "layout": "face34",
+    "narrate": "on",
+    "test": null
+   },
+   "council": {
+    "trend": 0.75,
+    "study": 0.95,
+    "analytics": 0.67,
+    "live": 0.55,
+    "script": 0.65,
+    "audience": 0.5
+   },
+   "video_id": "UzG-D-_VtH0"
   }
  },
  "channel": "UCbK9EejOk5UVzI_l8F3f8kA",
@@ -1758,6 +1783,80 @@
     "msgs": 141,
     "sample": []
    }
+  ],
+  "nb5uTOtYj3U": [
+   {
+    "t": 5554,
+    "ratio": 24.3,
+    "msgs": 173,
+    "sample": [
+     "L ",
+     "What",
+     "Broooooo",
+     "l",
+     "What game is this?"
+    ]
+   },
+   {
+    "t": 16669,
+    "ratio": 23.6,
+    "msgs": 106,
+    "sample": [
+     "w",
+     "Ww",
+     "W",
+     "w",
+     "w"
+    ]
+   },
+   {
+    "t": 15884,
+    "ratio": 17.6,
+    "msgs": 92,
+    "sample": [
+     "W",
+     "w",
+     "w",
+     "w",
+     "w"
+    ]
+   },
+   {
+    "t": 6899,
+    "ratio": 10.0,
+    "msgs": 46,
+    "sample": [
+     "w",
+     "w\\",
+     "w",
+     "w",
+     "w"
+    ]
+   },
+   {
+    "t": 7284,
+    "ratio": 9.6,
+    "msgs": 180,
+    "sample": [
+     "YouTube lagging bro ",
+     "lmao",
+     "what day is it?",
+     "W connection",
+     "l"
+    ]
+   },
+   {
+    "t": 12044,
+    "ratio": 7.0,
+    "msgs": 42,
+    "sample": [
+     "w",
+     "w",
+     "w",
+     "w",
+     "w"
+    ]
+   }
   ]
  },
  "edit": {
@@ -1874,7 +1973,7 @@
   }
  },
  "spike_posts": {
-  "2026-11-06": 1
+  "2026-11-07": 1
  },
  "council": {
   "weights": {

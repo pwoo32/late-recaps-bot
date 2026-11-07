@@ -1,0 +1,83 @@
+[
+ {
+  "id": 1,
+  "source": "kai_cenat",
+  "creator": "Kai Cenat",
+  "platform": "youtube",
+  "video_id": "rykn3opnCyQ",
+  "video_title": "🎮 PLAYING EVERY GTA UNTIL I BEAT IT: Grand Theft Auto VICE CITY🎮",
+  "url": "https://www.youtube.com/watch?v=rykn3opnCyQ&t=32729s",
+  "moment": "9:05:29",
+  "start": 32709,
+  "end": 32739,
+  "rank": 8.59,
+  "signal": "chat went 6.7x its normal pace",
+  "signals": [
+   "chat spike"
+  ],
+  "quotes": [
+   "W",
+   "W",
+   "W"
+  ],
+  "stream_age_h": 9.6,
+  "spike": true,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "narrate": "on",
+   "test": null
+  },
+  "council": {
+   "trend": 0.75,
+   "study": 0.95,
+   "analytics": 0.67,
+   "live": 0.55,
+   "script": 0.65,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 0.75,
+    "why": "Kai Cenat clips pull 247,959 views/hour this week, down 24% since the last scan; matches what's viral now: gta"
+   },
+   "study": {
+    "score": 0.95,
+    "why": "4 of the top channels' breakout Shorts are Kai Cenat clips; Kai Cenat is in 118 of their recent titles"
+   },
+   "analytics": {
+    "score": 0.67,
+    "why": "Kai Cenat clips do 0.3x our usual; has a spoken premise (bet/question/challenge); stream is 10h old (fresh)"
+   },
+   "live": {
+    "score": 0.55,
+    "why": "chat went 6.7x"
+   },
+   "script": {
+    "score": 0.65,
+    "why": "draft title: \"Kai Cenat Goes Off 🔥\""
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": false,
+  "council_meeting_at": "2026-11-07T06:12:03Z",
+  "council_why": "highest combined vote",
+  "post_utc": "2026-11-07 06:12",
+  "post_local": "Sat 01:12 AM ET",
+  "title": "Kai Cenat W 🤯",
+  "hook": "W",
+  "context": "Kai Cenat live, 🎮 PLAYING EVERY GTA UNTIL I BEAT IT: Grand Theft Auto VICE C",
+  "take": "Kai Cenat had no idea what was about to happen.",
+  "draft": true,
+  "description": "Kai Cenat live, 🎮 PLAYING EVERY GTA UNTIL I BEAT IT: Grand Theft Auto VICE C\n\nFull stream by Kai Cenat: https://www.youtube.com/watch?v=rykn3opnCyQ&t=32729s\nGo support Kai Cenat, all credit to them.\n\n#kaicenat #kai #shorts #ishowspeed #edit",
+  "key": "rykn3opnCyQ@1090",
+  "permission": "fan clipping is widespread and tolerated; no official paid program found (Oct 2026)"
+ }
+]
