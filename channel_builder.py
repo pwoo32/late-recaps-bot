@@ -824,7 +824,7 @@ def refresh_inputs(niche):
         if r.returncode and not trend:
             sys.exit("Trend scan failed and there's no earlier one to use.")
     study_run = latest(f"channels_{niche}_*/channels.json")
-    if not study_run or run_age_days(study_run.parent) > 5:  # refresh well before the posting gate (10 days) trips
+    if not study_run or run_age_days(study_run.parent) > 0.8:  # refresh the channel study every day for current viral examples
         subprocess.run([sys.executable, str(here / "channel_agent.py"), "--niche", niche], check=True)
 
 
