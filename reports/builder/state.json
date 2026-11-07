@@ -94,7 +94,8 @@
   "lWDwj15NJWw@121",
   "rykn3opnCyQ@920",
   "rykn3opnCyQ@1090",
-  "jmRH9uvgPNk@1354"
+  "jmRH9uvgPNk@1354",
+  "jmRH9uvgPNk@1263"
  ],
  "queued": {
   "L6S9Vb3RLy4@186": {
@@ -960,6 +961,29 @@
     "analytics": 0.46,
     "live": 0.55,
     "script": 0.35,
+    "audience": 0.5
+   }
+  },
+  "jmRH9uvgPNk@1263": {
+   "title": "Kai Cenat Goes Crazy \ud83d\udd25",
+   "source": "kai_cenat",
+   "post_utc": "2026-11-07 19:35",
+   "recipe": {
+    "length": 30,
+    "punch": 0.14,
+    "beat": "normal",
+    "caption_words": 3,
+    "gap": 0.6,
+    "layout": "face34",
+    "narrate": "on",
+    "test": null
+   },
+   "council": {
+    "trend": 0.75,
+    "study": 0.95,
+    "analytics": 0.66,
+    "live": 0.55,
+    "script": 0.75,
     "audience": 0.5
    }
   }

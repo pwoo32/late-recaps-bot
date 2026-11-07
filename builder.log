@@ -1588,3 +1588,36 @@ Done. Queue: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/s
 Posting held, nothing uploaded:
   review agent: hasn't reviewed the channel in the last 36 hours (see review.log)
   (/home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/spike_2026-11-07_1317/HOLD.md)
+[ishowspeed] reading recent streams/videos
+[kai_cenat] reading recent streams/videos
+  reading the room on "🎮PLAYING EVERY GTA UNTIL I BEAT IT: Grand Theft Auto SAN AND" (chat replay, most replayed)
+    6 chat spikes
+  3 Twitch clips from kaicenat
+[jynxzi] reading recent streams/videos
+  reading the room on "BIGGEST ANNOUNCEMENT EVER" (chat replay, most replayed)
+    6 chat spikes
+  2 Twitch clips from jynxzi
+[adin_ross] reading recent streams/videos
+  6 Kick clips from adinross
+[n3on] reading recent streams/videos
+  0 Kick clips from n3on
+[caseoh] reading recent streams/videos
+  4 Twitch clips from caseoh_
+[xqc] reading recent streams/videos
+  2 Twitch clips from xqc
+  2 Kick clips from xqc
+[lacy] reading recent streams/videos
+  0 Twitch clips from lacy
+[plaqueboymax] reading recent streams/videos
+  4 Twitch clips from plaqueboymax
+[stableronaldo] reading recent streams/videos
+  3 Twitch clips from stableronaldo
+Clip council: 4 candidates, every agent votes...
+  picked Kai Cenat at 10:31:44 (council 0.68): highest combined vote
+Writing scripts...
+  [1] Kai Cenat at 10:31:44: writing from captions (87 words)
+Scripts written by the free writer (no AI model).
+Done. Queue: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/spike_2026-11-07_1935/queue.md  (quota used: 19)
+Posting held, nothing uploaded:
+  review agent: hasn't reviewed the channel in the last 36 hours (see review.log)
+  (/home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/spike_2026-11-07_1935/HOLD.md)
