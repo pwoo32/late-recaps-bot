@@ -93,7 +93,8 @@
   "1799409111@0",
   "lWDwj15NJWw@121",
   "rykn3opnCyQ@920",
-  "rykn3opnCyQ@1090"
+  "rykn3opnCyQ@1090",
+  "jmRH9uvgPNk@1354"
  ],
  "queued": {
   "L6S9Vb3RLy4@186": {
@@ -938,6 +939,29 @@
     "audience": 0.5
    },
    "video_id": "UzG-D-_VtH0"
+  },
+  "jmRH9uvgPNk@1354": {
+   "title": "Kai Cenat Didn't See This Coming \ud83d\ude31",
+   "source": "kai_cenat",
+   "post_utc": "2026-11-07 13:17",
+   "recipe": {
+    "length": 30,
+    "punch": 0.14,
+    "beat": "normal",
+    "caption_words": 3,
+    "gap": 0.6,
+    "layout": "face34",
+    "narrate": "on",
+    "test": null
+   },
+   "council": {
+    "trend": 0.75,
+    "study": 0.95,
+    "analytics": 0.46,
+    "live": 0.55,
+    "script": 0.35,
+    "audience": 0.5
+   }
   }
  },
  "channel": "UCbK9EejOk5UVzI_l8F3f8kA",
@@ -1855,6 +1879,75 @@
      "w",
      "w",
      "w"
+    ]
+   }
+  ],
+  "jmRH9uvgPNk": [
+   {
+    "t": 40649,
+    "ratio": 19.2,
+    "msgs": 194,
+    "sample": [
+     "yo",
+     "Yo",
+     "yoo",
+     "Yo",
+     "Yooooo"
+    ]
+   },
+   {
+    "t": 37904,
+    "ratio": 9.9,
+    "msgs": 264,
+    "sample": [
+     "AYOOO",
+     "w meh too lmao"
+    ]
+   },
+   {
+    "t": 7934,
+    "ratio": 6.2,
+    "msgs": 73,
+    "sample": [
+     "W",
+     "w",
+     "w",
+     "Lmaooo",
+     "w"
+    ]
+   },
+   {
+    "t": 23674,
+    "ratio": 6.1,
+    "msgs": 291,
+    "sample": [
+     "No brooo ",
+     "You are changing the game from how it was made bro ",
+     "w"
+    ]
+   },
+   {
+    "t": 18094,
+    "ratio": 5.0,
+    "msgs": 58,
+    "sample": [
+     "ww",
+     "wtf",
+     "W",
+     "W",
+     "w"
+    ]
+   },
+   {
+    "t": 34,
+    "ratio": 4.9,
+    "msgs": 249,
+    "sample": [
+     "W",
+     "W",
+     "w",
+     "W",
+     "W"
     ]
    }
   ]
