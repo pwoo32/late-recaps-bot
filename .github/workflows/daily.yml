@@ -196,14 +196,14 @@ jobs:
 
       - name: Review agent
         id: review
-        if: steps.mode.outputs.skip != 'true' && steps.mode.outputs.mode == 'daily'
+        if: steps.mode.outputs.skip != 'true'
         continue-on-error: true   # the pre-post check holds posting if the review didn't run
         # --no-llm: on the runner's CPU the written review takes 15+ minutes and times out; the numbers, diagnoses
         # and the edit tuner's scoring (what actually steers tomorrow) are all rule-based and still run
         run: python review_agent.py --no-llm 2>&1 | tee -a review.log
 
-      - name: Save completed daily agent review
-        if: steps.mode.outputs.skip != 'true' && steps.mode.outputs.mode == 'daily' && steps.review.outcome == 'success'
+      - name: Save completed agent review
+        if: steps.mode.outputs.skip != 'true' && steps.review.outcome == 'success'
         run: |
           git config user.name "late-recaps-bot"
           git config user.email "late-recaps-bot@users.noreply.github.com"
