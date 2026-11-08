@@ -19,7 +19,7 @@ by how that creator's clips did on your own channel.
 Scripts (title, hook, context line, narrator's take, description, tags) come from script_agent.py, which daily
 and cut run for you. It uses a free local Ollama model, and free_writer.py (no model at all) when Ollama isn't
 running; Claude only if you ask for it with SCRIPT_WRITER. `cut` needs ffmpeg + yt-dlp, faster-whisper for
-captions, and edge-tts for the default narrator voice. `publish` needs a Google OAuth client (see README).
+captions, and Chatterbox or Kokoro for the narrator voice (see narrate). `publish` needs a Google OAuth client (see README).
 
 Quota: plan ~30 units, daily ~30-60 units, track ~3 units. Outputs land in reports/builder/.
 """
@@ -302,7 +302,7 @@ def youtube_candidates(yt, key, src, state, since, now, chat_budget=240, live_st
             print(f"  reading the room on \"{it['snippet']['title'][:60]}\" (chat replay, most replayed)")
             cache = state.setdefault("chat_spikes", {})
             spikes = cache.get(it["id"])
-            if spikes is None or ended is None:  # a finished stream's chat never changes: read it once
+            if spikes is None:  # a finished stream's chat never changes: read it once
                 spikes = LM.chat_spikes(LM.chat_messages(it["id"], chat_budget), sec)
                 cache[it["id"]] = spikes
                 for k in list(cache)[:-40]:
@@ -423,23 +423,6 @@ def rank_moments(moments, demand, state, words=None, change=None):
 
 # ---------- titles and hooks ----------
 
-TEMPLATE_TAKES = ["{n} had no idea what was about to happen.", "Keep your eyes on {n} right here.",
-                  "This is why chat can't stop clipping {n}.", "Nobody in the room saw this coming.",
-                  "{n} really thought this was a good idea."]
-
-def template_meta(m, pb):
-    src = SOURCES[m["source"]]
-    quote = m["quotes"][0] if m["quotes"] else "moment"
-    quote = re.sub(r"\b(bro|lmao|lol|lmfao|fr|ngl|bruh)\b", "", quote, flags=re.I)
-    quote = re.sub(r"\s+", " ", quote).strip(" .,!?\"'")
-    emoji = "😭" if re.search(r"laugh|funny|😂|crying|dead|lol", " ".join(m["quotes"]), re.I) else "🤯"
-    title = f"{src['short']} {quote[:pb['title_chars'] - len(src['short']) - 3]}".strip() + f" {emoji}"
-    return {"title": title, "hook": quote[:40].upper() or f"{src['short'].upper()} LOST IT",
-            "context": f"{src['name']} live, {m['video_title'][:60]}",
-            "take": TEMPLATE_TAKES[sum(map(ord, m["video_id"])) % len(TEMPLATE_TAKES)].format(n=src["short"]),
-            "draft": True}
-
-
 def description(m, meta, pb):
     src = SOURCES[m["source"]]
     tags = list(dict.fromkeys(src["hashtags"] + [h for h, _ in pb["hashtags"][:4]] + ["#shorts"]))[:6]
@@ -517,14 +500,13 @@ def cmd_daily(args, yt=None, state=None):
         sys.exit(f"No moments found in the last {args.hours}h. Try --hours 168, or add sources in sources.py.")
 
     edits = tuner.recipes(state, len(picks), now.strftime("%Y-%m-%d") + ("spike" if spike else ""))
-    metas = {}  # scripts are written by script_agent below, once the queue exists
     slots = post_slots(pb, state, len(picks))
     today = (now.astimezone(LOCAL_TZ)).date()
     queue = []
     for i, m in enumerate(picks):
         recipe = edits[i]
         length = args.length or recipe["length"]
-        meta = metas.get(i) or template_meta(m, pb)
+        meta = script_agent.template_script({**m, "creator": SOURCES[m["source"]]["name"]}, pb)  # placeholder; script_agent writes the real script below
         if spike:
             when = now  # it's blowing up now: post now
         else:
@@ -594,7 +576,7 @@ def write_daily(out_dir, queue, ranked, demand, niche, pb, trend_dir, study_dir,
               f"- **Council:** {c.get('council_why') or '-'} (every agent's notes in council.md)",
               f"- **On-screen hook:** {c['hook']}",
               f"- **Context line (first 3s):** {c['context']}",
-              f"- **Narrator take (AI voice, off unless --narrate):** {c['take']}",
+              f"- **Narrator take (AI voice; the edit tuner turns it on or off):** {c['take']}",
               f"- **TikTok caption:** {c.get('tiktok_caption', '')}",
               f"- **Edit:** {c['recipe']['length']}s, punch {c['recipe']['punch']}, {c['recipe']['beat']} zooms, "
               f"{c['recipe']['caption_words']}-word captions, cut silences over {c['recipe']['gap']}s, {c['recipe']['layout']}"
@@ -712,9 +694,9 @@ def cmd_plan(args):
 
     L += ["## 7. Money", "",
           "Two income streams, and early on only one of them is real:", "",
-          f"1. **Clipping programs and campaigns** pay per view from day one (Whop Content Rewards, Vyro, creators' own "
-          f"Discords; reported rates $0.40-$3 per 1k views). Join every one that covers your creators and route those clips through it. "
-          f"Campaigns count views on TikTok and Instagram Reels too, so post every cut on all three.",
+          "1. **Clipping programs and campaigns** pay per view from day one (Whop Content Rewards, Vyro, creators' own "
+          "Discords; reported rates $0.40-$3 per 1k views). Join every one that covers your creators and route those clips through it. "
+          "Campaigns count views on TikTok and Instagram Reels too, so post every cut on all three.",
           f"2. **Shorts ad revenue** needs the YouTube Partner Program (1,000 subs + 10M Shorts views in 90 days) and pays about "
           f"${cfg['shorts_rpm']} per 1k views in this niche (niches.py estimate).", "",
           f"Scenarios at {per_day} Shorts/day, using {bench:,} median views (young channels in the study) as the top case:", "",
@@ -1098,6 +1080,15 @@ def chatterbox_voice(text, out, voice):
     return out
 
 
+def release_voice():
+    """Drop the Chatterbox model before the render: the cloud runner has ~7 GB of RAM, and holding the voice model
+    while ffmpeg encodes (with Ollama loaded too) got the runner killed mid-render on Nov 6-7."""
+    if _TURBO:
+        import gc
+        _TURBO.clear()
+        gc.collect()
+
+
 def narrate(text, out_base, voice=None):
     """Speak the take in the most human free voice available: Chatterbox Turbo in the channel's voice, then Kokoro
     (an open model that sounds like a person talking, read phrase by phrase), then edge-tts (Microsoft neural voices),
@@ -1276,6 +1267,7 @@ def cmd_cut(args):
     # footage original enough for the Shorts feed) and turns off if clips without it do better.
     if not args.voiceover and (getattr(args, "narrate", False) or recipe.get("narrate") == "on") and clip.get("take"):
         args.voiceover = narrate(clip["take"], base, args.voice)
+        release_voice()
     if args.voiceover and has_audio:  # your take over the opening, stream audio ducked under it
         dur = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0",
                                     str(args.voiceover)], capture_output=True, text=True).stdout.strip() or 0)

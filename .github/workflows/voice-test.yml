@@ -1,11 +1,8 @@
 name: Voice test
 on:
-  push:
-    branches: [claude/project-thread-njugdq]
-    paths: [tools/voice_test.py, .github/workflows/voice-test.yml]
-  workflow_dispatch:
+  workflow_dispatch:   # run by hand from the Actions tab
 permissions:
-  contents: write
+  contents: read
 jobs:
   voices:
     runs-on: ubuntu-latest
