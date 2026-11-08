@@ -994,8 +994,8 @@
   "@TheDiaryOfACEO": "UCGq-a57w-aPwyi3pW7XLiHw"
  },
  "review": {
-  "at": "2026-11-05 18:31",
-  "report": "/home/runner/work/late-recaps-bot/late-recaps-bot/reports/review_2026-11-05_1831/report.md",
+  "at": "2026-11-08 00:08",
+  "report": "/home/runner/work/late-recaps-bot/late-recaps-bot/reports/review_2026-11-08_0008/report.md",
   "lessons": {
    "titles": [
     "Creator name first, then a bet or question in plain verbs, and never the result. Add a named guest or celebrity when one exists.",
@@ -1020,11 +1020,53 @@
    ]
   },
   "source_score": {},
-  "length_hint": 37,
+  "length_hint": 22,
   "clips": [
    {
-    "title": "Kai Cenat Is Left Speechless At Was Shook From Ai \ud83d\ude31",
+    "title": "Kai Cenat Can't Believe What Just Happened \ud83d\ude31",
     "views": 0,
+    "avg_viewed": null,
+    "stayed": null,
+    "verdict": null
+   },
+   {
+    "title": "CaseOh: \"Crazy Viewer\" \ud83d\ude2d",
+    "views": 17,
+    "avg_viewed": null,
+    "stayed": null,
+    "verdict": null
+   },
+   {
+    "title": "Ronaldo: \"Laiys. Says Word\" \ud83d\ude31",
+    "views": 24,
+    "avg_viewed": null,
+    "stayed": null,
+    "verdict": null
+   },
+   {
+    "title": "xQc Can't Believe He Pulled This Off At X Presses Lang \ud83d\udd25",
+    "views": 0,
+    "avg_viewed": null,
+    "stayed": null,
+    "verdict": null
+   },
+   {
+    "title": "Speed And Derek Jeter Go Crazy \ud83d\udd25",
+    "views": 2,
+    "avg_viewed": null,
+    "stayed": null,
+    "verdict": null
+   },
+   {
+    "title": "Speed And Derek Jeter Can't Believe It \ud83d\udd25",
+    "views": 19,
+    "avg_viewed": null,
+    "stayed": null,
+    "verdict": null
+   },
+   {
+    "title": "Kai Cenat Is Left Speechless At Was Shook From Ai \ud83d\ude31",
+    "views": 1,
     "avg_viewed": null,
     "stayed": null,
     "verdict": null
@@ -1059,7 +1101,7 @@
    },
    {
     "title": "Kai Cenat Can't Believe Chat Failed Again \ud83d\ude2d",
-    "views": 0,
+    "views": 1,
     "avg_viewed": null,
     "stayed": null,
     "verdict": null
@@ -1087,14 +1129,14 @@
    },
    {
     "title": "Jynxzi Plays For $1000 And Goes Off \ud83d\udd25",
-    "views": 0,
+    "views": 2,
     "avg_viewed": null,
     "stayed": null,
     "verdict": null
    },
    {
     "title": "Kai Cenat Can't Believe Pooh Shiesty Bro Snapping \ud83e\uddd0\ud83d\ude2d",
-    "views": 0,
+    "views": 2,
     "avg_viewed": null,
     "stayed": null,
     "verdict": null
@@ -1116,48 +1158,6 @@
    {
     "title": "Kai Cenat Shows Off The AMP House Halloween Party \ud83c\udf83",
     "views": 0,
-    "avg_viewed": null,
-    "stayed": null,
-    "verdict": null
-   },
-   {
-    "title": "Speed Won't Go Down There In Spider-Man Suit \ud83d\udd77\ufe0f",
-    "views": 0,
-    "avg_viewed": null,
-    "stayed": null,
-    "verdict": null
-   },
-   {
-    "title": "Jynxzi Explains Why Hearing Wins In Rainbow Six \ud83c\udfa7",
-    "views": 7,
-    "avg_viewed": null,
-    "stayed": null,
-    "verdict": null
-   },
-   {
-    "title": "Kai Cenat Keeps Rakai Out Of The Halloween Party \ud83c\udf83\ud83d\ude2d",
-    "views": 0,
-    "avg_viewed": null,
-    "stayed": null,
-    "verdict": null
-   },
-   {
-    "title": "Kai Cenat Tells A Guest He's A Rose Boy \ud83c\udf39\ud83d\ude2d",
-    "views": 0,
-    "avg_viewed": null,
-    "stayed": null,
-    "verdict": null
-   },
-   {
-    "title": "Speed Hears Dubstep And Instantly Starts Vibing \ud83d\ude02",
-    "views": 0,
-    "avg_viewed": null,
-    "stayed": null,
-    "verdict": null
-   },
-   {
-    "title": "Kai Cenat Rates Japanese Train Breakfast \ud83c\udf73",
-    "views": 1,
     "avg_viewed": null,
     "stayed": null,
     "verdict": null
@@ -1989,6 +1989,13 @@
      -0.693,
      -0.693,
      -0.693,
+     -0.693,
+     0.405,
+     2.303,
+     0.0,
+     0.405
+    ],
+    "20": [
      -0.693
     ]
    },
@@ -2003,7 +2010,12 @@
      -0.693,
      -0.693,
      -0.693,
-     -0.693
+     -0.693,
+     -0.693,
+     0.405,
+     2.303,
+     0.0,
+     0.405
     ]
    },
    "beat": {
@@ -2017,7 +2029,12 @@
      -0.693,
      -0.693,
      -0.693,
-     -0.693
+     -0.693,
+     -0.693,
+     0.405,
+     2.303,
+     0.0,
+     0.405
     ]
    },
    "caption_words": {
@@ -2028,7 +2045,12 @@
      -0.693,
      -0.693,
      -0.693,
-     -0.693
+     -0.693,
+     -0.693,
+     0.405,
+     2.303,
+     0.0,
+     0.405
     ],
     "2": [
      -0.693,
@@ -2044,7 +2066,12 @@
      -0.693,
      -0.693,
      -0.693,
-     -0.693
+     -0.693,
+     -0.693,
+     0.405,
+     2.303,
+     0.0,
+     0.405
     ],
     "1.0": [
      -0.693,
@@ -2063,7 +2090,20 @@
      -0.693,
      -0.693,
      -0.693,
-     -0.693
+     -0.693,
+     -0.693,
+     0.405,
+     2.303,
+     0.0,
+     0.405
+    ]
+   },
+   "narrate": {
+    "on": [
+     -0.693,
+     0.405,
+     2.303,
+     0.0
     ]
    }
   },
@@ -2077,7 +2117,12 @@
    "ixvja1AyEbw",
    "5cY8zJsbGvw",
    "RPppa2R0pKc",
-   "jXk5oswaOu4"
+   "jXk5oswaOu4",
+   "aMNTMyi6SAs",
+   "I1VuWL5Pji0",
+   "7m3klzp0Bls",
+   "ubOFmdf5ecA",
+   "eUHjyRj5QAY"
   ],
   "best": {
    "length": 30,
@@ -2094,11 +2139,11 @@
  },
  "council": {
   "weights": {
-   "trend": 0.809,
-   "study": 0.659,
-   "analytics": 0.942,
-   "live": 1.514,
-   "script": 0.621,
+   "trend": 0.814,
+   "study": 0.748,
+   "analytics": 0.978,
+   "live": 1.579,
+   "script": 0.689,
    "audience": 0.5
   }
  }
