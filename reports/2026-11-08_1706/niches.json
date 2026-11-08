@@ -1,0 +1,131 @@
+[
+ {
+  "niche": "streamer",
+  "label": "Streamer clips (Twitch/Kick/YouTube live)",
+  "videos": 139,
+  "channels": 92,
+  "median_vph_top25": 14338.6,
+  "median_views": 124259,
+  "p75_outlier": 15.31,
+  "small_channel_hit_rate": 0.493,
+  "top3_channel_share": 0.232,
+  "median_engagement": 0.0215,
+  "shorts_rpm": 0.02,
+  "campaign_cpm": 2.0,
+  "reuse_risk": 0.35,
+  "est_earn_per_clip_shorts": 2.49,
+  "est_earn_per_clip_campaign": 248.52,
+  "payout_per_1k": 2.02,
+  "top_videos": [
+   {
+    "id": "tDRZaSojq8E",
+    "url": "https://www.youtube.com/shorts/tDRZaSojq8E",
+    "title": "Ronaldo & IShowSpeed Destroyed The Rock! \ud83d\ude31\ud83d\udc80 #cr7 #ishowspeed #therock",
+    "channel_id": "UCkDqoDYEi8riedO2pzp3MQw",
+    "channel": "Egg Battle",
+    "published": "2026-11-06T21:00:33Z",
+    "tags": [],
+    "seconds": 11,
+    "views": 3304797,
+    "hours": 44.1,
+    "views_per_hour": 74946.4,
+    "engagement": 0.0036,
+    "channel_subs": 71600,
+    "outlier": 46.16
+   },
+   {
+    "id": "rSDslVnwObM",
+    "url": "https://www.youtube.com/shorts/rSDslVnwObM",
+    "title": "The Rock x Messi x Neymar x IShowSpeed: Then vs Now Evolution! \ud83e\udd2f\u23f3\ud83d\udd25",
+    "channel_id": "UCl_hMcFvPTapaMCTfTj65DQ",
+    "channel": "Chronofiy",
+    "published": "2026-11-06T19:00:17Z",
+    "tags": [
+     "\u200b#TheRock #Messi #Neymar #IShowSpeed #ThenVsNow #Evolution #Shorts #ViralShorts #Trending #Crossover"
+    ],
+    "seconds": 7,
+    "views": 2421221,
+    "hours": 46.1,
+    "views_per_hour": 52521.2,
+    "engagement": 0.0058,
+    "channel_subs": 51900,
+    "outlier": 46.65
+   },
+   {
+    "id": "5toEUglQ5e4",
+    "url": "https://www.youtube.com/shorts/5toEUglQ5e4",
+    "title": "STEAK vs ISHOWSPEED vs CAYLUS \ud83d\ude42 #usa",
+    "channel_id": "UCB9_6bHsFEd7oqLhUTc8jWA",
+    "channel": "Karl_Aura",
+    "published": "2026-11-07T12:10:17Z",
+    "tags": [],
+    "seconds": 29,
+    "views": 919301,
+    "hours": 28.9,
+    "views_per_hour": 31773.2,
+    "engagement": 0.0206,
+    "channel_subs": 2050000,
+    "outlier": 0.45
+   },
+   {
+    "id": "NHYEn2Gmb6w",
+    "url": "https://www.youtube.com/shorts/NHYEn2Gmb6w",
+    "title": "Nicki Minaj joins Kai Cenat\u2019s stream, and Kai gets way too excited \ud83d\ude2d",
+    "channel_id": "UC-Ho4M_OU1680jA_-L7o_Tg",
+    "channel": "StreamGenius",
+    "published": "2026-11-06T01:34:41Z",
+    "tags": [
+     "Kai cenat",
+     "Kai cenat stream",
+     "Nicki minaj",
+     "Nicki minaj and Kai cenat",
+     "Kai cenat and Nicki minaj stream",
+     "Kai cenat twitch stream",
+     "English streamers",
+     "Streamer moments",
+     "Streamer clips",
+     "Kai cenat with celebrities",
+     "Streamer shorts",
+     "Kai cenat shorts",
+     "Twitch streamers"
+    ],
+    "seconds": 50,
+    "views": 1616226,
+    "hours": 63.5,
+    "views_per_hour": 25441.7,
+    "engagement": 0.0001,
+    "channel_subs": 41000,
+    "outlier": 39.42
+   },
+   {
+    "id": "PEOl5luGQrs",
+    "url": "https://www.youtube.com/shorts/PEOl5luGQrs",
+    "title": "Kai Cenat Can't Believe How Much This Girl Charges \ud83d\ude02",
+    "channel_id": "UCvCfpQXRXdJdL07pzTIA6Cw",
+    "channel": "Kai Cenat Live",
+    "published": "2026-11-07T15:10:40Z",
+    "tags": [
+     "Kai Cenat",
+     "Kai Cenat Live",
+     "Kai Cenat Livestream",
+     "Kai Live",
+     "Kai Cenat Funny"
+    ],
+    "seconds": 13,
+    "views": 552209,
+    "hours": 25.9,
+    "views_per_hour": 21298.7,
+    "engagement": 0.0256,
+    "channel_subs": 16700000,
+    "outlier": 0.03
+   }
+  ],
+  "score_parts": {
+   "demand": 1.0,
+   "money": 1.0,
+   "breakout": 1.0,
+   "safety": 0.65
+  },
+  "score": 94.8
+ }
+]

@@ -1679,3 +1679,69 @@ Title/description: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/bui
   uploaded https://youtube.com/shorts/po5Kgi8PuMI (public now)
   TikTok: [1] draft in your TikTok inbox. Open the notification, paste this caption, post:
     Kai Cenat reacts during a live stream. #kaicenat
+[streamer] searching: streamer clips
+[streamer] searching: kai cenat
+[streamer] searching: ishowspeed
+[streamer] searching: twitch clips
+Fetching stats for 189 videos
+Fetching subscriber counts for 92 channels
+Done. Report: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/2026-11-08_1706/report.md
+WARNING: [youtube] nb5uTOtYj3U: Some web_embedded client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for your account. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[0;93m2026-11-08 17:25:47.367755102 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+Done. Report: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/track_2026-11-08_1706.md  (quota used: 2)
+[ishowspeed] reading recent streams/videos
+  reading the room on "ONE PIECE IS IN FORTNITE! 🤯🏴‍☠️ + Speed Vs. Dele Alli ⚽🏴󠁧󠁢󠁥󠁮" (chat replay, most replayed)
+  reading the room on "REACTING TO RONALDO RETIREMENT & PLAYING  ZELDA FOR THE FIRS" (chat replay, most replayed)
+[kai_cenat] reading recent streams/videos
+  reading the room on "🎮PLAYING EVERY GTA UNTIL I BEAT IT: Grand Theft Auto SAN AND" (chat replay, most replayed)
+    6 chat spikes
+  reading the room on "🎮PLAYING EVERY GTA UNTIL I BEAT IT: Grand Theft Auto SAN AND" (chat replay, most replayed)
+    5 chat spikes
+  0 Twitch clips from kaicenat
+[jynxzi] reading recent streams/videos
+  reading the room on "SATURDAY STREAM BABY" (chat replay, most replayed)
+  reading the room on "BIGGEST ANNOUNCEMENT EVER" (chat replay, most replayed)
+    6 chat spikes
+  40 Twitch clips from jynxzi
+[adin_ross] reading recent streams/videos
+  34 Kick clips from adinross
+[n3on] reading recent streams/videos
+  31 Kick clips from n3on
+[caseoh] reading recent streams/videos
+  40 Twitch clips from caseoh_
+[xqc] reading recent streams/videos
+  40 Twitch clips from xqc
+  32 Kick clips from xqc
+[lacy] reading recent streams/videos
+  40 Twitch clips from lacy
+[plaqueboymax] reading recent streams/videos
+  40 Twitch clips from plaqueboymax
+[stableronaldo] reading recent streams/videos
+  40 Twitch clips from stableronaldo
+Clip council: 16 candidates, every agent votes...
+  picked Jynxzi at 1:32:34 (council 0.60): Jynxzi's 'BIGGEST ANNOUNCEMENT EVER' clip at 1:32:34 has a strong trend score, a clear spoken premise, and high chat eng
+Writing scripts...
+  [1] Jynxzi at 1:32:34: writing from captions (37 words)
+Scripts written by ollama.
+  [1] model title "Jynxzi Can't Believe The Enemy Joined Back 😱" isn't backed by what's said (plays, rainbow, siege, player, joins); using the free writer
+Done. Queue: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-11-08_1706/queue.md  (quota used: 57)
+[1] Jynxzi: "Why Did an Enemy Leave, ?" 😱
+Downloading 1:32:14-1:32:44 of https://www.youtube.com/watch?v=nb5uTOtYj3U
+Transcribing with whisper small.en (first run downloads the model)...
+Re-writing the script from what's actually said in the clip...
+  [1] Jynxzi at 1:32:34: writing from transcript (15 words)
+Scripts written by ollama.
+  [1] model title "Jynxzi Can't Believe He Joined Back R6.Tab 😱" isn't backed by what's said (joins, surprising, community); using the free writer
+Cut 0.8s of dead air (2 jump cuts).
+Framing on the face at 18% across.
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files:  80%|████████  | 8/10 [00:16<00:04,  2.09s/it]Fetching 10 files:  90%|█████████ | 9/10 [00:17<00:01,  1.90s/it]Fetching 10 files: 100%|██████████| 10/10 [00:24<00:00,  2.84s/it]Fetching 10 files: 100%|██████████| 10/10 [00:24<00:00,  2.47s/it]
+/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/diffusers/models/lora.py:393: FutureWarning: `LoRACompatibleLinear` is deprecated and will be removed in version 1.0.0. Use of `LoRACompatibleLinear` is deprecated. Please switch to PEFT backend by installing PEFT: `pip install peft`.
+  deprecate("LoRACompatibleLinear", "1.0.0", deprecation_message)
+  0%|          | 0/1000 [00:00<?, ?it/s]  0%|          | 2/1000 [00:00<01:31, 10.90it/s]  0%|          | 4/1000 [00:00<01:28, 11.26it/s]  1%|          | 6/1000 [00:00<01:25, 11.66it/s]  1%|          | 8/1000 [00:00<01:23, 11.84it/s]  1%|          | 10/1000 [00:00<01:24, 11.77it/s]  1%|          | 12/1000 [00:01<01:23, 11.79it/s]  1%|▏         | 14/1000 [00:01<01:25, 11.58it/s]  2%|▏         | 16/1000 [00:01<01:27, 11.24it/s]  2%|▏         | 18/1000 [00:01<01:26, 11.32it/s]  2%|▏         | 20/1000 [00:01<01:26, 11.35it/s]  2%|▏         | 22/1000 [00:01<01:25, 11.45it/s]  2%|▏         | 24/1000 [00:02<01:24, 11.50it/s]  3%|▎         | 26/1000 [00:02<01:24, 11.49it/s]  3%|▎         | 28/1000 [00:02<01:25, 11.39it/s]  3%|▎         | 30/1000 [00:02<01:24, 11.50it/s]  3%|▎         | 32/1000 [00:02<01:23, 11.59it/s]  3%|▎         | 34/1000 [00:02<01:22, 11.73it/s]  4%|▎         | 36/1000 [00:03<01:22, 11.72it/s]  4%|▍         | 38/1000 [00:03<01:22, 11.72it/s]  4%|▍         | 40/1000 [00:03<01:22, 11.57it/s]  4%|▍         | 42/1000 [00:03<01:22, 11.55it/s]  4%|▍         | 44/1000 [00:03<01:22, 11.63it/s]  5%|▍         | 46/1000 [00:03<01:21, 11.68it/s]  5%|▍         | 48/1000 [00:04<01:21, 11.65it/s]  5%|▌         | 50/1000 [00:04<01:22, 11.56it/s]  5%|▌         | 52/1000 [00:04<01:21, 11.57it/s]  5%|▌         | 54/1000 [00:04<01:22, 11.43it/s]  6%|▌         | 56/1000 [00:04<01:25, 11.00it/s]  6%|▌         | 58/1000 [00:05<01:25, 11.07it/s]  6%|▌         | 60/1000 [00:05<01:24, 11.12it/s]  6%|▌         | 62/1000 [00:05<01:23, 11.20it/s]  6%|▋         | 64/1000 [00:05<01:22, 11.28it/s]  7%|▋         | 66/1000 [00:05<01:23, 11.12it/s]  7%|▋         | 68/1000 [00:05<01:22, 11.25it/s]  7%|▋         | 70/1000 [00:06<01:22, 11.21it/s]  7%|▋         | 72/1000 [00:06<01:22, 11.24it/s]  7%|▋         | 74/1000 [00:06<01:22, 11.26it/s]  8%|▊         | 76/1000 [00:06<01:22, 11.22it/s]  8%|▊         | 78/1000 [00:06<01:23, 11.06it/s]  8%|▊         | 80/1000 [00:07<01:23, 10.95it/s]  8%|▊         | 82/1000 [00:07<01:23, 10.94it/s]  8%|▊         | 84/1000 [00:07<01:23, 11.00it/s]  9%|▊         | 86/1000 [00:07<01:22, 11.02it/s]  9%|▉         | 88/1000 [00:07<01:22, 11.08it/s]  9%|▉         | 90/1000 [00:07<01:22, 11.01it/s]  9%|▉         | 92/1000 [00:08<01:22, 10.97it/s]  9%|▉         | 93/1000 [00:08<01:20, 11.21it/s]
+S3 Token -> Mel Inference...
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:02<00:02,  2.16s/it]100%|██████████| 2/2 [00:04<00:00,  2.16s/it]100%|██████████| 2/2 [00:04<00:00,  2.16s/it]
+Done. Video: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-11-08_1706/clips/01_nb5uTOtYj3U_185.mp4
+Title/description: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-11-08_1706/clips/01_nb5uTOtYj3U_185.txt
+  uploaded https://youtube.com/shorts/Frwqjuv54FM (goes public Mon 03:00 AM ET)
+  TikTok: [1] draft in your TikTok inbox. Open the notification, paste this caption, post:
+    Jynxzi in Biggest Announcement Ever. #jynxzi #biggestannouncementever

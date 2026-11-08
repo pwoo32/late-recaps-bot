@@ -1,0 +1,110 @@
+[
+ {
+  "id": 1,
+  "source": "jynxzi",
+  "creator": "Jynxzi",
+  "platform": "youtube",
+  "video_id": "nb5uTOtYj3U",
+  "video_title": "BIGGEST ANNOUNCEMENT EVER",
+  "url": "https://www.youtube.com/watch?v=nb5uTOtYj3U&t=5554s",
+  "moment": "1:32:34",
+  "start": 5534,
+  "end": 5564,
+  "rank": 23.91,
+  "signal": "chat went 24.3x its normal pace",
+  "signals": [
+   "chat spike"
+  ],
+  "quotes": [
+   "L ",
+   "What",
+   "Broooooo"
+  ],
+  "stream_age_h": 39.3,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "narrate": "on",
+   "test": null
+  },
+  "council": {
+   "trend": 0.59,
+   "study": 0.25,
+   "analytics": 0.67,
+   "live": 0.55,
+   "script": 1.0,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 0.59,
+    "why": "Jynxzi clips pull 1,143 views/hour this week, up 217% since the last scan"
+   },
+   "study": {
+    "score": 0.25,
+    "why": "top channels rarely break out with Jynxzi"
+   },
+   "analytics": {
+    "score": 0.67,
+    "why": "Jynxzi clips do 0.9x our usual; has a spoken premise (bet/question/challenge); stream is 39h old"
+   },
+   "live": {
+    "score": 0.55,
+    "why": "chat went 24.3x"
+   },
+   "script": {
+    "score": 1.0,
+    "why": "draft title: \"Jynxzi: \"Chat, Why Did an Enemy Leave, ?\" 😱\""
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-08T17:06:20Z",
+  "council_why": "Jynxzi's 'BIGGEST ANNOUNCEMENT EVER' clip at 1:32:34 has a strong trend score, a clear spoken premise, and high chat engagement, making it highly likely to perform well.",
+  "post_utc": "2026-11-09 08:00",
+  "post_local": "Mon 03:00 AM ET",
+  "title": "Jynxzi Didn't See This Coming At Biggest Announcement Ever 😱",
+  "hook": "WAIT FOR THE END",
+  "context": "Jynxzi live: Biggest Announcement Ever",
+  "take": "Listen to Jynxzi's exact words, then watch how the moment changes.",
+  "draft": false,
+  "description": "Jynxzi during \"BIGGEST ANNOUNCEMENT EVER\".\n\nFull stream by Jynxzi: https://www.youtube.com/watch?v=nb5uTOtYj3U&t=5554s\nGo support Jynxzi, all credit to them.\n\n#jynxzi #biggestannouncementever #shorts",
+  "key": "nb5uTOtYj3U@185",
+  "permission": "fan clipping tolerated; check for a Whop campaign",
+  "summary": "Jynxzi during \"BIGGEST ANNOUNCEMENT EVER\".",
+  "tiktok_caption": "Jynxzi in Biggest Announcement Ever. #jynxzi #biggestannouncementever",
+  "hashtags": [
+   "#jynxzi",
+   "#biggestannouncementever"
+  ],
+  "tags": [
+   "jynxzi",
+   "biggest",
+   "announcement",
+   "ever",
+   "jynxzi clips",
+   "streamer clips"
+  ],
+  "writer": "free",
+  "script_source": "transcript",
+  "upload_tags": [
+   "jynxzi",
+   "biggest",
+   "announcement",
+   "ever",
+   "jynxzi clips",
+   "streamer clips",
+   "shorts"
+  ],
+  "youtube_id": "Frwqjuv54FM",
+  "tiktok_id": "v_inbox_file~v2.7705854593531463693"
+ }
+]
