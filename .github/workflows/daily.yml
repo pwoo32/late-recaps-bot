@@ -2,7 +2,7 @@
 # - daily run: review yesterday's clips (analytics steer the edit), scan what's trending, find today's moments
 #   (comment timestamps, chat spikes, most-replayed, Twitch clips), write scripts with a free local model (Ollama),
 #   cut, and post to YouTube, TikTok, Instagram and Facebook.
-# - spike checks every 3 hours: if something on a stream is going nuts right now, clip it and post it straight away.
+# - 7-day reach experiment: one strongest, distinct clip per day; keep posting volume low enough to compare Studio metrics.
 name: Late Recaps daily
 
 on:
@@ -14,7 +14,6 @@ on:
     - cron: "41 14 * * *"
     - cron: "53 20 * * *"
     - cron: "11 23 * * *"
-    - cron: "23 0,3,6,9,12,15,18,21 * * *"   # spike check every 3 hours, every day
   workflow_dispatch:
     inputs:
       mode:
@@ -217,7 +216,7 @@ jobs:
         if: steps.mode.outputs.skip != 'true' && steps.mode.outputs.mode == 'daily'
         run: |
           flag=--publish; [ "${{ steps.mode.outputs.post }}" = true ] || flag=
-          python channel_builder.py run $flag --niche streamer 2>&1 | tee -a builder.log "$RUNNER_TEMP/run.log"; exit ${PIPESTATUS[0]}
+          python channel_builder.py run $flag --niche streamer --count 1 2>&1 | tee -a builder.log "$RUNNER_TEMP/run.log"; exit ${PIPESTATUS[0]}
 
       - name: Post the spike clip
         if: steps.spike.outputs.queue != '' && steps.mode.outputs.post == 'true'
