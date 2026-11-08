@@ -1,0 +1,82 @@
+[
+ {
+  "id": 1,
+  "source": "kai_cenat",
+  "creator": "Kai Cenat",
+  "platform": "youtube",
+  "video_id": "kDLY56pnDlo",
+  "video_title": "🎮PLAYING EVERY GTA UNTIL I BEAT IT: Grand Theft Auto SAN ANDREAS🎮",
+  "url": "https://www.youtube.com/watch?v=kDLY56pnDlo&t=40425s",
+  "moment": "11:13:45",
+  "start": 40405,
+  "end": 40435,
+  "rank": 10.6,
+  "signal": "1 timestamp comments, 0 likes; chat went 4.1x its normal pace",
+  "signals": [
+   "comments",
+   "chat spike"
+  ],
+  "quotes": [
+   "bro I was doing all that crazy"
+  ],
+  "stream_age_h": 4.8,
+  "spike": true,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "narrate": "on",
+   "test": null
+  },
+  "council": {
+   "trend": 0.75,
+   "study": 1.0,
+   "analytics": 0.46,
+   "live": 0.55,
+   "script": 0.35,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 0.75,
+    "why": "Kai Cenat clips pull 283,592 views/hour this week, up 14% since the last scan; matches what's viral now: gta"
+   },
+   "study": {
+    "score": 1.0,
+    "why": "3 of the top channels' breakout Shorts are Kai Cenat clips; Kai Cenat is in 134 of their recent titles"
+   },
+   "analytics": {
+    "score": 0.46,
+    "why": "Kai Cenat clips do 0.3x our usual; no clear premise, may be visual-only; stream is 5h old (fresh)"
+   },
+   "live": {
+    "score": 0.55,
+    "why": "chat went 4.1x, 1 timestamp comments, 0 likes"
+   },
+   "script": {
+    "score": 0.35,
+    "why": "draft title: \"Kai Cenat Didn't See This Coming 😱\"; no captions yet, writing blind"
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": false,
+  "council_meeting_at": "2026-11-08T00:49:21Z",
+  "council_why": "highest combined vote",
+  "post_utc": "2026-11-08 00:49",
+  "post_local": "Sat 07:49 PM ET",
+  "title": "Kai Cenat I was doing all that craz 🤯",
+  "hook": "I WAS DOING ALL THAT CRAZY",
+  "context": "Kai Cenat live, 🎮PLAYING EVERY GTA UNTIL I BEAT IT: Grand Theft Auto SAN AND",
+  "take": "Keep your eyes on Kai Cenat right here.",
+  "draft": true,
+  "description": "Kai Cenat live, 🎮PLAYING EVERY GTA UNTIL I BEAT IT: Grand Theft Auto SAN AND\n\nFull stream by Kai Cenat: https://www.youtube.com/watch?v=kDLY56pnDlo&t=40425s\nGo support Kai Cenat, all credit to them.\n\n#kaicenat #kai #shorts #ishowspeed #usa #geography",
+  "key": "kDLY56pnDlo@1347",
+  "permission": "fan clipping is widespread and tolerated; no official paid program found (Oct 2026)"
+ }
+]

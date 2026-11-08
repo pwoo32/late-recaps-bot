@@ -95,7 +95,8 @@
   "rykn3opnCyQ@920",
   "rykn3opnCyQ@1090",
   "jmRH9uvgPNk@1354",
-  "jmRH9uvgPNk@1263"
+  "jmRH9uvgPNk@1263",
+  "kDLY56pnDlo@1347"
  ],
  "queued": {
   "L6S9Vb3RLy4@186": {
@@ -986,6 +987,29 @@
     "script": 0.75,
     "audience": 0.5
    }
+  },
+  "kDLY56pnDlo@1347": {
+   "title": "Kai Cenat Didn't See This Coming \ud83d\ude31",
+   "source": "kai_cenat",
+   "post_utc": "2026-11-08 00:49",
+   "recipe": {
+    "length": 30,
+    "punch": 0.14,
+    "beat": "normal",
+    "caption_words": 3,
+    "gap": 0.6,
+    "layout": "face34",
+    "narrate": "on",
+    "test": null
+   },
+   "council": {
+    "trend": 0.75,
+    "study": 1.0,
+    "analytics": 0.46,
+    "live": 0.55,
+    "script": 0.35,
+    "audience": 0.5
+   }
   }
  },
  "channel": "UCbK9EejOk5UVzI_l8F3f8kA",
@@ -994,8 +1018,8 @@
   "@TheDiaryOfACEO": "UCGq-a57w-aPwyi3pW7XLiHw"
  },
  "review": {
-  "at": "2026-11-08 00:08",
-  "report": "/home/runner/work/late-recaps-bot/late-recaps-bot/reports/review_2026-11-08_0008/report.md",
+  "at": "2026-11-08 00:56",
+  "report": "/home/runner/work/late-recaps-bot/late-recaps-bot/reports/review_2026-11-08_0056/report.md",
   "lessons": {
    "titles": [
     "Creator name first, then a bet or question in plain verbs, and never the result. Add a named guest or celebrity when one exists.",
@@ -1974,7 +1998,69 @@
      "W"
     ]
    }
-  ]
+  ],
+  "kDLY56pnDlo": [
+   {
+    "t": 32709,
+    "ratio": 4.7,
+    "msgs": 92,
+    "sample": [
+     "Yooo",
+     "ayooo",
+     "YOOOO",
+     "yo still playing",
+     "AYOOOO"
+    ]
+   },
+   {
+    "t": 559,
+    "ratio": 4.4,
+    "msgs": 270,
+    "sample": [
+     "yo bro gta6 is coming bro are you ready",
+     "ww",
+     "me bro",
+     "yo",
+     "what time we doing the giveaway??"
+    ]
+   },
+   {
+    "t": 31694,
+    "ratio": 4.1,
+    "msgs": 125,
+    "sample": [
+     "LMAOOOO",
+     "yoooo:face_with_tears_of_joy::face_with_tears_of_joy::face_with_tears_of_joy:",
+     "Ggs bro",
+     "lmaooo",
+     "lmfao"
+    ]
+   },
+   {
+    "t": 40454,
+    "ratio": 4.1,
+    "msgs": 76,
+    "sample": [
+     "wait what",
+     "wtf caughtttt",
+     "Bro im shitting idk what you on about ",
+     "Wtf",
+     "yo"
+    ]
+   },
+   {
+    "t": 17634,
+    "ratio": 3.9,
+    "msgs": 38,
+    "sample": [
+     "yo yo",
+     "W",
+     "bro been sleeping for hours",
+     "bro its 7:57 wake up"
+    ]
+   }
+  ],
+  "HyidbGBr7lE": []
  },
  "edit": {
   "stats": {
