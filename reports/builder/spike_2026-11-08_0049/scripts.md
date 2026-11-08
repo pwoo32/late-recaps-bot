@@ -8,7 +8,7 @@
 - **Narrator:** Listen to Kai Cenat's exact words, then watch how the moment changes.
 - **TikTok caption:** Kai Cenat reacts during a live stream.
 - **Tags:** kai cenat, kai, kaicenat, kai cenat clips, streamer clips, shorts
-- **Written by:** free from comments
+- **Written by:** free from transcript
 - **Post:** Sat 07:49 PM ET
 
 Description:

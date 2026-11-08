@@ -1009,7 +1009,8 @@
     "live": 0.55,
     "script": 0.35,
     "audience": 0.5
-   }
+   },
+   "video_id": "po5Kgi8PuMI"
   }
  },
  "channel": "UCbK9EejOk5UVzI_l8F3f8kA",
@@ -2221,7 +2222,7 @@
   }
  },
  "spike_posts": {
-  "2026-11-07": 1
+  "2026-11-07": 2
  },
  "council": {
   "weights": {
