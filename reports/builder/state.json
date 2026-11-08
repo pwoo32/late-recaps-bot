@@ -1019,8 +1019,8 @@
   "@TheDiaryOfACEO": "UCGq-a57w-aPwyi3pW7XLiHw"
  },
  "review": {
-  "at": "2026-11-08 02:30",
-  "report": "/home/runner/work/late-recaps-bot/late-recaps-bot/reports/review_2026-11-08_0230/report.md",
+  "at": "2026-11-08 17:06",
+  "report": "/home/runner/work/late-recaps-bot/late-recaps-bot/reports/review_2026-11-08_1706/report.md",
   "lessons": {
    "titles": [
     "Creator name first, then a bet or question in plain verbs, and never the result. Add a named guest or celebrity when one exists.",
@@ -1048,6 +1048,13 @@
   "length_hint": 22,
   "clips": [
    {
+    "title": "Kai Cenat Goes Crazy \ud83d\udd25",
+    "views": 0,
+    "avg_viewed": null,
+    "stayed": null,
+    "verdict": null
+   },
+   {
     "title": "Kai Cenat Can't Believe What Just Happened \ud83d\ude31",
     "views": 0,
     "avg_viewed": null,
@@ -1063,7 +1070,7 @@
    },
    {
     "title": "Ronaldo: \"Laiys. Says Word\" \ud83d\ude31",
-    "views": 24,
+    "views": 32,
     "avg_viewed": null,
     "stayed": null,
     "verdict": null
@@ -1133,7 +1140,7 @@
    },
    {
     "title": "Jynxzi: \"Chat What's My Kd?\" \ud83d\udd25",
-    "views": 0,
+    "views": 1,
     "avg_viewed": null,
     "stayed": null,
     "verdict": null
@@ -1176,13 +1183,6 @@
    {
     "title": "Speed Spots Someone In The Crowd And Chases Them \ud83d\udd77\ufe0f\ud83d\ude2d",
     "views": 1,
-    "avg_viewed": null,
-    "stayed": null,
-    "verdict": null
-   },
-   {
-    "title": "Kai Cenat Shows Off The AMP House Halloween Party \ud83c\udf83",
-    "views": 0,
     "avg_viewed": null,
     "stayed": null,
     "verdict": null
@@ -2080,7 +2080,9 @@
      0.405,
      2.303,
      0.0,
-     0.405
+     0.405,
+     2.197,
+     2.803
     ],
     "20": [
      -0.693
@@ -2102,7 +2104,9 @@
      0.405,
      2.303,
      0.0,
-     0.405
+     0.405,
+     2.197,
+     2.803
     ]
    },
    "beat": {
@@ -2121,7 +2125,11 @@
      0.405,
      2.303,
      0.0,
-     0.405
+     0.405,
+     2.197
+    ],
+    "slow": [
+     2.803
     ]
    },
    "caption_words": {
@@ -2137,7 +2145,9 @@
      0.405,
      2.303,
      0.0,
-     0.405
+     0.405,
+     2.197,
+     2.803
     ],
     "2": [
      -0.693,
@@ -2158,7 +2168,9 @@
      0.405,
      2.303,
      0.0,
-     0.405
+     0.405,
+     2.197,
+     2.803
     ],
     "1.0": [
      -0.693,
@@ -2182,7 +2194,9 @@
      0.405,
      2.303,
      0.0,
-     0.405
+     0.405,
+     2.197,
+     2.803
     ]
    },
    "narrate": {
@@ -2190,7 +2204,9 @@
      -0.693,
      0.405,
      2.303,
-     0.0
+     0.0,
+     2.197,
+     2.803
     ]
    }
   },
@@ -2209,7 +2225,9 @@
    "I1VuWL5Pji0",
    "7m3klzp0Bls",
    "ubOFmdf5ecA",
-   "eUHjyRj5QAY"
+   "eUHjyRj5QAY",
+   "jnTt9Z_Ghhw",
+   "XrIA9z88oeo"
   ],
   "best": {
    "length": 30,
@@ -2226,11 +2244,11 @@
  },
  "council": {
   "weights": {
-   "trend": 0.814,
-   "study": 0.748,
-   "analytics": 0.978,
-   "live": 1.579,
-   "script": 0.689,
+   "trend": 0.749,
+   "study": 0.689,
+   "analytics": 0.998,
+   "live": 1.39,
+   "script": 0.711,
    "audience": 0.5
   }
  }
