@@ -1044,8 +1044,8 @@
   "@TheDiaryOfACEO": "UCGq-a57w-aPwyi3pW7XLiHw"
  },
  "review": {
-  "at": "2026-11-08 17:06",
-  "report": "/home/runner/work/late-recaps-bot/late-recaps-bot/reports/review_2026-11-08_1706/report.md",
+  "at": "2026-11-09 21:31",
+  "report": "/home/runner/work/late-recaps-bot/late-recaps-bot/reports/review_2026-11-09_2131/report.md",
   "lessons": {
    "titles": [
     "Creator name first, then a bet or question in plain verbs, and never the result. Add a named guest or celebrity when one exists.",
@@ -1070,8 +1070,15 @@
    ]
   },
   "source_score": {},
-  "length_hint": 22,
+  "length_hint": 7,
   "clips": [
+   {
+    "title": "Kai Cenat Didn't See This Coming \ud83d\ude31",
+    "views": 0,
+    "avg_viewed": null,
+    "stayed": null,
+    "verdict": null
+   },
    {
     "title": "Kai Cenat Goes Crazy \ud83d\udd25",
     "views": 0,
@@ -1095,7 +1102,7 @@
    },
    {
     "title": "Ronaldo: \"Laiys. Says Word\" \ud83d\ude31",
-    "views": 32,
+    "views": 33,
     "avg_viewed": null,
     "stayed": null,
     "verdict": null
@@ -1116,7 +1123,7 @@
    },
    {
     "title": "Speed And Derek Jeter Can't Believe It \ud83d\udd25",
-    "views": 19,
+    "views": 20,
     "avg_viewed": null,
     "stayed": null,
     "verdict": null
@@ -1137,7 +1144,7 @@
    },
    {
     "title": "Jynxzi: \"What Is It?\" \ud83d\udd25",
-    "views": 29,
+    "views": 31,
     "avg_viewed": null,
     "stayed": null,
     "verdict": null
@@ -1201,13 +1208,6 @@
    {
     "title": "Jynxzi Can't Believe What Just Happened \ud83d\ude2d",
     "views": 0,
-    "avg_viewed": null,
-    "stayed": null,
-    "verdict": null
-   },
-   {
-    "title": "Speed Spots Someone In The Crowd And Chases Them \ud83d\udd77\ufe0f\ud83d\ude2d",
-    "views": 1,
     "avg_viewed": null,
     "stayed": null,
     "verdict": null
@@ -2180,7 +2180,9 @@
      0.0,
      0.405,
      2.197,
-     2.803
+     2.803,
+     -0.693,
+     -0.693
     ],
     "20": [
      -0.693
@@ -2204,7 +2206,9 @@
      0.0,
      0.405,
      2.197,
-     2.803
+     2.803,
+     -0.693,
+     -0.693
     ]
    },
    "beat": {
@@ -2224,7 +2228,9 @@
      2.303,
      0.0,
      0.405,
-     2.197
+     2.197,
+     -0.693,
+     -0.693
     ],
     "slow": [
      2.803
@@ -2245,7 +2251,9 @@
      0.0,
      0.405,
      2.197,
-     2.803
+     2.803,
+     -0.693,
+     -0.693
     ],
     "2": [
      -0.693,
@@ -2268,7 +2276,9 @@
      0.0,
      0.405,
      2.197,
-     2.803
+     2.803,
+     -0.693,
+     -0.693
     ],
     "1.0": [
      -0.693,
@@ -2294,7 +2304,9 @@
      0.0,
      0.405,
      2.197,
-     2.803
+     2.803,
+     -0.693,
+     -0.693
     ]
    },
    "narrate": {
@@ -2304,7 +2316,9 @@
      2.303,
      0.0,
      2.197,
-     2.803
+     2.803,
+     -0.693,
+     -0.693
     ]
    }
   },
@@ -2325,7 +2339,9 @@
    "ubOFmdf5ecA",
    "eUHjyRj5QAY",
    "jnTt9Z_Ghhw",
-   "XrIA9z88oeo"
+   "XrIA9z88oeo",
+   "UzG-D-_VtH0",
+   "GrM3WhdRMxk"
   ],
   "best": {
    "length": 30,
@@ -2342,10 +2358,10 @@
  },
  "council": {
   "weights": {
-   "trend": 0.749,
-   "study": 0.689,
-   "analytics": 0.998,
-   "live": 1.39,
+   "trend": 0.708,
+   "study": 0.622,
+   "analytics": 0.955,
+   "live": 1.374,
    "script": 0.711,
    "audience": 0.5
   }
