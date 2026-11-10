@@ -1044,8 +1044,8 @@
   "@TheDiaryOfACEO": "UCGq-a57w-aPwyi3pW7XLiHw"
  },
  "review": {
-  "at": "2026-11-10 00:59",
-  "report": "/home/runner/work/late-recaps-bot/late-recaps-bot/reports/review_2026-11-10_0059/report.md",
+  "at": "2026-11-10 03:04",
+  "report": "/home/runner/work/late-recaps-bot/late-recaps-bot/reports/review_2026-11-10_0304/report.md",
   "lessons": {
    "titles": [
     "Creator name first, then a bet or question in plain verbs, and never the result. Add a named guest or celebrity when one exists.",
@@ -2182,6 +2182,7 @@
      2.197,
      2.803,
      -0.693,
+     -0.693,
      -0.693
     ],
     "20": [
@@ -2208,6 +2209,7 @@
      2.197,
      2.803,
      -0.693,
+     -0.693,
      -0.693
     ]
    },
@@ -2229,6 +2231,7 @@
      0.0,
      0.405,
      2.197,
+     -0.693,
      -0.693,
      -0.693
     ],
@@ -2252,6 +2255,7 @@
      0.405,
      2.197,
      2.803,
+     -0.693,
      -0.693,
      -0.693
     ],
@@ -2277,6 +2281,7 @@
      0.405,
      2.197,
      2.803,
+     -0.693,
      -0.693,
      -0.693
     ],
@@ -2306,6 +2311,7 @@
      2.197,
      2.803,
      -0.693,
+     -0.693,
      -0.693
     ]
    },
@@ -2317,6 +2323,7 @@
      0.0,
      2.197,
      2.803,
+     -0.693,
      -0.693,
      -0.693
     ]
@@ -2341,7 +2348,8 @@
    "jnTt9Z_Ghhw",
    "XrIA9z88oeo",
    "UzG-D-_VtH0",
-   "GrM3WhdRMxk"
+   "GrM3WhdRMxk",
+   "po5Kgi8PuMI"
   ],
   "best": {
    "length": 30,
@@ -2358,11 +2366,11 @@
  },
  "council": {
   "weights": {
-   "trend": 0.708,
-   "study": 0.622,
-   "analytics": 0.955,
-   "live": 1.374,
-   "script": 0.711,
+   "trend": 0.688,
+   "study": 0.588,
+   "analytics": 0.959,
+   "live": 1.366,
+   "script": 0.723,
    "audience": 0.5
   }
  }
