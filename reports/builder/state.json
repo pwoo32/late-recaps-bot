@@ -1,16 +1,16 @@
 {
  "source_weight": {
-  "jynxzi": 0.86,
+  "jynxzi": 1.12,
   "kai_cenat": 0.31,
-  "ishowspeed": 0.59
+  "ishowspeed": 0.75
  },
  "slot_weight": {
-  "2": 0.32,
-  "21": 0.4,
-  "8": 0.8,
-  "4": 0.39,
-  "22": 1.03,
-  "17": 1.4
+  "2": 0.39,
+  "21": 0.44,
+  "8": 1.08,
+  "4": 0.43,
+  "22": 1.42,
+  "17": 1.64
  },
  "used_moments": [
   "L6S9Vb3RLy4@186",
@@ -97,7 +97,8 @@
   "jmRH9uvgPNk@1354",
   "jmRH9uvgPNk@1263",
   "kDLY56pnDlo@1347",
-  "nb5uTOtYj3U@185"
+  "nb5uTOtYj3U@185",
+  "6dhayer-a90@1320"
  ],
  "queued": {
   "L6S9Vb3RLy4@186": {
@@ -1036,6 +1037,30 @@
     "audience": 0.5
    },
    "video_id": "Frwqjuv54FM"
+  },
+  "6dhayer-a90@1320": {
+   "title": "Kai Cenat Goes Crazy \ud83d\udd25",
+   "source": "kai_cenat",
+   "post_utc": "2026-11-10 08:00",
+   "recipe": {
+    "length": 30,
+    "punch": 0.14,
+    "beat": "normal",
+    "caption_words": 3,
+    "gap": 0.6,
+    "layout": "face34",
+    "narrate": "on",
+    "test": null
+   },
+   "council": {
+    "trend": 0.9,
+    "study": 1.0,
+    "analytics": 0.61,
+    "live": 0.55,
+    "script": 0.6,
+    "audience": 0.5
+   },
+   "video_id": "DyyT5L9dkCE"
   }
  },
  "channel": "UCbK9EejOk5UVzI_l8F3f8kA",
@@ -1216,6 +1241,11 @@
  },
  "own_results": [
   {
+   "title": "Kai Cenat Didn't See This Coming \ud83d\ude31",
+   "views": 0,
+   "lift": 0.0
+  },
+  {
    "title": "Kai Cenat Goes Crazy \ud83d\udd25",
    "views": 0,
    "lift": 0.0
@@ -1232,8 +1262,8 @@
   },
   {
    "title": "Ronaldo: \"Laiys. Says Word\" \ud83d\ude31",
-   "views": 32,
-   "lift": 32.0
+   "views": 33,
+   "lift": 33.0
   },
   {
    "title": "xQc Can't Believe He Pulled This Off At X Presses Lang \ud83d\udd25",
@@ -1247,8 +1277,8 @@
   },
   {
    "title": "Speed And Derek Jeter Can't Believe It \ud83d\udd25",
-   "views": 19,
-   "lift": 19.0
+   "views": 20,
+   "lift": 20.0
   },
   {
    "title": "Kai Cenat Is Left Speechless At Was Shook From Ai \ud83d\ude31",
@@ -1262,8 +1292,8 @@
   },
   {
    "title": "Jynxzi: \"What Is It?\" \ud83d\udd25",
-   "views": 29,
-   "lift": 29.0
+   "views": 31,
+   "lift": 31.0
   },
   {
    "title": "N3on: \"Face Each Other?\" \ud83d\udd25",
@@ -1292,8 +1322,8 @@
   },
   {
    "title": "Speed Can't Believe Vinny Just Robbed His Uncle's Store \ud83d\ude2d",
-   "views": 0,
-   "lift": 0.0
+   "views": 1,
+   "lift": 1.0
   },
   {
    "title": "Jynxzi Plays For $1000 And Goes Off \ud83d\udd25",
@@ -1327,8 +1357,8 @@
   },
   {
    "title": "Jynxzi Explains Why Hearing Wins In Rainbow Six \ud83c\udfa7",
-   "views": 11,
-   "lift": 11.0
+   "views": 16,
+   "lift": 16.0
   },
   {
    "title": "Kai Cenat Keeps Rakai Out Of The Halloween Party \ud83c\udf83\ud83d\ude2d",
@@ -1359,11 +1389,6 @@
    "title": "Speed Checks Who Really Won His $250,000 Giveaway \ud83d\udcb0",
    "views": 0,
    "lift": 0.0
-  },
-  {
-   "title": "Speed Takes A Family Photo At His Movie Premiere \ud83d\udcf8",
-   "views": 2,
-   "lift": 2.0
   }
  ],
  "tiktok": {
@@ -2159,7 +2184,132 @@
      " Nah"
     ]
    }
-  ]
+  ],
+  "AaMF4bAqxO8": [
+   {
+    "t": 36754,
+    "ratio": 8.0,
+    "msgs": 57,
+    "sample": [
+     "W",
+     "w",
+     "W",
+     "SPAM W",
+     "W"
+    ]
+   },
+   {
+    "t": 104,
+    "ratio": 5.6,
+    "msgs": 120,
+    "sample": [
+     "yo yoy yo",
+     "Yooo",
+     "yooooo",
+     "yo twitch",
+     "yoo"
+    ]
+   },
+   {
+    "t": 28259,
+    "ratio": 4.8,
+    "msgs": 128,
+    "sample": [
+     "bro",
+     "Jersey baby!!!!",
+     "What are the giveaway rules"
+    ]
+   },
+   {
+    "t": 12084,
+    "ratio": 4.5,
+    "msgs": 22,
+    "sample": [
+     "W KAI",
+     "ww"
+    ]
+   },
+   {
+    "t": 16714,
+    "ratio": 4.5,
+    "msgs": 19,
+    "sample": [
+     "Yooooo"
+    ]
+   }
+  ],
+  "6dhayer-a90": [
+   {
+    "t": 37264,
+    "ratio": 25.2,
+    "msgs": 235,
+    "sample": [
+     "Yo",
+     "yo",
+     "Yooo",
+     "Yo",
+     "yo"
+    ]
+   },
+   {
+    "t": 1029,
+    "ratio": 7.5,
+    "msgs": 98,
+    "sample": [
+     "L",
+     "l",
+     "L",
+     "go team!!!",
+     "W"
+    ]
+   },
+   {
+    "t": 39599,
+    "ratio": 6.7,
+    "msgs": 97,
+    "sample": [
+     "bro was in the middle of a good MOVIE :popcorn::movie_camera:",
+     "Hurry up bro "
+    ]
+   },
+   {
+    "t": 22664,
+    "ratio": 5.9,
+    "msgs": 63,
+    "sample": [
+     "LMAOOO",
+     "AYOOOOOO",
+     "Best game oat lmaoo",
+     "????",
+     "lmaooooo wtff"
+    ]
+   },
+   {
+    "t": 16834,
+    "ratio": 5.6,
+    "msgs": 51,
+    "sample": [
+     "wtf",
+     "L",
+     "lmao",
+     "Smoked lil bro "
+    ]
+   },
+   {
+    "t": 18899,
+    "ratio": 4.9,
+    "msgs": 40,
+    "sample": [
+     "W 50",
+     "W",
+     "W",
+     "W",
+     "w hotdogs "
+    ]
+   }
+  ],
+  "S03_jU1mvVc": [],
+  "4ppcVRKoG30": []
  },
  "edit": {
   "stats": {

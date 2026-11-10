@@ -1,0 +1,80 @@
+[
+ {
+  "id": 1,
+  "source": "kai_cenat",
+  "creator": "Kai Cenat",
+  "platform": "youtube",
+  "video_id": "6dhayer-a90",
+  "video_title": "🎮PLAYING EVERY GTA UNTIL I BEAT IT: Grand Theft Auto 4🎮",
+  "url": "https://www.youtube.com/watch?v=6dhayer-a90&t=39600s",
+  "moment": "11:00:00",
+  "start": 39580,
+  "end": 39610,
+  "rank": 16.74,
+  "signal": "1 timestamp comments, 0 likes; chat went 6.7x its normal pace",
+  "signals": [
+   "comments",
+   "chat spike"
+  ],
+  "quotes": [],
+  "stream_age_h": 21.8,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "narrate": "on",
+   "test": null
+  },
+  "council": {
+   "trend": 0.9,
+   "study": 1.0,
+   "analytics": 0.61,
+   "live": 0.55,
+   "script": 0.6,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 0.9,
+    "why": "Kai Cenat clips pull 552,822 views/hour this week, up 102% since the last scan"
+   },
+   "study": {
+    "score": 1.0,
+    "why": "2 of the top channels' breakout Shorts are Kai Cenat clips; Kai Cenat is in 135 of their recent titles"
+   },
+   "analytics": {
+    "score": 0.61,
+    "why": "Kai Cenat clips do 0.3x our usual; has a spoken premise (bet/question/challenge); stream is 22h old"
+   },
+   "live": {
+    "score": 0.55,
+    "why": "chat went 6.7x, 1 timestamp comments, 0 likes"
+   },
+   "script": {
+    "score": 0.6,
+    "why": "draft title: \"Kai Cenat Goes Off 🔥\""
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-10T04:46:28Z",
+  "council_why": "Kai Cenat's clip at 11:00:00 has the highest council score and trend researcher score, indicating strong performance and current popularity. The live scout score also suggests high engagement, making it the most likely to get the most views today.",
+  "post_utc": "2026-11-10 08:00",
+  "post_local": "Tue 03:00 AM ET",
+  "title": "Kai Cenat moment 🤯",
+  "hook": "MOMENT",
+  "context": "Kai Cenat live, 🎮PLAYING EVERY GTA UNTIL I BEAT IT: Grand Theft Auto 4🎮",
+  "take": "Nobody in the room saw this coming.",
+  "draft": true,
+  "description": "Kai Cenat live, 🎮PLAYING EVERY GTA UNTIL I BEAT IT: Grand Theft Auto 4🎮\n\nFull stream by Kai Cenat: https://www.youtube.com/watch?v=6dhayer-a90&t=39600s\nGo support Kai Cenat, all credit to them.\n\n#kaicenat #kai #shorts #ishowspeed #geography",
+  "key": "6dhayer-a90@1320",
+  "permission": "fan clipping is widespread and tolerated; no official paid program found (Oct 2026)"
+ }
+]
