@@ -1069,8 +1069,8 @@
   "@TheDiaryOfACEO": "UCGq-a57w-aPwyi3pW7XLiHw"
  },
  "review": {
-  "at": "2026-11-10 04:45",
-  "report": "/home/runner/work/late-recaps-bot/late-recaps-bot/reports/review_2026-11-10_0445/report.md",
+  "at": "2026-11-11 18:45",
+  "report": "/home/runner/work/late-recaps-bot/late-recaps-bot/reports/review_2026-11-11_1845/report.md",
   "lessons": {
    "titles": [
     "Creator name first, then a bet or question in plain verbs, and never the result. Add a named guest or celebrity when one exists.",
@@ -1095,8 +1095,22 @@
    ]
   },
   "source_score": {},
-  "length_hint": 7,
+  "length_hint": 22,
   "clips": [
+   {
+    "title": "Kai Cenat Goes Crazy \ud83d\udd25",
+    "views": 0,
+    "avg_viewed": null,
+    "stayed": null,
+    "verdict": null
+   },
+   {
+    "title": "Jynxzi Didn't See This Coming At Biggest Announcement Ever \ud83d\ude31",
+    "views": 13,
+    "avg_viewed": null,
+    "stayed": null,
+    "verdict": null
+   },
    {
     "title": "Kai Cenat Didn't See This Coming \ud83d\ude31",
     "views": 0,
@@ -1127,7 +1141,7 @@
    },
    {
     "title": "Ronaldo: \"Laiys. Says Word\" \ud83d\ude31",
-    "views": 33,
+    "views": 26,
     "avg_viewed": null,
     "stayed": null,
     "verdict": null
@@ -1211,7 +1225,7 @@
    },
    {
     "title": "Speed Can't Believe Vinny Just Robbed His Uncle's Store \ud83d\ude2d",
-    "views": 1,
+    "views": 2,
     "avg_viewed": null,
     "stayed": null,
     "verdict": null
@@ -1219,20 +1233,6 @@
    {
     "title": "Jynxzi Plays For $1000 And Goes Off \ud83d\udd25",
     "views": 2,
-    "avg_viewed": null,
-    "stayed": null,
-    "verdict": null
-   },
-   {
-    "title": "Kai Cenat Can't Believe Pooh Shiesty Bro Snapping \ud83e\uddd0\ud83d\ude2d",
-    "views": 2,
-    "avg_viewed": null,
-    "stayed": null,
-    "verdict": null
-   },
-   {
-    "title": "Jynxzi Can't Believe What Just Happened \ud83d\ude2d",
-    "views": 0,
     "avg_viewed": null,
     "stayed": null,
     "verdict": null
@@ -2333,7 +2333,8 @@
      2.803,
      -0.693,
      -0.693,
-     -0.693
+     -0.693,
+     1.946
     ],
     "20": [
      -0.693
@@ -2341,7 +2342,6 @@
    },
    "punch": {
     "0.14": [
-     2.708,
      -0.693,
      -0.693,
      -0.693,
@@ -2360,7 +2360,8 @@
      2.803,
      -0.693,
      -0.693,
-     -0.693
+     -0.693,
+     1.946
     ]
    },
    "beat": {
@@ -2383,7 +2384,8 @@
      2.197,
      -0.693,
      -0.693,
-     -0.693
+     -0.693,
+     1.946
     ],
     "slow": [
      2.803
@@ -2407,7 +2409,8 @@
      2.803,
      -0.693,
      -0.693,
-     -0.693
+     -0.693,
+     1.946
     ],
     "2": [
      -0.693,
@@ -2433,7 +2436,8 @@
      2.803,
      -0.693,
      -0.693,
-     -0.693
+     -0.693,
+     1.946
     ],
     "1.0": [
      -0.693,
@@ -2443,7 +2447,6 @@
    },
    "layout": {
     "face34": [
-     2.708,
      -0.693,
      -0.693,
      -0.693,
@@ -2462,7 +2465,8 @@
      2.803,
      -0.693,
      -0.693,
-     -0.693
+     -0.693,
+     1.946
     ]
    },
    "narrate": {
@@ -2475,7 +2479,8 @@
      2.803,
      -0.693,
      -0.693,
-     -0.693
+     -0.693,
+     1.946
     ]
    }
   },
@@ -2499,7 +2504,8 @@
    "XrIA9z88oeo",
    "UzG-D-_VtH0",
    "GrM3WhdRMxk",
-   "po5Kgi8PuMI"
+   "po5Kgi8PuMI",
+   "Frwqjuv54FM"
   ],
   "best": {
    "length": 30,
@@ -2516,11 +2522,11 @@
  },
  "council": {
   "weights": {
-   "trend": 0.688,
-   "study": 0.588,
-   "analytics": 0.959,
-   "live": 1.366,
-   "script": 0.723,
+   "trend": 0.698,
+   "study": 0.564,
+   "analytics": 0.985,
+   "live": 1.377,
+   "script": 0.781,
    "audience": 0.5
   }
  }
