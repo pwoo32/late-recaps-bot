@@ -16,7 +16,7 @@ jobs:
       github.event.workflow_run.event == 'schedule' &&
       github.event.workflow_run.run_attempt == 1
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 10
     steps:
       - name: Retry only a runner shutdown before any post
         env:
@@ -24,7 +24,18 @@ jobs:
           RUN_ID: ${{ github.event.workflow_run.id }}
         run: |
           set -euo pipefail
-          if ! gh run view "$RUN_ID" --repo "$GITHUB_REPOSITORY" --log > "$RUNNER_TEMP/run.log"; then
+          # The log isn't complete for a little while after the run ends; reading it too early saw no shutdown
+          # line and skipped every retry on Nov 11. Wait until the job's closing lines are in.
+          got=false
+          for i in 1 2 3 4 5 6 7 8; do
+            sleep 30
+            if gh run view "$RUN_ID" --repo "$GITHUB_REPOSITORY" --log > "$RUNNER_TEMP/run.log" 2>/dev/null &&
+               grep -Eq "Cleaning up orphan processes|Process completed with exit code" "$RUNNER_TEMP/run.log"; then
+              got=true; break
+            fi
+            echo "Log not ready yet (try $i)."
+          done
+          if [ "$got" != true ]; then
             echo "Could not retrieve the failed run log; leaving it for the next scheduled backup."
             exit 0
           fi
