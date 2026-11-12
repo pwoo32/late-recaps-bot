@@ -2,7 +2,7 @@
 
 Every clip goes out with an edit "recipe": clip length, how hard and how often the frame punches in, how many words
 each caption shows, how much silence the jump cuts remove, and the framing. The default recipe is the current
-format (face-tracked 3:4 frame, jump cuts, a punch-in every 1.5-2.5s, 3-word captions, no narrator).
+format (face-tracked 3:4 frame, jump cuts, a punch-in every 1.5-2.5s, 3-word captions, narrator setup line and closing payoff line).
 
 Each day the best clip gets the best recipe found so far, and the other clips each try one change, so the channel
 keeps testing without betting the whole day on an experiment. review_agent.py scores every clip once it is two days
@@ -24,7 +24,8 @@ PARAMS = {
     "caption_words": (3, [2, 3]),
     "gap": (0.6, [0.35, 0.6, 1.0]),            # silence longer than this gets jump-cut
     "layout": ("face34", ["face34", "crop43"]),
-    "narrate": ("on", ["on", "off"]),          # the AI narrator's line over the opening
+    # No "narrate" setting any more: the narrator is always on. It is the channel's own layer over the stream, and
+    # testing "off" meant posting bare reuploads, which keeps the whole channel out of the Shorts feed (Nov 2026).
 }
 BEATS = {"fast": (1.0, 1.8), "normal": (1.5, 2.5), "slow": (2.2, 3.5)}
 MIN_TRIES = 3     # a setting needs this many scored clips before it can replace the default

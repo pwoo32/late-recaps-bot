@@ -48,6 +48,7 @@ from niches import NICHES
 from sources import SOURCES
 import council
 import live_moments as LM
+import originality
 import script_agent
 import tuner
 
@@ -293,6 +294,8 @@ def youtube_candidates(yt, key, src, state, since, now, chat_budget=240, live_st
         views = int(it.get("statistics", {}).get("viewCount", 0))
         live = it.get("liveStreamingDetails") or {}
         ended = live.get("actualEndTime")
+        if originality.produced_upload(it["snippet"]["title"], sec, bool(ended)) and not src.get("allow_edited"):
+            continue  # an edited main-channel video, not a stream: cutting it up is a reupload Content ID matches
         age_h = (now - datetime.fromisoformat((ended or it["snippet"]["publishedAt"]).replace("Z", "+00:00"))).total_seconds() / 3600
         base = dict(source=key, platform="youtube", video_id=it["id"], video_title=it["snippet"]["title"],
                     video_views=views, age_h=round(age_h, 1), was_live=bool(ended))
@@ -397,6 +400,12 @@ def demand_change(niche):
 def rank_moments(moments, demand, state, words=None, change=None):
     top_demand = max(demand.values() or [0]) or 1
     used = set(state["used_moments"])
+    claimed = set(state.get("claimed_streams") or [])  # source videos one of our clips got a copyright claim from
+    posted_per_stream = {}
+    for k, q in (state.get("queued") or {}).items():
+        if q.get("video_id"):
+            vid = k.rpartition("@")[0]
+            posted_per_stream[vid] = posted_per_stream.get(vid, 0) + 1
     used_at = {}  # video_id -> 30s buckets already clipped, so a moment a minute away from an old post counts as used
     for k in used:
         vid, _, b = k.rpartition("@")
@@ -414,10 +423,14 @@ def rank_moments(moments, demand, state, words=None, change=None):
         text = " ".join(m["quotes"] + [m["video_title"]]).lower()
         topical = 1 + 0.15 * min(sum(1 for w in (words or {}).get(m["source"], ()) if w in text), 3)  # what's viral now
         heat = 0.8 + 0.6 * m["heat"] if m.get("heat") is not None else 1.0  # most-replayed part of the stream
-        m["rank"] = round(m["score"] * hot * learned * fresh * reach * paid * rising * topical * heat, 2)
+        m["music_risk"] = originality.music_hit(" ".join(m["quotes"]), m["video_title"])
+        music = 0.2 if m["music_risk"] else 1.0  # songs are what Content ID claims; keep them for last resort only
+        m["rank"] = round(m["score"] * hot * learned * fresh * reach * paid * rising * topical * heat * music, 2)
         m["key"] = f"{m['video_id']}@{m['t'] // 30}"
         b = m["t"] // 30  # same scene: within 3 buckets (~90s) of something already posted from this stream
-        m["used"] = m["key"] in used or any(abs(b - u) <= 3 for u in used_at.get(m["video_id"], ()))
+        m["used"] = (m["key"] in used or any(abs(b - u) <= 3 for u in used_at.get(m["video_id"], ()))
+                     or m["video_id"] in claimed  # this stream already got us a claim
+                     or posted_per_stream.get(m["video_id"], 0) >= originality.MAX_CLIPS_PER_STREAM)  # near-duplicates
     return sorted((m for m in moments if not m["used"]), key=lambda m: m["rank"], reverse=True)
 
 
@@ -594,7 +607,8 @@ def write_daily(out_dir, queue, ranked, demand, niche, pb, trend_dir, study_dir,
               f"- **Council:** {c.get('council_why') or '-'} (every agent's notes in council.md)",
               f"- **On-screen hook:** {c['hook']}",
               f"- **Context line (first 3s):** {c['context']}",
-              f"- **Narrator take (AI voice, off unless --narrate):** {c['take']}",
+              f"- **Narrator take (AI voice over the opening):** {c['take']}",
+              f"- **Payoff (AI voice over the held last frame):** {c.get('payoff') or '(none)'}",
               f"- **TikTok caption:** {c.get('tiktok_caption', '')}",
               f"- **Edit:** {c['recipe']['length']}s, punch {c['recipe']['punch']}, {c['recipe']['beat']} zooms, "
               f"{c['recipe']['caption_words']}-word captions, cut silences over {c['recipe']['gap']}s, {c['recipe']['layout']}"
@@ -863,7 +877,7 @@ def caption_chunks(words, size=3):
     return chunks
 
 
-def write_ass(path, words, hook, context, length, offset=0.0, size=3):
+def write_ass(path, words, hook, context, length, offset=0.0, size=3, payoff=None):
     """Captions: 1-3 word chunks, big with a heavy outline, the word being spoken in yellow; hook pinned top;
     context line for the first 3.5s."""
     head = """[Script Info]
@@ -876,6 +890,7 @@ Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour,
 Style: Cap,Arial,96,&H00FFFFFF,&H00FFFFFF,&H00000000,&H96000000,-1,0,0,0,100,100,2,0,1,8,4,2,50,50,640,1
 Style: Hook,Arial,74,&H0000E5FF,&H00FFFFFF,&H00000000,&HB4000000,-1,0,0,0,100,100,0,0,3,18,0,8,60,60,150,1
 Style: Ctx,Arial,44,&H00FFFFFF,&H00FFFFFF,&H00000000,&HB4000000,0,0,0,0,100,100,0,0,3,12,0,8,80,80,215,1
+Style: Pay,Arial,66,&H00FFFFFF,&H00FFFFFF,&H00000000,&HB4000000,-1,0,0,0,100,100,0,0,3,16,0,5,90,90,0,1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
@@ -885,6 +900,8 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
         ev.append(f"Dialogue: 1,{ass_time(0)},{ass_time(length)},Hook,,0,0,0,,{ass_escape(hook.upper())}")
     if context:
         ev.append(f"Dialogue: 1,{ass_time(0)},{ass_time(min(3.5, length))},Ctx,,0,0,0,,{ass_escape(context)}")
+    if payoff and payoff[0]:  # our closing line, shown over the held last frame while the narrator says it
+        ev.append(f"Dialogue: 1,{ass_time(payoff[1])},{ass_time(length)},Pay,,0,0,0,,{ass_escape(payoff[0])}")
     for chunk, nxt in caption_chunks(words, size):
         texts = [ass_escape(c["word"].strip().upper()) for c in chunk]
         chunk_end = min((nxt["start"] if nxt else chunk[-1]["end"] + 0.3) + offset, length)
@@ -1098,6 +1115,11 @@ def chatterbox_voice(text, out, voice):
     return out
 
 
+def audio_seconds(path):
+    return float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0",
+                                 str(path)], capture_output=True, text=True).stdout.strip() or 0)
+
+
 def narrate(text, out_base, voice=None):
     """Speak the take in the most human free voice available: Chatterbox Turbo in the channel's voice, then Kokoro
     (an open model that sounds like a person talking, read phrase by phrase), then edge-tts (Microsoft neural voices),
@@ -1225,6 +1247,7 @@ def cmd_cut(args):
     # picture keeps changing. --plain turns both off.
     plain = getattr(args, "plain", False)
     recipe = {**tuner.default_recipe(), **(clip.get("recipe") or {})}  # the edit tuner's settings for this clip
+    speech = originality.speech_share(words, length) if words else None  # measured before jump cuts remove silence
     layout = args.layout or recipe["layout"]
     keep = dead_air(words, length, gap=recipe["gap"]) if words and not plain else [(0.0, length)]
     if len(keep) > 1:
@@ -1234,8 +1257,23 @@ def cmd_cut(args):
         length = sum(b - a for a, b in keep)
     else:
         cuts = []
+    # The channel's own voice is what makes a stream cut a clip rather than a reupload: a setup line over the
+    # opening and, after the moment lands, a payoff line (our verdict or question) over the held last frame, so the
+    # take never talks over the moment itself. Always on unless --no-narrate.
+    voices, tail = [], 0.0
+    if has_audio and not getattr(args, "no_narrate", False):
+        if not args.voiceover and clip.get("take"):
+            args.voiceover = narrate(clip["take"], base, args.voice)
+        if args.voiceover:
+            voices.append((args.voiceover, 0.25))
+        if clip.get("payoff"):
+            pay = narrate(clip["payoff"], base.with_name(base.name + "_payoff"), args.voice)
+            if pay:
+                voices.append((pay, length + 0.2))
+                tail = audio_seconds(pay) + 0.6
     ass = base.with_suffix(".ass")
-    write_ass(ass, words, clip["hook"], clip["context"], length, size=recipe["caption_words"])
+    write_ass(ass, words, clip["hook"], clip["context"], length + tail, size=recipe["caption_words"],
+              payoff=(clip.get("payoff"), length) if tail else None)
 
     n = len(keep)
     if n > 1:
@@ -1270,36 +1308,38 @@ def cmd_cut(args):
         fg += f",scale=w='2*trunc({fw}*({z})/2)':h='2*trunc({fh}*({z})/2)':eval=frame,crop={fw}:{fh}"
     vf = (src + f"{vin}split[a][b];[a]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,gblur=sigma=40,"
           f"eq=brightness=-0.12[bg];[b]{fg}[fg];[bg][fg]overlay=(W-w)/2:(H-h)/2,"
+          + (f"tpad=stop_mode=clone:stop_duration={tail:.2f}," if tail else "") +  # hold the last frame for the payoff
           f"subtitles='{ass.resolve().as_posix().replace(':', chr(92) + ':')}'[v]")  # escape C: on Windows
     cmd = ["ffmpeg", "-y", "-loglevel", "error", "-i", str(raw)]
-    # The edit tuner turns the narrator on or off per clip; it starts on (an own voice layer makes reposted stream
-    # footage original enough for the Shorts feed) and turns off if clips without it do better.
-    if not args.voiceover and (getattr(args, "narrate", False) or recipe.get("narrate") == "on") and clip.get("take"):
-        args.voiceover = narrate(clip["take"], base, args.voice)
-    if args.voiceover and has_audio:  # your take over the opening, stream audio ducked under it
-        dur = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0",
-                                    str(args.voiceover)], capture_output=True, text=True).stdout.strip() or 0)
-        cmd += ["-i", str(args.voiceover)]
+    if voices:  # our voice over the stream, stream audio ducked under the opening line
+        for path, _ in voices:
+            cmd += ["-i", str(path)]
         # Sound like someone talking over the stream, not a voice pasted on top: the voice comes in a beat late,
         # gets the low rumble cut, gentle compression and a level matched to the stream, and the stream dips
         # under it smoothly and swells back over half a second instead of snapping.
-        lead, d = 0.25, dur + 0.25
-        duck = (f"if(lt(t,{lead}),1-0.7*t/{lead},if(lt(t,{d:.2f}),0.3,if(lt(t,{d + 0.5:.2f}),0.3+0.7*(t-{d:.2f})/0.5,1)))")
-        af = (f"{ain}volume='{duck}':eval=frame[s];"
-              f"[1:a]aresample=48000,{VOICE_CHAIN},adelay={int(lead * 1000)}|{int(lead * 1000)},volume=1.1[vo];"
-              f"[s][vo]amix=inputs=2:duration=first:normalize=0[aud]")
+        lead = voices[0][1] if voices[0][1] < 1 else 0.0
+        d = (audio_seconds(voices[0][0]) + lead) if lead else 0.0
+        duck = (f"if(lt(t,{lead}),1-0.7*t/{lead},if(lt(t,{d:.2f}),0.3,if(lt(t,{d + 0.5:.2f}),0.3+0.7*(t-{d:.2f})/0.5,1)))"
+                if lead else "1")
+        af = f"{ain}volume='{duck}':eval=frame" + (f",apad=pad_dur={tail:.2f}" if tail else "") + "[s];"
+        for i, (_, at) in enumerate(voices, 1):
+            ms = int(at * 1000)
+            af += f"[{i}:a]aresample=48000,{VOICE_CHAIN},adelay={ms}|{ms},volume=1.1[vo{i}];"
+        af += "[s]" + "".join(f"[vo{i}]" for i in range(1, len(voices) + 1)) + \
+              f"amix=inputs={len(voices) + 1}:duration=first:normalize=0[aud]"
         cmd += ["-filter_complex", vf + ";" + af, "-map", "[v]", "-map", "[aud]"]
     elif n > 1 and has_audio:
         cmd += ["-filter_complex", vf, "-map", "[v]", "-map", ain]
     else:
         cmd += ["-filter_complex", vf, "-map", "[v]", "-map", "0:a?"]
     out = base.with_suffix(".mp4")
-    cmd += ["-t", str(length), "-r", "30", "-c:v", "libx264", "-preset", "medium", "-crf", "20", "-pix_fmt", "yuv420p",
+    cmd += ["-t", str(length + tail), "-r", "30", "-c:v", "libx264", "-preset", "medium", "-crf", "20", "-pix_fmt", "yuv420p",
             "-c:a", "aac", "-b:a", "160k", "-movflags", "+faststart", str(out)]
     subprocess.run(cmd, check=True)
     meta = base.with_suffix(".txt")
     meta.write_text(f"TITLE\n{clip['title']}\n\nDESCRIPTION\n{clip['description']}\n\nPOST AT\n{clip['post_local']} "
-                    f"({clip['post_utc']} UTC)\n" + (f"\nTRANSCRIPT\n{''.join(w['word'] for w in words).strip()}\n" if words else ""), encoding="utf-8")
+                    f"({clip['post_utc']} UTC)\n" + (f"\nSPEECH\n{speech}\n" if speech is not None else "") +
+                    f"\nVOICES\n{len(voices)}\n" + (f"\nTRANSCRIPT\n{''.join(w['word'] for w in words).strip()}\n" if words else ""), encoding="utf-8")
     print(f"Done. Video: {out}\nTitle/description: {meta}")
     return out
 
@@ -1408,10 +1448,15 @@ def clip_problem(qdir, c):
     missing = [k for k in ("title", "hook", "take") if not (c.get(k) or "").strip()]
     if missing:
         return f"script agent: no {', '.join(missing)}"
-    said = ""
+    said, speech = "", None
     for txt in (qdir / "clips").glob(f"{c['id']:02d}_*.txt"):
         body = txt.read_text(encoding="utf-8")
         said += body.split("\nTRANSCRIPT\n", 1)[1] if "\nTRANSCRIPT\n" in body else ""
+        m = re.search(r"\nSPEECH\n([0-9.]+)", body)
+        speech = float(m.group(1)) if m else speech
+        v = re.search(r"\nVOICES\n(\d+)", body)
+        if v and v.group(1) == "0":
+            return "originality: the narrator voice didn't render, so this would be a bare reupload of the stream"
     text = " ".join([c.get(k) or "" for k in ("title", "hook", "context", "take", "description")] + [said])
     if SLURS.search(text):
         return "content: a slur is said or shown in this clip"
@@ -1419,7 +1464,9 @@ def clip_problem(qdir, c):
     shown = " ".join(c.get(k) or "" for k in ("title", "hook", "context", "take", "tiktok_caption"))
     if free_writer.risky(shown):  # last check before posting: our own text never claims a crime, violence or drugs
         return f"content: the title/hook/caption says \"{free_writer.RISKY.search(shown).group(0)}\", which gets clips taken down"
-    return None
+    # Reused-content and copyright checks: our own words on it, not a repeat, no music (originality.py)
+    problems = originality.clip_problems(c, originality.posted_titles(load_state()), speech, said)
+    return "; ".join(problems) or None
 
 
 def hold(qdir, problems, next_step="Fix these and run `python channel_builder.py publish` again."):
@@ -1680,8 +1727,8 @@ def main():
     p.add_argument("--whisper", default="small.en", help="faster-whisper model for captions")
     p.add_argument("--transcript", help="word timings JSON [{word,start,end}] instead of whisper")
     p.add_argument("--no-captions", action="store_true")
-    p.add_argument("--narrate", action="store_true", help="always add the AI narrator over the opening (otherwise the edit tuner decides; "
-                   "it starts on)")
+    p.add_argument("--no-narrate", action="store_true", help="no narrator lines (the clip is then a bare reupload; don't post it)")
+    p.add_argument("--narrate", action="store_true", help="(always on now; kept so old commands still work)")
     p.add_argument("--voice", default=None, help="narrator voice: a Kokoro voice (am_michael, am_puck, af_heart...) or an edge-tts name (en-US-...)")
     p.add_argument("--no-script", action="store_true", help="keep the queue's script, don't re-write it from the transcript")
     p.add_argument("--plain", action="store_true", help="no jump cuts over dead air and no punch-in zooms")
