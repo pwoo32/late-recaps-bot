@@ -110,7 +110,7 @@ completed vote and reason from every council agent. Spike queues also invite the
 complete votes are held and must be rebuilt through `daily` or `spike` before publishing.
 
 **Edit tuner** (`tuner.py`): the new format (face-tracked frame, jump cuts, zoom punches, word-highlight captions, no
-narrator) stays the default. Each day the best clip gets the best settings found so far and the others each test one
+narrator setup and payoff lines) stays the default. Each day the best clip gets the best settings found so far and the others each test one
 change: length (20/30/45s), zoom strength and pace, 2- or 3-word captions, how much silence gets cut, face-tracked vs
 wide framing. After 48 hours the review agent scores every clip (views vs your median plus retention) and credits its
 settings. A setting takes over once it beats the default on 3+ clips. The review report shows the scores.
@@ -140,10 +140,16 @@ python channel_builder.py run --publish  # the whole day hands-off: refresh repo
   It edits for retention: a tall 3:4 frame that follows the streamer's face (OpenCV), jump cuts over dead air,
   a punch-in/out zoom every 1.5-2.5s, and big captions with the spoken word highlighted. `--plain` turns off the
   cuts and zooms; `--layout crop43` gives the old wide crop.
-- No narrator by default: 33 of the 36 top streamer-clip Shorts we audited open straight on the stream's audio.
-  `--narrate` adds one, a free Microsoft neural voice via edge-tts (`--voice en-US-BrianMultilingualNeural`, about
-  170 words a minute; list others with `edge-tts --list-voices`). Falls back to macOS `say` or espeak-ng. Pass
-  `--voiceover file.m4a` to use your own.
+- The narrator is always on (`--no-narrate` turns it off, and the publish gate then holds the clip): a setup line over
+  the opening and a payoff line (our verdict or a question for the comments) over a held last frame after the moment.
+  That voice is what makes a stream cut our own clip instead of a reupload. Pass `--voiceover file.m4a` to use your own
+  opening take.
+- Originality and copyright gate (`originality.py`, Nov 2026, after 47 Shorts sat at a median of 1 view and one got a
+  Content ID claim). Moments are never cut from a creator's edited main-channel videos (only stream VODs and
+  Twitch/Kick clips), music moments rank last, a stream that earned a claim is never clipped again, and at most 2
+  clips ever come from one stream. Before upload a clip is held if its title, hook or narrator line is a stock line
+  that could sit on any clip ("Goes Crazy", "Wait For It"...), its title repeats an earlier upload, music is heard
+  or named, under a quarter of it is speech, or the narrator voice failed to render.
 - Quota: plan ~25 units, daily ~20-60, track ~2. Outputs: `reports/builder/`.
 
 ### Uploading (one-time setup, ~10 minutes)

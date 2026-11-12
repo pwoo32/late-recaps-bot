@@ -13,6 +13,7 @@ and writes, per clip:
 - hook:         the big on-screen text pinned for the whole clip
 - context:      the setup line shown for the first 3 seconds
 - narrator:     the line the AI voice says over the opening (saved as `take`, which cut narrates)
+- payoff:       the channel's closing verdict or question, said over the held last frame after the moment
 - description:  a short summary, the credit/link to the full stream, and hashtags
 - tags:         YouTube tags for the upload
 
@@ -64,11 +65,12 @@ SCHEMA = {
     "properties": {"clips": {"type": "array", "items": {
         "type": "object",
         "properties": {"index": {"type": "integer"}, "title": {"type": "string"}, "hook": {"type": "string"},
-                       "context": {"type": "string"}, "narrator": {"type": "string"}, "description": {"type": "string"},
+                       "context": {"type": "string"}, "narrator": {"type": "string"}, "payoff": {"type": "string"},
+                       "description": {"type": "string"},
                        "tiktok_caption": {"type": "string"},
                        "hashtags": {"type": "array", "items": {"type": "string"}},
                        "tags": {"type": "array", "items": {"type": "string"}}},
-        "required": ["index", "title", "hook", "context", "narrator", "description", "tiktok_caption", "hashtags", "tags"]}}},
+        "required": ["index", "title", "hook", "context", "narrator", "payoff", "description", "tiktok_caption", "hashtags", "tags"]}}},
     "required": ["clips"],
 }
 
@@ -217,8 +219,10 @@ def build_prompt(clips, pb, niche):
         blocks.append("\n".join(b))
 
     return f"""You are the script writer for a YouTube Shorts clip channel in the {NICHES[niche]['label']} niche.
-Each clip is a 20-60 second cut from a creator's livestream or video, with the channel's own narrator voice over
-the first seconds. You write everything that gets uploaded with it.
+Each clip is a 20-60 second cut from a creator's livestream, with the channel's own narrator voice over the first
+seconds and again at the end, over a held last frame. YouTube only shows a clip in the Shorts feed when it adds
+something of its own to the stream footage, so the narrator lines are the most important thing you write: they are
+the channel's commentary, not filler. You write everything that gets uploaded with it.
 
 Breakout Shorts from the top channels in this niche (from our channel study). Study their pattern:
 {winners}
@@ -241,9 +245,12 @@ for (the names here are placeholders, never copy them): "<Creator> Crashes Out A
 clip doesn't deliver.
 
 Use the stream title, the viewer comments and the transcript together to work out what actually happens in each clip.
-Use only what they support. Don't invent names, scores or events. If what happens is unclear, describe the
-reaction (e.g. "<Creator> Can't Believe What Just Happened 😭"). Only name a person who appears in that clip's stream
-title, comments or transcript.
+Use only what they support. Don't invent names, scores or events. If what happens is unclear, name the specific
+thing that is said or shown (a quoted line, the game, the event, the person), never a stock reaction. Banned because
+they could sit on any clip and read as reposted filler: "Goes Crazy", "Can't Believe What Just Happened", "Didn't See
+This Coming", "Is Left Speechless", "Loses It", "Wait For It", "Watch His Face", "You Won't Believe". Every title must be
+different from every other title we've posted. Only name a person who appears in that clip's stream title, comments
+or transcript.
 
 For every clip write:
 - title: in that pattern.
@@ -254,6 +261,9 @@ For every clip write:
   joke or reaction about THIS clip that adds an original observation, grounded in its transcript, comments, and
   visible context. Give each clip its own editorial angle; do not reuse generic setup lines or merely narrate the
   title. Never generic ("watch this", "you won't believe"). No emoji, hashtags, or "subscribe".
+- payoff: one sentence (6-14 words) the narrator says after the moment, over the frozen last frame: the channel's
+  verdict, a call on who was right, or a specific question viewers will want to answer in the comments. It must
+  refer to what happened in THIS clip. No "like and subscribe", no emoji.
 - description: 1-2 plain sentences for the YouTube description saying what happens and who's in it, with the names
   people search for. Describe the clip itself; don't mention viewers, chat or comments. No hashtags, no links (the
   credit and link are added for you).
@@ -268,7 +278,7 @@ Clips:
 """ + "\n\n".join(blocks) + """
 
 Return only JSON: {"clips": [{"index": 0, "title": "...", "hook": "...", "context": "...", "narrator": "...",
-"description": "...", "tiktok_caption": "...", "hashtags": ["#..."], "tags": ["..."]}, ...]} with one entry per clip."""
+"payoff": "...", "description": "...", "tiktok_caption": "...", "hashtags": ["#..."], "tags": ["..."]}, ...]} with one entry per clip."""
 
 
 def parse_json(text):
@@ -323,6 +333,7 @@ def _api(prompt):
         hook: str
         context: str
         narrator: str
+        payoff: str
         description: str
         tiktok_caption: str
         hashtags: list[str]
@@ -377,6 +388,7 @@ def to_scripts(out, clips, pb, writer):
         scripts.append({"title": title, "hook": clean(s.get("hook"), 50).upper(),
                         "context": clean(s.get("context"), 140),
                         "take": re.sub(r"[#@]\w+", "", s.get("narrator") or s.get("take") or "").strip(),
+                        "payoff": re.sub(r"[#@]\w+", "", s.get("payoff") or "").strip(),
                         "summary": re.sub(r"https?://\S+|#[A-Za-z]\w*", "", s.get("description") or "").strip()[:600],
                         "tiktok_caption": clean(s.get("tiktok_caption") or s.get("title"), 180),
                         "hashtags": ["#" + re.sub(r"\W", "", h).lower() for h in s.get("hashtags") or [] if re.sub(r"\W", "", h)][:3],
@@ -408,7 +420,7 @@ def ungrounded(clip, script):
     source = " ".join([transcript, clip.get("video_title", ""), clip.get("creator", "")] + (clip.get("quotes") or [])
                       + src_of(clip).get("aliases", [])).lower()
     import free_writer
-    written = " ".join(script.get(k) or "" for k in ("title", "hook", "context", "take", "summary", "tiktok_caption"))
+    written = " ".join(script.get(k) or "" for k in ("title", "hook", "context", "take", "payoff", "summary", "tiktok_caption"))
     if free_writer.risky(written):  # crime/violence/drug words in our text get clips taken down, even when said in jest
         print(f"  [{clip.get('id')}] model script uses a word moderation flags "
               f"(\"{free_writer.RISKY.search(written).group(0)}\"); using the free writer")
@@ -423,6 +435,15 @@ def ungrounded(clip, script):
               + (f" ({', '.join(invented)})" if invented else " (too little to go on)") + "; using the free writer")
         return True
     return False
+
+
+def stock(clip, script):
+    """True when the model fell back on a line that could go on any clip (reads as reposted filler to YouTube)."""
+    import originality
+    phrase = originality.stock_phrase(*(script.get(k) for k in ("title", "hook", "take", "payoff")))
+    if phrase:
+        print(f"  [{clip.get('id')}] model script uses the stock line \"{phrase}\"; using the free writer")
+    return bool(phrase)
 
 
 def write_scripts(clips, pb, niche, writer=None):
@@ -443,7 +464,7 @@ def write_scripts(clips, pb, niche, writer=None):
         if out:
             print(f"Scripts written by {name}.")
             scripts = to_scripts(out, clips, pb, name)
-            missing = [i for i, s in enumerate(scripts) if s.get("draft") or ungrounded(clips[i], s)]
+            missing = [i for i, s in enumerate(scripts) if s.get("draft") or ungrounded(clips[i], s) or stock(clips[i], s)]
             if missing:  # the model skipped or made up some clips: the free writer (which never invents) redoes those
                 free = free_scripts([clips[i] for i in missing], pb, niche)
                 for i, f in zip(missing, free):
@@ -505,6 +526,7 @@ def save(qdir, queue):
                   f"- **On-screen hook:** {c['hook']}",
                   f"- **Context line (first 3s):** {c['context']}",
                   f"- **Narrator:** {c['take']}",
+                  f"- **Payoff:** {c.get('payoff') or '(none)'}",
                   f"- **TikTok caption:** {c.get('tiktok_caption', '')}",
                   f"- **Tags:** {', '.join(c.get('upload_tags', []))}",
                   f"- **Written by:** {c.get('writer', 'template')} from {c.get('script_source', 'comments')}"

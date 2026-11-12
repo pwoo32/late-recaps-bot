@@ -309,7 +309,7 @@ def collect(args, state):
             continue
         if v["id"] in queued:
             qdir, c = queued[v["id"]]
-            v["clip"] = {k: c.get(k) for k in ("source", "creator", "video_title", "moment", "start", "end", "hook",
+            v["clip"] = {k: c.get(k) for k in ("source", "creator", "video_id", "video_title", "moment", "start", "end", "hook",
                                                "context", "take", "post_utc", "post_local", "quotes", "rank", "writer", "recipe",
                                                "signals", "spike", "council")}
             v["transcript"] = script_agent.cut_transcript(qdir, c)
@@ -818,6 +818,11 @@ def cmd_review(args):
                 council.learn(state, votes_of.get(snap["id"]), outcome)
     if scored:
         print(f"Edit tuner: scored {scored} clip(s). Settings now: {tuner.best_recipe(state)}")
+    # a claimed clip means that stream is in Content ID: the builder never cuts from it again (originality.py)
+    claimed = [v["clip"]["video_id"] for v in vids if v.get("blocked_in") and (v.get("clip") or {}).get("video_id")]
+    if claimed:
+        state["claimed_streams"] = list(dict.fromkeys((state.get("claimed_streams") or []) + claimed))[-200:]
+        print(f"Copyright claims on clips from {len(claimed)} stream(s); the builder won't clip those streams again.")
     if not state.get("channel"):
         state["channel"] = data["channel"]["id"]  # lets `channel_builder.py run` start its daily `track` too
     save_state(state)

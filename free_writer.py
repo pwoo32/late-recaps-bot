@@ -193,21 +193,23 @@ def write(clip, src, hot_titles=(), lessons=None):
     short_event = " ".join(w for w in short_event.split() if w.lower() not in creator_words and w.lower() != "vs")
     short_event = " ".join(short_event.split()[:4]).rstrip(" ,.\"")
     if guest and versus:
-        title = f"{short} vs {guest}" + (f" For {money}" if money else "") + f": {_pick(react, seed)}"
+        title = f"{short} vs {guest}" + (f" For {money}" if money else "")
     elif guest and line and kind == "question":
         title = f"{short} Asks {guest} \"{_title_case(line.rstrip('?'))}?\""
     elif guest:
         title = _pick(with_guest, seed).format(s=short, g=guest)
     elif money and versus:
-        title = f"{short} Plays For {money} And {_pick(react, seed)}"
+        title = f"{short} Puts {money} On The Line" + (f" In {short_event}" if 1 <= len(short_event.split()) <= 3 else "")
     elif clip_topic:
         title = f"{short}: \"{_title_case(clip_topic.lower())}\""
     elif said and len(said.split()) <= 9:
         title = f"{short}: \"{_title_case(said)}\""
     elif line and kind in ("question", "exclaim"):
         title = f"{short}: \"{_title_case(line)}\""
+    elif 1 <= len(short_event.split()) <= 5 and short_event.lower() != "stream":
+        title = f"{short} At {short_event}"  # specific beats a stock reaction ("Goes Crazy") the feed sees as filler
     else:
-        title = f"{short} {_pick(react, seed)} At {short_event}" if 2 <= len(short_event.split()) <= 4 else f"{short} {_pick(react, seed)}"
+        title = f"{short} {_pick(react, seed)}"  # stock: the publish gate holds it (originality.py)
     title = re.sub(r"\s+", " ", title).strip()
     if len(title) > 68:
         title = title[:68].rsplit(" ", 1)[0].rstrip(" ,:-\"")
@@ -222,6 +224,10 @@ def write(clip, src, hot_titles=(), lessons=None):
         hook = _cap_words(line, 6).upper()
     elif guest:
         hook = _pick([f"WAIT FOR {guest.upper()}", f"{guest.upper()} WASN'T READY", f"WATCH {guest.upper()}'S FACE"], seed)
+    elif said and len(said.split()) <= 6:
+        hook = said.upper()
+    elif clip_topic:
+        hook = _cap_words(clip_topic, 6).upper()
     else:
         hook = _pick({"funny": ["WAIT FOR IT", "HE DIDN'T THINK THIS THROUGH", "THIS WENT WRONG FAST"],
                       "shock": ["NOBODY SAW THIS COMING", "WATCH HIS FACE", "WAIT FOR THE END"],
@@ -244,8 +250,27 @@ def write(clip, src, hot_titles=(), lessons=None):
         narrator = f"The exchange between {short} and {guest} is the story here; watch the reaction."
     elif clip_topic:
         narrator = f"This is about {clip_topic}; {short}'s reaction is what makes the moment land."
+    elif line:
+        narrator = f"{short} says “{' '.join(line.split()[:7])}” and that's the line everything turns on."
+    elif said:
+        narrator = f"Chat timestamped this one with “{' '.join(said.split()[:7])}”, and you're about to see why."
     else:
-        narrator = f"Listen to {short}'s exact words, then watch how the moment changes."
+        narrator = ""  # nothing specific to say: better no post than a stock line (the publish gate holds it)
+    # The closing line, said over the held last frame after the moment: our verdict or a question for the comments.
+    if money and versus:
+        payoff = f"{money} on the line and that's how {short} played it. Worth it or not?"
+    elif guest and versus:
+        payoff = f"Who took that one, {short} or {guest}? Comments decide."
+    elif line and kind == "question":
+        payoff = f"So, “{' '.join(line.rstrip('?').split()[:5])}?” Drop your answer below."
+    elif guest:
+        payoff = f"Rate how {short} handled {guest} there, one to ten."
+    elif short_event and short_event.lower() != "stream":
+        payoff = f"Best moment of {short}'s {short_event} so far, or not even close?"
+    elif clip_topic:
+        payoff = f"Rate that {short} moment out of ten in the comments."
+    else:
+        payoff = ""
     summary = f"{full} during \"{_clean(clip.get('video_title', ''))[:80]}\"" + (f" with {', '.join(people[:2])}" if people else "") + "."
     if q:
         summary += f" {q[:120].rstrip('.')}." if not q.endswith("?") else f" {q[:120]}"
@@ -266,11 +291,12 @@ def write(clip, src, hot_titles=(), lessons=None):
         tiktok_caption += " Who takes this matchup?"
     elif guest and versus:
         tiktok_caption += " Who had the better moment?"
-    if risky(" ".join([title, hook, context, summary, tiktok_caption])):  # e.g. a risky word in the stream title: say nothing specific
+    if risky(" ".join([title, hook, context, summary, tiktok_caption, narrator, payoff])):  # e.g. a risky word in the stream title: say nothing specific
         title, hook = f"{short} {_pick(react, seed)} {emoji}", "WAIT FOR IT"
         context, summary = f"{full} live", f"{full} live."
         tiktok_caption = f"{short} reacts during a live stream."
-    return {"title": title, "hook": hook, "context": context[:140], "narrator": narrator, "description": summary,
+        narrator, payoff = "", ""
+    return {"title": title, "hook": hook, "context": context[:140], "narrator": narrator, "payoff": payoff, "description": summary,
             "tiktok_caption": tiktok_caption[:180],
             "hashtags": hashtags, "tags": tags}
 
