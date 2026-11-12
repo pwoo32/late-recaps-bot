@@ -1069,8 +1069,8 @@
   "@TheDiaryOfACEO": "UCGq-a57w-aPwyi3pW7XLiHw"
  },
  "review": {
-  "at": "2026-11-12 03:52",
-  "report": "/home/runner/work/late-recaps-bot/late-recaps-bot/reports/review_2026-11-12_0352/report.md",
+  "at": "2026-11-12 19:07",
+  "report": "/home/runner/work/late-recaps-bot/late-recaps-bot/reports/review_2026-11-12_1907/report.md",
   "lessons": {
    "titles": [
     "Creator name first, then a bet or question in plain verbs, and never the result. Add a named guest or celebrity when one exists.",
@@ -1106,7 +1106,7 @@
    },
    {
     "title": "Jynxzi Didn't See This Coming At Biggest Announcement Ever \ud83d\ude31",
-    "views": 16,
+    "views": 22,
     "avg_viewed": null,
     "stayed": null,
     "verdict": null
@@ -1183,7 +1183,7 @@
    },
    {
     "title": "Jynxzi: \"What Is It?\" \ud83d\udd25",
-    "views": 31,
+    "views": 32,
     "avg_viewed": null,
     "stayed": null,
     "verdict": null
@@ -2315,7 +2315,6 @@
   "stats": {
    "length": {
     "30": [
-     2.708,
      -0.693,
      -0.693,
      -0.693,
@@ -2334,7 +2333,8 @@
      -0.693,
      -0.693,
      -0.693,
-     1.946
+     1.946,
+     -0.693
     ],
     "20": [
      -0.693
@@ -2351,7 +2351,6 @@
      -0.693,
      -0.693,
      -0.693,
-     -0.693,
      0.405,
      2.303,
      0.0,
@@ -2361,12 +2360,12 @@
      -0.693,
      -0.693,
      -0.693,
-     1.946
+     1.946,
+     -0.693
     ]
    },
    "beat": {
     "normal": [
-     2.708,
      -0.693,
      -0.693,
      -0.693,
@@ -2385,7 +2384,8 @@
      -0.693,
      -0.693,
      -0.693,
-     1.946
+     1.946,
+     -0.693
     ],
     "slow": [
      2.803
@@ -2410,7 +2410,8 @@
      -0.693,
      -0.693,
      -0.693,
-     1.946
+     1.946,
+     -0.693
     ],
     "2": [
      -0.693,
@@ -2437,7 +2438,8 @@
      -0.693,
      -0.693,
      -0.693,
-     1.946
+     1.946,
+     -0.693
     ],
     "1.0": [
      -0.693,
@@ -2456,7 +2458,6 @@
      -0.693,
      -0.693,
      -0.693,
-     -0.693,
      0.405,
      2.303,
      0.0,
@@ -2466,7 +2467,8 @@
      -0.693,
      -0.693,
      -0.693,
-     1.946
+     1.946,
+     -0.693
     ]
    },
    "narrate": {
@@ -2480,7 +2482,8 @@
      -0.693,
      -0.693,
      -0.693,
-     1.946
+     1.946,
+     -0.693
     ]
    }
   },
@@ -2505,7 +2508,8 @@
    "UzG-D-_VtH0",
    "GrM3WhdRMxk",
    "po5Kgi8PuMI",
-   "Frwqjuv54FM"
+   "Frwqjuv54FM",
+   "DyyT5L9dkCE"
   ],
   "best": {
    "length": 30,
@@ -2522,11 +2526,11 @@
  },
  "council": {
   "weights": {
-   "trend": 0.698,
-   "study": 0.564,
-   "analytics": 0.985,
-   "live": 1.377,
-   "script": 0.781,
+   "trend": 0.667,
+   "study": 0.533,
+   "analytics": 0.973,
+   "live": 1.369,
+   "script": 0.772,
    "audience": 0.5
   }
  }
