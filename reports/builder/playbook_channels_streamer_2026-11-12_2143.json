@@ -1,0 +1,329 @@
+{
+ "study_run": "channels_streamer_2026-11-12_2143",
+ "median_seconds": 20,
+ "length": [
+  {
+   "bucket": "0-15s",
+   "videos": 153,
+   "channels": 7,
+   "median_views": 451996,
+   "median_lift": 1.09
+  },
+  {
+   "bucket": "15-30s",
+   "videos": 167,
+   "channels": 8,
+   "median_views": 261820,
+   "median_lift": 0.92
+  },
+  {
+   "bucket": "30-45s",
+   "videos": 66,
+   "channels": 8,
+   "median_views": 907361,
+   "median_lift": 0.82
+  },
+  {
+   "bucket": "45-60s",
+   "videos": 61,
+   "channels": 4,
+   "median_views": 10305452,
+   "median_lift": 1.25
+  },
+  {
+   "bucket": "3min+",
+   "videos": 50,
+   "channels": 2,
+   "median_views": 2274588,
+   "median_lift": 0.96
+  }
+ ],
+ "cadence_median": 1.135,
+ "cadence_p75": 2.315,
+ "top_hours": [
+  [
+   6,
+   1.864944065005651
+  ],
+  [
+   18,
+   1.4050777397894691
+  ],
+  [
+   5,
+   1.3313833925474112
+  ],
+  [
+   8,
+   1.3198488765854466
+  ]
+ ],
+ "hashtags": [
+  [
+   "#shorts",
+   221
+  ],
+  [
+   "#ishowspeed",
+   153
+  ],
+  [
+   "#kaicenat",
+   146
+  ],
+  [
+   "#rakai",
+   54
+  ],
+  [
+   "#edit",
+   47
+  ],
+  [
+   "#carcrash",
+   46
+  ],
+  [
+   "#funny",
+   43
+  ],
+  [
+   "#ray",
+   30
+  ],
+  [
+   "#clips",
+   24
+  ],
+  [
+   "#dukedennis",
+   23
+  ],
+  [
+   "#halloween",
+   18
+  ],
+  [
+   "#shrots",
+   15
+  ]
+ ],
+ "hooks": [
+  [
+   "ishowspeed vs lamine",
+   9
+  ],
+  [
+   "kai cenat gets",
+   2
+  ],
+  [
+   "kai cenat tries",
+   2
+  ]
+ ],
+ "title_chars": 42,
+ "title_cmp": {
+  "emoji": [
+   0.74,
+   0.78
+  ],
+  "question": [
+   0.06,
+   0.03
+  ],
+  "exclaim": [
+   0.37,
+   0.36
+  ],
+  "number": [
+   0.13,
+   0.1
+  ],
+  "quote": [
+   0.05,
+   0.03
+  ],
+  "pipe_or_dash": [
+   0.0,
+   0.0
+  ]
+ },
+ "sources": [
+  [
+   "ishowspeed",
+   97
+  ],
+  [
+   "kai cenat",
+   97
+  ],
+  [
+   "rakai",
+   41
+  ],
+  [
+   "reggie",
+   22
+  ],
+  [
+   "duke dennis",
+   16
+  ],
+  [
+   "fanum",
+   9
+  ],
+  [
+   "jamal",
+   9
+  ],
+  [
+   "pudgie",
+   4
+  ],
+  [
+   "agent",
+   4
+  ],
+  [
+   "tota",
+   3
+  ],
+  [
+   "agent00",
+   3
+  ]
+ ],
+ "winners": [
+  {
+   "title": "Speed obtained the Sharingan\ud83d\ude2d\ud83d\udc80",
+   "views": 21851939,
+   "lift": 387.3,
+   "seconds": 40,
+   "channel": "JoeShortz"
+  },
+  {
+   "title": "iShowSpeed Crashes OUT When Jamal Guesses Where Pizza Is From! \ud83c\udf55\ud83d\ude02",
+   "views": 21237533,
+   "lift": 229.8,
+   "seconds": 22,
+   "channel": "BKVC"
+  },
+  {
+   "title": "IShowSpeed Uses The Wrong Shield In Minecraft!\ud83e\udde0\ud83d\ude02",
+   "views": 17076880,
+   "lift": 184.8,
+   "seconds": 10,
+   "channel": "BKVC"
+  },
+  {
+   "title": "Speed getting his first tattoo\ud83d\ude2d\ud83d\udc80",
+   "views": 9944899,
+   "lift": 176.3,
+   "seconds": 34,
+   "channel": "JoeShortz"
+  },
+  {
+   "title": "Rakai Breaks Up A Wholesome Moment Between Kai Cenat And Random Guy\ud83e\udd40\ud83e\udd23",
+   "views": 16168641,
+   "lift": 174.9,
+   "seconds": 19,
+   "channel": "BKVC"
+  },
+  {
+   "title": "IShowSpeed Unpacks A Signed Ronaldo Jersey To Wear It!\ud83d\udc55\ud83d\ude02",
+   "views": 16135272,
+   "lift": 174.6,
+   "seconds": 28,
+   "channel": "BKVC"
+  },
+  {
+   "title": "Kai Cenat Can't Believe Tota Ate Cake From The Floor!\ud83c\udf82\ud83d\ude02",
+   "views": 15784824,
+   "lift": 170.8,
+   "seconds": 26,
+   "channel": "BKVC"
+  },
+  {
+   "title": "IShowSpeed Asks Zias & B Lou If They Have Ever Played Football!\u26bd\ud83d\ude02",
+   "views": 9125623,
+   "lift": 98.7,
+   "seconds": 13,
+   "channel": "BKVC"
+  },
+  {
+   "title": "That Car\ud83d\ude31 #carcrash #shorts",
+   "views": 18028432,
+   "lift": 89.0,
+   "seconds": 8,
+   "channel": "ARA WORLDPLAY"
+  },
+  {
+   "title": "iShowSpeed Leaks His Number On The iPhone Duo! \ud83d\ude31\ud83d\ude02",
+   "views": 7757546,
+   "lift": 83.9,
+   "seconds": 32,
+   "channel": "BKVC"
+  },
+  {
+   "title": "Speed's mom wishes his a happy birthday\ud83e\udd79\u2764\ufe0f\u200d\ud83e\ude79",
+   "views": 3986876,
+   "lift": 70.7,
+   "seconds": 18,
+   "channel": "JoeShortz"
+  },
+  {
+   "title": "Ishowspeed and mbappe? #carcrash #shorts",
+   "views": 12234391,
+   "lift": 60.4,
+   "seconds": 8,
+   "channel": "ARA WORLDPLAY"
+  }
+ ],
+ "young_channels": [
+  {
+   "name": "Nexxo Recaps",
+   "age_months": 10.1,
+   "median_views": 10218641,
+   "views_30d": 154723960,
+   "uploads_per_day": 0.8
+  },
+  {
+   "name": "\u26a1\ufe0fUNIKPLUG\u26a1\ufe0f",
+   "age_months": 4.9,
+   "median_views": 17504,
+   "views_30d": 22374218,
+   "uploads_per_day": 0.82
+  },
+  {
+   "name": "Rut Ribes",
+   "age_months": 6.0,
+   "median_views": 146201,
+   "views_30d": 21228115,
+   "uploads_per_day": 1.76
+  },
+  {
+   "name": "aztrooshorts",
+   "age_months": 9.9,
+   "median_views": 62015,
+   "views_30d": 15233234,
+   "uploads_per_day": 0.71
+  },
+  {
+   "name": "BTS KING ",
+   "age_months": 0.7,
+   "median_views": 236830,
+   "views_30d": 13578699,
+   "uploads_per_day": 1.08
+  },
+  {
+   "name": "SpeedyClips",
+   "age_months": 11.0,
+   "median_views": 27763,
+   "views_30d": 8465577,
+   "uploads_per_day": 0.64
+  }
+ ],
+ "benchmark_median_views": 38102
+}

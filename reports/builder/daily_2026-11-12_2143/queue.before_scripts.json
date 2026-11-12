@@ -1,0 +1,87 @@
+[
+ {
+  "id": 1,
+  "source": "ishowspeed",
+  "creator": "IShowSpeed",
+  "platform": "youtube",
+  "video_id": "jJ-zWCw85qA",
+  "video_title": "Can I Return a 120 MPH Serve From Serena Williams?",
+  "url": "https://www.youtube.com/watch?v=jJ-zWCw85qA&t=1537s",
+  "moment": "25:37",
+  "start": 1517,
+  "end": 1547,
+  "rank": 17.71,
+  "signal": "3 timestamp comments, 92 likes",
+  "signals": [
+   "comments"
+  ],
+  "quotes": [
+   "She's talking about Sharapova never beating her again haha",
+   "Serena instantly was like \"oh i'm not letting him win after this\"",
+   "Hit it with the side of the racket"
+  ],
+  "stream_age_h": 27.2,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": null
+  },
+  "council": {
+   "trend": 0.63,
+   "study": 1.0,
+   "analytics": 0.78,
+   "live": 0.43,
+   "script": 1.0,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 0.63,
+    "why": "Speed clips pull 344,112 views/hour this week, down 34% since the last scan"
+   },
+   "study": {
+    "score": 1.0,
+    "why": "9 of the top channels' breakout Shorts are Speed clips; Speed is in 97 of their recent titles"
+   },
+   "analytics": {
+    "score": 0.78,
+    "why": "Speed clips do 1.2x our usual; has a spoken premise (bet/question/challenge); stream is 27h old"
+   },
+   "live": {
+    "score": 0.43,
+    "why": "3 timestamp comments, 92 likes"
+   },
+   "script": {
+    "score": 1.0,
+    "why": "draft title: \"Speed: \"Oh I'm Not Letting Him Win After This\" 🔥\""
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-12T21:43:50Z",
+  "council_why": "The moment at 25:37 in 'Can I Return a 120 MPH Serve From Serena Williams?' has a strong reaction from Serena Williams, a clear spoken premise, and high engagement metrics, making it highly likely to perform well.",
+  "post_utc": "2026-11-13 06:00",
+  "post_local": "Fri 01:00 AM ET",
+  "title": "Speed She's talking about Sharapova neve 🤯",
+  "hook": "SHE'S TALKING ABOUT SHARAPOVA NEVER BEAT",
+  "context": "IShowSpeed live, Can I Return a 120 MPH Serve From Serena Williams?",
+  "take": "This is why chat can't stop clipping Speed.",
+  "summary": "IShowSpeed live: Can I Return a 120 MPH Serve From Serena Williams?",
+  "tiktok_caption": "Speed in Can I Return a 120 MPH Serve From Serena Williams?.",
+  "hashtags": [],
+  "tags": [],
+  "draft": true,
+  "writer": "template",
+  "description": "IShowSpeed live, Can I Return a 120 MPH Serve From Serena Williams?\n\nFull stream by IShowSpeed: https://www.youtube.com/watch?v=jJ-zWCw85qA&t=1537s\nGo support IShowSpeed, all credit to them.\n\n#ishowspeed #speed #shorts #kaicenat #rakai",
+  "key": "jJ-zWCw85qA@51",
+  "permission": "fan clipping is widespread and tolerated; no official paid program found (Oct 2026)"
+ }
+]

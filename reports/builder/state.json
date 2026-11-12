@@ -1,16 +1,16 @@
 {
  "source_weight": {
-  "jynxzi": 1.12,
+  "jynxzi": 1.47,
   "kai_cenat": 0.31,
-  "ishowspeed": 0.75
+  "ishowspeed": 1.25
  },
  "slot_weight": {
-  "2": 0.39,
-  "21": 0.44,
-  "8": 1.08,
-  "4": 0.43,
-  "22": 1.42,
-  "17": 1.64
+  "2": 0.43,
+  "21": 0.46,
+  "8": 1.25,
+  "4": 0.46,
+  "22": 1.65,
+  "17": 1.78
  },
  "used_moments": [
   "L6S9Vb3RLy4@186",
@@ -98,7 +98,8 @@
   "jmRH9uvgPNk@1263",
   "kDLY56pnDlo@1347",
   "nb5uTOtYj3U@185",
-  "6dhayer-a90@1320"
+  "6dhayer-a90@1320",
+  "jJ-zWCw85qA@51"
  ],
  "queued": {
   "L6S9Vb3RLy4@186": {
@@ -1061,6 +1062,28 @@
     "audience": 0.5
    },
    "video_id": "DyyT5L9dkCE"
+  },
+  "jJ-zWCw85qA@51": {
+   "title": "Speed: \"Oh I'm Not Letting Him Win After This\" \ud83d\udd25",
+   "source": "ishowspeed",
+   "post_utc": "2026-11-13 06:00",
+   "recipe": {
+    "length": 30,
+    "punch": 0.14,
+    "beat": "normal",
+    "caption_words": 3,
+    "gap": 0.6,
+    "layout": "face34",
+    "test": null
+   },
+   "council": {
+    "trend": 0.63,
+    "study": 1.0,
+    "analytics": 0.78,
+    "live": 0.43,
+    "script": 1.0,
+    "audience": 0.5
+   }
   }
  },
  "channel": "UCbK9EejOk5UVzI_l8F3f8kA",
@@ -1241,6 +1264,16 @@
  },
  "own_results": [
   {
+   "title": "Kai Cenat Goes Crazy \ud83d\udd25",
+   "views": 0,
+   "lift": 0.0
+  },
+  {
+   "title": "Jynxzi Didn't See This Coming At Biggest Announcement Ever \ud83d\ude31",
+   "views": 22,
+   "lift": 22.0
+  },
+  {
    "title": "Kai Cenat Didn't See This Coming \ud83d\ude31",
    "views": 0,
    "lift": 0.0
@@ -1262,8 +1295,8 @@
   },
   {
    "title": "Ronaldo: \"Laiys. Says Word\" \ud83d\ude31",
-   "views": 33,
-   "lift": 33.0
+   "views": 28,
+   "lift": 28.0
   },
   {
    "title": "xQc Can't Believe He Pulled This Off At X Presses Lang \ud83d\udd25",
@@ -1292,8 +1325,8 @@
   },
   {
    "title": "Jynxzi: \"What Is It?\" \ud83d\udd25",
-   "views": 31,
-   "lift": 31.0
+   "views": 32,
+   "lift": 32.0
   },
   {
    "title": "N3on: \"Face Each Other?\" \ud83d\udd25",
@@ -1322,8 +1355,8 @@
   },
   {
    "title": "Speed Can't Believe Vinny Just Robbed His Uncle's Store \ud83d\ude2d",
-   "views": 1,
-   "lift": 1.0
+   "views": 2,
+   "lift": 2.0
   },
   {
    "title": "Jynxzi Plays For $1000 And Goes Off \ud83d\udd25",
@@ -1332,13 +1365,13 @@
   },
   {
    "title": "Kai Cenat Can't Believe Pooh Shiesty Bro Snapping \ud83e\uddd0\ud83d\ude2d",
-   "views": 2,
-   "lift": 2.0
+   "views": 3,
+   "lift": 3.0
   },
   {
    "title": "Jynxzi Can't Believe What Just Happened \ud83d\ude2d",
-   "views": 0,
-   "lift": 0.0
+   "views": 1,
+   "lift": 1.0
   },
   {
    "title": "Speed Spots Someone In The Crowd And Chases Them \ud83d\udd77\ufe0f\ud83d\ude2d",
@@ -1357,8 +1390,8 @@
   },
   {
    "title": "Jynxzi Explains Why Hearing Wins In Rainbow Six \ud83c\udfa7",
-   "views": 16,
-   "lift": 16.0
+   "views": 17,
+   "lift": 17.0
   },
   {
    "title": "Kai Cenat Keeps Rakai Out Of The Halloween Party \ud83c\udf83\ud83d\ude2d",
@@ -1372,23 +1405,13 @@
   },
   {
    "title": "Speed Hears Dubstep And Instantly Starts Vibing \ud83d\ude02",
-   "views": 2,
-   "lift": 2.0
+   "views": 4,
+   "lift": 4.0
   },
   {
    "title": "Kai Cenat Rates Japanese Train Breakfast \ud83c\udf73",
    "views": 1,
    "lift": 1.0
-  },
-  {
-   "title": "Speed Meets Two Fans Making Dubstep \ud83c\udfa7\ud83d\ude02",
-   "views": 0,
-   "lift": 0.0
-  },
-  {
-   "title": "Speed Checks Who Really Won His $250,000 Giveaway \ud83d\udcb0",
-   "views": 0,
-   "lift": 0.0
   }
  ],
  "tiktok": {
@@ -2309,7 +2332,141 @@
    }
   ],
   "S03_jU1mvVc": [],
-  "4ppcVRKoG30": []
+  "4ppcVRKoG30": [],
+  "jJ-zWCw85qA": [
+   {
+    "t": 989,
+    "ratio": 3.5,
+    "msgs": 121,
+    "sample": [
+     "w",
+     "w",
+     "w serena",
+     "w",
+     "WW"
+    ]
+   }
+  ],
+  "6LB7vibQ5q0": [
+   {
+    "t": 31149,
+    "ratio": 11.4,
+    "msgs": 316,
+    "sample": [
+     "W",
+     "yo"
+    ]
+   },
+   {
+    "t": 14104,
+    "ratio": 8.1,
+    "msgs": 195,
+    "sample": []
+   },
+   {
+    "t": 13569,
+    "ratio": 6.8,
+    "msgs": 163,
+    "sample": [
+     "Bro it's enough the There is no Lag",
+     "nah"
+    ]
+   },
+   {
+    "t": 35849,
+    "ratio": 6.8,
+    "msgs": 89,
+    "sample": [
+     "Bro chill it\u2019s nnn",
+     "bro",
+     "Broo ",
+     "bro",
+     "what are you doing?"
+    ]
+   },
+   {
+    "t": 7024,
+    "ratio": 6.4,
+    "msgs": 58,
+    "sample": [
+     "W FRANK",
+     "W solo",
+     "YO SOLOOOO!!!",
+     "W",
+     "w"
+    ]
+   }
+  ],
+  "wCG4W13BGDg": [
+   {
+    "t": 944,
+    "ratio": 7.9,
+    "msgs": 92,
+    "sample": [
+     "W",
+     "W",
+     "w",
+     "W",
+     "Yoo"
+    ]
+   },
+   {
+    "t": 31664,
+    "ratio": 7.4,
+    "msgs": 120,
+    "sample": [
+     "w lester",
+     "w",
+     "w",
+     "W LESTER",
+     "w"
+    ]
+   },
+   {
+    "t": 36889,
+    "ratio": 7.0,
+    "msgs": 66,
+    "sample": [
+     "w",
+     "W",
+     "W",
+     "W",
+     "W"
+    ]
+   },
+   {
+    "t": 79,
+    "ratio": 6.3,
+    "msgs": 316,
+    "sample": [
+     "yoooo",
+     "W",
+     "yooooo",
+     "yoo",
+     "W"
+    ]
+   },
+   {
+    "t": 31094,
+    "ratio": 5.5,
+    "msgs": 180,
+    "sample": []
+   },
+   {
+    "t": 10649,
+    "ratio": 4.9,
+    "msgs": 17,
+    "sample": [
+     "w",
+     "W",
+     "W",
+     "W",
+     "W"
+    ]
+   }
+  ],
+  "hmfQoGeKkMw": [],
+  "YqdjrrYR_VQ": []
  },
  "edit": {
   "stats": {

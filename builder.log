@@ -1814,3 +1814,77 @@ Title/description: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/bui
   uploaded https://youtube.com/shorts/DyyT5L9dkCE (goes public Tue 03:00 AM ET)
   TikTok: [1] draft in your TikTok inbox. Open the notification, paste this caption, post:
     Kai Cenat reacts during a live stream. #kaicenat
+[streamer] searching: streamer clips
+[streamer] searching: kai cenat
+[streamer] searching: ishowspeed
+[streamer] searching: twitch clips
+Fetching stats for 186 videos
+Fetching subscriber counts for 101 channels
+Done. Report: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/2026-11-12_2143/report.md
+searching: streamer clips
+searching: kai cenat
+searching: ishowspeed
+searching: twitch clips
+60 candidate channels
+Done. Report: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/channels_streamer_2026-11-12_2143/report.md
+WARNING: [youtube] jJ-zWCw85qA: Some web_embedded client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for your account. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[0;93m2026-11-12 22:10:32.423217323 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+Done. Report: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/track_2026-11-12_2143.md  (quota used: 2)
+[ishowspeed] reading recent streams/videos
+  reading the room on "Can I Return a 120 MPH Serve From Serena Williams?" (chat replay, most replayed)
+    1 chat spikes
+[kai_cenat] reading recent streams/videos
+  reading the room on "🎮PLAYING EVERY GTA UNTIL I BEAT IT: Grand Theft Auto 5🎮" (chat replay, most replayed)
+    5 chat spikes
+  reading the room on "🎮PLAYING EVERY GTA UNTIL I BEAT IT: Grand Theft Auto 5🎮" (chat replay, most replayed)
+    6 chat spikes
+  40 Twitch clips from kaicenat
+[jynxzi] reading recent streams/videos
+  reading the room on "FINDING THE PIRATE TOKEN" (chat replay, most replayed)
+  reading the room on "FINDING THE PIRATE TOKEN w/ LOS POLLOS" (chat replay, most replayed)
+  40 Twitch clips from jynxzi
+[adin_ross] reading recent streams/videos
+  40 Kick clips from adinross
+[n3on] reading recent streams/videos
+  27 Kick clips from n3on
+[caseoh] reading recent streams/videos
+  40 Twitch clips from caseoh_
+[xqc] reading recent streams/videos
+  40 Twitch clips from xqc
+  38 Kick clips from xqc
+[lacy] reading recent streams/videos
+  40 Twitch clips from lacy
+[plaqueboymax] reading recent streams/videos
+  40 Twitch clips from plaqueboymax
+[stableronaldo] reading recent streams/videos
+  40 Twitch clips from stableronaldo
+Clip council: 16 candidates, every agent votes...
+  picked Speed at 25:37 (council 0.69): The moment at 25:37 in 'Can I Return a 120 MPH Serve From Serena Williams?' has a strong reaction from Serena Williams, 
+Writing scripts...
+  [1] IShowSpeed at 25:37: writing from captions (122 words)
+Scripts written by ollama.
+Done. Queue: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-11-12_2143/queue.md  (quota used: 62)
+[1] IShowSpeed Can't Believe He Returned Serena's Serve 😱🔥
+Downloading 25:17-25:47 of https://www.youtube.com/watch?v=jJ-zWCw85qA
+Transcribing with whisper small.en (first run downloads the model)...
+Re-writing the script from what's actually said in the clip...
+  [1] IShowSpeed at 25:37: writing from transcript (106 words)
+Scripts written by ollama.
+  [1] model title "Speed Returns Serve After Months Of Practice 😱" isn't backed by what's said (months, practice, unbelievable, faces, high, stakes, match); using the free writer
+Cut 1.8s of dead air (4 jump cuts).
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Fetching 10 files:  80%|████████  | 8/10 [00:25<00:06,  3.13s/it]Fetching 10 files: 100%|██████████| 10/10 [00:41<00:00,  4.41s/it]Fetching 10 files: 100%|██████████| 10/10 [00:41<00:00,  4.10s/it]
+/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/diffusers/models/lora.py:393: FutureWarning: `LoRACompatibleLinear` is deprecated and will be removed in version 1.0.0. Use of `LoRACompatibleLinear` is deprecated. Please switch to PEFT backend by installing PEFT: `pip install peft`.
+  deprecate("LoRACompatibleLinear", "1.0.0", deprecation_message)
+  0%|          | 0/1000 [00:00<?, ?it/s]  0%|          | 2/1000 [00:00<01:21, 12.19it/s]  0%|          | 4/1000 [00:00<01:16, 13.04it/s]  1%|          | 6/1000 [00:00<01:14, 13.26it/s]  1%|          | 8/1000 [00:00<01:15, 13.11it/s]  1%|          | 10/1000 [00:00<01:15, 13.03it/s]  1%|          | 12/1000 [00:00<01:16, 12.87it/s]  1%|▏         | 14/1000 [00:01<01:16, 12.89it/s]  2%|▏         | 16/1000 [00:01<01:15, 13.04it/s]  2%|▏         | 18/1000 [00:01<01:15, 12.97it/s]  2%|▏         | 20/1000 [00:01<01:15, 13.02it/s]  2%|▏         | 22/1000 [00:01<01:14, 13.09it/s]  2%|▏         | 24/1000 [00:01<01:14, 13.16it/s]  3%|▎         | 26/1000 [00:01<01:14, 13.07it/s]  3%|▎         | 28/1000 [00:02<01:14, 13.00it/s]  3%|▎         | 30/1000 [00:02<01:15, 12.91it/s]  3%|▎         | 32/1000 [00:02<01:14, 12.92it/s]  3%|▎         | 34/1000 [00:02<01:14, 12.96it/s]  4%|▎         | 36/1000 [00:02<01:14, 12.91it/s]  4%|▍         | 38/1000 [00:02<01:14, 12.99it/s]  4%|▍         | 40/1000 [00:03<01:13, 13.12it/s]  4%|▍         | 42/1000 [00:03<01:13, 13.01it/s]  4%|▍         | 44/1000 [00:03<01:14, 12.83it/s]  5%|▍         | 46/1000 [00:03<01:16, 12.49it/s]  5%|▍         | 48/1000 [00:03<01:17, 12.23it/s]  5%|▌         | 50/1000 [00:03<01:16, 12.46it/s]  5%|▌         | 52/1000 [00:04<01:14, 12.69it/s]  5%|▌         | 54/1000 [00:04<01:13, 12.84it/s]  6%|▌         | 56/1000 [00:04<01:13, 12.76it/s]  6%|▌         | 58/1000 [00:04<01:14, 12.67it/s]  6%|▌         | 60/1000 [00:04<01:13, 12.81it/s]  6%|▌         | 62/1000 [00:04<01:13, 12.74it/s]  6%|▋         | 64/1000 [00:04<01:13, 12.71it/s]  7%|▋         | 66/1000 [00:05<01:14, 12.50it/s]  7%|▋         | 68/1000 [00:05<01:15, 12.31it/s]  7%|▋         | 70/1000 [00:05<01:15, 12.36it/s]  7%|▋         | 72/1000 [00:05<01:14, 12.49it/s]  7%|▋         | 74/1000 [00:05<01:14, 12.35it/s]  8%|▊         | 76/1000 [00:05<01:14, 12.48it/s]  8%|▊         | 78/1000 [00:06<01:13, 12.52it/s]  8%|▊         | 80/1000 [00:06<01:13, 12.44it/s]  8%|▊         | 82/1000 [00:06<01:16, 12.07it/s]  8%|▊         | 84/1000 [00:06<01:16, 12.03it/s]  9%|▊         | 86/1000 [00:06<01:15, 12.18it/s]  9%|▉         | 88/1000 [00:06<01:12, 12.54it/s]  9%|▉         | 90/1000 [00:07<01:11, 12.68it/s]  9%|▉         | 90/1000 [00:07<01:12, 12.58it/s]
+S3 Token -> Mel Inference...
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:02<00:02,  2.08s/it]100%|██████████| 2/2 [00:04<00:00,  2.07s/it]100%|██████████| 2/2 [00:04<00:00,  2.07s/it]
+  0%|          | 0/1000 [00:00<?, ?it/s]  0%|          | 2/1000 [00:00<01:14, 13.35it/s]  0%|          | 4/1000 [00:00<01:15, 13.20it/s]  1%|          | 6/1000 [00:00<01:16, 12.92it/s]  1%|          | 8/1000 [00:00<01:17, 12.87it/s]  1%|          | 10/1000 [00:00<01:17, 12.80it/s]  1%|          | 12/1000 [00:00<01:15, 13.05it/s]  1%|▏         | 14/1000 [00:01<01:15, 13.05it/s]  2%|▏         | 16/1000 [00:01<01:14, 13.22it/s]  2%|▏         | 18/1000 [00:01<01:14, 13.18it/s]  2%|▏         | 20/1000 [00:01<01:14, 13.07it/s]  2%|▏         | 22/1000 [00:01<01:15, 12.97it/s]  2%|▏         | 24/1000 [00:01<01:15, 12.88it/s]  3%|▎         | 26/1000 [00:01<01:14, 13.06it/s]  3%|▎         | 28/1000 [00:02<01:13, 13.26it/s]  3%|▎         | 30/1000 [00:02<01:13, 13.25it/s]  3%|▎         | 32/1000 [00:02<01:17, 12.43it/s]  3%|▎         | 34/1000 [00:02<01:19, 12.14it/s]  4%|▎         | 36/1000 [00:02<01:19, 12.10it/s]  4%|▍         | 38/1000 [00:02<01:16, 12.53it/s]  4%|▍         | 40/1000 [00:03<01:15, 12.75it/s]  4%|▍         | 42/1000 [00:03<01:14, 12.94it/s]  4%|▍         | 44/1000 [00:03<01:12, 13.17it/s]  5%|▍         | 46/1000 [00:03<01:11, 13.37it/s]  5%|▍         | 48/1000 [00:03<01:11, 13.28it/s]  5%|▌         | 50/1000 [00:03<01:13, 12.93it/s]  5%|▌         | 52/1000 [00:04<01:14, 12.66it/s]  5%|▌         | 54/1000 [00:04<01:14, 12.66it/s]  6%|▌         | 56/1000 [00:04<01:13, 12.82it/s]  6%|▌         | 58/1000 [00:04<01:12, 13.03it/s]  6%|▌         | 60/1000 [00:04<01:11, 13.21it/s]  6%|▌         | 62/1000 [00:04<01:11, 13.17it/s]  6%|▋         | 64/1000 [00:04<01:10, 13.20it/s]  7%|▋         | 66/1000 [00:05<01:12, 12.94it/s]  7%|▋         | 68/1000 [00:05<01:13, 12.67it/s]  7%|▋         | 70/1000 [00:05<01:12, 12.89it/s]  7%|▋         | 72/1000 [00:05<01:12, 12.87it/s]  7%|▋         | 74/1000 [00:05<01:10, 13.08it/s]  8%|▊         | 76/1000 [00:05<01:09, 13.25it/s]  8%|▊         | 78/1000 [00:06<01:09, 13.25it/s]  8%|▊         | 80/1000 [00:06<01:10, 13.04it/s]  8%|▊         | 82/1000 [00:06<01:10, 13.02it/s]  8%|▊         | 84/1000 [00:06<01:09, 13.22it/s]  9%|▊         | 86/1000 [00:06<01:08, 13.35it/s]  9%|▉         | 88/1000 [00:06<01:08, 13.38it/s]  9%|▉         | 90/1000 [00:06<01:07, 13.49it/s]  9%|▉         | 92/1000 [00:07<01:08, 13.24it/s]  9%|▉         | 94/1000 [00:07<01:08, 13.13it/s] 10%|▉         | 96/1000 [00:07<01:09, 13.03it/s] 10%|▉         | 98/1000 [00:07<01:10, 12.86it/s] 10%|█         | 100/1000 [00:07<01:10, 12.83it/s] 10%|█         | 102/1000 [00:07<01:12, 12.46it/s] 10%|█         | 104/1000 [00:08<01:12, 12.44it/s] 11%|█         | 106/1000 [00:08<01:10, 12.64it/s] 11%|█         | 108/1000 [00:08<01:10, 12.74it/s] 11%|█         | 108/1000 [00:08<01:09, 12.83it/s]
+S3 Token -> Mel Inference...
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:02<00:02,  2.24s/it]100%|██████████| 2/2 [00:04<00:00,  2.45s/it]100%|██████████| 2/2 [00:04<00:00,  2.42s/it]
+Framing on the face at 48% across.
+Done. Video: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-11-12_2143/clips/01_jJ_zWCw85qA_51.mp4
+Title/description: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-11-12_2143/clips/01_jJ_zWCw85qA_51.txt
+  held, not posted: originality: stock line "WATCH THE LAST SECOND" could go on any clip; the script needs something specific to this one
+  TikTok: [1] draft in your TikTok inbox. Open the notification, paste this caption, post:
+    Speed in Can I Return a. #ishowspeed #return120mph
