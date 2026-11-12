@@ -19,6 +19,8 @@ for i, line in enumerate(LINES, 1):
     t = time.time()
     w = cb.narrate(line, OUT / f"line{i}")
     log.append(f"line {i}: {time.time() - t:.1f}s -> {w.name if w else None}")
+    if not w:
+        continue
     subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", str(w), "-af", cb.VOICE_CHAIN, "-b:a", "128k",
                     str(OUT / f"final_{i}.mp3")], check=True)
     w.unlink()
