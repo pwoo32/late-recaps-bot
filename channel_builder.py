@@ -1086,7 +1086,6 @@ def chatterbox_voice(text, out, voice):
         subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", str(one), "-i", str(one), "-filter_complex",
                         "[0:a][1:a]concat=n=2:v=0:a=1", "-ar", "24000", "-ac", "1", str(ref)], check=True)
     if not _TURBO:
-        script_agent.unload_ollama()  # the script model and the narrator together can run the runner out of memory
         _TURBO.append(ChatterboxTurboTTS.from_pretrained(device="cpu"))
     m = _TURBO[0]
     rnd = random.Random(text)
@@ -1097,14 +1096,6 @@ def chatterbox_voice(text, out, voice):
     wav = m.generate(said, audio_prompt_path=str(ref))
     torchaudio.save(str(out), wav, m.sr)
     return out
-
-
-def release_narrator():
-    """Drop the Chatterbox model so its memory is free for the ffmpeg render (it reloads from cache if needed)."""
-    if _TURBO:
-        _TURBO.clear()
-        import gc
-        gc.collect()
 
 
 def narrate(text, out_base, voice=None):
@@ -1119,11 +1110,9 @@ def narrate(text, out_base, voice=None):
     if not voice.startswith("en-") and os.environ.get("NARRATOR_ENGINE", "chatterbox").lower() == "chatterbox":
         try:
             out = chatterbox_voice(text, out_base.with_suffix(".take.wav"), voice)
-            release_narrator()  # ffmpeg renders next; don't keep the TTS model resident through the encode
             if out.exists() and out.stat().st_size > 1000:
                 return out
         except Exception as e:
-            release_narrator()
             print(f"Chatterbox voice failed ({type(e).__name__}: {str(e)[:120]}); using Kokoro.")
             import traceback
             traceback.print_exc()

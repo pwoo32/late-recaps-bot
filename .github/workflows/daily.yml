@@ -188,7 +188,7 @@ jobs:
         run: |
           curl -fsSL https://ollama.com/install.sh | sh
           sudo systemctl stop ollama 2>/dev/null || true
-          OLLAMA_KEEP_ALIVE=1m nohup ollama serve > "$RUNNER_TEMP/ollama.log" 2>&1 &   # don't hold the 7B model in RAM between calls
+          nohup ollama serve > "$RUNNER_TEMP/ollama.log" 2>&1 &
           for i in $(seq 1 30); do curl -sf http://localhost:11434/api/tags >/dev/null && break; sleep 1; done
           ollama pull "$OLLAMA_MODEL"
           ollama list
