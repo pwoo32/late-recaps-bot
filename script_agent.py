@@ -311,6 +311,23 @@ def _ollama(prompt):
     return parse_json(r.json()["response"])
 
 
+def unload_ollama():
+    """Ask the Ollama server to drop its loaded models from memory. The cloud runner has ~16 GB, and a 7B script
+    model left resident alongside the Chatterbox narrator and ffmpeg was getting the runner killed mid-cut.
+    Harmless if Ollama isn't running."""
+    host = os.environ.get("OLLAMA_HOST", "http://localhost:11434").rstrip("/")
+    if not host.startswith("http"):
+        host = "http://" + host
+    try:
+        loaded = requests.get(f"{host}/api/ps", timeout=3).json().get("models", [])
+        for m in loaded:
+            requests.post(f"{host}/api/generate", timeout=30, json={"model": m["name"], "keep_alive": 0})
+        if loaded:
+            print(f"Unloaded the script model ({', '.join(m['name'] for m in loaded)}) to free memory for the narrator.")
+    except requests.RequestException:
+        pass
+
+
 def _api(prompt):
     if not (os.environ.get("ANTHROPIC_API_KEY") or os.environ.get("ANTHROPIC_AUTH_TOKEN")):
         return None
