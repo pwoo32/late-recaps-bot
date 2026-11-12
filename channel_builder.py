@@ -353,6 +353,7 @@ def youtube_candidates(yt, key, src, state, since, now, chat_budget=240, live_st
     return out
 
 
+MIN_WHOLE_CLIP_S = 15  # Twitch/Kick clips used whole must be at least this long (Nov 12: a 5s clip posted)
 TWITCH_BOOST = 1.3  # favour moments viewers clipped live on Twitch (asked for Nov 2026)
 
 
@@ -374,6 +375,9 @@ def twitch_candidates(key, src, since, now, h=None):
         clips += [dict(c, _site="kick") for c in kk]
     out = []
     for c in clips:
+        if c.get("video_id") is None or c.get("vod_offset") is None or c["_site"] == "kick":
+            if (c.get("duration") or 30) < MIN_WHOLE_CLIP_S:  # used whole: a 5s clip leaves no room for our take
+                continue
         created = datetime.fromisoformat(c["created_at"].replace("Z", "+00:00"))
         vph = LM.clip_velocity(c, now)
         score = round(math.log2(2 + c["view_count"]) * 1.5 * (1 + min(vph / 20000, 1)) * TWITCH_BOOST, 2)
@@ -442,7 +446,10 @@ def rank_moments(moments, demand, state, words=None, change=None):
         heat = 0.8 + 0.6 * m["heat"] if m.get("heat") is not None else 1.0  # most-replayed part of the stream
         m["music_risk"] = originality.music_hit(" ".join(m["quotes"]), m["video_title"])
         music = 0.2 if m["music_risk"] else 1.0  # songs are what Content ID claims; keep them for last resort only
-        m["rank"] = round(m["score"] * hot * learned * fresh * reach * paid * rising * topical * heat * music, 2)
+        # Creators whose every moment is already posted by hundreds of clip channels (and by their own Shorts
+        # channels and YouTube's auto highlights): our copy is one of many near-duplicates (sources.py "crowd").
+        crowd = src.get("crowd", 1.0)
+        m["rank"] = round(m["score"] * hot * learned * fresh * reach * paid * rising * topical * heat * music * crowd, 2)
         m["key"] = f"{m['video_id']}@{m['t'] // 30}"
         b = m["t"] // 30  # same scene: within 3 buckets (~90s) of something already posted from this stream
         m["used"] = (m["key"] in used or any(abs(b - u) <= 3 for u in used_at.get(m["video_id"], ()))

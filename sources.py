@@ -11,6 +11,8 @@ Each source needs at least one place to find full streams/videos:
 permission: what you know about clipping rights. Set it to "blocked" to stop the builder from ever
 picking or downloading that creator. Update it when you join a creator's clipping program.
 campaign_cpm: $ per 1,000 views a clipping program/campaign pays you for this creator (None = none known).
+crowd: optional rank multiplier (default 1.0) for how saturated the creator's clips are. Under 1 means hundreds of
+channels already post the same moments, so ours is a near-duplicate the Shorts feed rarely tests.
 
 Edit freely: add creators, drop ones that flop for you (`track` tells you which).
 """
@@ -23,6 +25,7 @@ SOURCES = {
         "hashtags": ["#ishowspeed", "#speed"],
         "permission": "fan clipping is widespread and tolerated; no official paid program found (Oct 2026)",
         "campaign_cpm": None,
+        "crowd": 0.5,   # most-clipped creator on YouTube (Speed + Kai ~97% of streamer-clip views, ~1,800 accounts)
     },
     "kai_cenat": {
         "name": "Kai Cenat", "short": "Kai Cenat", "niche": "streamer",
@@ -32,6 +35,7 @@ SOURCES = {
         "hashtags": ["#kaicenat", "#kai"],
         "permission": "fan clipping is widespread and tolerated; no official paid program found (Oct 2026)",
         "campaign_cpm": None,
+        "crowd": 0.5,   # most-clipped creator on YouTube (Speed + Kai ~97% of streamer-clip views, ~1,800 accounts)
     },
     "jynxzi": {
         "name": "Jynxzi", "short": "Jynxzi", "niche": "streamer",
