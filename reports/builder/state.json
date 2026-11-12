@@ -1,16 +1,16 @@
 {
  "source_weight": {
-  "jynxzi": 1.47,
+  "jynxzi": 1.68,
   "kai_cenat": 0.31,
-  "ishowspeed": 1.25
+  "ishowspeed": 1.55
  },
  "slot_weight": {
-  "2": 0.43,
-  "21": 0.46,
-  "8": 1.25,
-  "4": 0.46,
-  "22": 1.65,
-  "17": 1.78
+  "2": 0.46,
+  "21": 0.48,
+  "8": 1.35,
+  "4": 0.48,
+  "22": 1.79,
+  "17": 1.87
  },
  "used_moments": [
   "L6S9Vb3RLy4@186",
@@ -99,7 +99,8 @@
   "kDLY56pnDlo@1347",
   "nb5uTOtYj3U@185",
   "6dhayer-a90@1320",
-  "jJ-zWCw85qA@51"
+  "jJ-zWCw85qA@51",
+  "2686136916@0"
  ],
  "queued": {
   "L6S9Vb3RLy4@186": {
@@ -1084,6 +1085,29 @@
     "script": 1.0,
     "audience": 0.5
    }
+  },
+  "2686136916@0": {
+   "title": "Jynxzi: \"Evan Burger\" \ud83d\ude31",
+   "source": "jynxzi",
+   "post_utc": "2026-11-13 06:00",
+   "recipe": {
+    "length": 30,
+    "punch": 0.14,
+    "beat": "normal",
+    "caption_words": 3,
+    "gap": 0.6,
+    "layout": "face34",
+    "test": null
+   },
+   "council": {
+    "trend": 1.0,
+    "study": 0.25,
+    "analytics": 0.53,
+    "live": 0.1,
+    "script": 0.6,
+    "audience": 0.5
+   },
+   "video_id": "Dy8Y7By6jpI"
   }
  },
  "channel": "UCbK9EejOk5UVzI_l8F3f8kA",

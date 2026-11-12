@@ -1,0 +1,85 @@
+[
+ {
+  "id": 1,
+  "source": "jynxzi",
+  "creator": "Jynxzi",
+  "platform": "twitch_clip",
+  "video_id": "2686136916",
+  "video_title": "evan burger",
+  "url": "https://www.twitch.tv/jynxzi/clip/AmorphousArborealPoxFailFish-5DVagO4VzkEN4X6X",
+  "moment": "0:00",
+  "start": 0,
+  "end": 5.0,
+  "rank": 23.98,
+  "signal": "Twitch clip, 2,182 views (44/h)",
+  "signals": [
+   "twitch clip"
+  ],
+  "quotes": [
+   "evan burger"
+  ],
+  "stream_age_h": 49.7,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": null
+  },
+  "council": {
+   "trend": 1.0,
+   "study": 0.25,
+   "analytics": 0.53,
+   "live": 0.1,
+   "script": 0.6,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 1.0,
+    "why": "Jynxzi clips pull 1,747 views/hour this week, up 3494% since the last scan"
+   },
+   "study": {
+    "score": 0.25,
+    "why": "top channels rarely break out with Jynxzi"
+   },
+   "analytics": {
+    "score": 0.53,
+    "why": "Jynxzi clips do 1.7x our usual; no clear premise, may be visual-only; stream is 50h old (other clippers had time)"
+   },
+   "live": {
+    "score": 0.1,
+    "why": "Twitch clip at 44/h"
+   },
+   "script": {
+    "score": 0.6,
+    "why": "draft title: \"Jynxzi: \"Evan Burger\" 😱\"; no captions yet, writing blind"
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-12T22:58:08Z",
+  "council_why": "Trend researcher gives a high score, and Jynxzi's clips have a strong track record of success on the channel, despite the lack of a clear premise. The stream is relatively new, giving it potential for growth.",
+  "post_utc": "2026-11-13 06:00",
+  "post_local": "Fri 01:00 AM ET",
+  "title": "Jynxzi evan burger 🤯",
+  "hook": "EVAN BURGER",
+  "context": "Jynxzi live, evan burger",
+  "take": "Nobody in the room saw this coming.",
+  "summary": "Jynxzi live: evan burger",
+  "tiktok_caption": "Jynxzi in evan burger.",
+  "hashtags": [],
+  "tags": [],
+  "draft": true,
+  "writer": "template",
+  "description": "Jynxzi live, evan burger\n\nFull stream by Jynxzi: https://www.twitch.tv/jynxzi/clip/AmorphousArborealPoxFailFish-5DVagO4VzkEN4X6X\nGo support Jynxzi, all credit to them.\n\n#jynxzi #shorts #ishowspeed #kaicenat #rakai",
+  "key": "2686136916@0",
+  "permission": "fan clipping tolerated; check for a Whop campaign"
+ }
+]
