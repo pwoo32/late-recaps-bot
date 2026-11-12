@@ -1069,8 +1069,8 @@
   "@TheDiaryOfACEO": "UCGq-a57w-aPwyi3pW7XLiHw"
  },
  "review": {
-  "at": "2026-11-12 19:07",
-  "report": "/home/runner/work/late-recaps-bot/late-recaps-bot/reports/review_2026-11-12_1907/report.md",
+  "at": "2026-11-12 21:42",
+  "report": "/home/runner/work/late-recaps-bot/late-recaps-bot/reports/review_2026-11-12_2142/report.md",
   "lessons": {
    "titles": [
     "Creator name first, then a bet or question in plain verbs, and never the result. Add a named guest or celebrity when one exists.",
@@ -2533,5 +2533,8 @@
    "script": 0.772,
    "audience": 0.5
   }
- }
+ },
+ "claimed_streams": [
+  "IkhjzYsvCmw"
+ ]
 }
