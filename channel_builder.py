@@ -223,13 +223,30 @@ def best_length(pb, state=None):
     return (lo + hi) // 2
 
 
-def post_slots(pb, state, n):
-    """UTC hours to post at: the study's best-lift hours, re-weighted by your own results."""
+POST_WITHIN_H = 12  # a day's clips go up within this many hours of the build, while the stream is still fresh
+
+
+def next_at(hour, now):
+    """The next time it's `hour`:00 UTC after now."""
+    when = now.replace(hour=hour, minute=0, second=0, microsecond=0)
+    return when if when > now else when + timedelta(days=1)
+
+
+def post_slots(pb, state, n, now=None, within_h=None):
+    """UTC hours to post at: the study's best-lift hours, re-weighted by your own results. With `within_h`, only
+    hours coming up in the next `within_h` hours count (topped up with the soonest others if too few do), so a
+    one-off hot hour in the study can't hold a clip back most of a day."""
     hours = {int(h): lift for h, lift in pb["top_hours"]}
     for h, w in state["slot_weight"].items():
         hours[int(h)] = hours.get(int(h), 1.0) * w
     if not hours:
         hours = {21: 1.0, 17: 1.0}
+    if within_h:
+        now = now or datetime.now(timezone.utc)
+        ahead = lambda h: (next_at(h, now) - now).total_seconds() / 3600
+        hours.update({h: 1.0 for h in range(24) if h not in hours})  # unscored hours count as average
+        near = {h: w for h, w in hours.items() if ahead(h) <= within_h}
+        hours = near if len(near) >= n else hours
     ranked = sorted(hours, key=hours.get, reverse=True)
     picked = []
     for h in ranked:  # spread posts at least 3 hours apart
@@ -500,8 +517,7 @@ def cmd_daily(args, yt=None, state=None):
         sys.exit(f"No moments found in the last {args.hours}h. Try --hours 168, or add sources in sources.py.")
 
     edits = tuner.recipes(state, len(picks), now.strftime("%Y-%m-%d") + ("spike" if spike else ""))
-    slots = post_slots(pb, state, len(picks))
-    today = (now.astimezone(LOCAL_TZ)).date()
+    slots = post_slots(pb, state, len(picks), now, POST_WITHIN_H)
     queue = []
     for i, m in enumerate(picks):
         recipe = edits[i]
@@ -510,10 +526,7 @@ def cmd_daily(args, yt=None, state=None):
         if spike:
             when = now  # it's blowing up now: post now
         else:
-            h = slots[i % len(slots)]
-            when = datetime.combine(today, datetime.min.time(), tzinfo=timezone.utc).replace(hour=h)
-            if when < now:
-                when += timedelta(days=1)
+            when = next_at(slots[i % len(slots)], now)
         if m["platform"] in ("twitch_clip", "kick_clip"):
             start, end = 0, min(m.get("duration") or length, 60)
         else:
