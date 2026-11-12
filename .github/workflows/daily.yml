@@ -220,7 +220,11 @@ jobs:
         if: steps.mode.outputs.skip != 'true' && steps.mode.outputs.mode == 'daily'
         run: |
           flag=--publish; [ "${{ steps.mode.outputs.post }}" = true ] || flag=
-          python channel_builder.py run $flag --niche streamer --count 1 2>&1 | tee -a builder.log "$RUNNER_TEMP/run.log"; exit ${PIPESTATUS[0]}
+          # memory log: the runner was being killed mid-cut; this shows whether RAM is what runs out
+          (while sleep 60; do free -m | awk 'NR==2{print "[mem] used " $3 " MB of " $2 " MB"}'; done) & mem=$!
+          python channel_builder.py run $flag --niche streamer --count 1 2>&1 | tee -a builder.log "$RUNNER_TEMP/run.log"; rc=${PIPESTATUS[0]}
+          kill $mem 2>/dev/null || true
+          exit $rc
 
       - name: Post the spike clip
         if: steps.spike.outputs.queue != '' && steps.mode.outputs.post == 'true'
