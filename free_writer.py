@@ -86,6 +86,8 @@ def stream_event(title):
     """'Beat Me In a 1v1, Get $1000' -> 'Beat Me In a 1v1, Get $1000'; '🎃AMP HALLOWEEN PARTY🎃' -> 'AMP Halloween Party'."""
     t = _clean(title)
     t = re.split(r"\s[-|]\s", t)[-1] if re.search(r"\s[-|]\s", t) else t   # "FIND ME WIN $250,000 - Going To My Premiere" -> the event
+    if ":" in t and 1 <= len(t.split(":")[-1].split()) <= 4:  # "PLAYING EVERY GTA UNTIL I BEAT IT: GTA 4" -> "GTA 4"
+        t = t.split(":")[-1]
     t = re.sub(r"\b(IRL STREAM|LIVE|STREAM|FULL VOD|VOD)\b", "", t, flags=re.I)
     return _title_case(re.sub(r"\s+", " ", t).strip(" ,.-")) or "Stream"
 
@@ -143,6 +145,9 @@ def spoken_line(transcript, max_words=7):
 def write(clip, src, hot_titles=(), lessons=None):
     """One script for one clip. `clip` has video_title, quotes, transcript, url; `src` is its sources.py entry."""
     short, full = src["short"], src["name"]
+    # "Grand Theft Auto" is a game, not a crime: without this every GTA stream tripped the moderation filter and got
+    # the stock "reacts during a live stream" script (all of Kai Cenat's Nov 2026 GTA marathon clips).
+    clip = dict(clip, video_title=re.sub(r"grand theft auto", "GTA", clip.get("video_title", ""), flags=re.I))
     creator_words = {a.lower() for a in src.get("aliases", [])} | {w.lower() for w in full.split()} | {short.lower()}
     quotes = [_clean(q) for q in clip.get("quotes") or []]
     quotes = [q for q in quotes if len(q.split()) >= 2]
@@ -192,6 +197,8 @@ def write(clip, src, hot_titles=(), lessons=None):
     short_event = re.sub(r"^(?:going to|at|in|my|me|the|a|we|i)\s+(?:(?:my|the|a)\s+)?", "", event, flags=re.I)
     short_event = " ".join(w for w in short_event.split() if w.lower() not in creator_words and w.lower() != "vs")
     short_event = " ".join(short_event.split()[:4]).rstrip(" ,.\"")
+    while short_event.split() and short_event.split()[-1].lower() in STOP | {"until", "while", "before", "after", "unless"}:  # "Can I Return a" -> "Can I Return"
+        short_event = " ".join(short_event.split()[:-1])
     if guest and versus:
         title = f"{short} vs {guest}" + (f" For {money}" if money else "")
     elif guest and line and kind == "question":
@@ -286,18 +293,15 @@ def write(clip, src, hot_titles=(), lessons=None):
                                   + ([topic_tag] if topic_tag else [])
                                   + (["#funny"] if md == "funny" else [])))[:3]
     tags = [t for t in tags if not risky(t)]
-    tiktok_caption = f"{short} in {clip_topic or short_event or event}."
-    if money and versus:
-        tiktok_caption += " Who takes this matchup?"
-    elif guest and versus:
-        tiktok_caption += " Who had the better moment?"
+    import tiktok_caption as ttc  # search-first caption: full name, what happens, topic/guest/game, a question
+    tiktok_caption = ttc.build({**clip, "title": title}, src)[0]
     if risky(" ".join([title, hook, context, summary, tiktok_caption, narrator, payoff])):  # e.g. a risky word in the stream title: say nothing specific
         title, hook = f"{short} {_pick(react, seed)} {emoji}", "WAIT FOR IT"
         context, summary = f"{full} live", f"{full} live."
         tiktok_caption = f"{short} reacts during a live stream."
         narrator, payoff = "", ""
     return {"title": title, "hook": hook, "context": context[:140], "narrator": narrator, "payoff": payoff, "description": summary,
-            "tiktok_caption": tiktok_caption[:180],
+            "tiktok_caption": tiktok_caption[:200],
             "hashtags": hashtags, "tags": tags}
 
 

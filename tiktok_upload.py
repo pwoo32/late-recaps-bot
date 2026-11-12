@@ -116,14 +116,19 @@ def _post(path, access, body):
 
 
 def caption(clip):
-    tags = [t for t in clip.get("hashtags", []) if t.startswith("#")
-            and t.lower() not in {"#shorts", "#fyp", "#viral"}]
-    if not tags:
-        tags = [w for w in clip.get("description", "").split() if w.startswith("#")
-                and w.lower() not in {"#shorts", "#fyp", "#viral"}]
-    tags = list(dict.fromkeys(tags))[:4]
-    copy = clip.get("tiktok_caption") or ". ".join(
-        part for part in (clip.get("title"), clip.get("context") or clip.get("summary")) if part)
+    """Search-first caption (tiktok_caption.py): the creator's full name, what happens, the topic/guest/game, a
+    question for the comments, and 3-5 specific hashtags. A writer's own tiktok_caption is kept when it's a real
+    sentence that names the creator; otherwise it's rebuilt."""
+    import tiktok_caption
+    from sources import SOURCES
+    src = SOURCES.get(clip.get("source")) or {"name": clip.get("creator", ""), "short": clip.get("creator", "")}
+    copy, tags = tiktok_caption.build(clip, src)
+    own = (clip.get("tiktok_caption") or "").strip()
+    own = re.sub(r"(?:\s#\w+)+\s*$", "", own).strip()
+    names = {src.get("name", "").lower(), src.get("short", "").lower()} - {""}
+    if (len(own.split()) >= 7 and any(n in own.lower() for n in names) and not re.search(r"\b(?:in|a|the|of)\.$|reacts during a live stream", own)
+            and src.get("name", "").lower() in own.lower()):
+        copy = own
     return f"{copy} {' '.join(tags)}".strip()[:2200]
 
 

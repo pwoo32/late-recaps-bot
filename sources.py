@@ -94,6 +94,16 @@ SOURCES = {
         "permission": "fan clipping is widespread and tolerated; no official program checked (Nov 2026)",
         "campaign_cpm": None,
     },
+    # Fastest-rising streamer of 2025-26 (animated peanut avatar, Arc Raiders/Tarkov/horror games); a less
+    # saturated clip lane than Speed/Kai, and his deadpan voice lines are very clippable.
+    "theburntpeanut": {
+        "name": "TheBurntPeanut", "short": "Peanut", "niche": "streamer",
+        "twitch": "theburntpeanut",
+        "aliases": ["theburntpeanut", "burnt peanut", "the burnt peanut", "peanut"],
+        "hashtags": ["#theburntpeanut", "#burntpeanut"],
+        "permission": "fan clipping is widespread and tolerated; no official program checked (Nov 2026)",
+        "campaign_cpm": None,
+    },
     "stableronaldo": {
         "name": "Stable Ronaldo", "short": "Ronaldo", "niche": "streamer",
         "twitch": "stableronaldo",

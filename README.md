@@ -245,8 +245,14 @@ Modes:
   (`publish` prints it and saves it in queue.json as `tiktok_caption`), and post. This works before TikTok's audit.
   TikTok allows 5 pending drafts per 24 hours. The builder checks recent tracked draft statuses and pauses at 4
   pending drafts to leave a safety slot. If a status check fails, it pauses until drafts can be checked again.
-  Finish or clear pending drafts in TikTok before retrying. Captions use the generated clip context and relevant
-  hashtags; the builder does not append generic `#fyp` or `#viral` tags.
+  Finish or clear pending drafts in TikTok before retrying.
+- Captions (`tiktok_caption.py`) are written for TikTok search: the creator's full name first (IShowSpeed, not
+  Speed), what happens, the stream/clip topic, any guest named in the stream title, a question for the comments,
+  then 3-5 specific hashtags (creator, guest, game, #twitch/#kick). Never `#fyp`/`#viral`/`#foryou`, which don't help.
+  Example: `IShowSpeed: "Oh I'm Not Letting Him Win After This" | Can I Return a 120 MPH Serve From Serena Williams?
+  🔥 Rate this duo 1-10 #ishowspeed #serenawilliams #tennis #livestream #ishowspeedclips`
+- Clips under 9 seconds don't go to TikTok (they can't hold a viewer, and inbox drafts are capped at 5 a day).
+- The on-screen hook sits 250px from the top so TikTok's "Following | For You" tabs don't cover it.
 - `direct`: posts on its own, with the caption. Until TikTok audits the app, posts are private-only, and the
   TikTok account itself must be private. Apply for the audit from the app's page, then switch modes.
 

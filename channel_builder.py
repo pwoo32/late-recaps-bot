@@ -874,7 +874,8 @@ def caption_chunks(words, size=3):
 
 def write_ass(path, words, hook, context, length, offset=0.0, size=3, payoff=None):
     """Captions: 1-3 word chunks, big with a heavy outline, the word being spoken in yellow; hook pinned top;
-    context line for the first 3.5s."""
+    context line for the first 3.5s. The hook sits 250px down so TikTok's "Following | For You" tabs and the
+    YouTube Shorts top bar don't cover it."""
     head = """[Script Info]
 ScriptType: v4.00+
 PlayResX: 1080
@@ -883,8 +884,8 @@ PlayResY: 1920
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
 Style: Cap,Arial,96,&H00FFFFFF,&H00FFFFFF,&H00000000,&H96000000,-1,0,0,0,100,100,2,0,1,8,4,2,50,50,640,1
-Style: Hook,Arial,74,&H0000E5FF,&H00FFFFFF,&H00000000,&HB4000000,-1,0,0,0,100,100,0,0,3,18,0,8,60,60,150,1
-Style: Ctx,Arial,44,&H00FFFFFF,&H00FFFFFF,&H00000000,&HB4000000,0,0,0,0,100,100,0,0,3,12,0,8,80,80,215,1
+Style: Hook,Arial,74,&H0000E5FF,&H00FFFFFF,&H00000000,&HB4000000,-1,0,0,0,100,100,0,0,3,18,0,8,60,60,250,1
+Style: Ctx,Arial,44,&H00FFFFFF,&H00FFFFFF,&H00000000,&HB4000000,0,0,0,0,100,100,0,0,3,12,0,8,80,80,345,1
 Style: Pay,Arial,66,&H00FFFFFF,&H00FFFFFF,&H00000000,&HB4000000,-1,0,0,0,100,100,0,0,3,16,0,5,90,90,0,1
 
 [Events]
@@ -1597,6 +1598,9 @@ def post_meta(qdir, queue, clips):
         qfile.write_text(json.dumps(queue, indent=1, ensure_ascii=False), encoding="utf-8")
 
 
+TIKTOK_MIN_SECONDS = 9  # streamer clips that spread on TikTok run ~12-34s; under 9s is a fragment, not a moment
+
+
 def post_tiktok(qdir, queue, clips, tt):
     """Send every rendered clip that isn't on TikTok yet (enabled with `tiktok-auth --enable`)."""
     import tiktok_upload
@@ -1616,6 +1620,13 @@ def post_tiktok(qdir, queue, clips, tt):
         # TikTok is an independent destination: a YouTube upload failure or quota
         # hold must not prevent an approved, rendered clip from reaching TikTok.
         if c.get("tiktok_id") or not path.exists():
+            continue
+        try:
+            secs = audio_seconds(path)
+        except (OSError, ValueError):
+            secs = None
+        if secs and secs < TIKTOK_MIN_SECONDS:  # a 5s clip can't hold a viewer or earn a rewatch; save the draft slot
+            print(f"  TikTok skipped for [{c['id']}]: only {secs:.0f}s long (TikTok clips need {TIKTOK_MIN_SECONDS}s+).")
             continue
         if inbox and pending >= tiktok_upload.MAX_PENDING_INBOX_DRAFTS:
             print(f"  TikTok inbox paused: safety limit is {tiktok_upload.MAX_PENDING_INBOX_DRAFTS} pending drafts; finish some before sending more.")
