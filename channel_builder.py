@@ -376,7 +376,10 @@ def twitch_candidates(key, src, since, now, h=None):
     for c in clips:
         created = datetime.fromisoformat(c["created_at"].replace("Z", "+00:00"))
         vph = LM.clip_velocity(c, now)
-        score = round(math.log2(2 + c["view_count"]) * 1.5 * (1 + min(vph / 20000, 1)) * TWITCH_BOOST, 2)
+        # Speed matters most: a clip gaining views fast right now is the one most likely to go viral again for us
+        # (up to 4x for 60k+ views/hour), and a streamer nobody is clipping yet gets a bonus (trending.crowd_factor).
+        score = round(math.log2(2 + c["view_count"]) * 1.5 * (1 + min(vph / 20000, 3)) * TWITCH_BOOST
+                      * src.get("crowd_factor", 1.0), 2)
         common = dict(score=score, comments=0, likes=c["view_count"], quotes=[c["title"]], source=key,
                       video_title=c["title"], video_views=c["view_count"], clip_vph=round(vph),
                       age_h=round((now - created).total_seconds() / 3600, 1), signals=["twitch clip"], was_live=True)
@@ -488,8 +491,18 @@ def cmd_daily(args, yt=None, state=None):
     except Exception as e:  # bad keys: fall back to reading the public clips pages
         print(f"Twitch API login failed ({type(e).__name__}); reading public clips pages instead")
         th = None
+    hot_now = {}
+    if niche == "streamer":  # whoever is going off on Twitch/Kick right now, not just the fixed list (trending.py)
+        import trending
+        print("Looking for streamers going viral right now on Twitch and Kick...")
+        hot_now = trending.discover({k: v for k, v in SOURCES.items() if not v.get("trending")},
+                                    videos.get(niche, []), th, now)
+        for k, v in hot_now.items():
+            SOURCES[k] = v
     for key, src in SOURCES.items():
         if src["niche"] != niche or "blocked" in src["permission"].lower():
+            continue
+        if src.get("trending") and key not in hot_now:  # stopped trending: no longer scanned
             continue
         print(f"[{key}] reading recent streams/videos")
         try:

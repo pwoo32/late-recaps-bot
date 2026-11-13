@@ -132,3 +132,18 @@ SOURCES = {
         "campaign_cpm": None,
     },
 }
+
+
+# Streamers the trending scan (trending.py) found going off on Twitch/Kick. They're added on top of the list above
+# (never replacing a hand-written entry), so every agent can pick, write about and review them. Old ones stay listed so
+# reviews of their past clips still work; the daily run only scans the ones trending in the last few days.
+def _load_trending():
+    try:
+        import trending
+        return trending.load()
+    except Exception:  # a missing or broken file never stops the bot
+        return {}
+
+
+for _k, _v in _load_trending().items():
+    SOURCES.setdefault(_k, _v)

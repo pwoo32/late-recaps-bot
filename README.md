@@ -95,6 +95,14 @@ Where moments come from (`live_moments.py`, all free, no YouTube quota):
 - the daily trend scan boosts creators whose clip demand jumped since the last scan (and allows them 3 clips that
   day) and moments that match words in their fastest-growing clips this week.
 
+**Trending streamers** (`trending.py`): besides the fixed list in `sources.py`, each daily run looks for whoever is
+going off right now: the day's fastest-gaining Twitch clips in Just Chatting and the top live categories (any English
+streamer; needs the Twitch secrets) and the top clips of a watchlist of big Kick channels. Streamers are scored by
+how fast their best clip is gaining views, times a bonus when few channels in the trend scan clip them yet (x1.3 for
+nobody, down to x0.7 for a crowded name). Up to 6 a day are added to `reports/builder/trending_sources.json`, which
+`sources.py` loads, and they're scanned while they keep trending (3 days). Mark one `blocked` in `sources.py` to keep
+them out. Clip speed now counts for up to 4x in ranking (60k+ views/hour), so the moment spreading fastest wins.
+
 **Clip council** (`council.py`): before anything is picked, every agent weighs in on the top ~16 candidate moments
 and scores each 0-1 with a one-line reason: the trend researcher (is the creator hot and rising, does it match what's
 viral), the channel study (do top channels break out with this creator), the analytics reviewer (how this creator does
