@@ -2141,3 +2141,81 @@ Title/description: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/bui
   held, not posted: originality: template narration ("sets up the moment"); YouTube counts template voice-overs as adding nothing; originality: the script came from the fill-in writer, not a model, so the narration is a template (set GEMINI_API_KEY or GROQ_API_KEY, both free)
   TikTok: [1] draft in your TikTok inbox. Open the notification, paste this caption, post:
     Jynxzi: "Can You Go on the Living Room?" | Finding the pirate token 😳 Was this real? #jynxzi #livestream #jynxziclips #streamerclips #findingpiratetoken
+[0;93m2026-11-13 18:21:54.402011807 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+Done. Report: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/track_2026-11-13_1810.md  (quota used: 2)
+Looking for streamers going viral right now on Twitch and Kick...
+[ishowspeed] reading recent streams/videos
+  reading the room on "Can I Return a 120 MPH Serve From Serena Williams?" (chat replay, most replayed)
+    1 chat spikes
+[kai_cenat] reading recent streams/videos
+  reading the room on "🎮PLAYING EVERY GTA UNTIL I BEAT IT: Grand Theft Auto 5🎮" (chat replay, most replayed)
+    5 chat spikes
+  reading the room on "🎮PLAYING EVERY GTA UNTIL I BEAT IT: Grand Theft Auto 5🎮" (chat replay, most replayed)
+    6 chat spikes
+  40 Twitch clips from kaicenat
+[jynxzi] reading recent streams/videos
+  reading the room on "STREAMER AWARDS 2026" (chat replay, most replayed)
+  reading the room on "FINDING THE PIRATE TOKEN" (chat replay, most replayed)
+  40 Twitch clips from jynxzi
+[adin_ross] reading recent streams/videos
+  39 Kick clips from adinross
+[n3on] reading recent streams/videos
+  36 Kick clips from n3on
+[caseoh] reading recent streams/videos
+  40 Twitch clips from caseoh_
+[xqc] reading recent streams/videos
+  40 Twitch clips from xqc
+  34 Kick clips from xqc
+[lacy] reading recent streams/videos
+  40 Twitch clips from lacy
+[plaqueboymax] reading recent streams/videos
+  40 Twitch clips from plaqueboymax
+[theburntpeanut] reading recent streams/videos
+  40 Twitch clips from theburntpeanut
+[stableronaldo] reading recent streams/videos
+  0 Twitch clips from stableronaldo
+Clip council: 16 candidates, every agent votes...
+  picked Jynxzi at 0:00 (council 0.48): Jynxzi's clips have the highest trend researcher score, strong analytics reviewer score, and are from a creator who is c
+Writing scripts...
+  [1] Jynxzi at 0:00: writing from comments
+Gemini models: gemini-flash-latest, gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash
+  Gemini gemini-flash-latest: HTTP 503
+  Gemini gemini-flash-latest: HTTP 503
+  Gemini gemini-3.8-flash: HTTP 503
+  Gemini gemini-3.8-flash: HTTP 429
+  Gemini gemini-3.7-flash: HTTP 429
+  Gemini gemini-3.7-flash: HTTP 503
+Gemini answered with gemini-3.6-flash.
+Scripts written by gemini.
+  [1] model title "Jynxzi Reacts To Emily Interviewing Ron 😭😂" isn't backed by what's said (too little to go on); using the free writer
+Done. Queue: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-11-13_1810/queue.md  (quota used: 37)
+[1] Ron Hypes Up Jynxzi 🔥
+Downloading Twitch clip https://www.twitch.tv/jynxzi/clip/BumblingOpenRavenYee-uKlI0oberl1bvOFe
+Transcribing with whisper small.en (first run downloads the model)...
+Re-writing the script from what's actually said in the clip...
+  [1] Jynxzi at 0:00: writing from transcript (165 words)
+  Gemini gemini-flash-latest: HTTP 503
+  Gemini gemini-flash-latest: HTTP 503
+  Gemini gemini-3.8-flash: HTTP 503
+  Gemini gemini-3.8-flash: HTTP 503
+  Gemini gemini-3.7-flash: HTTP 503
+  Gemini gemini-3.7-flash: HTTP 429
+Gemini answered with gemini-3.6-flash.
+Scripts written by gemini.
+  [1] model script uses a word moderation flags ("dead"); using the free writer
+Cut 9.0s of dead air (6 jump cuts).
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files:  80%|████████  | 8/10 [00:13<00:03,  1.69s/it]Fetching 10 files:  90%|█████████ | 9/10 [00:21<00:02,  2.57s/it]Fetching 10 files: 100%|██████████| 10/10 [00:21<00:00,  2.21s/it]Fetching 10 files: 100%|██████████| 10/10 [00:21<00:00,  2.16s/it]
+/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/diffusers/models/lora.py:393: FutureWarning: `LoRACompatibleLinear` is deprecated and will be removed in version 1.0.0. Use of `LoRACompatibleLinear` is deprecated. Please switch to PEFT backend by installing PEFT: `pip install peft`.
+  deprecate("LoRACompatibleLinear", "1.0.0", deprecation_message)
+  0%|          | 0/1000 [00:00<?, ?it/s]  0%|          | 2/1000 [00:00<01:29, 11.10it/s]  0%|          | 4/1000 [00:00<01:22, 12.04it/s]  1%|          | 6/1000 [00:00<01:19, 12.48it/s]  1%|          | 8/1000 [00:00<01:18, 12.70it/s]  1%|          | 10/1000 [00:00<01:17, 12.76it/s]  1%|          | 12/1000 [00:00<01:16, 12.87it/s]  1%|▏         | 14/1000 [00:01<01:16, 12.96it/s]  2%|▏         | 16/1000 [00:01<01:15, 13.00it/s]  2%|▏         | 18/1000 [00:01<01:15, 12.93it/s]  2%|▏         | 20/1000 [00:01<01:15, 12.91it/s]  2%|▏         | 22/1000 [00:01<01:15, 12.96it/s]  2%|▏         | 24/1000 [00:01<01:15, 12.97it/s]  3%|▎         | 26/1000 [00:02<01:15, 12.97it/s]  3%|▎         | 28/1000 [00:02<01:15, 12.93it/s]  3%|▎         | 30/1000 [00:02<01:16, 12.68it/s]  3%|▎         | 32/1000 [00:02<01:16, 12.73it/s]  3%|▎         | 34/1000 [00:02<01:18, 12.23it/s]  4%|▎         | 36/1000 [00:02<01:21, 11.87it/s]  4%|▍         | 38/1000 [00:03<01:22, 11.61it/s]  4%|▍         | 40/1000 [00:03<01:23, 11.45it/s]  4%|▍         | 42/1000 [00:03<01:24, 11.34it/s]  4%|▍         | 44/1000 [00:03<01:23, 11.44it/s]  5%|▍         | 46/1000 [00:03<01:25, 11.22it/s]  5%|▍         | 48/1000 [00:03<01:25, 11.13it/s]  5%|▌         | 50/1000 [00:04<01:26, 11.02it/s]  5%|▌         | 52/1000 [00:04<01:22, 11.50it/s]  5%|▌         | 54/1000 [00:04<01:21, 11.58it/s]  6%|▌         | 56/1000 [00:04<01:19, 11.87it/s]  6%|▌         | 58/1000 [00:04<01:18, 12.06it/s]  6%|▌         | 60/1000 [00:04<01:17, 12.21it/s]  6%|▌         | 62/1000 [00:05<01:16, 12.29it/s]  6%|▋         | 64/1000 [00:05<01:15, 12.32it/s]  7%|▋         | 66/1000 [00:05<01:16, 12.21it/s]  7%|▋         | 68/1000 [00:05<01:15, 12.39it/s]  7%|▋         | 70/1000 [00:05<01:14, 12.52it/s]  7%|▋         | 72/1000 [00:05<01:13, 12.56it/s]  7%|▋         | 74/1000 [00:06<01:13, 12.58it/s]  8%|▊         | 76/1000 [00:06<01:13, 12.52it/s]  8%|▊         | 78/1000 [00:06<01:13, 12.62it/s]  8%|▊         | 80/1000 [00:06<01:13, 12.57it/s]  8%|▊         | 82/1000 [00:06<01:13, 12.55it/s]  8%|▊         | 84/1000 [00:06<01:13, 12.47it/s]  9%|▊         | 86/1000 [00:07<01:13, 12.48it/s]  9%|▉         | 88/1000 [00:07<01:12, 12.57it/s]  9%|▉         | 90/1000 [00:07<01:12, 12.64it/s]  9%|▉         | 92/1000 [00:07<01:12, 12.48it/s]  9%|▉         | 94/1000 [00:07<01:15, 12.07it/s] 10%|▉         | 96/1000 [00:07<01:14, 12.08it/s] 10%|▉         | 98/1000 [00:07<01:13, 12.22it/s] 10%|█         | 100/1000 [00:08<01:14, 12.02it/s] 10%|█         | 102/1000 [00:08<01:14, 12.00it/s] 10%|█         | 104/1000 [00:08<01:16, 11.66it/s] 11%|█         | 106/1000 [00:08<01:15, 11.88it/s] 11%|█         | 108/1000 [00:08<01:13, 12.08it/s] 11%|█         | 110/1000 [00:08<01:12, 12.19it/s] 11%|█         | 112/1000 [00:09<01:12, 12.32it/s] 11%|█▏        | 114/1000 [00:09<01:11, 12.42it/s] 12%|█▏        | 116/1000 [00:09<01:10, 12.45it/s] 12%|█▏        | 118/1000 [00:09<01:10, 12.48it/s] 12%|█▏        | 120/1000 [00:09<01:10, 12.50it/s] 12%|█▏        | 122/1000 [00:09<01:09, 12.58it/s] 12%|█▏        | 124/1000 [00:10<01:09, 12.58it/s] 13%|█▎        | 126/1000 [00:10<01:09, 12.50it/s] 13%|█▎        | 128/1000 [00:10<01:10, 12.44it/s] 13%|█▎        | 130/1000 [00:10<01:10, 12.42it/s] 13%|█▎        | 132/1000 [00:10<01:09, 12.45it/s] 13%|█▎        | 134/1000 [00:10<01:09, 12.42it/s] 14%|█▎        | 136/1000 [00:11<01:09, 12.48it/s] 14%|█▍        | 138/1000 [00:11<01:09, 12.47it/s] 14%|█▍        | 139/1000 [00:11<01:10, 12.20it/s]
+S3 Token -> Mel Inference...
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:02<00:02,  2.45s/it]100%|██████████| 2/2 [00:04<00:00,  2.45s/it]100%|██████████| 2/2 [00:04<00:00,  2.45s/it]
+  0%|          | 0/1000 [00:00<?, ?it/s]  0%|          | 2/1000 [00:00<01:19, 12.52it/s]  0%|          | 4/1000 [00:00<01:19, 12.50it/s]  1%|          | 6/1000 [00:00<01:18, 12.65it/s]  1%|          | 8/1000 [00:00<01:19, 12.56it/s]  1%|          | 10/1000 [00:00<01:19, 12.49it/s]  1%|          | 12/1000 [00:00<01:19, 12.41it/s]  1%|▏         | 14/1000 [00:01<01:19, 12.38it/s]  2%|▏         | 16/1000 [00:01<01:18, 12.56it/s]  2%|▏         | 18/1000 [00:01<01:17, 12.69it/s]  2%|▏         | 20/1000 [00:01<01:18, 12.54it/s]  2%|▏         | 22/1000 [00:01<01:16, 12.70it/s]  2%|▏         | 24/1000 [00:01<01:17, 12.63it/s]  3%|▎         | 26/1000 [00:02<01:16, 12.81it/s]  3%|▎         | 28/1000 [00:02<01:15, 12.87it/s]  3%|▎         | 30/1000 [00:02<01:14, 12.94it/s]  3%|▎         | 32/1000 [00:02<01:14, 13.00it/s]  3%|▎         | 34/1000 [00:02<01:14, 13.00it/s]  4%|▎         | 36/1000 [00:02<01:14, 12.93it/s]  4%|▍         | 38/1000 [00:02<01:13, 13.03it/s]  4%|▍         | 40/1000 [00:03<01:13, 13.10it/s]  4%|▍         | 42/1000 [00:03<01:13, 13.08it/s]  4%|▍         | 44/1000 [00:03<01:13, 13.07it/s]  5%|▍         | 46/1000 [00:03<01:13, 13.06it/s]  5%|▍         | 48/1000 [00:03<01:13, 13.00it/s]  5%|▌         | 50/1000 [00:03<01:13, 12.98it/s]  5%|▌         | 52/1000 [00:04<01:13, 12.93it/s]  5%|▌         | 54/1000 [00:04<01:13, 12.91it/s]  6%|▌         | 56/1000 [00:04<01:13, 12.88it/s]  6%|▌         | 58/1000 [00:04<01:12, 12.97it/s]  6%|▌         | 60/1000 [00:04<01:12, 12.96it/s]  6%|▌         | 62/1000 [00:04<01:12, 12.92it/s]  6%|▋         | 64/1000 [00:04<01:12, 12.87it/s]  7%|▋         | 66/1000 [00:05<01:12, 12.86it/s]  7%|▋         | 68/1000 [00:05<01:12, 12.89it/s]  7%|▋         | 70/1000 [00:05<01:12, 12.84it/s]  7%|▋         | 72/1000 [00:05<01:12, 12.84it/s]  7%|▋         | 74/1000 [00:05<01:12, 12.75it/s]  8%|▊         | 76/1000 [00:05<01:12, 12.67it/s]  8%|▊         | 78/1000 [00:06<01:12, 12.76it/s]  8%|▊         | 80/1000 [00:06<01:11, 12.79it/s]  8%|▊         | 82/1000 [00:06<01:11, 12.87it/s]  8%|▊         | 84/1000 [00:06<01:11, 12.82it/s]  9%|▊         | 86/1000 [00:06<01:11, 12.85it/s]  9%|▉         | 88/1000 [00:06<01:11, 12.77it/s]  9%|▉         | 90/1000 [00:07<01:11, 12.68it/s]  9%|▉         | 92/1000 [00:07<01:11, 12.63it/s]  9%|▉         | 94/1000 [00:07<01:11, 12.60it/s]  9%|▉         | 94/1000 [00:07<01:11, 12.67it/s]
+S3 Token -> Mel Inference...
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:02<00:02,  2.11s/it]100%|██████████| 2/2 [00:04<00:00,  2.09s/it]100%|██████████| 2/2 [00:04<00:00,  2.09s/it]
+Framing on the face at 10% across.
+Done. Video: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-11-13_1810/clips/01_2480095367_0.mp4
+Title/description: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-11-13_1810/clips/01_2480095367_0.txt
+  held, not posted: originality: template narration ("sets up the moment"); YouTube counts template voice-overs as adding nothing; originality: the script came from the fill-in writer, not a model, so the narration is a template (set GEMINI_API_KEY or GROQ_API_KEY, both free)
+  TikTok: [1] draft in your TikTok inbox. Open the notification, paste this caption, post:
+    Jynxzi Asks Ron "Am I Open a Beer Pump?" | reacts to Emily's interview with Ron 🔥 Is this the cleanest one yet? #jynxzi #twitch #jynxziclips #streamerclips #ron
