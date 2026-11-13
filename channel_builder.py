@@ -1391,6 +1391,10 @@ def youtube_uploader():
     return build("youtube", "v3", credentials=creds, cache_discovery=False)
 
 
+# Every upload goes to the Late Recaps channel and nowhere else; publish refuses a sign-in for any other channel.
+CHANNEL_ID = os.environ.get("YOUTUBE_CHANNEL_ID", "UCbK9EejOk5UVzI_l8F3f8kA")
+
+
 def upload_clip(api, path, clip):
     from googleapiclient.http import MediaFileUpload
     src = SOURCES.get(clip["source"], {})
@@ -1547,6 +1551,11 @@ def cmd_publish(args):
         hold(qdir, problems)
         sys.exit(1)
     api = youtube_uploader()
+    me = api.channels().list(part="id,snippet", mine=True).execute().get("items", [])  # 1 quota unit
+    if not me or me[0]["id"] != CHANNEL_ID:
+        hold(qdir, [f"youtube: the sign-in uploads to {me[0]['snippet']['title'] + ' (' + me[0]['id'] + ')' if me else 'no channel'}, "
+                    f"not Late Recaps ({CHANNEL_ID}). Sign in again with the Late Recaps account (`channel_builder.py auth`)."])
+        sys.exit(1)
     for c in todo:
         print(f"[{c['id']}] {c['title']}")
         try:

@@ -64,6 +64,12 @@ python script_agent.py --writer gemini --dry-run                  # re-write the
 On Windows, `run_daily.cmd` and `run_activity.cmd` are for Task Scheduler. They read keys from user environment
 variables. The cloud workflow is the main path, so don't run both or the channel posts twice.
 
+## Channel
+
+Everything posts to the **Late Recaps** YouTube channel (`UCbK9EejOk5UVzI_l8F3f8kA`) and its linked TikTok,
+Instagram and Facebook accounts. Never create, switch to or upload to another channel. `publish` checks the
+signed-in channel before any upload and holds the run if it isn't Late Recaps (`CHANNEL_ID` in `channel_builder.py`).
+
 ## Secrets (GitHub > Settings > Secrets and variables > Actions)
 
 | Secret | Needed for |
