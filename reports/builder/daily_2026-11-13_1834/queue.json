@@ -1,0 +1,110 @@
+[
+ {
+  "id": 1,
+  "source": "jynxzi",
+  "creator": "Jynxzi",
+  "platform": "youtube",
+  "video_id": "2H3Dq2N0mv8",
+  "video_title": "STREAMER AWARDS 2026",
+  "url": "https://www.youtube.com/watch?v=2H3Dq2N0mv8&t=33240s",
+  "moment": "9:14:00",
+  "start": 33220,
+  "end": 33250,
+  "rank": 24.49,
+  "signal": "5 timestamp comments, 15 likes",
+  "signals": [
+   "comments"
+  ],
+  "quotes": [
+   "wow, I didn't expect that, he just used Indonesian",
+   "bro speak tung tung sahurrr language",
+   "AHHHHH almost almost"
+  ],
+  "stream_age_h": 13.2,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": null
+  },
+  "council": {
+   "trend": 1.0,
+   "study": 0.25,
+   "analytics": 0.66,
+   "live": 0.3,
+   "script": 0.35,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 1.0,
+    "why": "Jynxzi clips pull 10,421 views/hour this week, up 483% since the last scan; matches what's viral now: streamer"
+   },
+   "study": {
+    "score": 0.25,
+    "why": "top channels rarely break out with Jynxzi"
+   },
+   "analytics": {
+    "score": 0.66,
+    "why": "Jynxzi clips do 1.7x our usual; no clear premise, may be visual-only; stream is 13h old"
+   },
+   "live": {
+    "score": 0.3,
+    "why": "5 timestamp comments, 15 likes"
+   },
+   "script": {
+    "score": 0.35,
+    "why": "draft title: \"Jynxzi At Streamer Awards 2026 🔥\"; no captions yet, writing blind"
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-13T18:34:45Z",
+  "council_why": "Jynxzi's clips are currently the most viral, with a significant increase in views and a strong trend towards streamer content. The live reaction was also positive, with a 3.5x chat engagement, and the clip has a clear, engaging premise.",
+  "post_utc": "2026-11-13 22:00",
+  "post_local": "Fri 05:00 PM ET",
+  "title": "Jynxzi At Streamer Awards 2026 🔥",
+  "hook": "WATCH THE LAST SECOND",
+  "context": "Jynxzi live: Streamer Awards 2026",
+  "take": "",
+  "summary": "Jynxzi during \"STREAMER AWARDS 2026\". wow, I didn't expect that, he just used Indonesian.",
+  "tiktok_caption": "Jynxzi At Streamer Awards 2026 🔥 Is this the cleanest one yet? #jynxzi #livestream #jynxziclips #streamerclips #streamerawards2026",
+  "hashtags": [
+   "#jynxzi",
+   "#streamerawards2026"
+  ],
+  "tags": [
+   "jynxzi",
+   "streamer",
+   "awards",
+   "2026",
+   "jynxzi clips",
+   "streamer clips"
+  ],
+  "draft": false,
+  "writer": "free",
+  "description": "Jynxzi during \"STREAMER AWARDS 2026\". wow, I didn't expect that, he just used Indonesian.\n\nFull stream by Jynxzi: https://www.youtube.com/watch?v=2H3Dq2N0mv8&t=33240s\nGo support Jynxzi, all credit to them.\n\n#jynxzi #streamerawards2026 #shorts",
+  "key": "2H3Dq2N0mv8@1108",
+  "permission": "fan clipping tolerated; check for a Whop campaign",
+  "payoff": "Best moment of Jynxzi's Streamer Awards 2026 so far, or not even close?",
+  "script_source": "transcript",
+  "upload_tags": [
+   "jynxzi",
+   "streamer",
+   "awards",
+   "2026",
+   "jynxzi clips",
+   "streamer clips",
+   "shorts"
+  ],
+  "held": "script agent: no take",
+  "tiktok_id": "v_inbox_file~v2.7707730369008977933"
+ }
+]
