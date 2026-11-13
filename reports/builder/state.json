@@ -1162,8 +1162,8 @@
   "@TheDiaryOfACEO": "UCGq-a57w-aPwyi3pW7XLiHw"
  },
  "review": {
-  "at": "2026-11-13 00:13",
-  "report": "/home/runner/work/late-recaps-bot/late-recaps-bot/reports/review_2026-11-13_0013/report.md",
+  "at": "2026-11-13 17:29",
+  "report": "/home/runner/work/late-recaps-bot/late-recaps-bot/reports/review_2026-11-13_1729/report.md",
   "lessons": {
    "titles": [
     "Creator name first, then a bet or question in plain verbs, and never the result. Add a named guest or celebrity when one exists.",
@@ -1187,7 +1187,14 @@
     "Confirm that scheduled clips actually go public. After 48h, judge on 3s retention and Shorts-feed share, and check Studio for limits or duplicate-content flags."
    ]
   },
-  "source_score": {},
+  "source_score": {
+   "jynxzi": 0.84,
+   "caseoh": 0.96,
+   "stableronaldo": 0.96,
+   "ishowspeed": 0.58,
+   "kai_cenat": 0.64,
+   "adin_ross": 0.83
+  },
   "length_hint": 22,
   "clips": [
    {
@@ -1200,8 +1207,8 @@
    {
     "title": "Jynxzi Didn't See This Coming At Biggest Announcement Ever \ud83d\ude31",
     "views": 22,
-    "avg_viewed": null,
-    "stayed": null,
+    "avg_viewed": 64,
+    "stayed": 0.3,
     "verdict": null
    },
    {
@@ -1228,15 +1235,15 @@
    {
     "title": "CaseOh: \"Crazy Viewer\" \ud83d\ude2d",
     "views": 17,
-    "avg_viewed": null,
-    "stayed": null,
+    "avg_viewed": 69.68,
+    "stayed": 0.47058823529411764,
     "verdict": null
    },
    {
     "title": "Ronaldo: \"Laiys. Says Word\" \ud83d\ude31",
     "views": 28,
-    "avg_viewed": null,
-    "stayed": null,
+    "avg_viewed": 70.69,
+    "stayed": 0.5384615384615384,
     "verdict": null
    },
    {
@@ -1249,36 +1256,36 @@
    {
     "title": "Speed And Derek Jeter Go Crazy \ud83d\udd25",
     "views": 2,
-    "avg_viewed": null,
-    "stayed": null,
+    "avg_viewed": 0,
+    "stayed": 0.0,
     "verdict": null
    },
    {
     "title": "Speed And Derek Jeter Can't Believe It \ud83d\udd25",
     "views": 20,
-    "avg_viewed": null,
-    "stayed": null,
+    "avg_viewed": 65.39,
+    "stayed": 0.5,
     "verdict": null
    },
    {
     "title": "Kai Cenat Is Left Speechless At Was Shook From Ai \ud83d\ude31",
     "views": 1,
-    "avg_viewed": null,
-    "stayed": null,
+    "avg_viewed": 0,
+    "stayed": 0.0,
     "verdict": null
    },
    {
     "title": "Jynxzi Can't Believe What Just Happened \ud83d\ude2d",
     "views": 2,
-    "avg_viewed": null,
-    "stayed": null,
+    "avg_viewed": 144.48,
+    "stayed": 0.5,
     "verdict": null
    },
    {
     "title": "Jynxzi: \"What Is It?\" \ud83d\udd25",
-    "views": 32,
-    "avg_viewed": null,
-    "stayed": null,
+    "views": 31,
+    "avg_viewed": 65.44,
+    "stayed": 0.3225806451612903,
     "verdict": null
    },
    {
@@ -1298,15 +1305,15 @@
    {
     "title": "Kai Cenat Can't Believe Chat Failed Again \ud83d\ude2d",
     "views": 1,
-    "avg_viewed": null,
-    "stayed": null,
+    "avg_viewed": 0,
+    "stayed": 0.0,
     "verdict": null
    },
    {
     "title": "Jynxzi: \"Chat What's My Kd?\" \ud83d\udd25",
     "views": 1,
-    "avg_viewed": null,
-    "stayed": null,
+    "avg_viewed": 0,
+    "stayed": 0.0,
     "verdict": null
    },
    {
@@ -1319,15 +1326,15 @@
    {
     "title": "Speed Can't Believe Vinny Just Robbed His Uncle's Store \ud83d\ude2d",
     "views": 2,
-    "avg_viewed": null,
-    "stayed": null,
+    "avg_viewed": 30.870000000000005,
+    "stayed": 1.0,
     "verdict": null
    },
    {
     "title": "Jynxzi Plays For $1000 And Goes Off \ud83d\udd25",
     "views": 2,
-    "avg_viewed": null,
-    "stayed": null,
+    "avg_viewed": 112.00000000000001,
+    "stayed": 0.5,
     "verdict": null
    }
   ]

@@ -98,3 +98,5 @@ Traceback (most recent call last):
   File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/json/__init__.py", line 335, in loads
     raise JSONDecodeError("Unexpected UTF-8 BOM (decode using utf-8-sig)",
 json.decoder.JSONDecodeError: Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)
+Copyright claims on clips from 1 stream(s); the builder won't clip those streams again.
+Done. Report: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/review_2026-11-13_1729/report.md
