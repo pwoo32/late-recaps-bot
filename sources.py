@@ -98,6 +98,18 @@ SOURCES = {
         "permission": "fan clipping is widespread and tolerated; no official program checked (Nov 2026)",
         "campaign_cpm": None,
     },
+    # Fastest-rising streamer of 2025-26 (animated peanut avatar, ARC Raiders/Tarkov, often with Cloakzy/Summit1g).
+    # Less saturated than Speed/Kai: in our Nov 2026 trend scans, Shorts of him from tiny channels (448 and ~10k subs)
+    # pulled 22k-34k views each, while Speed and Kai clips had 34-36 competing channels per scan.
+    "theburntpeanut": {
+        "name": "TheBurntPeanut", "short": "Peanut", "niche": "streamer",
+        "twitch": "theburntpeanut",
+        "layout": "crop43",   # an animated peanut avatar, not a face: face tracking would just centre-crop the game
+        "aliases": ["theburntpeanut", "burnt peanut", "the burnt peanut", "peanut"],
+        "hashtags": ["#theburntpeanut", "#burntpeanut"],
+        "permission": "fan clipping is widespread and tolerated; no official program checked (Nov 2026)",
+        "campaign_cpm": None,
+    },
     "stableronaldo": {
         "name": "Stable Ronaldo", "short": "Ronaldo", "niche": "streamer",
         "twitch": "stableronaldo",
@@ -124,3 +136,18 @@ SOURCES = {
         "campaign_cpm": None,
     },
 }
+
+
+# Streamers the trending scan (trending.py) found going off on Twitch/Kick. They're added on top of the list above
+# (never replacing a hand-written entry), so every agent can pick, write about and review them. Old ones stay listed so
+# reviews of their past clips still work; the daily run only scans the ones trending in the last few days.
+def _load_trending():
+    try:
+        import trending
+        return trending.load()
+    except Exception:  # a missing or broken file never stops the bot
+        return {}
+
+
+for _k, _v in _load_trending().items():
+    SOURCES.setdefault(_k, _v)

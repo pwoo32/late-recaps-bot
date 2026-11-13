@@ -380,7 +380,9 @@ def twitch_candidates(key, src, since, now, h=None):
                 continue
         created = datetime.fromisoformat(c["created_at"].replace("Z", "+00:00"))
         vph = LM.clip_velocity(c, now)
-        score = round(math.log2(2 + c["view_count"]) * 1.5 * (1 + min(vph / 20000, 1)) * TWITCH_BOOST, 2)
+        # Speed matters most: a clip gaining views fast right now is the one most likely to go viral again for us
+        # (up to 4x for 60k+ views/hour). How crowded the streamer is gets applied in rank_moments ("crowd").
+        score = round(math.log2(2 + c["view_count"]) * 1.5 * (1 + min(vph / 20000, 3)) * TWITCH_BOOST, 2)
         common = dict(score=score, comments=0, likes=c["view_count"], quotes=[c["title"]], source=key,
                       video_title=c["title"], video_views=c["view_count"], clip_vph=round(vph),
                       age_h=round((now - created).total_seconds() / 3600, 1), signals=["twitch clip"], was_live=True)
@@ -495,8 +497,18 @@ def cmd_daily(args, yt=None, state=None):
     except Exception as e:  # bad keys: fall back to reading the public clips pages
         print(f"Twitch API login failed ({type(e).__name__}); reading public clips pages instead")
         th = None
+    hot_now = {}
+    if niche == "streamer":  # whoever is going off on Twitch/Kick right now, not just the fixed list (trending.py)
+        import trending
+        print("Looking for streamers going viral right now on Twitch and Kick...")
+        hot_now = trending.discover({k: v for k, v in SOURCES.items() if not v.get("trending")},
+                                    videos.get(niche, []), th, now)
+        for k, v in hot_now.items():
+            SOURCES[k] = v
     for key, src in SOURCES.items():
         if src["niche"] != niche or "blocked" in src["permission"].lower():
+            continue
+        if src.get("trending") and key not in hot_now:  # stopped trending: no longer scanned
             continue
         print(f"[{key}] reading recent streams/videos")
         try:
@@ -881,7 +893,8 @@ def caption_chunks(words, size=3):
 
 def write_ass(path, words, hook, context, length, offset=0.0, size=3, payoff=None):
     """Captions: 1-3 word chunks, big with a heavy outline, the word being spoken in yellow; hook pinned top;
-    context line for the first 3.5s."""
+    context line for the first 3.5s. The hook sits 250px down so TikTok's "Following | For You" tabs and the
+    YouTube Shorts top bar don't cover it."""
     head = """[Script Info]
 ScriptType: v4.00+
 PlayResX: 1080
@@ -890,8 +903,8 @@ PlayResY: 1920
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
 Style: Cap,Arial,96,&H00FFFFFF,&H00FFFFFF,&H00000000,&H96000000,-1,0,0,0,100,100,2,0,1,8,4,2,50,50,640,1
-Style: Hook,Arial,74,&H0000E5FF,&H00FFFFFF,&H00000000,&HB4000000,-1,0,0,0,100,100,0,0,3,18,0,8,60,60,150,1
-Style: Ctx,Arial,44,&H00FFFFFF,&H00FFFFFF,&H00000000,&HB4000000,0,0,0,0,100,100,0,0,3,12,0,8,80,80,215,1
+Style: Hook,Arial,74,&H0000E5FF,&H00FFFFFF,&H00000000,&HB4000000,-1,0,0,0,100,100,0,0,3,18,0,8,60,60,250,1
+Style: Ctx,Arial,44,&H00FFFFFF,&H00FFFFFF,&H00000000,&HB4000000,0,0,0,0,100,100,0,0,3,12,0,8,80,80,345,1
 Style: Pay,Arial,66,&H00FFFFFF,&H00FFFFFF,&H00000000,&HB4000000,-1,0,0,0,100,100,0,0,3,16,0,5,90,90,0,1
 
 [Events]
@@ -1259,7 +1272,8 @@ def cmd_cut(args):
     plain = getattr(args, "plain", False)
     recipe = {**tuner.default_recipe(), **(clip.get("recipe") or {})}  # the edit tuner's settings for this clip
     speech = originality.speech_share(words, length) if words else None  # measured before jump cuts remove silence
-    layout = args.layout or recipe["layout"]
+    # Avatar/VTuber streamers have no real face to track, so their sources.py entry can pin a wide gameplay frame.
+    layout = args.layout or SOURCES.get(clip.get("source"), {}).get("layout") or recipe["layout"]
     keep = dead_air(words, length, gap=recipe["gap"]) if words and not plain else [(0.0, length)]
     if len(keep) > 1:
         words = [dict(w, start=retime(w["start"], keep), end=retime(w["end"], keep)) for w in words]
@@ -1613,6 +1627,9 @@ def post_meta(qdir, queue, clips):
         qfile.write_text(json.dumps(queue, indent=1, ensure_ascii=False), encoding="utf-8")
 
 
+TIKTOK_MIN_SECONDS = 9  # streamer clips that spread on TikTok run ~12-34s; under 9s is a fragment, not a moment
+
+
 def post_tiktok(qdir, queue, clips, tt):
     """Send every rendered clip that isn't on TikTok yet (enabled with `tiktok-auth --enable`)."""
     import tiktok_upload
@@ -1632,6 +1649,13 @@ def post_tiktok(qdir, queue, clips, tt):
         # TikTok is an independent destination: a YouTube upload failure or quota
         # hold must not prevent an approved, rendered clip from reaching TikTok.
         if c.get("tiktok_id") or not path.exists():
+            continue
+        try:
+            secs = audio_seconds(path)
+        except (OSError, ValueError):
+            secs = None
+        if secs and secs < TIKTOK_MIN_SECONDS:  # a 5s clip can't hold a viewer or earn a rewatch; save the draft slot
+            print(f"  TikTok skipped for [{c['id']}]: only {secs:.0f}s long (TikTok clips need {TIKTOK_MIN_SECONDS}s+).")
             continue
         if inbox and pending >= tiktok_upload.MAX_PENDING_INBOX_DRAFTS:
             print(f"  TikTok inbox paused: safety limit is {tiktok_upload.MAX_PENDING_INBOX_DRAFTS} pending drafts; finish some before sending more.")

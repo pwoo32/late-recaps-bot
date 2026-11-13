@@ -95,6 +95,14 @@ Where moments come from (`live_moments.py`, all free, no YouTube quota):
 - the daily trend scan boosts creators whose clip demand jumped since the last scan (and allows them 3 clips that
   day) and moments that match words in their fastest-growing clips this week.
 
+**Trending streamers** (`trending.py`): besides the fixed list in `sources.py`, each daily run looks for whoever is
+going off right now: the day's fastest-gaining Twitch clips in Just Chatting and the top live categories (any English
+streamer; needs the Twitch secrets) and the top clips of a watchlist of big Kick channels. Streamers are scored by
+how fast their best clip is gaining views, times a bonus when few channels in the trend scan clip them yet (x1.3 for
+nobody, down to x0.7 for a crowded name). Up to 6 a day are added to `reports/builder/trending_sources.json`, which
+`sources.py` loads, and they're scanned while they keep trending (3 days). Mark one `blocked` in `sources.py` to keep
+them out. Clip speed now counts for up to 4x in ranking (60k+ views/hour), so the moment spreading fastest wins.
+
 **Clip council** (`council.py`): before anything is picked, every agent weighs in on the top ~16 candidate moments
 and scores each 0-1 with a one-line reason: the trend researcher (is the creator hot and rising, does it match what's
 viral), the channel study (do top channels break out with this creator), the analytics reviewer (how this creator does
@@ -253,8 +261,14 @@ Modes:
   (`publish` prints it and saves it in queue.json as `tiktok_caption`), and post. This works before TikTok's audit.
   TikTok allows 5 pending drafts per 24 hours. The builder checks recent tracked draft statuses and pauses at 4
   pending drafts to leave a safety slot. If a status check fails, it pauses until drafts can be checked again.
-  Finish or clear pending drafts in TikTok before retrying. Captions use the generated clip context and relevant
-  hashtags; the builder does not append generic `#fyp` or `#viral` tags.
+  Finish or clear pending drafts in TikTok before retrying.
+- Captions (`tiktok_caption.py`) are written for TikTok search: the creator's full name first (IShowSpeed, not
+  Speed), what happens, the stream/clip topic, any guest named in the stream title, a question for the comments,
+  then 3-5 specific hashtags (creator, guest, game, #twitch/#kick). Never `#fyp`/`#viral`/`#foryou`, which don't help.
+  Example: `IShowSpeed: "Oh I'm Not Letting Him Win After This" | Can I Return a 120 MPH Serve From Serena Williams?
+  🔥 Rate this duo 1-10 #ishowspeed #serenawilliams #tennis #livestream #ishowspeedclips`
+- Clips under 9 seconds don't go to TikTok (they can't hold a viewer, and inbox drafts are capped at 5 a day).
+- The on-screen hook sits 250px from the top so TikTok's "Following | For You" tabs don't cover it.
 - `direct`: posts on its own, with the caption. Until TikTok audits the app, posts are private-only, and the
   TikTok account itself must be private. Apply for the audit from the app's page, then switch modes.
 
