@@ -332,10 +332,10 @@ def _ollama(prompt):
     return parse_json(r.json()["response"])
 
 
-def _openai_compat(url, key, model, prompt):
-    r = requests.post(url, timeout=300, headers={"Authorization": f"Bearer {key}"}, json={
+def _openai_compat(url, key, model, prompt, **extra):
+    r = requests.post(url, timeout=180, headers={"Authorization": f"Bearer {key}"}, json={
         "model": model, "temperature": 0.8, "response_format": {"type": "json_object"},
-        "messages": [{"role": "user", "content": prompt}]})
+        "messages": [{"role": "user", "content": prompt}], **extra})
     r.raise_for_status()
     return parse_json(r.json()["choices"][0]["message"]["content"])
 
@@ -372,11 +372,12 @@ def _gemini(prompt):
         return None
     last = None
     for model in gemini_models(key)[:4]:
-        for wait in (0, 15, 45):
+        for wait in (0, 20):
             time.sleep(wait)
             try:
+                # low thinking: a long think timed out at 300s on Nov 13; scripts don't need it
                 out = _openai_compat("https://generativelanguage.googleapis.com/v1beta/openai/chat/completions", key,
-                                     model, prompt)
+                                     model, prompt, reasoning_effort="low")
                 print(f"Gemini answered with {model}.")
                 return out
             except requests.HTTPError as e:
@@ -385,6 +386,10 @@ def _gemini(prompt):
                 print(f"  Gemini {model}: HTTP {code}")
                 if code not in (429, 500, 502, 503, 504):
                     break  # 404 and friends: this model won't work, try the next
+            except requests.RequestException as e:  # timeout or dropped connection: next model
+                last = e
+                print(f"  Gemini {model}: {type(e).__name__}")
+                break
     raise last or RuntimeError("Gemini gave no answer")
 
 
