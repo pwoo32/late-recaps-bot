@@ -1,0 +1,339 @@
+[
+ {
+  "id": 1,
+  "source": "jynxzi",
+  "creator": "Jynxzi",
+  "platform": "twitch_clip",
+  "video_id": "2382863080",
+  "video_title": "JYNXZI Wins Gamer Of The Year! 🔥🔥🔥 W Jynxzi 🫶",
+  "url": "https://www.twitch.tv/jynxzi/clip/GorgeousSparklingGoatBloodTrail-l-5IIruft8YsCVoM",
+  "moment": "0:00",
+  "start": 0,
+  "end": 44.0,
+  "rank": 38.19,
+  "signal": "Twitch clip, 3,462 views (249/h)",
+  "signals": [
+   "twitch clip"
+  ],
+  "quotes": [
+   "JYNXZI Wins Gamer Of The Year! 🔥🔥🔥 W Jynxzi 🫶"
+  ],
+  "stream_age_h": 13.9,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": null
+  },
+  "council": {
+   "trend": 1.0,
+   "study": 0.25,
+   "analytics": 0.66,
+   "live": 0.11,
+   "script": 0.6,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 1.0,
+    "why": "Jynxzi clips pull 10,421 views/hour this week, up 483% since the last scan"
+   },
+   "study": {
+    "score": 0.25,
+    "why": "top channels rarely break out with Jynxzi"
+   },
+   "analytics": {
+    "score": 0.66,
+    "why": "Jynxzi clips do 1.7x our usual; no clear premise, may be visual-only; stream is 14h old"
+   },
+   "live": {
+    "score": 0.11,
+    "why": "Twitch clip at 249/h"
+   },
+   "script": {
+    "score": 0.6,
+    "why": "draft title: \"Jynxzi: \"Wins Gamer of the Year! W Jynxzi\" 🔥\"; no captions yet, writing blind"
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-13T19:02:31Z",
+  "council_why": "Jynxzi's clips are performing exceptionally well, with a significant increase in views and a strong trend. The stream is relatively new, giving it more time to grow.",
+  "post_utc": "2026-11-13 22:00",
+  "post_local": "Fri 05:00 PM ET",
+  "title": "Jynxzi Wins Gamer Of The Year At The Streamer Awards 🏆🔥",
+  "hook": "JYNXZI WINS GAMER OF THE YEAR",
+  "context": "Jynxzi watching the 2026 Streamer Awards live on stream",
+  "take": "After grinding Siege for years and blowing up the entire platform, Jynxzi finally got the validation he was waiting for at the 2026 Streamer Awards.",
+  "summary": "Jynxzi reacts live on stream to winning Gamer of the Year at the 2026 Streamer Awards presented by Smosh.",
+  "tiktok_caption": "Jynxzi live reaction to winning Gamer of the Year at the 2026 Streamer Awards! #jynxzi #winsgamer #twitch #jynxziclips #streamerclips",
+  "hashtags": [
+   "#shorts",
+   "#jynxzi",
+   "#streamerawards"
+  ],
+  "tags": [
+   "Jynxzi",
+   "Jynxzi Streamer Awards",
+   "Jynxzi Gamer of the Year",
+   "Streamer Awards 2026",
+   "Jynxzi reaction",
+   "Smosh Jynxzi",
+   "Jynxzi clips",
+   "Twitch clips"
+  ],
+  "draft": false,
+  "writer": "gemini",
+  "description": "Jynxzi reacts live on stream to winning Gamer of the Year at the 2026 Streamer Awards presented by Smosh.\n\nFull stream by Jynxzi: https://www.twitch.tv/jynxzi/clip/GorgeousSparklingGoatBloodTrail-l-5IIruft8YsCVoM\nGo support Jynxzi, all credit to them.\n\n#shorts #jynxzi #streamerawards",
+  "key": "2382863080@0",
+  "permission": "fan clipping tolerated; check for a Whop campaign",
+  "payoff": "He completely lost his mind when they called his name, but honestly, nobody else deserved Gamer of the Year more.",
+  "script_source": "transcript",
+  "upload_tags": [
+   "Jynxzi",
+   "Jynxzi Streamer Awards",
+   "Jynxzi Gamer of the Year",
+   "Streamer Awards 2026",
+   "Jynxzi reaction",
+   "Smosh Jynxzi",
+   "Jynxzi clips",
+   "Twitch clips",
+   "jynxzi",
+   "shorts"
+  ],
+  "youtube_id": "yUTyORTf7GE",
+  "tiktok_id": "v_inbox_file~v2.7707735885760382989"
+ },
+ {
+  "id": 2,
+  "source": "ishowspeed",
+  "creator": "IShowSpeed",
+  "platform": "youtube",
+  "video_id": "jJ-zWCw85qA",
+  "video_title": "Can I Return a 120 MPH Serve From Serena Williams?",
+  "url": "https://www.youtube.com/watch?v=jJ-zWCw85qA&t=990s",
+  "moment": "16:30",
+  "start": 961,
+  "end": 1006,
+  "rank": 32.13,
+  "signal": "9 timestamp comments, 193 likes; chat went 3.5x its normal pace",
+  "signals": [
+   "comments",
+   "chat spike"
+  ],
+  "quotes": [
+   "that's not true novak djokovic has 24 singles grand slams titles but she does have the most for women's",
+   "Correction: Novak Djokovic has the most Grand Slam singles titles in the Open Era: 24, one more than Serena Williams’ 23. Get your facts rig",
+   "Novak Djokovic literally has 24 slams... why can't u get the basic facts right"
+  ],
+  "stream_age_h": 48.5,
+  "spike": false,
+  "recipe": {
+   "length": 45,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": "length"
+  },
+  "council": {
+   "trend": 0.72,
+   "study": 0.86,
+   "analytics": 0.7,
+   "live": 0.89,
+   "script": 0.75,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 0.72,
+    "why": "Speed clips pull 384,358 views/hour this week, up 12% since the last scan"
+   },
+   "study": {
+    "score": 0.86,
+    "why": "8 of the top channels' breakout Shorts are Speed clips; Speed is in 73 of their recent titles"
+   },
+   "analytics": {
+    "score": 0.7,
+    "why": "Speed clips do 1.1x our usual; has a spoken premise (bet/question/challenge); stream is 48h old (other clippers had time)"
+   },
+   "live": {
+    "score": 0.89,
+    "why": "chat went 3.5x, 9 timestamp comments, 193 likes; it went off"
+   },
+   "script": {
+    "score": 0.75,
+    "why": "draft title: \"Speed At Can I Return 🔥\""
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-13T19:02:31Z",
+  "council_why": "IShowSpeed's clips are highly engaging, with a strong reaction from the stream and a clear premise. The channel's own results also point to high potential.",
+  "post_utc": "2026-11-14 01:00",
+  "post_local": "Fri 08:00 PM ET",
+  "title": "Speed Challenges Serena Williams To Tennis 🎾💀",
+  "hook": "SPEED VS SERENA WILLIAMS",
+  "context": "Speed meets Serena Williams on the tennis court.",
+  "take": "Speed thinks his custom training is enough to beat a tennis legend, but the intro announcer managed to mess up the grand slam stats right out of the gate.",
+  "summary": "Speed meets Serena Williams on the tennis court to see if he can return a 120 MPH serve.",
+  "tiktok_caption": "Speed really thinks he can return a 120 MPH serve from Serena Williams 😭",
+  "hashtags": [
+   "#shorts",
+   "#ishowspeed",
+   "#serenawilliams"
+  ],
+  "tags": [
+   "IShowSpeed",
+   "Speed",
+   "Serena Williams",
+   "Speed tennis",
+   "Speed Serena Williams",
+   "Speed challenge",
+   "Streamer",
+   "Clips"
+  ],
+  "draft": false,
+  "writer": "gemini",
+  "description": "Speed meets Serena Williams on the tennis court to see if he can return a 120 MPH serve.\n\nFull stream by IShowSpeed: https://www.youtube.com/watch?v=jJ-zWCw85qA&t=990s\nGo support IShowSpeed, all credit to them.\n\n#shorts #ishowspeed #serenawilliams #speed",
+  "key": "jJ-zWCw85qA@33",
+  "permission": "fan clipping is widespread and tolerated; no official paid program found (Oct 2026)",
+  "payoff": "Is Speed actually getting a point off Serena or is he getting swept?",
+  "script_source": "captions",
+  "upload_tags": [
+   "IShowSpeed",
+   "Speed",
+   "Serena Williams",
+   "Speed tennis",
+   "Speed Serena Williams",
+   "Speed challenge",
+   "Streamer",
+   "Clips",
+   "ishowspeed",
+   "speed",
+   "shorts"
+  ]
+ },
+ {
+  "id": 3,
+  "source": "stableronaldo",
+  "creator": "Stable Ronaldo",
+  "platform": "twitch_clip",
+  "video_id": "1680950055",
+  "video_title": "Willneff wants Burn to win Best Roleplay Streamer of the Year",
+  "url": "https://www.twitch.tv/stableronaldo/clip/VenomousHungryBasenjiFloof-5OapJlOj4TKF8-Dd",
+  "moment": "0:00",
+  "start": 0,
+  "end": 55.0,
+  "rank": 21.3,
+  "signal": "Twitch clip, 4,303 views (226/h)",
+  "signals": [
+   "twitch clip"
+  ],
+  "quotes": [
+   "Willneff wants Burn to win Best Roleplay Streamer of the Year"
+  ],
+  "stream_age_h": 19.0,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.2,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": "punch"
+  },
+  "council": {
+   "trend": 1.0,
+   "study": 0.25,
+   "analytics": 0.52,
+   "live": 0.11,
+   "script": 0.35,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 1.0,
+    "why": "Ronaldo clips pull 4,838 views/hour this week, up 9676% since the last scan"
+   },
+   "study": {
+    "score": 0.25,
+    "why": "top channels rarely break out with Ronaldo"
+   },
+   "analytics": {
+    "score": 0.52,
+    "why": "Ronaldo clips do 1.0x our usual; no clear premise, may be visual-only; stream is 19h old"
+   },
+   "live": {
+    "score": 0.11,
+    "why": "Twitch clip at 226/h"
+   },
+   "script": {
+    "score": 0.35,
+    "why": "draft title: \"Ronaldo Goes Crazy 🔥\"; no captions yet, writing blind"
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-13T19:02:31Z",
+  "council_why": "Ronaldo's clips, while not as strong as Jynxzi's, still show a significant increase in views and a strong trend. The stream is also new, providing more growth potential.",
+  "post_utc": "2026-11-14 05:00",
+  "post_local": "Sat 12:00 AM ET",
+  "title": "Ronaldo Discusses The Best Roleplay Streamer 🎭🏆",
+  "hook": "BEST ROLEPLAY STREAMER CHOICE",
+  "context": "Ronaldo reviews Streamer Awards roleplay nominees.",
+  "take": "Willneff made it clear who he wants taking home Best Roleplay Streamer, setting off an instant debate on Ronaldo's stream.",
+  "summary": "Stable Ronaldo reacts to Willneff picking Burn for Best Roleplay Streamer of the Year.",
+  "tiktok_caption": "Stable Ronaldo discusses Willneff backing Burn for Best Roleplay Streamer!",
+  "hashtags": [
+   "#shorts",
+   "#stableronaldo",
+   "#willneff"
+  ],
+  "tags": [
+   "Stable Ronaldo",
+   "Ronaldo",
+   "Willneff",
+   "Burn",
+   "Streamer Awards",
+   "GTA RP",
+   "Roleplay Streamer",
+   "Twitch clips"
+  ],
+  "draft": false,
+  "writer": "gemini",
+  "description": "Stable Ronaldo reacts to Willneff picking Burn for Best Roleplay Streamer of the Year.\n\nFull stream by Stable Ronaldo: https://www.twitch.tv/stableronaldo/clip/VenomousHungryBasenjiFloof-5OapJlOj4TKF8-Dd\nGo support Stable Ronaldo, all credit to them.\n\n#shorts #stableronaldo #willneff",
+  "key": "1680950055@0",
+  "permission": "fan clipping is widespread and tolerated; no official program checked (Nov 2026)",
+  "payoff": "Was Burn actually the most deserving roleplay streamer this year?",
+  "script_source": "comments",
+  "upload_tags": [
+   "Stable Ronaldo",
+   "Ronaldo",
+   "Willneff",
+   "Burn",
+   "Streamer Awards",
+   "GTA RP",
+   "Roleplay Streamer",
+   "Twitch clips",
+   "stableronaldo",
+   "stable ronaldo",
+   "shorts"
+  ]
+ }
+]
