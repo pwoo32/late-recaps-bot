@@ -1,0 +1,31 @@
+# One-minute check that the free script writers answer (Gemini, Groq), without building or posting anything.
+name: Writer test
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  writers:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -q requests
+      - name: Ask each writer for a tiny JSON answer
+        run: |
+          python - <<'PY'
+          import script_agent as s
+          prompt = 'Return only JSON: {"clips": [{"index": 0, "title": "test", "narrator": "one short sentence about a streamer"}]}'
+          for name in ("gemini", "groq"):
+              try:
+                  out = s.WRITERS[name](prompt)
+                  print(f"{name}: " + ("no key set" if out is None else f"OK {out}"))
+              except Exception as e:
+                  print(f"{name}: FAILED {type(e).__name__}: {str(e)[:300]}")
+          PY

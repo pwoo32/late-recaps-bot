@@ -51,6 +51,7 @@ import argparse
 import json
 import os
 import re
+import time
 import shutil
 import subprocess
 import sys
@@ -268,8 +269,9 @@ For every clip write:
   screen" and template lines as adding nothing). So give a take: the context a new viewer is missing (what led up
   to it, why it matters, the running bit or history), plus our opinion, a joke, or a prediction. It must say
   something the stream footage doesn't. Bad: "Jynxzi reacts to the burger; his reaction makes the moment land."
-  Good: "Jynxzi swore off fast food two streams ago, so watch how long that promise survives one bite of this."
-  Only use facts the inputs support. No "watch this", "you won't believe", emoji, hashtags or "subscribe".
+  Good (a made-up clip, shown only for the shape; never reuse its words or facts): "He told chat this was his
+  last ranked game of the night three games ago, and this is exactly why he keeps lying."
+  Only use facts the inputs support: the transcript, the comments and the stream title for THIS clip. No "watch this", "you won't believe", emoji, hashtags or "subscribe".
 - payoff: one sentence (8-20 words) the narrator says after the moment, over the frozen last frame: the channel's
   verdict, a call on who was right, or a specific question viewers will want to argue about. It must refer to what
   happened in THIS clip and must not be a fill-in line like "rate it out of ten". No "like and subscribe", no emoji.
@@ -330,20 +332,65 @@ def _ollama(prompt):
     return parse_json(r.json()["response"])
 
 
-def _openai_compat(url, key, model, prompt):
-    r = requests.post(url, timeout=300, headers={"Authorization": f"Bearer {key}"}, json={
+def _openai_compat(url, key, model, prompt, **extra):
+    r = requests.post(url, timeout=180, headers={"Authorization": f"Bearer {key}"}, json={
         "model": model, "temperature": 0.8, "response_format": {"type": "json_object"},
-        "messages": [{"role": "user", "content": prompt}]})
+        "messages": [{"role": "user", "content": prompt}], **extra})
     r.raise_for_status()
     return parse_json(r.json()["choices"][0]["message"]["content"])
 
 
+_GEMINI_MODELS = []
+
+
+def gemini_models(key):
+    """GEMINI_MODEL if set, else this key's Flash text models, newest stable first. Google retires model names (the
+    hard-coded gemini-2.5-flash returned 404 on Nov 13 2026), so ask the API instead of guessing."""
+    if os.environ.get("GEMINI_MODEL"):
+        return [os.environ["GEMINI_MODEL"]]
+    if not _GEMINI_MODELS:
+        r = requests.get("https://generativelanguage.googleapis.com/v1beta/models", params={"key": key, "pageSize": 200},
+                         timeout=30)
+        r.raise_for_status()
+        names = [m["name"].split("/", 1)[-1] for m in r.json().get("models", [])
+                 if "generateContent" in m.get("supportedGenerationMethods", [])]
+        flash = [n for n in names if "flash" in n and not re.search(r"image|tts|audio|live|thinking|exp|8b", n)]
+        ver = lambda n: [int(x) for x in re.findall(r"\d+", n)]
+        # stable before preview, full before lite, newest first; lite and older models are the fallbacks
+        _GEMINI_MODELS.extend(sorted(flash, key=lambda n: ("preview" in n, "lite" in n, [-v for v in ver(n)])))
+        if not _GEMINI_MODELS:
+            raise RuntimeError("no Gemini text model available to this key")
+        print("Gemini models: " + ", ".join(_GEMINI_MODELS[:4]))
+    return _GEMINI_MODELS
+
+
 def _gemini(prompt):
+    """Busy (503) and rate-limited (429) answers are common on the free tier: wait and retry, then try the next
+    model down the list."""
     key = os.environ.get("GEMINI_API_KEY")
     if not key:
         return None
-    return _openai_compat("https://generativelanguage.googleapis.com/v1beta/openai/chat/completions", key,
-                          os.environ.get("GEMINI_MODEL", "gemini-2.5-flash"), prompt)
+    last = None
+    for model in gemini_models(key)[:4]:
+        for wait in (0, 20):
+            time.sleep(wait)
+            try:
+                # low thinking: a long think timed out at 300s on Nov 13; scripts don't need it
+                out = _openai_compat("https://generativelanguage.googleapis.com/v1beta/openai/chat/completions", key,
+                                     model, prompt, reasoning_effort="low")
+                print(f"Gemini answered with {model}.")
+                return out
+            except requests.HTTPError as e:
+                last = e
+                code = e.response.status_code if e.response is not None else 0
+                print(f"  Gemini {model}: HTTP {code}")
+                if code not in (429, 500, 502, 503, 504):
+                    break  # 404 and friends: this model won't work, try the next
+            except requests.RequestException as e:  # timeout or dropped connection: next model
+                last = e
+                print(f"  Gemini {model}: {type(e).__name__}")
+                break
+    raise last or RuntimeError("Gemini gave no answer")
 
 
 def _groq(prompt):
