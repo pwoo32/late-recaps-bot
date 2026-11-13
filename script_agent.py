@@ -30,10 +30,15 @@ Usage:
     python script_agent.py --import answer.json   # ...then save the JSON it gives back as answer.json
 
 Writers. By default only free ones run, in this order:
+- gemini:      Google's Gemini API, free tier (key at https://aistudio.google.com/apikey, saved as GEMINI_API_KEY).
+               GEMINI_MODEL picks the model (default gemini-2.5-flash). Writes far better commentary than a 7B model.
+- groq:        Groq's free tier (key at https://console.groq.com/keys, saved as GROQ_API_KEY), Llama 3.3 70B by
+               default (GROQ_MODEL).
 - ollama:      a free local model through Ollama (https://ollama.com, then `ollama pull qwen2.5:7b`). The cloud run
                installs it. OLLAMA_MODEL picks the model, OLLAMA_HOST the server.
 - free:        free_writer.py, rules and templates built from the transcript, comments and trend scan. No model at
-               all, never fails, so the day's clips always post.
+               all, never fails. Its narration is fill-in-the-blank, which YouTube's Oct 2026 Shorts update counts
+               as adding nothing, so the publish gate holds its clips for YouTube (originality.py).
 Only if you pick them with --writer or SCRIPT_WRITER (they use your Claude plan or API credit):
 - claude-code: the Claude Code CLI on this computer (`claude -p`), on your Claude plan.
 - api:         the Anthropic API with ANTHROPIC_API_KEY.
@@ -46,6 +51,7 @@ import argparse
 import json
 import os
 import re
+import time
 import shutil
 import subprocess
 import sys
@@ -257,13 +263,18 @@ For every clip write:
 - hook: big text pinned on screen for the whole clip. Max 6 words. Makes a scroller wait for the payoff without
   spoiling it.
 - context: one short line shown for the first 3 seconds so a new viewer gets the setup (who, where, what's going on).
-- narrator: one sentence (8-16 words) the narrator voice says over the opening. The channel's own voice: a setup,
-  joke or reaction about THIS clip that adds an original observation, grounded in its transcript, comments, and
-  visible context. Give each clip its own editorial angle; do not reuse generic setup lines or merely narrate the
-  title. Never generic ("watch this", "you won't believe"). No emoji, hashtags, or "subscribe".
-- payoff: one sentence (6-14 words) the narrator says after the moment, over the frozen last frame: the channel's
-  verdict, a call on who was right, or a specific question viewers will want to answer in the comments. It must
-  refer to what happened in THIS clip. No "like and subscribe", no emoji.
+- narrator: one or two sentences (15-35 words) the narrator says over the first seconds, before the stream audio.
+  This is the channel's commentary and the only reason YouTube treats the Short as ours rather than a reupload
+  (YouTube's Oct 2026 Shorts update cuts reach for re-uploads and names "voice-over that only describes what's on
+  screen" and template lines as adding nothing). So give a take: the context a new viewer is missing (what led up
+  to it, why it matters, the running bit or history), plus our opinion, a joke, or a prediction. It must say
+  something the stream footage doesn't. Bad: "Jynxzi reacts to the burger; his reaction makes the moment land."
+  Good (a made-up clip, shown only for the shape; never reuse its words or facts): "He told chat this was his
+  last ranked game of the night three games ago, and this is exactly why he keeps lying."
+  Only use facts the inputs support: the transcript, the comments and the stream title for THIS clip. No "watch this", "you won't believe", emoji, hashtags or "subscribe".
+- payoff: one sentence (8-20 words) the narrator says after the moment, over the frozen last frame: the channel's
+  verdict, a call on who was right, or a specific question viewers will want to argue about. It must refer to what
+  happened in THIS clip and must not be a fill-in line like "rate it out of ten". No "like and subscribe", no emoji.
 - description: 1-2 plain sentences for the YouTube description saying what happens and who's in it, with the names
   people search for. Describe the clip itself; don't mention viewers, chat or comments. No hashtags, no links (the
   credit and link are added for you).
@@ -321,6 +332,75 @@ def _ollama(prompt):
     return parse_json(r.json()["response"])
 
 
+def _openai_compat(url, key, model, prompt, **extra):
+    r = requests.post(url, timeout=180, headers={"Authorization": f"Bearer {key}"}, json={
+        "model": model, "temperature": 0.8, "response_format": {"type": "json_object"},
+        "messages": [{"role": "user", "content": prompt}], **extra})
+    r.raise_for_status()
+    return parse_json(r.json()["choices"][0]["message"]["content"])
+
+
+_GEMINI_MODELS = []
+
+
+def gemini_models(key):
+    """GEMINI_MODEL if set, else this key's Flash text models, newest stable first. Google retires model names (the
+    hard-coded gemini-2.5-flash returned 404 on Nov 13 2026), so ask the API instead of guessing."""
+    if os.environ.get("GEMINI_MODEL"):
+        return [os.environ["GEMINI_MODEL"]]
+    if not _GEMINI_MODELS:
+        r = requests.get("https://generativelanguage.googleapis.com/v1beta/models", params={"key": key, "pageSize": 200},
+                         timeout=30)
+        r.raise_for_status()
+        names = [m["name"].split("/", 1)[-1] for m in r.json().get("models", [])
+                 if "generateContent" in m.get("supportedGenerationMethods", [])]
+        flash = [n for n in names if "flash" in n and not re.search(r"image|tts|audio|live|thinking|exp|8b", n)]
+        ver = lambda n: [int(x) for x in re.findall(r"\d+", n)]
+        # stable before preview, full before lite, newest first; lite and older models are the fallbacks
+        _GEMINI_MODELS.extend(sorted(flash, key=lambda n: ("preview" in n, "lite" in n, [-v for v in ver(n)])))
+        if not _GEMINI_MODELS:
+            raise RuntimeError("no Gemini text model available to this key")
+        print("Gemini models: " + ", ".join(_GEMINI_MODELS[:4]))
+    return _GEMINI_MODELS
+
+
+def _gemini(prompt):
+    """Busy (503) and rate-limited (429) answers are common on the free tier: wait and retry, then try the next
+    model down the list."""
+    key = os.environ.get("GEMINI_API_KEY")
+    if not key:
+        return None
+    last = None
+    for model in gemini_models(key)[:4]:
+        for wait in (0, 20):
+            time.sleep(wait)
+            try:
+                # low thinking: a long think timed out at 300s on Nov 13; scripts don't need it
+                out = _openai_compat("https://generativelanguage.googleapis.com/v1beta/openai/chat/completions", key,
+                                     model, prompt, reasoning_effort="low")
+                print(f"Gemini answered with {model}.")
+                return out
+            except requests.HTTPError as e:
+                last = e
+                code = e.response.status_code if e.response is not None else 0
+                print(f"  Gemini {model}: HTTP {code}")
+                if code not in (429, 500, 502, 503, 504):
+                    break  # 404 and friends: this model won't work, try the next
+            except requests.RequestException as e:  # timeout or dropped connection: next model
+                last = e
+                print(f"  Gemini {model}: {type(e).__name__}")
+                break
+    raise last or RuntimeError("Gemini gave no answer")
+
+
+def _groq(prompt):
+    key = os.environ.get("GROQ_API_KEY")
+    if not key:
+        return None
+    return _openai_compat("https://api.groq.com/openai/v1/chat/completions", key,
+                          os.environ.get("GROQ_MODEL", "llama-3.3-70b-versatile"), prompt)
+
+
 def _api(prompt):
     if not (os.environ.get("ANTHROPIC_API_KEY") or os.environ.get("ANTHROPIC_AUTH_TOKEN")):
         return None
@@ -350,8 +430,9 @@ def _api(prompt):
     return resp.parsed_output.model_dump()
 
 
-WRITERS = {"claude-code": _claude_code, "ollama": _ollama, "api": _api}
-AUTO = ["ollama", "free"]  # what runs when no writer is picked: both free. Claude only when you ask for it by name.
+WRITERS = {"claude-code": _claude_code, "gemini": _gemini, "groq": _groq, "ollama": _ollama, "api": _api}
+# What runs when no writer is picked: all free (a writer without its key is skipped). Claude only when asked by name.
+AUTO = ["gemini", "groq", "ollama", "free"]
 
 
 def template_script(c, pb):

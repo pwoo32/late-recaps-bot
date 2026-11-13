@@ -1948,3 +1948,40 @@ Title/description: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/bui
   uploaded https://youtube.com/shorts/Dy8Y7By6jpI (goes public Fri 01:00 AM ET)
   TikTok: [1] draft in your TikTok inbox. Open the notification, paste this caption, post:
     Jynxzi in evan burger. #jynxzi #evanburger
+Done. Report: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/track_2026-11-13_0013.md  (quota used: 2)
+[ishowspeed] reading recent streams/videos
+  reading the room on "Can I Return a 120 MPH Serve From Serena Williams?" (chat replay, most replayed)
+    1 chat spikes
+[kai_cenat] reading recent streams/videos
+  reading the room on "🎮PLAYING EVERY GTA UNTIL I BEAT IT: Grand Theft Auto 5🎮" (chat replay, most replayed)
+    5 chat spikes
+  reading the room on "🎮PLAYING EVERY GTA UNTIL I BEAT IT: Grand Theft Auto 5🎮" (chat replay, most replayed)
+    6 chat spikes
+  40 Twitch clips from kaicenat
+[jynxzi] reading recent streams/videos
+  reading the room on "FINDING THE PIRATE TOKEN" (chat replay, most replayed)
+  reading the room on "FINDING THE PIRATE TOKEN w/ LOS POLLOS" (chat replay, most replayed)
+  40 Twitch clips from jynxzi
+[adin_ross] reading recent streams/videos
+  40 Kick clips from adinross
+[n3on] reading recent streams/videos
+  40 Kick clips from n3on
+[caseoh] reading recent streams/videos
+  40 Twitch clips from caseoh_
+[xqc] reading recent streams/videos
+  40 Twitch clips from xqc
+  40 Kick clips from xqc
+[lacy] reading recent streams/videos
+  40 Twitch clips from lacy
+[plaqueboymax] reading recent streams/videos
+  40 Twitch clips from plaqueboymax
+[stableronaldo] reading recent streams/videos
+  40 Twitch clips from stableronaldo
+Clip council: 16 candidates, every agent votes...
+  picked Jynxzi at 0:00 (council 0.45): Jynxzi's 'best clip' has the highest engagement and view rate, with a clear premise and strong current trend support.
+Writing scripts...
+  [1] Jynxzi at 0:00: writing from comments
+Writer gemini failed (HTTPError: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/openai/chat/completions).
+Scripts written by ollama.
+  [1] model title "Jynxzi Swears Off Fast Food But Can't Resist Burger 😱" isn't backed by what's said (swears, fast, food, resist, burger, burger, temptation, pledged, avoid, fast, food, sticks, promise); using the free writer
+Done. Queue: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-11-13_0013/queue.md  (quota used: 40)

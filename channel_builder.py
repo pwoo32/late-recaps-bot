@@ -353,6 +353,7 @@ def youtube_candidates(yt, key, src, state, since, now, chat_budget=240, live_st
     return out
 
 
+MIN_WHOLE_CLIP_S = 15  # Twitch/Kick clips used whole must be at least this long (Nov 12: a 5s clip posted)
 TWITCH_BOOST = 1.3  # favour moments viewers clipped live on Twitch (asked for Nov 2026)
 
 
@@ -374,6 +375,9 @@ def twitch_candidates(key, src, since, now, h=None):
         clips += [dict(c, _site="kick") for c in kk]
     out = []
     for c in clips:
+        if c.get("video_id") is None or c.get("vod_offset") is None or c["_site"] == "kick":
+            if (c.get("duration") or 30) < MIN_WHOLE_CLIP_S:  # used whole: a 5s clip leaves no room for our take
+                continue
         created = datetime.fromisoformat(c["created_at"].replace("Z", "+00:00"))
         vph = LM.clip_velocity(c, now)
         # Speed matters most: a clip gaining views fast right now is the one most likely to go viral again for us
@@ -445,7 +449,10 @@ def rank_moments(moments, demand, state, words=None, change=None):
         heat = 0.8 + 0.6 * m["heat"] if m.get("heat") is not None else 1.0  # most-replayed part of the stream
         m["music_risk"] = originality.music_hit(" ".join(m["quotes"]), m["video_title"])
         music = 0.2 if m["music_risk"] else 1.0  # songs are what Content ID claims; keep them for last resort only
-        m["rank"] = round(m["score"] * hot * learned * fresh * reach * paid * rising * topical * heat * music, 2)
+        # Creators whose every moment is already posted by hundreds of clip channels (and by their own Shorts
+        # channels and YouTube's auto highlights): our copy is one of many near-duplicates (sources.py "crowd").
+        crowd = src.get("crowd", 1.0)
+        m["rank"] = round(m["score"] * hot * learned * fresh * reach * paid * rising * topical * heat * music * crowd, 2)
         m["key"] = f"{m['video_id']}@{m['t'] // 30}"
         b = m["t"] // 30  # same scene: within 3 buckets (~90s) of something already posted from this stream
         m["used"] = (m["key"] in used or any(abs(b - u) <= 3 for u in used_at.get(m["video_id"], ()))
@@ -1399,6 +1406,10 @@ def youtube_uploader():
     return build("youtube", "v3", credentials=creds, cache_discovery=False)
 
 
+# Every upload goes to the Late Recaps channel and nowhere else; publish refuses a sign-in for any other channel.
+CHANNEL_ID = os.environ.get("YOUTUBE_CHANNEL_ID", "UCbK9EejOk5UVzI_l8F3f8kA")
+
+
 def upload_clip(api, path, clip):
     from googleapiclient.http import MediaFileUpload
     src = SOURCES.get(clip["source"], {})
@@ -1555,6 +1566,11 @@ def cmd_publish(args):
         hold(qdir, problems)
         sys.exit(1)
     api = youtube_uploader()
+    me = api.channels().list(part="id,snippet", mine=True).execute().get("items", [])  # 1 quota unit
+    if not me or me[0]["id"] != CHANNEL_ID:
+        hold(qdir, [f"youtube: the sign-in uploads to {me[0]['snippet']['title'] + ' (' + me[0]['id'] + ')' if me else 'no channel'}, "
+                    f"not Late Recaps ({CHANNEL_ID}). Sign in again with the Late Recaps account (`channel_builder.py auth`)."])
+        sys.exit(1)
     for c in todo:
         print(f"[{c['id']}] {c['title']}")
         try:

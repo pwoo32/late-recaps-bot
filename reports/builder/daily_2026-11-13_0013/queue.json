@@ -1,0 +1,100 @@
+[
+ {
+  "id": 1,
+  "source": "jynxzi",
+  "creator": "Jynxzi",
+  "platform": "twitch_clip",
+  "video_id": "3081337536",
+  "video_title": "best clip",
+  "url": "https://www.twitch.tv/jynxzi/clip/UninterestedMistyHummingbirdTheRinger-_ZY8xZQOvrzShCsk",
+  "moment": "0:00",
+  "start": 0,
+  "end": 60.0,
+  "rank": 20.76,
+  "signal": "Twitch clip, 795 views (16/h)",
+  "signals": [
+   "twitch clip"
+  ],
+  "quotes": [
+   "best clip"
+  ],
+  "stream_age_h": 50.8,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": null
+  },
+  "council": {
+   "trend": 1.0,
+   "study": 0.25,
+   "analytics": 0.54,
+   "live": 0.1,
+   "script": 0.6,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 1.0,
+    "why": "Jynxzi clips pull 1,747 views/hour this week, up 3494% since the last scan"
+   },
+   "study": {
+    "score": 0.25,
+    "why": "top channels rarely break out with Jynxzi"
+   },
+   "analytics": {
+    "score": 0.54,
+    "why": "Jynxzi clips do 1.8x our usual; no clear premise, may be visual-only; stream is 51h old (other clippers had time)"
+   },
+   "live": {
+    "score": 0.1,
+    "why": "Twitch clip at 16/h"
+   },
+   "script": {
+    "score": 0.6,
+    "why": "draft title: \"Jynxzi: \"Best Clip\" 😱\"; no captions yet, writing blind"
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-13T00:13:32Z",
+  "council_why": "Jynxzi's 'best clip' has the highest engagement and view rate, with a clear premise and strong current trend support.",
+  "post_utc": "2026-11-13 06:00",
+  "post_local": "Fri 01:00 AM ET",
+  "title": "Jynxzi: \"Best Clip\" 😱",
+  "hook": "BEST CLIP",
+  "context": "Jynxzi live on Twitch",
+  "take": "This is about best clip; Jynxzi's reaction is what makes the moment land.",
+  "summary": "Jynxzi during \"best clip\". best clip.",
+  "tiktok_caption": "Jynxzi in best clip.",
+  "hashtags": [
+   "#jynxzi",
+   "#best"
+  ],
+  "tags": [
+   "jynxzi",
+   "jynxzi clips",
+   "streamer clips"
+  ],
+  "draft": false,
+  "writer": "free",
+  "description": "Jynxzi during \"best clip\". best clip.\n\nFull stream by Jynxzi: https://www.twitch.tv/jynxzi/clip/UninterestedMistyHummingbirdTheRinger-_ZY8xZQOvrzShCsk\nGo support Jynxzi, all credit to them.\n\n#jynxzi #best #shorts",
+  "key": "3081337536@0",
+  "permission": "fan clipping tolerated; check for a Whop campaign",
+  "payoff": "Rate that Jynxzi moment out of ten in the comments.",
+  "script_source": "comments",
+  "upload_tags": [
+   "jynxzi",
+   "jynxzi clips",
+   "streamer clips",
+   "shorts"
+  ]
+ }
+]
