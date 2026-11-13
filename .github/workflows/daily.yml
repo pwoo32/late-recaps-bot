@@ -56,6 +56,8 @@ jobs:
       META_ACCESS_TOKEN: ${{ secrets.META_ACCESS_TOKEN }}         # Instagram + Facebook Reels (README)
       IG_USER_ID: ${{ secrets.IG_USER_ID }}
       FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}               # free script writer (aistudio.google.com/apikey); real commentary
+      GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}                   # free backup writer (console.groq.com/keys)
       OLLAMA_MODEL: ${{ vars.OLLAMA_MODEL || 'qwen2.5:7b' }}     # free local script writer; no Claude
       OLLAMA_MODELS: /home/runner/.ollama-models
       # Unload the script model right after each answer. Left loaded (~5 GB), it plus the Chatterbox voice and the

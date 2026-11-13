@@ -150,6 +150,14 @@ python channel_builder.py run --publish  # the whole day hands-off: refresh repo
   clips ever come from one stream. Before upload a clip is held if its title, hook or narrator line is a stock line
   that could sit on any clip ("Goes Crazy", "Wait For It"...), its title repeats an earlier upload, music is heard
   or named, under a quarter of it is speech, or the narrator voice failed to render.
+- Commentary gate (Nov 12 2026). YouTube's Oct 1 2026 Shorts update cuts feed reach for channels that mostly
+  re-upload other creators' footage, and names template-based edits and voice-over that only describes the screen as
+  adding nothing. Our narration was fill-in-the-blank ("This is about X; Speed's reaction is what makes the moment
+  land."), so the channel read as an aggregator. Now a clip is held for YouTube unless its narrator take is a real
+  15-35 word opinion or context line from a model writer (free: `GEMINI_API_KEY`, or `GROQ_API_KEY`), not the
+  free writer's templates; the clip has at least 20 spoken words; and whole Twitch/Kick clips are 15s or longer.
+  Saturated creators (Speed, Kai Cenat) rank at half weight (`crowd` in `sources.py`). `ALLOW_TEMPLATE_NARRATION=1`
+  turns the template check off.
 - Quota: plan ~25 units, daily ~20-60, track ~2. Outputs: `reports/builder/`.
 
 ### Uploading (one-time setup, ~10 minutes)

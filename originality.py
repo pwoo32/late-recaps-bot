@@ -16,6 +16,7 @@ a duplicate, so the feed never tests it. These checks stop the patterns that got
 No API calls, no model. channel_builder.py uses these when ranking moments and right before upload.
 """
 
+import os
 import re
 
 # Lines that could go on any clip. Matched case-insensitively against the title, hook and narrator lines.
@@ -34,7 +35,17 @@ MUSIC = re.compile(r"♪|♫|\[music\]|\(music\)|\b(song|songs|music|dubstep|edm
 
 STREAM_WORDS = re.compile(r"\b(stream|streams|streaming|live|vod|irl|marathon|subathon|day \d+|hour \d+|until i)\b", re.I)
 
+# The free writer's fill-in narration ("This is about X; Speed's reaction is what makes the moment land."). YouTube's
+# Oct 1 2026 Shorts update names template-based changes and voice-over that only describes the screen as adding
+# nothing, so these count as no narration at all.
+TEMPLATE_VO = re.compile(r"(sets up the moment|listen to what follows|is the story here|what makes the moment land|"
+                         r"the line everything turns on|you'?re about to see why|watch how .{1,30} handles it|"
+                         r"this exchange turns on|rate (?:that|how) .{1,40} (?:out of ten|one to ten)|comments decide|"
+                         r"drop your answer below|or not even close|worth it or not)", re.I)
+
 MIN_SPEECH = 0.25        # share of the clip with someone talking
+MIN_TAKE_WORDS = 12      # the opening take has to be a real sentence of our own, not a label
+MIN_SAID_WORDS = 20      # a 5-second clip with 7 words in it gives the narrator nothing to comment on
 MAX_CLIPS_PER_STREAM = 2  # posted clips from one source video, ever
 
 
@@ -94,8 +105,19 @@ def clip_problems(clip, posted, speech=None, transcript=""):
         out.append(f"originality: stock line \"{phrase}\" could go on any clip; the script needs something specific to this one")
     if norm_title(clip.get("title")) in posted:
         out.append("originality: this title was already used on an earlier upload (near-duplicate)")
-    if not (clip.get("take") or "").strip():
+    take = (clip.get("take") or "").strip()
+    if not take:
         out.append("originality: no narrator line, so nothing of the channel's own is added")
+    elif len(take.split()) < MIN_TAKE_WORDS:
+        out.append(f"originality: the narrator's take is only {len(take.split())} words; it needs a real opinion or context")
+    tv = TEMPLATE_VO.search(" ".join([take, clip.get("payoff") or ""]))
+    if tv:
+        out.append(f"originality: template narration (\"{tv.group(0)}\"); YouTube counts template voice-overs as adding nothing")
+    if clip.get("writer") in ("free", "template") and not os.environ.get("ALLOW_TEMPLATE_NARRATION"):
+        out.append("originality: the script came from the fill-in writer, not a model, so the narration is a template "
+                   "(set GEMINI_API_KEY or GROQ_API_KEY, both free)")
+    if transcript and len(transcript.split()) < MIN_SAID_WORDS:
+        out.append(f"originality: only {len(transcript.split())} words are said in the clip, too little to comment on")
     hit = music_hit(transcript, " ".join(clip.get("quotes") or []), clip.get("title"), clip.get("video_title"))
     if hit:
         out.append(f"copyright: music in this moment (\"{hit}\"); songs get Content ID claims")
