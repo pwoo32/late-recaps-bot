@@ -74,3 +74,27 @@ Copyright claims on clips from 1 stream(s); the builder won't clip those streams
 Done. Report: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/review_2026-11-12_2258/report.md
 Copyright claims on clips from 1 stream(s); the builder won't clip those streams again.
 Done. Report: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/review_2026-11-13_0013/report.md
+Traceback (most recent call last):
+  File "/home/runner/work/late-recaps-bot/late-recaps-bot/review_agent.py", line 855, in <module>
+    main()
+  File "/home/runner/work/late-recaps-bot/late-recaps-bot/review_agent.py", line 851, in main
+    cmd_auth(args) if args.cmd == "auth" else cmd_review(args)
+                                              ^^^^^^^^^^^^^^^^
+  File "/home/runner/work/late-recaps-bot/late-recaps-bot/review_agent.py", line 768, in cmd_review
+    data = collect(args, state)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/late-recaps-bot/late-recaps-bot/review_agent.py", line 292, in collect
+    creds = credentials(g) if g else None
+            ^^^^^^^^^^^^^^
+  File "/home/runner/work/late-recaps-bot/late-recaps-bot/review_agent.py", line 131, in credentials
+    creds = g["Credentials"].from_authorized_user_file(str(f))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/google/oauth2/credentials.py", line 544, in from_authorized_user_file
+    data = json.load(json_file)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/json/__init__.py", line 293, in load
+    return loads(fp.read(),
+           ^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/json/__init__.py", line 335, in loads
+    raise JSONDecodeError("Unexpected UTF-8 BOM (decode using utf-8-sig)",
+json.decoder.JSONDecodeError: Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)
