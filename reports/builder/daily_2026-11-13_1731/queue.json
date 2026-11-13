@@ -1,0 +1,108 @@
+[
+ {
+  "id": 1,
+  "source": "jynxzi",
+  "creator": "Jynxzi",
+  "platform": "youtube",
+  "video_id": "hmfQoGeKkMw",
+  "video_title": "FINDING THE PIRATE TOKEN",
+  "url": "https://www.youtube.com/watch?v=hmfQoGeKkMw&t=10910s",
+  "moment": "3:01:50",
+  "start": 10890,
+  "end": 10920,
+  "rank": 9.71,
+  "signal": "1 timestamp comments, 55 likes",
+  "signals": [
+   "comments"
+  ],
+  "quotes": [
+   "Ts gold man"
+  ],
+  "stream_age_h": 39.9,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": null
+  },
+  "council": {
+   "trend": 1.0,
+   "study": 0.25,
+   "analytics": 0.79,
+   "live": 0.39,
+   "script": 1.0,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 1.0,
+    "why": "Jynxzi clips pull 10,421 views/hour this week, up 483% since the last scan"
+   },
+   "study": {
+    "score": 0.25,
+    "why": "top channels rarely break out with Jynxzi"
+   },
+   "analytics": {
+    "score": 0.79,
+    "why": "Jynxzi clips do 1.6x our usual; has a spoken premise (bet/question/challenge); stream is 40h old"
+   },
+   "live": {
+    "score": 0.39,
+    "why": "1 timestamp comments, 55 likes"
+   },
+   "script": {
+    "score": 1.0,
+    "why": "draft title: \"Jynxzi Asks Huh \">> What?\" 😱\""
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-13T17:31:43Z",
+  "council_why": "Jynxzi's clip at 3:01:50 in 'FINDING THE PIRATE TOKEN' has the highest trend researcher score and a strong live scout reaction, indicating high viewer engagement and potential for virality.",
+  "post_utc": "2026-11-13 22:00",
+  "post_local": "Fri 05:00 PM ET",
+  "title": "Jynxzi: \"Can You Go on the Living Room?\" 😱",
+  "hook": "CAN YOU GO ON THE LIVING",
+  "context": "Jynxzi live: Finding THE Pirate Token",
+  "take": "That question, “Can you go on?” sets up the moment. Listen to what follows.",
+  "summary": "Jynxzi during \"FINDING THE PIRATE TOKEN\". Ts gold man.",
+  "tiktok_caption": "Jynxzi: \"Can You Go on the Living Room?\" | Finding the pirate token 😳 Was this real? #jynxzi #livestream #jynxziclips #streamerclips #findingpiratetoken",
+  "hashtags": [
+   "#jynxzi",
+   "#findingpiratetoken"
+  ],
+  "tags": [
+   "jynxzi",
+   "finding",
+   "pirate",
+   "token",
+   "jynxzi clips",
+   "streamer clips"
+  ],
+  "draft": false,
+  "writer": "free",
+  "description": "Jynxzi during \"FINDING THE PIRATE TOKEN\". Ts gold man.\n\nFull stream by Jynxzi: https://www.youtube.com/watch?v=hmfQoGeKkMw&t=10910s\nGo support Jynxzi, all credit to them.\n\n#jynxzi #findingpiratetoken #shorts",
+  "key": "hmfQoGeKkMw@363",
+  "permission": "fan clipping tolerated; check for a Whop campaign",
+  "payoff": "So, “Can you go on the?” Drop your answer below.",
+  "script_source": "transcript",
+  "upload_tags": [
+   "jynxzi",
+   "finding",
+   "pirate",
+   "token",
+   "jynxzi clips",
+   "streamer clips",
+   "shorts"
+  ],
+  "held": "originality: template narration (\"sets up the moment\"); YouTube counts template voice-overs as adding nothing; originality: the script came from the fill-in writer, not a model, so the narration is a template (set GEMINI_API_KEY or GROQ_API_KEY, both free)",
+  "tiktok_id": "v_inbox_file~v2.7707714335489034253"
+ }
+]

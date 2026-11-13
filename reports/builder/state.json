@@ -1,16 +1,16 @@
 {
  "source_weight": {
-  "jynxzi": 1.89,
+  "jynxzi": 1.93,
   "kai_cenat": 0.31,
-  "ishowspeed": 1.84
+  "ishowspeed": 1.9
  },
  "slot_weight": {
   "2": 0.49,
   "21": 0.49,
-  "8": 1.45,
+  "8": 1.47,
   "4": 0.49,
-  "22": 1.92,
-  "17": 1.95
+  "22": 1.95,
+  "17": 1.97
  },
  "used_moments": [
   "L6S9Vb3RLy4@186",
@@ -102,7 +102,8 @@
   "jJ-zWCw85qA@51",
   "2686136916@0",
   "3081337536@0",
-  "2H3Dq2N0mv8@1085"
+  "2H3Dq2N0mv8@1085",
+  "hmfQoGeKkMw@363"
  ],
  "queued": {
   "L6S9Vb3RLy4@186": {
@@ -1152,6 +1153,28 @@
     "analytics": 0.7,
     "live": 0.41,
     "script": 0.35,
+    "audience": 0.5
+   }
+  },
+  "hmfQoGeKkMw@363": {
+   "title": "Jynxzi: \"Can You Go on the Living Room?\" \ud83d\ude31",
+   "source": "jynxzi",
+   "post_utc": "2026-11-13 22:00",
+   "recipe": {
+    "length": 30,
+    "punch": 0.14,
+    "beat": "normal",
+    "caption_words": 3,
+    "gap": 0.6,
+    "layout": "face34",
+    "test": null
+   },
+   "council": {
+    "trend": 1.0,
+    "study": 0.25,
+    "analytics": 0.79,
+    "live": 0.39,
+    "script": 1.0,
     "audience": 0.5
    }
   }
