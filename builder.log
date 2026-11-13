@@ -1985,3 +1985,67 @@ Writer gemini failed (HTTPError: 404 Client Error: Not Found for url: https://ge
 Scripts written by ollama.
   [1] model title "Jynxzi Swears Off Fast Food But Can't Resist Burger 😱" isn't backed by what's said (swears, fast, food, resist, burger, burger, temptation, pledged, avoid, fast, food, sticks, promise); using the free writer
 Done. Queue: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-11-13_0013/queue.md  (quota used: 40)
+Done. Report: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/track_2026-11-13_1651.md  (quota used: 2)
+Looking for streamers going viral right now on Twitch and Kick...
+[ishowspeed] reading recent streams/videos
+  reading the room on "Can I Return a 120 MPH Serve From Serena Williams?" (chat replay, most replayed)
+    1 chat spikes
+[kai_cenat] reading recent streams/videos
+  reading the room on "🎮PLAYING EVERY GTA UNTIL I BEAT IT: Grand Theft Auto 5🎮" (chat replay, most replayed)
+    5 chat spikes
+  reading the room on "🎮PLAYING EVERY GTA UNTIL I BEAT IT: Grand Theft Auto 5🎮" (chat replay, most replayed)
+    6 chat spikes
+  40 Twitch clips from kaicenat
+[jynxzi] reading recent streams/videos
+  reading the room on "STREAMER AWARDS 2026" (chat replay, most replayed)
+  reading the room on "FINDING THE PIRATE TOKEN" (chat replay, most replayed)
+  40 Twitch clips from jynxzi
+[adin_ross] reading recent streams/videos
+  39 Kick clips from adinross
+[n3on] reading recent streams/videos
+  36 Kick clips from n3on
+[caseoh] reading recent streams/videos
+  40 Twitch clips from caseoh_
+[xqc] reading recent streams/videos
+  40 Twitch clips from xqc
+  34 Kick clips from xqc
+[lacy] reading recent streams/videos
+  40 Twitch clips from lacy
+[plaqueboymax] reading recent streams/videos
+  40 Twitch clips from plaqueboymax
+[theburntpeanut] reading recent streams/videos
+  40 Twitch clips from theburntpeanut
+[stableronaldo] reading recent streams/videos
+  40 Twitch clips from stableronaldo
+Clip council: 16 candidates, every agent votes...
+  picked Jynxzi at 9:02:52 (council 0.53): Jynxzi's 'STREAMER AWARDS 2026' clip has the highest trend researcher score, indicating strong current popularity, and t
+Writing scripts...
+  [1] Jynxzi at 9:02:52: writing from comments
+Gemini models: gemini-flash-latest, gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash
+  Gemini gemini-flash-latest: HTTP 503
+Gemini answered with gemini-flash-latest.
+Scripts written by gemini.
+  [1] model title "Jynxzi Wins Gamer Of The Year 🏆🔥" isn't backed by what's said (wins, pulled); using the free writer
+Done. Queue: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-11-13_1651/queue.md  (quota used: 37)
+Traceback (most recent call last):
+  File "/home/runner/work/late-recaps-bot/late-recaps-bot/channel_builder.py", line 1806, in <module>
+    main()
+  File "/home/runner/work/late-recaps-bot/late-recaps-bot/channel_builder.py", line 1800, in main
+    {"plan": cmd_plan, "daily": cmd_daily, "track": cmd_track, "run": cmd_run, "cut": cmd_cut, "spike": cmd_spike,
+  File "/home/runner/work/late-recaps-bot/late-recaps-bot/channel_builder.py", line 867, in cmd_run
+    cmd_publish(argparse.Namespace(queue=None, ids=None, layout=None, whisper="small.en", voice=args.voice,
+  File "/home/runner/work/late-recaps-bot/late-recaps-bot/channel_builder.py", line 1567, in cmd_publish
+    api = youtube_uploader()
+          ^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/late-recaps-bot/late-recaps-bot/channel_builder.py", line 1389, in youtube_uploader
+    creds = Credentials.from_authorized_user_file(str(TOKEN_FILE), UPLOAD_SCOPES) if TOKEN_FILE.exists() else None
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/google/oauth2/credentials.py", line 544, in from_authorized_user_file
+    data = json.load(json_file)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/json/__init__.py", line 293, in load
+    return loads(fp.read(),
+           ^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/json/__init__.py", line 335, in loads
+    raise JSONDecodeError("Unexpected UTF-8 BOM (decode using utf-8-sig)",
+json.decoder.JSONDecodeError: Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)

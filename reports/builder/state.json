@@ -1,16 +1,16 @@
 {
  "source_weight": {
-  "jynxzi": 1.81,
+  "jynxzi": 1.89,
   "kai_cenat": 0.31,
-  "ishowspeed": 1.73
+  "ishowspeed": 1.84
  },
  "slot_weight": {
-  "2": 0.48,
+  "2": 0.49,
   "21": 0.49,
-  "8": 1.41,
+  "8": 1.45,
   "4": 0.49,
-  "22": 1.87,
-  "17": 1.92
+  "22": 1.92,
+  "17": 1.95
  },
  "used_moments": [
   "L6S9Vb3RLy4@186",
@@ -101,7 +101,8 @@
   "6dhayer-a90@1320",
   "jJ-zWCw85qA@51",
   "2686136916@0",
-  "3081337536@0"
+  "3081337536@0",
+  "2H3Dq2N0mv8@1085"
  ],
  "queued": {
   "L6S9Vb3RLy4@186": {
@@ -1131,6 +1132,28 @@
     "script": 0.6,
     "audience": 0.5
    }
+  },
+  "2H3Dq2N0mv8@1085": {
+   "title": "Jynxzi At Streamer Awards 2026 \ud83d\ude31",
+   "source": "jynxzi",
+   "post_utc": "2026-11-13 17:00",
+   "recipe": {
+    "length": 30,
+    "punch": 0.14,
+    "beat": "normal",
+    "caption_words": 3,
+    "gap": 0.6,
+    "layout": "face34",
+    "test": null
+   },
+   "council": {
+    "trend": 1.0,
+    "study": 0.25,
+    "analytics": 0.7,
+    "live": 0.41,
+    "script": 0.35,
+    "audience": 0.5
+   }
   }
  },
  "channel": "UCbK9EejOk5UVzI_l8F3f8kA",
@@ -1372,8 +1395,8 @@
   },
   {
    "title": "Jynxzi: \"What Is It?\" \ud83d\udd25",
-   "views": 32,
-   "lift": 32.0
+   "views": 31,
+   "lift": 31.0
   },
   {
    "title": "N3on: \"Face Each Other?\" \ud83d\udd25",
@@ -1452,8 +1475,8 @@
   },
   {
    "title": "Speed Hears Dubstep And Instantly Starts Vibing \ud83d\ude02",
-   "views": 4,
-   "lift": 4.0
+   "views": 7,
+   "lift": 7.0
   },
   {
    "title": "Kai Cenat Rates Japanese Train Breakfast \ud83c\udf73",
@@ -2513,7 +2536,8 @@
    }
   ],
   "hmfQoGeKkMw": [],
-  "YqdjrrYR_VQ": []
+  "YqdjrrYR_VQ": [],
+  "2H3Dq2N0mv8": []
  },
  "edit": {
   "stats": {
