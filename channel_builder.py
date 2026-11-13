@@ -1253,7 +1253,8 @@ def cmd_cut(args):
     plain = getattr(args, "plain", False)
     recipe = {**tuner.default_recipe(), **(clip.get("recipe") or {})}  # the edit tuner's settings for this clip
     speech = originality.speech_share(words, length) if words else None  # measured before jump cuts remove silence
-    layout = args.layout or recipe["layout"]
+    # Avatar/VTuber streamers have no real face to track, so their sources.py entry can pin a wide gameplay frame.
+    layout = args.layout or SOURCES.get(clip.get("source"), {}).get("layout") or recipe["layout"]
     keep = dead_air(words, length, gap=recipe["gap"]) if words and not plain else [(0.0, length)]
     if len(keep) > 1:
         words = [dict(w, start=retime(w["start"], keep), end=retime(w["end"], keep)) for w in words]
