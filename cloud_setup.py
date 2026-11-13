@@ -38,6 +38,8 @@ def main():
         "META_ACCESS_TOKEN": os.environ.get("META_ACCESS_TOKEN"),
         "IG_USER_ID": os.environ.get("IG_USER_ID"),
         "FB_PAGE_ID": os.environ.get("FB_PAGE_ID"),
+        "GEMINI_API_KEY": os.environ.get("GEMINI_API_KEY"),   # free script writer
+        "GROQ_API_KEY": os.environ.get("GROQ_API_KEY"),       # free backup writer
         "YOUTUBE_TOKEN": (TOKENS / "youtube_token.json").read_text() if (TOKENS / "youtube_token.json").exists() else None,
         "REVIEW_TOKEN": (TOKENS / "review_token.json").read_text() if (TOKENS / "review_token.json").exists() else None,
         "TIKTOK_TOKEN": (TOKENS / "tiktok_token.json").read_text() if (TOKENS / "tiktok_token.json").exists() else None,

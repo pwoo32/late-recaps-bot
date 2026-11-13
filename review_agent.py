@@ -631,8 +631,10 @@ def _api(prompt):
     return script_agent.parse_json("".join(b.text for b in resp.content if b.type == "text"))
 
 
-WRITERS = {"claude-code": _claude_code, "ollama": _ollama, "api": _api}
-AUTO = ["ollama"]  # free by default; Claude only when picked with --writer or SCRIPT_WRITER
+WRITERS = {"claude-code": _claude_code, "gemini": script_agent._gemini, "groq": script_agent._groq,
+           "ollama": _ollama, "api": _api}
+# Free by default (a writer without its key is skipped); Claude only when picked with --writer or SCRIPT_WRITER.
+AUTO = ["gemini", "groq", "ollama"]
 
 
 def written_review(prompt, writer=None):
