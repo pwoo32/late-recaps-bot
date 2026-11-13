@@ -122,6 +122,9 @@ def discover(known, videos=(), h=None, now=None, hours=24, verbose=True):
     found = []
     try:
         tw = twitch_trending(h, since, now) if h else {}
+        if verbose:
+            print("  trending: Twitch-wide scan skipped: no TWITCH_CLIENT_ID/TWITCH_CLIENT_SECRET secrets (README)" if not h
+                  else f"  trending: {len(tw)} Twitch streamers with clips in the last {hours}h")
     except Exception as e:  # Twitch trouble never stops the day
         print(f"  trending: Twitch scan failed ({type(e).__name__})")
         tw = {}
@@ -130,6 +133,8 @@ def discover(known, videos=(), h=None, now=None, hours=24, verbose=True):
             found.append(("twitch", login, d))
     try:
         kk = kick_trending(since, now)
+        if verbose:
+            print(f"  trending: {len(kk)} of {len(KICK_WATCH)} Kick watchlist channels with clips in the last {hours}h")
     except Exception as e:
         print(f"  trending: Kick scan failed ({type(e).__name__})")
         kk = {}
@@ -147,6 +152,8 @@ def discover(known, videos=(), h=None, now=None, hours=24, verbose=True):
         n = crowd(words, videos)
         scored.append((d["best_vph"] * crowd_factor(n), site, login, d, n))
     scored.sort(reverse=True)
+    if verbose and not scored:
+        print(f"  trending: nobody new above {MIN_CLIP_VPH:,} views/hour on their best clip today")
     stamp = now.isoformat(timespec="seconds")
     for score, site, login, d, n in scored[:MAX_NEW]:
         key = f"{site}_{re.sub(r'[^a-z0-9_]', '', login.lower())}"
