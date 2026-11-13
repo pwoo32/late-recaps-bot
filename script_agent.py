@@ -511,7 +511,9 @@ def ungrounded(clip, script):
     ctx = re.findall(r"[a-z][a-z']{3,}", (script.get("context") or "").lower())
     invented += [w for w in ctx if w not in REACTION_WORDS and w not in free_writer.STOP and w[:5] not in source]
     thin = len(transcript.split()) < 25 and max((len(q.split()) for q in clip.get("quotes") or []), default=0) < 8
-    if thin or len(invented) >= 2:
+    # A real model writes context the footage lacks, so allow it one more unsourced word than the local model
+    allowed = 3 if script.get("writer") in ("gemini", "groq", "api", "claude-code") else 2
+    if thin or len(invented) >= allowed:
         print(f"  [{clip.get('id')}] model title \"{script.get('title')}\" isn't backed by what's said"
               + (f" ({', '.join(invented)})" if invented else " (too little to go on)") + "; using the free writer")
         return True

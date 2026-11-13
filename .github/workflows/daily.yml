@@ -132,9 +132,9 @@ jobs:
           YT_PROXY: ${{ secrets.YT_PROXY }}
         run: |
           d=~/.config/clip-builder; mkdir -p "$d"
-          [ -n "$YOUTUBE_TOKEN" ] && printf '%s' "$YOUTUBE_TOKEN" > "$d/youtube_token.json"
-          [ -n "$REVIEW_TOKEN" ] && printf '%s' "$REVIEW_TOKEN" > "$d/review_token.json"
-          [ ! -f "$d/tiktok_token.json" ] && [ -n "$TIKTOK_TOKEN" ] && printf '%s' "$TIKTOK_TOKEN" > "$d/tiktok_token.json"
+          [ -n "$YOUTUBE_TOKEN" ] && printf '%s' "$YOUTUBE_TOKEN" | sed '1s/^\xEF\xBB\xBF//' > "$d/youtube_token.json"
+          [ -n "$REVIEW_TOKEN" ] && printf '%s' "$REVIEW_TOKEN" | sed '1s/^\xEF\xBB\xBF//' > "$d/review_token.json"
+          [ ! -f "$d/tiktok_token.json" ] && [ -n "$TIKTOK_TOKEN" ] && printf '%s' "$TIKTOK_TOKEN" | sed '1s/^\xEF\xBB\xBF//' > "$d/tiktok_token.json"
           mkdir -p ~/.config/yt-dlp; : > ~/.config/yt-dlp/config
           if [ -n "$YT_PROXY" ]; then   # home-internet proxy: YouTube bot-blocks downloads from cloud servers
             echo "--proxy $YT_PROXY" >> ~/.config/yt-dlp/config
@@ -148,6 +148,8 @@ jobs:
             echo "YouTube cookies: $(grep -c youtube.com "$RUNNER_TEMP/cookies.txt") lines"
             echo "--cookies $RUNNER_TEMP/cookies.txt" >> ~/.config/yt-dlp/config
           fi
+          # Secrets set from Windows PowerShell can start with a UTF-8 BOM, which the Google client can't parse
+          # (Nov 13: the upload crashed on it); the sed above strips it.
           chmod 600 "$d"/*.json 2>/dev/null || true
 
       - name: Check YouTube download
