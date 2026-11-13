@@ -381,9 +381,8 @@ def twitch_candidates(key, src, since, now, h=None):
         created = datetime.fromisoformat(c["created_at"].replace("Z", "+00:00"))
         vph = LM.clip_velocity(c, now)
         # Speed matters most: a clip gaining views fast right now is the one most likely to go viral again for us
-        # (up to 4x for 60k+ views/hour), and a streamer nobody is clipping yet gets a bonus (trending.crowd_factor).
-        score = round(math.log2(2 + c["view_count"]) * 1.5 * (1 + min(vph / 20000, 3)) * TWITCH_BOOST
-                      * src.get("crowd_factor", 1.0), 2)
+        # (up to 4x for 60k+ views/hour). How crowded the streamer is gets applied in rank_moments ("crowd").
+        score = round(math.log2(2 + c["view_count"]) * 1.5 * (1 + min(vph / 20000, 3)) * TWITCH_BOOST, 2)
         common = dict(score=score, comments=0, likes=c["view_count"], quotes=[c["title"]], source=key,
                       video_title=c["title"], video_views=c["view_count"], clip_vph=round(vph),
                       age_h=round((now - created).total_seconds() / 3600, 1), signals=["twitch clip"], was_live=True)

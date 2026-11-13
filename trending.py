@@ -157,7 +157,8 @@ def discover(known, videos=(), h=None, now=None, hours=24, verbose=True):
             "permission": "auto-added: trending on " + site.title() + " (clipping policy not checked)",
             "campaign_cpm": None, "first_seen": stamp,
         }
-        e.update(last_seen=stamp, trending=True, crowd=n, crowd_factor=crowd_factor(n),
+        # "crowd" is the same rank multiplier sources.py uses for saturated names (rank_moments applies it)
+        e.update(last_seen=stamp, trending=True, crowd_channels=n, crowd=crowd_factor(n),
                  best_clip_vph=round(d["best_vph"]), clips_24h=d["clips"])
         entries[key] = e
         if verbose:
