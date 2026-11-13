@@ -1570,7 +1570,14 @@ def cmd_publish(args):
         hold(qdir, [f"youtube: the sign-in uploads to {me[0]['snippet']['title'] + ' (' + me[0]['id'] + ')' if me else 'no channel'}, "
                     f"not Late Recaps ({CHANNEL_ID}). Sign in again with the Late Recaps account (`channel_builder.py auth`)."])
         sys.exit(1)
+    # MAX_POSTS caps uploads per run. The cloud run queues a few clips and posts the first that passes the
+    # originality gate, so one held clip (e.g. too little speech) no longer means nothing posts that day.
+    max_posts = int(os.environ.get("MAX_POSTS") or 0)
+    posted = 0
     for c in todo:
+        if max_posts and posted >= max_posts:
+            print(f"[{c['id']}] not posted: today's {max_posts} post(s) already went up; kept as a backup")
+            continue
         print(f"[{c['id']}] {c['title']}")
         try:
             path = cmd_cut(argparse.Namespace(
@@ -1601,6 +1608,7 @@ def cmd_publish(args):
             state.setdefault("spike_posts", {})[day] = state["spike_posts"].get(day, 0) + 1
         qfile.write_text(json.dumps(queue, indent=1, ensure_ascii=False), encoding="utf-8")
         save_state(state)
+        posted += 1
         print(f"  uploaded https://youtube.com/shorts/{vid} "
               + (f"(goes public {c['post_local']})" if scheduled else "(public now)"))
     if tt.get("enabled"):
