@@ -51,6 +51,7 @@ import argparse
 import json
 import os
 import re
+import time
 import shutil
 import subprocess
 import sys
@@ -339,37 +340,52 @@ def _openai_compat(url, key, model, prompt):
     return parse_json(r.json()["choices"][0]["message"]["content"])
 
 
-_GEMINI_MODEL = []
+_GEMINI_MODELS = []
 
 
-def gemini_model(key):
-    """GEMINI_MODEL if set, else the newest Flash text model this key can use. Google retires model names (the
+def gemini_models(key):
+    """GEMINI_MODEL if set, else this key's Flash text models, newest stable first. Google retires model names (the
     hard-coded gemini-2.5-flash returned 404 on Nov 13 2026), so ask the API instead of guessing."""
     if os.environ.get("GEMINI_MODEL"):
-        return os.environ["GEMINI_MODEL"]
-    if not _GEMINI_MODEL:
+        return [os.environ["GEMINI_MODEL"]]
+    if not _GEMINI_MODELS:
         r = requests.get("https://generativelanguage.googleapis.com/v1beta/models", params={"key": key, "pageSize": 200},
                          timeout=30)
         r.raise_for_status()
         names = [m["name"].split("/", 1)[-1] for m in r.json().get("models", [])
                  if "generateContent" in m.get("supportedGenerationMethods", [])]
-        flash = [n for n in names if "flash" in n and not re.search(r"lite|image|tts|audio|live|thinking|exp|8b", n)]
-        pick = (sorted(flash, key=lambda n: ("preview" not in n, [int(x) if x.isdigit() else 0
-                                                                  for x in re.findall(r"\d+", n)]))[-1:]
-                or [n for n in names if n.startswith("gemini")][-1:])
-        if not pick:
+        flash = [n for n in names if "flash" in n and not re.search(r"image|tts|audio|live|thinking|exp|8b", n)]
+        ver = lambda n: [int(x) for x in re.findall(r"\d+", n)]
+        # stable before preview, full before lite, newest first; lite and older models are the fallbacks
+        _GEMINI_MODELS.extend(sorted(flash, key=lambda n: ("preview" in n, "lite" in n, [-v for v in ver(n)])))
+        if not _GEMINI_MODELS:
             raise RuntimeError("no Gemini text model available to this key")
-        _GEMINI_MODEL.append(pick[0])
-        print(f"Gemini model: {pick[0]}")
-    return _GEMINI_MODEL[0]
+        print("Gemini models: " + ", ".join(_GEMINI_MODELS[:4]))
+    return _GEMINI_MODELS
 
 
 def _gemini(prompt):
+    """Busy (503) and rate-limited (429) answers are common on the free tier: wait and retry, then try the next
+    model down the list."""
     key = os.environ.get("GEMINI_API_KEY")
     if not key:
         return None
-    return _openai_compat("https://generativelanguage.googleapis.com/v1beta/openai/chat/completions", key,
-                          gemini_model(key), prompt)
+    last = None
+    for model in gemini_models(key)[:4]:
+        for wait in (0, 15, 45):
+            time.sleep(wait)
+            try:
+                out = _openai_compat("https://generativelanguage.googleapis.com/v1beta/openai/chat/completions", key,
+                                     model, prompt)
+                print(f"Gemini answered with {model}.")
+                return out
+            except requests.HTTPError as e:
+                last = e
+                code = e.response.status_code if e.response is not None else 0
+                print(f"  Gemini {model}: HTTP {code}")
+                if code not in (429, 500, 502, 503, 504):
+                    break  # 404 and friends: this model won't work, try the next
+    raise last or RuntimeError("Gemini gave no answer")
 
 
 def _groq(prompt):
