@@ -229,16 +229,13 @@ jobs:
       - name: Channel activity (comment replies, first comments, community post drafts)
         if: steps.mode.outputs.skip != 'true' && steps.mode.outputs.mode == 'daily'
         continue-on-error: true   # never holds up the clips
-        # Signed in with ACTIVITY_TOKEN, but drafts only: nothing posts (replies, first comments, spam holds) until
-        # the repo variable ACTIVITY_POST is set to true (Settings > Secrets and variables > Actions > Variables).
-        # Drafts land in reports/activity_<date>/.
+        # Drafts only until the repo variable ACTIVITY_POST is "true" (Settings > Secrets and variables > Actions >
+        # Variables): Philip wants replies studied before any go out. Posting also needs the ACTIVITY_TOKEN sign-in.
+        # Either way it checks the upload schedule and writes the drafts to reports/activity_<date>/.
         run: |
-          flag=
-          if [ "${{ vars.ACTIVITY_POST }}" = true ] && [ "${{ steps.mode.outputs.post }}" = true ] && [ -f ~/.config/clip-builder/activity_token.json ]; then
-            flag=--post
-          else
-            echo "Comment posting is off (ACTIVITY_POST is not true): drafting only."
-          fi
+          flag=--post
+          [ "${{ vars.ACTIVITY_POST }}" = true ] && [ "${{ steps.mode.outputs.post }}" = true ] && [ -f ~/.config/clip-builder/activity_token.json ] || flag=
+          echo "Activity: ${flag:-drafts only}"
           python channel_activity_agent.py $flag --max-replies 10 2>&1 | tee -a activity.log
 
       - name: Save completed agent review
