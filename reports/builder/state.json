@@ -1301,8 +1301,8 @@
   "@TheDiaryOfACEO": "UCGq-a57w-aPwyi3pW7XLiHw"
  },
  "review": {
-  "at": "2026-11-13 19:02",
-  "report": "/home/runner/work/late-recaps-bot/late-recaps-bot/reports/review_2026-11-13_1902/report.md",
+  "at": "2026-11-14 17:08",
+  "report": "/home/runner/work/late-recaps-bot/late-recaps-bot/reports/review_2026-11-14_1708/report.md",
   "lessons": {
    "titles": [
     "Creator name first, then a bet or question in plain verbs, and never the result. Add a named guest or celebrity when one exists.",
@@ -1327,7 +1327,7 @@
    ]
   },
   "source_score": {
-   "jynxzi": 0.84,
+   "jynxzi": 0.7,
    "caseoh": 0.96,
    "stableronaldo": 0.96,
    "ishowspeed": 0.58,
@@ -1337,6 +1337,13 @@
   "length_hint": 22,
   "clips": [
    {
+    "title": "Jynxzi: \"Evan Burger\" \ud83d\ude31",
+    "views": 0,
+    "avg_viewed": null,
+    "stayed": null,
+    "verdict": null
+   },
+   {
     "title": "Kai Cenat Goes Crazy \ud83d\udd25",
     "views": 0,
     "avg_viewed": null,
@@ -1345,9 +1352,9 @@
    },
    {
     "title": "Jynxzi Didn't See This Coming At Biggest Announcement Ever \ud83d\ude31",
-    "views": 22,
-    "avg_viewed": 64,
-    "stayed": 0.3,
+    "views": 20,
+    "avg_viewed": 50.59,
+    "stayed": 0.35,
     "verdict": null
    },
    {
@@ -1382,7 +1389,7 @@
     "title": "Ronaldo: \"Laiys. Says Word\" \ud83d\ude31",
     "views": 28,
     "avg_viewed": 70.69,
-    "stayed": 0.5384615384615384,
+    "stayed": 0.5,
     "verdict": null
    },
    {
@@ -1394,7 +1401,7 @@
    },
    {
     "title": "Speed And Derek Jeter Go Crazy \ud83d\udd25",
-    "views": 2,
+    "views": 4,
     "avg_viewed": 0,
     "stayed": 0.0,
     "verdict": null
@@ -1467,13 +1474,6 @@
     "views": 2,
     "avg_viewed": 30.870000000000005,
     "stayed": 1.0,
-    "verdict": null
-   },
-   {
-    "title": "Jynxzi Plays For $1000 And Goes Off \ud83d\udd25",
-    "views": 2,
-    "avg_viewed": 112.00000000000001,
-    "stayed": 0.5,
     "verdict": null
    }
   ]
