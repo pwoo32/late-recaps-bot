@@ -1,20 +1,22 @@
-"""Review agent: checks how your posted clips are doing and tells you how to get more views and money out of them.
+"""Review agent: finds out what makes our clips spread, and steers tomorrow's clips toward it.
 
-For every Short on your channel it gathers:
-- public stats:        views, likes, comments, views per hour, privacy (a clip stuck on private gets 0 views)
-- YouTube Analytics:   average % viewed, how many viewers stayed past the first seconds (engaged views and the
-                       retention curve), shares, subscribers gained, how much traffic came from the Shorts feed
-- what we posted:      the builder's queue entry for it: creator, stream moment, title, hook, narrator line, length,
-                       post time and the transcript
+It answers the questions that change what we post next:
+- is the Shorts feed testing our clips at all (a clip it never shows can't go viral, whatever its content)
+- which creators, moment types, hook styles, title styles, lengths, posting times and stream freshness get clips
+  pushed, compared with our typical clip, with how many clips each finding rests on
+- the first seconds: how many viewers stay past the swipe, and the second where most of them leave
+- what to make more of and less of, in plain words
 
-then diagnoses each clip (hook losing people, clip too long, weak title/topic, wrong time, still private), learns which
-creators, lengths and title styles work on your channel, and tracks money: YouTube Partner Program progress, what the
-views would be worth, which clips fit a paid clipping campaign, and affiliate/sponsor ideas that fit the channel.
+Sources: public stats, YouTube Analytics (engaged views, retention curve, traffic from the Shorts feed) and the
+builder's queue entry for each clip (creator, hook, title, narrator line, length, post time, how old the stream was,
+which signal found the moment). TikTok numbers come from `reports/tiktok_stats.csv`, a sheet this agent keeps with a
+row per clip sent to TikTok. With `tiktok-auth --stats` it reads the views from TikTok itself; otherwise fill in
+the numbers from TikTok Studio and the next review uses them.
 
-It feeds what it learns back into the other agents through reports/builder/state.json:
-- script_agent.py writes titles, hooks and narrator lines with the review's lessons in its prompt
-- channel_builder.py daily ranks creators by how their clips held viewers on your channel and cuts to the length
-  that held best
+It feeds the findings back through reports/builder/state.json ("review"):
+- channel_builder.py daily ranks creators and posting hours by how their clips spread, and cuts to the length
+  that spread best
+- script_agent.py writes titles, hooks and narrator lines with the make-more / make-less findings in its prompt
 
 It only reads. It never uploads, edits, retitles or deletes a video; suggested new titles are for you to apply.
 
@@ -24,13 +26,14 @@ Usage:
     python review_agent.py --days 14     # only Shorts posted in the last 14 days
     python review_agent.py --no-llm      # rules only, skip the written review
 
-Without `auth` it still runs on public stats (YOUTUBE_API_KEY, 2-3 quota units), but can't see retention, private
-clips or subscribers gained. The written review uses a free local Ollama model when one is running (Claude Code or
-ANTHROPIC_API_KEY only if you pick them with --writer); without one you get the rule-based review only.
+Without `auth` it still runs on public stats (YOUTUBE_API_KEY, 2-3 quota units), but can't see retention or
+private clips. The written review uses a free writer (Gemini, Groq or a local Ollama model) when one is available;
+without one you get the rule-based review only, which is what the daily cloud run uses.
 """
 
 import argparse
 import json
+import math
 import os
 import re
 import shutil
@@ -50,6 +53,7 @@ from niches import NICHES
 from sources import SOURCES
 import script_agent
 import council
+import originality
 import tuner
 
 BUILDER_DIR = REPORTS_DIR / "builder"
@@ -64,27 +68,9 @@ REVIEW_SCOPES = ["https://www.googleapis.com/auth/youtube.readonly",
                  "https://www.googleapis.com/auth/yt-analytics-monetary.readonly"]  # revenue, once monetized
 SETTLED_H = 48  # a Short gets most of its views in the first 1-3 days
 
-# YouTube Partner Program, Shorts route (Oct 2026). Views are public Shorts views in the last 90 days.
-YPP_TIERS = [
-    {"name": "Fan funding (memberships, Super Thanks, Shopping)", "subs": 500, "shorts_views": 3_000_000, "uploads": 3},
-    {"name": "Full YPP (Shorts ad revenue share)", "subs": 1000, "shorts_views": 10_000_000, "uploads": 0},
-]
-
-# Ideas that fit a streamer-clips channel at any size. The written review adds ones specific to your clips.
-MONEY_IDEAS = [
-    ("Paid clipping campaigns", "Whop Content Rewards, Vyro, ClipAffiliates and creators' own programs pay $0.50-$3 per "
-     "1,000 views for clips of their streamers, from day one and with no YPP needed. Join the ones that cover creators "
-     "you already clip, then set campaign_cpm in sources.py so the builder favors them."),
-    ("Link Shorts to long videos", "A Short can link to one of your own long videos (Studio > the Short > Related video). "
-     "A weekly 8-10 minute 'best of the week' with real commentary earns long-form ad money (much higher RPM than "
-     "Shorts) and counts watch hours toward YPP."),
-    ("Affiliate links in the channel bio and pinned comments", "Links in Shorts descriptions aren't clickable. Put one "
-     "link hub in the channel header and pin a comment on breakout clips (gaming chairs, headsets, the games streamed, "
-     "Amazon Associates or a game-key store). Only worth it once clips pass ~50k views."),
-    ("Sponsor shoutouts", "Once you post daily and pass ~10k subs, energy-drink, VPN, mobile-game and betting-free "
-     "gaming brands pay clip pages $50-500 per pinned comment or end card. List the channel on creator marketplaces "
-     "(YouTube BrandConnect once eligible, Passionfroot, Collabstr)."),
-]
+TESTED_VIEWS = 10  # fewer views than this after 2 days: the Shorts feed never really showed the clip
+MIN_GROUP = 3      # a finding needs at least this many settled clips behind it
+TIKTOK_STATS = REPORTS_DIR / "tiktok_stats.csv"
 
 
 # ---------- shared state ----------
@@ -128,7 +114,8 @@ def credentials(g, interactive=False):
         for f in (REVIEW_TOKEN, UPLOAD_TOKEN):
             if not f.exists():
                 continue
-            creds = g["Credentials"].from_authorized_user_file(str(f))
+            # utf-8-sig: a token pasted through PowerShell or a secret can start with a byte-order mark
+            creds = g["Credentials"].from_authorized_user_info(json.loads(f.read_text(encoding="utf-8-sig")))
             if creds.expired and creds.refresh_token:
                 try:
                     creds.refresh(g["Request"]())
@@ -265,21 +252,6 @@ class Analytics:
         return {r["insightTrafficSourceType"]: r["views"] for r in self.query(
             start, end, "views", dimensions="insightTrafficSourceType", filters=f"video=={vid}")}
 
-    def shorts_90d(self):
-        end = datetime.now(timezone.utc).date()
-        got = self.query((end - timedelta(days=90)).isoformat(), end.isoformat(), "views,engagedViews",
-                         filters="creatorContentType==SHORTS")
-        return got[0] if got else None
-
-    def revenue_28d(self):
-        end = datetime.now(timezone.utc).date()
-        try:
-            got = rows(self.api.reports().query(ids="channel==MINE", startDate=(end - timedelta(days=28)).isoformat(),
-                                                endDate=end.isoformat(), metrics="estimatedRevenue").execute())
-        except self.HttpError:
-            return None  # not monetized yet, or signed in without the revenue scope
-        return got[0].get("estimatedRevenue") if got else None
-
 
 def watch_at(curve, ratio):
     if not curve:
@@ -311,7 +283,8 @@ def collect(args, state):
             qdir, c = queued[v["id"]]
             v["clip"] = {k: c.get(k) for k in ("source", "creator", "video_id", "video_title", "moment", "start", "end", "hook",
                                                "context", "take", "post_utc", "post_local", "quotes", "rank", "writer", "recipe",
-                                               "signals", "spike", "council")}
+                                               "signals", "spike", "council", "signal", "stream_age_h", "platform",
+                                               "draft", "script_source")}
             v["transcript"] = script_agent.cut_transcript(qdir, c)
         else:
             low = v["title"].lower()
@@ -326,15 +299,6 @@ def collect(args, state):
                         "views": int(ch["statistics"].get("viewCount", 0)),
                         "videos": int(ch["statistics"].get("videoCount", 0))},
             "videos": vids, "analytics": False, "notes": [], "units": units, "signed_in": bool(creds)}
-    settled = [v for v in vids if v["privacy"] == "public" and v["age_h"] >= 48]
-    if len(settled) >= 8 and statistics.median(v["views"] for v in settled) <= 5:
-        data["notes"].append(
-            f"{len(settled)} public clips older than 2 days have a median of "
-            f"{statistics.median(v['views'] for v in settled):g} views. Even a brand-new channel's Shorts usually get "
-            "a few hundred test views, so the Shorts feed isn't showing these at all. The usual causes: the clips are "
-            "reposted from the creators' own YouTube uploads with too little added (reused content), copyright claims, "
-            "or near-duplicate posts. Check YouTube Studio > Content > Restrictions, and Analytics > Content > "
-            "'How viewers find your Shorts'.")
     if not creds:
         data["notes"].append("Not signed in: public stats only. Run `python review_agent.py auth` for retention and private clips.")
     elif not has_analytics(creds):
@@ -350,11 +314,9 @@ def collect(args, state):
                 a = per.get(v["id"])
                 if a:
                     v["an"] = a
-                if v["age_h"] >= 24:  # curves are empty for the first day
+                if v["age_h"] >= 24 and max(v["views"], int((a or {}).get("views") or 0)):  # no curve on day 1 or at 0 views
                     v["curve"] = an.retention(v["id"], start, end)
                     v["traffic"] = an.traffic(v["id"], start, end)
-            data["shorts_90d"] = an.shorts_90d()
-            data["revenue_28d"] = an.revenue_28d()
             data["analytics"] = True
         except an.HttpError:
             pass
@@ -370,141 +332,377 @@ def metrics(v):
     views = max(v["views"], int(a.get("views") or 0))
     m = {"views": views, "vph": views / max(v["age_h"], 1),
          "like_rate": v["likes"] / views if views else None,
-         "comment_rate": v["comments"] / views if views else None,
          "avp": a.get("averageViewPercentage"), "avd": a.get("averageViewDuration"),
-         "shares": a.get("shares"), "subs": a.get("subscribersGained"),
+         "shares": a.get("shares"),
          "stayed": (a["engagedViews"] / a["views"]) if a.get("engagedViews") is not None and a.get("views") else None,
-         "hold_3s": None, "end": None, "feed_share": None}
+         "hold_3s": None, "end": None, "feed_share": None, "drop_s": None}
     curve, secs = v.get("curve") or [], v["seconds"] or 30
     if curve:
         m["hold_3s"] = watch_at(curve, min(3 / secs, 1))
         m["end"] = watch_at(curve, 1.0)
+        m["drop_s"] = drop_second(curve, secs)
     t = v.get("traffic") or {}
     if sum(t.values()):
         m["feed_share"] = t.get("SHORTS", 0) / sum(t.values())
     return m
 
 
-def diagnose(v, m, base, bench):
-    """Plain-language findings for one clip, worst first. Thresholds are rules of thumb for Shorts."""
+def drop_second(curve, secs):
+    """The second where the biggest share of viewers leaves (the steepest fall in the retention curve)."""
+    pts = sorted(curve)
+    if len(pts) < 3:
+        return None
+    falls = [(pts[i][1] - pts[i + 1][1], pts[i + 1][0]) for i in range(len(pts) - 1)]
+    fall, at = max(falls)
+    return round(at * secs, 1) if fall > 0.05 else None
+
+
+def settled_clips(vids, ms):
+    """Public clips old enough to judge: a Short gets most of its feed test in the first two days."""
+    return [(v, m) for v, m in zip(vids, ms) if v["privacy"] == "public" and v["age_h"] >= SETTLED_H]
+
+
+def typical_views(settled):
+    """The channel's typical clip: the geometric mean of views, so a run of 0s and one 45 doesn't read as a 45x hit."""
+    if not settled:
+        return None
+    return math.expm1(statistics.fmean(math.log1p(m["views"]) for _, m in settled))
+
+
+def lift(m, typical):
+    """How a clip did against the typical clip, on a log scale (0 = typical, +0.69 = about twice as many views)."""
+    return math.log1p(m["views"]) - math.log1p(typical or 0)
+
+
+# ----- what each clip was, in the terms we can change -----
+
+GENERIC_HOOK = re.compile(r"^(wait for (it|the end)|watch (this|till the end|his face)|this went wrong fast|"
+                          r"he didn'?t think this through|no way|bro what|you won'?t believe)\b", re.I)
+STAKE = re.compile(r"\$|\d|\b(if|bet|lose|loses|win|wins|or|until|first|last|challenge|vs|against)\b", re.I)
+QUESTION = re.compile(r"\?\s*$|^(who|what|why|how|can|is|does|did|will|would|should)\b", re.I)
+QUOTE_TITLE = re.compile(r"^[^:]{2,30}:\s*[\"“]")
+
+
+def hook_style(hook):
+    h = (hook or "").strip()
+    if not h:
+        return "no hook text"
+    if GENERIC_HOOK.search(h):
+        return "generic tease (WAIT FOR IT...)"
+    if QUESTION.search(h):
+        return "question"
+    if STAKE.search(h):
+        return "stake or challenge"
+    return "says what happens"
+
+
+def title_style(title):
+    if originality.STOCK.search(title or ""):
+        return "stock reaction (Goes Crazy, Can't Believe...)"
+    if QUOTE_TITLE.search(title or ""):
+        return "quote title (Creator: \"line\")"
+    return "says what happens"
+
+
+def length_bucket(secs):
+    return "under 20s" if secs < 20 else "20-30s" if secs < 31 else "31-45s" if secs < 46 else "over 45s"
+
+
+def time_block(published):
+    h = published.astimezone(LOCAL_TZ).hour
+    return ("morning (6am-noon ET)" if 6 <= h < 12 else "afternoon (noon-5pm ET)" if 12 <= h < 17
+            else "evening (5-10pm ET)" if 17 <= h < 22 else "late night (10pm-6am ET)")
+
+
+def freshness(age_h):
+    if age_h is None:
+        return None
+    return "under 12h" if age_h < 12 else "12-48h" if age_h < 48 else "over 48h"
+
+
+def found_by(c):
+    """Which moment finder picked the clip, from the queue's signal line ("chat went 5x...", "Twitch clip, ...")."""
+    sig = (c.get("signal") or "").lower()
+    if c.get("platform") == "kick_clip" or "kick clip" in sig:
+        return "Kick clip"
+    if c.get("platform") == "twitch_clip" or "twitch clip" in sig:
+        return "Twitch clip"
+    if c.get("spike") or "chat went" in sig:
+        return "chat spike"
+    if "replayed" in sig or "heat" in sig:
+        return "most-replayed"
+    if "timestamp" in sig:
+        return "viewer timestamp comments"
+    return None
+
+
+def features(v):
+    """The levers behind one clip: who, how it opens, how it's titled, how long, when, how fresh, how it was found."""
+    c = v.get("clip") or {}
+    f = {"creator": c.get("creator"),
+         "title": title_style(v["title"]),
+         "length": length_bucket(v["seconds"] or 0),
+         "post time": time_block(v["published"])}
+    if c.get("hook") is not None or c.get("take") is not None:  # one of our builder's clips
+        f["hook"] = hook_style(c.get("hook"))
+    if c.get("stream_age_h") is not None:
+        f["stream age at post"] = freshness(c["stream_age_h"])
+    f["found by"] = found_by(c)
+    return {k: x for k, x in f.items() if x}
+
+
+FACTOR_ORDER = ["creator", "found by", "stream age at post", "hook", "title", "length", "post time"]
+
+
+def factor_findings(settled, typical, platform="YouTube"):
+    """Per lever and value: how many clips, how many the feed tested, typical views, retention, and the lift over the
+    channel's typical clip (shrunk toward 'no effect' when it rests on few clips)."""
+    groups = defaultdict(list)
+    for v, m in settled:
+        for k, x in features(v).items():
+            groups[(k, x)].append((v, m))
+    out = []
+    for (k, x), vm in groups.items():
+        n = len(vm)
+        lifts = [lift(m, typical) for _, m in vm]
+        shrunk = sum(lifts) / (n + MIN_GROUP)  # 3 clips at 2x read as ~1.4x; 10 clips at 2x read as ~1.7x
+        stayed = [m["stayed"] for _, m in vm if m["stayed"] is not None]
+        out.append({"factor": k, "value": x, "n": n, "platform": platform,
+                    "tested": sum(1 for _, m in vm if m["views"] >= TESTED_VIEWS),
+                    "views": math.expm1(statistics.fmean(math.log1p(m["views"]) for _, m in vm)),
+                    "stayed": statistics.fmean(stayed) if stayed else None, "stayed_n": len(stayed),
+                    "mult": math.exp(shrunk), "best": max(vm, key=lambda p: p[1]["views"])[0]["title"]})
+    return sorted(out, key=lambda r: (FACTOR_ORDER.index(r["factor"]) if r["factor"] in FACTOR_ORDER else 99, -r["mult"]))
+
+
+def finding_text(r):
+    yt = r["platform"] == "YouTube"
+    s = (f"{r['value']} ({r['factor']}): {r['n']} clips, " + (f"{r['tested']} got a real feed test, " if yt else "")
+         + f"typically {r['views']:.0f} views, {r['mult']:.1f}x our typical {r['platform'] if not yt else ''} clip".replace("  ", " "))
+    if r["stayed"] is not None:
+        s += f", {r['stayed']:.0%} " + ("stayed past the swipe" if yt else "watched to the end")
+    return s + ("" if yt else f" (on {r['platform']})")
+
+
+def make_more_less(findings):
+    """The findings strong enough to act on: enough clips and a clear gap from typical."""
+    usable = [r for r in findings if r["n"] >= MIN_GROUP]
+    more = sorted((r for r in usable if r["mult"] >= 1.25), key=lambda r: -r["mult"])
+    less = sorted((r for r in usable if r["mult"] <= 0.8), key=lambda r: r["mult"])
+    return more, less
+
+
+def lever_scores(findings, factor):
+    """{value: multiplier} for one lever, only values with enough clips."""
+    return {r["value"]: round(min(max(r["mult"], 0.5), 2.0), 2) for r in findings
+            if r["factor"] == factor and r["n"] >= MIN_GROUP}
+
+
+def creator_scores(settled, typical):
+    """Per sources.py key: how that creator's clips spread on our channel, shrunk toward 1.0 with few clips."""
+    by = defaultdict(list)
+    for v, m in settled:
+        if (v.get("clip") or {}).get("source"):
+            by[v["clip"]["source"]].append(lift(m, typical))
+    return {s: round(min(max(math.exp(sum(xs) / (len(xs) + MIN_GROUP)), 0.5), 2.0), 2) for s, xs in by.items()}
+
+
+def hour_scores(settled, typical):
+    """Per UTC posting hour: the same, so the builder posts when our clips get tested."""
+    by = defaultdict(list)
+    for v, m in settled:
+        by[v["published"].astimezone(timezone.utc).hour].append(lift(m, typical))
+    return {str(h): round(min(max(math.exp(sum(xs) / (len(xs) + MIN_GROUP)), 0.5), 2.0), 2)
+            for h, xs in by.items() if len(xs) >= 2}
+
+
+def best_length(settled, typical):
+    """The cut length (seconds) whose clips spread best, once there are enough clips to compare."""
+    buckets = defaultdict(list)
+    for v, m in settled:
+        buckets[min((v["seconds"] or 0) // 10, 5)].append(lift(m, typical))
+    good = {b: sum(xs) / (len(xs) + MIN_GROUP) for b, xs in buckets.items() if len(xs) >= MIN_GROUP}
+    if len(good) < 2:
+        return None
+    b = max(good, key=good.get)
+    return int(min(max(b * 10 + 5, 15), 55))
+
+
+def distribution(vids, ms, now):
+    """Is the Shorts feed testing our clips? Per week: clips posted, how many passed TESTED_VIEWS, best clip."""
+    weeks = []
+    for w in range(3):
+        lo, hi = now - timedelta(days=7 * (w + 1)) - timedelta(hours=SETTLED_H), now - timedelta(days=7 * w) - timedelta(hours=SETTLED_H)
+        vm = [(v, m) for v, m in zip(vids, ms) if v["privacy"] == "public" and lo <= v["published"] < hi]
+        if vm:
+            best = max(vm, key=lambda p: p[1]["views"])
+            weeks.append({"from": lo, "to": hi, "n": len(vm), "tested": sum(1 for _, m in vm if m["views"] >= TESTED_VIEWS),
+                          "views": sum(m["views"] for _, m in vm), "best": best[0], "best_views": best[1]["views"]})
+    return weeks
+
+
+def diagnose(v, m, typical):
+    """What to change for one clip, worst first. Only findings that point at something we can do differently."""
     out = []
     if v["privacy"] != "public":
         if v.get("publish_at") and datetime.fromisoformat(v["publish_at"].replace("Z", "+00:00")) > datetime.now(timezone.utc):
             out.append(("info", "Scheduled, not public yet."))
         else:
-            out.append(("fix", f"Still {v['privacy']}: nobody can see it. Unaudited API projects lock uploads to private; "
-                               "flip it to Public in YouTube Studio (and apply for the API audit, README: Uploading)."))
+            out.append(("fix", f"Still {v['privacy']}: nobody can see it. Flip it to Public in YouTube Studio."))
             return out
     if v.get("upload_status") in ("rejected", "failed", "deleted"):
         out.append(("fix", f"YouTube {v['upload_status']} this upload ({v.get('rejection') or v.get('failure') or 'no reason given'})."))
     if v.get("blocked_in"):
-        out.append(("fix", f"Blocked in {v['blocked_in']} countries: that is a copyright claim (Content ID). Claimed Shorts "
-                           "get little or no feed reach. Check YouTube Studio > Content > Restrictions for who claimed it."))
-    if v["age_h"] < 24:
-        out.append(("info", f"Only {v['age_h']:.0f}h old; judge it after {SETTLED_H}h."))
-    if m["stayed"] is not None and m["stayed"] < 0.55:
-        out.append(("hook", f"Only {m['stayed']:.0%} of plays turned into engaged views: people swipe in the first "
-                            "second. Open on the loudest reaction, not the setup, and make the hook text promise the payoff."))
+        out.append(("fix", f"Copyright claim (blocked in {v['blocked_in']} countr{'ies' if v['blocked_in'] > 1 else 'y'}): claimed Shorts get little feed reach. "
+                           "The builder won't clip this stream again."))
+    if v["age_h"] < SETTLED_H:
+        return out
+    if m["views"] < TESTED_VIEWS:
+        out.append(("reach", f"The feed never tested it ({m['views']} views in {v['age_h'] / 24:.0f} days). Nothing here "
+                             "says the clip was bad; it says YouTube didn't show it. Usually reused-content signals "
+                             "(a moment many channels posted, too little of our own take) or a stale stream."))
+        return out
+    if m["stayed"] is not None and m["stayed"] < 0.6:
+        out.append(("hook", f"Only {m['stayed']:.0%} stayed past the swipe"
+                            + (f"; the biggest drop is at {m['drop_s']:.0f}s" if m["drop_s"] is not None else "")
+                            + ". Open on the reaction or the stake, not the setup, and make the hook promise the payoff."))
     elif m["hold_3s"] is not None and m["hold_3s"] < 0.65:
-        out.append(("hook", f"{1 - m['hold_3s']:.0%} are gone by second 3. Start closer to the moment; cut the narrator "
-                            "line shorter or put it over action instead of a still."))
+        out.append(("hook", f"{1 - m['hold_3s']:.0%} are gone by second 3. Start closer to the moment."))
+    elif m["stayed"] is not None and m["stayed"] >= 0.75:
+        out.append(("good", f"{m['stayed']:.0%} stayed past the swipe: this opening works, copy it."))
+    if m["drop_s"] is not None and m["stayed"] is not None and m["stayed"] >= 0.6 and m["drop_s"] > 3:
+        out.append(("length", f"Most viewers leave at {m['drop_s']:.0f}s of {v['seconds']}s: end the clip there or move "
+                              "the payoff earlier."))
     if m["avp"] is not None:
         if m["avp"] < 60:
-            out.append(("length", f"Viewers watch {m['avp']:.0f}% on average: the clip runs long. Trim dead air and end "
-                                  "right on the punchline."))
+            out.append(("length", f"Watched {m['avp']:.0f}% on average: trim dead air and end on the punchline."))
         elif m["avp"] >= 90:
-            out.append(("good", f"{m['avp']:.0f}% average view: retention is strong"
-                                + (", and it loops." if (m["end"] or 0) >= 0.9 else ".")))
-    if m["feed_share"] is not None and v["age_h"] >= SETTLED_H and m["feed_share"] < 0.5:
-        out.append(("reach", f"Only {m['feed_share']:.0%} of views came from the Shorts feed: YouTube isn't pushing it. "
-                             "Usually the first seconds or the topic (is this creator hot this week?)."))
-    if v["age_h"] >= SETTLED_H and base and m["views"] < 0.5 * base and not any(k == "hook" for k, _ in out):
-        good_ret = m["avp"] is not None and m["avp"] >= 75
-        out.append(("title" if good_ret else "pick",
-                    f"{m['views'] / base:.1f}x your median."
-                    + (" People who saw it watched it, so the title/topic or posting time held it back."
-                       if good_ret else " Weak pick: the moment or the creator didn't land.")))
-    if m["like_rate"] is not None and m["views"] >= 300:
-        if m["like_rate"] >= 0.05:
-            out.append(("good", f"{m['like_rate']:.1%} like rate: the payoff lands."))
-        elif m["like_rate"] < 0.015:
-            out.append(("pick", f"{m['like_rate']:.1%} like rate: the payoff is weak or the clip ends before it."))
-    if bench and m["views"] >= bench:
-        out.append(("good", f"Beat the niche benchmark ({bench:,} views for young winning channels)."))
-    if (m["subs"] or 0) >= 5 and m["views"] and m["subs"] / m["views"] * 1000 >= 2:
-        out.append(("good", f"{m['subs']} subscribers ({m['subs'] / m['views'] * 1000:.1f} per 1k views): make more like this."))
+            out.append(("good", f"{m['avp']:.0f}% average view" + (" and it loops" if (m["end"] or 0) >= 0.9 else "")
+                                + ": keep this length and pacing."))
+    if m["feed_share"] is not None and m["feed_share"] < 0.5:
+        out.append(("reach", f"Only {m['feed_share']:.0%} of its views came from the Shorts feed, so the feed tried it and "
+                             "stopped. Watch the swipe rate on the next clips like it."))
+    if typical is not None and lift(m, typical) >= math.log(3):
+        out.append(("good", f"{(m['views'] + 1) / (typical + 1):.0f}x our typical clip: make more like this."))
+    if (m["shares"] or 0) >= 3 and m["views"] and m["shares"] / m["views"] >= 0.01:
+        out.append(("good", f"{m['shares']:.0f} shares: people send this one around, which is what makes Shorts travel."))
     return out
 
 
-def shrink(x, n, k=2):
-    """Lean a ratio toward 1 when it rests on few clips."""
-    return 1 + (x - 1) * n / (n + k)
+# ----- TikTok: numbers come from a sheet, since our TikTok posts are manual drafts -----
+
+TT_COLS = ["clip", "posted", "creator", "caption", "views", "likes", "comments", "shares", "avg_watch_s", "watched_full_pct",
+           "tiktok_video", "source"]
 
 
-def learn(vids, ms, base):
-    """What works on this channel: creators, length, title style. Only clips at least a day old count."""
-    settled = [(v, m) for v, m in zip(vids, ms) if v["age_h"] >= 24 and v["privacy"] == "public"]
-    out = {"source_score": {}, "length_hint": None, "title_style": [], "settled": len(settled)}
-    if not settled or not base:
-        return out
+def tiktok_rows():
+    """Every clip we sent to TikTok, with the numbers Philip filled in (blank until then). Keeps what's already typed."""
+    import csv
+    have = {}
+    if TIKTOK_STATS.exists():
+        with TIKTOK_STATS.open(encoding="utf-8-sig", newline="") as f:
+            for r in csv.DictReader(f):
+                if r.get("clip"):
+                    have[r["clip"]] = r
+    for qfile in sorted(BUILDER_DIR.glob("*_20*/queue.json")):
+        try:
+            queue = json.loads(qfile.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            continue
+        for c in queue:
+            if not c.get("tiktok_id"):
+                continue
+            key = f"{qfile.parent.name}#{c['id']}"
+            row = have.setdefault(key, {})
+            row.update({"clip": key, "posted": (c.get("post_local") or c.get("post_utc") or "")[:16],
+                        "creator": c.get("creator") or "", "caption": (c.get("tiktok_caption") or c.get("title") or "")[:80]})
+            row["_c"] = c
+    return [have[k] for k in sorted(have, key=lambda k: have[k].get("posted") or "", reverse=True)]
 
-    def score(v, m):  # views relative to the median, nudged by how well it held viewers
-        held = (m["avp"] / 80) if m["avp"] is not None else 1
-        return (m["views"] / base) * min(max(held, 0.5), 1.5)
 
-    # creator weights use retention only: `channel_builder.py track` already weights creators by views
-    by_src = defaultdict(list)
-    for v, m in settled:
-        if v["clip"].get("source") and m["avp"] is not None:
-            by_src[v["clip"]["source"]].append(min(max(m["avp"] / 80, 0.5), 1.5))
-    for s, xs in by_src.items():
-        out["source_score"][s] = round(min(max(shrink(statistics.median(xs), len(xs)), 0.5), 2.0), 2)
+def _words(text):
+    return re.sub(r"#\w+|[^a-z0-9 ]", " ", (text or "").lower()).split()
 
-    if len(settled) >= 6:
-        buckets = defaultdict(list)
-        for v, m in settled:
-            buckets[min(v["seconds"] // 15, 3)].append(score(v, m))
-        good = {b: statistics.median(xs) for b, xs in buckets.items() if len(xs) >= 2}
-        if len(good) >= 2:
-            b = max(good, key=good.get)
-            out["length_hint"] = int(b * 15 + 7)
 
-        ranked = sorted(settled, key=lambda vm: -score(*vm))
-        top, bottom = ranked[:len(ranked) // 2], ranked[len(ranked) // 2:]
-        avg = lambda xs: sum(xs) / max(len(xs), 1)
-        chars = avg([len(v["title"]) for v, _ in top]), avg([len(v["title"]) for v, _ in bottom])
-        if abs(chars[0] - chars[1]) >= 8:
-            out["title_style"].append(f"Your better clips have {'shorter' if chars[0] < chars[1] else 'longer'} titles "
-                                      f"(~{chars[0]:.0f} vs ~{chars[1]:.0f} characters).")
+def fill_tiktok_from_api(rs):
+    """Fill views/likes/comments/shares from TikTok itself when the login has video.list (`tiktok-auth --stats`).
+    Our posts are drafts Philip finishes in the app, so a post is matched to its draft by caption (he pastes ours)
+    and by being posted after the draft was sent. Rows nobody posted stay blank; numbers he typed for a post the API
+    can't match are kept. Returns a note for the report."""
+    import difflib
+    try:
+        import tiktok_upload
+        if not tiktok_upload.can_read_stats():
+            return None
+        times = [datetime.strptime(r["_c"]["post_utc"], "%Y-%m-%d %H:%M").replace(tzinfo=timezone.utc)
+                 for r in rs if r.get("_c") and r["_c"].get("post_utc")]
+        posts = tiktok_upload.my_videos(since=min(times) - timedelta(days=2) if times else None)
+    except Exception as e:  # TikTok trouble never stops the review
+        return f"Couldn't read TikTok views ({type(e).__name__}: {str(e)[:160]}); using the numbers in the sheet."
+    taken, filled = set(), 0
+    for r in rs:
+        c = r.get("_c")
+        if not c:
+            continue
+        mine = " ".join(_words(c.get("tiktok_caption") or c.get("title")))
+        try:
+            sent = datetime.strptime(c.get("post_utc") or "", "%Y-%m-%d %H:%M").replace(tzinfo=timezone.utc) - timedelta(hours=14)
+        except ValueError:
+            sent = None
+        best, score = None, 0.0
+        for p in posts:
+            if p["id"] in taken or (sent and datetime.fromtimestamp(p.get("create_time", 0), timezone.utc) < sent):
+                continue
+            theirs = " ".join(_words(p.get("video_description") or p.get("title")))
+            ratio = difflib.SequenceMatcher(None, mine[:120], theirs[:120]).ratio() if mine and theirs else 0
+            if ratio > score:
+                best, score = p, ratio
+        if best and score >= 0.6:
+            taken.add(best["id"])
+            r.update({"views": best.get("view_count", ""), "likes": best.get("like_count", ""),
+                      "comments": best.get("comment_count", ""), "shares": best.get("share_count", ""),
+                      "tiktok_video": best["id"], "source": "TikTok API"})
+            filled += 1
+    return f"Read {len(posts)} public TikTok posts and matched {filled} of them to our drafts."
+
+
+def save_tiktok_rows(rs):
+    import csv
+    with TIKTOK_STATS.open("w", encoding="utf-8", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=TT_COLS, extrasaction="ignore")
+        w.writeheader()
+        for r in rs:
+            w.writerow({k: r.get(k, "") for k in TT_COLS})
+
+
+def _num(x):
+    try:
+        return float(str(x).replace(",", "").replace("%", "").strip())
+    except ValueError:
+        return None
+
+
+def tiktok_clips(rs, now):
+    """(video-like, metrics-like) pairs for TikTok rows with views filled in, so the same lever analysis runs on them."""
+    out = []
+    for r in rs:
+        views, c = _num(r.get("views")), r.get("_c")
+        if views is None or not c:
+            continue
+        try:
+            when = datetime.strptime(c.get("post_utc") or "", "%Y-%m-%d %H:%M").replace(tzinfo=timezone.utc)
+        except ValueError:
+            continue
+        secs = int((c.get("end") or 0) - (c.get("start") or 0)) or 30
+        full = _num(r.get("watched_full_pct"))
+        v = {"id": r["clip"], "title": c.get("title") or r.get("caption"), "seconds": secs, "published": when,
+             "age_h": (now - when).total_seconds() / 3600, "privacy": "public",
+             "clip": {k: c.get(k) for k in ("source", "creator", "hook", "take", "signal", "spike", "platform",
+                                            "stream_age_h", "draft", "writer")}}
+        m = {"views": int(views), "stayed": (full / 100) if full is not None else None,
+             "shares": _num(r.get("shares")), "avg_watch_s": _num(r.get("avg_watch_s"))}
+        out.append((v, m))
     return out
-
-
-def money(data, vids, ms, niche):
-    ch = data["channel"]
-    now = datetime.now(timezone.utc)
-    recent = [(v, m) for v, m in zip(vids, ms) if v["age_days"] <= 90 and v["privacy"] == "public"]
-    s90 = data.get("shorts_90d") or {}
-    views90 = int(s90.get("engagedViews") or s90.get("views") or sum(m["views"] for _, m in recent))
-    first = min((v["published"] for v, _ in recent), default=now)
-    pace = views90 / max((now - first).total_seconds() / 86400, 1)
-    tiers = []
-    for t in YPP_TIERS:
-        left = max(t["shorts_views"] - views90, 0)
-        tiers.append({**t, "have_subs": ch["subs"], "have_views": views90, "have_uploads": len(recent),
-                      "views_pct": min(views90 / t["shorts_views"], 1), "subs_pct": min(ch["subs"] / t["subs"], 1),
-                      "days_at_pace": round(left / pace) if pace and left else (0 if not left else None)})
-    total = sum(m["views"] for m in ms)
-    rpm = NICHES.get(niche, {}).get("shorts_rpm", 0.03)
-    campaign = []
-    for v, m in zip(vids, ms):
-        src = SOURCES.get(v["clip"].get("source") or "", {})
-        if src.get("campaign_cpm"):
-            campaign.append((v, m, src, m["views"] * src["campaign_cpm"] / 1000))
-    paid_sources = [s["name"] for s in SOURCES.values() if s.get("campaign_cpm") and s.get("niche") == niche]
-    return {"views90": views90, "pace": pace, "tiers": tiers, "total_views": total,
-            "ad_value": total * rpm / 1000, "rpm": rpm, "campaign": campaign, "paid_sources": paid_sources,
-            "niche_campaign_cpm": NICHES.get(niche, {}).get("campaign_cpm"),
-            "revenue_28d": data.get("revenue_28d")}
 
 
 # ---------- the written review ----------
@@ -513,9 +711,9 @@ REVIEW_SCHEMA = {
     "type": "object",
     "properties": {
         "clips": {"type": "array", "items": {"type": "object", "properties": {
-            "video_id": {"type": "string"}, "verdict": {"type": "string"}, "worked": {"type": "string"},
-            "hurt": {"type": "string"}, "better_title": {"type": "string"}, "better_hook": {"type": "string"}},
-            "required": ["video_id", "verdict", "worked", "hurt", "better_title", "better_hook"]}},
+            "video_id": {"type": "string"}, "verdict": {"type": "string"}, "why": {"type": "string"},
+            "better_title": {"type": "string"}, "better_hook": {"type": "string"}},
+            "required": ["video_id", "verdict", "why", "better_title", "better_hook"]}},
         "lessons": {"type": "object", "properties": {
             "titles": {"type": "array", "items": {"type": "string"}},
             "hooks": {"type": "array", "items": {"type": "string"}},
@@ -523,12 +721,9 @@ REVIEW_SCHEMA = {
             "length_and_pacing": {"type": "array", "items": {"type": "string"}},
             "posting": {"type": "array", "items": {"type": "string"}}},
             "required": ["titles", "hooks", "clip_picks", "length_and_pacing", "posting"]},
-        "money": {"type": "array", "items": {"type": "object", "properties": {
-            "idea": {"type": "string"}, "why": {"type": "string"}, "first_step": {"type": "string"}},
-            "required": ["idea", "why", "first_step"]}},
         "next_actions": {"type": "array", "items": {"type": "string"}},
     },
-    "required": ["clips", "lessons", "money", "next_actions"],
+    "required": ["clips", "lessons", "next_actions"],
 }
 
 
@@ -536,33 +731,39 @@ def fmt(x, spec, none="n/a"):
     return none if x is None else format(x, spec)
 
 
-def review_prompt(data, vids, ms, diags, learned, cash, pb, niche, previous):
+def review_prompt(data, judged, typical, findings, weeks, pb, niche, previous):
+    """`judged` is [(video, metrics, diagnosis)] for the clips worth writing about (best and worst tested, newest)."""
     blocks = []
-    for v, m, d in zip(vids, ms, diags):
+    for v, m, d in judged:
         c = v["clip"]
-        b = [f"[{v['id']}] \"{v['title']}\" ({v['seconds']}s, posted {v['published']:%a %H:%M} UTC, {v['age_h']:.0f}h ago, {v['privacy']})",
-             f"    Creator: {c.get('creator') or '?'}" + (f"; source stream \"{c['video_title']}\" at {c['moment']}" if c.get("video_title") else ""),
-             f"    Views {m['views']:,} ({m['vph']:,.0f}/h), likes {v['likes']}, comments {v['comments']}, "
-             f"avg viewed {fmt(m['avp'], '.0f')}%, plays that became engaged views {fmt(m['stayed'], '.0%')}, "
-             f"still watching at 3s {fmt(m['hold_3s'], '.0%')}, at the end {fmt(m['end'], '.0%')}, "
-             f"from Shorts feed {fmt(m['feed_share'], '.0%')}, shares {fmt(m['shares'], '.0f')}, subs gained {fmt(m['subs'], '.0f')}"]
+        b = [f"[{v['id']}] \"{v['title']}\" ({v['seconds']}s, posted {v['published'].astimezone(LOCAL_TZ):%a %I:%M %p} ET, "
+             f"{v['age_h']:.0f}h ago)",
+             f"    Creator: {c.get('creator') or '?'}" + (f"; source stream \"{c['video_title']}\" at {c['moment']}" if c.get("video_title") else "")
+             + (f"; stream was {c['stream_age_h']:.0f}h old when posted" if c.get("stream_age_h") is not None else ""),
+             f"    Views {m['views']:,}, stayed past the swipe {fmt(m['stayed'], '.0%')}, avg viewed {fmt(m['avp'], '.0f')}%, "
+             f"biggest drop at {fmt(m['drop_s'], '.0f')}s, from Shorts feed {fmt(m['feed_share'], '.0%')}, shares {fmt(m['shares'], '.0f')}"]
         if c.get("hook"):
-            b.append(f"    On-screen hook: \"{c['hook']}\"; context line: \"{c.get('context')}\"; narrator said: \"{c.get('take')}\"")
+            b.append(f"    On-screen hook: \"{c['hook']}\"; narrator said: \"{c.get('take')}\"")
         if v.get("transcript"):
-            b.append(f"    Transcript: \"{v['transcript'][:900]}\"")
+            b.append(f"    Transcript: \"{v['transcript'][:700]}\"")
         if d:
             b.append("    Rule checks: " + " | ".join(t for _, t in d))
         blocks.append("\n".join(b))
+    more, less = make_more_less(findings)
     winners = "\n".join(f"- {w['title']} ({w['views']:,} views, {w['seconds']}s)" for w in (pb or {}).get("winners", [])[:10])
     prev = "\n".join(f"- {x}" for xs in (previous or {}).values() for x in xs)
-    tiers = "; ".join(f"{t['name']}: {t['have_subs']}/{t['subs']} subs, {t['have_views']:,}/{t['shorts_views']:,} Shorts views"
-                      for t in cash["tiers"])
-    return f"""You review a young YouTube Shorts channel, "{data['channel']['title']}", that posts {NICHES[niche]['label'].lower()}:
-20-60 second cuts of streamers' live moments with an AI narrator line over the opening and a pinned hook text.
-It has {data['channel']['subs']:,} subscribers. Be a sharp, honest Shorts strategist: specific to these clips, no
-generic advice. Clips under {SETTLED_H}h old or without analytics are early, so say what to watch rather than judging.
+    feed = "; ".join(f"week to {w['to']:%b %d}: {w['tested']} of {w['n']} clips got a real feed test" for w in weeks)
+    return f"""You coach a young YouTube Shorts channel, "{data['channel']['title']}", that posts {NICHES[niche]['label'].lower()}:
+20-60 second cuts of streamers' live moments with an AI narrator line and on-screen hook text. The only goal is
+clips that go viral. Be specific to these clips and this data, no generic advice, and say when the data is too thin.
 
-Its clips (rule-based checks already ran; build on them, don't repeat them):
+Is the Shorts feed testing our clips: {feed or 'no settled clips yet'}. Our typical clip gets {typical or 0:.0f} views.
+
+What the numbers already show (rule-based, by lever):
+Make more: {'; '.join(finding_text(r) for r in more) or 'nothing clear yet'}
+Make less: {'; '.join(finding_text(r) for r in less) or 'nothing clear yet'}
+
+Clips to judge:
 
 """ + "\n\n".join(blocks) + f"""
 
@@ -572,20 +773,16 @@ Breakout Shorts from the top channels in this niche, for comparison:
 Lessons from earlier reviews (keep the ones still true, drop or fix the rest):
 {prev or '- (first review)'}
 
-Money: YPP progress {tiers}. {data['channel']['subs']} subs. Paid clipping campaigns known for: {', '.join(cash['paid_sources']) or 'none yet'}.
-
 Write:
-- clips: one entry per clip id above. verdict (one line), worked, hurt, better_title (the creator's name first, what
-  happens in plain punchy words, under 60 characters, 1-2 emoji at the end; only facts the transcript/hook support),
+- clips: one entry per clip id above. verdict (one line: did it spread and the main reason), why (what in the hook,
+  the moment, the title or the timing made viewers stay or swipe), better_title (creator's name first, what happens
+  in plain punchy words, under 60 characters, 1-2 emoji at the end; only facts the transcript/hook support),
   better_hook (max 6 words, on-screen text that makes a scroller wait for the payoff).
-- lessons: short rules the script writer and clip picker should follow from now on, grounded in this data. 1-4 each.
-- money: 2-4 ideas to earn from this channel now and as it grows (campaigns, affiliate, sponsors, long-form, merch),
-  each with why it fits these clips and the concrete first step. No made-up programs or numbers.
-- next_actions: the 3-5 most valuable things to do this week, most important first.
+- lessons: short rules the script writer and clip picker follow from now on, grounded in this data. 1-4 each.
+- next_actions: the 3-5 changes most likely to get the next clips pushed by the feed, most important first.
 
-Return only JSON matching: {{"clips": [{{"video_id", "verdict", "worked", "hurt", "better_title", "better_hook"}}],
-"lessons": {{"titles": [], "hooks": [], "clip_picks": [], "length_and_pacing": [], "posting": []}},
-"money": [{{"idea", "why", "first_step"}}], "next_actions": []}}"""
+Return only JSON matching: {{"clips": [{{"video_id", "verdict", "why", "better_title", "better_hook"}}],
+"lessons": {{"titles": [], "hooks": [], "clip_picks": [], "length_and_pacing": [], "posting": []}}, "next_actions": []}}"""
 
 
 def _claude_code(prompt):
@@ -654,158 +851,252 @@ def written_review(prompt, writer=None):
 
 # ---------- report ----------
 
-KIND_LABEL = {"fix": "FIX", "hook": "Hook", "length": "Length", "reach": "Reach", "title": "Title/topic",
-              "pick": "Clip pick", "good": "Working", "info": "Note"}
+KIND_LABEL = {"fix": "Fix", "hook": "First seconds", "length": "Length", "reach": "Reach", "good": "Working", "info": "Note"}
 
 
-def write_report(out_dir, data, vids, ms, diags, learned, cash, llm, writer, base, bench, niche):
+def clip_lines(v, m, d, r, typical):
+    c = v["clip"]
+    L = [f"### [{v['title']}](https://www.youtube.com/shorts/{v['id']})", ""]
+    meta = [c.get("creator") or "creator unknown", f"{v['seconds']}s", f"posted {v['published'].astimezone(LOCAL_TZ):%a %I:%M %p} ET"]
+    if c.get("stream_age_h") is not None:
+        meta.append(f"stream {c['stream_age_h']:.0f}h old")
+    L.append("- " + ", ".join(meta))
+    nums = [f"{m['views']:,} views" + (f" ({(m['views'] + 1) / (typical + 1):.1f}x typical)" if typical is not None and v["age_h"] >= SETTLED_H else "")]
+    if m["stayed"] is not None:
+        nums.append(f"{m['stayed']:.0%} stayed past the swipe")
+    if m["drop_s"] is not None:
+        nums.append(f"biggest drop at {m['drop_s']:.0f}s")
+    if m["feed_share"] is not None:
+        nums.append(f"{m['feed_share']:.0%} from the Shorts feed")
+    if m["shares"]:
+        nums.append(f"{m['shares']:.0f} share{'s' if m['shares'] != 1 else ''}")
+    L.append("- " + ", ".join(nums))
+    if c.get("hook"):
+        L.append(f"- Hook: \"{c['hook']}\" ({hook_style(c['hook'])}) / narrator: \"{c.get('take')}\"")
+    for k, t in d:
+        L.append(f"- **{KIND_LABEL[k]}:** {t}")
+    if r:
+        L.append(f"- **Review:** {r['verdict']}" + (f" {r['why']}" if r.get("why") else ""))
+        L.append(f"  - Try instead: \"{r['better_title']}\", hook \"{r['better_hook']}\" (not applied)")
+    return L + [""]
+
+
+def write_report(out_dir, data, vids, ms, diags, typical, findings, weeks, tt, llm, writer, steer):
     now = datetime.now(timezone.utc)
     ch = data["channel"]
     by_id = {c["video_id"]: c for c in (llm or {}).get("clips", [])}
-    L = [f"# Clip review, {ch['title']}, {now.astimezone(LOCAL_TZ):%a %b %d %I:%M %p} ET", "",
-         f"{len(vids)} Shorts reviewed, {ch['subs']:,} subscribers, {cash['total_views']:,} views on these clips"
-         + (f", median {base:,.0f} for clips a day or older." if base else ".")
-         + (" With YouTube Analytics." if data["analytics"] else " Public stats only."), ""]
-    for n in data["notes"]:
-        L.append(f"> {n}")
-    if data["notes"]:
-        L.append("")
+    settled = settled_clips(vids, ms)
+    L = [f"# What's spreading, {ch['title']}, {now.astimezone(LOCAL_TZ):%a %b %d %I:%M %p} ET", "",
+         f"{len(settled)} clips old enough to judge (2+ days), our typical clip gets {typical or 0:.0f} views. "
+         + ("With YouTube Analytics." if data["analytics"] else "Public stats only, so no swipe or retention data."), ""]
 
     fixes = [(v, t) for v, d in zip(vids, diags) for k, t in d if k == "fix"]
-    actions = (llm or {}).get("next_actions") or []
-    if fixes or actions:
-        L += ["## Do this week", ""]
-        L += [f"- **{v['title']}**: {t}" for v, t in fixes]
-        L += [f"- {a}" for a in actions]
-        L.append("")
+    if fixes:
+        L += ["## Fix now", ""] + [f"- **{v['title']}**: {t}" for v, t in fixes] + [""]
 
-    L += ["## Clips", "", "| Clip | Age | Views | Views/hr | Avg viewed | Stayed past swipe | Likes | Subs | vs median |",
-          "|---|---|---|---|---|---|---|---|---|"]
-    for v, m in sorted(zip(vids, ms), key=lambda vm: vm[0]["published"], reverse=True):
-        L.append(f"| [{v['title']}](https://www.youtube.com/shorts/{v['id']}) | {v['age_h']:.0f}h | {m['views']:,} | "
-                 f"{m['vph']:,.0f} | {fmt(m['avp'], '.0f')}{'%' if m['avp'] is not None else ''} | {fmt(m['stayed'], '.0%')} | "
-                 f"{fmt(m['like_rate'], '.1%')} | {fmt(m['subs'], '.0f', '-')} | "
-                 + (v["privacy"] if v["privacy"] != "public" else f"{m['views'] / base:.1f}x" if base and v["age_h"] >= 24
-                    else "early") + " |")
+    L += ["## Is the Shorts feed testing our clips?", "",
+          f"A clip with under {TESTED_VIEWS} views after 2 days was never really shown. Until the feed tests our clips, "
+          "hooks and titles can't make them go viral, so this is the first number to move.", ""]
+    for w in weeks:
+        L.append(f"- {w['from']:%b %d}-{w['to']:%b %d}: **{w['tested']} of {w['n']}** clips got a feed test, "
+                 f"{w['views']:,} views in all; best: \"{w['best']['title']}\" ({w['best_views']:,})")
+    if not weeks:
+        L.append("- No clips are 2 days old yet.")
+    elif weeks[0]["n"] >= 3 and weeks[0]["tested"] / weeks[0]["n"] < 0.3:
+        L.append(f"- Most clips aren't getting a feed test. That's the bottleneck, ahead of hooks or titles: YouTube holds "
+                 "back clips that look like reposts (a moment many channels already posted, a stock title or hook, "
+                 "a narrator line that only describes the screen) and clips from streams other clippers already covered. "
+                 "The levers below show which of ours get tested.")
     L.append("")
 
-    for v, m, d in sorted(zip(vids, ms, diags), key=lambda x: x[0]["published"], reverse=True):
-        c, r = v["clip"], by_id.get(v["id"], {})
-        L += [f"### {v['title']}", ""]
-        meta = [c.get("creator") or "creator unknown", f"{v['seconds']}s", f"posted {v['published'].astimezone(LOCAL_TZ):%a %I:%M %p} ET"]
-        if c.get("moment"):
-            meta.append(f"from \"{c['video_title']}\" at {c['moment']}")
-        L += ["- " + ", ".join(meta)]
-        if c.get("hook"):
-            L.append(f"- Hook: \"{c['hook']}\" / narrator: \"{c.get('take')}\"")
-        if m["hold_3s"] is not None:
-            L.append(f"- Retention: {m['hold_3s']:.0%} still watching at 3s, {fmt(m['end'], '.0%')} at the end"
-                     + (f", {m['feed_share']:.0%} of views from the Shorts feed" if m["feed_share"] is not None else ""))
-        for k, t in d:
-            L.append(f"- **{KIND_LABEL[k]}:** {t}")
-        if r:
-            L.append(f"- **Review:** {r['verdict']}")
-            if r.get("worked"):
-                L.append(f"  - Worked: {r['worked']}")
-            if r.get("hurt"):
-                L.append(f"  - Hurt: {r['hurt']}")
-            L.append(f"  - Try instead: \"{r['better_title']}\", hook \"{r['better_hook']}\" (not applied; change it in Studio if you like it)")
-        L.append("")
+    more, less = make_more_less(findings)
+    L += ["## Make more of", ""]
+    L += [f"- {finding_text(r)}. Best: \"{r['best']}\"" for r in more] or ["- Nothing stands out yet (a finding needs "
+                                                                          f"{MIN_GROUP}+ clips and a clear gap from typical)."]
+    L += ["", "## Make less of", ""]
+    L += [f"- {finding_text(r)}" for r in less] or ["- Nothing stands out yet."]
+    thin = sorted({r["factor"] for r in findings} - {r["factor"] for r in more + less})
+    if thin:
+        L.append(f"- No clear winner or loser yet on: {', '.join(thin)}.")
+    L.append("")
 
-    L += ["## What the other agents learn from this", ""]
+    tested = [(v, m) for v, m in settled if m["stayed"] is not None and m["views"] >= TESTED_VIEWS]
+    L += ["## First seconds", ""]
+    if tested:
+        L.append(f"- Across {len(tested)} tested clips, a median {statistics.median(m['stayed'] for _, m in tested):.0%} "
+                 "stayed past the swipe. Breakout Shorts usually hold 70%+; under 60% and the feed stops showing a clip.")
+        drops = [m["drop_s"] for _, m in tested if m["drop_s"] is not None]
+        if drops:
+            L.append(f"- Viewers most often leave around {statistics.median(drops):.0f}s in.")
+        by_hook = defaultdict(list)
+        for v, m in tested:
+            if (v["clip"] or {}).get("hook") is not None:
+                by_hook[hook_style(v["clip"]["hook"])].append(m["stayed"])
+        for k, xs in sorted(by_hook.items(), key=lambda kv: -statistics.fmean(kv[1])):
+            L.append(f"- {k} hooks: {statistics.fmean(xs):.0%} stayed ({len(xs)} clip{'s' if len(xs) > 1 else ''})")
+        worst = sorted(tested, key=lambda p: p[1]["stayed"])[:3]
+        L.append("- Lost the most people at the start: " + "; ".join(
+            f"\"{v['title']}\" {m['stayed']:.0%} (hook \"{(v['clip'] or {}).get('hook') or '-'}\")" for v, m in worst))
+    else:
+        L.append("- No tested clip has swipe data yet" + ("." if data["analytics"] else ": run `python review_agent.py auth`."))
+    L.append("")
+
+    L += ["## Clips worth a look", ""]
+    ranked = sorted([(v, m, d) for v, m, d in zip(vids, ms, diags) if v["privacy"] == "public" and v["age_h"] >= SETTLED_H
+                     and m["views"] >= TESTED_VIEWS], key=lambda x: -x[1]["views"])
+    early = sorted([(v, m, d) for v, m, d in zip(vids, ms, diags) if v["age_h"] < SETTLED_H],
+                   key=lambda x: x[0]["published"], reverse=True)
+    shown = set()
+    for label, group in [("Best tested clips", ranked[:4]),
+                         ("Tested, but viewers swiped", sorted((x for x in ranked if x[1]["stayed"] is not None
+                                                                and x[1]["stayed"] < 0.6), key=lambda x: x[1]["stayed"])[:3]),
+                         ("Still early (under 2 days)", early[:4])]:
+        group = [x for x in group if x[0]["id"] not in shown]
+        if not group:
+            continue
+        L += [f"**{label}**", ""]
+        for v, m, d in group:
+            shown.add(v["id"])
+            L += clip_lines(v, m, d, by_id.get(v["id"]), typical)
+    untested = [v for (v, m) in settled if m["views"] < TESTED_VIEWS]
+    if untested:
+        L += [f"{len(untested)} other clips never got a feed test, so they say nothing about content.", ""]
+
+    L += ["## TikTok", ""]
+    if tt.get("note"):
+        L.append(f"- {tt['note']}")
+    filled = [r for r in tt["rows"] if _num(r.get("views")) is not None]
+    if tt["findings"]:
+        tm, tl = make_more_less(tt["findings"])
+        L.append(f"- From the {len(filled)} TikTok posts with numbers:")
+        L += [f"  - More: {finding_text(r)}" for r in tm] + [f"  - Less: {finding_text(r)}" for r in tl]
+        if not (tm or tl):
+            L.append("  - Nothing clear yet.")
+    missing = [r for r in tt["rows"] if _num(r.get("views")) is None]
+    if missing:
+        L.append(f"- {len(missing)} clips went to your TikTok drafts with no numbers yet"
+                 + (": either they were never posted, or the caption was changed so much the review couldn't match "
+                    "them. Type the numbers into `reports/tiktok_stats.csv` for any you did post." if tt.get("note") and "matched" in tt["note"] else
+                    ". To read them automatically, run `python channel_builder.py tiktok-auth --stats` once (README: "
+                    "TikTok numbers). Or type views (and shares, watched full %) from TikTok Studio into "
+                    "`reports/tiktok_stats.csv` for the ones you posted."))
+    if not tt["rows"]:
+        L.append("- No clips sent to TikTok yet.")
+    L.append("")
+
     lessons = (llm or {}).get("lessons") or {}
-    for k, label in [("titles", "Titles"), ("hooks", "Hooks"), ("clip_picks", "Clip picks"),
-                     ("length_and_pacing", "Length and pacing"), ("posting", "Posting")]:
-        for x in lessons.get(k, []):
-            L.append(f"- {label}: {x}")
-    for x in learned["title_style"]:
-        L.append(f"- Titles: {x}")
-    for s, w in sorted(learned["source_score"].items(), key=lambda kv: -kv[1]):
-        L.append(f"- {SOURCES.get(s, {}).get('name', s)}: clip-pick weight {w} from how well their clips held viewers (1.0 = neutral)")
-    if learned["length_hint"]:
-        L.append(f"- Cut length: aim for ~{learned['length_hint']}s, the length that held viewers best on this channel")
-    if learned["settled"] < 3:
-        L.append("- No clip is a day old yet, so the weights didn't change." if not learned["settled"] else
-                 f"- Only {learned['settled']} clip{'s are' if learned['settled'] > 1 else ' is'} a day old and public, "
-                 "so the weights barely move yet.")
-    L += ["", "script_agent.py puts these lessons in its prompt; channel_builder.py daily uses the weights and length.", ""]
+    if (llm or {}).get("next_actions") or any(lessons.values()):
+        L += ["## Written review", ""] + [f"- {a}" for a in (llm or {}).get("next_actions") or []]
+        for k, label in [("titles", "Titles"), ("hooks", "Hooks"), ("clip_picks", "Clip picks"),
+                         ("length_and_pacing", "Length and pacing"), ("posting", "Posting")]:
+            L += [f"- {label}: {x}" for x in lessons.get(k, [])]
+        L.append("")
 
-    L += ["## Money", ""]
-    if cash["revenue_28d"] is not None:
-        L.append(f"- YouTube revenue, last 28 days: ${cash['revenue_28d']:,.2f}")
-    for t in cash["tiers"]:
-        eta = ("views done" if t["days_at_pace"] == 0 else
-               "too early for a pace" if cash["views90"] < 1000 or t["days_at_pace"] is None or t["days_at_pace"] > 3650
-               else f"about {t['days_at_pace']} days at the current pace")
-        L.append(f"- **{t['name']}**: {t['have_subs']:,}/{t['subs']:,} subs ({t['subs_pct']:.0%}), "
-                 f"{t['have_views']:,}/{t['shorts_views']:,} Shorts views in 90 days ({t['views_pct']:.1%}; {eta})"
-                 + (f", {t['have_uploads']}/{t['uploads']} uploads" if t["uploads"] else ""))
-    L.append(f"- These clips' {cash['total_views']:,} views would be worth about ${cash['ad_value']:.2f} in Shorts ads once "
-             f"monetized (${cash['rpm']:.2f} per 1k in this niche). Paid clipping campaigns pay far more per view"
-             + (f" (~${cash['niche_campaign_cpm']:.2f} per 1k here)." if cash["niche_campaign_cpm"] else "."))
-    for v, m, src, usd in cash["campaign"]:
-        L.append(f"- {v['title']}: {src['name']} has a paid program (${src['campaign_cpm']}/1k): submit it for about ${usd:.2f}.")
-    if not cash["campaign"]:
-        L.append("- None of your clips are of a creator with a known paid program yet"
-                 + (f"; ones that have one: {', '.join(cash['paid_sources'])}." if cash["paid_sources"] else
-                    ". Find programs for the creators you clip and set campaign_cpm in sources.py."))
-    L.append("")
-    for x in (llm or {}).get("money") or []:
-        L.append(f"- **{x['idea']}**: {x['why']} First step: {x['first_step']}")
-    for name, text in MONEY_IDEAS:
-        L.append(f"- **{name}**: {text}")
-    L += ["", f"_Review by {writer or 'rules only'}. Quota: "
-          + ("a few units of your signed-in quota" if data["signed_in"] else f"{data['units']} Data API units") + ". "
-          "This agent never changes your videos._", ""]
+    L += ["## What changes tomorrow", ""]
+    if steer["source_score"]:
+        L.append("- Creator weight in the clip pick: " + ", ".join(
+            f"{SOURCES.get(k, {}).get('short', k)} {w:.2f}" for k, w in sorted(steer["source_score"].items(), key=lambda kv: -kv[1])))
+    if steer["hour_score"]:
+        et = lambda h: datetime.now(timezone.utc).replace(hour=int(h), minute=0).astimezone(LOCAL_TZ).strftime("%I%p").lstrip("0").lower()
+        L.append("- Posting hours (ET) weight: " + ", ".join(
+            f"{et(h)} {w:.2f}" for h, w in sorted(steer["hour_score"].items(), key=lambda kv: -kv[1])))
+    for k, vals in (steer.get("levers") or {}).items():
+        if vals:
+            L.append(f"- {k.capitalize()} weight in the clip pick: " + ", ".join(f"{x} {w:.2f}" for x, w in vals.items()))
+    if steer["length_hint"]:
+        L.append(f"- Cut length: ~{steer['length_hint']}s")
+    if steer["make_more"] or steer["make_less"]:
+        L.append(f"- The script writer gets the {len(steer['make_more'])} make-more and {len(steer['make_less'])} "
+                 "make-less findings above in its prompt.")
+    L.append(f"- Edit settings on the top clip: {tuner.best_recipe(data['state'])}")
+    if data["notes"]:
+        L += ["", "## Data problems", ""] + [f"- {n}" for n in data["notes"]]
+    L += ["", f"_Review by {writer or 'rules only'}. This agent never changes your videos._", ""]
     out_dir.mkdir(parents=True, exist_ok=True)
     (out_dir / "report.md").write_text("\n".join(L), encoding="utf-8")
 
 
 # ---------- main ----------
 
+def pick_levers(findings):
+    """Lever scores the clip council can use on a candidate before it's cut: how it was found and how fresh it is."""
+    return {k: lever_scores(findings, k) for k in ("found by", "stream age at post")}
+
+
+def found_by_moment(m):
+    """found_by() for a candidate moment (before it becomes a queue entry)."""
+    return found_by({"platform": m.get("platform"), "spike": m.get("chat_ratio"),
+                     "signal": ("chat went" if m.get("chat_ratio") else "") + (" heat" if m.get("heat") is not None else "")
+                     + (" timestamp" if m.get("comments") else "") or "most replayed"})
+
+
 def cmd_review(args):
     state = load_state()
     data = collect(args, state)
+    data["state"] = state
     vids = data["videos"]
-    niche = args.niche
-    pb_file = latest(f"builder/playbook_channels_{niche}_*.json")
-    pb = json.loads(pb_file.read_text(encoding="utf-8")) if pb_file else None
-    bench = (pb or {}).get("benchmark_median_views")
+    now = datetime.now(timezone.utc)
     ms = [metrics(v) for v in vids]
-    settled = [m["views"] for v, m in zip(vids, ms) if v["age_h"] >= 24 and v["privacy"] == "public"]
-    base = max(statistics.median(settled), 1) if settled else None  # a channel stuck at 0 views still learns
-    diags = [diagnose(v, m, base, bench) for v, m in zip(vids, ms)]
-    learned = learn(vids, ms, base)
-    cash = money(data, vids, ms, niche)
+    settled = settled_clips(vids, ms)
+    typical = typical_views(settled)
+    diags = [diagnose(v, m, typical) for v, m in zip(vids, ms)]
+    findings = factor_findings(settled, typical)
+    weeks = distribution(vids, ms, now)
+
+    rows_tt = tiktok_rows()
+    tt_note = fill_tiktok_from_api(rows_tt)
+    tt_pairs = [(v, m) for v, m in tiktok_clips(rows_tt, now) if v["age_h"] >= SETTLED_H]
+    tt = {"rows": rows_tt, "note": tt_note, "findings": factor_findings(tt_pairs, typical_views(tt_pairs), "TikTok") if tt_pairs else []}
+    save_tiktok_rows(rows_tt)
 
     llm, writer = (None, None)
     if vids and not args.no_llm:
-        prompt = review_prompt(data, vids, ms, diags, learned, cash, pb, niche, (state.get("review") or {}).get("lessons"))
-        llm, writer = written_review(prompt, args.writer or os.environ.get("SCRIPT_WRITER"))
+        pb_file = latest(f"builder/playbook_channels_{args.niche}_*.json")
+        pb = json.loads(pb_file.read_text(encoding="utf-8")) if pb_file else None
+        tested = sorted([x for x in zip(vids, ms, diags) if x[0] in [v for v, _ in settled] and x[1]["views"] >= TESTED_VIEWS],
+                        key=lambda x: -x[1]["views"])
+        early = [x for x in zip(vids, ms, diags) if x[0]["age_h"] < SETTLED_H]
+        judged = list({x[0]["id"]: x for x in tested[:5] + tested[-3:] + early[:3]}.values())
+        if judged:
+            prompt = review_prompt(data, judged, typical, findings + tt["findings"], weeks, pb, args.niche,
+                                   (state.get("review") or {}).get("lessons"))
+            llm, writer = written_review(prompt, args.writer or os.environ.get("SCRIPT_WRITER"))
 
-    now = datetime.now(timezone.utc)
+    more, less = make_more_less(findings)
+    tt_more, tt_less = make_more_less(tt["findings"])
+    steer = {"source_score": creator_scores(settled, typical), "hour_score": hour_scores(settled, typical),
+             "length_hint": best_length(settled, typical), "levers": pick_levers(findings),
+             "make_more": [finding_text(r) for r in more + tt_more], "make_less": [finding_text(r) for r in less + tt_less]}
+
     out_dir = REPORTS_DIR / f"review_{now:%Y-%m-%d_%H%M}"
-    write_report(out_dir, data, vids, ms, diags, learned, cash, llm, writer, base, bench, niche)
+    write_report(out_dir, data, vids, ms, diags, typical, findings, weeks, tt, llm, writer, steer)
     snapshot = [{"id": v["id"], "title": v["title"], "age_h": round(v["age_h"], 1), "privacy": v["privacy"],
-                 "seconds": v["seconds"], "source": v["clip"].get("source"), **{k: m[k] for k in m},
+                 "seconds": v["seconds"], "source": v["clip"].get("source"), "features": features(v), **{k: m[k] for k in m},
                  "findings": [{"kind": k, "text": t} for k, t in d]} for v, m, d in zip(vids, ms, diags)]
-    (out_dir / "review.json").write_text(json.dumps({"channel": data["channel"], "clips": snapshot, "learned": learned,
-                                                     "written": llm, "writer": writer}, indent=1, ensure_ascii=False),
-                                         encoding="utf-8")
+    (out_dir / "review.json").write_text(json.dumps(
+        {"channel": data["channel"], "typical_views": typical, "feed_tests": [{**w, "from": w["from"].isoformat(), "to": w["to"].isoformat(),
+                                                                              "best": w["best"]["title"]} for w in weeks],
+         "findings": [{k: x for k, x in r.items()} for r in findings + tt["findings"]], "steer": steer,
+         "clips": snapshot, "written": llm, "writer": writer}, indent=1, ensure_ascii=False, default=str), encoding="utf-8")
 
     # feed the other agents
     state = load_state()  # re-read: another agent may have written while we waited on the reviewer
     prev = state.get("review") or {}
     lessons = (llm or {}).get("lessons") or prev.get("lessons") or {}
-    if learned["title_style"]:
-        lessons = {**lessons, "titles": list(dict.fromkeys((lessons.get("titles") or []) + learned["title_style"]))[:5]}
+    verdict = {c["video_id"]: c.get("verdict") for c in (llm or {}).get("clips", [])}
+    best_first = sorted((s for s in snapshot if s["age_h"] >= SETTLED_H and s["privacy"] == "public" and s["views"] >= TESTED_VIEWS),
+                        key=lambda s: -s["views"])
     state["review"] = {
         "at": now.strftime("%Y-%m-%d %H:%M"), "report": str(out_dir / "report.md"), "lessons": lessons,
-        "source_score": learned["source_score"] or prev.get("source_score", {}),
-        "length_hint": learned["length_hint"] or prev.get("length_hint"),
+        "typical_views": round(typical, 1) if typical is not None else None,
+        "feed_tested": f"{weeks[0]['tested']} of {weeks[0]['n']}" if weeks else None,
+        "make_more": steer["make_more"], "make_less": steer["make_less"],
+        "source_score": steer["source_score"] or prev.get("source_score", {}),
+        "hour_score": steer["hour_score"] or prev.get("hour_score", {}),
+        "levers": steer["levers"],
+        "length_hint": steer["length_hint"] or prev.get("length_hint"),
         "clips": [{"title": s["title"], "views": s["views"], "avg_viewed": s["avp"], "stayed": s["stayed"],
-                   "verdict": next((c["verdict"] for c in (llm or {}).get("clips", []) if c["video_id"] == s["id"]), None)}
-                  for s in snapshot if s["age_h"] >= 24 and s["privacy"] == "public"][:20],
+                   "verdict": verdict.get(s["id"])} for s in best_first[:6] + best_first[6:][-4:]],
     }
     # score each clip's edit recipe once it's settled, so tomorrow's edits follow what held viewers
     # and each council agent's vote on it, so the agents whose judgment matches real results count for more
@@ -814,7 +1105,7 @@ def cmd_review(args):
     scored = 0
     for snap in snapshot:
         if snap["age_h"] >= SETTLED_H and snap["privacy"] == "public" and recipe_of.get(snap["id"]):
-            outcome = tuner.score(snap["views"], snap["avp"], snap["stayed"], base)
+            outcome = tuner.score(snap["views"], snap["avp"], snap["stayed"], typical)
             if tuner.credit(state, snap["id"], recipe_of[snap["id"]], outcome):
                 scored += 1
                 council.learn(state, votes_of.get(snap["id"]), outcome)
@@ -828,13 +1119,6 @@ def cmd_review(args):
     if not state.get("channel"):
         state["channel"] = data["channel"]["id"]  # lets `channel_builder.py run` start its daily `track` too
     save_state(state)
-    with open(out_dir / "report.md", "a", encoding="utf-8") as f:  # how the analytics are steering the edit
-        f.write("\n## Edit settings the analytics picked\n\nScore per setting (views vs your median, plus retention), "
-                "averaged over the clips that used it. The best one is used on tomorrow's top clip; the other clips "
-                "each test one change.\n\n" + "\n".join(tuner.summary(state)) + "\n"
-                "\n## Clip council weights\n\nHow much each agent's vote counts when picking clips, learned from how "
-                "the clips they backed did:\n\n" + "\n".join(f"- {council.AGENTS[k]}: {w:.2f}"
-                                                            for k, w in council.weights(state).items()) + "\n")
     print(f"Done. Report: {out_dir / 'report.md'}" + ("" if data["signed_in"] else f"  (quota used: {data['units']} units)"))
 
 

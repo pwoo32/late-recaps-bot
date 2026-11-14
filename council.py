@@ -7,7 +7,8 @@ candidate 0-1 and says why in a line:
                                     match what's going viral in their clips this week?
 - Channel study (channel_agent.py): do the top channels in the niche clip this creator, and does the moment fit the
                                     kind of clip that breaks out for them?
-- Analytics reviewer (review_agent): how did this creator's clips do on OUR channel (views and retention), and does
+- Analytics reviewer (review_agent): how did this creator's clips spread on OUR channel, do moments found this way
+                                    (Twitch clip, chat spike...) get tested by the feed, and does
                                     the moment follow the review's lessons (a spoken premise: a bet, a question, a
                                     challenge; fresh, so it posts within hours of the stream)?
 - Live scout (live_moments.py):     how hard did the stream react: chat flood, most-replayed, Twitch clip velocity,
@@ -93,14 +94,21 @@ def study_vote(m, ctx):
 
 def analytics_vote(m, ctx):
     st = ctx["state"]
-    views = st.get("source_weight", {}).get(m["source"], 1.0)
-    held = ((st.get("review") or {}).get("source_score") or {}).get(m["source"], 1.0)
+    import review_agent  # here, not at the top: review_agent imports this module
+    review = st.get("review") or {}
+    # the review's creator score (views vs our typical clip) when it has one, else `track`'s views-only weight
+    spread = (review.get("source_score") or {}).get(m["source"]) or st.get("source_weight", {}).get(m["source"], 1.0)
+    levers = review.get("levers") or {}
+    how = review_agent.found_by_moment(m)
+    found = (levers.get("found by") or {}).get(how, 1.0)  # e.g. Twitch clips get tested by the feed more than others
     text = " ".join(m["quotes"] + [m["video_title"], m.get("captions") or ""])
     premise = bool(PREMISE.search(text))
     fresh = 0.5 ** (m["age_h"] / 24)
-    s = _clip01(0.25 * math.log2(1 + views * held) + 0.25 * premise + 0.3 * fresh + 0.1)
-    why = (f"{SOURCES[m['source']]['short']} clips do {views * held:.1f}x our usual" if views * held != 1.0
+    s = _clip01(0.25 * math.log2(1 + spread * found) + 0.25 * premise + 0.3 * fresh + 0.1)
+    why = (f"{SOURCES[m['source']]['short']} clips spread {spread:.1f}x our typical clip" if spread != 1.0
            else f"no track record for {SOURCES[m['source']]['short']} on our channel yet")
+    if found != 1.0:
+        why += f"; {how} moments do {found:.1f}x"
     why += "; has a spoken premise (bet/question/challenge)" if premise else "; no clear premise, may be visual-only"
     why += f"; stream is {m['age_h']:.0f}h old" + (" (fresh)" if m["age_h"] <= 12 else " (other clippers had time)" if m["age_h"] > 48 else "")
     return s, why
