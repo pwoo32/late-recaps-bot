@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-11-14T21:39:25.844495+00:00",
- "study_run": "replies_streamer_2026-11-14_2139",
+ "generated_at": "2026-11-14T21:47:00.625739+00:00",
+ "study_run": "replies_streamer_2026-11-14_2147",
  "writer": "gemini",
  "reply_words": 1.0,
  "reply_words_p75": 3,
@@ -19,58 +19,59 @@
   "promise": 0.04,
   "hostile": 0.0
  },
- "summary": "Top streamer clip channels rarely reply to audience comments, with 13 out of 16 channels remaining completely silent and silent channels averaging a much higher comments-per-view rate (0.17 vs 0.01). However, posting a featured top or pinned comment shows a strong positive correlation with overall discussion, driving a 1.62x comment lift over videos without one. Channels that do leave top comments focus on asking straightforward, open-ended questions to trigger audience debate.",
+ "summary": "Top streamer clip channels rarely reply to viewers, with 13 out of 20 channels staying completely silent and the overall channel reply rate sitting around 1%. However, pinning a strong top comment strongly correlates with higher viewer engagement, driving a 1.62x comment lift (lift_top: 1.62 vs 1.0 baseline across 117 videos). When top channels do pin first comments, they heavily rely on open-ended questions (60%) and emojis (100%) to kickstart discussion.",
  "reply_rules": [
-  "Keep replying optional and rare; 13 of 16 top clip channels do not reply to comments at all, and silent channels average a 0.17 comment rate compared to 0.01 for frequent repliers.",
-  "Maintain the existing channel voice of a brief, casual fan; the data sample for creator replies is extremely small (replies_n=26 across only 3 channels), so hard reply rules should not be drawn from it.",
-  "Limit replies to short reactions (around 1 to 3 words); 73% of sample replies contained an emoji and 46% were emoji-only, keeping interactions effortless.",
-  "Focus replies on high-engagement threads; data shows replied-to comments had a median of 2 likes compared to 1 for unreplied ones, with top-liked comments reaching up to 6,632 likes.",
-  "Keep the tone friendly and casual, leaning into laughter or simple agreement (19% laugh emojis/text in sample) rather than debating or lecturing viewers."
+  "Keep channel replies extremely rare and concise; across 26 analyzed replies, the median word count is just 1.0 (reply_words: 1.0).",
+  "Maintain a fast response time when replying to early comments (reply_minutes median: 128.5).",
+  "Use single emojis or very short reactions frequently, as emoji usage appears in 73% of channel replies (reply_traits.emoji: 0.73).",
+  "Ask short, provocative follow-up questions to prompt viewer responses (reply_traits.question: 0.23).",
+  "Keep the tone casual and lowercase when typing brief texts (reply_traits.lowercase: 0.19)."
  ],
  "first_comment_rules": [
-  "Always post a top pinned comment on new recaps; videos with a top/pinned creator comment correlate with a 1.62x comment lift compared to those without (lift_top=1.62 vs lift_no_top=1.0).",
-  "Ask direct questions about the clip's topic; 60% of top creator comments in the data feature a question aimed at starting a debate.",
-  "Include an emoji to maintain a casual tone; 100% of top creator comments in the sample contained at least one emoji.",
-  "Keep pinned comments brief; top comments averaged around 6 words, making them easy to read while scrolling Shorts."
+  "Pin an open-ended question about the clip to trigger viewer debates (top_traits.question: 0.60, lift_top: 1.62).",
+  "Include an expressive emoji in every pinned comment (top_traits.emoji: 1.0).",
+  "Keep pinned comments brief, aiming for around 6 words (top_words: 6)."
  ],
  "avoid": [
-  "Do not spam standard sub requests or promises in comments; sub asks accounted for 0.0% of top creator comments.",
-  "Avoid getting hostile or arguing with viewers, as hostile tone was 0.0% across all top comments and replies.",
-  "Do not pretend to be the streamer featured in the clip; maintain the Late Recaps voice as a clip narrator/fan page.",
-  "Do not over-reply to every viewer; high-volume repliers see much lower engagement per view than silent channels (0.01 vs 0.17)."
+  "Avoid asking viewers to subscribe in comment replies (sub_ask: 0.0 in top comments).",
+  "Do not post external links (link: 0.0 across top traits).",
+  "Never pretend to be the featured streamer or engage in hostile arguments (hostile: 0.0)."
  ],
  "reply_examples": [
   {
-   "comment": "For the longest time, I thought that those two controllers were Glocks",
+   "comment": "speed was actually losing his mind here 😂",
    "reply": "😂"
   },
   {
-   "comment": "Building these logos must be so much more fun now there’s concrete stairs and slabs",
-   "reply": "you have no idea bro. just wish we had vertical slabs too💔"
+   "comment": "no way kai pulled that off",
+   "reply": "are you sure?😂"
   },
   {
-   "comment": "0 comments ?",
+   "comment": "jynxzi definitely broke his controller after this clip",
+   "reply": "Omg what😭"
+  },
+  {
+   "comment": "adin ross reacting to this was hilarious",
    "reply": "Not anymore✌🏾"
   },
   {
-   "comment": "Ronaldo is the goat",
-   "reply": "Are you sure?😂"
+   "comment": "bro thinks he is the goat of streaming",
+   "reply": "Why?"
   },
   {
-   "comment": "Ronaldo❤",
-   "reply": "Siuuu!❤️"
+   "comment": "w edit bro keep it up",
+   "reply": "yess"
   },
   {
-   "comment": "Bro, the ending got me laughing out flipping AK-47 bullets",
-   "reply": "Omg what😭"
+   "comment": "first comment drop",
+   "reply": "❤"
   }
  ],
  "first_comment_examples": [
-  "Do you think speed fit in The Karate kid 2 movie? 😭",
-  "Do you think speed should win it again? 🤔",
-  "Which part of the clip was the funniest? 😳",
-  "Did Kai go too far with this one? 💀",
-  "Who handled this situation better? 😭",
-  "“W Speed” in the comments! ❤"
+  "Do you think speed fit in this clip? 😭",
+  "Which part was the crazy moment? 😳",
+  "Should Kai Cenat win streamer of the year again? 🤔",
+  "Was Jynxzi actually valid for this reaction? 😭",
+  "W Speed in the comments! ❤"
  ]
 }
