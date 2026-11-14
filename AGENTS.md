@@ -96,8 +96,9 @@ Never print, log or commit a secret or token. OAuth tokens live in `~/.config/cl
   `python channel_builder.py auth` and `python review_agent.py auth`, then `python cloud_setup.py`. Publishing the
   OAuth app (Google Cloud Console > Google Auth Platform > Audience > Publish app) stops the 7-day expiry.
 - **Review says "can't read YouTube Analytics"**: `REVIEW_TOKEN` is missing or expired (see above).
-- **TikTok numbers**: TikTok posts are manual drafts, so their views come from `reports/tiktok_stats.csv`, which the
-  review keeps a row in per clip sent to TikTok. Philip fills in the numbers from TikTok Studio.
+- **TikTok numbers**: the review reads TikTok views through the Display API (`video.list`) when the TikTok login has
+  it (`channel_builder.py tiktok-auth --stats`, then `cloud_setup.py`), matching posts to our drafts by caption, and
+  writes them to `reports/tiktok_stats.csv`. Without it, Philip types the numbers into that sheet.
 - **Copyright claim**: the review report names the clip. Its stream is added to `claimed_streams` in `state.json`
   and is never clipped again.
 

@@ -10,7 +10,8 @@ It answers the questions that change what we post next:
 Sources: public stats, YouTube Analytics (engaged views, retention curve, traffic from the Shorts feed) and the
 builder's queue entry for each clip (creator, hook, title, narrator line, length, post time, how old the stream was,
 which signal found the moment). TikTok numbers come from `reports/tiktok_stats.csv`, a sheet this agent keeps with a
-row per clip sent to TikTok: fill in the numbers from TikTok Studio and the next review uses them.
+row per clip sent to TikTok. With `tiktok-auth --stats` it reads the views from TikTok itself; otherwise fill in
+the numbers from TikTok Studio and the next review uses them.
 
 It feeds the findings back through reports/builder/state.json ("review"):
 - channel_builder.py daily ranks creators and posting hours by how their clips spread, and cuts to the length
@@ -590,7 +591,8 @@ def diagnose(v, m, typical):
 
 # ----- TikTok: numbers come from a sheet, since our TikTok posts are manual drafts -----
 
-TT_COLS = ["clip", "posted", "creator", "caption", "views", "likes", "comments", "shares", "avg_watch_s", "watched_full_pct"]
+TT_COLS = ["clip", "posted", "creator", "caption", "views", "likes", "comments", "shares", "avg_watch_s", "watched_full_pct",
+           "tiktok_video", "source"]
 
 
 def tiktok_rows():
@@ -616,6 +618,52 @@ def tiktok_rows():
                         "creator": c.get("creator") or "", "caption": (c.get("tiktok_caption") or c.get("title") or "")[:80]})
             row["_c"] = c
     return [have[k] for k in sorted(have, key=lambda k: have[k].get("posted") or "", reverse=True)]
+
+
+def _words(text):
+    return re.sub(r"#\w+|[^a-z0-9 ]", " ", (text or "").lower()).split()
+
+
+def fill_tiktok_from_api(rs):
+    """Fill views/likes/comments/shares from TikTok itself when the login has video.list (`tiktok-auth --stats`).
+    Our posts are drafts Philip finishes in the app, so a post is matched to its draft by caption (he pastes ours)
+    and by being posted after the draft was sent. Rows nobody posted stay blank; numbers he typed for a post the API
+    can't match are kept. Returns a note for the report."""
+    import difflib
+    try:
+        import tiktok_upload
+        if not tiktok_upload.can_read_stats():
+            return None
+        times = [datetime.strptime(r["_c"]["post_utc"], "%Y-%m-%d %H:%M").replace(tzinfo=timezone.utc)
+                 for r in rs if r.get("_c") and r["_c"].get("post_utc")]
+        posts = tiktok_upload.my_videos(since=min(times) - timedelta(days=2) if times else None)
+    except Exception as e:  # TikTok trouble never stops the review
+        return f"Couldn't read TikTok views ({type(e).__name__}: {str(e)[:160]}); using the numbers in the sheet."
+    taken, filled = set(), 0
+    for r in rs:
+        c = r.get("_c")
+        if not c:
+            continue
+        mine = " ".join(_words(c.get("tiktok_caption") or c.get("title")))
+        try:
+            sent = datetime.strptime(c.get("post_utc") or "", "%Y-%m-%d %H:%M").replace(tzinfo=timezone.utc) - timedelta(hours=14)
+        except ValueError:
+            sent = None
+        best, score = None, 0.0
+        for p in posts:
+            if p["id"] in taken or (sent and datetime.fromtimestamp(p.get("create_time", 0), timezone.utc) < sent):
+                continue
+            theirs = " ".join(_words(p.get("video_description") or p.get("title")))
+            ratio = difflib.SequenceMatcher(None, mine[:120], theirs[:120]).ratio() if mine and theirs else 0
+            if ratio > score:
+                best, score = p, ratio
+        if best and score >= 0.6:
+            taken.add(best["id"])
+            r.update({"views": best.get("view_count", ""), "likes": best.get("like_count", ""),
+                      "comments": best.get("comment_count", ""), "shares": best.get("share_count", ""),
+                      "tiktok_video": best["id"], "source": "TikTok API"})
+            filled += 1
+    return f"Read {len(posts)} public TikTok posts and matched {filled} of them to our drafts."
 
 
 def save_tiktok_rows(rs):
@@ -915,19 +963,23 @@ def write_report(out_dir, data, vids, ms, diags, typical, findings, weeks, tt, l
         L += [f"{len(untested)} other clips never got a feed test, so they say nothing about content.", ""]
 
     L += ["## TikTok", ""]
+    if tt.get("note"):
+        L.append(f"- {tt['note']}")
     filled = [r for r in tt["rows"] if _num(r.get("views")) is not None]
     if tt["findings"]:
         tm, tl = make_more_less(tt["findings"])
-        L.append(f"- From the {len(filled)} TikTok drafts you filled in numbers for:")
+        L.append(f"- From the {len(filled)} TikTok posts with numbers:")
         L += [f"  - More: {finding_text(r)}" for r in tm] + [f"  - Less: {finding_text(r)}" for r in tl]
         if not (tm or tl):
             L.append("  - Nothing clear yet.")
     missing = [r for r in tt["rows"] if _num(r.get("views")) is None]
     if missing:
-        L.append(f"- {len(missing)} clips went to your TikTok drafts with no numbers yet. In `reports/tiktok_stats.csv`, "
-                 "fill in views (and shares, average watch time, watched full %) from TikTok Studio for the ones you "
-                 "posted; the last two weeks matter most, and leave a row blank if you never posted that draft. The "
-                 "next review adds TikTok to the findings and the script writer's prompt.")
+        L.append(f"- {len(missing)} clips went to your TikTok drafts with no numbers yet"
+                 + (": either they were never posted, or the caption was changed so much the review couldn't match "
+                    "them. Type the numbers into `reports/tiktok_stats.csv` for any you did post." if tt.get("note") and "matched" in tt["note"] else
+                    ". To read them automatically, run `python channel_builder.py tiktok-auth --stats` once (README: "
+                    "TikTok numbers). Or type views (and shares, watched full %) from TikTok Studio into "
+                    "`reports/tiktok_stats.csv` for the ones you posted."))
     if not tt["rows"]:
         L.append("- No clips sent to TikTok yet.")
     L.append("")
@@ -992,8 +1044,9 @@ def cmd_review(args):
     weeks = distribution(vids, ms, now)
 
     rows_tt = tiktok_rows()
+    tt_note = fill_tiktok_from_api(rows_tt)
     tt_pairs = [(v, m) for v, m in tiktok_clips(rows_tt, now) if v["age_h"] >= SETTLED_H]
-    tt = {"rows": rows_tt, "findings": factor_findings(tt_pairs, typical_views(tt_pairs), "TikTok") if tt_pairs else []}
+    tt = {"rows": rows_tt, "note": tt_note, "findings": factor_findings(tt_pairs, typical_views(tt_pairs), "TikTok") if tt_pairs else []}
     save_tiktok_rows(rows_tt)
 
     llm, writer = (None, None)

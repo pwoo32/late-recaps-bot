@@ -30,6 +30,7 @@ API = "https://open.tiktokapis.com/v2"
 REDIRECT_PORT = 8723
 REDIRECT_URI = f"http://localhost:{REDIRECT_PORT}/callback/"
 SCOPES = {"inbox": "user.info.basic,video.upload", "direct": "user.info.basic,video.upload,video.publish"}
+STATS_SCOPE = "video.list"  # Display API: view/like/comment/share counts of your public videos, for review_agent.py
 TOKEN_FILE = Path.home() / ".config" / "clip-builder" / "tiktok_token.json"
 MAX_PENDING_INBOX_DRAFTS = 4  # TikTok allows 5 pending drafts per 24h; leave one slot as a safety buffer.
 
@@ -49,14 +50,15 @@ def _save(tok):
     return tok
 
 
-def login(mode="inbox"):
-    """One-time sign-in: opens TikTok in the browser and catches the redirect on localhost."""
+def login(mode="inbox", stats=False):
+    """One-time sign-in: opens TikTok in the browser and catches the redirect on localhost. `stats` also asks for
+    video.list, so the review can read your posted videos' views (needs the Display API product on the app)."""
     key, secret = _client()
     verifier = secrets.token_urlsafe(64)[:96]
     challenge = hashlib.sha256(verifier.encode()).hexdigest()  # TikTok desktop PKCE wants hex, not base64url
     state = secrets.token_urlsafe(16)
     url = "https://www.tiktok.com/v2/auth/authorize/?" + urllib.parse.urlencode({
-        "client_key": key, "scope": SCOPES[mode], "response_type": "code", "redirect_uri": REDIRECT_URI,
+        "client_key": key, "scope": SCOPES[mode] + ("," + STATS_SCOPE if stats else ""), "response_type": "code", "redirect_uri": REDIRECT_URI,
         "state": state, "code_challenge": challenge, "code_challenge_method": "S256"})
     got = {}
 
@@ -87,7 +89,9 @@ def login(mode="inbox"):
         sys.exit(f"TikTok token exchange failed: {tok}")
     _save(tok)
     granted = set(got.get("scopes", "").split(","))
-    print("Signed in to TikTok." + ("" if "video.upload" in granted else " Warning: video.upload wasn't granted."))
+    print("Signed in to TikTok." + ("" if "video.upload" in granted else " Warning: video.upload wasn't granted.")
+          + ("" if not stats or STATS_SCOPE in granted else " Warning: video.list wasn't granted, so the review can't "
+             "read TikTok views. Add the Display API product to the app on developers.tiktok.com, then sign in again."))
     return tok
 
 
@@ -210,3 +214,35 @@ def pending_inbox_drafts(builder_dir, exclude_queue=None, now=None, stop_at=MAX_
                 if pending >= stop_at:
                     return pending, unknown
     return pending, unknown
+
+
+def can_read_stats():
+    """True when the saved login includes video.list (TikTok returns the granted scopes with the token)."""
+    if not TOKEN_FILE.exists():
+        return False
+    return STATS_SCOPE in (json.loads(TOKEN_FILE.read_text(encoding="utf-8-sig")).get("scope") or "")
+
+
+def my_videos(since=None, limit=200):
+    """Your public TikTok posts, newest first, with view/like/comment/share counts (Display API video.list).
+    Stops at posts older than `since` (a datetime). Drafts and private posts aren't returned."""
+    access = token()
+    if not access:
+        raise RuntimeError("Not signed in to TikTok: run `python channel_builder.py tiktok-auth --stats`.")
+    fields = "id,create_time,title,video_description,duration,view_count,like_count,comment_count,share_count"
+    out, body = [], {"max_count": 20}
+    while len(out) < limit:
+        r = requests.post(f"{API}/video/list/?fields={fields}", timeout=30, json=body,
+                          headers={"Authorization": f"Bearer {access}", "Content-Type": "application/json"})
+        data = r.json()
+        if data.get("error", {}).get("code", "ok") != "ok":
+            raise RuntimeError(f"TikTok /video/list/: {data['error'].get('code')} {data['error'].get('message', '')}")
+        page = (data.get("data") or {})
+        vids = page.get("videos") or []
+        out += vids
+        if not page.get("has_more") or not vids:
+            break
+        if since and datetime.fromtimestamp(vids[-1].get("create_time", 0), timezone.utc) < since:
+            break
+        body = {"max_count": 20, "cursor": page["cursor"]}
+    return [v for v in out if not since or datetime.fromtimestamp(v.get("create_time", 0), timezone.utc) >= since]

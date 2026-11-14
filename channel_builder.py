@@ -1721,12 +1721,14 @@ def cmd_tiktok_auth(args):
     tt = state.setdefault("tiktok", {"enabled": False, "mode": "inbox"})
     if args.mode:
         tt["mode"] = args.mode
+    if args.stats:
+        tt["stats"] = True  # keep asking for video.list on later sign-ins too
     if args.disable:
         tt["enabled"] = False
     else:
         import tiktok_upload
-        if not tiktok_upload.TOKEN_FILE.exists() or args.relogin:
-            tiktok_upload.login(tt["mode"])
+        if not tiktok_upload.TOKEN_FILE.exists() or args.relogin or (args.stats and not tiktok_upload.can_read_stats()):
+            tiktok_upload.login(tt["mode"], stats=tt.get("stats", False))
         if args.enable:
             tt["enabled"] = True
     save_state(state)
@@ -1800,6 +1802,7 @@ def main():
     p.add_argument("--enable", action="store_true", help="post every published clip to TikTok too")
     p.add_argument("--disable", action="store_true")
     p.add_argument("--relogin", action="store_true")
+    p.add_argument("--stats", action="store_true", help="also let the review read your TikTok views (Display API, video.list)")
     p = sub.add_parser("tiktok-status")
     p.add_argument("--days", type=int, default=7, help="how many recent queues to check")
     p = sub.add_parser("publish")

@@ -226,12 +226,21 @@ quota. The daily cloud run uses the rule-based review (`--no-llm`); run it local
 
 ### TikTok numbers
 
-Our TikTok posts are drafts you finish by hand, so TikTok's API can't give us their views. The review keeps
-`reports/tiktok_stats.csv` with a row per clip sent to TikTok (posted time, creator, caption). Fill in `views` (and
-`shares`, `avg_watch_s`, `watched_full_pct` if you like) from TikTok Studio for the ones you posted, then commit it;
-leave a row blank if you never posted that draft. The next review runs the same make-more / make-less analysis on
-TikTok and passes it to the script writer. Edit it outside the daily run (around 7 AM ET) so the run's commit doesn't
-collide with yours.
+The review reads your TikTok views itself once the TikTok login includes the `video.list` scope (TikTok's Display
+API). Our TikTok posts are drafts you finish in the app, so it matches each public post to its draft by the caption
+you pasted and by being posted after the draft was sent. One-time setup:
+
+1. On developers.tiktok.com, open the app you already use for posting and add the **Display API** product (scope
+   `video.list`). If the app is live, adding a product may send it back through TikTok's review; until that's
+   approved, the app's Sandbox works for your own account (add it under Target Users).
+2. On the PC: `python channel_builder.py tiktok-auth --stats`. TikTok asks you to approve the extra permission.
+3. `python cloud_setup.py`, so the cloud run gets the new login.
+
+Every clip sent to TikTok gets a row in `reports/tiktok_stats.csv`, filled from TikTok (`source` = "TikTok API").
+Rows stay blank for drafts never posted, or when the caption was changed too much to match: type views (and
+`shares`, `watched_full_pct`) from TikTok Studio there and commit it, outside the daily run (around 7 AM ET).
+TikTok's API doesn't give watch time or completion rate, so those columns only fill in if you type them. The review
+runs the same make-more / make-less analysis on TikTok and passes it to the script writer.
 
 ### Analytics sign-in (one time, ~3 minutes)
 
@@ -278,7 +287,8 @@ you turn it on.
    TikTok account added under Target Users) to test before review; review needs a demo video of it working.
 2. Put the app's Client key and Client secret in your user environment variables, as `TIKTOK_CLIENT_KEY` and
    `TIKTOK_CLIENT_SECRET`. Don't put them in any file.
-3. Sign in once and turn cross-posting on: `python channel_builder.py tiktok-auth --enable`
+3. Sign in once and turn cross-posting on: `python channel_builder.py tiktok-auth --enable` (add `--stats` after
+   adding the Display API product, so the review can read your views: see TikTok numbers)
    (`--mode direct` to post straight to the profile, `--disable` to turn it off).
 
 Modes:
