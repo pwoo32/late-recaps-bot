@@ -1,84 +1,84 @@
 {
- "generated_at": "2026-11-14T21:36:18.860263+00:00",
- "study_run": "replies_streamer_2026-11-14_2136",
+ "generated_at": "2026-11-14T21:39:25.844495+00:00",
+ "study_run": "replies_streamer_2026-11-14_2139",
  "writer": "gemini",
- "reply_words": 1.5,
+ "reply_words": 1.0,
  "reply_words_p75": 3,
  "top_words": 6,
  "reply_traits": {
-  "question": 0.5,
-  "emoji": 0.62,
-  "emoji_only": 0.12,
-  "lowercase": 0.25,
-  "laugh": 0.25,
+  "question": 0.23,
+  "emoji": 0.73,
+  "emoji_only": 0.46,
+  "lowercase": 0.19,
+  "laugh": 0.19,
   "thanks": 0.0,
-  "agree": 0.0,
-  "mention": 0.12,
+  "agree": 0.04,
+  "mention": 0.04,
   "sub_ask": 0.0,
   "link": 0.0,
-  "promise": 0.0,
+  "promise": 0.04,
   "hostile": 0.0
  },
- "summary": "Top streamer clip channels heavily rely on posting top/first comments to drive viewer engagement, which correlates with a 1.62 lift in comments per view (lift_top: 1.62 vs lift_no_top: 0.98). Successful channel interactions are extremely brief, averaging 1.5 words per reply and 6 words for top comments. Engaging viewers through questions is key, as 50% of channel replies and 60% of top comments feature questions to spark thread activity.",
+ "summary": "Top streamer clip channels rarely reply to audience comments, with 13 out of 16 channels remaining completely silent and silent channels averaging a much higher comments-per-view rate (0.17 vs 0.01). However, posting a featured top or pinned comment shows a strong positive correlation with overall discussion, driving a 1.62x comment lift over videos without one. Channels that do leave top comments focus on asking straightforward, open-ended questions to trigger audience debate.",
  "reply_rules": [
-  "Keep replies ultra-short, targeting an average of 1.5 words and staying under 3 words (reply_words: 1.5, reply_words_p75: 3).",
-  "Ask open questions in 50% of your replies to encourage further conversation (picked_question: 0.14 vs passed_question: 0.02; reply_traits.question: 0.5).",
-  "Use emojis frequently, included in 62% of direct replies (reply_traits.emoji: 0.62).",
-  "Prioritize replying to comments with higher existing engagement and likes (picked_likes: 2 vs passed_likes: 1).",
-  "Skip plain laugh-only responses to incoming comments (passed_laugh: 0.31 vs picked_laugh: 0.0).",
-  "Keep responses casual using lowercase text when fitting (reply_traits.lowercase: 0.25)."
+  "Keep replying optional and rare; 13 of 16 top clip channels do not reply to comments at all, and silent channels average a 0.17 comment rate compared to 0.01 for frequent repliers.",
+  "Maintain the existing channel voice of a brief, casual fan; the data sample for creator replies is extremely small (replies_n=26 across only 3 channels), so hard reply rules should not be drawn from it.",
+  "Limit replies to short reactions (around 1 to 3 words); 73% of sample replies contained an emoji and 46% were emoji-only, keeping interactions effortless.",
+  "Focus replies on high-engagement threads; data shows replied-to comments had a median of 2 likes compared to 1 for unreplied ones, with top-liked comments reaching up to 6,632 likes.",
+  "Keep the tone friendly and casual, leaning into laughter or simple agreement (19% laugh emojis/text in sample) rather than debating or lecturing viewers."
  ],
  "first_comment_rules": [
-  "Always leave a top comment on new uploads to boost overall engagement (lift_top: 1.62 vs lift_no_top: 0.98).",
-  "Ask a direct question about the clip in your top comment to trigger replies (top_traits.question: 0.6).",
-  "Include at least one emoji in every top comment (top_traits.emoji: 1.0).",
-  "Keep top comments concise, averaging around 6 words total (top_words: 6)."
+  "Always post a top pinned comment on new recaps; videos with a top/pinned creator comment correlate with a 1.62x comment lift compared to those without (lift_top=1.62 vs lift_no_top=1.0).",
+  "Ask direct questions about the clip's topic; 60% of top creator comments in the data feature a question aimed at starting a debate.",
+  "Include an emoji to maintain a casual tone; 100% of top creator comments in the sample contained at least one emoji.",
+  "Keep pinned comments brief; top comments averaged around 6 words, making them easy to read while scrolling Shorts."
  ],
  "avoid": [
-  "Do not post long, wordy replies exceeding 3 words (reply_words_p75: 3).",
-  "Avoid leaving empty laugh-only reactions without substance or follow-ups (passed_laugh: 0.31).",
-  "Never ask for subscribers or post channel links in comments (reply_traits.sub_ask: 0.0, reply_traits.link: 0.0).",
-  "Do not post top comments without questions or emotional hooks, as generic statements fail to drive thread activity (top_traits.question: 0.6)."
+  "Do not spam standard sub requests or promises in comments; sub asks accounted for 0.0% of top creator comments.",
+  "Avoid getting hostile or arguing with viewers, as hostile tone was 0.0% across all top comments and replies.",
+  "Do not pretend to be the streamer featured in the clip; maintain the Late Recaps voice as a clip narrator/fan page.",
+  "Do not over-reply to every viewer; high-volume repliers see much lower engagement per view than silent channels (0.01 vs 0.17)."
  ],
  "reply_examples": [
   {
-   "comment": "speed actually lost his mind here",
-   "reply": "are you sure? 😂"
+   "comment": "For the longest time, I thought that those two controllers were Glocks",
+   "reply": "😂"
   },
   {
-   "comment": "kai cenat is the goat streamer",
-   "reply": "why though? 🤔"
+   "comment": "Building these logos must be so much more fun now there’s concrete stairs and slabs",
+   "reply": "you have no idea bro. just wish we had vertical slabs too💔"
   },
   {
-   "comment": "jynxzi aim was crazy in this clip",
-   "reply": "not anymore ✌️"
+   "comment": "She shoulda joined 😂",
+   "reply": "stay tuned, posting the follow up clip soon!"
   },
   {
-   "comment": "adin ross carries every stream",
-   "reply": "yess 🔥"
+   "comment": "0 comments ?",
+   "reply": "Not anymore✌🏾"
   },
   {
-   "comment": "n3on actually pulled this off",
-   "reply": "how? 😳"
+   "comment": "Ronaldo is the goat",
+   "reply": "Are you sure?😂"
   },
   {
-   "comment": "0 comments on this video?",
-   "reply": "not anymore ✌️"
+   "comment": "Ronaldo❤",
+   "reply": "Siuuu!❤️"
   },
   {
-   "comment": "speed is unmatched",
-   "reply": "siuuu! ❤️"
+   "comment": "Bro, the ending got me laughing out flipping AK-47 bullets",
+   "reply": "Omg what😭"
   },
   {
-   "comment": "kai standard stream moment",
-   "reply": "real 😂"
+   "comment": "Hey man idk if this is a good time for this after what happened on stream",
+   "reply": "wtf seriously?"
   }
  ],
  "first_comment_examples": [
-  "Do you think speed fit in this clip? 😭",
-  "Which part was the smoothest? 😳",
-  "Did kai actually go too far here? 🤔",
-  "Who handled this situation better? 💀",
-  "Is jynxzi taking the win this time? 😳"
+  "Do you think speed fit in The Karate kid 2 movie? 😭",
+  "Do you think speed should win it again? 🤔",
+  "Which part of the clip was the funniest? 😳",
+  "Did Kai go too far with this one? 💀",
+  "Who handled this situation better? 😭",
+  "“W Speed” in the comments! ❤"
  ]
 }
