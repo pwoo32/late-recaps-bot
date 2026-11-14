@@ -33,7 +33,8 @@ posted.** If clips are being held, fix the writer (usually a missing or failing 
 | `tiktok_upload.py`, `tiktok_caption.py`, `meta_upload.py` | Cross-posting |
 | `sources.py` | Creators we clip, where their footage lives, and `crowd` (saturation penalty) |
 | `agent.py`, `channel_agent.py`, `niches.py` | Trend scan and channel study reports |
-| `channel_activity_agent.py` | Comment replies, first comments and community post drafts; runs in the cloud daily run after the review (posts with the `ACTIVITY_TOKEN` sign-in) |
+| `channel_activity_agent.py` | Comment replies, first comments and community post drafts; runs in the cloud daily run after the review, signed in with `ACTIVITY_TOKEN`. **Drafts only** until the repo variable `ACTIVITY_POST` is `true`: don't turn posting on without Philip's say-so |
+| `reply_study_agent.py` | Studies how the top clip channels reply to comments and pin first comments; writes `reports/activity/reply_playbook.json`, which the activity agent drafts from. Weekly in the daily run, read-only |
 | `cloud_setup.py` | Copies the PC's keys and sign-in tokens into the GitHub repo secrets |
 | `reports/` | Every run's output, committed by the workflow. `reports/builder/state.json` is the bot's memory |
 | `.github/workflows/daily.yml` | The schedule: daily run ~7 AM ET with backups through the day |
@@ -83,6 +84,7 @@ signed-in channel before any upload and holds the run if it isn't Late Recaps (`
 | `TIKTOK_CLIENT_KEY`, `TIKTOK_CLIENT_SECRET`, `TIKTOK_TOKEN` | TikTok posting |
 | `META_ACCESS_TOKEN`, `IG_USER_ID`, `FB_PAGE_ID` | Instagram and Facebook Reels |
 | `ACTIVITY_TOKEN` | Comment access for replies and first comments (`channel_activity_agent.py auth`, then `cloud_setup.py`) |
+| `ACTIVITY_POST` (a variable, not a secret) | `true` lets the cloud run post replies and first comments; unset = drafts only |
 | `YT_COOKIES` or `YT_PROXY` | Lets yt-dlp download from YouTube on cloud runners |
 
 Never print, log or commit a secret or token. OAuth tokens live in `~/.config/clip-builder/` on the PC.
