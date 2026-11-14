@@ -49,6 +49,7 @@ from sources import SOURCES
 import council
 import live_moments as LM
 import originality
+import review_agent
 import script_agent
 import tuner
 
@@ -238,7 +239,9 @@ def post_slots(pb, state, n, now=None, within_h=None):
     hours coming up in the next `within_h` hours count (topped up with the soonest others if too few do), so a
     one-off hot hour in the study can't hold a clip back most of a day."""
     hours = {int(h): lift for h, lift in pb["top_hours"]}
-    for h, w in state["slot_weight"].items():
+    # our own results per hour: the review's (feed-tested views, analytics) when it has a score, else `track`'s
+    mine = {**state["slot_weight"], **((state.get("review") or {}).get("hour_score") or {})}
+    for h, w in mine.items():
         hours[int(h)] = hours.get(int(h), 1.0) * w
     if not hours:
         hours = {21: 1.0, 17: 1.0}
@@ -437,8 +440,14 @@ def rank_moments(moments, demand, state, words=None, change=None):
     for m in moments:
         src = SOURCES[m["source"]]
         hot = 0.6 + 0.8 * demand.get(m["source"], 0) / top_demand
-        learned = state["source_weight"].get(m["source"], 1.0)  # views on your channel (track)
-        learned *= (state.get("review") or {}).get("source_score", {}).get(m["source"], 1.0)  # views x retention (review_agent)
+        # how this creator's clips spread on our channel: the review's score (views vs our typical clip, from
+        # analytics) when it has one, else `track`'s views-only weight. Not both: they measure the same thing.
+        review = state.get("review") or {}
+        learned = review.get("source_score", {}).get(m["source"]) or state["source_weight"].get(m["source"], 1.0)
+        # how the moment was found (Twitch clip, chat spike...) and how fresh the stream is: what got our clips tested
+        levers = review.get("levers") or {}
+        learned *= (levers.get("found by") or {}).get(review_agent.found_by_moment(m), 1.0)
+        learned *= (levers.get("stream age at post") or {}).get(review_agent.freshness(m["age_h"]), 1.0)
         fresh = 0.5 ** (m["age_h"] / 72)  # older streams are more picked over by other clippers
         reach = 0.5 + min(math.log10(max(m["video_views"], 10)) / 7, 1)
         paid = 1.25 if src.get("campaign_cpm") else 1.0

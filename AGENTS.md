@@ -29,7 +29,7 @@ posted.** If clips are being held, fix the writer (usually a missing or failing 
 | `free_writer.py` | No-model fallback writer. Its narration is template-based, so the gate holds those clips for YouTube |
 | `originality.py` | Reused-content and copyright checks (template narration, stock lines, music, short clips, repeats) |
 | `tuner.py` | A/B tests edit settings (length, zoom, captions) and keeps the winners |
-| `review_agent.py` | Scores posted clips with YouTube Analytics and feeds lessons back into `reports/builder/state.json` |
+| `review_agent.py` | Finds what makes our clips spread (feed tests, creators, hooks, titles, length, timing) from YouTube Analytics and `reports/tiktok_stats.csv`, and feeds creator/hour/length weights and make-more/less findings into `reports/builder/state.json` |
 | `tiktok_upload.py`, `tiktok_caption.py`, `meta_upload.py` | Cross-posting |
 | `sources.py` | Creators we clip, where their footage lives, and `crowd` (saturation penalty) |
 | `agent.py`, `channel_agent.py`, `niches.py` | Trend scan and channel study reports |
@@ -96,6 +96,8 @@ Never print, log or commit a secret or token. OAuth tokens live in `~/.config/cl
   `python channel_builder.py auth` and `python review_agent.py auth`, then `python cloud_setup.py`. Publishing the
   OAuth app (Google Cloud Console > Google Auth Platform > Audience > Publish app) stops the 7-day expiry.
 - **Review says "can't read YouTube Analytics"**: `REVIEW_TOKEN` is missing or expired (see above).
+- **TikTok numbers**: TikTok posts are manual drafts, so their views come from `reports/tiktok_stats.csv`, which the
+  review keeps a row in per clip sent to TikTok. Philip fills in the numbers from TikTok Studio.
 - **Copyright claim**: the review report names the clip. Its stream is added to `claimed_streams` in `state.json`
   and is never clipped again.
 

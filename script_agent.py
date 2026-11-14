@@ -202,6 +202,8 @@ def build_prompt(clips, pb, niche):
     review = review_notes()
     lesson_lines = "\n".join(f"- {x}" for k in ("titles", "hooks", "length_and_pacing")
                              for x in (review.get("lessons") or {}).get(k, []))
+    spread_lines = "\n".join([f"- More: {x}" for x in review.get("make_more") or []]
+                             + [f"- Less: {x}" for x in review.get("make_less") or []])
     verdict_lines = "\n".join(
         f"- \"{r['title']}\": {r['views']:,} views"
         + (f", {r['avg_viewed']:.0f}% watched on average" if r.get("avg_viewed") is not None else "")
@@ -242,7 +244,11 @@ Our own channel's uploads so far, best first. Lean toward what worked, away from
 Our clip reviewer's lessons from how our posted clips held viewers. Follow them:
 {lesson_lines}
 """ if lesson_lines else "") + (f"""
-How our recent clips held viewers:
+What gets our clips pushed by the feed, measured over our posted clips (each line: the lever, how many clips, how they
+did against our typical clip). Write toward the "More" lines and away from the "Less" ones, as far as this clip allows:
+{spread_lines}
+""" if spread_lines else "") + (f"""
+How our best and worst recent clips did:
 {verdict_lines}
 """ if verdict_lines else "") + f"""
 Title pattern: the creator's name first, then exactly what happens in plain, punchy words, about
