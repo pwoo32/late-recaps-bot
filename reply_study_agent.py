@@ -308,8 +308,21 @@ def write_guide(m, writer):
                 continue
             if isinstance(out, dict) and out.get("reply_rules"):
                 print(f"Reply guide written by {name}.")
-                return {k: out.get(k) or ([] if k != "summary" else "") for k in GUIDE_KEYS}, name
+                return safe_examples({k: out.get(k) or ([] if k != "summary" else "") for k in GUIDE_KEYS}), name
     return rule_guide(m), "numbers only"
+
+
+BAD_EXAMPLE = re.compile(r"\bwtf\b|\bf+u+c+k|\bshit\b", re.I)
+
+
+def safe_examples(guide):
+    """Drop example replies the activity agent must never copy: promises, sub asks, links, hostility, swearing."""
+    bad = lambda t: any(p.search(t or "") for p in (PROMISE, SUB_ASK, LINK, HOSTILE, BAD_EXAMPLE))
+    guide["reply_examples"] = [e for e in guide.get("reply_examples") or []
+                               if isinstance(e, dict) and e.get("reply") and not bad(e["reply"])]
+    guide["first_comment_examples"] = [e for e in guide.get("first_comment_examples") or []
+                                       if isinstance(e, str) and not bad(e)]
+    return guide
 
 
 MIN_REPLIES = 30  # fewer channel replies than this and reply style isn't learned from them
