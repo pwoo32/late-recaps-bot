@@ -33,7 +33,7 @@ posted.** If clips are being held, fix the writer (usually a missing or failing 
 | `tiktok_upload.py`, `tiktok_caption.py`, `meta_upload.py` | Cross-posting |
 | `sources.py` | Creators we clip, where their footage lives, and `crowd` (saturation penalty) |
 | `agent.py`, `channel_agent.py`, `niches.py` | Trend scan and channel study reports |
-| `channel_activity_agent.py` | Comment replies, first comments and community post drafts; runs in the cloud daily run after the review (posts with the `ACTIVITY_TOKEN` sign-in) |
+| `channel_activity_agent.py` | Comment replies, first comments and community post drafts; runs in the cloud daily run after the review; drafts only until the repo variable `ACTIVITY_POST` is `true` |
 | `cloud_setup.py` | Copies the PC's keys and sign-in tokens into the GitHub repo secrets |
 | `reports/` | Every run's output, committed by the workflow. `reports/builder/state.json` is the bot's memory |
 | `.github/workflows/daily.yml` | The schedule: daily run ~7 AM ET with backups through the day |
