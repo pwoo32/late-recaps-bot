@@ -30,7 +30,7 @@ API = "https://open.tiktokapis.com/v2"
 REDIRECT_PORT = 8723
 REDIRECT_URI = f"http://localhost:{REDIRECT_PORT}/callback/"
 SCOPES = {"inbox": "user.info.basic,video.upload", "direct": "user.info.basic,video.upload,video.publish"}
-STATS_SCOPE = "video.list"  # Display API: view/like/comment/share counts of your public videos, for review_agent.py
+STATS_SCOPE = "video.list"  # Login Kit scope: view/like/comment/share counts of your public videos, for review_agent.py
 TOKEN_FILE = Path.home() / ".config" / "clip-builder" / "tiktok_token.json"
 MAX_PENDING_INBOX_DRAFTS = 4  # TikTok allows 5 pending drafts per 24h; leave one slot as a safety buffer.
 
@@ -91,7 +91,8 @@ def login(mode="inbox", stats=False):
     granted = set(got.get("scopes", "").split(","))
     print("Signed in to TikTok." + ("" if "video.upload" in granted else " Warning: video.upload wasn't granted.")
           + ("" if not stats or STATS_SCOPE in granted else " Warning: video.list wasn't granted, so the review can't "
-             "read TikTok views. Add the Display API product to the app on developers.tiktok.com, then sign in again."))
+             "read TikTok views. Add the video.list scope to the app (or its Sandbox) on developers.tiktok.com, and use that "
+             "app's client key and secret, then sign in again."))
     return tok
 
 

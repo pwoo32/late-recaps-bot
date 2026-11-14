@@ -230,9 +230,10 @@ The review reads your TikTok views itself once the TikTok login includes the `vi
 API). Our TikTok posts are drafts you finish in the app, so it matches each public post to its draft by the caption
 you pasted and by being posted after the draft was sent. One-time setup:
 
-1. On developers.tiktok.com, open the app you already use for posting and add the **Display API** product (scope
-   `video.list`). If the app is live, adding a product may send it back through TikTok's review; until that's
-   approved, the app's Sandbox works for your own account (add it under Target Users).
+1. On developers.tiktok.com, open the app you already use for posting and add the `video.list` scope (under Login
+   Kit). If the app is live, a new scope may send it back through TikTok's review; until then the app's Sandbox works
+   for your own account (add it under Target Users). A Sandbox has its own client key and secret: the sign-in must use
+   the keys of whichever one has `video.list`, with the redirect URI `http://localhost:8723/callback/` set there too.
 2. On the PC: `python channel_builder.py tiktok-auth --stats`. TikTok asks you to approve the extra permission.
 3. `python cloud_setup.py`, so the cloud run gets the new login.
 
@@ -288,7 +289,7 @@ you turn it on.
 2. Put the app's Client key and Client secret in your user environment variables, as `TIKTOK_CLIENT_KEY` and
    `TIKTOK_CLIENT_SECRET`. Don't put them in any file.
 3. Sign in once and turn cross-posting on: `python channel_builder.py tiktok-auth --enable` (add `--stats` after
-   adding the Display API product, so the review can read your views: see TikTok numbers)
+   adding the `video.list` scope, so the review can read your views: see TikTok numbers)
    (`--mode direct` to post straight to the profile, `--disable` to turn it off).
 
 Modes:
