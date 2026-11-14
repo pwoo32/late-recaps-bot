@@ -1,0 +1,84 @@
+{
+ "generated_at": "2026-11-14T21:36:18.860263+00:00",
+ "study_run": "replies_streamer_2026-11-14_2136",
+ "writer": "gemini",
+ "reply_words": 1.5,
+ "reply_words_p75": 3,
+ "top_words": 6,
+ "reply_traits": {
+  "question": 0.5,
+  "emoji": 0.62,
+  "emoji_only": 0.12,
+  "lowercase": 0.25,
+  "laugh": 0.25,
+  "thanks": 0.0,
+  "agree": 0.0,
+  "mention": 0.12,
+  "sub_ask": 0.0,
+  "link": 0.0,
+  "promise": 0.0,
+  "hostile": 0.0
+ },
+ "summary": "Top streamer clip channels heavily rely on posting top/first comments to drive viewer engagement, which correlates with a 1.62 lift in comments per view (lift_top: 1.62 vs lift_no_top: 0.98). Successful channel interactions are extremely brief, averaging 1.5 words per reply and 6 words for top comments. Engaging viewers through questions is key, as 50% of channel replies and 60% of top comments feature questions to spark thread activity.",
+ "reply_rules": [
+  "Keep replies ultra-short, targeting an average of 1.5 words and staying under 3 words (reply_words: 1.5, reply_words_p75: 3).",
+  "Ask open questions in 50% of your replies to encourage further conversation (picked_question: 0.14 vs passed_question: 0.02; reply_traits.question: 0.5).",
+  "Use emojis frequently, included in 62% of direct replies (reply_traits.emoji: 0.62).",
+  "Prioritize replying to comments with higher existing engagement and likes (picked_likes: 2 vs passed_likes: 1).",
+  "Skip plain laugh-only responses to incoming comments (passed_laugh: 0.31 vs picked_laugh: 0.0).",
+  "Keep responses casual using lowercase text when fitting (reply_traits.lowercase: 0.25)."
+ ],
+ "first_comment_rules": [
+  "Always leave a top comment on new uploads to boost overall engagement (lift_top: 1.62 vs lift_no_top: 0.98).",
+  "Ask a direct question about the clip in your top comment to trigger replies (top_traits.question: 0.6).",
+  "Include at least one emoji in every top comment (top_traits.emoji: 1.0).",
+  "Keep top comments concise, averaging around 6 words total (top_words: 6)."
+ ],
+ "avoid": [
+  "Do not post long, wordy replies exceeding 3 words (reply_words_p75: 3).",
+  "Avoid leaving empty laugh-only reactions without substance or follow-ups (passed_laugh: 0.31).",
+  "Never ask for subscribers or post channel links in comments (reply_traits.sub_ask: 0.0, reply_traits.link: 0.0).",
+  "Do not post top comments without questions or emotional hooks, as generic statements fail to drive thread activity (top_traits.question: 0.6)."
+ ],
+ "reply_examples": [
+  {
+   "comment": "speed actually lost his mind here",
+   "reply": "are you sure? 😂"
+  },
+  {
+   "comment": "kai cenat is the goat streamer",
+   "reply": "why though? 🤔"
+  },
+  {
+   "comment": "jynxzi aim was crazy in this clip",
+   "reply": "not anymore ✌️"
+  },
+  {
+   "comment": "adin ross carries every stream",
+   "reply": "yess 🔥"
+  },
+  {
+   "comment": "n3on actually pulled this off",
+   "reply": "how? 😳"
+  },
+  {
+   "comment": "0 comments on this video?",
+   "reply": "not anymore ✌️"
+  },
+  {
+   "comment": "speed is unmatched",
+   "reply": "siuuu! ❤️"
+  },
+  {
+   "comment": "kai standard stream moment",
+   "reply": "real 😂"
+  }
+ ],
+ "first_comment_examples": [
+  "Do you think speed fit in this clip? 😭",
+  "Which part was the smoothest? 😳",
+  "Did kai actually go too far here? 🤔",
+  "Who handled this situation better? 💀",
+  "Is jynxzi taking the win this time? 😳"
+ ]
+}
