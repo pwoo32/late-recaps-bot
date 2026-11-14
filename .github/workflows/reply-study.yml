@@ -31,7 +31,7 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install -q requests
-      - run: python reply_study_agent.py 2>&1 | tee reply_study.log
+      - run: python reply_study_agent.py --channels 20 2>&1 | tee reply_study.log
       - name: Save the report and guide
         if: always()
         run: |

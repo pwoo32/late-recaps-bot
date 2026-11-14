@@ -281,7 +281,9 @@ def llm_prompt(m, our_voice):
         "replies the thread got), and their own top/pinned comments. 'lift' values compare a Short's comments per view to "
         "the channel's own median (1.0 = normal). Treat these as correlations, not proof.\n\n"
         "Write a reply guide that makes Late Recaps' replies and pinned first comments get more people talking. Base every "
-        "rule on the data; say which number backs it. Keep what works for these channels even if it differs from the "
+        "rule on the data; say which number backs it. Mind the sample sizes (replies_n, tops_n, active_n, top_n): "
+        f"{'there are too few channel replies (' + str(m['replies_n']) + ') to set reply length or style from, so keep the current reply voice and say the top channels mostly do not reply; ' if m['replies_n'] < MIN_REPLIES else ''}"
+        "never turn a pattern from a handful of examples into a hard rule. Keep what works for these channels even if it differs from the "
         "current voice. Never recommend asking for subs, links, promises of clips, arguing, or pretending to be the "
         "streamer.\n\n"
         "Return JSON with: summary (2-3 sentences: what the top channels do with comments), reply_rules (4-8 short "
@@ -310,6 +312,8 @@ def write_guide(m, writer):
     return rule_guide(m), "numbers only"
 
 
+MIN_REPLIES = 30  # fewer channel replies than this and reply style isn't learned from them
+
 OUR_VOICE = ("a fan who runs a clip page; under 15 words, casual, lowercase is fine, 0-1 emoji; agree, joke or ask a "
              "quick follow-up question.")
 
@@ -317,7 +321,11 @@ OUR_VOICE = ("a fan who runs a clip page; under 15 words, casual, lowercase is f
 def rule_guide(m):
     t, tt = m["reply_traits"], m["top_traits"]
     rules = []
-    if m["reply_words"] is not None:
+    if m["replies_n"] < MIN_REPLIES:
+        rules.append(f"The top channels barely reply ({m['replies_n']} replies in {m['threads']} threads), so there's "
+                     "no reply style to copy: keep our own voice and put the effort into the pinned first comment.")
+        t = {}
+    elif m["reply_words"] is not None:
         rules.append(f"Keep replies short: the top channels' median reply is {m['reply_words']:.0f} words "
                      f"(three quarters are {m['reply_words_p75']} or fewer).")
     for k, label in [("lowercase", "write in lowercase"), ("emoji", "use an emoji"), ("laugh", "laugh along (😭, lol)"),
@@ -325,7 +333,7 @@ def rule_guide(m):
                      ("mention", "start with the viewer's @name")]:
         if t.get(k, 0) >= 0.3:
             rules.append(f"{label[0].upper() + label[1:]}: {t[k]:.0%} of their replies do.")
-    for k, (b, r) in (m.get("best_traits") or {}).items():
+    for k, (b, r) in ((m.get("best_traits") or {}) if t else {}).items():
         if k in ("question", "laugh", "emoji", "agree", "lowercase") and b - r >= 0.15:
             rules.append(f"Their most-liked replies {k if k != 'question' else 'ask questions'} more "
                          f"({b:.0%} vs {r:.0%} of the rest).")
