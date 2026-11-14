@@ -43,6 +43,8 @@ def main():
         "YOUTUBE_TOKEN": (TOKENS / "youtube_token.json").read_text() if (TOKENS / "youtube_token.json").exists() else None,
         "REVIEW_TOKEN": (TOKENS / "review_token.json").read_text() if (TOKENS / "review_token.json").exists() else None,
         "TIKTOK_TOKEN": (TOKENS / "tiktok_token.json").read_text() if (TOKENS / "tiktok_token.json").exists() else None,
+        # comment replies and first comments (channel_activity_agent.py auth)
+        "ACTIVITY_TOKEN": (TOKENS / "activity_token.json").read_text() if (TOKENS / "activity_token.json").exists() else None,
     }
     if "--with-claude" in sys.argv:  # not needed: the cloud run writes scripts with a free local model
         print("For the script writer: run `claude setup-token` in another window, then paste the token here.")

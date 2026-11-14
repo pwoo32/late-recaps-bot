@@ -33,7 +33,7 @@ posted.** If clips are being held, fix the writer (usually a missing or failing 
 | `tiktok_upload.py`, `tiktok_caption.py`, `meta_upload.py` | Cross-posting |
 | `sources.py` | Creators we clip, where their footage lives, and `crowd` (saturation penalty) |
 | `agent.py`, `channel_agent.py`, `niches.py` | Trend scan and channel study reports |
-| `channel_activity_agent.py` | Comment replies and community drafts (local Windows task) |
+| `channel_activity_agent.py` | Comment replies, first comments and community post drafts; runs in the cloud daily run after the review (posts with the `ACTIVITY_TOKEN` sign-in) |
 | `cloud_setup.py` | Copies the PC's keys and sign-in tokens into the GitHub repo secrets |
 | `reports/` | Every run's output, committed by the workflow. `reports/builder/state.json` is the bot's memory |
 | `.github/workflows/daily.yml` | The schedule: daily run ~7 AM ET with backups through the day |
@@ -61,7 +61,7 @@ python review_agent.py --days 14                                  # review poste
 python script_agent.py --writer gemini --dry-run                  # re-write the latest queue's scripts, print only
 ```
 
-On Windows, `run_daily.cmd` and `run_activity.cmd` are for Task Scheduler. They read keys from user environment
+On Windows, `run_daily.cmd` and `run_activity.cmd` are for Task Scheduler (both off now: everything runs in the cloud). They read keys from user environment
 variables. The cloud workflow is the main path, so don't run both or the channel posts twice.
 
 ## Channel
@@ -82,6 +82,7 @@ signed-in channel before any upload and holds the run if it isn't Late Recaps (`
 | `TWITCH_CLIENT_ID`, `TWITCH_CLIENT_SECRET` | Twitch clips with exact VOD offsets |
 | `TIKTOK_CLIENT_KEY`, `TIKTOK_CLIENT_SECRET`, `TIKTOK_TOKEN` | TikTok posting |
 | `META_ACCESS_TOKEN`, `IG_USER_ID`, `FB_PAGE_ID` | Instagram and Facebook Reels |
+| `ACTIVITY_TOKEN` | Comment access for replies and first comments (`channel_activity_agent.py auth`, then `cloud_setup.py`) |
 | `YT_COOKIES` or `YT_PROXY` | Lets yt-dlp download from YouTube on cloud runners |
 
 Never print, log or commit a secret or token. OAuth tokens live in `~/.config/clip-builder/` on the PC.

@@ -19,7 +19,9 @@ Usage:
     python channel_activity_agent.py --post        # check, draft and post in one go (what run_activity.cmd does)
     python channel_activity_agent.py --no-llm      # schedule check only, no drafting
 
-Drafts are written by a free local Ollama model (Claude Code or ANTHROPIC_API_KEY only if picked with --writer).
+Drafts are written by a free writer: Gemini or Groq (GEMINI_API_KEY / GROQ_API_KEY, as the script agent uses), else a
+local Ollama model. Claude Code or ANTHROPIC_API_KEY only if picked with --writer. The cloud daily run
+(.github/workflows/daily.yml) runs it with --post after the review; its login goes up as the ACTIVITY_TOKEN secret.
 Quota: reading costs ~3-6 units; each posted reply/comment/hold costs 50, capped by --max-replies (default 20).
 Its login is its own file (~/.config/clip-builder/activity_token.json), so uploading and reviewing are never affected.
 """
@@ -114,7 +116,7 @@ def signed_in(g):
     for f in [ACTIVITY_TOKEN] + READ_TOKENS:
         if not f.exists():
             continue
-        creds = g["Credentials"].from_authorized_user_file(str(f))
+        creds = g["Credentials"].from_authorized_user_info(json.loads(f.read_text(encoding="utf-8-sig")))
         if creds.expired and creds.refresh_token:
             try:
                 creds.refresh(g["Request"]())
@@ -312,11 +314,20 @@ def _api(prompt):
     return parse_json("".join(b.text for b in resp.content if b.type == "text"))
 
 
-WRITERS = {"claude-code": _claude_code, "ollama": _ollama, "api": _api}
+def _free(name):
+    def run(prompt):  # the script agent's free writers (GEMINI_API_KEY / GROQ_API_KEY); skipped without a key
+        import script_agent
+        out = getattr(script_agent, name)(prompt)
+        return parse_json(out) if isinstance(out, str) else out
+    return run
+
+
+WRITERS = {"gemini": _free("_gemini"), "groq": _free("_groq"), "claude-code": _claude_code, "ollama": _ollama, "api": _api}
+AUTO = ["gemini", "groq", "ollama"]  # free by default, so the cloud run can draft without a local model
 
 
 def draft(prompt, writer=None):
-    for name in ([writer] if writer in WRITERS else ["ollama"]):  # free by default; Claude only if picked
+    for name in ([writer] if writer in WRITERS else AUTO):  # Claude only if picked
         try:
             out = WRITERS[name](prompt)
         except Exception as e:
