@@ -1,0 +1,253 @@
+[
+ {
+  "id": 1,
+  "source": "ishowspeed",
+  "creator": "IShowSpeed",
+  "platform": "youtube",
+  "video_id": "Kush1FqnhbU",
+  "video_title": "REVEALING MY NEW FORTNITE ICON SKIN! 🕺🏴‍☠️",
+  "url": "https://www.youtube.com/watch?v=Kush1FqnhbU&t=815s",
+  "moment": "13:35",
+  "start": 795,
+  "end": 825,
+  "rank": 18.77,
+  "signal": "3 timestamp comments, 81 likes",
+  "signals": [
+   "comments"
+  ],
+  "quotes": [
+   "Terima kasih banyak semuanya"
+  ],
+  "stream_age_h": 15.3,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": null
+  },
+  "council": {
+   "trend": 0.92,
+   "study": 0.97,
+   "analytics": 0.82,
+   "live": 0.42,
+   "script": 0.9,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 0.92,
+    "why": "Speed clips pull 804,308 views/hour this week, up 109% since the last scan"
+   },
+   "study": {
+    "score": 0.97,
+    "why": "7 of the top channels' breakout Shorts are Speed clips; Speed is in 99 of their recent titles"
+   },
+   "analytics": {
+    "score": 0.82,
+    "why": "Speed clips do 1.2x our usual; has a spoken premise (bet/question/challenge); stream is 15h old"
+   },
+   "live": {
+    "score": 0.42,
+    "why": "3 timestamp comments, 81 likes"
+   },
+   "script": {
+    "score": 0.9,
+    "why": "draft title: \"Speed: \">> What Happened to Discord?\" 😱\""
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-14T17:09:10Z",
+  "council_why": "IShowSpeed's clips have the highest view pull rate and are associated with top channels breaking out, making them highly likely to perform well.",
+  "post_utc": "2026-11-14 22:00",
+  "post_local": "Sat 05:00 PM ET",
+  "title": "Speed Terima kasih banyak semuanya 🤯",
+  "hook": "TERIMA KASIH BANYAK SEMUANYA",
+  "context": "IShowSpeed live, REVEALING MY NEW FORTNITE ICON SKIN! 🕺🏴‍☠️",
+  "take": "Speed had no idea what was about to happen.",
+  "summary": "IShowSpeed live: REVEALING MY NEW FORTNITE ICON SKIN! 🕺🏴‍☠️",
+  "tiktok_caption": "Speed in REVEALING MY NEW FORTNITE ICON SKIN! 🕺🏴‍☠️.",
+  "hashtags": [],
+  "tags": [],
+  "draft": true,
+  "writer": "template",
+  "description": "IShowSpeed live, REVEALING MY NEW FORTNITE ICON SKIN! 🕺🏴‍☠️\n\nFull stream by IShowSpeed: https://www.youtube.com/watch?v=Kush1FqnhbU&t=815s\nGo support IShowSpeed, all credit to them.\n\n#ishowspeed #speed #shorts #kaicenat #rakai",
+  "key": "Kush1FqnhbU@27",
+  "permission": "fan clipping is widespread and tolerated; no official paid program found (Oct 2026)"
+ },
+ {
+  "id": 2,
+  "source": "jynxzi",
+  "creator": "Jynxzi",
+  "platform": "youtube",
+  "video_id": "uGSJvEfax_c",
+  "video_title": "FANTASTIC FRIDAY STREAM.",
+  "url": "https://www.youtube.com/watch?v=uGSJvEfax_c&t=14949s",
+  "moment": "4:09:09",
+  "start": 14929,
+  "end": 14959,
+  "rank": 51.41,
+  "signal": "chat went 22.9x its normal pace",
+  "signals": [
+   "chat spike"
+  ],
+  "quotes": [
+   "w",
+   "w",
+   "w"
+  ],
+  "stream_age_h": 15.3,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.08,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": "punch"
+  },
+  "council": {
+   "trend": 0.77,
+   "study": 0.25,
+   "analytics": 0.86,
+   "live": 0.55,
+   "script": 0.75,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 0.77,
+    "why": "Jynxzi clips pull 41,622 views/hour this week, up 298% since the last scan"
+   },
+   "study": {
+    "score": 0.25,
+    "why": "top channels rarely break out with Jynxzi"
+   },
+   "analytics": {
+    "score": 0.86,
+    "why": "Jynxzi clips do 1.4x our usual; has a spoken premise (bet/question/challenge); stream is 15h old"
+   },
+   "live": {
+    "score": 0.55,
+    "why": "chat went 22.9x"
+   },
+   "script": {
+    "score": 0.75,
+    "why": "draft title: \"Jynxzi At Fantastic Friday 🔥\""
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-14T17:09:10Z",
+  "council_why": "Jynxzi's clips have a strong track record and a clear spoken premise, which could attract more views.",
+  "post_utc": "2026-11-14 18:00",
+  "post_local": "Sat 01:00 PM ET",
+  "title": "Jynxzi w 🤯",
+  "hook": "W",
+  "context": "Jynxzi live, FANTASTIC FRIDAY STREAM.",
+  "take": "Jynxzi had no idea what was about to happen.",
+  "summary": "Jynxzi live: FANTASTIC FRIDAY STREAM.",
+  "tiktok_caption": "Jynxzi in FANTASTIC FRIDAY STREAM..",
+  "hashtags": [],
+  "tags": [],
+  "draft": true,
+  "writer": "template",
+  "description": "Jynxzi live, FANTASTIC FRIDAY STREAM.\n\nFull stream by Jynxzi: https://www.youtube.com/watch?v=uGSJvEfax_c&t=14949s\nGo support Jynxzi, all credit to them.\n\n#jynxzi #shorts #kaicenat #ishowspeed #rakai",
+  "key": "uGSJvEfax_c@498",
+  "permission": "fan clipping tolerated; check for a Whop campaign"
+ },
+ {
+  "id": 3,
+  "source": "xqc",
+  "creator": "xQc",
+  "platform": "twitch_clip",
+  "video_id": "3212303181",
+  "video_title": "Oaks",
+  "url": "https://www.twitch.tv/xqc/clip/TrustworthyDeterminedSnakeSuperVinlin-3AJn_BZG9QM87A9o",
+  "moment": "0:00",
+  "start": 0,
+  "end": 16.0,
+  "rank": 16.57,
+  "signal": "Twitch clip, 1,028 views (57/h)",
+  "signals": [
+   "twitch clip"
+  ],
+  "quotes": [
+   "Oaks"
+  ],
+  "stream_age_h": 17.9,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "fast",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": "beat"
+  },
+  "council": {
+   "trend": 1.0,
+   "study": 0.25,
+   "analytics": 0.53,
+   "live": 0.1,
+   "script": 0.35,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 1.0,
+    "why": "xQc clips pull 866 views/hour this week, up 1732% since the last scan"
+   },
+   "study": {
+    "score": 0.25,
+    "why": "top channels rarely break out with xQc"
+   },
+   "analytics": {
+    "score": 0.53,
+    "why": "no track record for xQc on our channel yet; no clear premise, may be visual-only; stream is 18h old"
+   },
+   "live": {
+    "score": 0.1,
+    "why": "Twitch clip at 57/h"
+   },
+   "script": {
+    "score": 0.35,
+    "why": "draft title: \"xQc Is Left Speechless 😱\"; no captions yet, writing blind"
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-14T17:09:10Z",
+  "council_why": "xQc's clips have shown a significant increase in view pull rate, and while there's no track record on this channel, the potential for breakout content is high.",
+  "post_utc": "2026-11-15 01:00",
+  "post_local": "Sat 08:00 PM ET",
+  "title": "xQc Oaks 🤯",
+  "hook": "OAKS",
+  "context": "xQc live, Oaks",
+  "take": "xQc really thought this was a good idea.",
+  "summary": "xQc live: Oaks",
+  "tiktok_caption": "xQc in Oaks.",
+  "hashtags": [],
+  "tags": [],
+  "draft": true,
+  "writer": "template",
+  "description": "xQc live, Oaks\n\nFull stream by xQc: https://www.twitch.tv/xqc/clip/TrustworthyDeterminedSnakeSuperVinlin-3AJn_BZG9QM87A9o\nGo support xQc, all credit to them.\n\n#xqc #shorts #kaicenat #ishowspeed #rakai",
+  "key": "3212303181@0",
+  "permission": "fan clipping is widespread and tolerated; no official program checked (Nov 2026)"
+ }
+]
