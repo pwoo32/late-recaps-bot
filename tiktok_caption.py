@@ -157,7 +157,9 @@ def build(clip, src):
         head = full
     about = topic(clip, creator_words)
     people = guests(clip, creator_words)
-    game_name, game_tag = game(text)
+    # the creator's own name never counts as a game or sport ("Stable Ronaldo" isn't football)
+    pat = "|".join(map(re.escape, sorted((w for w in creator_words if w), key=len, reverse=True)))
+    game_name, game_tag = game(re.sub(rf"\b(?:{pat})\b", " ", text, flags=re.I) if pat else text)
     md = mood(text)
     versus = re.search(r"\b(1v1|vs\.?|versus|race|battle|bet|challenge)\b", clip.get("video_title", ""), re.I)
 
