@@ -29,11 +29,11 @@ posted.** If clips are being held, fix the writer (usually a missing or failing 
 | `free_writer.py` | No-model fallback writer. Its narration is template-based, so the gate holds those clips for YouTube |
 | `originality.py` | Reused-content and copyright checks (template narration, stock lines, music, short clips, repeats) |
 | `tuner.py` | A/B tests edit settings (length, zoom, captions) and keeps the winners |
-| `review_agent.py` | Scores posted clips with YouTube Analytics and feeds lessons back into `reports/builder/state.json` |
+| `review_agent.py` | Finds what makes our clips spread (feed tests, creators, hooks, titles, length, timing) from YouTube Analytics and `reports/tiktok_stats.csv`, and feeds creator/hour/length weights and make-more/less findings into `reports/builder/state.json` |
 | `tiktok_upload.py`, `tiktok_caption.py`, `meta_upload.py` | Cross-posting |
 | `sources.py` | Creators we clip, where their footage lives, and `crowd` (saturation penalty) |
 | `agent.py`, `channel_agent.py`, `niches.py` | Trend scan and channel study reports |
-| `channel_activity_agent.py` | Comment replies and community drafts (local Windows task) |
+| `channel_activity_agent.py` | Comment replies, first comments and community post drafts; runs in the cloud daily run after the review; drafts only until the repo variable `ACTIVITY_POST` is `true` |
 | `cloud_setup.py` | Copies the PC's keys and sign-in tokens into the GitHub repo secrets |
 | `reports/` | Every run's output, committed by the workflow. `reports/builder/state.json` is the bot's memory |
 | `.github/workflows/daily.yml` | The schedule: daily run ~7 AM ET with backups through the day |
@@ -61,7 +61,7 @@ python review_agent.py --days 14                                  # review poste
 python script_agent.py --writer gemini --dry-run                  # re-write the latest queue's scripts, print only
 ```
 
-On Windows, `run_daily.cmd` and `run_activity.cmd` are for Task Scheduler. They read keys from user environment
+On Windows, `run_daily.cmd` and `run_activity.cmd` are for Task Scheduler (both off now: everything runs in the cloud). They read keys from user environment
 variables. The cloud workflow is the main path, so don't run both or the channel posts twice.
 
 ## Channel
@@ -82,6 +82,7 @@ signed-in channel before any upload and holds the run if it isn't Late Recaps (`
 | `TWITCH_CLIENT_ID`, `TWITCH_CLIENT_SECRET` | Twitch clips with exact VOD offsets |
 | `TIKTOK_CLIENT_KEY`, `TIKTOK_CLIENT_SECRET`, `TIKTOK_TOKEN` | TikTok posting |
 | `META_ACCESS_TOKEN`, `IG_USER_ID`, `FB_PAGE_ID` | Instagram and Facebook Reels |
+| `ACTIVITY_TOKEN` | Comment access for replies and first comments (`channel_activity_agent.py auth`, then `cloud_setup.py`) |
 | `YT_COOKIES` or `YT_PROXY` | Lets yt-dlp download from YouTube on cloud runners |
 
 Never print, log or commit a secret or token. OAuth tokens live in `~/.config/clip-builder/` on the PC.
@@ -96,6 +97,9 @@ Never print, log or commit a secret or token. OAuth tokens live in `~/.config/cl
   `python channel_builder.py auth` and `python review_agent.py auth`, then `python cloud_setup.py`. Publishing the
   OAuth app (Google Cloud Console > Google Auth Platform > Audience > Publish app) stops the 7-day expiry.
 - **Review says "can't read YouTube Analytics"**: `REVIEW_TOKEN` is missing or expired (see above).
+- **TikTok numbers**: the review reads TikTok views through the Display API (`video.list`) when the TikTok login has
+  it (`channel_builder.py tiktok-auth --stats`, then `cloud_setup.py`), matching posts to our drafts by caption, and
+  writes them to `reports/tiktok_stats.csv`. Without it, Philip types the numbers into that sheet.
 - **Copyright claim**: the review report names the clip. Its stream is added to `claimed_streams` in `state.json`
   and is never clipped again.
 

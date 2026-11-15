@@ -1,16 +1,17 @@
 {
  "source_weight": {
-  "jynxzi": 1.89,
+  "jynxzi": 2.39,
   "kai_cenat": 0.31,
-  "ishowspeed": 1.84
+  "ishowspeed": 1.99
  },
  "slot_weight": {
   "2": 0.49,
   "21": 0.49,
-  "8": 1.45,
+  "8": 1.49,
   "4": 0.49,
-  "22": 1.92,
-  "17": 1.95
+  "22": 2.19,
+  "17": 1.99,
+  "6": 1.58
  },
  "used_moments": [
   "L6S9Vb3RLy4@186",
@@ -102,7 +103,22 @@
   "jJ-zWCw85qA@51",
   "2686136916@0",
   "3081337536@0",
-  "2H3Dq2N0mv8@1085"
+  "2H3Dq2N0mv8@1085",
+  "hmfQoGeKkMw@363",
+  "2480095367@0",
+  "2H3Dq2N0mv8@1108",
+  "2382863080@0",
+  "jJ-zWCw85qA@33",
+  "1680950055@0",
+  "Kush1FqnhbU@27",
+  "uGSJvEfax_c@498",
+  "3212303181@0",
+  "Kush1FqnhbU@17",
+  "uGSJvEfax_c@703",
+  "3250253326@0",
+  "2927935655@182",
+  "2929115707@27",
+  "uGSJvEfax_c@343"
  ],
  "queued": {
   "L6S9Vb3RLy4@186": {
@@ -1154,6 +1170,339 @@
     "script": 0.35,
     "audience": 0.5
    }
+  },
+  "hmfQoGeKkMw@363": {
+   "title": "Jynxzi: \"Can You Go on the Living Room?\" \ud83d\ude31",
+   "source": "jynxzi",
+   "post_utc": "2026-11-13 22:00",
+   "recipe": {
+    "length": 30,
+    "punch": 0.14,
+    "beat": "normal",
+    "caption_words": 3,
+    "gap": 0.6,
+    "layout": "face34",
+    "test": null
+   },
+   "council": {
+    "trend": 1.0,
+    "study": 0.25,
+    "analytics": 0.79,
+    "live": 0.39,
+    "script": 1.0,
+    "audience": 0.5
+   }
+  },
+  "2480095367@0": {
+   "title": "Jynxzi Asks Ron \"Am I Open a Beer Pump?\" \ud83d\udd25",
+   "source": "jynxzi",
+   "post_utc": "2026-11-13 22:00",
+   "recipe": {
+    "length": 30,
+    "punch": 0.14,
+    "beat": "normal",
+    "caption_words": 3,
+    "gap": 0.6,
+    "layout": "face34",
+    "test": null
+   },
+   "council": {
+    "trend": 1.0,
+    "study": 0.25,
+    "analytics": 0.88,
+    "live": 0.11,
+    "script": 0.35,
+    "audience": 0.5
+   }
+  },
+  "2H3Dq2N0mv8@1108": {
+   "title": "Jynxzi At Streamer Awards 2026 \ud83d\udd25",
+   "source": "jynxzi",
+   "post_utc": "2026-11-13 22:00",
+   "recipe": {
+    "length": 30,
+    "punch": 0.14,
+    "beat": "normal",
+    "caption_words": 3,
+    "gap": 0.6,
+    "layout": "face34",
+    "test": null
+   },
+   "council": {
+    "trend": 1.0,
+    "study": 0.25,
+    "analytics": 0.66,
+    "live": 0.3,
+    "script": 0.35,
+    "audience": 0.5
+   }
+  },
+  "2382863080@0": {
+   "title": "Jynxzi Wins Gamer Of The Year At The Streamer Awards \ud83c\udfc6\ud83d\udd25",
+   "source": "jynxzi",
+   "post_utc": "2026-11-13 22:00",
+   "recipe": {
+    "length": 30,
+    "punch": 0.14,
+    "beat": "normal",
+    "caption_words": 3,
+    "gap": 0.6,
+    "layout": "face34",
+    "test": null
+   },
+   "council": {
+    "trend": 1.0,
+    "study": 0.25,
+    "analytics": 0.66,
+    "live": 0.11,
+    "script": 0.6,
+    "audience": 0.5
+   },
+   "video_id": "yUTyORTf7GE"
+  },
+  "jJ-zWCw85qA@33": {
+   "title": "Speed Challenges Serena Williams To Tennis \ud83c\udfbe\ud83d\udc80",
+   "source": "ishowspeed",
+   "post_utc": "2026-11-14 01:00",
+   "recipe": {
+    "length": 45,
+    "punch": 0.14,
+    "beat": "normal",
+    "caption_words": 3,
+    "gap": 0.6,
+    "layout": "face34",
+    "test": "length"
+   },
+   "council": {
+    "trend": 0.72,
+    "study": 0.86,
+    "analytics": 0.7,
+    "live": 0.89,
+    "script": 0.75,
+    "audience": 0.5
+   }
+  },
+  "1680950055@0": {
+   "title": "Ronaldo Discusses The Best Roleplay Streamer \ud83c\udfad\ud83c\udfc6",
+   "source": "stableronaldo",
+   "post_utc": "2026-11-14 05:00",
+   "recipe": {
+    "length": 30,
+    "punch": 0.2,
+    "beat": "normal",
+    "caption_words": 3,
+    "gap": 0.6,
+    "layout": "face34",
+    "test": "punch"
+   },
+   "council": {
+    "trend": 1.0,
+    "study": 0.25,
+    "analytics": 0.52,
+    "live": 0.11,
+    "script": 0.35,
+    "audience": 0.5
+   }
+  },
+  "Kush1FqnhbU@27": {
+   "title": "Speed At Revealing MY NEW Fortnite \ud83d\ude31",
+   "source": "ishowspeed",
+   "post_utc": "2026-11-14 22:00",
+   "recipe": {
+    "length": 30,
+    "punch": 0.14,
+    "beat": "normal",
+    "caption_words": 3,
+    "gap": 0.6,
+    "layout": "face34",
+    "test": null
+   },
+   "council": {
+    "trend": 0.92,
+    "study": 0.97,
+    "analytics": 0.82,
+    "live": 0.42,
+    "script": 0.9,
+    "audience": 0.5
+   }
+  },
+  "uGSJvEfax_c@498": {
+   "title": "Jynxzi: \"Why Are You?\" \ud83d\udd25",
+   "source": "jynxzi",
+   "post_utc": "2026-11-14 18:00",
+   "recipe": {
+    "length": 30,
+    "punch": 0.08,
+    "beat": "normal",
+    "caption_words": 3,
+    "gap": 0.6,
+    "layout": "face34",
+    "test": "punch"
+   },
+   "council": {
+    "trend": 0.77,
+    "study": 0.25,
+    "analytics": 0.86,
+    "live": 0.55,
+    "script": 0.75,
+    "audience": 0.5
+   }
+  },
+  "3212303181@0": {
+   "title": "xQc Can't Believe What Just Happened \ud83d\ude31",
+   "source": "xqc",
+   "post_utc": "2026-11-15 01:00",
+   "recipe": {
+    "length": 30,
+    "punch": 0.14,
+    "beat": "fast",
+    "caption_words": 3,
+    "gap": 0.6,
+    "layout": "face34",
+    "test": "beat"
+   },
+   "council": {
+    "trend": 1.0,
+    "study": 0.25,
+    "analytics": 0.53,
+    "live": 0.1,
+    "script": 0.35,
+    "audience": 0.5
+   }
+  },
+  "Kush1FqnhbU@17": {
+   "title": "Speed At Revealing MY NEW Fortnite \ud83d\ude31",
+   "source": "ishowspeed",
+   "post_utc": "2026-11-14 22:00",
+   "recipe": {
+    "length": 30,
+    "punch": 0.14,
+    "beat": "normal",
+    "caption_words": 3,
+    "gap": 0.6,
+    "layout": "face34",
+    "test": null
+   },
+   "council": {
+    "trend": 0.92,
+    "study": 0.97,
+    "analytics": 0.56,
+    "live": 0.42,
+    "script": 0.35,
+    "audience": 0.5
+   }
+  },
+  "uGSJvEfax_c@703": {
+   "title": "Jynxzi: \">> Can You Read a Few?\" \ud83d\udd25",
+   "source": "jynxzi",
+   "post_utc": "2026-11-15 07:00",
+   "recipe": {
+    "length": 30,
+    "punch": 0.08,
+    "beat": "normal",
+    "caption_words": 3,
+    "gap": 0.6,
+    "layout": "face34",
+    "test": "punch"
+   },
+   "council": {
+    "trend": 0.77,
+    "study": 0.25,
+    "analytics": 0.84,
+    "live": 0.55,
+    "script": 1.0,
+    "audience": 0.5
+   }
+  },
+  "3250253326@0": {
+   "title": "Ronaldo Watches His Smooth Emily Interview \ud83d\ude2d",
+   "source": "stableronaldo",
+   "post_utc": "2026-11-15 01:00",
+   "recipe": {
+    "length": 30,
+    "punch": 0.14,
+    "beat": "fast",
+    "caption_words": 3,
+    "gap": 0.6,
+    "layout": "face34",
+    "test": "beat"
+   },
+   "council": {
+    "trend": 0.22,
+    "study": 0.25,
+    "analytics": 0.76,
+    "live": 0.11,
+    "script": 0.6,
+    "audience": 0.5
+   },
+   "video_id": "lyjYSkcZGzE"
+  },
+  "2927935655@182": {
+   "title": "Ronaldo Reacts To His Emily Red Carpet Interview \ud83d\ude2d",
+   "source": "stableronaldo",
+   "post_utc": "2026-11-15 21:00",
+   "recipe": {
+    "length": 30,
+    "punch": 0.14,
+    "beat": "normal",
+    "caption_words": 3,
+    "gap": 0.6,
+    "layout": "face34",
+    "test": null
+   },
+   "council": {
+    "trend": 1.0,
+    "study": 0.25,
+    "analytics": 0.8,
+    "live": 0.11,
+    "script": 0.35,
+    "audience": 0.5
+   }
+  },
+  "2929115707@27": {
+   "title": "Ronaldo Locks In During Exterminauts Interview \ud83d\udc80",
+   "source": "stableronaldo",
+   "post_utc": "2026-11-15 18:00",
+   "recipe": {
+    "length": 30,
+    "punch": 0.2,
+    "beat": "normal",
+    "caption_words": 3,
+    "gap": 0.6,
+    "layout": "face34",
+    "test": "punch"
+   },
+   "council": {
+    "trend": 1.0,
+    "study": 0.25,
+    "analytics": 0.65,
+    "live": 0.12,
+    "script": 0.35,
+    "audience": 0.5
+   },
+   "video_id": "bRLS8bfwXqk"
+  },
+  "uGSJvEfax_c@343": {
+   "title": "Jynxzi At Fantastic Friday \ud83d\ude31",
+   "source": "jynxzi",
+   "post_utc": "2026-11-16 00:00",
+   "recipe": {
+    "length": 30,
+    "punch": 0.14,
+    "beat": "fast",
+    "caption_words": 3,
+    "gap": 0.6,
+    "layout": "face34",
+    "test": "beat"
+   },
+   "council": {
+    "trend": 0.52,
+    "study": 0.25,
+    "analytics": 0.55,
+    "live": 0.55,
+    "script": 0.65,
+    "audience": 0.5
+   }
   }
  },
  "channel": "UCbK9EejOk5UVzI_l8F3f8kA",
@@ -1162,8 +1511,8 @@
   "@TheDiaryOfACEO": "UCGq-a57w-aPwyi3pW7XLiHw"
  },
  "review": {
-  "at": "2026-11-13 17:29",
-  "report": "/home/runner/work/late-recaps-bot/late-recaps-bot/reports/review_2026-11-13_1729/report.md",
+  "at": "2026-11-15 17:48",
+  "report": "/home/runner/work/late-recaps-bot/late-recaps-bot/reports/review_2026-11-15_1748/report.md",
   "lessons": {
    "titles": [
     "Creator name first, then a bet or question in plain verbs, and never the result. Add a named guest or celebrity when one exists.",
@@ -1187,98 +1536,62 @@
     "Confirm that scheduled clips actually go public. After 48h, judge on 3s retention and Shorts-feed share, and check Studio for limits or duplicate-content flags."
    ]
   },
+  "typical_views": 1.9,
+  "feed_tested": "1 of 6",
+  "make_more": [
+   "quote title (Creator: \"line\") (title): 6 clips, 3 got a real feed test, typically 7 views, 1.9x our typical clip, 32% stayed past the swipe",
+   "Twitch clip (found by): 4 clips, 2 got a real feed test, typically 8 views, 1.9x our typical clip, 32% stayed past the swipe",
+   "Jynxzi (creator): 12 clips, 3 got a real feed test, typically 3 views, 1.4x our typical clip, 42% stayed past the swipe",
+   "20-30s (length): 15 clips, 4 got a real feed test, typically 3 views, 1.3x our typical clip, 31% stayed past the swipe",
+   "afternoon (noon-5pm ET) (post time): 6 clips, 2 got a real feed test, typically 3 views, 1.3x our typical clip, 59% stayed past the swipe",
+   "20-30s (length): 4 clips, typically 675 views, 1.6x our typical TikTok clip (on TikTok)",
+   "quote title (Creator: \"line\") (title): 4 clips, typically 670 views, 1.6x our typical TikTok clip (on TikTok)"
+  ],
+  "make_less": [
+   "Kai Cenat (creator): 14 clips, 0 got a real feed test, typically 0 views, 0.5x our typical clip, 53% stayed past the swipe",
+   "31-45s (length): 4 clips, 0 got a real feed test, typically 1 views, 0.7x our typical clip, 50% stayed past the swipe",
+   "stake or challenge (hook): 3 clips, 0 got a real feed test, typically 1 views, 0.8x our typical clip, 25% stayed past the swipe",
+   "viewer timestamp comments (found by): 11 clips, typically 231 views, 0.8x our typical TikTok clip (on TikTok)",
+   "over 45s (length): 11 clips, typically 231 views, 0.8x our typical TikTok clip (on TikTok)"
+  ],
   "source_score": {
-   "jynxzi": 0.84,
-   "caseoh": 0.96,
-   "stableronaldo": 0.96,
-   "ishowspeed": 0.58,
-   "kai_cenat": 0.64,
-   "adin_ross": 0.83
+   "jynxzi": 1.41,
+   "kai_cenat": 0.55,
+   "caseoh": 1.58,
+   "stableronaldo": 1.78,
+   "xqc": 0.77,
+   "ishowspeed": 1.19,
+   "n3on": 0.77,
+   "adin_ross": 0.91
   },
-  "length_hint": 22,
+  "hour_score": {
+   "6": 0.96,
+   "8": 1.17,
+   "17": 1.28,
+   "21": 1.22,
+   "22": 1.0,
+   "4": 0.73,
+   "2": 0.68
+  },
+  "levers": {
+   "found by": {
+    "Twitch clip": 1.94,
+    "chat spike": 1.19,
+    "viewer timestamp comments": 0.81
+   },
+   "stream age at post": {
+    "over 48h": 1.03,
+    "12-48h": 1.0,
+    "under 12h": 0.92
+   }
+  },
+  "length_hint": 25,
   "clips": [
    {
-    "title": "Kai Cenat Goes Crazy \ud83d\udd25",
-    "views": 0,
-    "avg_viewed": null,
-    "stayed": null,
-    "verdict": null
-   },
-   {
-    "title": "Jynxzi Didn't See This Coming At Biggest Announcement Ever \ud83d\ude31",
-    "views": 22,
-    "avg_viewed": 64,
-    "stayed": 0.3,
-    "verdict": null
-   },
-   {
-    "title": "Kai Cenat Didn't See This Coming \ud83d\ude31",
-    "views": 0,
-    "avg_viewed": null,
-    "stayed": null,
-    "verdict": null
-   },
-   {
-    "title": "Kai Cenat Goes Crazy \ud83d\udd25",
-    "views": 0,
-    "avg_viewed": null,
-    "stayed": null,
-    "verdict": null
-   },
-   {
-    "title": "Kai Cenat Can't Believe What Just Happened \ud83d\ude31",
-    "views": 0,
-    "avg_viewed": null,
-    "stayed": null,
-    "verdict": null
-   },
-   {
-    "title": "CaseOh: \"Crazy Viewer\" \ud83d\ude2d",
-    "views": 17,
-    "avg_viewed": 69.68,
-    "stayed": 0.47058823529411764,
-    "verdict": null
-   },
-   {
-    "title": "Ronaldo: \"Laiys. Says Word\" \ud83d\ude31",
-    "views": 28,
-    "avg_viewed": 70.69,
-    "stayed": 0.5384615384615384,
-    "verdict": null
-   },
-   {
-    "title": "xQc Can't Believe He Pulled This Off At X Presses Lang \ud83d\udd25",
-    "views": 0,
-    "avg_viewed": null,
-    "stayed": null,
-    "verdict": null
-   },
-   {
-    "title": "Speed And Derek Jeter Go Crazy \ud83d\udd25",
-    "views": 2,
-    "avg_viewed": 0,
-    "stayed": 0.0,
-    "verdict": null
-   },
-   {
-    "title": "Speed And Derek Jeter Can't Believe It \ud83d\udd25",
-    "views": 20,
-    "avg_viewed": 65.39,
-    "stayed": 0.5,
-    "verdict": null
-   },
-   {
-    "title": "Kai Cenat Is Left Speechless At Was Shook From Ai \ud83d\ude31",
-    "views": 1,
-    "avg_viewed": 0,
-    "stayed": 0.0,
-    "verdict": null
-   },
-   {
-    "title": "Jynxzi Can't Believe What Just Happened \ud83d\ude2d",
-    "views": 2,
-    "avg_viewed": 144.48,
-    "stayed": 0.5,
+    "title": "Speed Gets Invited To Cook Up Dubstep With Frost Children \ud83c\udfa7",
+    "views": 46,
+    "avg_viewed": 37.51,
+    "stayed": 0.6590909090909091,
     "verdict": null
    },
    {
@@ -1289,57 +1602,67 @@
     "verdict": null
    },
    {
-    "title": "N3on: \"Face Each Other?\" \ud83d\udd25",
-    "views": 0,
-    "avg_viewed": null,
-    "stayed": null,
-    "verdict": null
-   },
-   {
-    "title": "Speed Can't Believe The Look On Her Face \ud83d\ude2d",
-    "views": 0,
-    "avg_viewed": null,
-    "stayed": null,
-    "verdict": null
-   },
-   {
-    "title": "Kai Cenat Can't Believe Chat Failed Again \ud83d\ude2d",
-    "views": 1,
-    "avg_viewed": 0,
-    "stayed": 0.0,
-    "verdict": null
-   },
-   {
-    "title": "Jynxzi: \"Chat What's My Kd?\" \ud83d\udd25",
-    "views": 1,
-    "avg_viewed": 0,
-    "stayed": 0.0,
-    "verdict": null
-   },
-   {
-    "title": "Speed Can't Believe The Cops Are Outside \ud83e\udd28",
-    "views": 0,
-    "avg_viewed": null,
-    "stayed": null,
-    "verdict": null
-   },
-   {
-    "title": "Speed Can't Believe Vinny Just Robbed His Uncle's Store \ud83d\ude2d",
-    "views": 2,
-    "avg_viewed": 30.870000000000005,
-    "stayed": 1.0,
-    "verdict": null
-   },
-   {
-    "title": "Jynxzi Plays For $1000 And Goes Off \ud83d\udd25",
-    "views": 2,
-    "avg_viewed": 112.00000000000001,
+    "title": "Ronaldo: \"Laiys. Says Word\" \ud83d\ude31",
+    "views": 28,
+    "avg_viewed": 70.69,
     "stayed": 0.5,
+    "verdict": null
+   },
+   {
+    "title": "Jynxzi Didn't See This Coming At Biggest Announcement Ever \ud83d\ude31",
+    "views": 23,
+    "avg_viewed": 42.12,
+    "stayed": 0.43478260869565216,
+    "verdict": null
+   },
+   {
+    "title": "Speed And Derek Jeter Can't Believe It \ud83d\udd25",
+    "views": 20,
+    "avg_viewed": 65.39,
+    "stayed": 0.5,
+    "verdict": null
+   },
+   {
+    "title": "Jynxzi Explains Why Hearing Wins In Rainbow Six \ud83c\udfa7",
+    "views": 19,
+    "avg_viewed": 24.43,
+    "stayed": 0.7058823529411765,
+    "verdict": null
+   },
+   {
+    "title": "CaseOh: \"Crazy Viewer\" \ud83d\ude2d",
+    "views": 17,
+    "avg_viewed": 69.68,
+    "stayed": 0.47058823529411764,
+    "verdict": null
+   },
+   {
+    "title": "Speed Meets Two Strangers Making Dubstep \ud83c\udfa7\ud83d\ude02",
+    "views": 17,
+    "avg_viewed": 53.87,
+    "stayed": 0.47058823529411764,
+    "verdict": null
+   },
+   {
+    "title": "Speed Gets a Red Card Against Cole Palmer \ud83d\ude2d",
+    "views": 15,
+    "avg_viewed": 23.62,
+    "stayed": 0.4,
     "verdict": null
    }
   ]
  },
  "own_results": [
+  {
+   "title": "Jynxzi Wins Gamer Of The Year At The Streamer Awards \ud83c\udfc6\ud83d\udd25",
+   "views": 54,
+   "lift": 54.0
+  },
+  {
+   "title": "Jynxzi: \"Evan Burger\" \ud83d\ude31",
+   "views": 6,
+   "lift": 6.0
+  },
   {
    "title": "Kai Cenat Goes Crazy \ud83d\udd25",
    "views": 0,
@@ -1347,8 +1670,8 @@
   },
   {
    "title": "Jynxzi Didn't See This Coming At Biggest Announcement Ever \ud83d\ude31",
-   "views": 22,
-   "lift": 22.0
+   "views": 20,
+   "lift": 20.0
   },
   {
    "title": "Kai Cenat Didn't See This Coming \ud83d\ude31",
@@ -1382,8 +1705,8 @@
   },
   {
    "title": "Speed And Derek Jeter Go Crazy \ud83d\udd25",
-   "views": 2,
-   "lift": 2.0
+   "views": 4,
+   "lift": 4.0
   },
   {
    "title": "Speed And Derek Jeter Can't Believe It \ud83d\udd25",
@@ -1467,8 +1790,8 @@
   },
   {
    "title": "Jynxzi Explains Why Hearing Wins In Rainbow Six \ud83c\udfa7",
-   "views": 17,
-   "lift": 17.0
+   "views": 19,
+   "lift": 19.0
   },
   {
    "title": "Kai Cenat Keeps Rakai Out Of The Halloween Party \ud83c\udf83\ud83d\ude2d",
@@ -1479,16 +1802,6 @@
    "title": "Kai Cenat Tells A Guest He's A Rose Boy \ud83c\udf39\ud83d\ude2d",
    "views": 0,
    "lift": 0.0
-  },
-  {
-   "title": "Speed Hears Dubstep And Instantly Starts Vibing \ud83d\ude02",
-   "views": 7,
-   "lift": 7.0
-  },
-  {
-   "title": "Kai Cenat Rates Japanese Train Breakfast \ud83c\udf73",
-   "views": 1,
-   "lift": 1.0
   }
  ],
  "tiktok": {
@@ -2544,13 +2857,88 @@
   ],
   "hmfQoGeKkMw": [],
   "YqdjrrYR_VQ": [],
-  "2H3Dq2N0mv8": []
+  "2H3Dq2N0mv8": [],
+  "Kush1FqnhbU": [],
+  "uGSJvEfax_c": [
+   {
+    "t": 18264,
+    "ratio": 45.1,
+    "msgs": 95,
+    "sample": [
+     "w",
+     "w",
+     "w",
+     "w",
+     "w"
+    ]
+   },
+   {
+    "t": 10294,
+    "ratio": 29.3,
+    "msgs": 149,
+    "sample": [
+     "l",
+     "l",
+     "l",
+     "L",
+     "L ad"
+    ]
+   },
+   {
+    "t": 14949,
+    "ratio": 22.9,
+    "msgs": 84,
+    "sample": [
+     "w",
+     "w",
+     "w",
+     "w",
+     "w"
+    ]
+   },
+   {
+    "t": 21104,
+    "ratio": 20.0,
+    "msgs": 252,
+    "sample": [
+     "Yoooo",
+     "I love yo jinxed ",
+     "Yoooo",
+     "Yoooooo",
+     "what up!"
+    ]
+   },
+   {
+    "t": 12119,
+    "ratio": 16.0,
+    "msgs": 157,
+    "sample": [
+     "w",
+     "w",
+     "w",
+     "W",
+     "w"
+    ]
+   },
+   {
+    "t": 14044,
+    "ratio": 14.9,
+    "msgs": 75,
+    "sample": [
+     "W",
+     "w",
+     "w",
+     "W",
+     "w"
+    ]
+   }
+  ],
+  "mRGsJ-EKPlY": []
  },
  "edit": {
   "stats": {
    "length": {
     "30": [
-     -0.693,
      -0.693,
      -0.693,
      -0.693,
@@ -2569,7 +2957,8 @@
      -0.693,
      -0.693,
      1.946,
-     -0.693
+     -0.693,
+     0.883
     ],
     "20": [
      -0.693
@@ -2585,7 +2974,6 @@
      -0.693,
      -0.693,
      -0.693,
-     -0.693,
      0.405,
      2.303,
      0.0,
@@ -2596,7 +2984,8 @@
      -0.693,
      -0.693,
      1.946,
-     -0.693
+     -0.693,
+     0.883
     ]
    },
    "beat": {
@@ -2610,7 +2999,6 @@
      -0.693,
      -0.693,
      -0.693,
-     -0.693,
      0.405,
      2.303,
      0.0,
@@ -2620,7 +3008,8 @@
      -0.693,
      -0.693,
      1.946,
-     -0.693
+     -0.693,
+     0.883
     ],
     "slow": [
      2.803
@@ -2646,7 +3035,8 @@
      -0.693,
      -0.693,
      1.946,
-     -0.693
+     -0.693,
+     0.883
     ],
     "2": [
      -0.693,
@@ -2674,7 +3064,8 @@
      -0.693,
      -0.693,
      1.946,
-     -0.693
+     -0.693,
+     0.883
     ],
     "1.0": [
      -0.693,
@@ -2684,7 +3075,6 @@
    },
    "layout": {
     "face34": [
-     -0.693,
      -0.693,
      -0.693,
      -0.693,
@@ -2703,7 +3093,8 @@
      -0.693,
      -0.693,
      1.946,
-     -0.693
+     -0.693,
+     0.883
     ]
    },
    "narrate": {
@@ -2744,7 +3135,8 @@
    "GrM3WhdRMxk",
    "po5Kgi8PuMI",
    "Frwqjuv54FM",
-   "DyyT5L9dkCE"
+   "DyyT5L9dkCE",
+   "Dy8Y7By6jpI"
   ],
   "best": {
    "length": 30,
@@ -2752,8 +3144,7 @@
    "beat": "normal",
    "caption_words": 3,
    "gap": 0.6,
-   "layout": "face34",
-   "narrate": "on"
+   "layout": "face34"
   }
  },
  "spike_posts": {
@@ -2761,11 +3152,11 @@
  },
  "council": {
   "weights": {
-   "trend": 0.667,
-   "study": 0.533,
-   "analytics": 0.973,
-   "live": 1.369,
-   "script": 0.772,
+   "trend": 0.714,
+   "study": 0.514,
+   "analytics": 0.977,
+   "live": 1.292,
+   "script": 0.783,
    "audience": 0.5
   }
  },

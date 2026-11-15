@@ -187,13 +187,24 @@ Uploads use YouTube's separate upload quota, not the 10,000 search/read units.
 
 ## Review agent
 
-`review_agent.py` checks how every Short on your channel is doing after it's posted and tells you how to get more views
-and money out of it. Per clip: views and views/hour, average % watched, how many plays stayed past the first swipe,
-the retention curve at 3 seconds and at the end, Shorts-feed traffic, likes, shares and subscribers gained, next to what
-was posted (creator, stream moment, title, hook, narrator line, length, post time, transcript). It flags what hurt each
-clip (hook, length, title/topic, clip pick, still private) and writes a better title and hook for it, then tracks money:
-YPP progress and ETA at your current pace, what the views are worth, which clips fit a paid clipping campaign, and
-affiliate/sponsor/long-form ideas.
+`review_agent.py` works out what makes our clips spread and steers the next clips toward it. Each report
+(`reports/review_<date>/report.md`) answers, in this order:
+
+- **Is the Shorts feed testing our clips?** Per week, how many clips passed 10 views in their first 2 days. A clip the
+  feed never shows can't go viral whatever its hook, so this is the first number to move.
+- **Make more of / make less of.** Every settled clip is tagged by the levers we control: creator, how the moment
+  was found (Twitch clip, chat spike, viewer timestamps, most-replayed), how old the stream was when we posted,
+  hook style (stake, question, says what happens, generic "WAIT FOR IT"), title style (quote title, stock reaction,
+  says what happens), length and posting time. Each lever value is compared with our typical clip (geometric mean of
+  views, so a pile of 0s and one 45 doesn't read as a 45x hit), shrunk toward "no effect" when it rests on few clips.
+  Only values with 3+ clips and a clear gap are called.
+- **First seconds.** How many viewers stayed past the swipe, the second where most of them leave, and swipe rate by
+  hook style.
+- **Clips worth a look**: best tested clips, tested clips that lost viewers at the start, and clips still under 2
+  days, each with what to change (and, when a written review runs, a better title and hook).
+- **TikTok** (see below) and **what changes tomorrow**: the weights the builder will use.
+
+Money/YPP tracking, subscriber counts and the full every-clip table were dropped: they didn't change what we post.
 
 ```
 python review_agent.py auth       # once: sign in so it can read YouTube Analytics
@@ -201,12 +212,36 @@ python review_agent.py            # review every Short (report in reports/review
 python review_agent.py --days 14 --no-llm
 ```
 
-What it learns goes into `reports/builder/state.json` and the other agents use it: `script_agent.py` puts the
-title/hook/pacing lessons and how your recent clips held viewers in its prompt, and `channel_builder.py daily` weights
-creators by how their clips held viewers (`track` already weights them by views) and cuts to the length that held best.
-It also fills in your channel for the builder, so `run` starts its daily `track`. It never uploads, edits, retitles or
-deletes a video: suggested titles are for you to apply in Studio. Uses 0-3 Data API units; Analytics has its own quota.
-The written review uses the same writer as the script agent (Claude Code, Ollama or ANTHROPIC_API_KEY).
+What it learns goes into `reports/builder/state.json` (`review`) and the other agents use it:
+- `channel_builder.py daily` ranks moments by the creator's score (this replaces `track`'s views-only weight when the
+  review has one), by how moments found the same way did and by the stream's age, posts at the hours whose clips
+  spread best, and cuts to the length that spread best.
+- the clip council's analytics vote uses the same creator and "found by" scores.
+- `script_agent.py` puts the make-more / make-less findings, the lessons and the best and worst recent clips in its
+  prompt.
+
+It also fills in your channel for the builder, so `run` starts its daily `track`. It never uploads, edits, retitles
+or deletes a video: suggested titles are for you to apply in Studio. Uses 0-3 Data API units; Analytics has its own
+quota. The daily cloud run uses the rule-based review (`--no-llm`); run it locally with a writer for the written part.
+
+### TikTok numbers
+
+The review reads your TikTok views itself once the TikTok login includes the `video.list` scope (TikTok's Display
+API). Our TikTok posts are drafts you finish in the app, so it matches each public post to its draft by the caption
+you pasted and by being posted after the draft was sent. One-time setup:
+
+1. On developers.tiktok.com, open the app you already use for posting and add the `video.list` scope (under Login
+   Kit). If the app is live, a new scope may send it back through TikTok's review; until then the app's Sandbox works
+   for your own account (add it under Target Users). A Sandbox has its own client key and secret: the sign-in must use
+   the keys of whichever one has `video.list`, with the redirect URI `http://localhost:8723/callback/` set there too.
+2. On the PC: `python channel_builder.py tiktok-auth --stats`. TikTok asks you to approve the extra permission.
+3. `python cloud_setup.py`, so the cloud run gets the new login.
+
+Every clip sent to TikTok gets a row in `reports/tiktok_stats.csv`, filled from TikTok (`source` = "TikTok API").
+Rows stay blank for drafts never posted, or when the caption was changed too much to match: type views (and
+`shares`, `watched_full_pct`) from TikTok Studio there and commit it, outside the daily run (around 7 AM ET).
+TikTok's API doesn't give watch time or completion rate, so those columns only fill in if you type them. The review
+runs the same make-more / make-less analysis on TikTok and passes it to the script writer.
 
 ### Analytics sign-in (one time, ~3 minutes)
 
@@ -253,7 +288,8 @@ you turn it on.
    TikTok account added under Target Users) to test before review; review needs a demo video of it working.
 2. Put the app's Client key and Client secret in your user environment variables, as `TIKTOK_CLIENT_KEY` and
    `TIKTOK_CLIENT_SECRET`. Don't put them in any file.
-3. Sign in once and turn cross-posting on: `python channel_builder.py tiktok-auth --enable`
+3. Sign in once and turn cross-posting on: `python channel_builder.py tiktok-auth --enable` (add `--stats` after
+   adding the `video.list` scope, so the review can read your views: see TikTok numbers)
    (`--mode direct` to post straight to the profile, `--disable` to turn it off).
 
 Modes:

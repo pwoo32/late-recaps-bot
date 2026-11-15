@@ -1,0 +1,335 @@
+[
+ {
+  "id": 1,
+  "source": "ishowspeed",
+  "creator": "IShowSpeed",
+  "platform": "youtube",
+  "video_id": "Kush1FqnhbU",
+  "video_title": "REVEALING MY NEW FORTNITE ICON SKIN! 🕺🏴‍☠️",
+  "url": "https://www.youtube.com/watch?v=Kush1FqnhbU&t=522s",
+  "moment": "8:42",
+  "start": 502,
+  "end": 532,
+  "rank": 19.01,
+  "signal": "4 timestamp comments, 89 likes",
+  "signals": [
+   "comments"
+  ],
+  "quotes": [
+   "yang kepo speed ngomong indonesia",
+   "If we are your family, then give me a money speed",
+   "terimakasih kembali kecepatan"
+  ],
+  "stream_age_h": 17.7,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": null
+  },
+  "council": {
+   "trend": 0.92,
+   "study": 0.97,
+   "analytics": 0.56,
+   "live": 0.42,
+   "script": 0.35,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 0.92,
+    "why": "Speed clips pull 804,308 views/hour this week, up 109% since the last scan"
+   },
+   "study": {
+    "score": 0.97,
+    "why": "7 of the top channels' breakout Shorts are Speed clips; Speed is in 99 of their recent titles"
+   },
+   "analytics": {
+    "score": 0.56,
+    "why": "Speed clips do 1.2x our usual; no clear premise, may be visual-only; stream is 18h old"
+   },
+   "live": {
+    "score": 0.42,
+    "why": "4 timestamp comments, 89 likes"
+   },
+   "script": {
+    "score": 0.35,
+    "why": "draft title: \"Speed At Revealing MY NEW Fortnite 😱\"; no captions yet, writing blind"
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-14T19:36:07Z",
+  "council_why": "IShowSpeed's clips have the highest view rate and are breaking out significantly, with a strong trend and high representation in top channels' titles.",
+  "post_utc": "2026-11-14 22:00",
+  "post_local": "Sat 05:00 PM ET",
+  "title": "Speed Gets Emotional With Callie ❤️",
+  "hook": "WAIT FOR CALLIE",
+  "context": "IShowSpeed live: Revealing MY NEW Fortnite Icon Skin, with Callie",
+  "take": "The exchange between Speed and Callie is the story here; watch the reaction.",
+  "summary": "IShowSpeed during \"REVEALING MY NEW FORTNITE ICON SKIN\" with Callie. yang kepo speed ngomong indonesia.",
+  "tiktok_caption": "IShowSpeed Gets Emotional With Callie | Revealing my new fortnite icon skin ❤️ Who else felt this? #ishowspeed #fortnite #livestream #ishowspeedclips #streamerclips",
+  "hashtags": [
+   "#ishowspeed",
+   "#callie",
+   "#revealingmyfortnite"
+  ],
+  "tags": [
+   "ishowspeed",
+   "speed",
+   "callie",
+   "revealing",
+   "fortnite",
+   "icon",
+   "skin",
+   "speed clips",
+   "streamer clips"
+  ],
+  "draft": false,
+  "writer": "free",
+  "description": "IShowSpeed during \"REVEALING MY NEW FORTNITE ICON SKIN\" with Callie. yang kepo speed ngomong indonesia.\n\nFull stream by IShowSpeed: https://www.youtube.com/watch?v=Kush1FqnhbU&t=522s\nGo support IShowSpeed, all credit to them.\n\n#ishowspeed #callie #revealingmyfortnite #speed #shorts",
+  "key": "Kush1FqnhbU@17",
+  "permission": "fan clipping is widespread and tolerated; no official paid program found (Oct 2026)",
+  "payoff": "Rate how Speed handled Callie there, one to ten.",
+  "script_source": "transcript",
+  "upload_tags": [
+   "ishowspeed",
+   "speed",
+   "callie",
+   "revealing",
+   "fortnite",
+   "icon",
+   "skin",
+   "speed clips",
+   "streamer clips",
+   "shorts"
+  ],
+  "held": "originality: stock line \"Gets Emotional\" could go on any clip; the script needs something specific to this one; originality: template narration (\"is the story here\"); YouTube counts template voice-overs as adding nothing; originality: the script came from the fill-in writer, not a model, so the narration is a template (set GEMINI_API_KEY or GROQ_API_KEY, both free)",
+  "tiktok_id": "v_inbox_file~v2.7708120768755992590"
+ },
+ {
+  "id": 2,
+  "source": "jynxzi",
+  "creator": "Jynxzi",
+  "platform": "youtube",
+  "video_id": "uGSJvEfax_c",
+  "video_title": "FANTASTIC FRIDAY STREAM.",
+  "url": "https://www.youtube.com/watch?v=uGSJvEfax_c&t=21104s",
+  "moment": "5:51:44",
+  "start": 21084,
+  "end": 21114,
+  "rank": 48.16,
+  "signal": "chat went 20.0x its normal pace",
+  "signals": [
+   "chat spike"
+  ],
+  "quotes": [
+   "Yoooo",
+   "I love yo jinxed ",
+   "Yoooo"
+  ],
+  "stream_age_h": 17.8,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.08,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": "punch"
+  },
+  "council": {
+   "trend": 0.77,
+   "study": 0.25,
+   "analytics": 0.84,
+   "live": 0.55,
+   "script": 1.0,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 0.77,
+    "why": "Jynxzi clips pull 41,622 views/hour this week, up 298% since the last scan"
+   },
+   "study": {
+    "score": 0.25,
+    "why": "top channels rarely break out with Jynxzi"
+   },
+   "analytics": {
+    "score": 0.84,
+    "why": "Jynxzi clips do 1.4x our usual; has a spoken premise (bet/question/challenge); stream is 18h old"
+   },
+   "live": {
+    "score": 0.55,
+    "why": "chat went 20.0x"
+   },
+   "script": {
+    "score": 1.0,
+    "why": "draft title: \"Jynxzi: \">> Can You Read a Few?\" 🔥\""
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-14T19:36:07Z",
+  "council_why": "Jynxzi's clips are performing well with a strong trend and a clear premise, though not as high as Speed's, they still have a competitive edge.",
+  "post_utc": "2026-11-15 07:00",
+  "post_local": "Sun 02:00 AM ET",
+  "title": "Jynxzi: \"Can You Read a Few?\" 🔥",
+  "hook": "CAN YOU READ A FEW?",
+  "context": "Jynxzi live: Fantastic Friday",
+  "take": "That question, “Can you read a?” sets up the moment. Listen to what follows.",
+  "summary": "Jynxzi during \"FANTASTIC FRIDAY STREAM\". I love yo jinxed.",
+  "tiktok_caption": "Jynxzi: \"Can You Read a Few?\" | Fantastic friday stream 🔥 Could you do this?",
+  "hashtags": [
+   "#jynxzi",
+   "#fantasticfriday"
+  ],
+  "tags": [
+   "jynxzi",
+   "fantastic",
+   "friday",
+   "jynxzi clips",
+   "streamer clips"
+  ],
+  "draft": false,
+  "writer": "free",
+  "description": "Jynxzi during \"FANTASTIC FRIDAY STREAM\". I love yo jinxed.\n\nFull stream by Jynxzi: https://www.youtube.com/watch?v=uGSJvEfax_c&t=21104s\nGo support Jynxzi, all credit to them.\n\n#jynxzi #fantasticfriday #shorts",
+  "key": "uGSJvEfax_c@703",
+  "permission": "fan clipping tolerated; check for a Whop campaign",
+  "payoff": "So, “Can you read a few?” Drop your answer below.",
+  "script_source": "transcript",
+  "upload_tags": [
+   "jynxzi",
+   "fantastic",
+   "friday",
+   "jynxzi clips",
+   "streamer clips",
+   "shorts"
+  ],
+  "held": "originality: template narration (\"sets up the moment\"); YouTube counts template voice-overs as adding nothing; originality: the script came from the fill-in writer, not a model, so the narration is a template (set GEMINI_API_KEY or GROQ_API_KEY, both free)"
+ },
+ {
+  "id": 3,
+  "source": "stableronaldo",
+  "creator": "Stable Ronaldo",
+  "platform": "twitch_clip",
+  "video_id": "3250253326",
+  "video_title": "Ron reacts to his Red Carpet interview with Emily",
+  "url": "https://www.twitch.tv/stableronaldo/clip/DelightfulShortLegTBTacoRight-Agv62ls3kGFaOUmB",
+  "moment": "0:00",
+  "start": 0,
+  "end": 19.0,
+  "rank": 14.44,
+  "signal": "Twitch clip, 3,356 views (160/h)",
+  "signals": [
+   "twitch clip"
+  ],
+  "quotes": [
+   "Ron reacts to his Red Carpet interview with Emily"
+  ],
+  "stream_age_h": 21.0,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "fast",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": "beat"
+  },
+  "council": {
+   "trend": 0.22,
+   "study": 0.25,
+   "analytics": 0.76,
+   "live": 0.11,
+   "script": 0.6,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 0.22,
+    "why": "Ronaldo clips pull 6,373 views/hour this week, up 31% since the last scan"
+   },
+   "study": {
+    "score": 0.25,
+    "why": "top channels rarely break out with Ronaldo"
+   },
+   "analytics": {
+    "score": 0.76,
+    "why": "Ronaldo clips do 1.0x our usual; has a spoken premise (bet/question/challenge); stream is 21h old"
+   },
+   "live": {
+    "score": 0.11,
+    "why": "Twitch clip at 160/h"
+   },
+   "script": {
+    "score": 0.6,
+    "why": "draft title: \"Ronaldo And Emily Go Crazy 🔥\"; no captions yet, writing blind"
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-14T19:36:07Z",
+  "council_why": "Stable Ronaldo's clips have a clear spoken premise and are trending positively, though not as high as the top two, they offer variety and a different creator.",
+  "post_utc": "2026-11-15 01:00",
+  "post_local": "Sat 08:00 PM ET",
+  "title": "Ronaldo Watches His Smooth Emily Interview 😭",
+  "hook": "NO TROLLING AT THE AWARDS",
+  "context": "Ron rewatching his red carpet interview with Emily",
+  "take": "Ron tried to stay on his best behavior during the red carpet, but Jynxzi immediately ruined his plan by throwing him under the bus.",
+  "summary": "Stable Ronaldo reacts to his red carpet interview with Emily after Jynxzi exposed him.",
+  "tiktok_caption": "Did Jynxzi ruin Ron's chances on the red carpet?",
+  "hashtags": [
+   "#shorts",
+   "#stableronaldo",
+   "#clips"
+  ],
+  "tags": [
+   "stableronaldo",
+   "ronaldo",
+   "emily",
+   "jynxzi",
+   "red carpet interview",
+   "streamer awards",
+   "ronaldo reaction",
+   "ronaldo emily",
+   "twitch clips"
+  ],
+  "draft": false,
+  "writer": "gemini",
+  "description": "Stable Ronaldo reacts to his red carpet interview with Emily after Jynxzi exposed him.\n\nFull stream by Stable Ronaldo: https://www.twitch.tv/stableronaldo/clip/DelightfulShortLegTBTacoRight-Agv62ls3kGFaOUmB\nGo support Stable Ronaldo, all credit to them.\n\n#shorts #stableronaldo #clips",
+  "key": "3250253326@0",
+  "permission": "fan clipping is widespread and tolerated; no official program checked (Nov 2026)",
+  "payoff": "Ron realized too late that playing it safe does not matter when your friends are on the mic.",
+  "script_source": "transcript",
+  "upload_tags": [
+   "stableronaldo",
+   "ronaldo",
+   "emily",
+   "jynxzi",
+   "red carpet interview",
+   "streamer awards",
+   "ronaldo reaction",
+   "ronaldo emily",
+   "twitch clips",
+   "stable ronaldo",
+   "shorts"
+  ],
+  "youtube_id": "lyjYSkcZGzE"
+ }
+]

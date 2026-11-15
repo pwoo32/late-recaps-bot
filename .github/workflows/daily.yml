@@ -128,13 +128,23 @@ jobs:
           YOUTUBE_TOKEN: ${{ secrets.YOUTUBE_TOKEN }}
           REVIEW_TOKEN: ${{ secrets.REVIEW_TOKEN }}
           TIKTOK_TOKEN: ${{ secrets.TIKTOK_TOKEN }}
+          ACTIVITY_TOKEN: ${{ secrets.ACTIVITY_TOKEN }}
           YT_COOKIES: ${{ secrets.YT_COOKIES }}
           YT_PROXY: ${{ secrets.YT_PROXY }}
         run: |
           d=~/.config/clip-builder; mkdir -p "$d"
           [ -n "$YOUTUBE_TOKEN" ] && printf '%s' "$YOUTUBE_TOKEN" | sed '1s/^\xEF\xBB\xBF//' > "$d/youtube_token.json"
           [ -n "$REVIEW_TOKEN" ] && printf '%s' "$REVIEW_TOKEN" | sed '1s/^\xEF\xBB\xBF//' > "$d/review_token.json"
-          [ ! -f "$d/tiktok_token.json" ] && [ -n "$TIKTOK_TOKEN" ] && printf '%s' "$TIKTOK_TOKEN" | sed '1s/^\xEF\xBB\xBF//' > "$d/tiktok_token.json"
+          [ -n "$ACTIVITY_TOKEN" ] && printf '%s' "$ACTIVITY_TOKEN" | sed '1s/^\xEF\xBB\xBF//' > "$d/activity_token.json"
+          # TikTok: keep the cached login (TikTok rotates refresh tokens), unless the secret is a newer sign-in with a
+          # permission the cached one lacks (Nov 14: video.list added for the review's TikTok views)
+          if [ -n "$TIKTOK_TOKEN" ]; then
+            printf '%s' "$TIKTOK_TOKEN" | sed '1s/^\xEF\xBB\xBF//' > "$RUNNER_TEMP/tt_secret.json"
+            if [ ! -f "$d/tiktok_token.json" ] || python -c "import json,sys; s=lambda f: set(json.load(open(f,encoding='utf-8-sig')).get('scope','').split(',')); sys.exit(0 if s(sys.argv[1]) - s(sys.argv[2]) else 1)" "$RUNNER_TEMP/tt_secret.json" "$d/tiktok_token.json"; then
+              cp "$RUNNER_TEMP/tt_secret.json" "$d/tiktok_token.json"; echo "TikTok: using the login from the TIKTOK_TOKEN secret"
+            fi
+            rm -f "$RUNNER_TEMP/tt_secret.json"
+          fi
           mkdir -p ~/.config/yt-dlp; : > ~/.config/yt-dlp/config
           if [ -n "$YT_PROXY" ]; then   # home-internet proxy: YouTube bot-blocks downloads from cloud servers
             echo "--proxy $YT_PROXY" >> ~/.config/yt-dlp/config
@@ -209,12 +219,24 @@ jobs:
         # and the edit tuner's scoring (what actually steers tomorrow) are all rule-based and still run
         run: python review_agent.py --no-llm 2>&1 | tee -a review.log
 
+      - name: Channel activity (comment replies, first comments, community post drafts)
+        if: steps.mode.outputs.skip != 'true' && steps.mode.outputs.mode == 'daily'
+        continue-on-error: true   # never holds up the clips
+        # Drafts only until the repo variable ACTIVITY_POST is "true" (Settings > Secrets and variables > Actions >
+        # Variables): Philip wants replies studied before any go out. Posting also needs the ACTIVITY_TOKEN sign-in.
+        # Either way it checks the upload schedule and writes the drafts to reports/activity_<date>/.
+        run: |
+          flag=--post
+          [ "${{ vars.ACTIVITY_POST }}" = true ] && [ "${{ steps.mode.outputs.post }}" = true ] && [ -f ~/.config/clip-builder/activity_token.json ] || flag=
+          echo "Activity: ${flag:-drafts only}"
+          python channel_activity_agent.py $flag --max-replies 10 2>&1 | tee -a activity.log
+
       - name: Save completed agent review
         if: steps.mode.outputs.skip != 'true' && steps.review.outcome == 'success'
         run: |
           git config user.name "late-recaps-bot"
           git config user.email "late-recaps-bot@users.noreply.github.com"
-          git add -A reports review.log
+          git add -A reports review.log; [ -f activity.log ] && git add activity.log
           if ! git diff --cached --quiet; then
             git commit -qm "Agent review $(TZ=America/New_York date +%F)"
             git push -q || (git pull -q --rebase && git push -q)
@@ -226,7 +248,7 @@ jobs:
           flag=--publish; [ "${{ steps.mode.outputs.post }}" = true ] || flag=
           # memory log: the runner was being killed mid-cut; this shows whether RAM is what runs out
           (while sleep 60; do free -m | awk 'NR==2{print "[mem] used " $3 " MB of " $2 " MB"}'; done) & mem=$!
-          python channel_builder.py run $flag --niche streamer --count 1 2>&1 | tee -a builder.log "$RUNNER_TEMP/run.log"; rc=${PIPESTATUS[0]}
+          MAX_POSTS=1 python channel_builder.py run $flag --niche streamer --count 3 2>&1 | tee -a builder.log "$RUNNER_TEMP/run.log"; rc=${PIPESTATUS[0]}
           kill $mem 2>/dev/null || true
           exit $rc
 

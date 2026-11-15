@@ -1,0 +1,130 @@
+# What's spreading, Late Recaps, Sun Nov 15 12:48 PM ET
+
+48 clips old enough to judge (2+ days), our typical clip gets 2 views. With YouTube Analytics.
+
+## Fix now
+
+- **Speed Can't Believe Vinny Just Robbed His Uncle's Store 😭**: Copyright claim (blocked in 1 country): claimed Shorts get little feed reach. The builder won't clip this stream again.
+
+## Is the Shorts feed testing our clips?
+
+A clip with under 10 views after 2 days was never really shown. Until the feed tests our clips, hooks and titles can't make them go viral, so this is the first number to move.
+
+- Nov 06-Nov 13: **1 of 6** clips got a feed test, 29 views in all; best: "Jynxzi Didn't See This Coming At Biggest Announcement Ever 😱" (23)
+- Oct 30-Nov 06: **5 of 27** clips got a feed test, 142 views in all; best: "Jynxzi: "What Is It?" 🔥" (31)
+- Oct 23-Oct 30: **2 of 11** clips got a feed test, 73 views in all; best: "Speed Gets Invited To Cook Up Dubstep With Frost Children 🎧" (46)
+- Most clips aren't getting a feed test. That's the bottleneck, ahead of hooks or titles: YouTube holds back clips that look like reposts (a moment many channels already posted, a stock title or hook, a narrator line that only describes the screen) and clips from streams other clippers already covered. The levers below show which of ours get tested.
+
+## Make more of
+
+- quote title (Creator: "line") (title): 6 clips, 3 got a real feed test, typically 7 views, 1.9x our typical clip, 32% stayed past the swipe. Best: "Jynxzi: "What Is It?" 🔥"
+- Twitch clip (found by): 4 clips, 2 got a real feed test, typically 8 views, 1.9x our typical clip, 32% stayed past the swipe. Best: "Ronaldo: "Laiys. Says Word" 😱"
+- Jynxzi (creator): 12 clips, 3 got a real feed test, typically 3 views, 1.4x our typical clip, 42% stayed past the swipe. Best: "Jynxzi: "What Is It?" 🔥"
+- 20-30s (length): 15 clips, 4 got a real feed test, typically 3 views, 1.3x our typical clip, 31% stayed past the swipe. Best: "Jynxzi: "What Is It?" 🔥"
+- afternoon (noon-5pm ET) (post time): 6 clips, 2 got a real feed test, typically 3 views, 1.3x our typical clip, 59% stayed past the swipe. Best: "Speed And Derek Jeter Can't Believe It 🔥"
+
+## Make less of
+
+- Kai Cenat (creator): 14 clips, 0 got a real feed test, typically 0 views, 0.5x our typical clip, 53% stayed past the swipe
+- 31-45s (length): 4 clips, 0 got a real feed test, typically 1 views, 0.7x our typical clip, 50% stayed past the swipe
+- stake or challenge (hook): 3 clips, 0 got a real feed test, typically 1 views, 0.8x our typical clip, 25% stayed past the swipe
+- No clear winner or loser yet on: stream age at post.
+
+## First seconds
+
+- Across 9 tested clips, a median 47% stayed past the swipe. Breakout Shorts usually hold 70%+; under 60% and the feed stops showing a clip.
+- Viewers most often leave around 4s in.
+- says what happens hooks: 54% stayed (3 clips)
+- generic tease (WAIT FOR IT...) hooks: 45% stayed (2 clips)
+- question hooks: 43% stayed (3 clips)
+- Lost the most people at the start: "Jynxzi: "What Is It?" 🔥" 32% (hook "WHAT IS IT?"); "Speed Gets a Red Card Against Cole Palmer 😭" 40% (hook "HE SWORE HE'D END THE STREAM"); "Jynxzi Didn't See This Coming At Biggest Announcement Ever 😱" 43% (hook "WAIT FOR THE END")
+
+## Clips worth a look
+
+**Best tested clips**
+
+### [Speed Gets Invited To Cook Up Dubstep With Frost Children 🎧](https://www.youtube.com/shorts/x4vfvm1uS-Q)
+
+- IShowSpeed, 53s, posted Thu 05:00 PM ET
+- 46 views (16.2x typical), 66% stayed past the swipe, biggest drop at 2s, 5% from the Shorts feed
+- **Length:** Watched 38% on average: trim dead air and end on the punchline.
+- **Reach:** Only 5% of its views came from the Shorts feed, so the feed tried it and stopped. Watch the swipe rate on the next clips like it.
+- **Working:** 16x our typical clip: make more like this.
+
+### [Jynxzi: "What Is It?" 🔥](https://www.youtube.com/shorts/Hrx-nQ8xhpU)
+
+- Jynxzi, 20s, posted Tue 08:04 AM ET, stream 13h old
+- 31 views (11.1x typical), 32% stayed past the swipe, biggest drop at 11s, 23% from the Shorts feed
+- Hook: "WHAT IS IT?" (question) / narrator: "Jynxzi had no idea what was about to happen."
+- **First seconds:** Only 32% stayed past the swipe; the biggest drop is at 11s. Open on the reaction or the stake, not the setup, and make the hook promise the payoff.
+- **Reach:** Only 23% of its views came from the Shorts feed, so the feed tried it and stopped. Watch the swipe rate on the next clips like it.
+- **Working:** 11x our typical clip: make more like this.
+
+### [Ronaldo: "Laiys. Says Word" 😱](https://www.youtube.com/shorts/XrIA9z88oeo)
+
+- Stable Ronaldo, 24s, posted Fri 03:00 AM ET, stream 12h old
+- 28 views (10.0x typical), 50% stayed past the swipe, biggest drop at 5s, 0% from the Shorts feed
+- Hook: "YO, WHY IS IT MOVING, ?" (question) / narrator: "That question, “Yo, why is it?” sets up the moment. Listen to what follows."
+- **First seconds:** Only 50% stayed past the swipe; the biggest drop is at 5s. Open on the reaction or the stake, not the setup, and make the hook promise the payoff.
+- **Reach:** Only 0% of its views came from the Shorts feed, so the feed tried it and stopped. Watch the swipe rate on the next clips like it.
+- **Working:** 10x our typical clip: make more like this.
+
+### [Jynxzi Didn't See This Coming At Biggest Announcement Ever 😱](https://www.youtube.com/shorts/Frwqjuv54FM)
+
+- Jynxzi, 30s, posted Mon 03:00 AM ET, stream 39h old
+- 23 views (8.3x typical), 43% stayed past the swipe, biggest drop at 7s, 39% from the Shorts feed
+- Hook: "WAIT FOR THE END" (generic tease (WAIT FOR IT...)) / narrator: "Listen to Jynxzi's exact words, then watch how the moment changes."
+- **First seconds:** Only 43% stayed past the swipe; the biggest drop is at 7s. Open on the reaction or the stake, not the setup, and make the hook promise the payoff.
+- **Length:** Watched 42% on average: trim dead air and end on the punchline.
+- **Reach:** Only 39% of its views came from the Shorts feed, so the feed tried it and stopped. Watch the swipe rate on the next clips like it.
+- **Working:** 8x our typical clip: make more like this.
+
+**Tested, but viewers swiped**
+
+### [Speed Gets a Red Card Against Cole Palmer 😭](https://www.youtube.com/shorts/BI-meeVnMVE)
+
+- IShowSpeed, 53s, posted Wed 05:00 PM ET, stream 135h old
+- 15 views (5.5x typical), 40% stayed past the swipe, 0% from the Shorts feed
+- Hook: "HE SWORE HE'D END THE STREAM" (says what happens) / narrator: "Speed put his whole stream on the line against Cole Palmer, and then this happened."
+- **First seconds:** Only 40% stayed past the swipe. Open on the reaction or the stake, not the setup, and make the hook promise the payoff.
+- **Length:** Watched 24% on average: trim dead air and end on the punchline.
+- **Reach:** Only 0% of its views came from the Shorts feed, so the feed tried it and stopped. Watch the swipe rate on the next clips like it.
+- **Working:** 6x our typical clip: make more like this.
+
+**Still early (under 2 days)**
+
+### [Ronaldo Watches His Smooth Emily Interview 😭](https://www.youtube.com/shorts/lyjYSkcZGzE)
+
+- Stable Ronaldo, 20s, posted Sat 08:00 PM ET, stream 21h old
+- 3 views
+- Hook: "NO TROLLING AT THE AWARDS" (says what happens) / narrator: "Ron tried to stay on his best behavior during the red carpet, but Jynxzi immediately ruined his plan by throwing him under the bus."
+
+### [Jynxzi Wins Gamer Of The Year At The Streamer Awards 🏆🔥](https://www.youtube.com/shorts/yUTyORTf7GE)
+
+- Jynxzi, 29s, posted Fri 05:00 PM ET, stream 14h old
+- 53 views
+- Hook: "JYNXZI WINS GAMER OF THE YEAR" (stake or challenge) / narrator: "After grinding Siege for years and blowing up the entire platform, Jynxzi finally got the validation he was waiting for at the 2026 Streamer Awards."
+
+39 other clips never got a feed test, so they say nothing about content.
+
+## TikTok
+
+- Read 34 public TikTok posts and matched 22 of them to our drafts.
+- From the 22 TikTok posts with numbers:
+  - More: 20-30s (length): 4 clips, typically 675 views, 1.6x our typical TikTok clip (on TikTok)
+  - More: quote title (Creator: "line") (title): 4 clips, typically 670 views, 1.6x our typical TikTok clip (on TikTok)
+  - Less: viewer timestamp comments (found by): 11 clips, typically 231 views, 0.8x our typical TikTok clip (on TikTok)
+  - Less: over 45s (length): 11 clips, typically 231 views, 0.8x our typical TikTok clip (on TikTok)
+- 25 clips went to your TikTok drafts with no numbers yet: either they were never posted, or the caption was changed so much the review couldn't match them. Type the numbers into `reports/tiktok_stats.csv` for any you did post.
+
+## What changes tomorrow
+
+- Creator weight in the clip pick: Ronaldo 1.78, CaseOh 1.58, Jynxzi 1.41, Speed 1.19, Adin 0.91, xQc 0.77, N3on 0.77, Kai Cenat 0.55
+- Posting hours (ET) weight: 12pm 1.28, 4pm 1.22, 3am 1.17, 5pm 1.00, 1am 0.96, 11pm 0.73, 9pm 0.68
+- Found by weight in the clip pick: Twitch clip 1.94, chat spike 1.19, viewer timestamp comments 0.81
+- Stream age at post weight in the clip pick: over 48h 1.03, 12-48h 1.00, under 12h 0.92
+- Cut length: ~25s
+- The script writer gets the 7 make-more and 5 make-less findings above in its prompt.
+- Edit settings on the top clip: {'length': 30, 'punch': 0.14, 'beat': 'normal', 'caption_words': 3, 'gap': 0.6, 'layout': 'face34'}
+
+_Review by rules only. This agent never changes your videos._

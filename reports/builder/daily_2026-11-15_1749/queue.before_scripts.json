@@ -1,0 +1,253 @@
+[
+ {
+  "id": 1,
+  "source": "stableronaldo",
+  "creator": "Stable Ronaldo",
+  "platform": "twitch",
+  "video_id": "2927935655",
+  "video_title": "Ron reacts to his Red Carpet interview with Emily",
+  "url": "https://www.twitch.tv/videos/2927935655?t=1h31m21s",
+  "moment": "1:31:21",
+  "start": 5461,
+  "end": 5491,
+  "rank": 34.13,
+  "signal": "Twitch clip, 4,387 views (101/h)",
+  "signals": [
+   "twitch clip"
+  ],
+  "quotes": [
+   "Ron reacts to his Red Carpet interview with Emily"
+  ],
+  "stream_age_h": 43.2,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": null
+  },
+  "council": {
+   "trend": 1.0,
+   "study": 0.25,
+   "analytics": 0.8,
+   "live": 0.11,
+   "script": 0.35,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 1.0,
+    "why": "Ronaldo clips pull 60,595 views/hour this week, up 844% since the last scan"
+   },
+   "study": {
+    "score": 0.25,
+    "why": "top channels rarely break out with Ronaldo"
+   },
+   "analytics": {
+    "score": 0.8,
+    "why": "Ronaldo clips spread 1.8x our typical clip; has a spoken premise (bet/question/challenge); stream is 43h old"
+   },
+   "live": {
+    "score": 0.11,
+    "why": "Twitch clip at 101/h"
+   },
+   "script": {
+    "score": 0.35,
+    "why": "draft title: \"Emily Hypes Up Ronaldo 🔥\"; no captions yet, writing blind"
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-15T17:49:05Z",
+  "council_why": "Ronaldo's clips have a significantly higher view rate and growth compared to Jynxzi's, and his clip from 'Exterminauts interview' has a clear premise and strong analytics support.",
+  "post_utc": "2026-11-15 21:00",
+  "post_local": "Sun 04:00 PM ET",
+  "title": "Ronaldo Ron reacts to his Red Carpet int 🤯",
+  "hook": "RON REACTS TO HIS RED CARPET INTERVIEW W",
+  "context": "Stable Ronaldo live, Ron reacts to his Red Carpet interview with Emily",
+  "take": "Nobody in the room saw this coming.",
+  "summary": "Stable Ronaldo live: Ron reacts to his Red Carpet interview with Emily",
+  "tiktok_caption": "Ronaldo in Ron reacts to his Red Carpet interview with Emily.",
+  "hashtags": [],
+  "tags": [],
+  "draft": true,
+  "writer": "template",
+  "description": "Stable Ronaldo live, Ron reacts to his Red Carpet interview with Emily\n\nFull stream by Stable Ronaldo: https://www.twitch.tv/videos/2927935655?t=1h31m21s\nGo support Stable Ronaldo, all credit to them.\n\n#stableronaldo #shorts #ishowspeed #kaicenat #funny",
+  "key": "2927935655@182",
+  "permission": "fan clipping is widespread and tolerated; no official program checked (Nov 2026)"
+ },
+ {
+  "id": 2,
+  "source": "stableronaldo",
+  "creator": "Stable Ronaldo",
+  "platform": "twitch",
+  "video_id": "2929115707",
+  "video_title": "Exterminauts interview",
+  "url": "https://www.twitch.tv/videos/2929115707?t=0h13m42s",
+  "moment": "13:42",
+  "start": 802,
+  "end": 832,
+  "rank": 46.96,
+  "signal": "Twitch clip, 6,098 views (350/h)",
+  "signals": [
+   "twitch clip"
+  ],
+  "quotes": [
+   "Exterminauts interview"
+  ],
+  "stream_age_h": 17.4,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.2,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": "punch"
+  },
+  "council": {
+   "trend": 1.0,
+   "study": 0.25,
+   "analytics": 0.65,
+   "live": 0.12,
+   "script": 0.35,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 1.0,
+    "why": "Ronaldo clips pull 60,595 views/hour this week, up 844% since the last scan"
+   },
+   "study": {
+    "score": 0.25,
+    "why": "top channels rarely break out with Ronaldo"
+   },
+   "analytics": {
+    "score": 0.65,
+    "why": "Ronaldo clips spread 1.8x our typical clip; no clear premise, may be visual-only; stream is 17h old"
+   },
+   "live": {
+    "score": 0.12,
+    "why": "Twitch clip at 350/h"
+   },
+   "script": {
+    "score": 0.35,
+    "why": "draft title: \"Ronaldo At Exterminauts Interview 🔥\"; no captions yet, writing blind"
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-15T17:49:05Z",
+  "council_why": "Ronaldo's clip from 'Exterminauts interview' has a high view rate and spread, and the title suggests a strong reaction, which could attract more views.",
+  "post_utc": "2026-11-15 18:00",
+  "post_local": "Sun 01:00 PM ET",
+  "title": "Ronaldo Exterminauts interview 🤯",
+  "hook": "EXTERMINAUTS INTERVIEW",
+  "context": "Stable Ronaldo live, Exterminauts interview",
+  "take": "Nobody in the room saw this coming.",
+  "summary": "Stable Ronaldo live: Exterminauts interview",
+  "tiktok_caption": "Ronaldo in Exterminauts interview.",
+  "hashtags": [],
+  "tags": [],
+  "draft": true,
+  "writer": "template",
+  "description": "Stable Ronaldo live, Exterminauts interview\n\nFull stream by Stable Ronaldo: https://www.twitch.tv/videos/2929115707?t=0h13m42s\nGo support Stable Ronaldo, all credit to them.\n\n#stableronaldo #shorts #ishowspeed #kaicenat #funny",
+  "key": "2929115707@27",
+  "permission": "fan clipping is widespread and tolerated; no official program checked (Nov 2026)"
+ },
+ {
+  "id": 3,
+  "source": "jynxzi",
+  "creator": "Jynxzi",
+  "platform": "youtube",
+  "video_id": "uGSJvEfax_c",
+  "video_title": "FANTASTIC FRIDAY STREAM.",
+  "url": "https://www.youtube.com/watch?v=uGSJvEfax_c&t=10294s",
+  "moment": "2:51:34",
+  "start": 10274,
+  "end": 10304,
+  "rank": 58.47,
+  "signal": "chat went 29.3x its normal pace",
+  "signals": [
+   "chat spike"
+  ],
+  "quotes": [
+   "l",
+   "l",
+   "l"
+  ],
+  "stream_age_h": 40.0,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "fast",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": "beat"
+  },
+  "council": {
+   "trend": 0.52,
+   "study": 0.25,
+   "analytics": 0.55,
+   "live": 0.55,
+   "script": 0.65,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 0.52,
+    "why": "Jynxzi clips pull 101,648 views/hour this week, up 144% since the last scan"
+   },
+   "study": {
+    "score": 0.25,
+    "why": "top channels rarely break out with Jynxzi"
+   },
+   "analytics": {
+    "score": 0.55,
+    "why": "Jynxzi clips spread 1.4x our typical clip; chat spike moments do 1.2x; no clear premise, may be visual-only; stream is 40h old"
+   },
+   "live": {
+    "score": 0.55,
+    "why": "chat went 29.3x"
+   },
+   "script": {
+    "score": 0.65,
+    "why": "draft title: \"Jynxzi At Fantastic Friday 😱\""
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-15T17:49:05Z",
+  "council_why": "Jynxzi's clip from 'Fantastic Friday Stream' has a strong chat spike and a clear premise, making it likely to engage viewers quickly.",
+  "post_utc": "2026-11-16 00:00",
+  "post_local": "Sun 07:00 PM ET",
+  "title": "Jynxzi l 🤯",
+  "hook": "L",
+  "context": "Jynxzi live, FANTASTIC FRIDAY STREAM.",
+  "take": "Jynxzi had no idea what was about to happen.",
+  "summary": "Jynxzi live: FANTASTIC FRIDAY STREAM.",
+  "tiktok_caption": "Jynxzi in FANTASTIC FRIDAY STREAM..",
+  "hashtags": [],
+  "tags": [],
+  "draft": true,
+  "writer": "template",
+  "description": "Jynxzi live, FANTASTIC FRIDAY STREAM.\n\nFull stream by Jynxzi: https://www.youtube.com/watch?v=uGSJvEfax_c&t=10294s\nGo support Jynxzi, all credit to them.\n\n#jynxzi #shorts #ishowspeed #kaicenat #funny",
+  "key": "uGSJvEfax_c@343",
+  "permission": "fan clipping tolerated; check for a Whop campaign"
+ }
+]

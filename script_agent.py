@@ -202,6 +202,8 @@ def build_prompt(clips, pb, niche):
     review = review_notes()
     lesson_lines = "\n".join(f"- {x}" for k in ("titles", "hooks", "length_and_pacing")
                              for x in (review.get("lessons") or {}).get(k, []))
+    spread_lines = "\n".join([f"- More: {x}" for x in review.get("make_more") or []]
+                             + [f"- Less: {x}" for x in review.get("make_less") or []])
     verdict_lines = "\n".join(
         f"- \"{r['title']}\": {r['views']:,} views"
         + (f", {r['avg_viewed']:.0f}% watched on average" if r.get("avg_viewed") is not None else "")
@@ -242,7 +244,11 @@ Our own channel's uploads so far, best first. Lean toward what worked, away from
 Our clip reviewer's lessons from how our posted clips held viewers. Follow them:
 {lesson_lines}
 """ if lesson_lines else "") + (f"""
-How our recent clips held viewers:
+What gets our clips pushed by the feed, measured over our posted clips (each line: the lever, how many clips, how they
+did against our typical clip). Write toward the "More" lines and away from the "Less" ones, as far as this clip allows:
+{spread_lines}
+""" if spread_lines else "") + (f"""
+How our best and worst recent clips did:
 {verdict_lines}
 """ if verdict_lines else "") + f"""
 Title pattern: the creator's name first, then exactly what happens in plain, punchy words, about
@@ -506,13 +512,16 @@ def ungrounded(clip, script):
         print(f"  [{clip.get('id')}] model script uses a word moderation flags "
               f"(\"{free_writer.RISKY.search(written).group(0)}\"); using the free writer")
         return True
+    strong = script.get("writer") in ("gemini", "groq", "api", "claude-code")
     words = re.findall(r"[a-z][a-z']{3,}", " ".join(script.get(k) or "" for k in ("title", "hook")).lower())
-    invented = [w for w in words if w not in REACTION_WORDS and w[:5] not in source]  # "snapping" ~ "snapped"
-    ctx = re.findall(r"[a-z][a-z']{3,}", (script.get("context") or "").lower())
-    invented += [w for w in ctx if w not in REACTION_WORDS and w not in free_writer.STOP and w[:5] not in source]
+    invented = [w for w in words if w not in REACTION_WORDS and w not in free_writer.STOP and w[:5] not in source]  # "snapping" ~ "snapped"
+    if not strong:  # the local model's context line drifts too; a real model's context line is meant to add context
+        ctx = re.findall(r"[a-z][a-z']{3,}", (script.get("context") or "").lower())
+        invented += [w for w in ctx if w not in REACTION_WORDS and w not in free_writer.STOP and w[:5] not in source]
     thin = len(transcript.split()) < 25 and max((len(q.split()) for q in clip.get("quotes") or []), default=0) < 8
-    # A real model writes context the footage lacks, so allow it one more unsourced word than the local model
-    allowed = 3 if script.get("writer") in ("gemini", "groq", "api", "claude-code") else 2
+    # A real model may use two words of its own in the title/hook (Nov 13: Gemini scripts were thrown out over
+    # "stream", "audience", "teammate" in the context line); names and events it made up still trip this.
+    allowed = 3 if strong else 2
     if thin or len(invented) >= allowed:
         print(f"  [{clip.get('id')}] model title \"{script.get('title')}\" isn't backed by what's said"
               + (f" ({', '.join(invented)})" if invented else " (too little to go on)") + "; using the free writer")

@@ -1,0 +1,85 @@
+[
+ {
+  "id": 1,
+  "source": "jynxzi",
+  "creator": "Jynxzi",
+  "platform": "youtube",
+  "video_id": "hmfQoGeKkMw",
+  "video_title": "FINDING THE PIRATE TOKEN",
+  "url": "https://www.youtube.com/watch?v=hmfQoGeKkMw&t=10910s",
+  "moment": "3:01:50",
+  "start": 10890,
+  "end": 10920,
+  "rank": 9.71,
+  "signal": "1 timestamp comments, 55 likes",
+  "signals": [
+   "comments"
+  ],
+  "quotes": [
+   "Ts gold man"
+  ],
+  "stream_age_h": 39.9,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": null
+  },
+  "council": {
+   "trend": 1.0,
+   "study": 0.25,
+   "analytics": 0.79,
+   "live": 0.39,
+   "script": 1.0,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 1.0,
+    "why": "Jynxzi clips pull 10,421 views/hour this week, up 483% since the last scan"
+   },
+   "study": {
+    "score": 0.25,
+    "why": "top channels rarely break out with Jynxzi"
+   },
+   "analytics": {
+    "score": 0.79,
+    "why": "Jynxzi clips do 1.6x our usual; has a spoken premise (bet/question/challenge); stream is 40h old"
+   },
+   "live": {
+    "score": 0.39,
+    "why": "1 timestamp comments, 55 likes"
+   },
+   "script": {
+    "score": 1.0,
+    "why": "draft title: \"Jynxzi Asks Huh \">> What?\" 😱\""
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-13T17:31:43Z",
+  "council_why": "Jynxzi's clip at 3:01:50 in 'FINDING THE PIRATE TOKEN' has the highest trend researcher score and a strong live scout reaction, indicating high viewer engagement and potential for virality.",
+  "post_utc": "2026-11-13 22:00",
+  "post_local": "Fri 05:00 PM ET",
+  "title": "Jynxzi Ts gold man 🤯",
+  "hook": "TS GOLD MAN",
+  "context": "Jynxzi live, FINDING THE PIRATE TOKEN",
+  "take": "This is why chat can't stop clipping Jynxzi.",
+  "summary": "Jynxzi live: FINDING THE PIRATE TOKEN",
+  "tiktok_caption": "Jynxzi in FINDING THE PIRATE TOKEN.",
+  "hashtags": [],
+  "tags": [],
+  "draft": true,
+  "writer": "template",
+  "description": "Jynxzi live, FINDING THE PIRATE TOKEN\n\nFull stream by Jynxzi: https://www.youtube.com/watch?v=hmfQoGeKkMw&t=10910s\nGo support Jynxzi, all credit to them.\n\n#jynxzi #shorts #kaicenat #ishowspeed #clips",
+  "key": "hmfQoGeKkMw@363",
+  "permission": "fan clipping tolerated; check for a Whop campaign"
+ }
+]

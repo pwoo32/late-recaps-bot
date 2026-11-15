@@ -1,0 +1,105 @@
+[
+ {
+  "id": 1,
+  "source": "jynxzi",
+  "creator": "Jynxzi",
+  "platform": "twitch_clip",
+  "video_id": "2480095367",
+  "video_title": "Jynxzi reacts to Emily's interview with Ron",
+  "url": "https://www.twitch.tv/jynxzi/clip/BumblingOpenRavenYee-uKlI0oberl1bvOFe",
+  "moment": "0:00",
+  "start": 0,
+  "end": 59.0,
+  "rank": 34.41,
+  "signal": "Twitch clip, 2,776 views (151/h)",
+  "signals": [
+   "twitch clip"
+  ],
+  "quotes": [
+   "Jynxzi reacts to Emily's interview with Ron"
+  ],
+  "stream_age_h": 18.4,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": null
+  },
+  "council": {
+   "trend": 1.0,
+   "study": 0.25,
+   "analytics": 0.88,
+   "live": 0.11,
+   "script": 0.35,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 1.0,
+    "why": "Jynxzi clips pull 10,421 views/hour this week, up 483% since the last scan"
+   },
+   "study": {
+    "score": 0.25,
+    "why": "top channels rarely break out with Jynxzi"
+   },
+   "analytics": {
+    "score": 0.88,
+    "why": "Jynxzi clips do 1.6x our usual; has a spoken premise (bet/question/challenge); stream is 18h old"
+   },
+   "live": {
+    "score": 0.11,
+    "why": "Twitch clip at 151/h"
+   },
+   "script": {
+    "score": 0.35,
+    "why": "draft title: \"Ron Hypes Up Jynxzi 🔥\"; no captions yet, writing blind"
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-13T18:10:22Z",
+  "council_why": "Jynxzi's clips have the highest trend researcher score, strong analytics reviewer score, and are from a creator who is currently hot, making them highly likely to get a large number of views.",
+  "post_utc": "2026-11-13 22:00",
+  "post_local": "Fri 05:00 PM ET",
+  "title": "Jynxzi Asks Ron \"Am I Open a Beer Pump?\" 🔥",
+  "hook": "AM I OPEN A BEER PUMP?",
+  "context": "Jynxzi live on Twitch, with Ron",
+  "take": "That question, “Am I open a?” sets up the moment. Listen to what follows.",
+  "summary": "Jynxzi during \"Jynxzi reacts to Emily's interview with Ron\" with Ron. Jynxzi reacts to Emily's interview with Ron.",
+  "tiktok_caption": "Jynxzi Asks Ron \"Am I Open a Beer Pump?\" | reacts to Emily's interview with Ron 🔥 Is this the cleanest one yet? #jynxzi #twitch #jynxziclips #streamerclips #ron",
+  "hashtags": [
+   "#jynxzi",
+   "#ron",
+   "#reactsemilys"
+  ],
+  "tags": [
+   "jynxzi",
+   "ron",
+   "jynxzi clips",
+   "streamer clips"
+  ],
+  "draft": false,
+  "writer": "free",
+  "description": "Jynxzi during \"Jynxzi reacts to Emily's interview with Ron\" with Ron. Jynxzi reacts to Emily's interview with Ron.\n\nFull stream by Jynxzi: https://www.twitch.tv/jynxzi/clip/BumblingOpenRavenYee-uKlI0oberl1bvOFe\nGo support Jynxzi, all credit to them.\n\n#jynxzi #ron #reactsemilys #shorts",
+  "key": "2480095367@0",
+  "permission": "fan clipping tolerated; check for a Whop campaign",
+  "payoff": "So, “Am I open a beer?” Drop your answer below.",
+  "script_source": "transcript",
+  "upload_tags": [
+   "jynxzi",
+   "ron",
+   "jynxzi clips",
+   "streamer clips",
+   "shorts"
+  ],
+  "held": "originality: template narration (\"sets up the moment\"); YouTube counts template voice-overs as adding nothing; originality: the script came from the fill-in writer, not a model, so the narration is a template (set GEMINI_API_KEY or GROQ_API_KEY, both free)",
+  "tiktok_id": "v_inbox_file~v2.7707724659550177293"
+ }
+]
