@@ -1,0 +1,120 @@
+[
+ {
+  "niche": "streamer",
+  "label": "Streamer clips (Twitch/Kick/YouTube live)",
+  "videos": 134,
+  "channels": 102,
+  "median_vph_top25": 20460.0,
+  "median_views": 101253,
+  "p75_outlier": 9.79,
+  "small_channel_hit_rate": 0.378,
+  "top3_channel_share": 0.302,
+  "median_engagement": 0.0197,
+  "shorts_rpm": 0.02,
+  "campaign_cpm": 2.0,
+  "reuse_risk": 0.35,
+  "est_earn_per_clip_shorts": 2.03,
+  "est_earn_per_clip_campaign": 202.51,
+  "payout_per_1k": 2.02,
+  "top_videos": [
+   {
+    "id": "C3H-kPiAoS0",
+    "url": "https://www.youtube.com/shorts/C3H-kPiAoS0",
+    "title": "Kai Cenat Came To The Streamer Awards For The Food! \ud83d\ude2d\ud83d\udc80",
+    "channel_id": "UCvQ35id6_d0uUNUzPqAWqvg",
+    "channel": "Succesful Celebrity",
+    "published": "2026-11-13T07:43:28Z",
+    "tags": [
+     "Kai Cenat",
+     "Kai",
+     "Cenat",
+     "ImKaiCenat",
+     "AMP",
+     "Kai Cenat Live",
+     "Kai Cenat Funny",
+     "Kai Cenat Funny Moments"
+    ],
+    "seconds": 21,
+    "views": 6358027,
+    "hours": 58.1,
+    "views_per_hour": 109463.9,
+    "engagement": 0.0286,
+    "channel_subs": 3560000,
+    "outlier": 1.79
+   },
+   {
+    "id": "N2JhM6zom4Q",
+    "url": "https://www.youtube.com/shorts/N2JhM6zom4Q",
+    "title": "Bro is Michael Jackson Of Streaming \ud83d\udc51\ud83d\udd25",
+    "channel_id": "UCjcZfaPzpgifneY4aZgLGrQ",
+    "channel": "deagzzzshorts",
+    "published": "2026-11-13T15:29:03Z",
+    "tags": [],
+    "seconds": 60,
+    "views": 5320185,
+    "hours": 50.3,
+    "views_per_hour": 105719.5,
+    "engagement": 0.0336,
+    "channel_subs": 6950000,
+    "outlier": 0.77
+   },
+   {
+    "id": "HWa55zss2gI",
+    "url": "https://www.youtube.com/shorts/HWa55zss2gI",
+    "title": "3 Years In A Row is INSANE\ud83d\udd25\ud83c\udfc6",
+    "channel_id": "UCT2XojFAea6rQWgSYHXM7nA",
+    "channel": "SpeedShor7s",
+    "published": "2026-11-13T17:07:37Z",
+    "tags": [],
+    "seconds": 42,
+    "views": 4868966,
+    "hours": 48.7,
+    "views_per_hour": 100018.2,
+    "engagement": 0.0349,
+    "channel_subs": 925000,
+    "outlier": 5.26
+   },
+   {
+    "id": "_tPXEhqY6ys",
+    "url": "https://www.youtube.com/shorts/_tPXEhqY6ys",
+    "title": "The Anime That Saved IShowSpeed",
+    "channel_id": "UCrabaZ47qcxQOOJ-Ow6dWqg",
+    "channel": "Rennrat",
+    "published": "2026-11-14T22:45:12Z",
+    "tags": [],
+    "seconds": 29,
+    "views": 1894221,
+    "hours": 19.1,
+    "views_per_hour": 99411.2,
+    "engagement": 0.0197,
+    "channel_subs": 1230000,
+    "outlier": 1.54
+   },
+   {
+    "id": "M1V5cpbdwtQ",
+    "url": "https://www.youtube.com/shorts/M1V5cpbdwtQ",
+    "title": "iShowSpeed Wins 2026 Streamer Of The Year! \ud83c\udfc6\ud83c\udfc6\ud83c\udfc6",
+    "channel_id": "UCWsDFcIhY2DBi3GB5uykGXA",
+    "channel": "IShowSpeed",
+    "published": "2026-11-13T08:30:41Z",
+    "tags": [
+     "ishowspeed"
+    ],
+    "seconds": 56,
+    "views": 5630950,
+    "hours": 57.3,
+    "views_per_hour": 98277.6,
+    "engagement": 0.0661,
+    "channel_subs": 62300000,
+    "outlier": 0.09
+   }
+  ],
+  "score_parts": {
+   "demand": 1.0,
+   "money": 1.0,
+   "breakout": 1.0,
+   "safety": 0.65
+  },
+  "score": 94.8
+ }
+]

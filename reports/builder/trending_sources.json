@@ -1,1 +1,44 @@
-{}
+{
+ "twitch_caedrel": {
+  "name": "Caedrel",
+  "short": "Caedrel",
+  "niche": "streamer",
+  "twitch": "caedrel",
+  "aliases": [
+   "caedrel"
+  ],
+  "hashtags": [
+   "#caedrel"
+  ],
+  "permission": "auto-added: trending on Twitch (clipping policy not checked)",
+  "campaign_cpm": null,
+  "first_seen": "2026-11-15T17:49:05+00:00",
+  "last_seen": "2026-11-15T17:49:05+00:00",
+  "trending": true,
+  "crowd_channels": 0,
+  "crowd": 1.3,
+  "best_clip_vph": 2763,
+  "clips_24h": 3
+ },
+ "twitch_moonmoon": {
+  "name": "MOONMOON",
+  "short": "MOONMOON",
+  "niche": "streamer",
+  "twitch": "moonmoon",
+  "aliases": [
+   "moonmoon"
+  ],
+  "hashtags": [
+   "#moonmoon"
+  ],
+  "permission": "auto-added: trending on Twitch (clipping policy not checked)",
+  "campaign_cpm": null,
+  "first_seen": "2026-11-15T17:49:05+00:00",
+  "last_seen": "2026-11-15T17:49:05+00:00",
+  "trending": true,
+  "crowd_channels": 0,
+  "crowd": 1.3,
+  "best_clip_vph": 1642,
+  "clips_24h": 1
+ }
+}
