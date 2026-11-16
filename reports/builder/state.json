@@ -1,17 +1,19 @@
 {
  "source_weight": {
-  "jynxzi": 2.39,
+  "jynxzi": 2.63,
   "kai_cenat": 0.31,
-  "ishowspeed": 1.99
+  "ishowspeed": 1.99,
+  "stableronaldo": 1.8
  },
  "slot_weight": {
   "2": 0.49,
   "21": 0.49,
   "8": 1.49,
   "4": 0.49,
-  "22": 2.19,
+  "22": 2.31,
   "17": 1.99,
-  "6": 1.58
+  "6": 2.15,
+  "1": 1.2
  },
  "used_moments": [
   "L6S9Vb3RLy4@186",
@@ -118,7 +120,10 @@
   "3250253326@0",
   "2927935655@182",
   "2929115707@27",
-  "uGSJvEfax_c@343"
+  "uGSJvEfax_c@343",
+  "2930232350@247",
+  "GcbFPry2Jtk@573",
+  "2930061578@63"
  ],
  "queued": {
   "L6S9Vb3RLy4@186": {
@@ -1503,6 +1508,72 @@
     "script": 0.65,
     "audience": 0.5
    }
+  },
+  "2930232350@247": {
+   "title": "CaseOh Asks Hey \"Can I Get Five Sipsies, Please?\" \ud83d\ude2d",
+   "source": "caseoh",
+   "post_utc": "2026-11-17 08:00",
+   "recipe": {
+    "length": 30,
+    "punch": 0.14,
+    "beat": "normal",
+    "caption_words": 3,
+    "gap": 0.6,
+    "layout": "face34",
+    "test": null
+   },
+   "council": {
+    "trend": 1.0,
+    "study": 0.25,
+    "analytics": 0.63,
+    "live": 0.11,
+    "script": 0.35,
+    "audience": 0.5
+   }
+  },
+  "GcbFPry2Jtk@573": {
+   "title": "Jynxzi: \"The 69ers\" \ud83d\ude2d\ud83c\udfc8",
+   "source": "jynxzi",
+   "post_utc": "2026-11-16 22:00",
+   "recipe": {
+    "length": 30,
+    "punch": 0.08,
+    "beat": "normal",
+    "caption_words": 3,
+    "gap": 0.6,
+    "layout": "face34",
+    "test": "punch"
+   },
+   "council": {
+    "trend": 0.36,
+    "study": 0.25,
+    "analytics": 0.89,
+    "live": 0.55,
+    "script": 1.0,
+    "audience": 0.5
+   }
+  },
+  "2930061578@63": {
+   "title": "Lacy Goes Off \ud83d\udd25",
+   "source": "lacy",
+   "post_utc": "2026-11-17 01:00",
+   "recipe": {
+    "length": 30,
+    "punch": 0.14,
+    "beat": "fast",
+    "caption_words": 3,
+    "gap": 0.6,
+    "layout": "face34",
+    "test": "beat"
+   },
+   "council": {
+    "trend": 0.6,
+    "study": 0.25,
+    "analytics": 0.51,
+    "live": 0.1,
+    "script": 0.35,
+    "audience": 0.5
+   }
   }
  },
  "channel": "UCbK9EejOk5UVzI_l8F3f8kA",
@@ -1658,9 +1729,19 @@
  },
  "own_results": [
   {
+   "title": "Ronaldo Locks In During Exterminauts Interview \ud83d\udc80",
+   "views": 0,
+   "lift": 0.0
+  },
+  {
+   "title": "Ronaldo Watches His Smooth Emily Interview \ud83d\ude2d",
+   "views": 3,
+   "lift": 3.0
+  },
+  {
    "title": "Jynxzi Wins Gamer Of The Year At The Streamer Awards \ud83c\udfc6\ud83d\udd25",
-   "views": 54,
-   "lift": 54.0
+   "views": 57,
+   "lift": 57.0
   },
   {
    "title": "Jynxzi: \"Evan Burger\" \ud83d\ude31",
@@ -1796,16 +1877,6 @@
    "title": "Jynxzi Explains Why Hearing Wins In Rainbow Six \ud83c\udfa7",
    "views": 19,
    "lift": 19.0
-  },
-  {
-   "title": "Kai Cenat Keeps Rakai Out Of The Halloween Party \ud83c\udf83\ud83d\ude2d",
-   "views": 0,
-   "lift": 0.0
-  },
-  {
-   "title": "Kai Cenat Tells A Guest He's A Rose Boy \ud83c\udf39\ud83d\ude2d",
-   "views": 0,
-   "lift": 0.0
   }
  ],
  "tiktok": {
@@ -2937,7 +3008,82 @@
     ]
    }
   ],
-  "mRGsJ-EKPlY": []
+  "mRGsJ-EKPlY": [],
+  "o0UeucVxYCA": [],
+  "GcbFPry2Jtk": [
+   {
+    "t": 17194,
+    "ratio": 31.0,
+    "msgs": 87,
+    "sample": [
+     "L",
+     "w",
+     "Shannon L",
+     "L",
+     "w"
+    ]
+   },
+   {
+    "t": 14289,
+    "ratio": 12.3,
+    "msgs": 68,
+    "sample": [
+     "w",
+     "w",
+     "w",
+     "W",
+     "w"
+    ]
+   },
+   {
+    "t": 10209,
+    "ratio": 11.7,
+    "msgs": 92,
+    "sample": [
+     "L",
+     "L crash",
+     "L",
+     "l",
+     "l"
+    ]
+   },
+   {
+    "t": 6699,
+    "ratio": 9.9,
+    "msgs": 89,
+    "sample": [
+     "L",
+     "L",
+     "l",
+     "LL",
+     "L"
+    ]
+   },
+   {
+    "t": 15304,
+    "ratio": 8.4,
+    "msgs": 104,
+    "sample": [
+     "w",
+     "w",
+     "w",
+     "ww",
+     "W"
+    ]
+   },
+   {
+    "t": 15864,
+    "ratio": 8.3,
+    "msgs": 117,
+    "sample": [
+     "w",
+     "w",
+     "w",
+     "w",
+     "w"
+    ]
+   }
+  ]
  },
  "edit": {
   "stats": {
