@@ -82,6 +82,16 @@ def _cap_words(s, n):
     return " ".join(s.split()[:n])
 
 
+def third_person(s):
+    """A streamer's first-person stream title, retold: 'Revealing MY NEW Fortnite Skin' -> 'Revealing His New Fortnite Skin'."""
+    swaps = [(r"\bI'?m\b", "he's"), (r"\bI'?ve\b", "he's"), (r"\bI'?ll\b", "he'll"), (r"\bI\b", "he"),
+             (r"\bmy\b", "his"), (r"\bme\b", "him"), (r"\bmyself\b", "himself"), (r"\bwe\b", "they"),
+             (r"\bour\b", "their"), (r"\bus\b", "them")]
+    for pat, rep in swaps:
+        s = re.sub(pat, rep, s, flags=re.I)
+    return s
+
+
 def stream_event(title):
     """'Beat Me In a 1v1, Get $1000' -> 'Beat Me In a 1v1, Get $1000'; '🎃AMP HALLOWEEN PARTY🎃' -> 'AMP Halloween Party'."""
     t = _clean(title)
@@ -213,6 +223,11 @@ def write(clip, src, hot_titles=(), lessons=None):
         title = f"{short}: \"{_title_case(said)}\""
     elif line and kind in ("question", "exclaim"):
         title = f"{short}: \"{_title_case(line)}\""
+    elif event.endswith("?") and 4 <= len(event.split()) <= 12:
+        title = f"{short}: \"{event}\""  # the stream's own question: "Can I Return a 120 MPH Serve From Serena Williams?"
+    elif re.match(r"[A-Za-z]+ing\b", event) and 2 <= len(event.split()) <= 9:
+        # "REVEALING MY NEW FORTNITE ICON SKIN" -> "Speed: Revealing His New Fortnite Icon Skin", not "Speed At Revealing MY NEW"
+        title = f"{short}: {_title_case(third_person(event))}"
     elif 1 <= len(short_event.split()) <= 5 and short_event.lower() != "stream":
         title = f"{short} At {short_event}"  # specific beats a stock reaction ("Goes Crazy") the feed sees as filler
     else:

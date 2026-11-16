@@ -1647,6 +1647,46 @@ def post_meta(qdir, queue, clips):
 TIKTOK_MIN_SECONDS = 9  # streamer clips that spread on TikTok run ~12-34s; under 9s is a fragment, not a moment
 
 
+TIKTOK_PER_DAY = 3        # drafts a day: on Nov 14, six posts in one day left the last three at 0-19 views
+TIKTOK_SLOTS = (12, 15, 19, 21.5)  # ET posting times, about 3 hours apart, in the noon and evening windows
+
+
+def recent_tiktok(now=None, hours=24):
+    """[(video_id, post_at or None)] for drafts sent in the last `hours` (queue folder stamps are UTC)."""
+    now = now or datetime.now(timezone.utc)
+    out = []
+    for qdir in BUILDER_DIR.glob("*_20*"):
+        m = re.search(r"(\d{4}-\d{2}-\d{2}_\d{4})$", qdir.name)
+        if not m or not (qdir / "queue.json").exists():
+            continue
+        made = datetime.strptime(m.group(1), "%Y-%m-%d_%H%M").replace(tzinfo=timezone.utc)
+        if now - made > timedelta(hours=hours + 24):  # a draft's post slot can be up to a day after its run
+            continue
+        try:
+            queue = json.loads((qdir / "queue.json").read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            continue
+        for c in queue:
+            if c.get("tiktok_id"):
+                at = c.get("tiktok_post_at")
+                at = datetime.fromisoformat(at) if at else made
+                if now - at <= timedelta(hours=hours) or at > now:
+                    out.append((c.get("video_id"), at))
+    return out
+
+
+def next_tiktok_slot(taken, now=None):
+    """The next ET posting slot that's free and at least ~3 hours from every other draft's slot."""
+    now = (now or datetime.now(timezone.utc)).astimezone(LOCAL_TZ)
+    for day in range(3):
+        d = (now + timedelta(days=day)).date()
+        for h in TIKTOK_SLOTS:
+            at = datetime(d.year, d.month, d.day, int(h), int(h % 1 * 60), tzinfo=LOCAL_TZ)
+            if at > now + timedelta(minutes=15) and all(abs((at - t).total_seconds()) >= 2.5 * 3600 for t in taken):
+                return at
+    return now + timedelta(hours=3)
+
+
 def post_tiktok(qdir, queue, clips, tt):
     """Send every rendered clip that isn't on TikTok yet (enabled with `tiktok-auth --enable`)."""
     import tiktok_upload
@@ -1667,6 +1707,14 @@ def post_tiktok(qdir, queue, clips, tt):
         # hold must not prevent an approved, rendered clip from reaching TikTok.
         if c.get("tiktok_id") or not path.exists():
             continue
+        recent = recent_tiktok()
+        if len(recent) >= TIKTOK_PER_DAY:
+            print(f"  TikTok: {len(recent)} drafts already in the last 24h (limit {TIKTOK_PER_DAY}); the rest wait for tomorrow.")
+            break
+        if c.get("video_id") and any(v == c["video_id"] for v, _ in recent):
+            print(f"  TikTok skipped for [{c['id']}]: another clip from this stream went out in the last 24h "
+                  "(two from one stream read as duplicates).")
+            continue
         try:
             secs = audio_seconds(path)
         except (OSError, ValueError):
@@ -1685,11 +1733,13 @@ def post_tiktok(qdir, queue, clips, tt):
                 break
             continue
         c["tiktok_caption"] = tiktok_upload.caption(c)
+        c["tiktok_post_at"] = next_tiktok_slot([t for _, t in recent]).isoformat(timespec="minutes")
         qfile.write_text(json.dumps(queue, indent=1, ensure_ascii=False), encoding="utf-8")
         if inbox:
             pending += 1
         print(f"  TikTok: [{c['id']}] " + ("posted" if tt.get("mode") == "direct" else
-              "draft in your TikTok inbox. Open the notification, paste this caption, post:") +
+              "draft in your TikTok inbox. Post it at " +
+              datetime.fromisoformat(c["tiktok_post_at"]).strftime("%a %I:%M %p ET") + " with this caption:") +
               f"\n    {c['tiktok_caption']}")
 
 
