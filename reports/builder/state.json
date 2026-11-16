@@ -1511,8 +1511,8 @@
   "@TheDiaryOfACEO": "UCGq-a57w-aPwyi3pW7XLiHw"
  },
  "review": {
-  "at": "2026-11-15 17:48",
-  "report": "/home/runner/work/late-recaps-bot/late-recaps-bot/reports/review_2026-11-15_1748/report.md",
+  "at": "2026-11-16 21:05",
+  "report": "/home/runner/work/late-recaps-bot/late-recaps-bot/reports/review_2026-11-16_2105/report.md",
   "lessons": {
    "titles": [
     "Creator name first, then a bet or question in plain verbs, and never the result. Add a named guest or celebrity when one exists.",
@@ -1536,62 +1536,66 @@
     "Confirm that scheduled clips actually go public. After 48h, judge on 3s retention and Shorts-feed share, and check Studio for limits or duplicate-content flags."
    ]
   },
-  "typical_views": 1.9,
-  "feed_tested": "1 of 6",
+  "typical_views": 2.1,
+  "feed_tested": "2 of 5",
   "make_more": [
-   "quote title (Creator: \"line\") (title): 6 clips, 3 got a real feed test, typically 7 views, 1.9x our typical clip, 32% stayed past the swipe",
-   "Twitch clip (found by): 4 clips, 2 got a real feed test, typically 8 views, 1.9x our typical clip, 32% stayed past the swipe",
-   "Jynxzi (creator): 12 clips, 3 got a real feed test, typically 3 views, 1.4x our typical clip, 42% stayed past the swipe",
-   "20-30s (length): 15 clips, 4 got a real feed test, typically 3 views, 1.3x our typical clip, 31% stayed past the swipe",
-   "afternoon (noon-5pm ET) (post time): 6 clips, 2 got a real feed test, typically 3 views, 1.3x our typical clip, 59% stayed past the swipe",
-   "20-30s (length): 4 clips, typically 675 views, 1.6x our typical TikTok clip (on TikTok)",
-   "quote title (Creator: \"line\") (title): 4 clips, typically 670 views, 1.6x our typical TikTok clip (on TikTok)"
+   "Twitch clip (found by): 5 clips, 3 got a real feed test, typically 12 views, 2.5x our typical clip, 37% stayed past the swipe",
+   "quote title (Creator: \"line\") (title): 6 clips, 3 got a real feed test, typically 7 views, 1.9x our typical clip, 34% stayed past the swipe",
+   "Jynxzi (creator): 13 clips, 4 got a real feed test, typically 4 views, 1.6x our typical clip, 43% stayed past the swipe",
+   "20-30s (length): 16 clips, 5 got a real feed test, typically 4 views, 1.4x our typical clip, 34% stayed past the swipe",
+   "Twitch clip (found by): 4 clips, typically 965 views, 2.1x our typical TikTok clip (on TikTok)"
   ],
   "make_less": [
    "Kai Cenat (creator): 14 clips, 0 got a real feed test, typically 0 views, 0.5x our typical clip, 53% stayed past the swipe",
    "31-45s (length): 4 clips, 0 got a real feed test, typically 1 views, 0.7x our typical clip, 50% stayed past the swipe",
-   "stake or challenge (hook): 3 clips, 0 got a real feed test, typically 1 views, 0.8x our typical clip, 25% stayed past the swipe",
-   "viewer timestamp comments (found by): 11 clips, typically 231 views, 0.8x our typical TikTok clip (on TikTok)",
-   "over 45s (length): 11 clips, typically 231 views, 0.8x our typical TikTok clip (on TikTok)"
+   "viewer timestamp comments (found by): 29 clips, 3 got a real feed test, typically 1 views, 0.8x our typical clip, 71% stayed past the swipe",
+   "chat spike (found by): 4 clips, typically 83 views, 0.5x our typical TikTok clip (on TikTok)"
   ],
   "source_score": {
-   "jynxzi": 1.41,
-   "kai_cenat": 0.55,
-   "caseoh": 1.58,
-   "stableronaldo": 1.78,
-   "xqc": 0.77,
-   "ishowspeed": 1.19,
-   "n3on": 0.77,
-   "adin_ross": 0.91
+   "jynxzi": 1.59,
+   "kai_cenat": 0.52,
+   "caseoh": 1.55,
+   "stableronaldo": 1.75,
+   "xqc": 0.75,
+   "ishowspeed": 1.13,
+   "n3on": 0.75,
+   "adin_ross": 0.9
   },
   "hour_score": {
-   "6": 0.96,
-   "8": 1.17,
-   "17": 1.28,
-   "21": 1.22,
-   "22": 1.0,
-   "4": 0.73,
-   "2": 0.68
+   "22": 1.48,
+   "6": 0.94,
+   "8": 1.12,
+   "17": 1.24,
+   "21": 1.17,
+   "4": 0.71,
+   "2": 0.65
   },
   "levers": {
    "found by": {
-    "Twitch clip": 1.94,
-    "chat spike": 1.19,
-    "viewer timestamp comments": 0.81
+    "Twitch clip": 2.0,
+    "chat spike": 1.13,
+    "viewer timestamp comments": 0.77
    },
    "stream age at post": {
-    "over 48h": 1.03,
-    "12-48h": 1.0,
-    "under 12h": 0.92
+    "12-48h": 1.07,
+    "over 48h": 0.98,
+    "under 12h": 0.88
    }
   },
   "length_hint": 25,
   "clips": [
    {
+    "title": "Jynxzi Wins Gamer Of The Year At The Streamer Awards \ud83c\udfc6\ud83d\udd25",
+    "views": 57,
+    "avg_viewed": 53.49,
+    "stayed": 0.46153846153846156,
+    "verdict": null
+   },
+   {
     "title": "Speed Gets Invited To Cook Up Dubstep With Frost Children \ud83c\udfa7",
-    "views": 46,
-    "avg_viewed": 37.51,
-    "stayed": 0.6590909090909091,
+    "views": 49,
+    "avg_viewed": 36.52,
+    "stayed": 0.6666666666666666,
     "verdict": null
    },
    {
@@ -1625,8 +1629,8 @@
    {
     "title": "Jynxzi Explains Why Hearing Wins In Rainbow Six \ud83c\udfa7",
     "views": 19,
-    "avg_viewed": 24.43,
-    "stayed": 0.7058823529411765,
+    "avg_viewed": 28.800000000000004,
+    "stayed": 0.7368421052631579,
     "verdict": null
    },
    {
@@ -2946,7 +2950,6 @@
      -0.693,
      -0.693,
      -0.693,
-     -0.693,
      0.405,
      2.303,
      0.0,
@@ -2958,7 +2961,8 @@
      -0.693,
      1.946,
      -0.693,
-     0.883
+     0.883,
+     2.108
     ],
     "20": [
      -0.693
@@ -2973,7 +2977,6 @@
      -0.693,
      -0.693,
      -0.693,
-     -0.693,
      0.405,
      2.303,
      0.0,
@@ -2985,7 +2988,8 @@
      -0.693,
      1.946,
      -0.693,
-     0.883
+     0.883,
+     2.108
     ]
    },
    "beat": {
@@ -2998,7 +3002,6 @@
      -0.693,
      -0.693,
      -0.693,
-     -0.693,
      0.405,
      2.303,
      0.0,
@@ -3009,7 +3012,8 @@
      -0.693,
      1.946,
      -0.693,
-     0.883
+     0.883,
+     2.108
     ],
     "slow": [
      2.803
@@ -3017,7 +3021,6 @@
    },
    "caption_words": {
     "3": [
-     2.708,
      -0.693,
      -0.693,
      -0.693,
@@ -3036,7 +3039,8 @@
      -0.693,
      1.946,
      -0.693,
-     0.883
+     0.883,
+     2.108
     ],
     "2": [
      -0.693,
@@ -3046,7 +3050,6 @@
    },
    "gap": {
     "0.6": [
-     2.708,
      -0.693,
      -0.693,
      -0.693,
@@ -3065,7 +3068,8 @@
      -0.693,
      1.946,
      -0.693,
-     0.883
+     0.883,
+     2.108
     ],
     "1.0": [
      -0.693,
@@ -3082,7 +3086,6 @@
      -0.693,
      -0.693,
      -0.693,
-     -0.693,
      0.405,
      2.303,
      0.0,
@@ -3094,7 +3097,8 @@
      -0.693,
      1.946,
      -0.693,
-     0.883
+     0.883,
+     2.108
     ]
    },
    "narrate": {
@@ -3136,7 +3140,8 @@
    "po5Kgi8PuMI",
    "Frwqjuv54FM",
    "DyyT5L9dkCE",
-   "Dy8Y7By6jpI"
+   "Dy8Y7By6jpI",
+   "yUTyORTf7GE"
   ],
   "best": {
    "length": 30,
@@ -3152,11 +3157,11 @@
  },
  "council": {
   "weights": {
-   "trend": 0.714,
-   "study": 0.514,
-   "analytics": 0.977,
-   "live": 1.292,
-   "script": 0.783,
+   "trend": 0.771,
+   "study": 0.493,
+   "analytics": 1.002,
+   "live": 1.211,
+   "script": 0.796,
    "audience": 0.5
   }
  },
