@@ -1582,8 +1582,8 @@
   "@TheDiaryOfACEO": "UCGq-a57w-aPwyi3pW7XLiHw"
  },
  "review": {
-  "at": "2026-11-16 21:05",
-  "report": "/home/runner/work/late-recaps-bot/late-recaps-bot/reports/review_2026-11-16_2105/report.md",
+  "at": "2026-11-16 23:37",
+  "report": "/home/runner/work/late-recaps-bot/late-recaps-bot/reports/review_2026-11-16_2337/report.md",
   "lessons": {
    "titles": [
     "Creator name first, then a bet or question in plain verbs, and never the result. Add a named guest or celebrity when one exists.",
@@ -1614,13 +1614,17 @@
    "quote title (Creator: \"line\") (title): 6 clips, 3 got a real feed test, typically 7 views, 1.9x our typical clip, 34% stayed past the swipe",
    "Jynxzi (creator): 13 clips, 4 got a real feed test, typically 4 views, 1.6x our typical clip, 43% stayed past the swipe",
    "20-30s (length): 16 clips, 5 got a real feed test, typically 4 views, 1.4x our typical clip, 34% stayed past the swipe",
-   "Twitch clip (found by): 4 clips, typically 965 views, 2.1x our typical TikTok clip (on TikTok)"
+   "Twitch clip (found by): 4 clips, typically 965 views, 2.6x our typical TikTok clip (on TikTok)",
+   "late night (10pm-6am ET) (post time): 10 clips, typically 336 views, 1.6x our typical TikTok clip (on TikTok)",
+   "says what happens (title): 16 clips, typically 243 views, 1.3x our typical TikTok clip (on TikTok)"
   ],
   "make_less": [
    "Kai Cenat (creator): 14 clips, 0 got a real feed test, typically 0 views, 0.5x our typical clip, 53% stayed past the swipe",
    "31-45s (length): 4 clips, 0 got a real feed test, typically 1 views, 0.7x our typical clip, 50% stayed past the swipe",
    "viewer timestamp comments (found by): 29 clips, 3 got a real feed test, typically 1 views, 0.8x our typical clip, 71% stayed past the swipe",
-   "chat spike (found by): 4 clips, typically 83 views, 0.5x our typical TikTok clip (on TikTok)"
+   "IShowSpeed (creator): 7 clips, typically 85 views, 0.6x our typical TikTok clip (on TikTok)",
+   "20-30s (length): 8 clips, typically 89 views, 0.6x our typical TikTok clip (on TikTok)",
+   "chat spike (found by): 4 clips, typically 83 views, 0.6x our typical TikTok clip (on TikTok)"
   ],
   "source_score": {
    "jynxzi": 1.59,
