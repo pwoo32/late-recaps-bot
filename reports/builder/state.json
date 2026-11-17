@@ -1652,8 +1652,8 @@
   "@TheDiaryOfACEO": "UCGq-a57w-aPwyi3pW7XLiHw"
  },
  "review": {
-  "at": "2026-11-16 23:37",
-  "report": "/home/runner/work/late-recaps-bot/late-recaps-bot/reports/review_2026-11-16_2337/report.md",
+  "at": "2026-11-17 05:08",
+  "report": "/home/runner/work/late-recaps-bot/late-recaps-bot/reports/review_2026-11-17_0508/report.md",
   "lessons": {
    "titles": [
     "Creator name first, then a bet or question in plain verbs, and never the result. Add a named guest or celebrity when one exists.",
@@ -1680,10 +1680,10 @@
   "typical_views": 2.1,
   "feed_tested": "2 of 5",
   "make_more": [
-   "Twitch clip (found by): 5 clips, 3 got a real feed test, typically 12 views, 2.5x our typical clip, 37% stayed past the swipe",
+   "Twitch clip (found by): 6 clips, 3 got a real feed test, typically 10 views, 2.3x our typical clip, 31% stayed past the swipe",
    "quote title (Creator: \"line\") (title): 6 clips, 3 got a real feed test, typically 7 views, 1.9x our typical clip, 34% stayed past the swipe",
    "Jynxzi (creator): 13 clips, 4 got a real feed test, typically 4 views, 1.6x our typical clip, 43% stayed past the swipe",
-   "20-30s (length): 16 clips, 5 got a real feed test, typically 4 views, 1.4x our typical clip, 34% stayed past the swipe",
+   "20-30s (length): 17 clips, 5 got a real feed test, typically 4 views, 1.4x our typical clip, 32% stayed past the swipe",
    "Twitch clip (found by): 4 clips, typically 965 views, 2.6x our typical TikTok clip (on TikTok)",
    "late night (10pm-6am ET) (post time): 10 clips, typically 336 views, 1.6x our typical TikTok clip (on TikTok)",
    "says what happens (title): 16 clips, typically 243 views, 1.3x our typical TikTok clip (on TikTok)"
@@ -1697,19 +1697,20 @@
    "chat spike (found by): 4 clips, typically 83 views, 0.6x our typical TikTok clip (on TikTok)"
   ],
   "source_score": {
-   "jynxzi": 1.59,
+   "stableronaldo": 1.65,
+   "jynxzi": 1.58,
    "kai_cenat": 0.52,
    "caseoh": 1.55,
-   "stableronaldo": 1.75,
    "xqc": 0.75,
    "ishowspeed": 1.13,
    "n3on": 0.75,
    "adin_ross": 0.9
   },
   "hour_score": {
-   "22": 1.48,
+   "1": 0.84,
+   "22": 1.47,
    "6": 0.94,
-   "8": 1.12,
+   "8": 1.11,
    "17": 1.24,
    "21": 1.17,
    "4": 0.71,
@@ -1718,13 +1719,13 @@
   "levers": {
    "found by": {
     "Twitch clip": 2.0,
-    "chat spike": 1.13,
-    "viewer timestamp comments": 0.77
+    "chat spike": 1.12,
+    "viewer timestamp comments": 0.76
    },
    "stream age at post": {
     "12-48h": 1.07,
-    "over 48h": 0.98,
-    "under 12h": 0.88
+    "over 48h": 0.97,
+    "under 12h": 0.87
    }
   },
   "length_hint": 25,
@@ -3169,7 +3170,6 @@
      -0.693,
      -0.693,
      -0.693,
-     -0.693,
      0.405,
      2.303,
      0.0,
@@ -3182,7 +3182,8 @@
      1.946,
      -0.693,
      0.883,
-     2.108
+     2.108,
+     -3.277
     ],
     "20": [
      -0.693
@@ -3196,7 +3197,6 @@
      -0.693,
      -0.693,
      -0.693,
-     -0.693,
      0.405,
      2.303,
      0.0,
@@ -3209,7 +3209,8 @@
      1.946,
      -0.693,
      0.883,
-     2.108
+     2.108,
+     -3.277
     ]
    },
    "beat": {
@@ -3237,11 +3238,13 @@
     ],
     "slow": [
      2.803
+    ],
+    "fast": [
+     -3.277
     ]
    },
    "caption_words": {
     "3": [
-     -0.693,
      -0.693,
      -0.693,
      -0.693,
@@ -3260,7 +3263,8 @@
      1.946,
      -0.693,
      0.883,
-     2.108
+     2.108,
+     -3.277
     ],
     "2": [
      -0.693,
@@ -3276,7 +3280,6 @@
      -0.693,
      -0.693,
      -0.693,
-     -0.693,
      0.405,
      2.303,
      0.0,
@@ -3289,7 +3292,8 @@
      1.946,
      -0.693,
      0.883,
-     2.108
+     2.108,
+     -3.277
     ],
     "1.0": [
      -0.693,
@@ -3305,7 +3309,6 @@
      -0.693,
      -0.693,
      -0.693,
-     -0.693,
      0.405,
      2.303,
      0.0,
@@ -3318,7 +3321,8 @@
      1.946,
      -0.693,
      0.883,
-     2.108
+     2.108,
+     -3.277
     ]
    },
    "narrate": {
@@ -3361,7 +3365,8 @@
    "Frwqjuv54FM",
    "DyyT5L9dkCE",
    "Dy8Y7By6jpI",
-   "yUTyORTf7GE"
+   "yUTyORTf7GE",
+   "lyjYSkcZGzE"
   ],
   "best": {
    "length": 30,
@@ -3377,11 +3382,11 @@
  },
  "council": {
   "weights": {
-   "trend": 0.771,
-   "study": 0.493,
-   "analytics": 1.002,
-   "live": 1.211,
-   "script": 0.796,
+   "trend": 0.806,
+   "study": 0.513,
+   "analytics": 0.96,
+   "live": 1.287,
+   "script": 0.783,
    "audience": 0.5
   }
  },
