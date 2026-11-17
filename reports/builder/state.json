@@ -1,19 +1,19 @@
 {
  "source_weight": {
-  "jynxzi": 2.78,
+  "jynxzi": 2.87,
   "kai_cenat": 0.31,
-  "ishowspeed": 1.99,
-  "stableronaldo": 2.28
+  "ishowspeed": 1.79,
+  "stableronaldo": 2.57
  },
  "slot_weight": {
   "2": 0.49,
-  "21": 0.49,
+  "21": 0.41,
   "8": 1.49,
   "4": 0.49,
-  "22": 2.39,
+  "22": 2.43,
   "17": 1.99,
-  "6": 2.49,
-  "1": 1.32
+  "6": 2.69,
+  "1": 1.39
  },
  "used_moments": [
   "L6S9Vb3RLy4@186",
@@ -126,7 +126,10 @@
   "2930061578@63",
   "o0UeucVxYCA@57",
   "GcbFPry2Jtk@340",
-  "2928244097@263"
+  "2928244097@263",
+  "xQ7NFneY6Fo@435",
+  "2930971003@556",
+  "2930232350@462"
  ],
  "queued": {
   "L6S9Vb3RLy4@186": {
@@ -1644,6 +1647,72 @@
     "audience": 0.5
    },
    "video_id": "sjENCYgL-j0"
+  },
+  "xQ7NFneY6Fo@435": {
+   "title": "Jynxzi: \"Should Be Way Better, Right?\" \ud83d\udd25",
+   "source": "jynxzi",
+   "post_utc": "2026-11-17 08:00",
+   "recipe": {
+    "length": 30,
+    "punch": 0.14,
+    "beat": "normal",
+    "caption_words": 3,
+    "gap": 0.6,
+    "layout": "face34",
+    "test": null
+   },
+   "council": {
+    "trend": 0.26,
+    "study": 0.25,
+    "analytics": 0.99,
+    "live": 0.55,
+    "script": 0.9,
+    "audience": 0.5
+   }
+  },
+  "2930971003@556": {
+   "title": "Peanut At Poor Coco \ud83d\ude31",
+   "source": "theburntpeanut",
+   "post_utc": "2026-11-17 17:00",
+   "recipe": {
+    "length": 30,
+    "punch": 0.14,
+    "beat": "normal",
+    "caption_words": 2,
+    "gap": 0.6,
+    "layout": "face34",
+    "test": "caption_words"
+   },
+   "council": {
+    "trend": 1.0,
+    "study": 0.25,
+    "analytics": 0.65,
+    "live": 0.21,
+    "script": 0.35,
+    "audience": 0.5
+   }
+  },
+  "2930232350@462": {
+   "title": "CaseOh At Lab \ud83d\ude31",
+   "source": "caseoh",
+   "post_utc": "2026-11-17 11:00",
+   "recipe": {
+    "length": 30,
+    "punch": 0.14,
+    "beat": "normal",
+    "caption_words": 3,
+    "gap": 0.35,
+    "layout": "face34",
+    "test": "gap"
+   },
+   "council": {
+    "trend": 1.0,
+    "study": 0.25,
+    "analytics": 0.64,
+    "live": 0.11,
+    "script": 0.35,
+    "audience": 0.5
+   }
   }
  },
  "channel": "UCbK9EejOk5UVzI_l8F3f8kA",
@@ -3156,6 +3225,78 @@
      "w",
      "w",
      "w"
+    ]
+   }
+  ],
+  "xQ7NFneY6Fo": [
+   {
+    "t": 10029,
+    "ratio": 26.3,
+    "msgs": 118,
+    "sample": [
+     "L",
+     "L",
+     "L",
+     "L DDOS",
+     "L"
+    ]
+   },
+   {
+    "t": 13074,
+    "ratio": 17.5,
+    "msgs": 130,
+    "sample": [
+     "W",
+     "Ll",
+     "W",
+     "W",
+     "Ll"
+    ]
+   },
+   {
+    "t": 18679,
+    "ratio": 14.4,
+    "msgs": 74,
+    "sample": [
+     "w",
+     "ww",
+     "w",
+     "w",
+     "w"
+    ]
+   },
+   {
+    "t": 22579,
+    "ratio": 12.6,
+    "msgs": 52,
+    "sample": [
+     "ww",
+     "w",
+     "w",
+     "w",
+     "w"
+    ]
+   },
+   {
+    "t": 9324,
+    "ratio": 10.4,
+    "msgs": 129,
+    "sample": [
+     "Yo what",
+     "L internet",
+     "w stream"
+    ]
+   },
+   {
+    "t": 15999,
+    "ratio": 9.9,
+    "msgs": 45,
+    "sample": [
+     "l",
+     "W",
+     "W",
+     "W",
+     "W"
     ]
    }
   ]

@@ -1,0 +1,253 @@
+[
+ {
+  "id": 1,
+  "source": "jynxzi",
+  "creator": "Jynxzi",
+  "platform": "youtube",
+  "video_id": "xQ7NFneY6Fo",
+  "video_title": "PUSHING LEGENDS DIV ON R6",
+  "url": "https://www.youtube.com/watch?v=xQ7NFneY6Fo&t=13074s",
+  "moment": "3:37:54",
+  "start": 13054,
+  "end": 13084,
+  "rank": 38.48,
+  "signal": "chat went 17.5x its normal pace",
+  "signals": [
+   "chat spike"
+  ],
+  "quotes": [
+   "W",
+   "Ll",
+   "W"
+  ],
+  "stream_age_h": 3.4,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": null
+  },
+  "council": {
+   "trend": 0.26,
+   "study": 0.25,
+   "analytics": 0.99,
+   "live": 0.55,
+   "script": 0.9,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 0.26,
+    "why": "Jynxzi clips pull 105,036 views/hour this week"
+   },
+   "study": {
+    "score": 0.25,
+    "why": "top channels rarely break out with Jynxzi"
+   },
+   "analytics": {
+    "score": 0.99,
+    "why": "Jynxzi clips spread 1.6x our typical clip; chat spike moments do 1.1x; has a spoken premise (bet/question/challenge); stream is 3h old (fresh)"
+   },
+   "live": {
+    "score": 0.55,
+    "why": "chat went 17.5x"
+   },
+   "script": {
+    "score": 0.9,
+    "why": "draft title: \"Jynxzi: \"Should Be Way Better, Right?\" 🔥\""
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-17T05:08:16Z",
+  "council_why": "Jynxzi's clip at 3:37:54 of 'PUSHING LEGENDS DIV ON R6' has a strong chat spike, a clear spoken premise, and is from a streamer whose clips typically perform well.",
+  "post_utc": "2026-11-17 08:00",
+  "post_local": "Tue 03:00 AM ET",
+  "title": "Jynxzi W 🤯",
+  "hook": "W",
+  "context": "Jynxzi live, PUSHING LEGENDS DIV ON R6",
+  "take": "Jynxzi really thought this was a good idea.",
+  "summary": "Jynxzi live: PUSHING LEGENDS DIV ON R6",
+  "tiktok_caption": "Jynxzi in PUSHING LEGENDS DIV ON R6.",
+  "hashtags": [],
+  "tags": [],
+  "draft": true,
+  "writer": "template",
+  "description": "Jynxzi live, PUSHING LEGENDS DIV ON R6\n\nFull stream by Jynxzi: https://www.youtube.com/watch?v=xQ7NFneY6Fo&t=13074s\nGo support Jynxzi, all credit to them.\n\n#jynxzi #shorts #kaicenat #ishowspeed #rakai",
+  "key": "xQ7NFneY6Fo@435",
+  "permission": "fan clipping tolerated; check for a Whop campaign"
+ },
+ {
+  "id": 2,
+  "source": "theburntpeanut",
+  "creator": "TheBurntPeanut",
+  "platform": "twitch",
+  "video_id": "2930971003",
+  "video_title": "Poor Coco",
+  "url": "https://www.twitch.tv/videos/2930971003?t=4h38m5s",
+  "moment": "4:38:05",
+  "start": 16665,
+  "end": 16695,
+  "rank": 16.69,
+  "signal": "Twitch clip, 566 views (2,264/h)",
+  "signals": [
+   "twitch clip"
+  ],
+  "quotes": [
+   "Poor Coco"
+  ],
+  "stream_age_h": 0.2,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 2,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": "caption_words"
+  },
+  "council": {
+   "trend": 1.0,
+   "study": 0.25,
+   "analytics": 0.65,
+   "live": 0.21,
+   "script": 0.35,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 1.0,
+    "why": "Peanut clips pull 1,386 views/hour this week, up 2772% since the last scan"
+   },
+   "study": {
+    "score": 0.25,
+    "why": "top channels rarely break out with Peanut"
+   },
+   "analytics": {
+    "score": 0.65,
+    "why": "no track record for Peanut on our channel yet; no clear premise, may be visual-only; stream is 0h old (fresh)"
+   },
+   "live": {
+    "score": 0.21,
+    "why": "Twitch clip at 2,264/h"
+   },
+   "script": {
+    "score": 0.35,
+    "why": "draft title: \"Peanut At Poor Coco 😱\"; no captions yet, writing blind"
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-17T05:08:16Z",
+  "council_why": "TheBurntPeanut's clip at 4:38:05 of 'Poor Coco' shows a significant increase in views, a clear visual premise, and is from a streamer whose clips are rapidly gaining traction.",
+  "post_utc": "2026-11-17 17:00",
+  "post_local": "Tue 12:00 PM ET",
+  "title": "Peanut Poor Coco 🤯",
+  "hook": "POOR COCO",
+  "context": "TheBurntPeanut live, Poor Coco",
+  "take": "Peanut really thought this was a good idea.",
+  "summary": "TheBurntPeanut live: Poor Coco",
+  "tiktok_caption": "Peanut in Poor Coco.",
+  "hashtags": [],
+  "tags": [],
+  "draft": true,
+  "writer": "template",
+  "description": "TheBurntPeanut live, Poor Coco\n\nFull stream by TheBurntPeanut: https://www.twitch.tv/videos/2930971003?t=4h38m5s\nGo support TheBurntPeanut, all credit to them.\n\n#theburntpeanut #burntpeanut #shorts #kaicenat #ishowspeed #rakai",
+  "key": "2930971003@556",
+  "permission": "fan clipping is widespread and tolerated; no official program checked (Nov 2026)"
+ },
+ {
+  "id": 3,
+  "source": "caseoh",
+  "creator": "CaseOh",
+  "platform": "twitch",
+  "video_id": "2930232350",
+  "video_title": "lab",
+  "url": "https://www.twitch.tv/videos/2930232350?t=3h51m14s",
+  "moment": "3:51:14",
+  "start": 13854,
+  "end": 13884,
+  "rank": 37.97,
+  "signal": "Twitch clip, 3,400 views (242/h)",
+  "signals": [
+   "twitch clip"
+  ],
+  "quotes": [
+   "lab"
+  ],
+  "stream_age_h": 14.1,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 0.35,
+   "layout": "face34",
+   "test": "gap"
+  },
+  "council": {
+   "trend": 1.0,
+   "study": 0.25,
+   "analytics": 0.64,
+   "live": 0.11,
+   "script": 0.35,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 1.0,
+    "why": "CaseOh clips pull 19,249 views/hour this week, up 414% since the last scan"
+   },
+   "study": {
+    "score": 0.25,
+    "why": "top channels rarely break out with CaseOh"
+   },
+   "analytics": {
+    "score": 0.64,
+    "why": "CaseOh clips spread 1.6x our typical clip; no clear premise, may be visual-only; stream is 14h old"
+   },
+   "live": {
+    "score": 0.11,
+    "why": "Twitch clip at 242/h"
+   },
+   "script": {
+    "score": 0.35,
+    "why": "draft title: \"CaseOh At Lab 😱\"; no captions yet, writing blind"
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-17T05:08:16Z",
+  "council_why": "CaseOh's clip at 3:51:14 of 'lab' has the highest view rate among CaseOh's clips, indicating strong potential, and is from a streamer whose clips are also rapidly gaining traction.",
+  "post_utc": "2026-11-17 11:00",
+  "post_local": "Tue 06:00 AM ET",
+  "title": "CaseOh lab 🤯",
+  "hook": "LAB",
+  "context": "CaseOh live, lab",
+  "take": "CaseOh really thought this was a good idea.",
+  "summary": "CaseOh live: lab",
+  "tiktok_caption": "CaseOh in lab.",
+  "hashtags": [],
+  "tags": [],
+  "draft": true,
+  "writer": "template",
+  "description": "CaseOh live, lab\n\nFull stream by CaseOh: https://www.twitch.tv/videos/2930232350?t=3h51m14s\nGo support CaseOh, all credit to them.\n\n#caseoh #shorts #kaicenat #ishowspeed #rakai",
+  "key": "2930232350@462",
+  "permission": "fan clipping is widespread and tolerated; no official program checked (Nov 2026)"
+ }
+]
