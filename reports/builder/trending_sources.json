@@ -40,5 +40,26 @@
   "crowd": 1.3,
   "best_clip_vph": 1642,
   "clips_24h": 1
+ },
+ "twitch_dunlol": {
+  "name": "dunlol",
+  "short": "dunlol",
+  "niche": "streamer",
+  "twitch": "dunlol",
+  "aliases": [
+   "dunlol"
+  ],
+  "hashtags": [
+   "#dunlol"
+  ],
+  "permission": "auto-added: trending on Twitch (clipping policy not checked)",
+  "campaign_cpm": null,
+  "first_seen": "2026-11-16T23:37:22+00:00",
+  "last_seen": "2026-11-16T23:37:22+00:00",
+  "trending": true,
+  "crowd_channels": 0,
+  "crowd": 1.3,
+  "best_clip_vph": 1801,
+  "clips_24h": 1
  }
 }

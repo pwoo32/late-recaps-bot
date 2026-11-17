@@ -1,0 +1,255 @@
+[
+ {
+  "id": 1,
+  "source": "ishowspeed",
+  "creator": "IShowSpeed",
+  "platform": "youtube",
+  "video_id": "o0UeucVxYCA",
+  "video_title": "I JUST MET WITH PRESIDENT OBAMA",
+  "url": "https://www.youtube.com/watch?v=o0UeucVxYCA&t=1714s",
+  "moment": "28:34",
+  "start": 1694,
+  "end": 1724,
+  "rank": 32.71,
+  "signal": "22 timestamp comments, 255 likes",
+  "signals": [
+   "comments"
+  ],
+  "quotes": [
+   "That rice girl on omegle really fucked up the stream!!",
+   "what is thisss RICE GIRLL",
+   "second miyee naaskeeda tusineysaa ar gabdhahaanaa"
+  ],
+  "stream_age_h": 3.5,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": null
+  },
+  "council": {
+   "trend": 0.66,
+   "study": 1.0,
+   "analytics": 0.6,
+   "live": 0.45,
+   "script": 0.35,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 0.66,
+    "why": "Speed clips pull 580,984 views/hour this week, down 19% since the last scan"
+   },
+   "study": {
+    "score": 1.0,
+    "why": "7 of the top channels' breakout Shorts are Speed clips; Speed is in 103 of their recent titles"
+   },
+   "analytics": {
+    "score": 0.6,
+    "why": "Speed clips spread 1.1x our typical clip; viewer timestamp comments moments do 0.8x; no clear premise, may be visual-only; stream is 4h old (fresh)"
+   },
+   "live": {
+    "score": 0.45,
+    "why": "22 timestamp comments, 255 likes"
+   },
+   "script": {
+    "score": 0.35,
+    "why": "draft title: \"Speed At Just MET With President 😱\"; no captions yet, writing blind"
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-16T23:37:22Z",
+  "council_why": "IShowSpeed's clips are currently trending and have a strong track record of breaking out, making them highly likely to perform well.",
+  "post_utc": "2026-11-17 08:00",
+  "post_local": "Tue 03:00 AM ET",
+  "title": "Speed That rice girl on omegle really fuck 🤯",
+  "hook": "THAT RICE GIRL ON OMEGLE REALLY FUCKED U",
+  "context": "IShowSpeed live, I JUST MET WITH PRESIDENT OBAMA",
+  "take": "Nobody in the room saw this coming.",
+  "summary": "IShowSpeed live: I JUST MET WITH PRESIDENT OBAMA",
+  "tiktok_caption": "Speed in I JUST MET WITH PRESIDENT OBAMA.",
+  "hashtags": [],
+  "tags": [],
+  "draft": true,
+  "writer": "template",
+  "description": "IShowSpeed live, I JUST MET WITH PRESIDENT OBAMA\n\nFull stream by IShowSpeed: https://www.youtube.com/watch?v=o0UeucVxYCA&t=1714s\nGo support IShowSpeed, all credit to them.\n\n#ishowspeed #speed #shorts #kaicenat #rakai",
+  "key": "o0UeucVxYCA@57",
+  "permission": "fan clipping is widespread and tolerated; no official paid program found (Oct 2026)"
+ },
+ {
+  "id": 2,
+  "source": "jynxzi",
+  "creator": "Jynxzi",
+  "platform": "youtube",
+  "video_id": "GcbFPry2Jtk",
+  "video_title": "FINDING THE PIRATE TOKEN",
+  "url": "https://www.youtube.com/watch?v=GcbFPry2Jtk&t=10209s",
+  "moment": "2:50:09",
+  "start": 10189,
+  "end": 10219,
+  "rank": 40.41,
+  "signal": "chat went 11.7x its normal pace",
+  "signals": [
+   "chat spike"
+  ],
+  "quotes": [
+   "L",
+   "L crash",
+   "L"
+  ],
+  "stream_age_h": 21.5,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.08,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": "punch"
+  },
+  "council": {
+   "trend": 0.36,
+   "study": 0.25,
+   "analytics": 0.63,
+   "live": 0.55,
+   "script": 0.65,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 0.36,
+    "why": "Jynxzi clips pull 105,036 views/hour this week; matches what's viral now: token"
+   },
+   "study": {
+    "score": 0.25,
+    "why": "top channels rarely break out with Jynxzi"
+   },
+   "analytics": {
+    "score": 0.63,
+    "why": "Jynxzi clips spread 1.6x our typical clip; chat spike moments do 1.1x; no clear premise, may be visual-only; stream is 22h old"
+   },
+   "live": {
+    "score": 0.55,
+    "why": "chat went 11.7x"
+   },
+   "script": {
+    "score": 0.65,
+    "why": "draft title: \"Jynxzi At Finding THE Pirate Token 😱\""
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-16T23:37:22Z",
+  "council_why": "Jynxzi's clips have a strong spread rate and viewer engagement, despite the channel rarely breaking out, making them a solid choice.",
+  "post_utc": "2026-11-17 01:00",
+  "post_local": "Mon 08:00 PM ET",
+  "title": "Jynxzi L 🤯",
+  "hook": "L",
+  "context": "Jynxzi live, FINDING THE PIRATE TOKEN",
+  "take": "Jynxzi had no idea what was about to happen.",
+  "summary": "Jynxzi live: FINDING THE PIRATE TOKEN",
+  "tiktok_caption": "Jynxzi in FINDING THE PIRATE TOKEN.",
+  "hashtags": [],
+  "tags": [],
+  "draft": true,
+  "writer": "template",
+  "description": "Jynxzi live, FINDING THE PIRATE TOKEN\n\nFull stream by Jynxzi: https://www.youtube.com/watch?v=GcbFPry2Jtk&t=10209s\nGo support Jynxzi, all credit to them.\n\n#jynxzi #shorts #kaicenat #ishowspeed #rakai",
+  "key": "GcbFPry2Jtk@340",
+  "permission": "fan clipping tolerated; check for a Whop campaign"
+ },
+ {
+  "id": 3,
+  "source": "caseoh",
+  "creator": "CaseOh",
+  "platform": "twitch",
+  "video_id": "2928244097",
+  "video_title": "scare 1",
+  "url": "https://www.twitch.tv/videos/2928244097?t=2h11m47s",
+  "moment": "2:11:47",
+  "start": 7887,
+  "end": 7917,
+  "rank": 27.69,
+  "signal": "Twitch clip, 9,664 views (171/h)",
+  "signals": [
+   "twitch clip"
+  ],
+  "quotes": [
+   "scare 1"
+  ],
+  "stream_age_h": 56.5,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "fast",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": "beat"
+  },
+  "council": {
+   "trend": 1.0,
+   "study": 0.25,
+   "analytics": 0.5,
+   "live": 0.11,
+   "script": 0.35,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 1.0,
+    "why": "CaseOh clips pull 19,249 views/hour this week, up 414% since the last scan"
+   },
+   "study": {
+    "score": 0.25,
+    "why": "top channels rarely break out with CaseOh"
+   },
+   "analytics": {
+    "score": 0.5,
+    "why": "CaseOh clips spread 1.6x our typical clip; no clear premise, may be visual-only; stream is 56h old (other clippers had time)"
+   },
+   "live": {
+    "score": 0.11,
+    "why": "Twitch clip at 171/h"
+   },
+   "script": {
+    "score": 0.35,
+    "why": "draft title: \"CaseOh At Scare 1 😱\"; no captions yet, writing blind"
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-16T23:37:22Z",
+  "council_why": "CaseOh's clips have seen a significant increase in views and spread rate, indicating potential for high performance, especially given the variety of content.",
+  "post_utc": "2026-11-17 05:00",
+  "post_local": "Tue 12:00 AM ET",
+  "title": "CaseOh scare 1 🤯",
+  "hook": "SCARE 1",
+  "context": "CaseOh live, scare 1",
+  "take": "This is why chat can't stop clipping CaseOh.",
+  "summary": "CaseOh live: scare 1",
+  "tiktok_caption": "CaseOh in scare 1.",
+  "hashtags": [],
+  "tags": [],
+  "draft": true,
+  "writer": "template",
+  "description": "CaseOh live, scare 1\n\nFull stream by CaseOh: https://www.twitch.tv/videos/2928244097?t=2h11m47s\nGo support CaseOh, all credit to them.\n\n#caseoh #shorts #kaicenat #ishowspeed #rakai",
+  "key": "2928244097@263",
+  "permission": "fan clipping is widespread and tolerated; no official program checked (Nov 2026)"
+ }
+]
