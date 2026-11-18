@@ -1,0 +1,77 @@
+{
+ "generated_at": "2026-11-14T21:47:00.625739+00:00",
+ "study_run": "replies_streamer_2026-11-14_2147",
+ "writer": "gemini",
+ "reply_words": 1.0,
+ "reply_words_p75": 3,
+ "top_words": 6,
+ "reply_traits": {
+  "question": 0.23,
+  "emoji": 0.73,
+  "emoji_only": 0.46,
+  "lowercase": 0.19,
+  "laugh": 0.19,
+  "thanks": 0.0,
+  "agree": 0.04,
+  "mention": 0.04,
+  "sub_ask": 0.0,
+  "link": 0.0,
+  "promise": 0.04,
+  "hostile": 0.0
+ },
+ "summary": "Top streamer clip channels rarely reply to viewers, with 13 out of 20 channels staying completely silent and the overall channel reply rate sitting around 1%. However, pinning a strong top comment strongly correlates with higher viewer engagement, driving a 1.62x comment lift (lift_top: 1.62 vs 1.0 baseline across 117 videos). When top channels do pin first comments, they heavily rely on open-ended questions (60%) and emojis (100%) to kickstart discussion.",
+ "reply_rules": [
+  "Keep channel replies extremely rare and concise; across 26 analyzed replies, the median word count is just 1.0 (reply_words: 1.0).",
+  "Maintain a fast response time when replying to early comments (reply_minutes median: 128.5).",
+  "Use single emojis or very short reactions frequently, as emoji usage appears in 73% of channel replies (reply_traits.emoji: 0.73).",
+  "Ask short, provocative follow-up questions to prompt viewer responses (reply_traits.question: 0.23).",
+  "Keep the tone casual and lowercase when typing brief texts (reply_traits.lowercase: 0.19)."
+ ],
+ "first_comment_rules": [
+  "Pin an open-ended question about the clip to trigger viewer debates (top_traits.question: 0.60, lift_top: 1.62).",
+  "Include an expressive emoji in every pinned comment (top_traits.emoji: 1.0).",
+  "Keep pinned comments brief, aiming for around 6 words (top_words: 6)."
+ ],
+ "avoid": [
+  "Avoid asking viewers to subscribe in comment replies (sub_ask: 0.0 in top comments).",
+  "Do not post external links (link: 0.0 across top traits).",
+  "Never pretend to be the featured streamer or engage in hostile arguments (hostile: 0.0)."
+ ],
+ "reply_examples": [
+  {
+   "comment": "speed was actually losing his mind here 😂",
+   "reply": "😂"
+  },
+  {
+   "comment": "no way kai pulled that off",
+   "reply": "are you sure?😂"
+  },
+  {
+   "comment": "jynxzi definitely broke his controller after this clip",
+   "reply": "Omg what😭"
+  },
+  {
+   "comment": "adin ross reacting to this was hilarious",
+   "reply": "Not anymore✌🏾"
+  },
+  {
+   "comment": "bro thinks he is the goat of streaming",
+   "reply": "Why?"
+  },
+  {
+   "comment": "w edit bro keep it up",
+   "reply": "yess"
+  },
+  {
+   "comment": "first comment drop",
+   "reply": "❤"
+  }
+ ],
+ "first_comment_examples": [
+  "Do you think speed fit in this clip? 😭",
+  "Which part was the crazy moment? 😳",
+  "Should Kai Cenat win streamer of the year again? 🤔",
+  "Was Jynxzi actually valid for this reaction? 😭",
+  "W Speed in the comments! ❤"
+ ]
+}
