@@ -460,12 +460,15 @@ def rank_moments(moments, demand, state, words=None, change=None):
         # Creators whose every moment is already posted by hundreds of clip channels (and by their own Shorts
         # channels and YouTube's auto highlights): our copy is one of many near-duplicates (sources.py "crowd").
         crowd = src.get("crowd", 1.0)
-        m["rank"] = round(m["score"] * hot * learned * fresh * reach * paid * rising * topical * heat * music * crowd, 2)
+        news = 1.4 if council.news_hook(m) else 1.0  # an event or named guest people search for (see council.NEWS)
+        m["rank"] = round(m["score"] * hot * learned * fresh * reach * paid * rising * topical * heat * music * crowd
+                          * news, 2)
         m["key"] = f"{m['video_id']}@{m['t'] // 30}"
         b = m["t"] // 30  # same scene: within 3 buckets (~90s) of something already posted from this stream
         m["used"] = (m["key"] in used or any(abs(b - u) <= 3 for u in used_at.get(m["video_id"], ()))
                      or m["video_id"] in claimed  # this stream already got us a claim
-                     or posted_per_stream.get(m["video_id"], 0) >= originality.MAX_CLIPS_PER_STREAM)  # near-duplicates
+                     or posted_per_stream.get(m["video_id"], 0) >= originality.MAX_CLIPS_PER_STREAM  # near-duplicates
+                     or bool(originality.same_moment(m, state)))  # same moment found again via another clip/VOD
     return sorted((m for m in moments if not m["used"]), key=lambda m: m["rank"], reverse=True)
 
 
@@ -1504,7 +1507,8 @@ def clip_problem(qdir, c):
     if free_writer.risky(shown):  # last check before posting: our own text never claims a crime, violence or drugs
         return f"content: the title/hook/caption says \"{free_writer.RISKY.search(shown).group(0)}\", which gets clips taken down"
     # Reused-content and copyright checks: our own words on it, not a repeat, no music (originality.py)
-    problems = originality.clip_problems(c, originality.posted_titles(load_state()), speech, said)
+    state = load_state()
+    problems = originality.clip_problems(c, originality.posted_titles(state), speech, said, state=state)
     return "; ".join(problems) or None
 
 
@@ -1611,7 +1615,8 @@ def cmd_publish(args):
             print(f"  skipped: upload failed ({type(e).__name__}: {str(e)[:200]}). It goes up on the next run.")
             continue
         c["youtube_id"] = vid
-        state["queued"].setdefault(c["key"], {}).update(video_id=vid, title=c["title"], source=c["source"])
+        state["queued"].setdefault(c["key"], {}).update(video_id=vid, title=c["title"], source=c["source"],
+                                                         words=originality.moment_words(c))
         if qdir.name.startswith("spike_"):  # counts toward the spike checks' daily limit
             day = datetime.now(LOCAL_TZ).date().isoformat()
             state.setdefault("spike_posts", {})[day] = state["spike_posts"].get(day, 0) + 1

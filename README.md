@@ -166,6 +166,19 @@ python channel_builder.py run --publish  # the whole day hands-off: refresh repo
   free writer's templates; the clip has at least 20 spoken words; and whole Twitch/Kick clips are 15s or longer.
   Saturated creators (Speed, Kai Cenat) rank at half weight (`crowd` in `sources.py`). `ALLOW_TEMPLATE_NARRATION=1`
   turns the template check off.
+- Same-moment block (Nov 18 2026). The Speed dubstep moment went up 4 times and three others twice, found again
+  through a different clip, VOD or bucket. A moment is now skipped, and a cut clip held, when an upload from the last
+  21 days by the same creator shares most of its distinctive words (`originality.same_moment`; each upload's words
+  are saved in `state.json`).
+- News first (Nov 18 2026). Our only Short past 50 views named a searchable event ("Jynxzi Wins Gamer Of The Year At
+  The Streamer Awards") and got 85% of its views from outside the Shorts feed. Moments whose source title names an
+  event (award, win, announcement, interview...) or a guest (a full name like "Serena Williams") rank 1.4x and get a
+  bonus in the council's analytics vote (`council.news_hook`), and the writer is told to put the event or guest in
+  the title the way people search for it.
+- Title check for model writers (Nov 18 2026). A Gemini/Groq script is only thrown out for names it made up (words it
+  capitalises as a person, place or event that appear nowhere in the stream title, comments or transcript), not for
+  ordinary words: the old check threw out 49 Gemini scripts over words like "gameplay" or "Rainbow Six", the free
+  writer's template was then held by the gate, and whole days posted nothing.
 - Quota: plan ~25 units, daily ~20-60, track ~2. Outputs: `reports/builder/`.
 
 ### Uploading (one-time setup, ~10 minutes)
