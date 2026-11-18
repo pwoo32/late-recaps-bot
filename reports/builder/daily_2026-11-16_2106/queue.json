@@ -1,0 +1,322 @@
+[
+ {
+  "id": 1,
+  "source": "caseoh",
+  "creator": "CaseOh",
+  "platform": "twitch",
+  "video_id": "2930232350",
+  "video_title": "W BURGER LMAO🍔🤣/ JUMPSCARE 😱",
+  "url": "https://www.twitch.tv/videos/2930232350?t=2h3m57s",
+  "moment": "2:03:57",
+  "start": 7417,
+  "end": 7447,
+  "rank": 36.4,
+  "signal": "Twitch clip, 3,010 views (189/h)",
+  "signals": [
+   "twitch clip"
+  ],
+  "quotes": [
+   "W BURGER LMAO🍔🤣/ JUMPSCARE 😱"
+  ],
+  "stream_age_h": 15.9,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": null
+  },
+  "council": {
+   "trend": 1.0,
+   "study": 0.25,
+   "analytics": 0.63,
+   "live": 0.11,
+   "script": 0.35,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 1.0,
+    "why": "CaseOh clips pull 19,249 views/hour this week, up 414% since the last scan"
+   },
+   "study": {
+    "score": 0.25,
+    "why": "top channels rarely break out with CaseOh"
+   },
+   "analytics": {
+    "score": 0.63,
+    "why": "CaseOh clips spread 1.6x our typical clip; no clear premise, may be visual-only; stream is 16h old"
+   },
+   "live": {
+    "score": 0.11,
+    "why": "Twitch clip at 189/h"
+   },
+   "script": {
+    "score": 0.35,
+    "why": "draft title: \"CaseOh At W Burger / Jumpscare 😭\"; no captions yet, writing blind"
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-16T21:06:28Z",
+  "council_why": "CaseOh's clips are performing exceptionally well, with a 414% increase in views this week, and the clip has a clear visual premise that could attract a wide audience.",
+  "post_utc": "2026-11-17 08:00",
+  "post_local": "Tue 03:00 AM ET",
+  "title": "CaseOh Asks Hey \"Can I Get Five Sipsies, Please?\" 😭",
+  "hook": "CAN I GET FIVE SIPSIES, PLEASE?",
+  "context": "CaseOh live: W Burger / Jumpscare, with Hey",
+  "take": "That question, “Can I get five?” sets up the moment. Listen to what follows.",
+  "summary": "CaseOh during \"W BURGER / JUMPSCARE\" with Hey. W BURGER / JUMPSCARE.",
+  "tiktok_caption": "CaseOh Asks Hey \"Can I Get Five Sipsies, Please?\" | W burger lmao/ jumpscare 😭 I can't stop replaying this #caseoh #livestream #caseohclips #streamerclips #hey",
+  "hashtags": [
+   "#caseoh",
+   "#hey",
+   "#burgerjumpscare"
+  ],
+  "tags": [
+   "caseoh",
+   "case oh",
+   "hey",
+   "burger",
+   "jumpscare",
+   "caseoh clips",
+   "streamer clips"
+  ],
+  "draft": false,
+  "writer": "free",
+  "description": "CaseOh during \"W BURGER / JUMPSCARE\" with Hey. W BURGER / JUMPSCARE.\n\nFull stream by CaseOh: https://www.twitch.tv/videos/2930232350?t=2h3m57s\nGo support CaseOh, all credit to them.\n\n#caseoh #hey #burgerjumpscare #shorts",
+  "key": "2930232350@247",
+  "permission": "fan clipping is widespread and tolerated; no official program checked (Nov 2026)",
+  "payoff": "So, “Can I get five sipsies,?” Drop your answer below.",
+  "script_source": "transcript",
+  "upload_tags": [
+   "caseoh",
+   "case oh",
+   "hey",
+   "burger",
+   "jumpscare",
+   "caseoh clips",
+   "streamer clips",
+   "shorts"
+  ],
+  "held": "originality: template narration (\"sets up the moment\"); YouTube counts template voice-overs as adding nothing; originality: the script came from the fill-in writer, not a model, so the narration is a template (set GEMINI_API_KEY or GROQ_API_KEY, both free)",
+  "tiktok_id": "v_inbox_file~v2.7708888081528670222"
+ },
+ {
+  "id": 2,
+  "source": "jynxzi",
+  "creator": "Jynxzi",
+  "platform": "youtube",
+  "video_id": "GcbFPry2Jtk",
+  "video_title": "FINDING THE PIRATE TOKEN",
+  "url": "https://www.youtube.com/watch?v=GcbFPry2Jtk&t=17194s",
+  "moment": "4:46:34",
+  "start": 17174,
+  "end": 17204,
+  "rank": 56.42,
+  "signal": "chat went 31.0x its normal pace",
+  "signals": [
+   "chat spike"
+  ],
+  "quotes": [
+   "L",
+   "w",
+   "Shannon L"
+  ],
+  "stream_age_h": 19.0,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.08,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": "punch"
+  },
+  "council": {
+   "trend": 0.36,
+   "study": 0.25,
+   "analytics": 0.89,
+   "live": 0.55,
+   "script": 1.0,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 0.36,
+    "why": "Jynxzi clips pull 105,036 views/hour this week; matches what's viral now: token"
+   },
+   "study": {
+    "score": 0.25,
+    "why": "top channels rarely break out with Jynxzi"
+   },
+   "analytics": {
+    "score": 0.89,
+    "why": "Jynxzi clips spread 1.6x our typical clip; chat spike moments do 1.1x; has a spoken premise (bet/question/challenge); stream is 19h old"
+   },
+   "live": {
+    "score": 0.55,
+    "why": "chat went 31.0x"
+   },
+   "script": {
+    "score": 1.0,
+    "why": "draft title: \"Jynxzi Asks Yep \">> What Are You Guys?\" 🔥\""
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-16T21:06:28Z",
+  "council_why": "Jynxzi's clip has a strong chat reaction and a clear spoken premise, which could engage viewers and drive views, especially given the current trend towards token-related content.",
+  "post_utc": "2026-11-16 22:00",
+  "post_local": "Mon 05:00 PM ET",
+  "title": "Jynxzi: \"The 69ers\" 😭🏈",
+  "hook": "JYNXZI NAMES THE WRONG TEAM",
+  "context": "Jynxzi wrapping up Sunday stream",
+  "take": "After grinding for hours while sick, Jynxzi tries to sign off smoothly for football night but slips up with the easiest team name in the league.",
+  "summary": "Jynxzi wraps up his pirate token hunt stream and wishes his squad good luck before watching Sunday Night Football. Jynxzi accidentally renames the 49ers while signing off sick.",
+  "tiktok_caption": "Jynxzi signing off while sick and messing up the team name is classic",
+  "hashtags": [
+   "#jynxzi",
+   "#shorts",
+   "#funny"
+  ],
+  "tags": [
+   "Jynxzi",
+   "Jynxzi funny",
+   "Jynxzi clips",
+   "Jynxzi stream",
+   "Jynxzi football",
+   "Twitch clips",
+   "Jynxzi pirate token",
+   "Sunday Night Football"
+  ],
+  "draft": false,
+  "writer": "gemini",
+  "description": "Jynxzi wraps up his pirate token hunt stream and wishes his squad good luck before watching Sunday Night Football. Jynxzi accidentally renames the 49ers while signing off sick.\n\nFull stream by Jynxzi: https://www.youtube.com/watch?v=GcbFPry2Jtk&t=17194s\nGo support Jynxzi, all credit to them.\n\n#jynxzi #shorts #funny",
+  "key": "GcbFPry2Jtk@573",
+  "permission": "fan clipping tolerated; check for a Whop campaign",
+  "payoff": "Calling the 49ers that on main stream means he definitely needs that extra day of rest.",
+  "script_source": "captions",
+  "upload_tags": [
+   "Jynxzi",
+   "Jynxzi funny",
+   "Jynxzi clips",
+   "Jynxzi stream",
+   "Jynxzi football",
+   "Twitch clips",
+   "Jynxzi pirate token",
+   "Sunday Night Football",
+   "jynxzi",
+   "shorts"
+  ]
+ },
+ {
+  "id": 3,
+  "source": "lacy",
+  "creator": "Lacy",
+  "platform": "twitch",
+  "video_id": "2930061578",
+  "video_title": "a",
+  "url": "https://www.twitch.tv/videos/2930061578?t=0h31m33s",
+  "moment": "31:33",
+  "start": 1873,
+  "end": 1903,
+  "rank": 18.27,
+  "signal": "Twitch clip, 1,387 views (65/h)",
+  "signals": [
+   "twitch clip"
+  ],
+  "quotes": [
+   "a"
+  ],
+  "stream_age_h": 21.5,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "fast",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": "beat"
+  },
+  "council": {
+   "trend": 0.6,
+   "study": 0.25,
+   "analytics": 0.51,
+   "live": 0.1,
+   "script": 0.35,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 0.6,
+    "why": "Lacy clips pull 1,657 views/hour this week, up 224% since the last scan"
+   },
+   "study": {
+    "score": 0.25,
+    "why": "top channels rarely break out with Lacy"
+   },
+   "analytics": {
+    "score": 0.51,
+    "why": "no track record for Lacy on our channel yet; no clear premise, may be visual-only; stream is 22h old"
+   },
+   "live": {
+    "score": 0.1,
+    "why": "Twitch clip at 65/h"
+   },
+   "script": {
+    "score": 0.35,
+    "why": "draft title: \"Lacy Can't Believe What Just Happened 😱\"; no captions yet, writing blind"
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-16T21:06:28Z",
+  "council_why": "Lacy's clip, while not having a clear premise, still has a high potential for engagement due to the trending topic of Dan Clancy's GTA 6 comments, which could resonate with viewers.",
+  "post_utc": "2026-11-17 01:00",
+  "post_local": "Mon 08:00 PM ET",
+  "title": "Lacy Goes Off 🔥",
+  "hook": "HE CALLED IT",
+  "context": "Lacy live: A",
+  "take": "",
+  "summary": "Lacy during \"a\".",
+  "tiktok_caption": "Lacy Goes Off 🔥 Rate this 1-10 #lacy #livestream #lacyclips #streamerclips",
+  "hashtags": [
+   "#lacy"
+  ],
+  "tags": [
+   "lacy",
+   "lacy clips",
+   "streamer clips"
+  ],
+  "draft": false,
+  "writer": "free",
+  "description": "Lacy during \"a\".\n\nFull stream by Lacy: https://www.twitch.tv/videos/2930061578?t=0h31m33s\nGo support Lacy, all credit to them.\n\n#lacy #shorts",
+  "key": "2930061578@63",
+  "permission": "fan clipping is widespread and tolerated; no official program checked (Nov 2026)",
+  "payoff": "",
+  "script_source": "transcript",
+  "upload_tags": [
+   "lacy",
+   "lacy clips",
+   "streamer clips",
+   "shorts"
+  ],
+  "held": "script agent: no take",
+  "tiktok_id": "v_inbox_file~v2.7708888081528702990"
+ }
+]
