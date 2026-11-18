@@ -139,11 +139,11 @@
   "permission": "auto-added: trending on Twitch (clipping policy not checked)",
   "campaign_cpm": null,
   "first_seen": "2026-11-18T17:41:10+00:00",
-  "last_seen": "2026-11-18T17:41:10+00:00",
+  "last_seen": "2026-11-18T22:36:41+00:00",
   "trending": true,
   "crowd_channels": 0,
   "crowd": 1.3,
-  "best_clip_vph": 2534,
+  "best_clip_vph": 2139,
   "clips_24h": 2
  },
  "twitch_zoil": {
@@ -160,11 +160,95 @@
   "permission": "auto-added: trending on Twitch (clipping policy not checked)",
   "campaign_cpm": null,
   "first_seen": "2026-11-18T17:41:10+00:00",
-  "last_seen": "2026-11-18T17:41:10+00:00",
+  "last_seen": "2026-11-18T22:36:41+00:00",
   "trending": true,
   "crowd_channels": 0,
   "crowd": 1.3,
-  "best_clip_vph": 2162,
+  "best_clip_vph": 2433,
+  "clips_24h": 2
+ },
+ "twitch_ohnepixel": {
+  "name": "ohnePixel",
+  "short": "ohnePixel",
+  "niche": "streamer",
+  "twitch": "ohnepixel",
+  "aliases": [
+   "ohnepixel"
+  ],
+  "hashtags": [
+   "#ohnepixel"
+  ],
+  "permission": "auto-added: trending on Twitch (clipping policy not checked)",
+  "campaign_cpm": null,
+  "first_seen": "2026-11-18T22:36:41+00:00",
+  "last_seen": "2026-11-18T22:36:41+00:00",
+  "trending": true,
+  "crowd_channels": 0,
+  "crowd": 1.3,
+  "best_clip_vph": 34530,
+  "clips_24h": 6
+ },
+ "twitch_jasontheween": {
+  "name": "jasontheween",
+  "short": "jasontheween",
+  "niche": "streamer",
+  "twitch": "jasontheween",
+  "aliases": [
+   "jasontheween"
+  ],
+  "hashtags": [
+   "#jasontheween"
+  ],
+  "permission": "auto-added: trending on Twitch (clipping policy not checked)",
+  "campaign_cpm": null,
+  "first_seen": "2026-11-18T22:36:41+00:00",
+  "last_seen": "2026-11-18T22:36:41+00:00",
+  "trending": true,
+  "crowd_channels": 2,
+  "crowd": 1.1,
+  "best_clip_vph": 4273,
+  "clips_24h": 1
+ },
+ "twitch_lirik": {
+  "name": "LIRIK",
+  "short": "LIRIK",
+  "niche": "streamer",
+  "twitch": "lirik",
+  "aliases": [
+   "lirik"
+  ],
+  "hashtags": [
+   "#lirik"
+  ],
+  "permission": "auto-added: trending on Twitch (clipping policy not checked)",
+  "campaign_cpm": null,
+  "first_seen": "2026-11-18T22:36:41+00:00",
+  "last_seen": "2026-11-18T22:36:41+00:00",
+  "trending": true,
+  "crowd_channels": 0,
+  "crowd": 1.3,
+  "best_clip_vph": 2152,
+  "clips_24h": 1
+ },
+ "twitch_clix": {
+  "name": "Clix",
+  "short": "Clix",
+  "niche": "streamer",
+  "twitch": "clix",
+  "aliases": [
+   "clix"
+  ],
+  "hashtags": [
+   "#clix"
+  ],
+  "permission": "auto-added: trending on Twitch (clipping policy not checked)",
+  "campaign_cpm": null,
+  "first_seen": "2026-11-18T22:36:41+00:00",
+  "last_seen": "2026-11-18T22:36:41+00:00",
+  "trending": true,
+  "crowd_channels": 0,
+  "crowd": 1.3,
+  "best_clip_vph": 1559,
   "clips_24h": 1
  }
 }

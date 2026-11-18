@@ -1,0 +1,323 @@
+[
+ {
+  "id": 1,
+  "source": "n3on",
+  "creator": "N3on",
+  "platform": "youtube",
+  "video_id": "I1l955pjhGQ",
+  "video_title": "PLAYING GTA 6 FOR THE FIRST TIME",
+  "url": "https://www.youtube.com/watch?v=I1l955pjhGQ&t=17169s",
+  "moment": "4:46:09",
+  "start": 17149,
+  "end": 17179,
+  "rank": 23.81,
+  "signal": "chat went 9.3x its normal pace",
+  "signals": [
+   "chat spike"
+  ],
+  "quotes": [
+   "w",
+   "w",
+   "w"
+  ],
+  "stream_age_h": 4.6,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": null
+  },
+  "council": {
+   "trend": 0.9,
+   "study": 0.25,
+   "analytics": 0.73,
+   "live": 0.55,
+   "script": 0.35,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 0.9,
+    "why": "N3on clips pull 2,696 views/hour this week, up 373% since the last scan"
+   },
+   "study": {
+    "score": 0.25,
+    "why": "top channels rarely break out with N3on"
+   },
+   "analytics": {
+    "score": 0.73,
+    "why": "N3on clips spread 0.8x our typical clip; chat spike moments do 1.1x; has a spoken premise (bet/question/challenge); stream is 5h old (fresh)"
+   },
+   "live": {
+    "score": 0.55,
+    "why": "chat went 9.3x"
+   },
+   "script": {
+    "score": 0.35,
+    "why": "draft title: \"N3on At Playing GTA 6 🔥\"; no captions yet, writing blind"
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-18T22:36:41Z",
+  "council_why": "N3on's clip at 4:46:09 in 'PLAYING GTA 6 FOR THE FIRST TIME' has the highest chat spike and a strong premise, with N3on's clips showing significant growth in views.",
+  "post_utc": "2026-11-19 05:00",
+  "post_local": "Thu 12:00 AM ET",
+  "title": "N3on Plays GTA 6 For The First Time 🎮🔥",
+  "hook": "GTA 6 IS FINALLY HERE 🎮",
+  "context": "N3on loading into GTA 6 live on stream",
+  "take": "N3on finally got his hands on GTA 6, but chat was convinced it was fake until he actually loaded into the game.",
+  "summary": "N3on plays GTA 6 for the first time on his livestream after early access leaks.",
+  "tiktok_caption": "N3on finally got early access to play GTA 6 live on stream.",
+  "hashtags": [
+   "#shorts",
+   "#n3on",
+   "#gta6"
+  ],
+  "tags": [
+   "N3on",
+   "N3on GTA 6",
+   "GTA 6",
+   "GTA 6 early access",
+   "N3on gameplay",
+   "GTA 6 trailer",
+   "GTA 6 leak",
+   "N3on stream clips"
+  ],
+  "draft": false,
+  "writer": "gemini",
+  "description": "N3on plays GTA 6 for the first time on his livestream after early access leaks.\n\nFull stream by N3on: https://www.youtube.com/watch?v=I1l955pjhGQ&t=17169s\nGo support N3on, all credit to them.\n\n#shorts #n3on #gta6",
+  "key": "I1l955pjhGQ@572",
+  "permission": "official paid clipping program via his Discord (creatordb.app, 2026)",
+  "payoff": "Is GTA 6 actually going to live up to years of hype or will it flop?",
+  "script_source": "comments",
+  "upload_tags": [
+   "N3on",
+   "N3on GTA 6",
+   "GTA 6",
+   "GTA 6 early access",
+   "N3on gameplay",
+   "GTA 6 trailer",
+   "GTA 6 leak",
+   "N3on stream clips",
+   "n3on",
+   "neon",
+   "shorts"
+  ]
+ },
+ {
+  "id": 2,
+  "source": "twitch_ohnepixel",
+  "creator": "ohnePixel",
+  "platform": "twitch",
+  "video_id": "2932275268",
+  "video_title": "ohnePixel tries out the strip club's private dance in GTA 6",
+  "url": "https://www.twitch.tv/videos/2932275268?t=5h55m15s",
+  "moment": "5:55:15",
+  "start": 21295,
+  "end": 21325,
+  "rank": 74.88,
+  "signal": "Twitch clip, 154,050 views (35,205/h)",
+  "signals": [
+   "twitch clip"
+  ],
+  "quotes": [
+   "ohnePixel tries out the strip club's private dance in GTA 6"
+  ],
+  "stream_age_h": 4.4,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "fast",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": "beat"
+  },
+  "council": {
+   "trend": 0.15,
+   "study": 0.25,
+   "analytics": 0.76,
+   "live": 0.55,
+   "script": 0.35,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 0.15,
+    "why": "ohnePixel clips pull 0 views/hour this week"
+   },
+   "study": {
+    "score": 0.25,
+    "why": "top channels rarely break out with ohnePixel"
+   },
+   "analytics": {
+    "score": 0.76,
+    "why": "no track record for ohnePixel on our channel yet; has a spoken premise (bet/question/challenge); stream is 4h old (fresh)"
+   },
+   "live": {
+    "score": 0.55,
+    "why": "Twitch clip at 35,205/h"
+   },
+   "script": {
+    "score": 0.35,
+    "why": "draft title: \"ohnePixel Is Left Speechless 😱\"; no captions yet, writing blind"
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-18T22:36:41Z",
+  "council_why": "CaseOh's clip at 3:51:39 in 'Spiders Attacking & Chasing Caseoh Again! 😱😳🫣' has a high trend score and strong engagement, with CaseOh's clips spreading well and showing a visual-only premise.",
+  "post_utc": "2026-11-19 08:00",
+  "post_local": "Thu 03:00 AM ET",
+  "title": "ohnePixel Didn't See This Coming 😱",
+  "hook": "WAIT FOR IT",
+  "context": "ohnePixel live",
+  "take": "",
+  "summary": "ohnePixel live.",
+  "tiktok_caption": "ohnePixel reacts during a live stream.",
+  "hashtags": [
+   "#ohnepixel"
+  ],
+  "tags": [
+   "ohnepixel",
+   "ohnepixel clips",
+   "streamer clips"
+  ],
+  "draft": false,
+  "writer": "free",
+  "description": "ohnePixel live.\n\nFull stream by ohnePixel: https://www.twitch.tv/videos/2932275268?t=5h55m15s\nGo support ohnePixel, all credit to them.\n\n#ohnepixel #shorts",
+  "key": "2932275268@710",
+  "permission": "auto-added: trending on Twitch (clipping policy not checked)",
+  "payoff": "",
+  "script_source": "comments",
+  "upload_tags": [
+   "ohnepixel",
+   "ohnepixel clips",
+   "streamer clips",
+   "shorts"
+  ]
+ },
+ {
+  "id": 3,
+  "source": "plaqueboymax",
+  "creator": "PlaqueBoyMax",
+  "platform": "twitch_clip",
+  "video_id": "BoxyBoredWoodcockBCouch-ZvVAQABUqoHdIjEc",
+  "video_title": "IN THE BOOTH WITH HAWSA & BNYX!",
+  "url": "https://www.twitch.tv/plaqueboymax/clip/BoxyBoredWoodcockBCouch-ZvVAQABUqoHdIjEc",
+  "moment": "0:00",
+  "start": 0,
+  "end": 59.9,
+  "rank": 49.01,
+  "signal": "Twitch clip, 1,770 views (75/h)",
+  "signals": [
+   "twitch clip"
+  ],
+  "quotes": [
+   "IN THE BOOTH WITH HAWSA & BNYX!"
+  ],
+  "stream_age_h": 23.7,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 2,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": "caption_words"
+  },
+  "council": {
+   "trend": 0.63,
+   "study": 0.25,
+   "analytics": 0.84,
+   "live": 0.1,
+   "script": 0.6,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 0.63,
+    "why": "Max clips pull 120 views/hour this week, up 240% since the last scan"
+   },
+   "study": {
+    "score": 0.25,
+    "why": "top channels rarely break out with Max"
+   },
+   "analytics": {
+    "score": 0.84,
+    "why": "no track record for Max on our channel yet; Twitch clip moments do 2.0x; no clear premise, may be visual-only; news people search for (guest HAWSA BNYX), like our only 50+ view Short; stream is 24h old"
+   },
+   "live": {
+    "score": 0.1,
+    "why": "Twitch clip at 75/h"
+   },
+   "script": {
+    "score": 0.6,
+    "why": "draft title: \"Max: \"In the Booth With Hawsa & Bnyx\" 😱\"; no captions yet, writing blind"
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-18T22:36:41Z",
+  "council_why": "PlaqueBoyMax's clip at 0:00 in 'IN THE BOOTH WITH HAWSA & BNYX!' has a strong trend score and a clear premise, with Max's clips showing significant growth in views and a track record of success.",
+  "post_utc": "2026-11-19 00:00",
+  "post_local": "Wed 07:00 PM ET",
+  "title": "Max Goes In The Booth With BNYX 🎤🔥",
+  "hook": "IN THE BOOTH WITH BNYX 🎙️",
+  "context": "PlaqueBoyMax in the studio cooked up with BNYX and Hawsa",
+  "take": "PlaqueBoyMax pulled up to a studio session with Hawsa and BNYX, and they started cooking a track right on stream.",
+  "summary": "PlaqueBoyMax records in the studio booth alongside producers Hawsa and BNYX on stream.",
+  "tiktok_caption": "PlaqueBoyMax hits the studio booth with Hawsa and BNYX.",
+  "hashtags": [
+   "#shorts",
+   "#plaqueboymax",
+   "#bnyx"
+  ],
+  "tags": [
+   "PlaqueBoyMax",
+   "Max",
+   "BNYX",
+   "Hawsa",
+   "PlaqueBoyMax BNYX",
+   "Max studio session",
+   "PlaqueBoyMax music",
+   "streamer clips"
+  ],
+  "draft": false,
+  "writer": "gemini",
+  "description": "PlaqueBoyMax records in the studio booth alongside producers Hawsa and BNYX on stream.\n\nFull stream by PlaqueBoyMax: https://www.twitch.tv/plaqueboymax/clip/BoxyBoredWoodcockBCouch-ZvVAQABUqoHdIjEc\nGo support PlaqueBoyMax, all credit to them.\n\n#shorts #plaqueboymax #bnyx",
+  "key": "BoxyBoredWoodcockBCouch-ZvVAQABUqoHdIjEc@0",
+  "permission": "fan clipping is widespread and tolerated; no official program checked (Nov 2026)",
+  "payoff": "Does Max actually have potential as a artist or should he stick to streaming?",
+  "script_source": "comments",
+  "upload_tags": [
+   "PlaqueBoyMax",
+   "Max",
+   "BNYX",
+   "Hawsa",
+   "PlaqueBoyMax BNYX",
+   "Max studio session",
+   "PlaqueBoyMax music",
+   "streamer clips",
+   "plaqueboymax",
+   "plaque boy max",
+   "shorts"
+  ]
+ }
+]
