@@ -404,12 +404,42 @@ def _gemini(prompt):
     raise last or RuntimeError("Gemini gave no answer")
 
 
+GROQ_PREFER = ("llama-4", "llama-3.3-70b", "gpt-oss-120b", "qwen", "llama-3.1-70b", "gpt-oss", "llama")
+
+
+def groq_models(key):
+    """Groq's live chat models, best first. Groq retires model names often (Nov 18 2026: the old default
+    llama-3.3-70b-versatile answered 404), so pick from what the key can actually use."""
+    try:
+        r = requests.get("https://api.groq.com/openai/v1/models", headers={"Authorization": f"Bearer {key}"}, timeout=30)
+        r.raise_for_status()
+        ids = [m["id"] for m in r.json().get("data", []) if m.get("active", True)]
+    except Exception as e:
+        print(f"  Groq model list failed ({type(e).__name__}); trying the default")
+        return []
+    ids = [i for i in ids if not re.search(r"whisper|tts|guard|embed|vision|audio|playai|compound", i)]
+    rank = lambda i: next((n for n, p in enumerate(GROQ_PREFER) if p in i), len(GROQ_PREFER))
+    return sorted(ids, key=rank)[:3]
+
+
 def _groq(prompt):
     key = os.environ.get("GROQ_API_KEY")
     if not key:
         return None
-    return _openai_compat("https://api.groq.com/openai/v1/chat/completions", key,
-                          os.environ.get("GROQ_MODEL", "llama-3.3-70b-versatile"), prompt)
+    url = "https://api.groq.com/openai/v1/chat/completions"
+    pinned = os.environ.get("GROQ_MODEL")
+    models = [pinned] if pinned else (groq_models(key) or ["llama-3.3-70b-versatile"])
+    print(f"Groq models: {', '.join(models)}")
+    last = None
+    for model in models:
+        try:
+            out = _openai_compat(url, key, model, prompt)
+            print(f"Groq answered with {model}.")
+            return out
+        except Exception as e:  # retired name (404), busy (429/503), timeout: next model
+            last = e
+            print(f"  Groq {model}: {type(e).__name__}: {str(e)[:120]}")
+    raise last or RuntimeError("Groq gave no answer")
 
 
 def _api(prompt):
