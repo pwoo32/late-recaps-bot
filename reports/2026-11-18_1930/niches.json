@@ -1,0 +1,126 @@
+[
+ {
+  "niche": "streamer",
+  "label": "Streamer clips (Twitch/Kick/YouTube live)",
+  "videos": 125,
+  "channels": 103,
+  "median_vph_top25": 16720.8,
+  "median_views": 100728,
+  "p75_outlier": 27.49,
+  "small_channel_hit_rate": 0.427,
+  "top3_channel_share": 0.243,
+  "median_engagement": 0.0188,
+  "shorts_rpm": 0.02,
+  "campaign_cpm": 2.0,
+  "reuse_risk": 0.35,
+  "est_earn_per_clip_shorts": 2.01,
+  "est_earn_per_clip_campaign": 201.46,
+  "payout_per_1k": 2.02,
+  "top_videos": [
+   {
+    "id": "2BRL4ALMCyA",
+    "url": "https://www.youtube.com/shorts/2BRL4ALMCyA",
+    "title": "iSHOWSPEED x GTA 6 | OFFICIAL TRAILER",
+    "channel_id": "UCWsDFcIhY2DBi3GB5uykGXA",
+    "channel": "IShowSpeed",
+    "published": "2026-11-16T22:44:43Z",
+    "tags": [
+     "ishowspeed"
+    ],
+    "seconds": 67,
+    "views": 3146261,
+    "hours": 44.8,
+    "views_per_hour": 70299.7,
+    "engagement": 0.0273,
+    "channel_subs": 62600000,
+    "outlier": 0.05
+   },
+   {
+    "id": "UntTF_ioRXA",
+    "url": "https://www.youtube.com/shorts/UntTF_ioRXA",
+    "title": "Jamal Is NOT SURVIVING When He Gets Home \ud83d\udc80\ud83d\udc80",
+    "channel_id": "UCjcZfaPzpgifneY4aZgLGrQ",
+    "channel": "deagzzzshorts",
+    "published": "2026-11-15T21:41:25Z",
+    "tags": [],
+    "seconds": 28,
+    "views": 4070345,
+    "hours": 69.8,
+    "views_per_hour": 58306.1,
+    "engagement": 0.0258,
+    "channel_subs": 6970000,
+    "outlier": 0.58
+   },
+   {
+    "id": "_AY5krZErfg",
+    "url": "https://www.youtube.com/shorts/_AY5krZErfg",
+    "title": "GTA 6 MARATHON | Official Trailer",
+    "channel_id": "UCvCfpQXRXdJdL07pzTIA6Cw",
+    "channel": "Kai Cenat Live",
+    "published": "2026-11-16T20:33:01Z",
+    "tags": [
+     "Kai Cenat",
+     "Kai Cenat Live",
+     "Kai Cenat Livestream",
+     "Kai Live",
+     "Kai Cenat Funny"
+    ],
+    "seconds": 179,
+    "views": 2502776,
+    "hours": 46.9,
+    "views_per_hour": 53307.3,
+    "engagement": 0.0314,
+    "channel_subs": 16800000,
+    "outlier": 0.15
+   },
+   {
+    "id": "wJAdj1H0O7s",
+    "url": "https://www.youtube.com/shorts/wJAdj1H0O7s",
+    "title": "IShowSpeed Impressed Barack Obama After Revealing He Can Speak Indonesian! \ud83d\udd25\ud83e\udd2f",
+    "channel_id": "UCpMb_pfabjR1BuUMebtM4KQ",
+    "channel": "DaPlug",
+    "published": "2026-11-16T19:43:50Z",
+    "tags": [],
+    "seconds": 22,
+    "views": 2452249,
+    "hours": 47.8,
+    "views_per_hour": 51334.8,
+    "engagement": 0.0357,
+    "channel_subs": 1790000,
+    "outlier": 1.37
+   },
+   {
+    "id": "cMSoSbbkxss",
+    "url": "https://www.youtube.com/shorts/cMSoSbbkxss",
+    "title": "Kai Cenat Was Hopping Fences For His GTA 6 Trailer! \ud83d\ude2d\ud83d\udc80",
+    "channel_id": "UCvQ35id6_d0uUNUzPqAWqvg",
+    "channel": "Succesful Celebrity",
+    "published": "2026-11-17T22:23:45Z",
+    "tags": [
+     "Kai Cenat",
+     "Kai",
+     "Cenat",
+     "ImKaiCenat",
+     "AMP",
+     "Kai Cenat Live",
+     "Kai Cenat Funny",
+     "Kai Cenat Funny Moments"
+    ],
+    "seconds": 12,
+    "views": 1050902,
+    "hours": 21.1,
+    "views_per_hour": 49795.3,
+    "engagement": 0.0237,
+    "channel_subs": 3560000,
+    "outlier": 0.3
+   }
+  ],
+  "score_parts": {
+   "demand": 1.0,
+   "money": 1.0,
+   "breakout": 1.0,
+   "safety": 0.65
+  },
+  "score": 94.8
+ }
+]
