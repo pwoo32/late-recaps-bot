@@ -3127,3 +3127,88 @@ S3 Token -> Mel Inference...
 S3 Token -> Mel Inference...
   0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:01<00:01,  1.51s/it]100%|██████████| 2/2 [00:02<00:00,  1.48s/it]100%|██████████| 2/2 [00:02<00:00,  1.48s/it]
 WARNING: [twitch:vod] 2930971003: Unable to download JSON metadata: HTTP Error 403: Forbidden
+[streamer] searching: streamer clips
+[streamer] searching: kai cenat
+[streamer] searching: ishowspeed
+[streamer] searching: twitch clips
+Fetching stats for 188 videos
+Fetching subscriber counts for 98 channels
+Done. Report: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/2026-11-18_1740/report.md
+searching: streamer clips
+searching: kai cenat
+searching: ishowspeed
+searching: twitch clips
+60 candidate channels
+Done. Report: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/channels_streamer_2026-11-18_1740/report.md
+Done. Report: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/track_2026-11-18_1741.md  (quota used: 2)
+Looking for streamers going viral right now on Twitch and Kick...
+  trending: summit1g (twitch) best clip 2,534 views/h, 0 channels already clipping them
+  trending: Zoil (twitch) best clip 2,162 views/h, 0 channels already clipping them
+[ishowspeed] reading recent streams/videos
+  reading the room on "THE EYES OF GHANA (Full Film)" (chat replay, most replayed)
+    5 chat spikes
+  reading the room on "I JUST MET WITH PRESIDENT OBAMA" (chat replay, most replayed)
+[kai_cenat] reading recent streams/videos
+  17 Twitch clips from kaicenat
+[jynxzi] reading recent streams/videos
+  reading the room on "PUSHING LEGEND DIV IN R6" (chat replay, most replayed)
+    6 chat spikes
+  reading the room on "PUSHING LEGENDS DIV ON R6" (chat replay, most replayed)
+    6 chat spikes
+  20 Twitch clips from jynxzi
+[adin_ross] reading recent streams/videos
+  33 Kick clips from adinross
+[n3on] reading recent streams/videos
+  33 Kick clips from n3on
+[caseoh] reading recent streams/videos
+  18 Twitch clips from caseoh_
+[xqc] reading recent streams/videos
+  20 Twitch clips from xqc
+  39 Kick clips from xqc
+[lacy] reading recent streams/videos
+  20 Twitch clips from lacy
+[plaqueboymax] reading recent streams/videos
+  19 Twitch clips from plaqueboymax
+[theburntpeanut] reading recent streams/videos
+  18 Twitch clips from theburntpeanut
+[stableronaldo] reading recent streams/videos
+  20 Twitch clips from stableronaldo
+[twitch_caedrel] reading recent streams/videos
+  20 Twitch clips from caedrel
+[twitch_moonmoon] reading recent streams/videos
+  20 Twitch clips from moonmoon
+[twitch_dunlol] reading recent streams/videos
+  19 Twitch clips from dunlol
+[twitch_ziqoftw] reading recent streams/videos
+  20 Twitch clips from ziqoftw
+[twitch_coconutb] reading recent streams/videos
+  19 Twitch clips from coconutb
+[twitch_tfue] reading recent streams/videos
+  18 Twitch clips from tfue
+[twitch_summit1g] reading recent streams/videos
+  17 Twitch clips from summit1g
+[twitch_zoil] reading recent streams/videos
+  19 Twitch clips from zoil
+Clip council: 16 candidates, every agent votes...
+  picked Max at 0:00 (council 0.47): PlaqueBoyMax's clip from 'IN THE BOOTH WITH HAWSA & BNYX!' has a strong trend increase, a clear premise, and a high pote
+  picked N3on at 0:00 (council 0.48): N3on's clip 'What is bro doing' shows a significant trend increase and a fresh stream, which could drive views quickly.
+  picked Max at 0:00 (council 0.45): PlaqueBoyMax's clip from 'UNDERGROUND (nickatnite) VS MAINSTREAM (zias and b lou) AUX BATTLE! SE' has a clear premise, a
+Writing scripts...
+  [1] PlaqueBoyMax at 0:00: writing from comments
+  [2] N3on at 0:00: writing from comments
+  [3] PlaqueBoyMax at 0:00: writing from comments
+Gemini models: gemini-flash-latest, gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash
+  Gemini gemini-flash-latest: HTTP 503
+  Gemini gemini-flash-latest: HTTP 503
+  Gemini gemini-3.8-flash: HTTP 503
+  Gemini gemini-3.8-flash: HTTP 503
+  Gemini gemini-3.7-flash: HTTP 503
+  Gemini gemini-3.7-flash: HTTP 503
+  Gemini gemini-3.6-flash: HTTP 503
+  Gemini gemini-3.6-flash: HTTP 503
+Writer gemini failed (HTTPError: 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/openai/chat/completions).
+Scripts written by ollama.
+  [1] model title "PlaqueBoyMax Crashes Out After Hawsa Scores Again 😭" isn't backed by what's said (scores, verge, losing, game, another, critical); using the free writer
+  [2] model title "N3on Gets Early Access To GTA 6 😭" isn't backed by what's said (early, access, eagerly, awaiting, release, early, look, game); using the free writer
+  [3] model script uses a word moderation flags ("attack"); using the free writer
+Done. Queue: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-11-18_1741/queue.md  (quota used: 53)
