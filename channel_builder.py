@@ -1648,6 +1648,16 @@ TIKTOK_MIN_SECONDS = 9  # streamer clips that spread on TikTok run ~12-34s; unde
 
 
 TIKTOK_PER_DAY = 3        # drafts a day: on Nov 14, six posts in one day left the last three at 0-19 views
+# Account recovery (Nov 18): every post since that afternoon got 0-19 views, so no drafts through Nov 21 (ET), then
+# one a day through Nov 28, posted with no added sound. After that the normal limit applies.
+TIKTOK_PAUSE_UNTIL = "2026-11-22"
+TIKTOK_SLOW_UNTIL = "2026-11-29"
+
+
+def tiktok_daily_limit(now=None):
+    """Drafts allowed in 24h today: 0 while paused, 1 during the slow week, else TIKTOK_PER_DAY."""
+    today = (now or datetime.now(timezone.utc)).astimezone(LOCAL_TZ).date().isoformat()
+    return 0 if today < TIKTOK_PAUSE_UNTIL else 1 if today < TIKTOK_SLOW_UNTIL else TIKTOK_PER_DAY
 TIKTOK_SLOTS = (12, 15, 19, 21.5)  # ET posting times, about 3 hours apart, in the noon and evening windows
 
 
@@ -1707,9 +1717,12 @@ def post_tiktok(qdir, queue, clips, tt):
         # hold must not prevent an approved, rendered clip from reaching TikTok.
         if c.get("tiktok_id") or not path.exists():
             continue
-        recent = recent_tiktok()
-        if len(recent) >= TIKTOK_PER_DAY:
-            print(f"  TikTok: {len(recent)} drafts already in the last 24h (limit {TIKTOK_PER_DAY}); the rest wait for tomorrow.")
+        recent, limit = recent_tiktok(), tiktok_daily_limit()
+        if limit == 0:
+            print(f"  TikTok paused until {TIKTOK_PAUSE_UNTIL} so the account can recover; no drafts sent.")
+            break
+        if len(recent) >= limit:
+            print(f"  TikTok: {len(recent)} drafts already in the last 24h (limit {limit}); the rest wait for tomorrow.")
             break
         if c.get("video_id") and any(v == c["video_id"] for v, _ in recent):
             print(f"  TikTok skipped for [{c['id']}]: another clip from this stream went out in the last 24h "
@@ -1739,7 +1752,8 @@ def post_tiktok(qdir, queue, clips, tt):
             pending += 1
         print(f"  TikTok: [{c['id']}] " + ("posted" if tt.get("mode") == "direct" else
               "draft in your TikTok inbox. Post it at " +
-              datetime.fromisoformat(c["tiktok_post_at"]).strftime("%a %I:%M %p ET") + " with this caption:") +
+              datetime.fromisoformat(c["tiktok_post_at"]).strftime("%a %I:%M %p ET") +
+              (", no added sound," if tiktok_daily_limit() == 1 else "") + " with this caption:") +
               f"\n    {c['tiktok_caption']}")
 
 
