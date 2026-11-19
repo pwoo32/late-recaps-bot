@@ -162,3 +162,24 @@ Traceback (most recent call last):
   File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/googleapiclient/http.py", line 1018, in execute
     raise HttpError(resp, content, uri=self.uri)
 googleapiclient.errors.HttpError: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/commentThreads?part=snippet%2Creplies&allThreadsRelatedToChannelId=UCbK9EejOk5UVzI_l8F3f8kA&maxResults=100&order=time&textFormat=plainText&alt=json returned "Request had insufficient authentication scopes.". Details: "[{'message': 'Insufficient Permission', 'domain': 'global', 'reason': 'insufficientPermissions'}]">
+Saved sign-in activity_token.json has expired. Run `python channel_activity_agent.py auth` again.
+Late Recaps: last public Tue Nov 17 12:00 AM ET, 0 scheduled.
+  ALERT: Channel has gone quiet: last public Short Tue Nov 17 12:00 AM ET (47h ago).
+  ALERT: Nothing is scheduled to go public. Check builder.log / the latest reports/builder/daily_*/HOLD.md.
+Traceback (most recent call last):
+  File "/home/runner/work/late-recaps-bot/late-recaps-bot/channel_activity_agent.py", line 566, in <module>
+    main()
+  File "/home/runner/work/late-recaps-bot/late-recaps-bot/channel_activity_agent.py", line 562, in main
+    {"run": cmd_run, "auth": cmd_auth, "post": cmd_post}[args.command](args)
+  File "/home/runner/work/late-recaps-bot/late-recaps-bot/channel_activity_agent.py", line 498, in cmd_run
+    comments, mine_on = new_comments(yt, ch["id"], since - timedelta(hours=1), titles, state)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/late-recaps-bot/late-recaps-bot/channel_activity_agent.py", line 214, in new_comments
+    resp = yt.commentThreads().list(**kw).execute()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/googleapiclient/_helpers.py", line 130, in positional_wrapper
+    return wrapped(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/googleapiclient/http.py", line 1018, in execute
+    raise HttpError(resp, content, uri=self.uri)
+googleapiclient.errors.HttpError: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/commentThreads?part=snippet%2Creplies&allThreadsRelatedToChannelId=UCbK9EejOk5UVzI_l8F3f8kA&maxResults=100&order=time&textFormat=plainText&alt=json returned "Request had insufficient authentication scopes.". Details: "[{'message': 'Insufficient Permission', 'domain': 'global', 'reason': 'insufficientPermissions'}]">

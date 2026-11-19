@@ -1998,8 +1998,8 @@
   "@TheDiaryOfACEO": "UCGq-a57w-aPwyi3pW7XLiHw"
  },
  "review": {
-  "at": "2026-11-19 02:09",
-  "report": "/home/runner/work/late-recaps-bot/late-recaps-bot/reports/review_2026-11-19_0209/report.md",
+  "at": "2026-11-19 04:11",
+  "report": "/home/runner/work/late-recaps-bot/late-recaps-bot/reports/review_2026-11-19_0411/report.md",
   "lessons": {
    "titles": [
     "Creator name first, then a bet or question in plain verbs, and never the result. Add a named guest or celebrity when one exists.",
@@ -2027,7 +2027,7 @@
   "feed_tested": "1 of 5",
   "make_more": [
    "Twitch clip (found by): 7 clips, 3 got a real feed test, typically 7 views, 2.0x our typical clip, 29% stayed past the swipe",
-   "quote title (Creator: \"line\") (title): 6 clips, 3 got a real feed test, typically 7 views, 1.9x our typical clip, 32% stayed past the swipe",
+   "quote title (Creator: \"line\") (title): 6 clips, 3 got a real feed test, typically 7 views, 1.9x our typical clip, 33% stayed past the swipe",
    "Jynxzi (creator): 13 clips, 4 got a real feed test, typically 5 views, 1.6x our typical clip, 42% stayed past the swipe",
    "20-30s (length): 18 clips, 5 got a real feed test, typically 3 views, 1.4x our typical clip, 32% stayed past the swipe",
    "Stable Ronaldo (creator): 3 clips, 1 got a real feed test, typically 4 views, 1.3x our typical clip, 25% stayed past the swipe",
@@ -2052,13 +2052,13 @@
   ],
   "source_score": {
    "stableronaldo": 1.25,
-   "jynxzi": 1.6,
+   "jynxzi": 1.61,
    "kai_cenat": 0.51,
    "caseoh": 1.55,
    "xqc": 0.75,
    "ishowspeed": 1.19,
    "n3on": 0.75,
-   "adin_ross": 0.9
+   "adin_ross": 0.89
   },
   "hour_score": {
    "18": 0.73,
@@ -2067,19 +2067,19 @@
    "6": 1.01,
    "8": 1.1,
    "17": 1.24,
-   "21": 1.17,
+   "21": 1.16,
    "4": 0.7,
    "2": 0.71
   },
   "levers": {
    "found by": {
-    "Twitch clip": 1.97,
-    "chat spike": 1.11,
+    "Twitch clip": 1.96,
+    "chat spike": 1.12,
     "viewer timestamp comments": 0.79
    },
    "stream age at post": {
     "over 48h": 1.07,
-    "12-48h": 1.01,
+    "12-48h": 1.02,
     "under 12h": 0.87
    }
   },
@@ -2115,9 +2115,9 @@
    },
    {
     "title": "Jynxzi Didn't See This Coming At Biggest Announcement Ever \ud83d\ude31",
-    "views": 20,
+    "views": 23,
     "avg_viewed": 42.12,
-    "stayed": 0.5,
+    "stayed": 0.43478260869565216,
     "verdict": null
    },
    {
