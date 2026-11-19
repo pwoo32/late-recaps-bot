@@ -1,19 +1,19 @@
 {
  "source_weight": {
-  "jynxzi": 2.99,
+  "jynxzi": 2.79,
   "kai_cenat": 0.31,
-  "ishowspeed": 1.98,
-  "stableronaldo": 2.96,
-  "caseoh": 2.84
+  "ishowspeed": 1.99,
+  "stableronaldo": 2.98,
+  "caseoh": 2.9
  },
  "slot_weight": {
-  "2": 1.42,
+  "2": 1.25,
   "21": 0.31,
   "8": 1.49,
   "4": 0.49,
   "22": 2.49,
   "17": 1.99,
-  "6": 2.98,
+  "6": 2.99,
   "1": 1.49
  },
  "used_moments": [
@@ -145,7 +145,10 @@
   "SwissBenevolentRhinocerosRedCoat-_qn39IFUSFPG0nep@0",
   "9H6yfvaT7I8@769",
   "2932194507@101",
-  "InventiveStylishSwanTBCheesePull-bpUxg33iLnxUyEOG@0"
+  "InventiveStylishSwanTBCheesePull-bpUxg33iLnxUyEOG@0",
+  "qSyo5d-dVzA@1017",
+  "qSyo5d-dVzA@240",
+  "2932442046@548"
  ],
  "queued": {
   "L6S9Vb3RLy4@186": {
@@ -2070,6 +2073,82 @@
     "starts",
     "uncontrollably"
    ]
+  },
+  "qSyo5d-dVzA@1017": {
+   "title": "Speed Tries Playing GTA 6 Early Access \ud83d\ude31",
+   "source": "ishowspeed",
+   "post_utc": "2026-11-19 22:00",
+   "recipe": {
+    "length": 30,
+    "punch": 0.14,
+    "beat": "normal",
+    "caption_words": 3,
+    "gap": 0.6,
+    "layout": "face34",
+    "test": null
+   },
+   "council": {
+    "trend": 0.96,
+    "study": 0.96,
+    "analytics": 0.53,
+    "live": 0.45,
+    "script": 0.35,
+    "audience": 0.5
+   }
+  },
+  "qSyo5d-dVzA@240": {
+   "title": "Speed Reacts To First Look At GTA 6 \ud83d\ude2d",
+   "source": "ishowspeed",
+   "post_utc": "2026-11-20 05:00",
+   "recipe": {
+    "length": 30,
+    "punch": 0.14,
+    "beat": "slow",
+    "caption_words": 3,
+    "gap": 0.6,
+    "layout": "face34",
+    "test": "beat"
+   },
+   "council": {
+    "trend": 0.96,
+    "study": 0.96,
+    "analytics": 0.53,
+    "live": 0.43,
+    "script": 0.35,
+    "audience": 0.5
+   }
+  },
+  "2932442046@548": {
+   "title": "Ronaldo Has An Instant Reaction On Stream \ud83d\ude2d",
+   "source": "stableronaldo",
+   "post_utc": "2026-11-20 01:00",
+   "recipe": {
+    "length": 30,
+    "punch": 0.14,
+    "beat": "normal",
+    "caption_words": 2,
+    "gap": 0.6,
+    "layout": "face34",
+    "test": "caption_words"
+   },
+   "council": {
+    "trend": 0.58,
+    "study": 0.25,
+    "analytics": 0.49,
+    "live": 0.13,
+    "script": 0.35,
+    "audience": 0.5
+   },
+   "video_id": "Cl8ZNmNqzpk",
+   "words": [
+    "cannot",
+    "damnnn",
+    "during",
+    "even",
+    "gyat",
+    "instant",
+    "speechless"
+   ]
   }
  },
  "channel": "UCbK9EejOk5UVzI_l8F3f8kA",
@@ -2242,8 +2321,8 @@
  "own_results": [
   {
    "title": "CaseOh Get Jump Scared Mid Game \ud83d\ude2d",
-   "views": 12,
-   "lift": 12.0
+   "views": 13,
+   "lift": 13.0
   },
   {
    "title": "Ronaldo Locks In During Exterminauts Interview \ud83d\udc80",
@@ -2396,7 +2475,6 @@
   "mode": "inbox"
  },
  "chat_spikes": {
-  "IkhjzYsvCmw": [],
   "SZA_mBnRNNc": [
    {
     "t": 1174,
@@ -3868,7 +3946,77 @@
     ]
    }
   ],
-  "k3esjgmbphQ": []
+  "k3esjgmbphQ": [],
+  "qSyo5d-dVzA": [],
+  "H-4PyJlhI9g": [
+   {
+    "t": 24214,
+    "ratio": 4.0,
+    "msgs": 194,
+    "sample": []
+   },
+   {
+    "t": 7929,
+    "ratio": 4.0,
+    "msgs": 249,
+    "sample": [
+     "Lmaoo ",
+     "Lmao ",
+     "wtf",
+     "BRO YOU PLAYING THIS LIKE FORTNITE!!!!",
+     "Bro"
+    ]
+   },
+   {
+    "t": 11984,
+    "ratio": 4.0,
+    "msgs": 87,
+    "sample": [
+     "Ayoo ",
+     "bro i just came",
+     "W",
+     "Yo ",
+     "yoooooo"
+    ]
+   },
+   {
+    "t": 5759,
+    "ratio": 3.7,
+    "msgs": 94,
+    "sample": [
+     "A yo",
+     "w",
+     "holy GOONER",
+     "bro wtf",
+     "Ww"
+    ]
+   },
+   {
+    "t": 9684,
+    "ratio": 3.7,
+    "msgs": 138,
+    "sample": [
+     "lmao",
+     "Dude wtf",
+     "lmaoo",
+     "Bro just went flying",
+     "LMAO"
+    ]
+   },
+   {
+    "t": 2264,
+    "ratio": 3.7,
+    "msgs": 71,
+    "sample": [
+     "W",
+     "W",
+     "W",
+     "Ww",
+     "W"
+    ]
+   }
+  ],
+  "VZqAPdUvqnQ": []
  },
  "edit": {
   "stats": {

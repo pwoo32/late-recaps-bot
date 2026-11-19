@@ -1,0 +1,115 @@
+[
+ {
+  "niche": "streamer",
+  "label": "Streamer clips (Twitch/Kick/YouTube live)",
+  "videos": 135,
+  "channels": 103,
+  "median_vph_top25": 27883.1,
+  "median_views": 95314,
+  "p75_outlier": 24.67,
+  "small_channel_hit_rate": 0.37,
+  "top3_channel_share": 0.391,
+  "median_engagement": 0.0177,
+  "shorts_rpm": 0.02,
+  "campaign_cpm": 2.0,
+  "reuse_risk": 0.35,
+  "est_earn_per_clip_shorts": 1.91,
+  "est_earn_per_clip_campaign": 190.63,
+  "payout_per_1k": 2.02,
+  "top_videos": [
+   {
+    "id": "JEaW9KnTijQ",
+    "url": "https://www.youtube.com/shorts/JEaW9KnTijQ",
+    "title": "iShowSpeed Finds A HULK-LIKE MONSTER In GTA 6 \ud83d\ude31",
+    "channel_id": "UCd09ztChTkJ9dlY6RLawSog",
+    "channel": "Speedy Boykins",
+    "published": "2026-11-19T11:17:49Z",
+    "tags": [
+     "ishowspeed",
+     "live speedy",
+     "speedy boykins"
+    ],
+    "seconds": 129,
+    "views": 1409345,
+    "hours": 8.3,
+    "views_per_hour": 169977.6,
+    "engagement": 0.0101,
+    "channel_subs": 2800000,
+    "outlier": 0.5
+   },
+   {
+    "id": "1wzzrOvl_Jg",
+    "url": "https://www.youtube.com/shorts/1wzzrOvl_Jg",
+    "title": "iShowSpeed\u2019s First Look At GTA 6",
+    "channel_id": "UCWsDFcIhY2DBi3GB5uykGXA",
+    "channel": "IShowSpeed",
+    "published": "2026-11-18T17:49:41Z",
+    "tags": [],
+    "seconds": 30,
+    "views": 2817746,
+    "hours": 25.8,
+    "views_per_hour": 109383.5,
+    "engagement": 0.0383,
+    "channel_subs": 62900000,
+    "outlier": 0.04
+   },
+   {
+    "id": "Z7IMc6VYluI",
+    "url": "https://www.youtube.com/shorts/Z7IMc6VYluI",
+    "title": "Rakai Asks Kai Cenat For Help Since He Is Struggling To Play GTA 6! \ud83d\udc80\ud83d\ude2d",
+    "channel_id": "UCpMb_pfabjR1BuUMebtM4KQ",
+    "channel": "DaPlug",
+    "published": "2026-11-19T04:17:29Z",
+    "tags": [],
+    "seconds": 26,
+    "views": 857124,
+    "hours": 15.3,
+    "views_per_hour": 56032.5,
+    "engagement": 0.0243,
+    "channel_subs": 1790000,
+    "outlier": 0.48
+   },
+   {
+    "id": "2BRL4ALMCyA",
+    "url": "https://www.youtube.com/shorts/2BRL4ALMCyA",
+    "title": "iSHOWSPEED x GTA 6 | OFFICIAL TRAILER",
+    "channel_id": "UCWsDFcIhY2DBi3GB5uykGXA",
+    "channel": "IShowSpeed",
+    "published": "2026-11-16T22:44:43Z",
+    "tags": [
+     "ishowspeed"
+    ],
+    "seconds": 67,
+    "views": 3683338,
+    "hours": 68.8,
+    "views_per_hour": 53503.4,
+    "engagement": 0.0242,
+    "channel_subs": 62900000,
+    "outlier": 0.06
+   },
+   {
+    "id": "wJAdj1H0O7s",
+    "url": "https://www.youtube.com/shorts/wJAdj1H0O7s",
+    "title": "IShowSpeed Impressed Barack Obama After Revealing He Can Speak Indonesian! \ud83d\udd25\ud83e\udd2f",
+    "channel_id": "UCpMb_pfabjR1BuUMebtM4KQ",
+    "channel": "DaPlug",
+    "published": "2026-11-16T19:43:50Z",
+    "tags": [],
+    "seconds": 22,
+    "views": 3673714,
+    "hours": 71.9,
+    "views_per_hour": 51124.8,
+    "engagement": 0.0363,
+    "channel_subs": 1790000,
+    "outlier": 2.05
+   }
+  ],
+  "score_parts": {
+   "demand": 1.0,
+   "money": 1.0,
+   "breakout": 1.0,
+   "safety": 0.65
+  },
+  "score": 94.8
+ }
+]

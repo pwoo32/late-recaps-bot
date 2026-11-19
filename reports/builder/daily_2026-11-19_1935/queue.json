@@ -1,0 +1,332 @@
+[
+ {
+  "id": 1,
+  "source": "ishowspeed",
+  "creator": "IShowSpeed",
+  "platform": "youtube",
+  "video_id": "qSyo5d-dVzA",
+  "video_title": "🔴PLAYING GTA 6 EARLY ACCESS GAMEPLAY GET IN HERE!",
+  "url": "https://www.youtube.com/watch?v=qSyo5d-dVzA&t=30530s",
+  "moment": "8:28:50",
+  "start": 30510,
+  "end": 30540,
+  "rank": 193.82,
+  "signal": "18 timestamp comments, 673 likes",
+  "signals": [
+   "comments"
+  ],
+  "quotes": [
+   "bro is cooked if youtube sees this edit: KIDS PLS DONT CLICK THE BLUE BUTTON PLS AND THANKS FOR THE 29 LIKES",
+   "bro",
+   "this is whay u looking for"
+  ],
+  "stream_age_h": 6.5,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": null
+  },
+  "council": {
+   "trend": 0.96,
+   "study": 0.96,
+   "analytics": 0.53,
+   "live": 0.45,
+   "script": 0.35,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 0.96,
+    "why": "Speed clips pull 770,506 views/hour this week, up 80% since the last scan; matches what's viral now: gta"
+   },
+   "study": {
+    "score": 0.96,
+    "why": "6 of the top channels' breakout Shorts are Speed clips; Speed is in 78 of their recent titles"
+   },
+   "analytics": {
+    "score": 0.53,
+    "why": "Speed clips spread 1.2x our typical clip; viewer timestamp comments moments do 0.8x; no clear premise, may be visual-only; stream is 6h old (fresh)"
+   },
+   "live": {
+    "score": 0.45,
+    "why": "18 timestamp comments, 673 likes"
+   },
+   "script": {
+    "score": 0.35,
+    "why": "draft title: \"Speed: Playing GTA 6 Early Access Gameplay GET IN Here 😱\"; no captions yet, writing blind"
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-19T19:35:55Z",
+  "council_why": "IShowSpeed's GTA 6 gameplay reaction is highly relevant to current trends, with strong analytics and a fresh stream.",
+  "post_utc": "2026-11-19 22:00",
+  "post_local": "Thu 05:00 PM ET",
+  "title": "Speed Tries Playing GTA 6 Early Access 😱",
+  "hook": "GTA 6 EARLY ACCESS IS CRAZY",
+  "context": "Speed loads into early access GTA 6 gameplay",
+  "take": "Speed claimed he got early access to GTA 6, but chat knew something was off the second the stream started running.",
+  "summary": "Speed streams what he claims to be GTA 6 early access gameplay to his viewers.",
+  "tiktok_caption": "Speed plays GTA 6 early access gameplay on stream",
+  "hashtags": [
+   "#shorts",
+   "#ishowspeed",
+   "#gta6"
+  ],
+  "tags": [
+   "ishowspeed",
+   "speed",
+   "gta 6",
+   "gta 6 gameplay",
+   "speed gta 6",
+   "gta 6 early access",
+   "streamer clips",
+   "funny"
+  ],
+  "draft": false,
+  "writer": "gemini",
+  "description": "Speed streams what he claims to be GTA 6 early access gameplay to his viewers.\n\nFull stream by IShowSpeed: https://www.youtube.com/watch?v=qSyo5d-dVzA&t=30530s\nGo support IShowSpeed, all credit to them.\n\n#shorts #ishowspeed #gta6 #speed",
+  "key": "qSyo5d-dVzA@1017",
+  "permission": "fan clipping is widespread and tolerated; no official paid program found (Oct 2026)",
+  "payoff": "Is Speed actually playing GTA 6 or is he just trolling the whole stream?",
+  "script_source": "comments",
+  "upload_tags": [
+   "ishowspeed",
+   "speed",
+   "gta 6",
+   "gta 6 gameplay",
+   "speed gta 6",
+   "gta 6 early access",
+   "streamer clips",
+   "funny",
+   "shorts"
+  ]
+ },
+ {
+  "id": 2,
+  "source": "ishowspeed",
+  "creator": "IShowSpeed",
+  "platform": "youtube",
+  "video_id": "qSyo5d-dVzA",
+  "video_title": "🔴PLAYING GTA 6 EARLY ACCESS GAMEPLAY GET IN HERE!",
+  "url": "https://www.youtube.com/watch?v=qSyo5d-dVzA&t=7221s",
+  "moment": "2:00:21",
+  "start": 7201,
+  "end": 7231,
+  "rank": 51.18,
+  "signal": "4 timestamp comments, 93 likes",
+  "signals": [
+   "comments"
+  ],
+  "quotes": [
+   "damn",
+   "Waiting for this reaction"
+  ],
+  "stream_age_h": 6.5,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "slow",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": "beat"
+  },
+  "council": {
+   "trend": 0.96,
+   "study": 0.96,
+   "analytics": 0.53,
+   "live": 0.43,
+   "script": 0.35,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 0.96,
+    "why": "Speed clips pull 770,506 views/hour this week, up 80% since the last scan; matches what's viral now: gta"
+   },
+   "study": {
+    "score": 0.96,
+    "why": "6 of the top channels' breakout Shorts are Speed clips; Speed is in 78 of their recent titles"
+   },
+   "analytics": {
+    "score": 0.53,
+    "why": "Speed clips spread 1.2x our typical clip; viewer timestamp comments moments do 0.8x; no clear premise, may be visual-only; stream is 6h old (fresh)"
+   },
+   "live": {
+    "score": 0.43,
+    "why": "4 timestamp comments, 93 likes"
+   },
+   "script": {
+    "score": 0.35,
+    "why": "draft title: \"Speed: Playing GTA 6 Early Access Gameplay GET IN Here 😱\"; no captions yet, writing blind"
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-19T19:35:55Z",
+  "council_why": "IShowSpeed's GTA 6 gameplay reaction is highly relevant to current trends, with strong analytics and a fresh stream.",
+  "post_utc": "2026-11-20 05:00",
+  "post_local": "Fri 12:00 AM ET",
+  "title": "Speed Reacts To First Look At GTA 6 😭",
+  "hook": "SPEED SEEING GTA 6 GRAPHICS",
+  "context": "Speed checks out GTA 6 footage on stream",
+  "take": "Speed spent half the stream hyping up his first look at GTA 6, and his immediate reaction did not disappoint.",
+  "summary": "Speed gives his live reaction to first look gameplay footage of GTA 6.",
+  "tiktok_caption": "Speed reacts to GTA 6 gameplay live on stream",
+  "hashtags": [
+   "#shorts",
+   "#ishowspeed",
+   "#gta6"
+  ],
+  "tags": [
+   "ishowspeed",
+   "speed",
+   "gta 6",
+   "speed reaction",
+   "speed gta 6",
+   "gta 6 trailer",
+   "streamer clips",
+   "funny moments"
+  ],
+  "draft": false,
+  "writer": "gemini",
+  "description": "Speed gives his live reaction to first look gameplay footage of GTA 6.\n\nFull stream by IShowSpeed: https://www.youtube.com/watch?v=qSyo5d-dVzA&t=7221s\nGo support IShowSpeed, all credit to them.\n\n#shorts #ishowspeed #gta6 #speed",
+  "key": "qSyo5d-dVzA@240",
+  "permission": "fan clipping is widespread and tolerated; no official paid program found (Oct 2026)",
+  "payoff": "Did this live reaction live up to all the hype Speed built up?",
+  "script_source": "comments",
+  "upload_tags": [
+   "ishowspeed",
+   "speed",
+   "gta 6",
+   "speed reaction",
+   "speed gta 6",
+   "gta 6 trailer",
+   "streamer clips",
+   "funny moments",
+   "shorts"
+  ]
+ },
+ {
+  "id": 3,
+  "source": "stableronaldo",
+  "creator": "Stable Ronaldo",
+  "platform": "twitch",
+  "video_id": "2932442046",
+  "video_title": "GYAT DAMNNN",
+  "url": "https://www.twitch.tv/videos/2932442046?t=4h34m26s",
+  "moment": "4:34:26",
+  "start": 16446,
+  "end": 16476,
+  "rank": 61.84,
+  "signal": "Twitch clip, 11,837 views (518/h)",
+  "signals": [
+   "twitch clip"
+  ],
+  "quotes": [
+   "GYAT DAMNNN"
+  ],
+  "stream_age_h": 22.9,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 2,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": "caption_words"
+  },
+  "council": {
+   "trend": 0.58,
+   "study": 0.25,
+   "analytics": 0.49,
+   "live": 0.13,
+   "script": 0.35,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 0.58,
+    "why": "Ronaldo clips pull 464 views/hour this week, up 213% since the last scan"
+   },
+   "study": {
+    "score": 0.25,
+    "why": "top channels rarely break out with Ronaldo"
+   },
+   "analytics": {
+    "score": 0.49,
+    "why": "Ronaldo clips spread 1.2x our typical clip; no clear premise, may be visual-only; stream is 23h old"
+   },
+   "live": {
+    "score": 0.13,
+    "why": "Twitch clip at 518/h"
+   },
+   "script": {
+    "score": 0.35,
+    "why": "draft title: \"Ronaldo At Gyat Damnnn 😱\"; no captions yet, writing blind"
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-19T19:35:55Z",
+  "council_why": "Ronaldo's clips have shown significant growth in views, and while the premise is not clear, the visual content is likely to engage viewers.",
+  "post_utc": "2026-11-20 01:00",
+  "post_local": "Thu 08:00 PM ET",
+  "title": "Ronaldo Has An Instant Reaction On Stream 😭",
+  "hook": "RONALDO CANNOT EVEN SPEECHLESS",
+  "context": "Stable Ronaldo reacts during his live stream",
+  "take": "Stable Ronaldo was trying to keep his composure during stream, but one unexpected moment caught him completely off guard.",
+  "summary": "Stable Ronaldo loses his composure during a live stream moment.",
+  "tiktok_caption": "Stable Ronaldo has a hilarious reaction on live stream",
+  "hashtags": [
+   "#shorts",
+   "#stableronaldo",
+   "#memes"
+  ],
+  "tags": [
+   "stableronaldo",
+   "ronaldo",
+   "stable ronaldo funny moments",
+   "twitch clips",
+   "streamer clips",
+   "ronaldo stream",
+   "funny reactions"
+  ],
+  "draft": false,
+  "writer": "gemini",
+  "description": "Stable Ronaldo loses his composure during a live stream moment.\n\nFull stream by Stable Ronaldo: https://www.twitch.tv/videos/2932442046?t=4h34m26s\nGo support Stable Ronaldo, all credit to them.\n\n#shorts #stableronaldo #memes",
+  "key": "2932442046@548",
+  "permission": "fan clipping is widespread and tolerated; no official program checked (Nov 2026)",
+  "payoff": "Was Ronaldo overreacting here or was that reaction completely justified?",
+  "script_source": "comments",
+  "upload_tags": [
+   "stableronaldo",
+   "ronaldo",
+   "stable ronaldo funny moments",
+   "twitch clips",
+   "streamer clips",
+   "ronaldo stream",
+   "funny reactions",
+   "stable ronaldo",
+   "shorts"
+  ],
+  "youtube_id": "Cl8ZNmNqzpk"
+ }
+]
