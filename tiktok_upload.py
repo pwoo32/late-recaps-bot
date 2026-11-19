@@ -131,6 +131,9 @@ def caption(clip):
     own = (clip.get("tiktok_caption") or "").strip()
     own = re.sub(r"(?:\s#\w+)+\s*$", "", own).strip()
     names = {src.get("name", "").lower(), src.get("short", "").lower()} - {""}
+    import originality
+    if originality.stock_phrase(own) or re.search(r"\bAt [A-Za-z]+ing\b", own):
+        own = ""  # a stock or cut-off line: use the rebuilt caption
     if (len(own.split()) >= 7 and any(n in own.lower() for n in names) and not re.search(r"\b(?:in|a|the|of)\.$|reacts during a live stream", own)
             and src.get("name", "").lower() in own.lower()):
         copy = own

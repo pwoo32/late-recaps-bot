@@ -14,7 +14,8 @@ the guest named in it, and the game.
 import re
 import zlib
 
-from free_writer import EMOJI, STOP, risky
+from free_writer import EMOJI, STOP, risky, third_person
+import originality
 
 GENERIC_TAGS = {"#shorts", "#fyp", "#foryou", "#foryoupage", "#viral", "#trending", "#xyzbca", "#explore"}
 
@@ -98,7 +99,7 @@ def topic(clip, creator_words):
         t = max(parts, key=lambda p: len(p.split())) if parts else t
     pat = "|".join(map(re.escape, sorted(creator_words, key=len, reverse=True)))
     t = re.sub(rf"^(?:{pat})\b[\s:,'s-]*", "", t, flags=re.I).strip() if pat else t
-    t = _sentence_case(t)
+    t = third_person(_sentence_case(t))
     if len(t.split()) < 2 or not re.search(r"[a-z]{3}", t, re.I) or risky(t):
         return ""
     return trim_words(t, 12)
@@ -132,6 +133,16 @@ def mood(text):
     return fw_mood(text)[0]
 
 
+def _spoken(clip):
+    """A short line actually said in the clip (from the transcript or the writer's narrator note), or None."""
+    from free_writer import spoken_line
+    line, _ = spoken_line(clip.get("transcript") or "", max_words=9)
+    if not line:
+        m = re.search(r"says “([^”]{6,80})”", clip.get("take") or clip.get("narrator") or "")
+        line = m.group(1) if m else None
+    return None if not line or risky(line) else line[:80]
+
+
 def headline(clip, src):
     """The script's title with the creator's full (searchable) name, no emoji: 'Speed: "Oh I'm Not..."' ->
     'IShowSpeed: "Oh I'm Not...'."""
@@ -153,11 +164,19 @@ def build(clip, src):
                      clip.get("transcript") or ""])
     seed = f"{clip.get('video_id', '')}{clip.get('moment', '')}{clip.get('id', '')}"
     head = headline(clip, src)
+    about = topic(clip, creator_words)
+    # A stock line ("xQc Can't Believe What Just Happened") or a cut-off "X At Revealing MY NEW" tells a searcher
+    # nothing; lead with the topic, or the line that's said in the clip, instead.
+    said = _spoken(clip)
+    if originality.stock_phrase(head) or re.search(r"\bAt [A-Za-z]+ing\b", head):
+        head = (f"{full}: {about}" if about else f'{full}: "{said}"' if said else full)
+        about = "" if about and about in head else about
     if risky(head) or len(head.split()) < 2:
         head = full
-    about = topic(clip, creator_words)
     people = guests(clip, creator_words)
-    game_name, game_tag = game(text)
+    # the creator's own name never counts as a game or sport ("Stable Ronaldo" isn't football)
+    pat = "|".join(map(re.escape, sorted((w for w in creator_words if w), key=len, reverse=True)))
+    game_name, game_tag = game(re.sub(rf"\b(?:{pat})\b", " ", text, flags=re.I) if pat else text)
     md = mood(text)
     versus = re.search(r"\b(1v1|vs\.?|versus|race|battle|bet|challenge)\b", clip.get("video_title", ""), re.I)
 

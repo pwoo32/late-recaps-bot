@@ -316,6 +316,13 @@ Modes:
   then 3-5 specific hashtags (creator, guest, game, #twitch/#kick). Never `#fyp`/`#viral`/`#foryou`, which don't help.
   Example: `IShowSpeed: "Oh I'm Not Letting Him Win After This" | Can I Return a 120 MPH Serve From Serena Williams?
   🔥 Rate this duo 1-10 #ishowspeed #serenawilliams #tennis #livestream #ishowspeedclips`
+- Recovery plan (Nov 18): no TikTok drafts through Nov 22, then 1 a day through Nov 29, posted with no added sound
+  (`TIKTOK_PAUSE_UNTIL` / `TIKTOK_SLOW_UNTIL` in `channel_builder.py`).
+- At most 3 TikTok drafts a day, never two from the same stream within 24 hours, and each draft comes with a posting
+  time (noon, 3 PM, 7 PM or 9:30 PM ET, about 3 hours apart). On Nov 14 six posts in one day, two from one stream,
+  left the last three at 0-19 views while the first batch got 2,138.
+- Stock or cut-off titles never reach a caption: "xQc Can't Believe What Just Happened" becomes the line he actually
+  says, and first-person stream titles are retold ("REVEALING MY NEW FORTNITE ICON SKIN" -> "Revealing His New...").
 - Clips under 9 seconds don't go to TikTok (they can't hold a viewer, and inbox drafts are capped at 5 a day).
 - The on-screen hook sits 250px from the top so TikTok's "Following | For You" tabs don't cover it.
 - `direct`: posts on its own, with the caption. Until TikTok audits the app, posts are private-only, and the
