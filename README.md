@@ -316,7 +316,7 @@ Modes:
   then 3-5 specific hashtags (creator, guest, game, #twitch/#kick). Never `#fyp`/`#viral`/`#foryou`, which don't help.
   Example: `IShowSpeed: "Oh I'm Not Letting Him Win After This" | Can I Return a 120 MPH Serve From Serena Williams?
   🔥 Rate this duo 1-10 #ishowspeed #serenawilliams #tennis #livestream #ishowspeedclips`
-- Recovery plan (Nov 18): no TikTok drafts through Nov 21, then 1 a day through Nov 28, posted with no added sound
+- Recovery plan (Nov 18): no TikTok drafts through Nov 22, then 1 a day through Nov 29, posted with no added sound
   (`TIKTOK_PAUSE_UNTIL` / `TIKTOK_SLOW_UNTIL` in `channel_builder.py`).
 - At most 3 TikTok drafts a day, never two from the same stream within 24 hours, and each draft comes with a posting
   time (noon, 3 PM, 7 PM or 9:30 PM ET, about 3 hours apart). On Nov 14 six posts in one day, two from one stream,

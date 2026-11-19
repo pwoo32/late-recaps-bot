@@ -1653,10 +1653,10 @@ TIKTOK_MIN_SECONDS = 9  # streamer clips that spread on TikTok run ~12-34s; unde
 
 
 TIKTOK_PER_DAY = 3        # drafts a day: on Nov 14, six posts in one day left the last three at 0-19 views
-# Account recovery (Nov 18): every post since that afternoon got 0-19 views, so no drafts through Nov 21 (ET), then
-# one a day through Nov 28, posted with no added sound. After that the normal limit applies.
-TIKTOK_PAUSE_UNTIL = "2026-11-22"
-TIKTOK_SLOW_UNTIL = "2026-11-29"
+# Account recovery (Nov 18): every post since that afternoon got 0-19 views, so no drafts through Nov 22 (ET), then
+# one a day through Nov 29, posted with no added sound. After that the normal limit applies.
+TIKTOK_PAUSE_UNTIL = "2026-11-23"
+TIKTOK_SLOW_UNTIL = "2026-11-30"
 
 
 def tiktok_daily_limit(now=None):
