@@ -1,0 +1,253 @@
+[
+ {
+  "id": 1,
+  "source": "jynxzi",
+  "creator": "Jynxzi",
+  "platform": "youtube",
+  "video_id": "9H6yfvaT7I8",
+  "video_title": "PUSHING LEGEND DIV IN R6",
+  "url": "https://www.youtube.com/watch?v=9H6yfvaT7I8&t=23099s",
+  "moment": "6:24:59",
+  "start": 23079,
+  "end": 23109,
+  "rank": 29.67,
+  "signal": "chat went 13.0x its normal pace",
+  "signals": [
+   "chat spike"
+  ],
+  "quotes": [
+   "w",
+   "w",
+   "w"
+  ],
+  "stream_age_h": 26.9,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": null
+  },
+  "council": {
+   "trend": 0.2,
+   "study": 0.25,
+   "analytics": 0.56,
+   "live": 0.55,
+   "script": 0.75,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 0.2,
+    "why": "Jynxzi clips pull 40,519 views/hour this week"
+   },
+   "study": {
+    "score": 0.25,
+    "why": "top channels rarely break out with Jynxzi"
+   },
+   "analytics": {
+    "score": 0.56,
+    "why": "Jynxzi clips spread 1.6x our typical clip; chat spike moments do 1.1x; no clear premise, may be visual-only; stream is 27h old"
+   },
+   "live": {
+    "score": 0.55,
+    "why": "chat went 13.0x"
+   },
+   "script": {
+    "score": 0.75,
+    "why": "draft title: \"Jynxzi At Pushing Legend DIV 🔥\""
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-19T04:11:18Z",
+  "council_why": "Jynxzi's clip at 6:24:59 has a high trend score and a chat spike, indicating strong viewer engagement and potential for virality.",
+  "post_utc": "2026-11-19 13:00",
+  "post_local": "Thu 08:00 AM ET",
+  "title": "Jynxzi w 🤯",
+  "hook": "W",
+  "context": "Jynxzi live, PUSHING LEGEND DIV IN R6",
+  "take": "Jynxzi really thought this was a good idea.",
+  "summary": "Jynxzi live: PUSHING LEGEND DIV IN R6",
+  "tiktok_caption": "Jynxzi in PUSHING LEGEND DIV IN R6.",
+  "hashtags": [],
+  "tags": [],
+  "draft": true,
+  "writer": "template",
+  "description": "Jynxzi live, PUSHING LEGEND DIV IN R6\n\nFull stream by Jynxzi: https://www.youtube.com/watch?v=9H6yfvaT7I8&t=23099s\nGo support Jynxzi, all credit to them.\n\n#jynxzi #shorts #kaicenat #ishowspeed #funny",
+  "key": "9H6yfvaT7I8@769",
+  "permission": "fan clipping tolerated; check for a Whop campaign"
+ },
+ {
+  "id": 2,
+  "source": "lacy",
+  "creator": "Lacy",
+  "platform": "twitch",
+  "video_id": "2932194507",
+  "video_title": "LUCIA",
+  "url": "https://www.twitch.tv/videos/2932194507?t=0h50m40s",
+  "moment": "50:40",
+  "start": 3020,
+  "end": 3050,
+  "rank": 29.74,
+  "signal": "Twitch clip, 16,958 views (989/h)",
+  "signals": [
+   "twitch clip"
+  ],
+  "quotes": [
+   "LUCIA"
+  ],
+  "stream_age_h": 17.1,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "fast",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": "beat"
+  },
+  "council": {
+   "trend": 1.0,
+   "study": 0.25,
+   "analytics": 0.48,
+   "live": 0.15,
+   "script": 0.35,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 1.0,
+    "why": "Lacy clips pull 858 views/hour this week, up 435% since the last scan"
+   },
+   "study": {
+    "score": 0.25,
+    "why": "top channels rarely break out with Lacy"
+   },
+   "analytics": {
+    "score": 0.48,
+    "why": "no track record for Lacy on our channel yet; no clear premise, may be visual-only; stream is 17h old"
+   },
+   "live": {
+    "score": 0.15,
+    "why": "Twitch clip at 989/h"
+   },
+   "script": {
+    "score": 0.35,
+    "why": "draft title: \"Lacy At Lucia 😱\"; no captions yet, writing blind"
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-19T04:11:18Z",
+  "council_why": "Lacy's clip at 50:40 has a significant trend increase, pulling 858 views/hour, and is from a fresh stream, making it more likely to gain traction.",
+  "post_utc": "2026-11-19 05:00",
+  "post_local": "Thu 12:00 AM ET",
+  "title": "Lacy LUCIA 🤯",
+  "hook": "LUCIA",
+  "context": "Lacy live, LUCIA",
+  "take": "This is why chat can't stop clipping Lacy.",
+  "summary": "Lacy live: LUCIA",
+  "tiktok_caption": "Lacy in LUCIA.",
+  "hashtags": [],
+  "tags": [],
+  "draft": true,
+  "writer": "template",
+  "description": "Lacy live, LUCIA\n\nFull stream by Lacy: https://www.twitch.tv/videos/2932194507?t=0h50m40s\nGo support Lacy, all credit to them.\n\n#lacy #shorts #kaicenat #ishowspeed #funny",
+  "key": "2932194507@101",
+  "permission": "fan clipping is widespread and tolerated; no official program checked (Nov 2026)"
+ },
+ {
+  "id": 3,
+  "source": "twitch_dinah",
+  "creator": "Dinah",
+  "platform": "twitch_clip",
+  "video_id": "InventiveStylishSwanTBCheesePull-bpUxg33iLnxUyEOG",
+  "video_title": "LMAO",
+  "url": "https://www.twitch.tv/dinah/clip/InventiveStylishSwanTBCheesePull-bpUxg33iLnxUyEOG",
+  "moment": "0:00",
+  "start": 0,
+  "end": 25.5,
+  "rank": 42.62,
+  "signal": "Twitch clip, 10,721 views (3,508/h)",
+  "signals": [
+   "twitch clip"
+  ],
+  "quotes": [
+   "LMAO"
+  ],
+  "stream_age_h": 3.1,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 2,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": "caption_words"
+  },
+  "council": {
+   "trend": 0.15,
+   "study": 0.25,
+   "analytics": 0.72,
+   "live": 0.28,
+   "script": 0.35,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 0.15,
+    "why": "Dinah clips pull 0 views/hour this week"
+   },
+   "study": {
+    "score": 0.25,
+    "why": "top channels rarely break out with Dinah"
+   },
+   "analytics": {
+    "score": 0.72,
+    "why": "no track record for Dinah on our channel yet; Twitch clip moments do 2.0x; no clear premise, may be visual-only; stream is 3h old (fresh)"
+   },
+   "live": {
+    "score": 0.28,
+    "why": "Twitch clip at 3,508/h"
+   },
+   "script": {
+    "score": 0.35,
+    "why": "draft title: \"Dinah Can't Hold It In 😭\"; no captions yet, writing blind"
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-19T04:11:18Z",
+  "council_why": "Dinah's clip at 0:00 has a fresh stream and a high live scout score, with a strong initial engagement rate of 3,508 views/hour, suggesting potential for rapid growth.",
+  "post_utc": "2026-11-19 08:00",
+  "post_local": "Thu 03:00 AM ET",
+  "title": "Dinah 🤯",
+  "hook": "DINAH LOST IT",
+  "context": "Dinah live, LMAO",
+  "take": "Keep your eyes on Dinah right here.",
+  "summary": "Dinah live: LMAO",
+  "tiktok_caption": "Dinah in LMAO.",
+  "hashtags": [],
+  "tags": [],
+  "draft": true,
+  "writer": "template",
+  "description": "Dinah live, LMAO\n\nFull stream by Dinah: https://www.twitch.tv/dinah/clip/InventiveStylishSwanTBCheesePull-bpUxg33iLnxUyEOG\nGo support Dinah, all credit to them.\n\n#dinah #shorts #kaicenat #ishowspeed #funny",
+  "key": "InventiveStylishSwanTBCheesePull-bpUxg33iLnxUyEOG@0",
+  "permission": "auto-added: trending on Twitch (clipping policy not checked)"
+ }
+]

@@ -1,19 +1,19 @@
 {
  "source_weight": {
-  "jynxzi": 2.98,
+  "jynxzi": 2.99,
   "kai_cenat": 0.31,
-  "ishowspeed": 1.97,
-  "stableronaldo": 2.94,
-  "caseoh": 2.74
+  "ishowspeed": 1.98,
+  "stableronaldo": 2.96,
+  "caseoh": 2.84
  },
  "slot_weight": {
-  "2": 1.37,
+  "2": 1.42,
   "21": 0.31,
   "8": 1.49,
   "4": 0.49,
   "22": 2.49,
   "17": 1.99,
-  "6": 2.96,
+  "6": 2.98,
   "1": 1.49
  },
  "used_moments": [
@@ -142,7 +142,10 @@
   "I1l955pjhGQ@825",
   "2932194507@1827",
   "xQ7NFneY6Fo@622",
-  "SwissBenevolentRhinocerosRedCoat-_qn39IFUSFPG0nep@0"
+  "SwissBenevolentRhinocerosRedCoat-_qn39IFUSFPG0nep@0",
+  "9H6yfvaT7I8@769",
+  "2932194507@101",
+  "InventiveStylishSwanTBCheesePull-bpUxg33iLnxUyEOG@0"
  ],
  "queued": {
   "L6S9Vb3RLy4@186": {
@@ -1990,6 +1993,83 @@
     "script": 0.6,
     "audience": 0.5
    }
+  },
+  "9H6yfvaT7I8@769": {
+   "title": "Jynxzi At Pushing Legend DIV \ud83d\udd25",
+   "source": "jynxzi",
+   "post_utc": "2026-11-19 13:00",
+   "recipe": {
+    "length": 30,
+    "punch": 0.14,
+    "beat": "normal",
+    "caption_words": 3,
+    "gap": 0.6,
+    "layout": "face34",
+    "test": null
+   },
+   "council": {
+    "trend": 0.2,
+    "study": 0.25,
+    "analytics": 0.56,
+    "live": 0.55,
+    "script": 0.75,
+    "audience": 0.5
+   }
+  },
+  "2932194507@101": {
+   "title": "Lacy At Lucia \ud83d\ude31",
+   "source": "lacy",
+   "post_utc": "2026-11-19 05:00",
+   "recipe": {
+    "length": 30,
+    "punch": 0.14,
+    "beat": "fast",
+    "caption_words": 3,
+    "gap": 0.6,
+    "layout": "face34",
+    "test": "beat"
+   },
+   "council": {
+    "trend": 1.0,
+    "study": 0.25,
+    "analytics": 0.48,
+    "live": 0.15,
+    "script": 0.35,
+    "audience": 0.5
+   }
+  },
+  "InventiveStylishSwanTBCheesePull-bpUxg33iLnxUyEOG@0": {
+   "title": "Dinah Starts The Stream Laughing Uncontrollably \ud83d\ude2d\ud83d\ude02",
+   "source": "twitch_dinah",
+   "post_utc": "2026-11-19 08:00",
+   "recipe": {
+    "length": 30,
+    "punch": 0.14,
+    "beat": "normal",
+    "caption_words": 2,
+    "gap": 0.6,
+    "layout": "face34",
+    "test": "caption_words"
+   },
+   "council": {
+    "trend": 0.15,
+    "study": 0.25,
+    "analytics": 0.72,
+    "live": 0.28,
+    "script": 0.35,
+    "audience": 0.5
+   },
+   "video_id": "gS8kyRfLsQ0",
+   "words": [
+    "booting",
+    "intro",
+    "laughing",
+    "like",
+    "lmao",
+    "started",
+    "starts",
+    "uncontrollably"
+   ]
   }
  },
  "channel": "UCbK9EejOk5UVzI_l8F3f8kA",
@@ -3785,7 +3865,8 @@
      "w"
     ]
    }
-  ]
+  ],
+  "k3esjgmbphQ": []
  },
  "edit": {
   "stats": {
