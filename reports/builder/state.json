@@ -1929,8 +1929,8 @@
   "@TheDiaryOfACEO": "UCGq-a57w-aPwyi3pW7XLiHw"
  },
  "review": {
-  "at": "2026-11-18 23:41",
-  "report": "/home/runner/work/late-recaps-bot/late-recaps-bot/reports/review_2026-11-18_2341/report.md",
+  "at": "2026-11-19 02:09",
+  "report": "/home/runner/work/late-recaps-bot/late-recaps-bot/reports/review_2026-11-19_0209/report.md",
   "lessons": {
    "titles": [
     "Creator name first, then a bet or question in plain verbs, and never the result. Add a named guest or celebrity when one exists.",
@@ -1958,37 +1958,38 @@
   "feed_tested": "1 of 5",
   "make_more": [
    "Twitch clip (found by): 7 clips, 3 got a real feed test, typically 7 views, 2.0x our typical clip, 29% stayed past the swipe",
-   "quote title (Creator: \"line\") (title): 6 clips, 3 got a real feed test, typically 7 views, 1.9x our typical clip, 33% stayed past the swipe",
+   "quote title (Creator: \"line\") (title): 6 clips, 3 got a real feed test, typically 7 views, 1.9x our typical clip, 32% stayed past the swipe",
    "Jynxzi (creator): 13 clips, 4 got a real feed test, typically 5 views, 1.6x our typical clip, 42% stayed past the swipe",
    "20-30s (length): 18 clips, 5 got a real feed test, typically 3 views, 1.4x our typical clip, 32% stayed past the swipe",
    "Stable Ronaldo (creator): 3 clips, 1 got a real feed test, typically 4 views, 1.3x our typical clip, 25% stayed past the swipe",
-   "late night (10pm-6am ET) (post time): 10 clips, typically 336 views, 2.2x our typical TikTok clip (on TikTok)",
-   "over 45s (length): 12 clips, typically 237 views, 1.7x our typical TikTok clip (on TikTok)",
-   "Jynxzi (creator): 9 clips, typically 217 views, 1.6x our typical TikTok clip (on TikTok)",
-   "question (hook): 13 clips, typically 196 views, 1.5x our typical TikTok clip (on TikTok)",
-   "Kai Cenat (creator): 5 clips, typically 225 views, 1.5x our typical TikTok clip (on TikTok)",
-   "says what happens (title): 17 clips, typically 176 views, 1.4x our typical TikTok clip (on TikTok)"
+   "late night (10pm-6am ET) (post time): 10 clips, typically 336 views, 2.9x our typical TikTok clip (on TikTok)",
+   "over 45s (length): 12 clips, typically 237 views, 2.3x our typical TikTok clip (on TikTok)",
+   "question (hook): 13 clips, typically 196 views, 2.0x our typical TikTok clip (on TikTok)",
+   "Kai Cenat (creator): 5 clips, typically 225 views, 1.9x our typical TikTok clip (on TikTok)",
+   "viewer timestamp comments (found by): 14 clips, typically 146 views, 1.6x our typical TikTok clip (on TikTok)",
+   "says what happens (title): 18 clips, typically 131 views, 1.5x our typical TikTok clip (on TikTok)",
+   "Jynxzi (creator): 10 clips, typically 126 views, 1.4x our typical TikTok clip (on TikTok)"
   ],
   "make_less": [
    "Kai Cenat (creator): 14 clips, 0 got a real feed test, typically 0 views, 0.5x our typical clip, 53% stayed past the swipe",
    "31-45s (length): 4 clips, 0 got a real feed test, typically 1 views, 0.7x our typical clip, 50% stayed past the swipe",
    "viewer timestamp comments (found by): 29 clips, 3 got a real feed test, typically 1 views, 0.8x our typical clip, 71% stayed past the swipe",
    "afternoon (noon-5pm ET) (post time): 3 clips, typically 0 views, 0.1x our typical TikTok clip (on TikTok)",
+   "20-30s (length): 12 clips, typically 19 views, 0.3x our typical TikTok clip (on TikTok)",
    "Stable Ronaldo (creator): 3 clips, typically 15 views, 0.4x our typical TikTok clip (on TikTok)",
-   "20-30s (length): 10 clips, typically 36 views, 0.4x our typical TikTok clip (on TikTok)",
-   "says what happens (hook): 7 clips, typically 70 views, 0.7x our typical TikTok clip (on TikTok)",
-   "quote title (Creator: \"line\") (title): 6 clips, typically 76 views, 0.7x our typical TikTok clip (on TikTok)",
-   "IShowSpeed (creator): 7 clips, typically 85 views, 0.8x our typical TikTok clip (on TikTok)"
+   "chat spike (found by): 5 clips, typically 34 views, 0.6x our typical TikTok clip (on TikTok)",
+   "says what happens (hook): 8 clips, typically 41 views, 0.6x our typical TikTok clip (on TikTok)",
+   "Twitch clip (found by): 7 clips, typically 50 views, 0.7x our typical TikTok clip (on TikTok)"
   ],
   "source_score": {
    "stableronaldo": 1.25,
-   "jynxzi": 1.61,
+   "jynxzi": 1.6,
    "kai_cenat": 0.51,
    "caseoh": 1.55,
    "xqc": 0.75,
    "ishowspeed": 1.19,
    "n3on": 0.75,
-   "adin_ross": 0.89
+   "adin_ross": 0.9
   },
   "hour_score": {
    "18": 0.73,
@@ -1997,19 +1998,19 @@
    "6": 1.01,
    "8": 1.1,
    "17": 1.24,
-   "21": 1.16,
+   "21": 1.17,
    "4": 0.7,
    "2": 0.71
   },
   "levers": {
    "found by": {
-    "Twitch clip": 1.96,
-    "chat spike": 1.12,
+    "Twitch clip": 1.97,
+    "chat spike": 1.11,
     "viewer timestamp comments": 0.79
    },
    "stream age at post": {
     "over 48h": 1.07,
-    "12-48h": 1.02,
+    "12-48h": 1.01,
     "under 12h": 0.87
    }
   },
@@ -2045,9 +2046,9 @@
    },
    {
     "title": "Jynxzi Didn't See This Coming At Biggest Announcement Ever \ud83d\ude31",
-    "views": 23,
+    "views": 20,
     "avg_viewed": 42.12,
-    "stayed": 0.43478260869565216,
+    "stayed": 0.5,
     "verdict": null
    },
    {
