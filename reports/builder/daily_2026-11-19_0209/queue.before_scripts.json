@@ -1,0 +1,253 @@
+[
+ {
+  "id": 1,
+  "source": "lacy",
+  "creator": "Lacy",
+  "platform": "twitch",
+  "video_id": "2932194507",
+  "video_title": "SON...",
+  "url": "https://www.twitch.tv/videos/2932194507?t=15h13m30s",
+  "moment": "15:13:30",
+  "start": 54790,
+  "end": 54820,
+  "rank": 32.51,
+  "signal": "Twitch clip, 5,613 views (7,628/h)",
+  "signals": [
+   "twitch clip"
+  ],
+  "quotes": [
+   "SON..."
+  ],
+  "stream_age_h": 0.7,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": null
+  },
+  "council": {
+   "trend": 1.0,
+   "study": 0.25,
+   "analytics": 0.59,
+   "live": 0.48,
+   "script": 0.35,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 1.0,
+    "why": "Lacy clips pull 858 views/hour this week, up 435% since the last scan"
+   },
+   "study": {
+    "score": 0.25,
+    "why": "top channels rarely break out with Lacy"
+   },
+   "analytics": {
+    "score": 0.59,
+    "why": "no track record for Lacy on our channel yet; no clear premise, may be visual-only; stream is 1h old (fresh)"
+   },
+   "live": {
+    "score": 0.48,
+    "why": "Twitch clip at 7,628/h"
+   },
+   "script": {
+    "score": 0.35,
+    "why": "draft title: \"Lacy At SON 😱\"; no captions yet, writing blind"
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-19T02:09:16Z",
+  "council_why": "Lacy's clips are trending strongly, with a 435% increase in views this week, and her clip has a clear, engaging premise with a chat spike, making it highly likely to perform well.",
+  "post_utc": "2026-11-19 13:00",
+  "post_local": "Thu 08:00 AM ET",
+  "title": "Lacy SON 🤯",
+  "hook": "SON",
+  "context": "Lacy live, SON...",
+  "take": "This is why chat can't stop clipping Lacy.",
+  "summary": "Lacy live: SON...",
+  "tiktok_caption": "Lacy in SON....",
+  "hashtags": [],
+  "tags": [],
+  "draft": true,
+  "writer": "template",
+  "description": "Lacy live, SON...\n\nFull stream by Lacy: https://www.twitch.tv/videos/2932194507?t=15h13m30s\nGo support Lacy, all credit to them.\n\n#lacy #shorts #kaicenat #ishowspeed #funny",
+  "key": "2932194507@1827",
+  "permission": "fan clipping is widespread and tolerated; no official program checked (Nov 2026)"
+ },
+ {
+  "id": 2,
+  "source": "jynxzi",
+  "creator": "Jynxzi",
+  "platform": "youtube",
+  "video_id": "xQ7NFneY6Fo",
+  "video_title": "PUSHING LEGENDS DIV ON R6",
+  "url": "https://www.youtube.com/watch?v=xQ7NFneY6Fo&t=18679s",
+  "moment": "5:11:19",
+  "start": 18659,
+  "end": 18689,
+  "rank": 25.67,
+  "signal": "chat went 14.4x its normal pace",
+  "signals": [
+   "chat spike"
+  ],
+  "quotes": [
+   "w",
+   "ww",
+   "w"
+  ],
+  "stream_age_h": 48.4,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "fast",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": "beat"
+  },
+  "council": {
+   "trend": 0.2,
+   "study": 0.25,
+   "analytics": 0.69,
+   "live": 0.55,
+   "script": 0.75,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 0.2,
+    "why": "Jynxzi clips pull 40,519 views/hour this week"
+   },
+   "study": {
+    "score": 0.25,
+    "why": "top channels rarely break out with Jynxzi"
+   },
+   "analytics": {
+    "score": 0.69,
+    "why": "Jynxzi clips spread 1.6x our typical clip; chat spike moments do 1.1x; has a spoken premise (bet/question/challenge); stream is 48h old (other clippers had time)"
+   },
+   "live": {
+    "score": 0.55,
+    "why": "chat went 14.4x"
+   },
+   "script": {
+    "score": 0.75,
+    "why": "draft title: \"Jynxzi At Pushing Legends DIV 🔥\""
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-19T02:09:16Z",
+  "council_why": "Jynxzi's clip has a high council score and a strong chat spike, indicating high viewer engagement. It also has a clear premise and a track record of performing well.",
+  "post_utc": "2026-11-19 05:00",
+  "post_local": "Thu 12:00 AM ET",
+  "title": "Jynxzi w 🤯",
+  "hook": "W",
+  "context": "Jynxzi live, PUSHING LEGENDS DIV ON R6",
+  "take": "Jynxzi really thought this was a good idea.",
+  "summary": "Jynxzi live: PUSHING LEGENDS DIV ON R6",
+  "tiktok_caption": "Jynxzi in PUSHING LEGENDS DIV ON R6.",
+  "hashtags": [],
+  "tags": [],
+  "draft": true,
+  "writer": "template",
+  "description": "Jynxzi live, PUSHING LEGENDS DIV ON R6\n\nFull stream by Jynxzi: https://www.youtube.com/watch?v=xQ7NFneY6Fo&t=18679s\nGo support Jynxzi, all credit to them.\n\n#jynxzi #shorts #kaicenat #ishowspeed #funny",
+  "key": "xQ7NFneY6Fo@622",
+  "permission": "fan clipping tolerated; check for a Whop campaign"
+ },
+ {
+  "id": 3,
+  "source": "caseoh",
+  "creator": "CaseOh",
+  "platform": "twitch_clip",
+  "video_id": "SwissBenevolentRhinocerosRedCoat-_qn39IFUSFPG0nep",
+  "video_title": "W PLAN 🤣🤣🤣👍",
+  "url": "https://www.twitch.tv/caseoh_/clip/SwissBenevolentRhinocerosRedCoat-_qn39IFUSFPG0nep",
+  "moment": "0:00",
+  "start": 0,
+  "end": 48,
+  "rank": 36.89,
+  "signal": "Twitch clip, 2,189 views (540/h)",
+  "signals": [
+   "twitch clip"
+  ],
+  "quotes": [
+   "W PLAN 🤣🤣🤣👍"
+  ],
+  "stream_age_h": 4.1,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 2,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": "caption_words"
+  },
+  "council": {
+   "trend": 0.2,
+   "study": 0.25,
+   "analytics": 0.82,
+   "live": 0.13,
+   "script": 0.6,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 0.2,
+    "why": "CaseOh clips pull 40,732 views/hour this week"
+   },
+   "study": {
+    "score": 0.25,
+    "why": "top channels rarely break out with CaseOh"
+   },
+   "analytics": {
+    "score": 0.82,
+    "why": "CaseOh clips spread 1.6x our typical clip; Twitch clip moments do 2.0x; no clear premise, may be visual-only; stream is 4h old (fresh)"
+   },
+   "live": {
+    "score": 0.13,
+    "why": "Twitch clip at 540/h"
+   },
+   "script": {
+    "score": 0.6,
+    "why": "draft title: \"CaseOh: \"W Plan\" 😭\"; no captions yet, writing blind"
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-19T02:09:16Z",
+  "council_why": "CaseOh's clip has a high trend researcher score and a clear, engaging premise, with a fresh stream that can capitalize on the clip's potential.",
+  "post_utc": "2026-11-19 08:00",
+  "post_local": "Thu 03:00 AM ET",
+  "title": "CaseOh W PLAN 🤣🤣🤣👍 🤯",
+  "hook": "W PLAN 🤣🤣🤣👍",
+  "context": "CaseOh live, W PLAN 🤣🤣🤣👍",
+  "take": "CaseOh really thought this was a good idea.",
+  "summary": "CaseOh live: W PLAN 🤣🤣🤣👍",
+  "tiktok_caption": "CaseOh in W PLAN 🤣🤣🤣👍.",
+  "hashtags": [],
+  "tags": [],
+  "draft": true,
+  "writer": "template",
+  "description": "CaseOh live, W PLAN 🤣🤣🤣👍\n\nFull stream by CaseOh: https://www.twitch.tv/caseoh_/clip/SwissBenevolentRhinocerosRedCoat-_qn39IFUSFPG0nep\nGo support CaseOh, all credit to them.\n\n#caseoh #shorts #kaicenat #ishowspeed #funny",
+  "key": "SwissBenevolentRhinocerosRedCoat-_qn39IFUSFPG0nep@0",
+  "permission": "fan clipping is widespread and tolerated; no official program checked (Nov 2026)"
+ }
+]
