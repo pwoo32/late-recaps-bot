@@ -1,20 +1,20 @@
 {
  "source_weight": {
-  "jynxzi": 2.95,
+  "jynxzi": 2.97,
   "kai_cenat": 0.31,
-  "ishowspeed": 1.92,
-  "stableronaldo": 2.84,
-  "caseoh": 2.28
+  "ishowspeed": 1.95,
+  "stableronaldo": 2.9,
+  "caseoh": 2.57
  },
  "slot_weight": {
-  "2": 1.13,
-  "21": 0.34,
+  "2": 1.28,
+  "21": 0.32,
   "8": 1.49,
   "4": 0.49,
-  "22": 2.48,
+  "22": 2.49,
   "17": 1.99,
-  "6": 2.89,
-  "1": 1.46
+  "6": 2.93,
+  "1": 1.48
  },
  "used_moments": [
   "L6S9Vb3RLy4@186",
@@ -136,7 +136,10 @@
   "9H6yfvaT7I8@876",
   "9H6yfvaT7I8@760",
   "9H6yfvaT7I8@143",
-  "I1l955pjhGQ@692"
+  "I1l955pjhGQ@692",
+  "2932190650@1359",
+  "ResoluteTolerantDuckKappaWealth-qyC2FmCSQzQsvWkm@0",
+  "I1l955pjhGQ@825"
  ],
  "queued": {
   "L6S9Vb3RLy4@186": {
@@ -1850,6 +1853,72 @@
     "analytics": 0.83,
     "live": 0.55,
     "script": 0.75,
+    "audience": 0.5
+   }
+  },
+  "2932190650@1359": {
+   "title": "jasontheween At Reset \ud83d\ude31",
+   "source": "twitch_jasontheween",
+   "post_utc": "2026-11-19 05:00",
+   "recipe": {
+    "length": 30,
+    "punch": 0.14,
+    "beat": "normal",
+    "caption_words": 3,
+    "gap": 0.6,
+    "layout": "face34",
+    "test": null
+   },
+   "council": {
+    "trend": 1.0,
+    "study": 0.25,
+    "analytics": 0.63,
+    "live": 0.37,
+    "script": 0.35,
+    "audience": 0.5
+   }
+  },
+  "ResoluteTolerantDuckKappaWealth-qyC2FmCSQzQsvWkm@0": {
+   "title": "Max Explains The Rules For His Aux Battle \ud83c\udfa7\ud83d\udd25",
+   "source": "plaqueboymax",
+   "post_utc": "2026-11-19 08:00",
+   "recipe": {
+    "length": 30,
+    "punch": 0.14,
+    "beat": "fast",
+    "caption_words": 3,
+    "gap": 0.6,
+    "layout": "face34",
+    "test": "beat"
+   },
+   "council": {
+    "trend": 0.61,
+    "study": 0.25,
+    "analytics": 0.82,
+    "live": 0.1,
+    "script": 0.35,
+    "audience": 0.5
+   }
+  },
+  "I1l955pjhGQ@825": {
+   "title": "N3on At Playing GTA 6 \ud83d\udd25",
+   "source": "n3on",
+   "post_utc": "2026-11-19 00:00",
+   "recipe": {
+    "length": 30,
+    "punch": 0.14,
+    "beat": "normal",
+    "caption_words": 2,
+    "gap": 0.6,
+    "layout": "face34",
+    "test": "caption_words"
+   },
+   "council": {
+    "trend": 0.48,
+    "study": 0.25,
+    "analytics": 0.83,
+    "live": 0.55,
+    "script": 0.65,
     "audience": 0.5
    }
   }

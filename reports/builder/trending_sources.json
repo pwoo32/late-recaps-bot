@@ -139,11 +139,11 @@
   "permission": "auto-added: trending on Twitch (clipping policy not checked)",
   "campaign_cpm": null,
   "first_seen": "2026-11-18T19:30:35+00:00",
-  "last_seen": "2026-11-18T22:56:10+00:00",
+  "last_seen": "2026-11-18T23:41:49+00:00",
   "trending": true,
   "crowd_channels": 0,
   "crowd": 1.3,
-  "best_clip_vph": 34690,
+  "best_clip_vph": 34314,
   "clips_24h": 6
  },
  "twitch_sodapoppin": {
@@ -181,11 +181,11 @@
   "permission": "auto-added: trending on Twitch (clipping policy not checked)",
   "campaign_cpm": null,
   "first_seen": "2026-11-18T19:30:35+00:00",
-  "last_seen": "2026-11-18T22:56:10+00:00",
+  "last_seen": "2026-11-18T23:41:49+00:00",
   "trending": true,
   "crowd_channels": 0,
   "crowd": 1.3,
-  "best_clip_vph": 2413,
+  "best_clip_vph": 2429,
   "clips_24h": 2
  },
  "twitch_summit1g": {
@@ -202,11 +202,11 @@
   "permission": "auto-added: trending on Twitch (clipping policy not checked)",
   "campaign_cpm": null,
   "first_seen": "2026-11-18T19:30:35+00:00",
-  "last_seen": "2026-11-18T22:56:10+00:00",
+  "last_seen": "2026-11-18T23:41:49+00:00",
   "trending": true,
   "crowd_channels": 0,
   "crowd": 1.3,
-  "best_clip_vph": 2119,
+  "best_clip_vph": 2072,
   "clips_24h": 2
  },
  "twitch_jasontheween": {
@@ -223,11 +223,11 @@
   "permission": "auto-added: trending on Twitch (clipping policy not checked)",
   "campaign_cpm": null,
   "first_seen": "2026-11-18T22:56:10+00:00",
-  "last_seen": "2026-11-18T22:56:10+00:00",
+  "last_seen": "2026-11-18T23:41:49+00:00",
   "trending": true,
   "crowd_channels": 3,
   "crowd": 1.1,
-  "best_clip_vph": 4660,
+  "best_clip_vph": 5302,
   "clips_24h": 1
  },
  "twitch_lirik": {
@@ -244,11 +244,11 @@
   "permission": "auto-added: trending on Twitch (clipping policy not checked)",
   "campaign_cpm": null,
   "first_seen": "2026-11-18T22:56:10+00:00",
-  "last_seen": "2026-11-18T22:56:10+00:00",
+  "last_seen": "2026-11-18T23:41:49+00:00",
   "trending": true,
   "crowd_channels": 0,
   "crowd": 1.3,
-  "best_clip_vph": 2199,
+  "best_clip_vph": 2205,
   "clips_24h": 1
  },
  "twitch_clix": {
@@ -265,11 +265,11 @@
   "permission": "auto-added: trending on Twitch (clipping policy not checked)",
   "campaign_cpm": null,
   "first_seen": "2026-11-18T22:56:10+00:00",
-  "last_seen": "2026-11-18T22:56:10+00:00",
+  "last_seen": "2026-11-18T23:41:49+00:00",
   "trending": true,
   "crowd_channels": 0,
   "crowd": 1.3,
-  "best_clip_vph": 1576,
-  "clips_24h": 1
+  "best_clip_vph": 1635,
+  "clips_24h": 4
  }
 }
