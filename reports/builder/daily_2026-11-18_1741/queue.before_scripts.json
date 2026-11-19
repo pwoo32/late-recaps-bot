@@ -1,0 +1,251 @@
+[
+ {
+  "id": 1,
+  "source": "plaqueboymax",
+  "creator": "PlaqueBoyMax",
+  "platform": "twitch_clip",
+  "video_id": "YummyCourageousHumanAMPEnergy-xZq3GgiISKrJjGgN",
+  "video_title": "IN THE BOOTH WITH HAWSA & BNYX!",
+  "url": "https://www.twitch.tv/plaqueboymax/clip/YummyCourageousHumanAMPEnergy-xZq3GgiISKrJjGgN",
+  "moment": "0:00",
+  "start": 0,
+  "end": 30,
+  "rank": 39.45,
+  "signal": "Twitch clip, 405 views (31/h)",
+  "signals": [
+   "twitch clip"
+  ],
+  "quotes": [
+   "IN THE BOOTH WITH HAWSA & BNYX!"
+  ],
+  "stream_age_h": 12.9,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": null
+  },
+  "council": {
+   "trend": 0.63,
+   "study": 0.25,
+   "analytics": 0.9,
+   "live": 0.1,
+   "script": 0.6,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 0.63,
+    "why": "Max clips pull 120 views/hour this week, up 240% since the last scan"
+   },
+   "study": {
+    "score": 0.25,
+    "why": "top channels rarely break out with Max"
+   },
+   "analytics": {
+    "score": 0.9,
+    "why": "no track record for Max on our channel yet; Twitch clip moments do 2.0x; no clear premise, may be visual-only; news people search for (guest HAWSA BNYX), like our only 50+ view Short; stream is 13h old"
+   },
+   "live": {
+    "score": 0.1,
+    "why": "Twitch clip at 31/h"
+   },
+   "script": {
+    "score": 0.6,
+    "why": "draft title: \"Max: \"In the Booth With Hawsa & Bnyx\" 😱\"; no captions yet, writing blind"
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-18T17:41:10Z",
+  "council_why": "PlaqueBoyMax's clip from 'IN THE BOOTH WITH HAWSA & BNYX!' has a strong trend increase, a clear premise, and a high potential for searchability, making it a top contender.",
+  "post_utc": "2026-11-18 21:00",
+  "post_local": "Wed 04:00 PM ET",
+  "title": "Max IN THE BOOTH WITH HAWSA & BNYX 🤯",
+  "hook": "IN THE BOOTH WITH HAWSA & BNYX",
+  "context": "PlaqueBoyMax live, IN THE BOOTH WITH HAWSA & BNYX!",
+  "take": "Nobody in the room saw this coming.",
+  "summary": "PlaqueBoyMax live: IN THE BOOTH WITH HAWSA & BNYX!",
+  "tiktok_caption": "Max in IN THE BOOTH WITH HAWSA & BNYX!.",
+  "hashtags": [],
+  "tags": [],
+  "draft": true,
+  "writer": "template",
+  "description": "PlaqueBoyMax live, IN THE BOOTH WITH HAWSA & BNYX!\n\nFull stream by PlaqueBoyMax: https://www.twitch.tv/plaqueboymax/clip/YummyCourageousHumanAMPEnergy-xZq3GgiISKrJjGgN\nGo support PlaqueBoyMax, all credit to them.\n\n#plaqueboymax #shorts #kaicenat #ishowspeed #funny",
+  "key": "YummyCourageousHumanAMPEnergy-xZq3GgiISKrJjGgN@0",
+  "permission": "fan clipping is widespread and tolerated; no official program checked (Nov 2026)"
+ },
+ {
+  "id": 2,
+  "source": "n3on",
+  "creator": "N3on",
+  "platform": "kick_clip",
+  "video_id": "clip_01M7QFDDYEWM7WHDG2PEYQXZNT",
+  "video_title": "What is bro doing",
+  "url": "https://kick.com/n3on/clips/clip_01M7QFDDYEWM7WHDG2PEYQXZNT",
+  "moment": "0:00",
+  "start": 0,
+  "end": 60,
+  "rank": 27.5,
+  "signal": "Twitch clip, 10,511 views (2,881/h)",
+  "signals": [
+   "twitch clip"
+  ],
+  "quotes": [
+   "What is bro doing"
+  ],
+  "stream_age_h": 3.6,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "fast",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": "beat"
+  },
+  "council": {
+   "trend": 0.9,
+   "study": 0.25,
+   "analytics": 0.52,
+   "live": 0.24,
+   "script": 0.6,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 0.9,
+    "why": "N3on clips pull 2,696 views/hour this week, up 373% since the last scan"
+   },
+   "study": {
+    "score": 0.25,
+    "why": "top channels rarely break out with N3on"
+   },
+   "analytics": {
+    "score": 0.52,
+    "why": "N3on clips spread 0.8x our typical clip; no clear premise, may be visual-only; stream is 4h old (fresh)"
+   },
+   "live": {
+    "score": 0.24,
+    "why": "Twitch clip at 2,881/h"
+   },
+   "script": {
+    "score": 0.6,
+    "why": "draft title: \"N3on: \"What Is Doing\" 😱\"; no captions yet, writing blind"
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-18T17:41:10Z",
+  "council_why": "N3on's clip 'What is bro doing' shows a significant trend increase and a fresh stream, which could drive views quickly.",
+  "post_utc": "2026-11-19 05:00",
+  "post_local": "Thu 12:00 AM ET",
+  "title": "N3on What is doing 🤯",
+  "hook": "WHAT IS DOING",
+  "context": "N3on live, What is bro doing",
+  "take": "N3on really thought this was a good idea.",
+  "summary": "N3on live: What is bro doing",
+  "tiktok_caption": "N3on in What is bro doing.",
+  "hashtags": [],
+  "tags": [],
+  "draft": true,
+  "writer": "template",
+  "description": "N3on live, What is bro doing\n\nFull stream by N3on: https://kick.com/n3on/clips/clip_01M7QFDDYEWM7WHDG2PEYQXZNT\nGo support N3on, all credit to them.\n\n#n3on #shorts #kaicenat #ishowspeed #funny",
+  "key": "clip_01M7QFDDYEWM7WHDG2PEYQXZNT@0",
+  "permission": "official paid clipping program via his Discord (creatordb.app, 2026)"
+ },
+ {
+  "id": 3,
+  "source": "plaqueboymax",
+  "creator": "PlaqueBoyMax",
+  "platform": "twitch_clip",
+  "video_id": "ResoluteTolerantDuckKappaWealth-qyC2FmCSQzQsvWkm",
+  "video_title": "UNDERGROUND (nickatnite) VS MAINSTREAM (zias and b lou) AUX BATTLE! SEND BEATS FOR TAY K!",
+  "url": "https://www.twitch.tv/plaqueboymax/clip/ResoluteTolerantDuckKappaWealth-qyC2FmCSQzQsvWkm",
+  "moment": "0:00",
+  "start": 0,
+  "end": 30,
+  "rank": 41.13,
+  "signal": "Twitch clip, 1,666 views (41/h)",
+  "signals": [
+   "twitch clip"
+  ],
+  "quotes": [
+   "UNDERGROUND (nickatnite) VS MAINSTREAM (zias and b lou) AUX BATTLE! SEND BEATS FOR TAY K!"
+  ],
+  "stream_age_h": 40.5,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 2,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": "caption_words"
+  },
+  "council": {
+   "trend": 0.63,
+   "study": 0.25,
+   "analytics": 0.98,
+   "live": 0.1,
+   "script": 0.35,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 0.63,
+    "why": "Max clips pull 120 views/hour this week, up 240% since the last scan"
+   },
+   "study": {
+    "score": 0.25,
+    "why": "top channels rarely break out with Max"
+   },
+   "analytics": {
+    "score": 0.98,
+    "why": "no track record for Max on our channel yet; Twitch clip moments do 2.0x; has a spoken premise (bet/question/challenge); news people search for (guest AUX BATTLE), like our only 50+ view Short; stream is 40h old"
+   },
+   "live": {
+    "score": 0.1,
+    "why": "Twitch clip at 41/h"
+   },
+   "script": {
+    "score": 0.35,
+    "why": "draft title: \"Max Is Left Speechless 😱\"; no captions yet, writing blind"
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-18T17:41:10Z",
+  "council_why": "PlaqueBoyMax's clip from 'UNDERGROUND (nickatnite) VS MAINSTREAM (zias and b lou) AUX BATTLE! SE' has a clear premise, a high potential for searchability, and a strong trend increase.",
+  "post_utc": "2026-11-18 18:00",
+  "post_local": "Wed 01:00 PM ET",
+  "title": "Max UNDERGROUND (nickatnite) VS MAINSTREAM 🤯",
+  "hook": "UNDERGROUND (NICKATNITE) VS MAINSTREAM (",
+  "context": "PlaqueBoyMax live, UNDERGROUND (nickatnite) VS MAINSTREAM (zias and b lou) AUX ",
+  "take": "Max really thought this was a good idea.",
+  "summary": "PlaqueBoyMax live: UNDERGROUND (nickatnite) VS MAINSTREAM (zias and b lou) AUX BATTLE! SEND BEATS FOR TAY K!",
+  "tiktok_caption": "Max in UNDERGROUND (nickatnite) VS MAINSTREAM (zias and b lou) AUX BATTLE! SEND BEATS FOR TAY K!.",
+  "hashtags": [],
+  "tags": [],
+  "draft": true,
+  "writer": "template",
+  "description": "PlaqueBoyMax live, UNDERGROUND (nickatnite) VS MAINSTREAM (zias and b lou) AUX \n\nFull stream by PlaqueBoyMax: https://www.twitch.tv/plaqueboymax/clip/ResoluteTolerantDuckKappaWealth-qyC2FmCSQzQsvWkm\nGo support PlaqueBoyMax, all credit to them.\n\n#plaqueboymax #shorts #kaicenat #ishowspeed #funny",
+  "key": "ResoluteTolerantDuckKappaWealth-qyC2FmCSQzQsvWkm@0",
+  "permission": "fan clipping is widespread and tolerated; no official program checked (Nov 2026)"
+ }
+]

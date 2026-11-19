@@ -18,6 +18,7 @@ No API calls, no model. channel_builder.py uses these when ranking moments and r
 
 import os
 import re
+from datetime import datetime, timedelta, timezone
 
 # Lines that could go on any clip. Matched case-insensitively against the title, hook and narrator lines.
 STOCK = re.compile(r"\b(goes crazy|goes off|can'?t believe (?:what just happened|it|he pulled this off)|didn'?t see this coming|"
@@ -97,7 +98,40 @@ def posted_titles(state):
     return {norm_title(q.get("title")) for q in (state.get("queued") or {}).values() if q.get("video_id")}
 
 
-def clip_problems(clip, posted, speech=None, transcript=""):
+_COMMON = set("""that this with what when they them then from have just will your about after before still really
+going cant can't didn't doesn't don't won't believe reacts reaction moment stream streamer clip clips chat live gets
+goes makes takes finally again completely totally actually instantly can't never ever every crazy insane wild while
+tries trying watches meets says said tells asks finds sees hears sudden suddenly right after first time last""".split())
+
+
+def moment_words(clip):
+    """The distinctive words of a moment (names, things, places) from the source title, quotes and our script:
+    what stays the same when the same moment is found again under another clip, VOD or upload."""
+    from sources import SOURCES
+    names = {w.lower() for w in (SOURCES.get(clip.get("source")) or {}).get("aliases", []) for w in w.split()}
+    text = " ".join([clip.get(k) or "" for k in ("title", "hook", "context", "video_title")] + list(clip.get("quotes") or []))
+    return sorted({w for w in re.findall(r"[a-z][a-z']{3,}", text.lower()) if w not in _COMMON and w not in names})
+
+
+def same_moment(clip, state, days=21):
+    """Title of an upload from the last `days` days that is this same moment (same creator, most of the distinctive
+    words shared), else None. Oct-Nov 2026: the Speed dubstep moment went up 4 times from different VODs and clips,
+    which is exactly the repeat-upload pattern YouTube's reused-content rule throttles."""
+    mine = set(moment_words(clip))
+    if len(mine) < 2:
+        return None
+    cutoff = (datetime.now(timezone.utc) - timedelta(days=days)).strftime("%Y-%m-%d %H:%M")
+    for q in (state.get("queued") or {}).values():
+        if not q.get("video_id") or q.get("source") != clip.get("source") or (q.get("post_utc") or "9") < cutoff:
+            continue
+        theirs = set(q.get("words") or moment_words({"title": q.get("title"), "source": q.get("source")}))
+        shared = mine & theirs
+        if len(shared) >= 2 and len(shared) >= 0.4 * min(len(mine), len(theirs)):
+            return q.get("title")
+    return None
+
+
+def clip_problems(clip, posted, speech=None, transcript="", state=None):
     """Reasons this clip adds too little of our own or risks a claim (empty list = fine)."""
     out = []
     phrase = stock_phrase(clip.get("title"), clip.get("hook"), clip.get("take"), clip.get("payoff"))
@@ -105,6 +139,10 @@ def clip_problems(clip, posted, speech=None, transcript=""):
         out.append(f"originality: stock line \"{phrase}\" could go on any clip; the script needs something specific to this one")
     if norm_title(clip.get("title")) in posted:
         out.append("originality: this title was already used on an earlier upload (near-duplicate)")
+    twin = same_moment(clip, state) if state else None
+    if twin:
+        out.append(f"originality: this looks like the same moment as an earlier upload (\"{twin}\"); posting it twice "
+                   "reads as reused content")
     take = (clip.get("take") or "").strip()
     if not take:
         out.append("originality: no narrator line, so nothing of the channel's own is added")
