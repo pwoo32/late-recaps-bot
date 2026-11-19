@@ -180,6 +180,21 @@ def twitch_clips(h, user_id, since, first=20):
     return d.get("data", [])
 
 
+_GAME_NAMES = {}
+
+
+def twitch_game_names(h, ids):
+    """{game_id: name} for Twitch category ids (cached), so a clip's game can be matched by name ("Grand Theft Auto VI")."""
+    want = [i for i in {i for i in ids if i} if i not in _GAME_NAMES]
+    for k in range(0, len(want), 100):
+        try:
+            d = requests.get("https://api.twitch.tv/helix/games", params={"id": want[k:k + 100]}, headers=h, timeout=30).json()
+        except Exception:
+            break
+        _GAME_NAMES.update({g["id"]: g["name"] for g in d.get("data", [])})
+    return {i: _GAME_NAMES[i] for i in ids if i in _GAME_NAMES}
+
+
 def twitch_clips_keyless(login, since, timeout=120):
     """The same clip list without Twitch API keys: yt-dlp reads the channel's public clips page (top clips of the last
     7 days), and we keep the ones made since `since`. Same fields as twitch_clips(), minus the VOD link, so each one
