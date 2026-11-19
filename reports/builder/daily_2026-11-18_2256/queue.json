@@ -1,0 +1,322 @@
+[
+ {
+  "id": 1,
+  "source": "jynxzi",
+  "creator": "Jynxzi",
+  "platform": "youtube",
+  "video_id": "9H6yfvaT7I8",
+  "video_title": "PUSHING LEGEND DIV IN R6",
+  "url": "https://www.youtube.com/watch?v=9H6yfvaT7I8&t=22819s",
+  "moment": "6:20:19",
+  "start": 22799,
+  "end": 22829,
+  "rank": 22.64,
+  "signal": "chat went 14.6x its normal pace",
+  "signals": [
+   "chat spike"
+  ],
+  "quotes": [
+   "w",
+   "w",
+   "w"
+  ],
+  "stream_age_h": 21.6,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": null
+  },
+  "council": {
+   "trend": 0.08,
+   "study": 0.25,
+   "analytics": 0.63,
+   "live": 0.55,
+   "script": 0.75,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 0.08,
+    "why": "Jynxzi clips pull 40,519 views/hour this week, down 61% since the last scan"
+   },
+   "study": {
+    "score": 0.25,
+    "why": "top channels rarely break out with Jynxzi"
+   },
+   "analytics": {
+    "score": 0.63,
+    "why": "Jynxzi clips spread 1.6x our typical clip; chat spike moments do 1.1x; no clear premise, may be visual-only; stream is 22h old"
+   },
+   "live": {
+    "score": 0.55,
+    "why": "chat went 14.6x"
+   },
+   "script": {
+    "score": 0.75,
+    "why": "draft title: \"Jynxzi At Pushing Legend DIV 🔥\""
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-18T22:56:10Z",
+  "council_why": "Jynxzi's clips have a strong trend with 40,519 views/hour, and the live scout noted a significant chat spike of 14.6x, indicating high viewer engagement.",
+  "post_utc": "2026-11-19 05:00",
+  "post_local": "Thu 12:00 AM ET",
+  "title": "Jynxzi At Pushing Legend DIV 🔥",
+  "hook": "WATCH THE LAST SECOND",
+  "context": "Jynxzi live: Pushing Legend DIV IN R6",
+  "take": "Jynxzi says “Oh, Mr” and that's the line everything turns on.",
+  "summary": "Jynxzi during \"PUSHING LEGEND DIV IN R6\".",
+  "tiktok_caption": "Jynxzi At Pushing Legend DIV in Rainbow Six Siege 🔥 Could you do this? #jynxzi #r6 #livestream #jynxziclips #streamerclips",
+  "hashtags": [
+   "#jynxzi",
+   "#pushinglegenddiv"
+  ],
+  "tags": [
+   "jynxzi",
+   "pushing",
+   "legend",
+   "jynxzi clips",
+   "streamer clips"
+  ],
+  "draft": false,
+  "writer": "free",
+  "description": "Jynxzi during \"PUSHING LEGEND DIV IN R6\".\n\nFull stream by Jynxzi: https://www.youtube.com/watch?v=9H6yfvaT7I8&t=22819s\nGo support Jynxzi, all credit to them.\n\n#jynxzi #pushinglegenddiv #shorts",
+  "key": "9H6yfvaT7I8@760",
+  "permission": "fan clipping tolerated; check for a Whop campaign",
+  "payoff": "Best moment of Jynxzi's Pushing Legend DIV so far, or not even close?",
+  "script_source": "transcript",
+  "upload_tags": [
+   "jynxzi",
+   "pushing",
+   "legend",
+   "jynxzi clips",
+   "streamer clips",
+   "shorts"
+  ],
+  "held": "originality: stock line \"WATCH THE LAST SECOND\" could go on any clip; the script needs something specific to this one; originality: the narrator's take is only 11 words; it needs a real opinion or context; originality: template narration (\"the line everything turns on\"); YouTube counts template voice-overs as adding nothing; originality: the script came from the fill-in writer, not a model, so the narration is a template (set GEMINI_API_KEY or GROQ_API_KEY, both free)",
+  "tiktok_id": "v_inbox_file~v2.7709658937478449165"
+ },
+ {
+  "id": 2,
+  "source": "jynxzi",
+  "creator": "Jynxzi",
+  "platform": "youtube",
+  "video_id": "9H6yfvaT7I8",
+  "video_title": "PUSHING LEGEND DIV IN R6",
+  "url": "https://www.youtube.com/watch?v=9H6yfvaT7I8&t=4319s",
+  "moment": "1:11:59",
+  "start": 4299,
+  "end": 4329,
+  "rank": 23.64,
+  "signal": "chat went 16.6x its normal pace",
+  "signals": [
+   "chat spike"
+  ],
+  "quotes": [
+   "l",
+   "l",
+   "l"
+  ],
+  "stream_age_h": 21.6,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "fast",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": "beat"
+  },
+  "council": {
+   "trend": 0.08,
+   "study": 0.25,
+   "analytics": 0.63,
+   "live": 0.55,
+   "script": 0.65,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 0.08,
+    "why": "Jynxzi clips pull 40,519 views/hour this week, down 61% since the last scan"
+   },
+   "study": {
+    "score": 0.25,
+    "why": "top channels rarely break out with Jynxzi"
+   },
+   "analytics": {
+    "score": 0.63,
+    "why": "Jynxzi clips spread 1.6x our typical clip; chat spike moments do 1.1x; no clear premise, may be visual-only; stream is 22h old"
+   },
+   "live": {
+    "score": 0.55,
+    "why": "chat went 16.6x"
+   },
+   "script": {
+    "score": 0.65,
+    "why": "draft title: \"Jynxzi At Pushing Legend DIV 😱\""
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-18T22:56:10Z",
+  "council_why": "Jynxzi's second clip also shows a strong trend with 40,519 views/hour and a chat spike of 16.6x, which is slightly higher than the first clip.",
+  "post_utc": "2026-11-19 08:00",
+  "post_local": "Thu 03:00 AM ET",
+  "title": "Jynxzi At Pushing Legend DIV 😱",
+  "hook": "WATCH HIS FACE",
+  "context": "Jynxzi live: Pushing Legend DIV IN R6",
+  "take": "Jynxzi says “I'm adding slight delay” and that's the line everything turns on.",
+  "summary": "Jynxzi during \"PUSHING LEGEND DIV IN R6\".",
+  "tiktok_caption": "Jynxzi At Pushing Legend DIV in Rainbow Six Siege 😳 Would you have reacted the same? #jynxzi #r6 #livestream #jynxziclips #streamerclips",
+  "hashtags": [
+   "#jynxzi",
+   "#pushinglegenddiv"
+  ],
+  "tags": [
+   "jynxzi",
+   "pushing",
+   "legend",
+   "jynxzi clips",
+   "streamer clips"
+  ],
+  "draft": false,
+  "writer": "free",
+  "description": "Jynxzi during \"PUSHING LEGEND DIV IN R6\".\n\nFull stream by Jynxzi: https://www.youtube.com/watch?v=9H6yfvaT7I8&t=4319s\nGo support Jynxzi, all credit to them.\n\n#jynxzi #pushinglegenddiv #shorts",
+  "key": "9H6yfvaT7I8@143",
+  "permission": "fan clipping tolerated; check for a Whop campaign",
+  "payoff": "Best moment of Jynxzi's Pushing Legend DIV so far, or not even close?",
+  "script_source": "transcript",
+  "upload_tags": [
+   "jynxzi",
+   "pushing",
+   "legend",
+   "jynxzi clips",
+   "streamer clips",
+   "shorts"
+  ],
+  "held": "originality: stock line \"WATCH HIS FACE\" could go on any clip; the script needs something specific to this one; originality: template narration (\"the line everything turns on\"); YouTube counts template voice-overs as adding nothing; originality: the script came from the fill-in writer, not a model, so the narration is a template (set GEMINI_API_KEY or GROQ_API_KEY, both free); originality: only 12 words are said in the clip, too little to comment on; copyright: only 8% of the clip is speech (likely music or noise, and nothing to react to)",
+  "tiktok_id": "v_inbox_file~v2.7709658930426873869"
+ },
+ {
+  "id": 3,
+  "source": "n3on",
+  "creator": "N3on",
+  "platform": "youtube",
+  "video_id": "I1l955pjhGQ",
+  "video_title": "PLAYING GTA 6 FOR THE FIRST TIME",
+  "url": "https://www.youtube.com/watch?v=I1l955pjhGQ&t=20784s",
+  "moment": "5:46:24",
+  "start": 20764,
+  "end": 20794,
+  "rank": 22.06,
+  "signal": "chat went 7.8x its normal pace",
+  "signals": [
+   "chat spike"
+  ],
+  "quotes": [
+   "Bro when he pulls the guns out looks cheap option kinda or is it just me"
+  ],
+  "stream_age_h": 4.9,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 2,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": "caption_words"
+  },
+  "council": {
+   "trend": 0.48,
+   "study": 0.25,
+   "analytics": 0.83,
+   "live": 0.55,
+   "script": 0.75,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 0.48,
+    "why": "N3on clips pull 1,485 views/hour this week, up 165% since the last scan"
+   },
+   "study": {
+    "score": 0.25,
+    "why": "top channels rarely break out with N3on"
+   },
+   "analytics": {
+    "score": 0.83,
+    "why": "N3on clips spread 0.8x our typical clip; chat spike moments do 1.1x; has a spoken premise (bet/question/challenge); stream is 5h old (fresh)"
+   },
+   "live": {
+    "score": 0.55,
+    "why": "chat went 7.8x"
+   },
+   "script": {
+    "score": 0.75,
+    "why": "draft title: \"N3on At Playing GTA 6 🔥\""
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-18T22:56:10Z",
+  "council_why": "N3on's clip has a clear premise, a high chat spike of 9.3x, and a trending clip with 1,485 views/hour, making it a strong contender for high views.",
+  "post_utc": "2026-11-19 00:00",
+  "post_local": "Wed 07:00 PM ET",
+  "title": "N3on At Playing GTA 6 🔥",
+  "hook": "WATCH THE LAST SECOND",
+  "context": "N3on live: Playing GTA 6 FOR THE First Time",
+  "take": "N3on says “These new stairs lowkey look good” and that's the line everything turns on.",
+  "summary": "N3on during \"PLAYING GTA 6 FOR THE FIRST TIME\".",
+  "tiktok_caption": "N3on At Playing GTA 6 🔥 Could you do this? #n3on #gta #livestream #n3onclips #streamerclips",
+  "hashtags": [
+   "#n3on",
+   "#playinggta6"
+  ],
+  "tags": [
+   "n3on",
+   "neon",
+   "playing",
+   "first",
+   "time",
+   "n3on clips",
+   "streamer clips"
+  ],
+  "draft": false,
+  "writer": "free",
+  "description": "N3on during \"PLAYING GTA 6 FOR THE FIRST TIME\".\n\nFull stream by N3on: https://www.youtube.com/watch?v=I1l955pjhGQ&t=20784s\nGo support N3on, all credit to them.\n\n#n3on #playinggta6 #shorts",
+  "key": "I1l955pjhGQ@692",
+  "permission": "official paid clipping program via his Discord (creatordb.app, 2026)",
+  "payoff": "Best moment of N3on's Playing GTA 6 so far, or not even close?",
+  "script_source": "transcript",
+  "upload_tags": [
+   "n3on",
+   "neon",
+   "playing",
+   "first",
+   "time",
+   "n3on clips",
+   "streamer clips",
+   "shorts"
+  ],
+  "held": "originality: stock line \"WATCH THE LAST SECOND\" could go on any clip; the script needs something specific to this one; originality: template narration (\"the line everything turns on\"); YouTube counts template voice-overs as adding nothing; originality: the script came from the fill-in writer, not a model, so the narration is a template (set GEMINI_API_KEY or GROQ_API_KEY, both free)",
+  "tiktok_id": "v_inbox_file~v2.7709658930426923021"
+ }
+]

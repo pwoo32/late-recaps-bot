@@ -1,0 +1,321 @@
+[
+ {
+  "id": 1,
+  "source": "lacy",
+  "creator": "Lacy",
+  "platform": "twitch",
+  "video_id": "2932194507",
+  "video_title": "SON...",
+  "url": "https://www.twitch.tv/videos/2932194507?t=15h13m30s",
+  "moment": "15:13:30",
+  "start": 54790,
+  "end": 54820,
+  "rank": 32.51,
+  "signal": "Twitch clip, 5,613 views (7,628/h)",
+  "signals": [
+   "twitch clip"
+  ],
+  "quotes": [
+   "SON..."
+  ],
+  "stream_age_h": 0.7,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": null
+  },
+  "council": {
+   "trend": 1.0,
+   "study": 0.25,
+   "analytics": 0.59,
+   "live": 0.48,
+   "script": 0.35,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 1.0,
+    "why": "Lacy clips pull 858 views/hour this week, up 435% since the last scan"
+   },
+   "study": {
+    "score": 0.25,
+    "why": "top channels rarely break out with Lacy"
+   },
+   "analytics": {
+    "score": 0.59,
+    "why": "no track record for Lacy on our channel yet; no clear premise, may be visual-only; stream is 1h old (fresh)"
+   },
+   "live": {
+    "score": 0.48,
+    "why": "Twitch clip at 7,628/h"
+   },
+   "script": {
+    "score": 0.35,
+    "why": "draft title: \"Lacy At SON 😱\"; no captions yet, writing blind"
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-19T02:09:16Z",
+  "council_why": "Lacy's clips are trending strongly, with a 435% increase in views this week, and her clip has a clear, engaging premise with a chat spike, making it highly likely to perform well.",
+  "post_utc": "2026-11-19 13:00",
+  "post_local": "Thu 08:00 AM ET",
+  "title": "Lacy Claims He Wins Every Tournament 😂",
+  "hook": "HE SAYS HE DOMINATES TOURNAMENTS",
+  "context": "Lacy boasts about winning every Fortnite tournament",
+  "take": "Lacy loves to brag about his Fortnite skills, but his confidence often backfires—watch as he tries to convince the chat he's unbeatable.",
+  "summary": "Lacy boasts that he wins every Fortnite tournament during his stream. He repeats the claim while the chat reacts.",
+  "tiktok_caption": "Lacy says he dominates every Fortnite tournament",
+  "hashtags": [
+   "#shorts",
+   "#lacy",
+   "#fortnite"
+  ],
+  "tags": [
+   "Lacy",
+   "Lacy Fortnite",
+   "Fortnite",
+   "Fortnite tournament",
+   "gaming brag",
+   "stream highlights",
+   "Fortnite streamer",
+   "Lacy clips",
+   "Fortnite brag"
+  ],
+  "draft": false,
+  "writer": "groq",
+  "description": "Lacy boasts that he wins every Fortnite tournament during his stream. He repeats the claim while the chat reacts.\n\nFull stream by Lacy: https://www.twitch.tv/videos/2932194507?t=15h13m30s\nGo support Lacy, all credit to them.\n\n#shorts #lacy #fortnite",
+  "key": "2932194507@1827",
+  "permission": "fan clipping is widespread and tolerated; no official program checked (Nov 2026)",
+  "payoff": "Only the next match will prove if his claims hold up.",
+  "script_source": "transcript",
+  "upload_tags": [
+   "Lacy",
+   "Lacy Fortnite",
+   "Fortnite",
+   "Fortnite tournament",
+   "gaming brag",
+   "stream highlights",
+   "Fortnite streamer",
+   "Lacy clips",
+   "Fortnite brag",
+   "lacy",
+   "shorts"
+  ],
+  "held": "copyright: only 16% of the clip is speech (likely music or noise, and nothing to react to)"
+ },
+ {
+  "id": 2,
+  "source": "jynxzi",
+  "creator": "Jynxzi",
+  "platform": "youtube",
+  "video_id": "xQ7NFneY6Fo",
+  "video_title": "PUSHING LEGENDS DIV ON R6",
+  "url": "https://www.youtube.com/watch?v=xQ7NFneY6Fo&t=18679s",
+  "moment": "5:11:19",
+  "start": 18659,
+  "end": 18689,
+  "rank": 25.67,
+  "signal": "chat went 14.4x its normal pace",
+  "signals": [
+   "chat spike"
+  ],
+  "quotes": [
+   "w",
+   "ww",
+   "w"
+  ],
+  "stream_age_h": 48.4,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "fast",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": "beat"
+  },
+  "council": {
+   "trend": 0.2,
+   "study": 0.25,
+   "analytics": 0.69,
+   "live": 0.55,
+   "script": 0.75,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 0.2,
+    "why": "Jynxzi clips pull 40,519 views/hour this week"
+   },
+   "study": {
+    "score": 0.25,
+    "why": "top channels rarely break out with Jynxzi"
+   },
+   "analytics": {
+    "score": 0.69,
+    "why": "Jynxzi clips spread 1.6x our typical clip; chat spike moments do 1.1x; has a spoken premise (bet/question/challenge); stream is 48h old (other clippers had time)"
+   },
+   "live": {
+    "score": 0.55,
+    "why": "chat went 14.4x"
+   },
+   "script": {
+    "score": 0.75,
+    "why": "draft title: \"Jynxzi At Pushing Legends DIV 🔥\""
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-19T02:09:16Z",
+  "council_why": "Jynxzi's clip has a high council score and a strong chat spike, indicating high viewer engagement. It also has a clear premise and a track record of performing well.",
+  "post_utc": "2026-11-19 05:00",
+  "post_local": "Thu 12:00 AM ET",
+  "title": "Jynxzi At Pushing Legends DIV 🔥",
+  "hook": "HE CALLED IT",
+  "context": "Jynxzi live: Pushing Legends DIV ON R6",
+  "take": "Jynxzi says “Let's take stock” and that's the line everything turns on.",
+  "summary": "Jynxzi during \"PUSHING LEGENDS DIV ON R6\".",
+  "tiktok_caption": "Jynxzi At Pushing Legends DIV in Rainbow Six Siege 🔥 Is this the cleanest one yet?",
+  "hashtags": [
+   "#jynxzi",
+   "#pushinglegendsdiv"
+  ],
+  "tags": [
+   "jynxzi",
+   "pushing",
+   "legends",
+   "jynxzi clips",
+   "streamer clips"
+  ],
+  "draft": false,
+  "writer": "free",
+  "description": "Jynxzi during \"PUSHING LEGENDS DIV ON R6\".\n\nFull stream by Jynxzi: https://www.youtube.com/watch?v=xQ7NFneY6Fo&t=18679s\nGo support Jynxzi, all credit to them.\n\n#jynxzi #pushinglegendsdiv #shorts",
+  "key": "xQ7NFneY6Fo@622",
+  "permission": "fan clipping tolerated; check for a Whop campaign",
+  "payoff": "Best moment of Jynxzi's Pushing Legends DIV so far, or not even close?",
+  "script_source": "transcript",
+  "upload_tags": [
+   "jynxzi",
+   "pushing",
+   "legends",
+   "jynxzi clips",
+   "streamer clips",
+   "shorts"
+  ],
+  "held": "originality: stock line \"HE CALLED IT\" could go on any clip; the script needs something specific to this one; originality: template narration (\"the line everything turns on\"); YouTube counts template voice-overs as adding nothing; originality: the script came from the fill-in writer, not a model, so the narration is a template (set GEMINI_API_KEY or GROQ_API_KEY, both free); originality: only 18 words are said in the clip, too little to comment on; copyright: only 23% of the clip is speech (likely music or noise, and nothing to react to)"
+ },
+ {
+  "id": 3,
+  "source": "caseoh",
+  "creator": "CaseOh",
+  "platform": "twitch_clip",
+  "video_id": "SwissBenevolentRhinocerosRedCoat-_qn39IFUSFPG0nep",
+  "video_title": "W PLAN 🤣🤣🤣👍",
+  "url": "https://www.twitch.tv/caseoh_/clip/SwissBenevolentRhinocerosRedCoat-_qn39IFUSFPG0nep",
+  "moment": "0:00",
+  "start": 0,
+  "end": 48,
+  "rank": 36.89,
+  "signal": "Twitch clip, 2,189 views (540/h)",
+  "signals": [
+   "twitch clip"
+  ],
+  "quotes": [
+   "W PLAN 🤣🤣🤣👍"
+  ],
+  "stream_age_h": 4.1,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 2,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": "caption_words"
+  },
+  "council": {
+   "trend": 0.2,
+   "study": 0.25,
+   "analytics": 0.82,
+   "live": 0.13,
+   "script": 0.6,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 0.2,
+    "why": "CaseOh clips pull 40,732 views/hour this week"
+   },
+   "study": {
+    "score": 0.25,
+    "why": "top channels rarely break out with CaseOh"
+   },
+   "analytics": {
+    "score": 0.82,
+    "why": "CaseOh clips spread 1.6x our typical clip; Twitch clip moments do 2.0x; no clear premise, may be visual-only; stream is 4h old (fresh)"
+   },
+   "live": {
+    "score": 0.13,
+    "why": "Twitch clip at 540/h"
+   },
+   "script": {
+    "score": 0.6,
+    "why": "draft title: \"CaseOh: \"W Plan\" 😭\"; no captions yet, writing blind"
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-19T02:09:16Z",
+  "council_why": "CaseOh's clip has a high trend researcher score and a clear, engaging premise, with a fresh stream that can capitalize on the clip's potential.",
+  "post_utc": "2026-11-19 08:00",
+  "post_local": "Thu 03:00 AM ET",
+  "title": "CaseOh: \"W Plan\" 🔥",
+  "hook": "CHAD, WHAT COLOR LOOKS GOOD ON",
+  "context": "CaseOh live on Twitch",
+  "take": "That question, “Chad, what color looks?” sets up the moment. Listen to what follows.",
+  "summary": "CaseOh during \"W PLAN\". W PLAN.",
+  "tiktok_caption": "CaseOh: \"W Plan\" 🔥 Is this the cleanest one yet?",
+  "hashtags": [
+   "#caseoh",
+   "#plan"
+  ],
+  "tags": [
+   "caseoh",
+   "case oh",
+   "caseoh clips",
+   "streamer clips"
+  ],
+  "draft": false,
+  "writer": "free",
+  "description": "CaseOh during \"W PLAN\". W PLAN.\n\nFull stream by CaseOh: https://www.twitch.tv/caseoh_/clip/SwissBenevolentRhinocerosRedCoat-_qn39IFUSFPG0nep\nGo support CaseOh, all credit to them.\n\n#caseoh #plan #shorts",
+  "key": "SwissBenevolentRhinocerosRedCoat-_qn39IFUSFPG0nep@0",
+  "permission": "fan clipping is widespread and tolerated; no official program checked (Nov 2026)",
+  "payoff": "So, “Chad, what color looks good?” Drop your answer below.",
+  "script_source": "transcript",
+  "upload_tags": [
+   "caseoh",
+   "case oh",
+   "caseoh clips",
+   "streamer clips",
+   "shorts"
+  ],
+  "held": "originality: template narration (\"sets up the moment\"); YouTube counts template voice-overs as adding nothing; originality: the script came from the fill-in writer, not a model, so the narration is a template (set GEMINI_API_KEY or GROQ_API_KEY, both free)"
+ }
+]

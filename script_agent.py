@@ -256,6 +256,11 @@ Title pattern: the creator's name first, then exactly what happens in plain, pun
 for (the names here are placeholders, never copy them): "<Creator> Crashes Out After <Person> Scores Again 😭". No questions, no hashtags, no ALL-CAPS words, no clickbait the
 clip doesn't deliver.
 
+When a clip is tied to news people will look up (an award, a win or record, an announcement, a famous guest, a
+collab, a big game or tournament), put that event or guest in the title in the words people would search for it, as
+in "<Creator> Wins <Award> At The <Event>". Our only Short to pass 50 views did exactly this and got most of its
+views from outside the Shorts feed.
+
 Use the stream title, the viewer comments and the transcript together to work out what actually happens in each clip.
 Use only what they support. Don't invent names, scores or events. If what happens is unclear, name the specific
 thing that is said or shown (a quoted line, the game, the event, the person), never a stock reaction. Banned because
@@ -399,12 +404,42 @@ def _gemini(prompt):
     raise last or RuntimeError("Gemini gave no answer")
 
 
+GROQ_PREFER = ("llama-4", "llama-3.3-70b", "gpt-oss-120b", "qwen", "llama-3.1-70b", "gpt-oss", "llama")
+
+
+def groq_models(key):
+    """Groq's live chat models, best first. Groq retires model names often (Nov 18 2026: the old default
+    llama-3.3-70b-versatile answered 404), so pick from what the key can actually use."""
+    try:
+        r = requests.get("https://api.groq.com/openai/v1/models", headers={"Authorization": f"Bearer {key}"}, timeout=30)
+        r.raise_for_status()
+        ids = [m["id"] for m in r.json().get("data", []) if m.get("active", True)]
+    except Exception as e:
+        print(f"  Groq model list failed ({type(e).__name__}); trying the default")
+        return []
+    ids = [i for i in ids if not re.search(r"whisper|tts|guard|embed|vision|audio|playai|compound", i)]
+    rank = lambda i: next((n for n, p in enumerate(GROQ_PREFER) if p in i), len(GROQ_PREFER))
+    return sorted(ids, key=rank)[:3]
+
+
 def _groq(prompt):
     key = os.environ.get("GROQ_API_KEY")
     if not key:
         return None
-    return _openai_compat("https://api.groq.com/openai/v1/chat/completions", key,
-                          os.environ.get("GROQ_MODEL", "llama-3.3-70b-versatile"), prompt)
+    url = "https://api.groq.com/openai/v1/chat/completions"
+    pinned = os.environ.get("GROQ_MODEL")
+    models = [pinned] if pinned else (groq_models(key) or ["llama-3.3-70b-versatile"])
+    print(f"Groq models: {', '.join(models)}")
+    last = None
+    for model in models:
+        try:
+            out = _openai_compat(url, key, model, prompt)
+            print(f"Groq answered with {model}.")
+            return out
+        except Exception as e:  # retired name (404), busy (429/503), timeout: next model
+            last = e
+            print(f"  Groq {model}: {type(e).__name__}: {str(e)[:120]}")
+    raise last or RuntimeError("Groq gave no answer")
 
 
 def _api(prompt):
@@ -499,10 +534,31 @@ stop stops leaves left goes going makes made takes took asks asked tells told sa
 first time last back down without while still really actually completely totally instantly""".split())
 
 
+# Games, events and places streamers talk about every day. Naming them is context, not a made-up claim, so the
+# grounding check below never counts them as invented names.
+KNOWN_NAMES = set("""rainbow siege fortnite minecraft roblox valorant league legends apex warzone gta roleplay elden
+ring radahn souls dark fifa madden nba2k chess kick twitch youtube tiktok discord streamer streamers awards subathon
+irl japan korea london paris dubai miami vegas tokyo europe america halloween christmas thanksgiving nfl nba
+champion champions diamond ranked platinum overwatch counter strike rust lethal company phasmophobia""".split())
+
+
+def proper_names(script):
+    """Lower-cased words the model capitalises in the middle of a sentence in its own sentence-case lines (context,
+    take, payoff, summary, TikTok caption): the people, places, games and events it is talking about."""
+    names = set()
+    for k in ("context", "take", "payoff", "summary", "tiktok_caption"):
+        for sent in re.split(r"(?<=[.!?:])\s+|\n", script.get(k) or ""):
+            for w in re.findall(r"[A-Za-z][A-Za-z']+", sent)[1:]:
+                if w[0].isupper() and not w.isupper():
+                    names.add(w.lower())
+    return names
+
+
 def ungrounded(clip, script):
     """True when a model's script can't be trusted on screen: it uses a word moderation reads as crime, violence, drugs
-    or sex; the clip has almost no words to go on; or the title, hook and context line bring in two or more things
-    (names, events) that appear nowhere in the stream title, comments or transcript."""
+    or sex; or the title and hook name people or events that appear nowhere in the stream title, comments or
+    transcript (two names, or one when the clip has almost no words to go on). For the local/free writers the bar
+    is stricter: any two unbacked words, or a clip with too little said."""
     transcript = clip.get("transcript") or ""
     source = " ".join([transcript, clip.get("video_title", ""), clip.get("creator", "")] + (clip.get("quotes") or [])
                       + src_of(clip).get("aliases", [])).lower()
@@ -514,17 +570,28 @@ def ungrounded(clip, script):
         return True
     strong = script.get("writer") in ("gemini", "groq", "api", "claude-code")
     words = re.findall(r"[a-z][a-z']{3,}", " ".join(script.get(k) or "" for k in ("title", "hook")).lower())
-    invented = [w for w in words if w not in REACTION_WORDS and w not in free_writer.STOP and w[:5] not in source]  # "snapping" ~ "snapped"
-    if not strong:  # the local model's context line drifts too; a real model's context line is meant to add context
+    invented = list(dict.fromkeys(w for w in words if w not in REACTION_WORDS and w not in free_writer.STOP
+                                  and w[:5] not in source))  # "snapping" ~ "snapped"
+    thin = len(transcript.split()) < 25 and max((len(q.split()) for q in clip.get("quotes") or []), default=0) < 8
+    if strong:
+        # Nov 18: this check threw out 49 Gemini scripts over ordinary words ("questions", "gameplay", "sudden",
+        # "horror", "rainbow" for Jynxzi's own game), the free writer's template script was then held by the
+        # originality gate, and whole days posted nothing. A real model only gets thrown out for NAMES it made up:
+        # a title/hook word the model itself writes capitalised mid-sentence in its context/take/payoff (so a
+        # person, place or event), that appears nowhere in the stream title, comments or transcript.
+        names = proper_names(script)
+        made_up = [w for w in invented if w in names and w not in KNOWN_NAMES]
+        limit = 1 if thin else 2  # with almost nothing said, even one invented name is a guess
+        bad = len(made_up) >= limit or len(invented) >= 7  # 7+ unbacked words: the model wrote about another clip
+        shown = made_up or invented
+    else:  # the local model's context line drifts too
         ctx = re.findall(r"[a-z][a-z']{3,}", (script.get("context") or "").lower())
         invented += [w for w in ctx if w not in REACTION_WORDS and w not in free_writer.STOP and w[:5] not in source]
-    thin = len(transcript.split()) < 25 and max((len(q.split()) for q in clip.get("quotes") or []), default=0) < 8
-    # A real model may use two words of its own in the title/hook (Nov 13: Gemini scripts were thrown out over
-    # "stream", "audience", "teammate" in the context line); names and events it made up still trip this.
-    allowed = 3 if strong else 2
-    if thin or len(invented) >= allowed:
+        bad = thin or len(invented) >= 2
+        shown = invented
+    if bad:
         print(f"  [{clip.get('id')}] model title \"{script.get('title')}\" isn't backed by what's said"
-              + (f" ({', '.join(invented)})" if invented else " (too little to go on)") + "; using the free writer")
+              + (f" ({', '.join(shown)})" if shown else " (too little to go on)") + "; using the free writer")
         return True
     return False
 

@@ -51,6 +51,39 @@ PREMISE = re.compile(r"\$\d|\b(1v1|bet|challenge|vs\.?|versus|race|guess|rate|fi
                      r"loser|winner|dare|prank|reacts?|meets?|tries|test)\b|\?", re.I)
 
 
+# Moments tied to news people search for: our only Short past 50 views (Nov 13, "Jynxzi Wins Gamer Of The Year At
+# The Streamer Awards") named an event and got 85% of its views from outside the Shorts feed; the runner-up named a
+# guest (Frost Children). Vague reaction moments ("Kai Cenat Goes Crazy") never got a feed test.
+NEWS = re.compile(r"\b(awards?|wins?|won|winner|champions?|championship|record|world record|announce\w*|reveal\w*|"
+                  r"debut|finale|tournament|final|birthday|wedding|signs?|signed|banned|unbanned|returns to|comeback|first ever|"
+                  r"collab|meets?|ft\.?|feat\.?|with|x|vs\.?|versus|interview\w*|premiere|launch\w*|"
+                  r"gamer of the year|streamer of the year|goty)\b", re.I)
+_TITLE_FILLER = set("""I A The And Or But Of In On At To For With Is Are Was My Me He His She Her They We You It This That
+What Why How When Who LIVE Live Stream Day Part Chat W L Ep EP Clip IRL Can Return Serve From MPH Poor
+Pushing Legends Div Gamer Year Wins Of Interviews""".split())
+
+
+def news_hook(m):
+    """What makes this moment news people would look up, or None: an event word, or a named guest (a full name,
+    two capitalised words in a row, in the source title that isn't the creator's)."""
+    title = m.get("video_title") or ""
+    hit = NEWS.search(title) or NEWS.search(" ".join(m.get("quotes") or []))
+    word = hit.group(0).lower() if hit else None
+    if word and word not in ("with", "x", "meets", "meet", "vs", "vs.", "versus", "ft", "ft.", "feat", "feat."):
+        return word
+    own = {a.lower() for a in SOURCES.get(m.get("source"), {}).get("aliases", []) for a in a.split()}
+    filler = {w.lower() for w in _TITLE_FILLER} | script_agent.REACTION_WORDS | free_writer.STOP
+    filler |= {"asks", "plays", "reacts", "watches", "tries", "pushing", "update", "new", "agent"}
+    collab = word is not None  # "x", "with", "meets", "vs": an all-caps title only counts a guest after one of these
+    words = re.findall(r"[A-Za-z][A-Za-z']*", title)
+    for a, b in zip(words, words[1:]):
+        if (a.isupper() or b.isupper()) and not collab:
+            continue
+        if a[0].isupper() and b[0].isupper() and not {a.lower(), b.lower()} & (filler | own) and len(a) > 2 and len(b) > 2:
+            return f"guest {a} {b}"
+    return None
+
+
 def weights(state):
     w = dict(DEFAULT_WEIGHTS)
     w.update((state.get("council") or {}).get("weights") or {})
@@ -104,12 +137,15 @@ def analytics_vote(m, ctx):
     text = " ".join(m["quotes"] + [m["video_title"], m.get("captions") or ""])
     premise = bool(PREMISE.search(text))
     fresh = 0.5 ** (m["age_h"] / 24)
-    s = _clip01(0.25 * math.log2(1 + spread * found) + 0.25 * premise + 0.3 * fresh + 0.1)
+    news = news_hook(m)
+    s = _clip01(0.25 * math.log2(1 + spread * found) + 0.2 * premise + 0.3 * fresh + 0.25 * bool(news) + 0.05)
     why = (f"{SOURCES[m['source']]['short']} clips spread {spread:.1f}x our typical clip" if spread != 1.0
            else f"no track record for {SOURCES[m['source']]['short']} on our channel yet")
     if found != 1.0:
         why += f"; {how} moments do {found:.1f}x"
     why += "; has a spoken premise (bet/question/challenge)" if premise else "; no clear premise, may be visual-only"
+    if news:
+        why += f"; news people search for ({news}), like our only 50+ view Short"
     why += f"; stream is {m['age_h']:.0f}h old" + (" (fresh)" if m["age_h"] <= 12 else " (other clippers had time)" if m["age_h"] > 48 else "")
     return s, why
 
