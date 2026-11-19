@@ -1,0 +1,312 @@
+[
+ {
+  "id": 1,
+  "source": "n3on",
+  "creator": "N3on",
+  "platform": "youtube",
+  "video_id": "I1l955pjhGQ",
+  "video_title": "PLAYING GTA 6 FOR THE FIRST TIME",
+  "url": "https://www.youtube.com/watch?v=I1l955pjhGQ&t=17619s",
+  "moment": "4:53:39",
+  "start": 17599,
+  "end": 17629,
+  "rank": 26.53,
+  "signal": "chat went 11.8x its normal pace",
+  "signals": [
+   "chat spike"
+  ],
+  "quotes": [
+   "ww",
+   "w",
+   "w"
+  ],
+  "stream_age_h": 1.5,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": null
+  },
+  "council": {
+   "trend": 0.48,
+   "study": 0.25,
+   "analytics": 0.86,
+   "live": 0.55,
+   "script": 0.35,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 0.48,
+    "why": "N3on clips pull 1,485 views/hour this week, up 165% since the last scan"
+   },
+   "study": {
+    "score": 0.25,
+    "why": "top channels rarely break out with N3on"
+   },
+   "analytics": {
+    "score": 0.86,
+    "why": "N3on clips spread 0.8x our typical clip; chat spike moments do 1.1x; has a spoken premise (bet/question/challenge); stream is 2h old (fresh)"
+   },
+   "live": {
+    "score": 0.55,
+    "why": "chat went 11.8x"
+   },
+   "script": {
+    "score": 0.35,
+    "why": "draft title: \"N3on At Playing GTA 6 🔥\"; no captions yet, writing blind"
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-18T19:30:35Z",
+  "council_why": "N3on at 4:53:39 of 'PLAYING GTA 6 FOR THE FIRST TIME' has a high chat spike, a clear premise, and a trending increase in views.",
+  "post_utc": "2026-11-18 21:00",
+  "post_local": "Wed 04:00 PM ET",
+  "title": "N3on At Playing GTA 6 🔥",
+  "hook": "DID HE REALLY DO THAT",
+  "context": "N3on live: Playing GTA 6 FOR THE First Time",
+  "take": "",
+  "summary": "N3on during \"PLAYING GTA 6 FOR THE FIRST TIME\".",
+  "tiktok_caption": "N3on At Playing GTA 6 🔥 Is this the cleanest one yet?",
+  "hashtags": [
+   "#n3on",
+   "#playinggta6"
+  ],
+  "tags": [
+   "n3on",
+   "neon",
+   "playing",
+   "first",
+   "time",
+   "n3on clips",
+   "streamer clips"
+  ],
+  "draft": false,
+  "writer": "free",
+  "description": "N3on during \"PLAYING GTA 6 FOR THE FIRST TIME\".\n\nFull stream by N3on: https://www.youtube.com/watch?v=I1l955pjhGQ&t=17619s\nGo support N3on, all credit to them.\n\n#n3on #playinggta6 #shorts",
+  "key": "I1l955pjhGQ@587",
+  "permission": "official paid clipping program via his Discord (creatordb.app, 2026)",
+  "payoff": "Best moment of N3on's Playing GTA 6 so far, or not even close?",
+  "script_source": "transcript",
+  "upload_tags": [
+   "n3on",
+   "neon",
+   "playing",
+   "first",
+   "time",
+   "n3on clips",
+   "streamer clips",
+   "shorts"
+  ],
+  "held": "script agent: no take"
+ },
+ {
+  "id": 2,
+  "source": "twitch_ohnepixel",
+  "creator": "ohnePixel",
+  "platform": "twitch",
+  "video_id": "2932275268",
+  "video_title": "ohnePixel tries out the strip club's private dance in GTA 6",
+  "url": "https://www.twitch.tv/videos/2932275268?t=5h55m15s",
+  "moment": "5:55:15",
+  "start": 21295,
+  "end": 21325,
+  "rank": 45.8,
+  "signal": "Twitch clip, 27,818 views (21,833/h)",
+  "signals": [
+   "twitch clip"
+  ],
+  "quotes": [
+   "ohnePixel tries out the strip club's private dance in GTA 6"
+  ],
+  "stream_age_h": 1.3,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "fast",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": "beat"
+  },
+  "council": {
+   "trend": 0.15,
+   "study": 0.25,
+   "analytics": 0.89,
+   "live": 0.55,
+   "script": 0.35,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 0.15,
+    "why": "ohnePixel clips pull 0 views/hour this week"
+   },
+   "study": {
+    "score": 0.25,
+    "why": "top channels rarely break out with ohnePixel"
+   },
+   "analytics": {
+    "score": 0.89,
+    "why": "no track record for ohnePixel on our channel yet; has a spoken premise (bet/question/challenge); stream is 1h old (fresh)"
+   },
+   "live": {
+    "score": 0.55,
+    "why": "Twitch clip at 21,833/h"
+   },
+   "script": {
+    "score": 0.35,
+    "why": "draft title: \"ohnePixel Is Left Speechless 😱\"; no captions yet, writing blind"
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-18T19:30:35Z",
+  "council_why": "ohnePixel at 5:55:15 of 'ohnePixel tries out the strip club's private dance in GTA 6' has a high Twitch clip engagement and a clear, intriguing premise.",
+  "post_utc": "2026-11-19 05:00",
+  "post_local": "Thu 12:00 AM ET",
+  "title": "ohnePixel Didn't See This Coming 😱",
+  "hook": "WAIT FOR IT",
+  "context": "ohnePixel live",
+  "take": "",
+  "summary": "ohnePixel live.",
+  "tiktok_caption": "ohnePixel reacts during a live stream.",
+  "hashtags": [
+   "#ohnepixel"
+  ],
+  "tags": [
+   "ohnepixel",
+   "ohnepixel clips",
+   "streamer clips"
+  ],
+  "draft": false,
+  "writer": "free",
+  "description": "ohnePixel live.\n\nFull stream by ohnePixel: https://www.twitch.tv/videos/2932275268?t=5h55m15s\nGo support ohnePixel, all credit to them.\n\n#ohnepixel #shorts",
+  "key": "2932275268@710",
+  "permission": "auto-added: trending on Twitch (clipping policy not checked)",
+  "payoff": "",
+  "script_source": "comments",
+  "upload_tags": [
+   "ohnepixel",
+   "ohnepixel clips",
+   "streamer clips",
+   "shorts"
+  ]
+ },
+ {
+  "id": 3,
+  "source": "jynxzi",
+  "creator": "Jynxzi",
+  "platform": "youtube",
+  "video_id": "9H6yfvaT7I8",
+  "video_title": "PUSHING LEGEND DIV IN R6",
+  "url": "https://www.youtube.com/watch?v=9H6yfvaT7I8&t=26284s",
+  "moment": "7:18:04",
+  "start": 26264,
+  "end": 26294,
+  "rank": 25.37,
+  "signal": "chat went 18.7x its normal pace",
+  "signals": [
+   "chat spike"
+  ],
+  "quotes": [
+   "L",
+   "W",
+   "L"
+  ],
+  "stream_age_h": 18.2,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 2,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": "caption_words"
+  },
+  "council": {
+   "trend": 0.08,
+   "study": 0.25,
+   "analytics": 0.9,
+   "live": 0.55,
+   "script": 0.75,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 0.08,
+    "why": "Jynxzi clips pull 40,519 views/hour this week, down 61% since the last scan"
+   },
+   "study": {
+    "score": 0.25,
+    "why": "top channels rarely break out with Jynxzi"
+   },
+   "analytics": {
+    "score": 0.9,
+    "why": "Jynxzi clips spread 1.6x our typical clip; chat spike moments do 1.1x; has a spoken premise (bet/question/challenge); stream is 18h old"
+   },
+   "live": {
+    "score": 0.55,
+    "why": "chat went 18.7x"
+   },
+   "script": {
+    "score": 0.75,
+    "why": "draft title: \"Jynxzi At Pushing Legend DIV 🔥\""
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-18T19:30:35Z",
+  "council_why": "Jynxzi at 7:18:04 of 'PUSHING LEGEND DIV IN R6' has a strong chat reaction and a clear spoken premise, despite a slight decrease in view trends.",
+  "post_utc": "2026-11-19 00:00",
+  "post_local": "Wed 07:00 PM ET",
+  "title": "Jynxzi At Pushing Legend DIV 🔥",
+  "hook": "HE CALLED IT",
+  "context": "Jynxzi live: Pushing Legend DIV IN R6",
+  "take": "",
+  "summary": "Jynxzi during \"PUSHING LEGEND DIV IN R6\".",
+  "tiktok_caption": "Jynxzi At Pushing Legend DIV in Rainbow Six Siege 🔥 Is this the cleanest one yet?",
+  "hashtags": [
+   "#jynxzi",
+   "#pushinglegenddiv"
+  ],
+  "tags": [
+   "jynxzi",
+   "pushing",
+   "legend",
+   "jynxzi clips",
+   "streamer clips"
+  ],
+  "draft": false,
+  "writer": "free",
+  "description": "Jynxzi during \"PUSHING LEGEND DIV IN R6\".\n\nFull stream by Jynxzi: https://www.youtube.com/watch?v=9H6yfvaT7I8&t=26284s\nGo support Jynxzi, all credit to them.\n\n#jynxzi #pushinglegenddiv #shorts",
+  "key": "9H6yfvaT7I8@876",
+  "permission": "fan clipping tolerated; check for a Whop campaign",
+  "payoff": "Best moment of Jynxzi's Pushing Legend DIV so far, or not even close?",
+  "script_source": "captions",
+  "upload_tags": [
+   "jynxzi",
+   "pushing",
+   "legend",
+   "jynxzi clips",
+   "streamer clips",
+   "shorts"
+  ]
+ }
+]

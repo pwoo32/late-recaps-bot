@@ -1,0 +1,324 @@
+[
+ {
+  "id": 1,
+  "source": "twitch_jasontheween",
+  "creator": "jasontheween",
+  "platform": "twitch",
+  "video_id": "2932190650",
+  "video_title": "Reset",
+  "url": "https://www.twitch.tv/videos/2932190650?t=11h19m58s",
+  "moment": "11:19:58",
+  "start": 40778,
+  "end": 40808,
+  "rank": 39.92,
+  "signal": "Twitch clip, 12,805 views (5,498/h)",
+  "signals": [
+   "twitch clip"
+  ],
+  "quotes": [
+   "Reset"
+  ],
+  "stream_age_h": 2.3,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": null
+  },
+  "council": {
+   "trend": 1.0,
+   "study": 0.25,
+   "analytics": 0.63,
+   "live": 0.37,
+   "script": 0.35,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 1.0,
+    "why": "jasontheween clips pull 22,864 views/hour this week, up 45729% since the last scan"
+   },
+   "study": {
+    "score": 0.25,
+    "why": "top channels rarely break out with jasontheween"
+   },
+   "analytics": {
+    "score": 0.63,
+    "why": "no track record for jasontheween on our channel yet; no clear premise, may be visual-only; stream is 2h old (fresh)"
+   },
+   "live": {
+    "score": 0.37,
+    "why": "Twitch clip at 5,498/h"
+   },
+   "script": {
+    "score": 0.35,
+    "why": "draft title: \"jasontheween At Reset 😱\"; no captions yet, writing blind"
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-18T23:41:49Z",
+  "council_why": "jasontheween has seen an extraordinary increase in views, and his clips are highly engaging with a clear premise, despite being from an older stream.",
+  "post_utc": "2026-11-19 05:00",
+  "post_local": "Thu 12:00 AM ET",
+  "title": "jasontheween At Reset 😱",
+  "hook": "WAIT FOR THE END",
+  "context": "jasontheween live: Reset",
+  "take": "jasontheween says “Oh no, no, no, no, no, no” and that's the line everything turns on.",
+  "summary": "jasontheween during \"Reset\".",
+  "tiktok_caption": "jasontheween At Reset 😳 Did you see that coming? #jasontheween #livestream #jasontheweenclips #streamerclips #reset",
+  "hashtags": [
+   "#jasontheween",
+   "#reset"
+  ],
+  "tags": [
+   "jasontheween",
+   "reset",
+   "jasontheween clips",
+   "streamer clips"
+  ],
+  "draft": false,
+  "writer": "free",
+  "description": "jasontheween during \"Reset\".\n\nFull stream by jasontheween: https://www.twitch.tv/videos/2932190650?t=11h19m58s\nGo support jasontheween, all credit to them.\n\n#jasontheween #reset #shorts",
+  "key": "2932190650@1359",
+  "permission": "auto-added: trending on Twitch (clipping policy not checked)",
+  "payoff": "Best moment of jasontheween's Reset so far, or not even close?",
+  "script_source": "transcript",
+  "upload_tags": [
+   "jasontheween",
+   "reset",
+   "jasontheween clips",
+   "streamer clips",
+   "shorts"
+  ],
+  "held": "originality: stock line \"WAIT FOR THE END\" could go on any clip; the script needs something specific to this one; originality: template narration (\"the line everything turns on\"); YouTube counts template voice-overs as adding nothing; originality: the script came from the fill-in writer, not a model, so the narration is a template (set GEMINI_API_KEY or GROQ_API_KEY, both free); originality: only 8 words are said in the clip, too little to comment on; copyright: only 16% of the clip is speech (likely music or noise, and nothing to react to)",
+  "tiktok_id": "v_inbox_file~v2.7709667223329359885"
+ },
+ {
+  "id": 2,
+  "source": "plaqueboymax",
+  "creator": "PlaqueBoyMax",
+  "platform": "twitch_clip",
+  "video_id": "ResoluteTolerantDuckKappaWealth-qyC2FmCSQzQsvWkm",
+  "video_title": "UNDERGROUND (nickatnite) VS MAINSTREAM (zias and b lou) AUX BATTLE! SEND BEATS FOR TAY K!",
+  "url": "https://www.twitch.tv/plaqueboymax/clip/ResoluteTolerantDuckKappaWealth-qyC2FmCSQzQsvWkm",
+  "moment": "0:00",
+  "start": 0,
+  "end": 30,
+  "rank": 27.87,
+  "signal": "Twitch clip, 1,713 views (37/h)",
+  "signals": [
+   "twitch clip"
+  ],
+  "quotes": [
+   "UNDERGROUND (nickatnite) VS MAINSTREAM (zias and b lou) AUX BATTLE! SEND BEATS FOR TAY K!"
+  ],
+  "stream_age_h": 46.5,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "fast",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": "beat"
+  },
+  "council": {
+   "trend": 0.61,
+   "study": 0.25,
+   "analytics": 0.82,
+   "live": 0.1,
+   "script": 0.35,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 0.61,
+    "why": "Max clips pull 114 views/hour this week, up 229% since the last scan"
+   },
+   "study": {
+    "score": 0.25,
+    "why": "top channels rarely break out with Max"
+   },
+   "analytics": {
+    "score": 0.82,
+    "why": "no track record for Max on our channel yet; Twitch clip moments do 2.0x; has a spoken premise (bet/question/challenge); stream is 46h old"
+   },
+   "live": {
+    "score": 0.1,
+    "why": "Twitch clip at 37/h"
+   },
+   "script": {
+    "score": 0.35,
+    "why": "draft title: \"Max Is Left Speechless 😱\"; no captions yet, writing blind"
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-18T23:41:49Z",
+  "council_why": "PlaqueBoyMax's clip in this battle has a clear spoken premise, which could attract more viewers, and his clips generally perform well.",
+  "post_utc": "2026-11-19 08:00",
+  "post_local": "Thu 03:00 AM ET",
+  "title": "Max Explains The Rules For His Aux Battle 🎧🔥",
+  "hook": "UNDERGROUND VS MAINSTREAM AUX BATTLE",
+  "context": "Max breaks down the Underground vs Mainstream Aux Battle setup.",
+  "take": "Max set up an underground versus mainstream battle between nickatnite and Zias with B Lou, but explaining the rules got sidelined before the music even started.",
+  "summary": "Max explains the rules for the underground versus mainstream aux battle with nickatnite, Zias, and B Lou.",
+  "tiktok_caption": "Max sets the rules for the Underground vs Mainstream Aux Battle with nickatnite and Zias & B Lou.",
+  "hashtags": [
+   "#shorts",
+   "#plaqueboymax",
+   "#funny"
+  ],
+  "tags": [
+   "plaqueboymax",
+   "max",
+   "nickatnite",
+   "zias",
+   "b lou",
+   "aux battle",
+   "underground vs mainstream",
+   "streamer clips"
+  ],
+  "draft": false,
+  "writer": "gemini",
+  "description": "Max explains the rules for the underground versus mainstream aux battle with nickatnite, Zias, and B Lou.\n\nFull stream by PlaqueBoyMax: https://www.twitch.tv/plaqueboymax/clip/ResoluteTolerantDuckKappaWealth-qyC2FmCSQzQsvWkm\nGo support PlaqueBoyMax, all credit to them.\n\n#shorts #plaqueboymax #funny",
+  "key": "ResoluteTolerantDuckKappaWealth-qyC2FmCSQzQsvWkm@0",
+  "permission": "fan clipping is widespread and tolerated; no official program checked (Nov 2026)",
+  "payoff": "Do you think the underground scene or the mainstream side takes this aux battle?",
+  "script_source": "transcript",
+  "upload_tags": [
+   "plaqueboymax",
+   "max",
+   "nickatnite",
+   "zias",
+   "b lou",
+   "aux battle",
+   "underground vs mainstream",
+   "streamer clips",
+   "plaque boy max",
+   "shorts"
+  ],
+  "held": "content: a slur is said or shown in this clip"
+ },
+ {
+  "id": 3,
+  "source": "n3on",
+  "creator": "N3on",
+  "platform": "youtube",
+  "video_id": "I1l955pjhGQ",
+  "video_title": "PLAYING GTA 6 FOR THE FIRST TIME",
+  "url": "https://www.youtube.com/watch?v=I1l955pjhGQ&t=24759s",
+  "moment": "6:52:39",
+  "start": 24739,
+  "end": 24769,
+  "rank": 21.94,
+  "signal": "chat went 7.8x its normal pace",
+  "signals": [
+   "chat spike"
+  ],
+  "quotes": [
+   "w",
+   "w",
+   "W"
+  ],
+  "stream_age_h": 5.6,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 2,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": "caption_words"
+  },
+  "council": {
+   "trend": 0.48,
+   "study": 0.25,
+   "analytics": 0.83,
+   "live": 0.55,
+   "script": 0.65,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 0.48,
+    "why": "N3on clips pull 1,485 views/hour this week, up 165% since the last scan"
+   },
+   "study": {
+    "score": 0.25,
+    "why": "top channels rarely break out with N3on"
+   },
+   "analytics": {
+    "score": 0.83,
+    "why": "N3on clips spread 0.8x our typical clip; chat spike moments do 1.1x; has a spoken premise (bet/question/challenge); stream is 6h old (fresh)"
+   },
+   "live": {
+    "score": 0.55,
+    "why": "chat went 7.8x"
+   },
+   "script": {
+    "score": 0.65,
+    "why": "draft title: \"N3on At Playing GTA 6 🔥\""
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-18T23:41:49Z",
+  "council_why": "N3on's clip has a significant chat spike, indicating high viewer engagement, and his clips typically perform well, though from an older stream.",
+  "post_utc": "2026-11-19 00:00",
+  "post_local": "Wed 07:00 PM ET",
+  "title": "N3on At Playing GTA 6 🔥",
+  "hook": "WATCH THE LAST SECOND",
+  "context": "N3on live: Playing GTA 6 FOR THE First Time",
+  "take": "N3on says “I'm comin' I'm right where I belong” and that's the line everything turns on.",
+  "summary": "N3on during \"PLAYING GTA 6 FOR THE FIRST TIME\".",
+  "tiktok_caption": "N3on At Playing GTA 6 🔥 Is this the cleanest one yet?",
+  "hashtags": [
+   "#n3on",
+   "#playinggta6"
+  ],
+  "tags": [
+   "n3on",
+   "neon",
+   "playing",
+   "first",
+   "time",
+   "n3on clips",
+   "streamer clips"
+  ],
+  "draft": false,
+  "writer": "free",
+  "description": "N3on during \"PLAYING GTA 6 FOR THE FIRST TIME\".\n\nFull stream by N3on: https://www.youtube.com/watch?v=I1l955pjhGQ&t=24759s\nGo support N3on, all credit to them.\n\n#n3on #playinggta6 #shorts",
+  "key": "I1l955pjhGQ@825",
+  "permission": "official paid clipping program via his Discord (creatordb.app, 2026)",
+  "payoff": "Best moment of N3on's Playing GTA 6 so far, or not even close?",
+  "script_source": "transcript",
+  "upload_tags": [
+   "n3on",
+   "neon",
+   "playing",
+   "first",
+   "time",
+   "n3on clips",
+   "streamer clips",
+   "shorts"
+  ],
+  "held": "originality: stock line \"WATCH THE LAST SECOND\" could go on any clip; the script needs something specific to this one; originality: template narration (\"the line everything turns on\"); YouTube counts template voice-overs as adding nothing; originality: the script came from the fill-in writer, not a model, so the narration is a template (set GEMINI_API_KEY or GROQ_API_KEY, both free); originality: only 7 words are said in the clip, too little to comment on; copyright: only 8% of the clip is speech (likely music or noise, and nothing to react to)"
+ }
+]
