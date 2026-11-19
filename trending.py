@@ -30,6 +30,7 @@ JUST_CHATTING = "509658"
 KICK_WATCH = ["xqc", "adinross", "n3on", "clix", "iceposeidon", "cuffem"]  # English, clip-friendly; edit freely
 ACTIVE_DAYS = 3        # a discovered streamer is scanned while they trended in the last 3 days
 MAX_NEW = 6            # new streamers added per run, so the day's meeting isn't flooded with unknowns
+HOT_GAMES = ["Grand Theft Auto VI"]  # always scanned on top of the top live categories while it's the big launch
 MIN_CLIP_VPH = 1500    # their best clip must be gaining at least this many views/hour to count as "going off"
 
 
@@ -79,6 +80,7 @@ def twitch_trending(h, since, now, top_games=5):
     """{login: {name, best_vph, views, clips, broadcaster_id}} from the day's fastest clips across categories."""
     games = [JUST_CHATTING] + [g["id"] for g in _twitch_get(h, "games/top", first=top_games + 1)
                                if g["id"] != JUST_CHATTING][:top_games]
+    games += [g["id"] for g in _twitch_get(h, "games", name=HOT_GAMES) if g["id"] not in games]
     by, seen = {}, set()
     for gid in games:
         for c in _twitch_get(h, "clips", game_id=gid, started_at=since.strftime("%Y-%m-%dT%H:%M:%SZ"), first=50):

@@ -21,6 +21,7 @@ GENERIC_TAGS = {"#shorts", "#fyp", "#foryou", "#foryoupage", "#viral", "#trendin
 
 # keyword in stream/clip title or quotes -> (readable name, hashtag)
 GAMES = [
+    (r"\bgta ?(?:6|vi)\b|grand theft auto (?:6|vi)\b", "GTA 6", "#gta6"),
     (r"\bgta\b|grand theft auto", "GTA", "#gta"),
     (r"\bfortnite\b", "Fortnite", "#fortnite"),
     (r"rainbow six|\br6\b|siege", "Rainbow Six Siege", "#r6"),

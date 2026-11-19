@@ -95,6 +95,12 @@ Where moments come from (`live_moments.py`, all free, no YouTube quota):
 - the daily trend scan boosts creators whose clip demand jumped since the last scan (and allows them 3 clips that
   day) and moments that match words in their fastest-growing clips this week.
 
+**Hot topics** (`HOT_TOPICS` in `channel_builder.py`): when the whole niche piles into one topic, moments about it
+rank higher. The boost scales with that topic's share of views in the latest trend scan (5% or more counts, up to 2x)
+and fades on its own when the topic cools. GTA 6 is on it for launch week (28% of streamer-clip views on Nov 18, up
+from 1-2% a week earlier); the Twitch scan also always checks the Grand Theft Auto VI category, and TikTok captions
+tag GTA 6 clips #gta6. Add a regex for the next big event.
+
 **Trending streamers** (`trending.py`): besides the fixed list in `sources.py`, each daily run looks for whoever is
 going off right now: the day's fastest-gaining Twitch clips in Just Chatting and the top live categories (any English
 streamer; needs the Twitch secrets) and the top clips of a watchlist of big Kick channels. Streamers are scored by

@@ -359,6 +359,41 @@ def youtube_candidates(yt, key, src, state, since, now, chat_budget=240, live_st
 MIN_WHOLE_CLIP_S = 15  # Twitch/Kick clips used whole must be at least this long (Nov 12: a 5s clip posted)
 TWITCH_BOOST = 1.3  # favour moments viewers clipped live on Twitch (asked for Nov 2026)
 
+# Topics the whole niche is piling into (a game launch, a big event). A moment about one ranks higher by how much of
+# the latest trend scan's views mention it, so the boost turns itself up while the topic is hot and fades when it
+# cools. Nov 19 2026: GTA 6 went from ~1-2% of streamer-clip views a week earlier to ~30% on launch week.
+HOT_TOPICS = {
+    "GTA 6": r"\bgta ?(?:6|vi)\b|grand theft auto (?:6|vi)\b|\bgta6\b",
+}
+HOT_TOPIC_MIN_SHARE = 0.05   # under 5% of the scan's views isn't a wave
+HOT_TOPIC_MAX_BOOST = 2.0    # rank multiplier cap (reached at 40% of views)
+
+
+def hot_topics(videos, niche, verbose=True):
+    """{topic: rank multiplier} for HOT_TOPICS that are a big share of the latest trend scan's views right now."""
+    pool = videos.get(niche, [])
+    total = sum(v.get("views", 0) or 0 for v in pool) or 1
+    out = {}
+    for name, pat in HOT_TOPICS.items():
+        rx = re.compile(pat, re.I)
+        hits = [v for v in pool if rx.search(" ".join([v.get("title", ""), " ".join(v.get("tags") or [])]))]
+        share = sum(v.get("views", 0) or 0 for v in hits) / total
+        if share >= HOT_TOPIC_MIN_SHARE:
+            out[name] = round(min(1 + share * 2.5, HOT_TOPIC_MAX_BOOST), 2)
+        if verbose:
+            print(f"Hot topic {name}: {len(hits)} of {len(pool)} trending clips, {share:.0%} of views"
+                  + (f" -> moments about it rank x{out[name]}" if name in out else " (not boosted)"))
+    return out
+
+
+def topic_boost(m, topics):
+    """The biggest HOT_TOPICS multiplier this moment matches (title, quotes, or its Twitch category), else 1.0."""
+    text = " ".join((m.get("quotes") or []) + [m.get("video_title") or "", m.get("game") or ""])
+    hit = [b for name, b in (topics or {}).items() if re.search(HOT_TOPICS[name], text, re.I)]
+    if hit:
+        m["hot_topic"] = max((n for n, b in topics.items() if b == max(hit)))
+    return max(hit, default=1.0)
+
 
 def twitch_candidates(key, src, since, now, h=None):
     """The creator's most-viewed Twitch clips: what viewers clipped while the stream was live. Clips whose VOD is
@@ -371,6 +406,9 @@ def twitch_candidates(key, src, since, now, h=None):
         else:  # no Twitch API keys: read the public clips page with yt-dlp instead
             tw = LM.twitch_clips_keyless(src["twitch"], since)
         print(f"  {len(tw)} Twitch clips from {src['twitch']}")
+        if h and tw:  # the clip's category name, so a GTA 6 stream counts as GTA 6 even if the clip title doesn't say it
+            names = LM.twitch_game_names(h, [c.get("game_id") for c in tw])
+            tw = [dict(c, game=names.get(c.get("game_id"), "")) for c in tw]
         clips += [dict(c, _site="twitch") for c in tw]
     if src.get("kick"):
         kk = LM.kick_clips(src["kick"], since)
@@ -387,7 +425,7 @@ def twitch_candidates(key, src, since, now, h=None):
         # (up to 4x for 60k+ views/hour). How crowded the streamer is gets applied in rank_moments ("crowd").
         score = round(math.log2(2 + c["view_count"]) * 1.5 * (1 + min(vph / 20000, 3)) * TWITCH_BOOST, 2)
         common = dict(score=score, comments=0, likes=c["view_count"], quotes=[c["title"]], source=key,
-                      video_title=c["title"], video_views=c["view_count"], clip_vph=round(vph),
+                      video_title=c["title"], video_views=c["view_count"], clip_vph=round(vph), game=c.get("game", ""),
                       age_h=round((now - created).total_seconds() / 3600, 1), signals=["twitch clip"], was_live=True)
         if c["_site"] == "kick":
             out.append(dict(common, t=0, platform="kick_clip", video_id=c["id"], duration=c["duration"], url=c["url"]))
@@ -423,7 +461,7 @@ def demand_change(niche):
     return {k: (new.get(k, 0) + 50) / (old.get(k, 0) + 50) for k in new}
 
 
-def rank_moments(moments, demand, state, words=None, change=None):
+def rank_moments(moments, demand, state, words=None, change=None, topics=None):
     top_demand = max(demand.values() or [0]) or 1
     used = set(state["used_moments"])
     claimed = set(state.get("claimed_streams") or [])  # source videos one of our clips got a copyright claim from
@@ -461,8 +499,9 @@ def rank_moments(moments, demand, state, words=None, change=None):
         # channels and YouTube's auto highlights): our copy is one of many near-duplicates (sources.py "crowd").
         crowd = src.get("crowd", 1.0)
         news = 1.4 if council.news_hook(m) else 1.0  # an event or named guest people search for (see council.NEWS)
+        wave = topic_boost(m, topics)  # a topic the whole niche is piling into right now (HOT_TOPICS, e.g. GTA 6)
         m["rank"] = round(m["score"] * hot * learned * fresh * reach * paid * rising * topical * heat * music * crowd
-                          * news, 2)
+                          * news * wave, 2)
         m["key"] = f"{m['video_id']}@{m['t'] // 30}"
         b = m["t"] // 30  # same scene: within 3 buckets (~90s) of something already posted from this stream
         m["used"] = (m["key"] in used or any(abs(b - u) <= 3 for u in used_at.get(m["video_id"], ()))
@@ -529,7 +568,7 @@ def cmd_daily(args, yt=None, state=None):
             moments += twitch_candidates(key, src, since, now, th)
         except Exception as e:  # one creator's trouble shouldn't stop the day
             print(f"  skipped {key}: {type(e).__name__}: {str(e)[:200]}")
-    ranked = rank_moments(moments, demand, state, trend_words(videos, niche), change)
+    ranked = rank_moments(moments, demand, state, trend_words(videos, niche), change, hot_topics(videos, niche))
     if spike:
         ranked = [m for m in ranked if is_spike(m)]
         if not ranked:
