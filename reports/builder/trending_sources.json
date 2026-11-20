@@ -292,5 +292,26 @@
   "crowd": 1.3,
   "best_clip_vph": 2832,
   "clips_24h": 1
+ },
+ "twitch_maya": {
+  "name": "Maya",
+  "short": "Maya",
+  "niche": "streamer",
+  "twitch": "maya",
+  "aliases": [
+   "maya"
+  ],
+  "hashtags": [
+   "#maya"
+  ],
+  "permission": "auto-added: trending on Twitch (clipping policy not checked)",
+  "campaign_cpm": null,
+  "first_seen": "2026-11-20T19:14:06+00:00",
+  "last_seen": "2026-11-20T19:14:06+00:00",
+  "trending": true,
+  "crowd_channels": 0,
+  "crowd": 1.3,
+  "best_clip_vph": 5068,
+  "clips_24h": 2
  }
 }

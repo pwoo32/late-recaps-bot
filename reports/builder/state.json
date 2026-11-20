@@ -1,18 +1,18 @@
 {
  "source_weight": {
-  "jynxzi": 2.79,
+  "jynxzi": 2.67,
   "kai_cenat": 0.31,
   "ishowspeed": 1.99,
-  "stableronaldo": 2.98,
-  "caseoh": 2.9
+  "stableronaldo": 2.99,
+  "caseoh": 2.94
  },
  "slot_weight": {
-  "2": 1.25,
-  "21": 0.31,
-  "8": 1.49,
+  "2": 1.15,
+  "21": 0.59,
+  "8": 1.69,
   "4": 0.49,
   "22": 2.49,
-  "17": 1.99,
+  "17": 2.39,
   "6": 2.99,
   "1": 1.49
  },
@@ -148,7 +148,10 @@
   "InventiveStylishSwanTBCheesePull-bpUxg33iLnxUyEOG@0",
   "qSyo5d-dVzA@1017",
   "qSyo5d-dVzA@240",
-  "2932442046@548"
+  "2932442046@548",
+  "hwSg39yIBGU@488",
+  "qSyo5d-dVzA@1021",
+  "2933599748@692"
  ],
  "queued": {
   "L6S9Vb3RLy4@186": {
@@ -2149,6 +2152,84 @@
     "instant",
     "speechless"
    ]
+  },
+  "hwSg39yIBGU@488": {
+   "title": "Speed Reacts To Bag In GTA 6 \ud83d\ude2d",
+   "source": "ishowspeed",
+   "post_utc": "2026-11-21 05:00",
+   "recipe": {
+    "length": 30,
+    "punch": 0.14,
+    "beat": "normal",
+    "caption_words": 3,
+    "gap": 0.6,
+    "layout": "face34",
+    "test": null
+   },
+   "council": {
+    "trend": 0.78,
+    "study": 0.96,
+    "analytics": 0.54,
+    "live": 0.45,
+    "script": 0.35,
+    "audience": 0.5
+   },
+   "video_id": "UPjA5ZOmJB4",
+   "words": [
+    "details",
+    "exploring",
+    "flashbacks",
+    "graphics",
+    "here",
+    "know",
+    "playing",
+    "seeing",
+    "wanted"
+   ]
+  },
+  "qSyo5d-dVzA@1021": {
+   "title": "Speed Reacts To GTA 6 Scene Live \ud83d\ude31",
+   "source": "ishowspeed",
+   "post_utc": "2026-11-20 22:00",
+   "recipe": {
+    "length": 30,
+    "punch": 0.14,
+    "beat": "normal",
+    "caption_words": 2,
+    "gap": 0.6,
+    "layout": "face34",
+    "test": "caption_words"
+   },
+   "council": {
+    "trend": 0.88,
+    "study": 0.96,
+    "analytics": 0.42,
+    "live": 0.45,
+    "script": 0.35,
+    "audience": 0.5
+   }
+  },
+  "2933599748@692": {
+   "title": "ohnePixel Calls Out GTA 6 Mission Difficulty \ud83c\udfae",
+   "source": "twitch_ohnepixel",
+   "post_utc": "2026-11-21 01:00",
+   "recipe": {
+    "length": 30,
+    "punch": 0.14,
+    "beat": "normal",
+    "caption_words": 3,
+    "gap": 0.35,
+    "layout": "face34",
+    "test": "gap"
+   },
+   "council": {
+    "trend": 1.0,
+    "study": 0.25,
+    "analytics": 0.69,
+    "live": 0.15,
+    "script": 0.35,
+    "audience": 0.5
+   }
   }
  },
  "channel": "UCbK9EejOk5UVzI_l8F3f8kA",
@@ -2320,9 +2401,14 @@
  },
  "own_results": [
   {
+   "title": "Dinah Starts The Stream Laughing Uncontrollably \ud83d\ude2d\ud83d\ude02",
+   "views": 3,
+   "lift": 3.0
+  },
+  {
    "title": "CaseOh Get Jump Scared Mid Game \ud83d\ude2d",
-   "views": 13,
-   "lift": 13.0
+   "views": 15,
+   "lift": 15.0
   },
   {
    "title": "Ronaldo Locks In During Exterminauts Interview \ud83d\udc80",
@@ -2463,11 +2549,6 @@
    "title": "Kai Cenat Shows Off The AMP House Halloween Party \ud83c\udf83",
    "views": 0,
    "lift": 0.0
-  },
-  {
-   "title": "Speed Won't Go Down There In Spider-Man Suit \ud83d\udd77\ufe0f",
-   "views": 0,
-   "lift": 0.0
   }
  ],
  "tiktok": {
@@ -2475,209 +2556,6 @@
   "mode": "inbox"
  },
  "chat_spikes": {
-  "SZA_mBnRNNc": [
-   {
-    "t": 1174,
-    "ratio": 3.5,
-    "msgs": 304,
-    "sample": [
-     "W",
-     "W",
-     "W"
-    ]
-   },
-   {
-    "t": 1899,
-    "ratio": 3.2,
-    "msgs": 226,
-    "sample": [
-     "what changed from his face",
-     "Nah"
-    ]
-   },
-   {
-    "t": 1349,
-    "ratio": 2.8,
-    "msgs": 199,
-    "sample": [
-     "w",
-     " The nails crazy ",
-     "hell nahhhhh"
-    ]
-   },
-   {
-    "t": 4274,
-    "ratio": 2.6,
-    "msgs": 189,
-    "sample": [
-     "w",
-     "w",
-     "ww"
-    ]
-   },
-   {
-    "t": 7854,
-    "ratio": 2.5,
-    "msgs": 203,
-    "sample": [
-     "LMAOO",
-     "WTF",
-     "yo",
-     "bro sweaty",
-     "WTF"
-    ]
-   },
-   {
-    "t": 3309,
-    "ratio": 2.5,
-    "msgs": 135,
-    "sample": [
-     "W",
-     "W ",
-     "W ANGLES",
-     "W",
-     "w angles "
-    ]
-   }
-  ],
-  "xGWaMnF6bVc": [],
-  "nltIgsramMI": [
-   {
-    "t": 17384,
-    "ratio": 23.8,
-    "msgs": 69,
-    "sample": [
-     "Ww",
-     "Ww",
-     "W",
-     "W",
-     "W"
-    ]
-   },
-   {
-    "t": 21234,
-    "ratio": 13.2,
-    "msgs": 54,
-    "sample": [
-     "w",
-     "w",
-     "w",
-     "w",
-     "w"
-    ]
-   },
-   {
-    "t": 1884,
-    "ratio": 13.1,
-    "msgs": 88,
-    "sample": [
-     "l",
-     "W",
-     "L",
-     "L",
-     "L"
-    ]
-   },
-   {
-    "t": 16914,
-    "ratio": 12.7,
-    "msgs": 55,
-    "sample": [
-     "L",
-     "L",
-     "L",
-     "L",
-     "L"
-    ]
-   },
-   {
-    "t": 15314,
-    "ratio": 11.8,
-    "msgs": 59,
-    "sample": [
-     "L",
-     "L",
-     "L",
-     "L",
-     "L"
-    ]
-   },
-   {
-    "t": 12569,
-    "ratio": 10.3,
-    "msgs": 36,
-    "sample": [
-     "Hayden watching a bro cry over game.. ",
-     "wattup jynxy this is my first time on yo live bro I love yo fanmail vids man",
-     "w",
-     "w",
-     "w"
-    ]
-   }
-  ],
-  "xyeuADJsOw4": [],
-  "DqVN39N0uXc": [
-   {
-    "t": 14514,
-    "ratio": 9.6,
-    "msgs": 50,
-    "sample": [
-     "mod's????",
-     "L",
-     "L",
-     "L",
-     "L"
-    ]
-   },
-   {
-    "t": 7439,
-    "ratio": 9.6,
-    "msgs": 56,
-    "sample": [
-     "W",
-     "w",
-     "w",
-     "w",
-     "w"
-    ]
-   },
-   {
-    "t": 9074,
-    "ratio": 8.9,
-    "msgs": 31,
-    "sample": [
-     "bro blind deaf and dumb",
-     "lll",
-     "l",
-     "l",
-     "ll"
-    ]
-   },
-   {
-    "t": 6729,
-    "ratio": 8.1,
-    "msgs": 56,
-    "sample": [
-     "W",
-     "ll",
-     "l",
-     "W",
-     "l"
-    ]
-   },
-   {
-    "t": 2614,
-    "ratio": 6.8,
-    "msgs": 42,
-    "sample": [
-     "w",
-     "w",
-     "w",
-     "w",
-     "w"
-    ]
-   }
-  ],
   "jdV0drr9PsA": [
    {
     "t": 2794,
@@ -4016,7 +3894,137 @@
     ]
    }
   ],
-  "VZqAPdUvqnQ": []
+  "VZqAPdUvqnQ": [],
+  "hwSg39yIBGU": [],
+  "OIeLbmyraRQ": [],
+  "yX4DH_msPkI": [
+   {
+    "t": 41609,
+    "ratio": 21.9,
+    "msgs": 272,
+    "sample": []
+   },
+   {
+    "t": 12659,
+    "ratio": 10.8,
+    "msgs": 291,
+    "sample": [
+     "Mafia For Life !!! :victory_hand::blue_heart::blue_heart::blue_heart::chequered_flag:",
+     "Yoooooooo",
+     "yooo",
+     "W"
+    ]
+   },
+   {
+    "t": 32124,
+    "ratio": 10.7,
+    "msgs": 50,
+    "sample": [
+     "W",
+     "w",
+     "w",
+     "W Ben",
+     "W"
+    ]
+   },
+   {
+    "t": 36479,
+    "ratio": 8.4,
+    "msgs": 96,
+    "sample": [
+     "to much bro",
+     "wtf",
+     "Bro you\u2019re fine",
+     "L vape",
+     "W PEE"
+    ]
+   },
+   {
+    "t": 17459,
+    "ratio": 8.4,
+    "msgs": 223,
+    "sample": []
+   },
+   {
+    "t": 35009,
+    "ratio": 7.9,
+    "msgs": 130,
+    "sample": [
+     "did you find Bendadonnn crib in the game???"
+    ]
+   }
+  ],
+  "5tdj53ioJ-c": [],
+  "UgAvjzb6o2g": [
+   {
+    "t": 23914,
+    "ratio": 24.6,
+    "msgs": 69,
+    "sample": [
+     "w",
+     "w",
+     "w",
+     "w",
+     "w"
+    ]
+   },
+   {
+    "t": 10744,
+    "ratio": 18.5,
+    "msgs": 53,
+    "sample": [
+     "w",
+     "w",
+     "w",
+     "w",
+     "w"
+    ]
+   },
+   {
+    "t": 19634,
+    "ratio": 17.8,
+    "msgs": 86,
+    "sample": [
+     "W",
+     "W",
+     "W",
+     "W",
+     "W"
+    ]
+   },
+   {
+    "t": 17369,
+    "ratio": 14.1,
+    "msgs": 77,
+    "sample": [
+     "w",
+     "LMAO",
+     "w",
+     "w",
+     "w"
+    ]
+   },
+   {
+    "t": 3564,
+    "ratio": 13.2,
+    "msgs": 92,
+    "sample": [
+     "w",
+     "w",
+     "w",
+     "w",
+     "w"
+    ]
+   },
+   {
+    "t": 10269,
+    "ratio": 12.8,
+    "msgs": 111,
+    "sample": [
+     "yo jinx hows the game so far?"
+    ]
+   }
+  ]
  },
  "edit": {
   "stats": {

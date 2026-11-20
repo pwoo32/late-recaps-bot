@@ -1,0 +1,314 @@
+{
+ "study_run": "channels_streamer_2026-11-20_1913",
+ "median_seconds": 27,
+ "length": [
+  {
+   "bucket": "0-15s",
+   "videos": 86,
+   "channels": 5,
+   "median_views": 413863,
+   "median_lift": 1.55
+  },
+  {
+   "bucket": "15-30s",
+   "videos": 216,
+   "channels": 9,
+   "median_views": 590913,
+   "median_lift": 0.94
+  },
+  {
+   "bucket": "30-45s",
+   "videos": 134,
+   "channels": 9,
+   "median_views": 1956678,
+   "median_lift": 0.85
+  },
+  {
+   "bucket": "45-60s",
+   "videos": 61,
+   "channels": 4,
+   "median_views": 5778576,
+   "median_lift": 1.41
+  }
+ ],
+ "cadence_median": 1.6,
+ "cadence_p75": 2.41,
+ "top_hours": [
+  [
+   8,
+   2.1835902793009483
+  ],
+  [
+   18,
+   1.7787157764024915
+  ],
+  [
+   5,
+   1.450712472071764
+  ],
+  [
+   4,
+   1.4257989489051668
+  ]
+ ],
+ "hashtags": [
+  [
+   "#shorts",
+   163
+  ],
+  [
+   "#kaicenat",
+   161
+  ],
+  [
+   "#ishowspeed",
+   109
+  ],
+  [
+   "#rakai",
+   55
+  ],
+  [
+   "#core",
+   50
+  ],
+  [
+   "#edit",
+   45
+  ],
+  [
+   "#ray",
+   34
+  ],
+  [
+   "#stableronaldo",
+   21
+  ],
+  [
+   "#lacy",
+   20
+  ],
+  [
+   "#dukedennis",
+   19
+  ],
+  [
+   "#halloween",
+   17
+  ],
+  [
+   "#jasontheween",
+   17
+  ]
+ ],
+ "hooks": [
+  [
+   "kai & pudgie",
+   2
+  ],
+  [
+   "kai & speed",
+   2
+  ],
+  [
+   "kai cenat tries",
+   2
+  ]
+ ],
+ "title_chars": 44,
+ "title_cmp": {
+  "emoji": [
+   0.95,
+   0.86
+  ],
+  "question": [
+   0.02,
+   0.02
+  ],
+  "exclaim": [
+   0.38,
+   0.26
+  ],
+  "number": [
+   0.1,
+   0.06
+  ],
+  "quote": [
+   0.04,
+   0.05
+  ],
+  "pipe_or_dash": [
+   0.0,
+   0.0
+  ]
+ },
+ "sources": [
+  [
+   "kai cenat",
+   87
+  ],
+  [
+   "ishowspeed",
+   79
+  ],
+  [
+   "rakai",
+   34
+  ],
+  [
+   "gta 6",
+   24
+  ],
+  [
+   "fanum",
+   15
+  ],
+  [
+   "duke dennis",
+   10
+  ],
+  [
+   "pudgie",
+   7
+  ],
+  [
+   "jamal",
+   4
+  ],
+  [
+   "tota",
+   3
+  ]
+ ],
+ "winners": [
+  {
+   "title": "iShowSpeed Crashes OUT When Jamal Guesses Where Pizza Is From! \ud83c\udf55\ud83d\ude02",
+   "views": 24415987,
+   "lift": 189.8,
+   "seconds": 22,
+   "channel": "BKVC"
+  },
+  {
+   "title": "IShowSpeed Unpacks A Signed Ronaldo Jersey To Wear It!\ud83d\udc55\ud83d\ude02",
+   "views": 21204078,
+   "lift": 164.9,
+   "seconds": 28,
+   "channel": "BKVC"
+  },
+  {
+   "title": "IShowSpeed Uses The Wrong Shield In Minecraft!\ud83e\udde0\ud83d\ude02",
+   "views": 20825665,
+   "lift": 161.9,
+   "seconds": 10,
+   "channel": "BKVC"
+  },
+  {
+   "title": "Rakai Breaks Up A Wholesome Moment Between Kai Cenat And Random Guy\ud83e\udd40\ud83e\udd23",
+   "views": 19077104,
+   "lift": 148.3,
+   "seconds": 19,
+   "channel": "BKVC"
+  },
+  {
+   "title": "Kai Cenat Can't Believe Tota Ate Cake From The Floor!\ud83c\udf82\ud83d\ude02",
+   "views": 17950300,
+   "lift": 139.6,
+   "seconds": 26,
+   "channel": "BKVC"
+  },
+  {
+   "title": "Kai & Pudgie Recreates Big Smoke Order Food Scene \ud83e\udd23",
+   "views": 12297437,
+   "lift": 97.7,
+   "seconds": 19,
+   "channel": "Snickerly"
+  },
+  {
+   "title": "IShowSpeed Asks Zias & B Lou If They Have Ever Played Football!\u26bd\ud83d\ude02",
+   "views": 10659628,
+   "lift": 82.9,
+   "seconds": 13,
+   "channel": "BKVC"
+  },
+  {
+   "title": "Kai Don't Care About Streamer Awards! \ud83e\udd23\ud83d\ude2d",
+   "views": 9955982,
+   "lift": 79.1,
+   "seconds": 12,
+   "channel": "Snickerly"
+  },
+  {
+   "title": "Lacy Got Hit With A $12,000 Restaurant Bill \ud83d\ude2d\ud83d\udcb8",
+   "views": 21498166,
+   "lift": 71.8,
+   "seconds": 25,
+   "channel": "core_fx"
+  },
+  {
+   "title": "Kai Feels Time Travelling When Sleeping \ud83e\udd23",
+   "views": 8925051,
+   "lift": 70.9,
+   "seconds": 20,
+   "channel": "Snickerly"
+  },
+  {
+   "title": "iShowSpeed Leaks His Number On The iPhone Duo! \ud83d\ude31\ud83d\ude02",
+   "views": 8870476,
+   "lift": 69.0,
+   "seconds": 32,
+   "channel": "BKVC"
+  },
+  {
+   "title": "Kai Forgot He Was Streaming! \ud83d\ude2d\ud83e\udd23",
+   "views": 8576407,
+   "lift": 68.1,
+   "seconds": 13,
+   "channel": "Snickerly"
+  }
+ ],
+ "young_channels": [
+  {
+   "name": "Nexxo Recaps",
+   "age_months": 10.3,
+   "median_views": 4307930,
+   "views_30d": 74623292,
+   "uploads_per_day": 0.79
+  },
+  {
+   "name": "\u26a1\ufe0fUNIKPLUG\u26a1\ufe0f",
+   "age_months": 5.2,
+   "median_views": 24419,
+   "views_30d": 35597443,
+   "uploads_per_day": 0.7
+  },
+  {
+   "name": "Rut Ribes",
+   "age_months": 6.2,
+   "median_views": 87762,
+   "views_30d": 29527867,
+   "uploads_per_day": 2.06
+  },
+  {
+   "name": "aztrooshorts",
+   "age_months": 10.2,
+   "median_views": 56703,
+   "views_30d": 18771070,
+   "uploads_per_day": 0.75
+  },
+  {
+   "name": "skel3",
+   "age_months": 11.7,
+   "median_views": 105097,
+   "views_30d": 17995141,
+   "uploads_per_day": 0.88
+  },
+  {
+   "name": "Stream Rush",
+   "age_months": 6.4,
+   "median_views": 65170,
+   "views_30d": 16386728,
+   "uploads_per_day": 0.85
+  }
+ ],
+ "benchmark_median_views": 37546
+}

@@ -1,0 +1,341 @@
+[
+ {
+  "id": 1,
+  "source": "ishowspeed",
+  "creator": "IShowSpeed",
+  "platform": "youtube",
+  "video_id": "hwSg39yIBGU",
+  "video_title": "🔴PLAYING GTA 6 RIGHT NOW GET IN HERE!",
+  "url": "https://www.youtube.com/watch?v=hwSg39yIBGU&t=14648s",
+  "moment": "4:04:08",
+  "start": 14628,
+  "end": 14658,
+  "rank": 79.69,
+  "signal": "15 timestamp comments, 182 likes",
+  "signals": [
+   "comments"
+  ],
+  "quotes": [
+   "i know you wanted this",
+   "NOT THE FLASHBACKS",
+   "his reaction"
+  ],
+  "stream_age_h": 6.5,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": null
+  },
+  "council": {
+   "trend": 0.78,
+   "study": 0.96,
+   "analytics": 0.54,
+   "live": 0.45,
+   "script": 0.35,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 0.78,
+    "why": "Speed clips pull 676,810 views/hour this week, down 12% since the last scan; matches what's viral now: gta"
+   },
+   "study": {
+    "score": 0.96,
+    "why": "5 of the top channels' breakout Shorts are Speed clips; Speed is in 79 of their recent titles"
+   },
+   "analytics": {
+    "score": 0.54,
+    "why": "Speed clips spread 1.2x our typical clip; viewer timestamp comments moments do 0.8x; no clear premise, may be visual-only; stream is 6h old (fresh)"
+   },
+   "live": {
+    "score": 0.45,
+    "why": "15 timestamp comments, 182 likes"
+   },
+   "script": {
+    "score": 0.35,
+    "why": "draft title: \"Speed: Playing GTA 6 Right NOW GET IN Here 🔥\"; no captions yet, writing blind"
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-20T19:14:06Z",
+  "council_why": "IShowSpeed's GTA 6 reaction is currently trending and has a high view rate, with strong engagement and a clear premise.",
+  "post_utc": "2026-11-21 05:00",
+  "post_local": "Sat 12:00 AM ET",
+  "title": "Speed Reacts To Bag In GTA 6 😭",
+  "hook": "SPEED SEEING THIS IN GTA 6",
+  "context": "Speed exploring GTA 6 graphics and details",
+  "take": "Speed was checking out every single detail during his first GTA 6 stream, but chat immediately knew what was coming when he noticed this item.",
+  "summary": "Speed reacts to finding an unexpected item while playing GTA 6 for the first time on stream.",
+  "tiktok_caption": "Speed plays GTA 6 for the first time and spots this hidden detail",
+  "hashtags": [
+   "#shorts",
+   "#ishowspeed",
+   "#gta6"
+  ],
+  "tags": [
+   "ishowspeed",
+   "speed",
+   "ishowspeed gta 6",
+   "speed gta 6",
+   "gta 6",
+   "gta 6 gameplay",
+   "gta vi",
+   "speed stream",
+   "speed funny moments"
+  ],
+  "draft": false,
+  "writer": "gemini",
+  "description": "Speed reacts to finding an unexpected item while playing GTA 6 for the first time on stream.\n\nFull stream by IShowSpeed: https://www.youtube.com/watch?v=hwSg39yIBGU&t=14648s\nGo support IShowSpeed, all credit to them.\n\n#shorts #ishowspeed #gta6 #speed",
+  "key": "hwSg39yIBGU@488",
+  "permission": "fan clipping is widespread and tolerated; no official paid program found (Oct 2026)",
+  "payoff": "Did you spot this reference right away or was chat speeding past it?",
+  "script_source": "transcript",
+  "upload_tags": [
+   "ishowspeed",
+   "speed",
+   "ishowspeed gta 6",
+   "speed gta 6",
+   "gta 6",
+   "gta 6 gameplay",
+   "gta vi",
+   "speed stream",
+   "speed funny moments",
+   "shorts"
+  ],
+  "youtube_id": "UPjA5ZOmJB4"
+ },
+ {
+  "id": 2,
+  "source": "ishowspeed",
+  "creator": "IShowSpeed",
+  "platform": "youtube",
+  "video_id": "qSyo5d-dVzA",
+  "video_title": "🔴PLAYING GTA 6 EARLY ACCESS GAMEPLAY GET IN HERE!",
+  "url": "https://www.youtube.com/watch?v=qSyo5d-dVzA&t=30647s",
+  "moment": "8:30:47",
+  "start": 30627,
+  "end": 30657,
+  "rank": 64.92,
+  "signal": "10 timestamp comments, 203 likes",
+  "signals": [
+   "comments"
+  ],
+  "quotes": [
+   "IShowSpeed Reaction",
+   "bro is cooked if youtube sees this edit: KIDS PLS DONT CLICK THE BLUE BUTTON PLS AND THANKS FOR THE 29 LIKES",
+   "wtf"
+  ],
+  "stream_age_h": 30.2,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 2,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": "caption_words"
+  },
+  "council": {
+   "trend": 0.88,
+   "study": 0.96,
+   "analytics": 0.42,
+   "live": 0.45,
+   "script": 0.35,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 0.88,
+    "why": "Speed clips pull 676,810 views/hour this week, down 12% since the last scan; matches what's viral now: edit, gta"
+   },
+   "study": {
+    "score": 0.96,
+    "why": "5 of the top channels' breakout Shorts are Speed clips; Speed is in 79 of their recent titles"
+   },
+   "analytics": {
+    "score": 0.42,
+    "why": "Speed clips spread 1.2x our typical clip; viewer timestamp comments moments do 0.8x; no clear premise, may be visual-only; stream is 30h old"
+   },
+   "live": {
+    "score": 0.45,
+    "why": "10 timestamp comments, 203 likes"
+   },
+   "script": {
+    "score": 0.35,
+    "why": "draft title: \"Speed: Playing GTA 6 Early Access Gameplay GET IN Here 😱\"; no captions yet, writing blind"
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-20T19:14:06Z",
+  "council_why": "IShowSpeed's early access gameplay clip has a high view rate and is relevant to current trends, with good engagement and a clear premise.",
+  "post_utc": "2026-11-20 22:00",
+  "post_local": "Fri 05:00 PM ET",
+  "title": "Speed Reacts To GTA 6 Scene Live 😱",
+  "hook": "SPEED DID NOT EXPECT THIS",
+  "context": "Speed plays early access GTA 6 gameplay",
+  "take": "Speed promised his stream he was going to review GTA 6 seriously, but he clearly did not preview what was waiting for him in this cutscene.",
+  "summary": "IShowSpeed gets caught completely off guard by an unedited cutscene during his GTA 6 early access stream.",
+  "tiktok_caption": "Speed was not ready for this GTA 6 cutscene live on stream",
+  "hashtags": [
+   "#ishowspeed",
+   "#shorts",
+   "#gta6"
+  ],
+  "tags": [
+   "IShowSpeed",
+   "Speed",
+   "GTA 6",
+   "GTA VI",
+   "IShowSpeed GTA 6",
+   "Speed reaction",
+   "GTA 6 scene",
+   "GTA 6 gameplay",
+   "GTA 6 stream"
+  ],
+  "draft": false,
+  "writer": "gemini",
+  "description": "IShowSpeed gets caught completely off guard by an unedited cutscene during his GTA 6 early access stream.\n\nFull stream by IShowSpeed: https://www.youtube.com/watch?v=qSyo5d-dVzA&t=30647s\nGo support IShowSpeed, all credit to them.\n\n#ishowspeed #shorts #gta6 #speed",
+  "key": "qSyo5d-dVzA@1021",
+  "permission": "fan clipping is widespread and tolerated; no official paid program found (Oct 2026)",
+  "payoff": "Streamers testing early gameplay always get caught off guard when the story mode goes too far.",
+  "script_source": "comments",
+  "upload_tags": [
+   "IShowSpeed",
+   "Speed",
+   "GTA 6",
+   "GTA VI",
+   "IShowSpeed GTA 6",
+   "Speed reaction",
+   "GTA 6 scene",
+   "GTA 6 gameplay",
+   "GTA 6 stream",
+   "ishowspeed",
+   "speed",
+   "shorts"
+  ]
+ },
+ {
+  "id": 3,
+  "source": "twitch_ohnepixel",
+  "creator": "ohnePixel",
+  "platform": "twitch",
+  "video_id": "2933599748",
+  "video_title": "ohnePixel on GTA VI difficulty: \"You can be 10 years old and you won't fail any mission\"",
+  "url": "https://www.twitch.tv/videos/2933599748?t=5h46m13s",
+  "moment": "5:46:13",
+  "start": 20753,
+  "end": 20783,
+  "rank": 105.62,
+  "signal": "Twitch clip, 25,552 views (1,006/h)",
+  "signals": [
+   "twitch clip"
+  ],
+  "quotes": [
+   "ohnePixel on GTA VI difficulty: \"You can be 10 years old and you won't fail any mission\""
+  ],
+  "stream_age_h": 25.4,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 0.35,
+   "layout": "face34",
+   "test": "gap"
+  },
+  "council": {
+   "trend": 1.0,
+   "study": 0.25,
+   "analytics": 0.69,
+   "live": 0.15,
+   "script": 0.35,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 1.0,
+    "why": "ohnePixel clips pull 1,383 views/hour this week, up 2766% since the last scan"
+   },
+   "study": {
+    "score": 0.25,
+    "why": "top channels rarely break out with ohnePixel"
+   },
+   "analytics": {
+    "score": 0.69,
+    "why": "no track record for ohnePixel on our channel yet; no clear premise, may be visual-only; news people search for (won), like our only 50+ view Short; stream is 25h old"
+   },
+   "live": {
+    "score": 0.15,
+    "why": "Twitch clip at 1,006/h"
+   },
+   "script": {
+    "score": 0.35,
+    "why": "draft title: \"ohnePixel At on GTA VI Difficulty: 🔥\"; no captions yet, writing blind"
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-20T19:14:06Z",
+  "council_why": "ohnePixel's GTA VI difficulty clip has a rapidly growing view rate and is relevant to trending searches, though it's newer and less established on the channel.",
+  "post_utc": "2026-11-21 01:00",
+  "post_local": "Fri 08:00 PM ET",
+  "title": "ohnePixel Calls Out GTA 6 Mission Difficulty 🎮",
+  "hook": "GTA 6 IS TOO EASY?",
+  "context": "ohnePixel rates the difficulty of GTA 6",
+  "take": "ohnePixel isn't buying into the massive GTA 6 hype without testing the core gameplay mechanics, and his hot take on the campaign difficulty is already sparking debates.",
+  "summary": "ohnePixel shares his opinion on the difficulty of GTA 6 missions during a livestream.",
+  "tiktok_caption": "ohnePixel says GTA 6 mission difficulty is way too easy",
+  "hashtags": [
+   "#ohnepixel",
+   "#gta6",
+   "#shorts"
+  ],
+  "tags": [
+   "ohnePixel",
+   "ohnePixel GTA 6",
+   "GTA 6",
+   "GTA VI",
+   "GTA 6 difficulty",
+   "GTA 6 gameplay",
+   "gaming",
+   "ohnePixel clip"
+  ],
+  "draft": false,
+  "writer": "gemini",
+  "description": "ohnePixel shares his opinion on the difficulty of GTA 6 missions during a livestream.\n\nFull stream by ohnePixel: https://www.twitch.tv/videos/2933599748?t=5h46m13s\nGo support ohnePixel, all credit to them.\n\n#ohnepixel #gta6 #shorts",
+  "key": "2933599748@692",
+  "permission": "auto-added: trending on Twitch (clipping policy not checked)",
+  "payoff": "Is modern game design making storyline missions way too easy for casual players?",
+  "script_source": "comments",
+  "upload_tags": [
+   "ohnePixel",
+   "ohnePixel GTA 6",
+   "GTA 6",
+   "GTA VI",
+   "GTA 6 difficulty",
+   "GTA 6 gameplay",
+   "gaming",
+   "ohnePixel clip",
+   "ohnepixel",
+   "shorts"
+  ]
+ }
+]
