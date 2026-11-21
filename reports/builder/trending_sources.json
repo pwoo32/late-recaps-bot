@@ -313,5 +313,26 @@
   "crowd": 1.3,
   "best_clip_vph": 5068,
   "clips_24h": 2
+ },
+ "twitch_blxdxentei": {
+  "name": "BlxdxEntei",
+  "short": "BlxdxEntei",
+  "niche": "streamer",
+  "twitch": "blxdxentei",
+  "aliases": [
+   "blxdxentei"
+  ],
+  "hashtags": [
+   "#blxdxentei"
+  ],
+  "permission": "auto-added: trending on Twitch (clipping policy not checked)",
+  "campaign_cpm": null,
+  "first_seen": "2026-11-21T18:03:48+00:00",
+  "last_seen": "2026-11-21T18:03:48+00:00",
+  "trending": true,
+  "crowd_channels": 0,
+  "crowd": 1.3,
+  "best_clip_vph": 3266,
+  "clips_24h": 1
  }
 }

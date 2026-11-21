@@ -1,0 +1,340 @@
+[
+ {
+  "id": 1,
+  "source": "ishowspeed",
+  "creator": "IShowSpeed",
+  "platform": "youtube",
+  "video_id": "OIeLbmyraRQ",
+  "video_title": "🔴 BEATING GTA 6 RIGHT NOW 100% (FINAL MISSION)",
+  "url": "https://www.youtube.com/watch?v=OIeLbmyraRQ&t=18759s",
+  "moment": "5:12:39",
+  "start": 18739,
+  "end": 18769,
+  "rank": 87.26,
+  "signal": "9 timestamp comments, 88 likes",
+  "signals": [
+   "comments"
+  ],
+  "quotes": [
+   "Jeison",
+   "Lucia No",
+   "IT'S JOHN MARSTON"
+  ],
+  "stream_age_h": 23.1,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": null
+  },
+  "council": {
+   "trend": 0.83,
+   "study": 0.96,
+   "analytics": 0.69,
+   "live": 0.42,
+   "script": 1.0,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 0.83,
+    "why": "Speed clips pull 763,462 views/hour this week, up 13% since the last scan; matches what's viral now: gta"
+   },
+   "study": {
+    "score": 0.96,
+    "why": "6 of the top channels' breakout Shorts are Speed clips; Speed is in 79 of their recent titles"
+   },
+   "analytics": {
+    "score": 0.69,
+    "why": "Speed clips spread 1.2x our typical clip; viewer timestamp comments moments do 0.8x; no clear premise, may be visual-only; news people search for (final), like our only 50+ view Short; stream is 23h old"
+   },
+   "live": {
+    "score": 0.42,
+    "why": "9 timestamp comments, 88 likes"
+   },
+   "script": {
+    "score": 1.0,
+    "why": "draft title: \"Ready Leaves Speed Speechless 😱\""
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-21T18:03:48Z",
+  "council_why": "IShowSpeed's clips are highly trending, with a significant view rate increase and a strong presence in top channels' Shorts. The clip has a clear premise and generated substantial engagement.",
+  "post_utc": "2026-11-22 05:00",
+  "post_local": "Sun 12:00 AM ET",
+  "title": "Speed Finishes GTA 6 After 52 Hours Awake 😭",
+  "hook": "52 HOURS WITH NO SLEEP",
+  "context": "Speed on the final mission of GTA 6",
+  "take": "After staying awake for fifty two straight hours just to beat GTA 6 first, Speed completely lost his mind right at the final cutscene.",
+  "summary": "Speed finishes the final mission of GTA 6 after streaming for 52 hours straight without sleeping.",
+  "tiktok_caption": "Speed beat the entire GTA 6 storyline after staying awake for 52 hours straight. Was it worth the no sleep grind?",
+  "hashtags": [
+   "#ishowspeed",
+   "#gtavi",
+   "#gta6"
+  ],
+  "tags": [
+   "ishowspeed",
+   "speed",
+   "gta 6",
+   "gta vi",
+   "gta 6 ending",
+   "speed gta 6",
+   "gta 6 final mission",
+   "ishowspeed gta 6",
+   "lucia",
+   "jason"
+  ],
+  "draft": false,
+  "writer": "gemini",
+  "description": "Speed finishes the final mission of GTA 6 after streaming for 52 hours straight without sleeping.\n\nFull stream by IShowSpeed: https://www.youtube.com/watch?v=OIeLbmyraRQ&t=18759s\nGo support IShowSpeed, all credit to them.\n\n#ishowspeed #gtavi #gta6 #speed #shorts",
+  "key": "OIeLbmyraRQ@625",
+  "permission": "fan clipping is widespread and tolerated; no official paid program found (Oct 2026)",
+  "payoff": "Staying awake for two straight days for this ending might actually be Speed's craziest stream moment yet.",
+  "script_source": "transcript",
+  "upload_tags": [
+   "ishowspeed",
+   "speed",
+   "gta 6",
+   "gta vi",
+   "gta 6 ending",
+   "speed gta 6",
+   "gta 6 final mission",
+   "ishowspeed gta 6",
+   "lucia",
+   "jason",
+   "shorts"
+  ],
+  "youtube_id": "Y_GVl1ZZRwg"
+ },
+ {
+  "id": 2,
+  "source": "jynxzi",
+  "creator": "Jynxzi",
+  "platform": "youtube",
+  "video_id": "UgAvjzb6o2g",
+  "video_title": "JYNXZI PLAYS GTA 6 DAY 2",
+  "url": "https://www.youtube.com/watch?v=UgAvjzb6o2g&t=23914s",
+  "moment": "6:38:34",
+  "start": 23894,
+  "end": 23924,
+  "rank": 98.03,
+  "signal": "chat went 24.6x its normal pace",
+  "signals": [
+   "chat spike"
+  ],
+  "quotes": [
+   "w",
+   "w",
+   "w"
+  ],
+  "stream_age_h": 42.2,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 2,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": "caption_words"
+  },
+  "council": {
+   "trend": 1.0,
+   "study": 0.25,
+   "analytics": 0.68,
+   "live": 0.55,
+   "script": 0.75,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 1.0,
+    "why": "Jynxzi clips pull 80,008 views/hour this week, up 504% since the last scan"
+   },
+   "study": {
+    "score": 0.25,
+    "why": "top channels rarely break out with Jynxzi"
+   },
+   "analytics": {
+    "score": 0.68,
+    "why": "Jynxzi clips spread 1.5x our typical clip; chat spike moments do 1.1x; has a spoken premise (bet/question/challenge); stream is 42h old"
+   },
+   "live": {
+    "score": 0.55,
+    "why": "chat went 24.6x"
+   },
+   "script": {
+    "score": 0.75,
+    "why": "draft title: \"Jynxzi At Plays GTA 6 🔥\""
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-21T18:03:48Z",
+  "council_why": "Jynxzi's clips have a high view rate and spread rate, and the stream is relatively fresh, which could drive more views. The clip also has a clear premise and generated a lot of chat engagement.",
+  "post_utc": "2026-11-21 22:00",
+  "post_local": "Sat 05:00 PM ET",
+  "title": "Jynxzi Shares His Real Thoughts On GTA 6 🎮",
+  "hook": "GTA 6 WRITING DISAPPOINTING?",
+  "context": "Jynxzi gives his GTA 6 review",
+  "take": "While everyone else is calling it a masterpiece, Jynxzi admitted the storyline inside GTA Six isn't matching up to GTA Five just yet.",
+  "summary": "Jynxzi shares his honest thoughts on the writing and story of GTA 6 during his live stream.",
+  "tiktok_caption": "Jynxzi admits GTA 6 story isn't as good as GTA 5 yet 😳",
+  "hashtags": [
+   "#shorts",
+   "#jynxzi",
+   "#gta6"
+  ],
+  "tags": [
+   "jynxzi",
+   "jynxzi gta 6",
+   "gta 6",
+   "gta vi",
+   "gta 6 review",
+   "gta 5 vs gta 6",
+   "streamer react",
+   "twitch clips"
+  ],
+  "draft": false,
+  "writer": "gemini",
+  "description": "Jynxzi shares his honest thoughts on the writing and story of GTA 6 during his live stream.\n\nFull stream by Jynxzi: https://www.youtube.com/watch?v=UgAvjzb6o2g&t=23914s\nGo support Jynxzi, all credit to them.\n\n#shorts #jynxzi #gta6",
+  "key": "UgAvjzb6o2g@797",
+  "permission": "fan clipping tolerated; check for a Whop campaign",
+  "payoff": "Comparing a game's story before finishing it always backfires, but he might actually have a point.",
+  "script_source": "captions",
+  "upload_tags": [
+   "jynxzi",
+   "jynxzi gta 6",
+   "gta 6",
+   "gta vi",
+   "gta 6 review",
+   "gta 5 vs gta 6",
+   "streamer react",
+   "twitch clips",
+   "shorts"
+  ]
+ },
+ {
+  "id": 3,
+  "source": "ishowspeed",
+  "creator": "IShowSpeed",
+  "platform": "youtube",
+  "video_id": "hwSg39yIBGU",
+  "video_title": "🔴PLAYING GTA 6 RIGHT NOW GET IN HERE!",
+  "url": "https://www.youtube.com/watch?v=hwSg39yIBGU&t=9779s",
+  "moment": "2:42:59",
+  "start": 9759,
+  "end": 9789,
+  "rank": 90.82,
+  "signal": "13 timestamp comments, 243 likes",
+  "signals": [
+   "comments"
+  ],
+  "quotes": [
+   "FFUUUHHHHH",
+   "‏‪‬‏",
+   "meraba-raba"
+  ],
+  "stream_age_h": 29.3,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 0.35,
+   "layout": "face34",
+   "test": "gap"
+  },
+  "council": {
+   "trend": 0.83,
+   "study": 0.96,
+   "analytics": 0.61,
+   "live": 0.45,
+   "script": 1.0,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 0.83,
+    "why": "Speed clips pull 763,462 views/hour this week, up 13% since the last scan; matches what's viral now: gta"
+   },
+   "study": {
+    "score": 0.96,
+    "why": "6 of the top channels' breakout Shorts are Speed clips; Speed is in 79 of their recent titles"
+   },
+   "analytics": {
+    "score": 0.61,
+    "why": "Speed clips spread 1.2x our typical clip; viewer timestamp comments moments do 0.8x; has a spoken premise (bet/question/challenge); stream is 29h old"
+   },
+   "live": {
+    "score": 0.45,
+    "why": "13 timestamp comments, 243 likes"
+   },
+   "script": {
+    "score": 1.0,
+    "why": "draft title: \"Samantha Leaves Speed Speechless 😱\""
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-21T18:03:48Z",
+  "council_why": "Jynxzi's second clip has a clear premise and generated a significant amount of chat engagement, which could translate to more views. The clip also has a high spread rate and is from a fresh stream.",
+  "post_utc": "2026-11-21 19:00",
+  "post_local": "Sat 02:00 PM ET",
+  "title": "Speed Reacts To Wild GTA 6 Scene 😭",
+  "hook": "SPEED CANNOT BELIEVE THIS SCENE",
+  "context": "Speed watches GTA 6 dialogue cutscene",
+  "take": "Speed was completely unprepared for how wild the story dialogue gets inside GTA Six during his first playthrough.",
+  "summary": "Speed gets caught off guard by a crazy cutscene and dialogue while playing GTA 6 on stream.",
+  "tiktok_caption": "Speed's reaction to this GTA 6 dialogue is priceless 😭",
+  "hashtags": [
+   "#shorts",
+   "#ishowspeed",
+   "#gta6"
+  ],
+  "tags": [
+   "ishowspeed",
+   "speed",
+   "gta 6",
+   "gta vi",
+   "speed gta 6",
+   "gta 6 cutscene",
+   "gta 6 funny moments",
+   "youtube shorts"
+  ],
+  "draft": false,
+  "writer": "gemini",
+  "description": "Speed gets caught off guard by a crazy cutscene and dialogue while playing GTA 6 on stream.\n\nFull stream by IShowSpeed: https://www.youtube.com/watch?v=hwSg39yIBGU&t=9779s\nGo support IShowSpeed, all credit to them.\n\n#shorts #ishowspeed #gta6 #speed",
+  "key": "hwSg39yIBGU@325",
+  "permission": "fan clipping is widespread and tolerated; no official paid program found (Oct 2026)",
+  "payoff": "Rockstar definitely pushed the boundary with this dialogue and Speed's reaction says it all.",
+  "script_source": "captions",
+  "upload_tags": [
+   "ishowspeed",
+   "speed",
+   "gta 6",
+   "gta vi",
+   "speed gta 6",
+   "gta 6 cutscene",
+   "gta 6 funny moments",
+   "youtube shorts",
+   "shorts"
+  ]
+ }
+]

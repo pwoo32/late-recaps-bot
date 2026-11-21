@@ -1,20 +1,20 @@
 {
  "source_weight": {
-  "jynxzi": 2.67,
+  "jynxzi": 2.6,
   "kai_cenat": 0.31,
   "ishowspeed": 1.99,
-  "stableronaldo": 2.99,
-  "caseoh": 2.94
+  "stableronaldo": 2.39,
+  "caseoh": 2.96
  },
  "slot_weight": {
-  "2": 1.15,
-  "21": 0.59,
-  "8": 1.69,
+  "2": 1.09,
+  "21": 1.15,
+  "8": 1.81,
   "4": 0.49,
   "22": 2.49,
-  "17": 2.39,
+  "17": 2.63,
   "6": 2.99,
-  "1": 1.49
+  "1": 1.01
  },
  "used_moments": [
   "L6S9Vb3RLy4@186",
@@ -151,7 +151,10 @@
   "2932442046@548",
   "hwSg39yIBGU@488",
   "qSyo5d-dVzA@1021",
-  "2933599748@692"
+  "2933599748@692",
+  "OIeLbmyraRQ@625",
+  "UgAvjzb6o2g@797",
+  "hwSg39yIBGU@325"
  ],
  "queued": {
   "L6S9Vb3RLy4@186": {
@@ -2230,6 +2233,87 @@
     "script": 0.35,
     "audience": 0.5
    }
+  },
+  "OIeLbmyraRQ@625": {
+   "title": "Speed Finishes GTA 6 After 52 Hours Awake \ud83d\ude2d",
+   "source": "ishowspeed",
+   "post_utc": "2026-11-22 05:00",
+   "recipe": {
+    "length": 30,
+    "punch": 0.14,
+    "beat": "normal",
+    "caption_words": 3,
+    "gap": 0.6,
+    "layout": "face34",
+    "test": null
+   },
+   "council": {
+    "trend": 0.83,
+    "study": 0.96,
+    "analytics": 0.69,
+    "live": 0.42,
+    "script": 1.0,
+    "audience": 0.5
+   },
+   "video_id": "Y_GVl1ZZRwg",
+   "words": [
+    "awake",
+    "beating",
+    "final",
+    "finishes",
+    "hours",
+    "it's",
+    "jeison",
+    "john",
+    "lucia",
+    "marston",
+    "mission",
+    "sleep"
+   ]
+  },
+  "UgAvjzb6o2g@797": {
+   "title": "Jynxzi Shares His Real Thoughts On GTA 6 \ud83c\udfae",
+   "source": "jynxzi",
+   "post_utc": "2026-11-21 22:00",
+   "recipe": {
+    "length": 30,
+    "punch": 0.14,
+    "beat": "normal",
+    "caption_words": 2,
+    "gap": 0.6,
+    "layout": "face34",
+    "test": "caption_words"
+   },
+   "council": {
+    "trend": 1.0,
+    "study": 0.25,
+    "analytics": 0.68,
+    "live": 0.55,
+    "script": 0.75,
+    "audience": 0.5
+   }
+  },
+  "hwSg39yIBGU@325": {
+   "title": "Speed Reacts To Wild GTA 6 Scene \ud83d\ude2d",
+   "source": "ishowspeed",
+   "post_utc": "2026-11-21 19:00",
+   "recipe": {
+    "length": 30,
+    "punch": 0.14,
+    "beat": "normal",
+    "caption_words": 3,
+    "gap": 0.35,
+    "layout": "face34",
+    "test": "gap"
+   },
+   "council": {
+    "trend": 0.83,
+    "study": 0.96,
+    "analytics": 0.61,
+    "live": 0.45,
+    "script": 1.0,
+    "audience": 0.5
+   }
   }
  },
  "channel": "UCbK9EejOk5UVzI_l8F3f8kA",
@@ -2402,14 +2486,19 @@
  },
  "own_results": [
   {
+   "title": "Ronaldo Has An Instant Reaction On Stream \ud83d\ude2d",
+   "views": 0,
+   "lift": 0.0
+  },
+  {
    "title": "Dinah Starts The Stream Laughing Uncontrollably \ud83d\ude2d\ud83d\ude02",
-   "views": 3,
-   "lift": 3.0
+   "views": 4,
+   "lift": 4.0
   },
   {
    "title": "CaseOh Get Jump Scared Mid Game \ud83d\ude2d",
-   "views": 15,
-   "lift": 15.0
+   "views": 16,
+   "lift": 16.0
   },
   {
    "title": "Ronaldo Locks In During Exterminauts Interview \ud83d\udc80",
@@ -2545,11 +2634,6 @@
    "title": "Speed Spots Someone In The Crowd And Chases Them \ud83d\udd77\ufe0f\ud83d\ude2d",
    "views": 1,
    "lift": 1.0
-  },
-  {
-   "title": "Kai Cenat Shows Off The AMP House Halloween Party \ud83c\udf83",
-   "views": 0,
-   "lift": 0.0
   }
  ],
  "tiktok": {
@@ -2557,178 +2641,6 @@
   "mode": "inbox"
  },
  "chat_spikes": {
-  "jdV0drr9PsA": [
-   {
-    "t": 2794,
-    "ratio": 5.1,
-    "msgs": 169,
-    "sample": []
-   },
-   {
-    "t": 16029,
-    "ratio": 4.2,
-    "msgs": 17,
-    "sample": [
-     "W",
-     "W",
-     "W",
-     "W"
-    ]
-   },
-   {
-    "t": 4184,
-    "ratio": 4.1,
-    "msgs": 149,
-    "sample": [
-     "W",
-     "W",
-     "W",
-     "w",
-     "w"
-    ]
-   },
-   {
-    "t": 14444,
-    "ratio": 4.0,
-    "msgs": 18,
-    "sample": [
-     "YOOOOOOOO KAI",
-     "W",
-     "Ww",
-     "Ww",
-     "W"
-    ]
-   },
-   {
-    "t": 10629,
-    "ratio": 3.8,
-    "msgs": 150,
-    "sample": [
-     "w",
-     "W",
-     "W",
-     "w",
-     "w"
-    ]
-   },
-   {
-    "t": 14804,
-    "ratio": 3.8,
-    "msgs": 32,
-    "sample": [
-     "AYO",
-     "w in the chat (im fcked up ts game is DC Universe online I'm might be cooked:broken_heart::wilted_flower::pensive_face:)"
-    ]
-   }
-  ],
-  "ohQXEHnv_mE": [
-   {
-    "t": 24019,
-    "ratio": 33.0,
-    "msgs": 102,
-    "sample": [
-     "L",
-     "w",
-     "w",
-     "w",
-     "w"
-    ]
-   },
-   {
-    "t": 18739,
-    "ratio": 20.2,
-    "msgs": 63,
-    "sample": [
-     "W",
-     "w",
-     "W",
-     "W",
-     "W"
-    ]
-   },
-   {
-    "t": 2414,
-    "ratio": 16.6,
-    "msgs": 59,
-    "sample": [
-     "yo",
-     "w",
-     "w",
-     "W",
-     "w"
-    ]
-   },
-   {
-    "t": 3824,
-    "ratio": 16.1,
-    "msgs": 80,
-    "sample": [
-     "w",
-     "w",
-     "w",
-     "w",
-     "w"
-    ]
-   },
-   {
-    "t": 27479,
-    "ratio": 15.5,
-    "msgs": 24,
-    "sample": [
-     "LMAOOO"
-    ]
-   },
-   {
-    "t": 3419,
-    "ratio": 15.4,
-    "msgs": 87,
-    "sample": [
-     "w",
-     "L too",
-     "w",
-     "L",
-     "w"
-    ]
-   }
-  ],
-  "vYuLOp5GISE": [
-   {
-    "t": 769,
-    "ratio": 4.5,
-    "msgs": 115,
-    "sample": [
-     "what what what what what what what what what what what what what what what what what what what what what what what what what what what what what what what what what what what what what what what what ",
-     "W",
-     "W",
-     "W",
-     "W"
-    ]
-   },
-   {
-    "t": 944,
-    "ratio": 4.1,
-    "msgs": 96,
-    "sample": [
-     "W",
-     "W",
-     "W",
-     "w",
-     "W"
-    ]
-   },
-   {
-    "t": 1604,
-    "ratio": 3.1,
-    "msgs": 90,
-    "sample": [
-     "????",
-     "fix yo swing ",
-     "W",
-     "WHAT....",
-     "W"
-    ]
-   }
-  ],
   "lWDwj15NJWw": [
    {
     "t": 3654,
@@ -4023,6 +3935,212 @@
     "msgs": 111,
     "sample": [
      "yo jinx hows the game so far?"
+    ]
+   }
+  ],
+  "dSDUAAr-w_g": [
+   {
+    "t": 22494,
+    "ratio": 14.1,
+    "msgs": 285,
+    "sample": [
+     "bruh what",
+     "Yo",
+     "Yo",
+     "yo",
+     "Yooo"
+    ]
+   },
+   {
+    "t": 12304,
+    "ratio": 6.8,
+    "msgs": 145,
+    "sample": [
+     "BROOOOOO",
+     "Wtf",
+     "What are you doing ",
+     "wtf",
+     "WTF"
+    ]
+   },
+   {
+    "t": 14144,
+    "ratio": 4.2,
+    "msgs": 50,
+    "sample": [
+     "w",
+     "w Ben",
+     "W ben",
+     "W unk",
+     "NAAH that so fake"
+    ]
+   },
+   {
+    "t": 16649,
+    "ratio": 4.1,
+    "msgs": 68,
+    "sample": [
+     "Yo",
+     "W!!",
+     "W",
+     "W",
+     "w"
+    ]
+   },
+   {
+    "t": 34,
+    "ratio": 4.0,
+    "msgs": 350,
+    "sample": [
+     "Yo Wsp",
+     "YOOOOOOOOO",
+     "yooo",
+     "W",
+     "Yo"
+    ]
+   },
+   {
+    "t": 19599,
+    "ratio": 3.8,
+    "msgs": 186,
+    "sample": [
+     "Nah",
+     "No ending bout be a crazy sad rn ",
+     "Nah",
+     "nah",
+     "Kai what should I do people are moving real weird I\u2019m 16 and I actually feel like everyone is against me"
+    ]
+   }
+  ],
+  "LHoHInbPkk0": [
+   {
+    "t": 14019,
+    "ratio": 11.7,
+    "msgs": 106,
+    "sample": [
+     "yo",
+     "yooooo",
+     "yooo",
+     "Bro nobody\u2019s watching ts ",
+     "Yooo"
+    ]
+   },
+   {
+    "t": 37434,
+    "ratio": 9.0,
+    "msgs": 144,
+    "sample": [
+     "W",
+     "W",
+     "W",
+     "W",
+     "w"
+    ]
+   },
+   {
+    "t": 21844,
+    "ratio": 5.1,
+    "msgs": 34,
+    "sample": [
+     "Back is crazy",
+     "what percentage he at?",
+     "W",
+     "yooo"
+    ]
+   },
+   {
+    "t": 12704,
+    "ratio": 5.1,
+    "msgs": 79,
+    "sample": [
+     "Ww",
+     "W",
+     "W",
+     "W",
+     "ww"
+    ]
+   },
+   {
+    "t": 16714,
+    "ratio": 4.9,
+    "msgs": 61,
+    "sample": [
+     "Nah",
+     "@DeandreReynecker WHY???????????'",
+     "nah",
+     "YESS BROO",
+     "nah"
+    ]
+   }
+  ],
+  "TQ24v1RFw5s": [
+   {
+    "t": 22249,
+    "ratio": 33.0,
+    "msgs": 48,
+    "sample": [
+     "W",
+     "Bro how long do u have on this game gng",
+     "W",
+     "w",
+     "w"
+    ]
+   },
+   {
+    "t": 16959,
+    "ratio": 21.9,
+    "msgs": 63,
+    "sample": [
+     "L",
+     "L",
+     "L",
+     "L",
+     "L"
+    ]
+   },
+   {
+    "t": 20389,
+    "ratio": 12.3,
+    "msgs": 27,
+    "sample": [
+     "W",
+     "W",
+     "W",
+     "W",
+     "W"
+    ]
+   },
+   {
+    "t": 21544,
+    "ratio": 11.8,
+    "msgs": 36,
+    "sample": [
+     "w",
+     "w",
+     "w",
+     "w",
+     "W"
+    ]
+   },
+   {
+    "t": 8064,
+    "ratio": 9.9,
+    "msgs": 32,
+    "sample": [
+     "w",
+     "w",
+     "w",
+     "w",
+     "w"
+    ]
+   },
+   {
+    "t": 4414,
+    "ratio": 9.3,
+    "msgs": 56,
+    "sample": [
+     "I cant watch bro how is he this bad",
+     "Yo"
     ]
    }
   ]
