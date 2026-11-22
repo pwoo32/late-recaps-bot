@@ -1,0 +1,340 @@
+[
+ {
+  "id": 1,
+  "source": "ishowspeed",
+  "creator": "IShowSpeed",
+  "platform": "youtube",
+  "video_id": "qSyo5d-dVzA",
+  "video_title": "🔴PLAYING GTA 6 EARLY ACCESS GAMEPLAY GET IN HERE!",
+  "url": "https://www.youtube.com/watch?v=qSyo5d-dVzA&t=7383s",
+  "moment": "2:03:03",
+  "start": 7363,
+  "end": 7393,
+  "rank": 42.4,
+  "signal": "6 timestamp comments, 191 likes",
+  "signals": [
+   "comments"
+  ],
+  "quotes": [
+   "THANK ME LATER",
+   "your welcome",
+   "most viewd scene"
+  ],
+  "stream_age_h": 77.5,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": null
+  },
+  "council": {
+   "trend": 0.84,
+   "study": 1.0,
+   "analytics": 0.53,
+   "live": 0.45,
+   "script": 1.0,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 0.84,
+    "why": "Speed clips pull 912,491 views/hour this week, up 20% since the last scan; matches what's viral now: gta"
+   },
+   "study": {
+    "score": 1.0,
+    "why": "6 of the top channels' breakout Shorts are Speed clips; Speed is in 89 of their recent titles"
+   },
+   "analytics": {
+    "score": 0.53,
+    "why": "Speed clips spread 1.2x our typical clip; viewer timestamp comments moments do 0.8x; has a spoken premise (bet/question/challenge); stream is 78h old (other clippers had time)"
+   },
+   "live": {
+    "score": 0.45,
+    "why": "6 timestamp comments, 191 likes"
+   },
+   "script": {
+    "score": 1.0,
+    "why": "draft title: \"Speed Asks Guess \"Oh, What the Freak?\" 😱\""
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-22T18:34:15Z",
+  "council_why": "IShowSpeed at 2:03:03 of '🔴PLAYING GTA 6 EARLY ACCESS GAMEPLAY GET IN HERE!'. High trend match, strong channel study, and a clear spoken premise.",
+  "post_utc": "2026-11-23 04:00",
+  "post_local": "Sun 11:00 PM ET",
+  "title": "Speed Discovers Snapmatic In GTA 6 📱💀",
+  "hook": "HE CHECKED THE WRONG PROFILE",
+  "context": "Speed browsing Snapmatic in GTA 6",
+  "take": "Speed spent hours trying to find secrets in early access, but getting distracted by in-game social media was definitely not on his mission plan.",
+  "summary": "IShowSpeed explores the in-game Snapmatic feature while playing GTA 6 early access gameplay.",
+  "tiktok_caption": "Speed checking Snapmatic during GTA 6 gameplay",
+  "hashtags": [
+   "#shorts",
+   "#ishowspeed",
+   "#gtavi"
+  ],
+  "tags": [
+   "ishowspeed",
+   "speed",
+   "gta 6",
+   "gtavi",
+   "gta 6 early access",
+   "grand theft auto 6",
+   "speed gta 6",
+   "rockstar games",
+   "snapmatic",
+   "streamer clips"
+  ],
+  "draft": false,
+  "writer": "gemini",
+  "description": "IShowSpeed explores the in-game Snapmatic feature while playing GTA 6 early access gameplay.\n\nFull stream by IShowSpeed: https://www.youtube.com/watch?v=qSyo5d-dVzA&t=7383s\nGo support IShowSpeed, all credit to them.\n\n#shorts #ishowspeed #gtavi #speed",
+  "key": "qSyo5d-dVzA@246",
+  "permission": "fan clipping is widespread and tolerated; no official paid program found (Oct 2026)",
+  "payoff": "Rockstar definitely knew players would spend way too much time scrolling instead of finishing missions.",
+  "script_source": "transcript",
+  "upload_tags": [
+   "ishowspeed",
+   "speed",
+   "gta 6",
+   "gtavi",
+   "gta 6 early access",
+   "grand theft auto 6",
+   "speed gta 6",
+   "rockstar games",
+   "snapmatic",
+   "streamer clips",
+   "shorts"
+  ],
+  "held": "copyright: music in this moment (\"music\"); songs get Content ID claims"
+ },
+ {
+  "id": 2,
+  "source": "ishowspeed",
+  "creator": "IShowSpeed",
+  "platform": "youtube",
+  "video_id": "OIeLbmyraRQ",
+  "video_title": "🔴 BEATING GTA 6 RIGHT NOW 100% (FINAL MISSION)",
+  "url": "https://www.youtube.com/watch?v=OIeLbmyraRQ&t=19901s",
+  "moment": "5:31:41",
+  "start": 19881,
+  "end": 19911,
+  "rank": 36.93,
+  "signal": "4 timestamp comments, 76 likes",
+  "signals": [
+   "comments"
+  ],
+  "quotes": [
+   "bro overwrote his 98% completed checkpoint. This is gotta hurt",
+   "speed deletes 98% complete save file",
+   "bruh overwrote the 98 % misson"
+  ],
+  "stream_age_h": 47.6,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 2,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": "caption_words"
+  },
+  "council": {
+   "trend": 0.84,
+   "study": 1.0,
+   "analytics": 0.82,
+   "live": 0.41,
+   "script": 0.75,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 0.84,
+    "why": "Speed clips pull 912,491 views/hour this week, up 20% since the last scan; matches what's viral now: gta"
+   },
+   "study": {
+    "score": 1.0,
+    "why": "6 of the top channels' breakout Shorts are Speed clips; Speed is in 89 of their recent titles"
+   },
+   "analytics": {
+    "score": 0.82,
+    "why": "Speed clips spread 1.2x our typical clip; viewer timestamp comments moments do 0.8x; has a spoken premise (bet/question/challenge); news people search for (final), like our only 50+ view Short; stream is 48h old"
+   },
+   "live": {
+    "score": 0.41,
+    "why": "4 timestamp comments, 76 likes"
+   },
+   "script": {
+    "score": 0.75,
+    "why": "draft title: \"Speed: Beating GTA 6 Right NOW 100% (final Mission) 🔥\""
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-22T18:34:15Z",
+  "council_why": "IShowSpeed at 5:31:41 of '🔴 BEATING GTA 6 RIGHT NOW 100% (FINAL MISSION)'. High trend match, strong channel study, and a clear spoken premise.",
+  "post_utc": "2026-11-22 22:00",
+  "post_local": "Sun 05:00 PM ET",
+  "title": "Speed Overwrites His 98% GTA 6 Save File 💀😭",
+  "hook": "HE DELETED HIS 98% SAVE FILE",
+  "context": "Speed finishing his 100% GTA 6 playthrough",
+  "take": "After spending hours grinding to reach 100% completion in GTA 6, Speed tried saving his spot and did the one thing every gamer fears.",
+  "summary": "Speed accidentally overwrites his 98 percent completed GTA 6 save file right at the end of the game.",
+  "tiktok_caption": "Speed overwrote his 98% GTA 6 save file right before beating it",
+  "hashtags": [
+   "#shorts",
+   "#ishowspeed",
+   "#gta6"
+  ],
+  "tags": [
+   "ishowspeed",
+   "speed",
+   "gta 6",
+   "ishowspeed gta 6",
+   "speed gta 6",
+   "gta vi",
+   "speed save file",
+   "speed funny moments",
+   "gaming",
+   "grand theft auto 6"
+  ],
+  "draft": false,
+  "writer": "gemini",
+  "description": "Speed accidentally overwrites his 98 percent completed GTA 6 save file right at the end of the game.\n\nFull stream by IShowSpeed: https://www.youtube.com/watch?v=OIeLbmyraRQ&t=19901s\nGo support IShowSpeed, all credit to them.\n\n#shorts #ishowspeed #gta6 #speed",
+  "key": "OIeLbmyraRQ@663",
+  "permission": "fan clipping is widespread and tolerated; no official paid program found (Oct 2026)",
+  "payoff": "He just threw away hours of progress with one accidental click.",
+  "script_source": "transcript",
+  "upload_tags": [
+   "ishowspeed",
+   "speed",
+   "gta 6",
+   "ishowspeed gta 6",
+   "speed gta 6",
+   "gta vi",
+   "speed save file",
+   "speed funny moments",
+   "gaming",
+   "grand theft auto 6",
+   "shorts"
+  ],
+  "youtube_id": "THLyzo4ljyU"
+ },
+ {
+  "id": 3,
+  "source": "caseoh",
+  "creator": "CaseOh",
+  "platform": "twitch",
+  "video_id": "2935283335",
+  "video_title": "kyle 1",
+  "url": "https://www.twitch.tv/videos/2935283335?t=3h13m45s",
+  "moment": "3:13:45",
+  "start": 11605,
+  "end": 11635,
+  "rank": 101.34,
+  "signal": "Twitch clip, 19,927 views (692/h)",
+  "signals": [
+   "twitch clip"
+  ],
+  "quotes": [
+   "kyle 1"
+  ],
+  "stream_age_h": 28.8,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 0.35,
+   "layout": "face34",
+   "test": "gap"
+  },
+  "council": {
+   "trend": 1.0,
+   "study": 0.25,
+   "analytics": 0.57,
+   "live": 0.13,
+   "script": 0.35,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 1.0,
+    "why": "CaseOh clips pull 2,513 views/hour this week, up 424% since the last scan"
+   },
+   "study": {
+    "score": 0.25,
+    "why": "top channels rarely break out with CaseOh"
+   },
+   "analytics": {
+    "score": 0.57,
+    "why": "CaseOh clips spread 2.0x our typical clip; no clear premise, may be visual-only; stream is 29h old"
+   },
+   "live": {
+    "score": 0.13,
+    "why": "Twitch clip at 692/h"
+   },
+   "script": {
+    "score": 0.35,
+    "why": "draft title: \"CaseOh At Kyle 1 😱\"; no captions yet, writing blind"
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-22T18:34:15Z",
+  "council_why": "highest combined vote",
+  "post_utc": "2026-11-22 19:00",
+  "post_local": "Sun 02:00 PM ET",
+  "title": "CaseOh Meets Kyle In Horror Game 😭",
+  "hook": "CASEOH MEETS KYLE MID STREAM",
+  "context": "CaseOh playing horror game on stream",
+  "take": "CaseOh thought he was clearing out an easy level until this unexpected moment with Kyle threw off his entire stream.",
+  "summary": "CaseOh reacts to meeting Kyle during his live stream gameplay.",
+  "tiktok_caption": "CaseOh's reaction to Kyle had the whole stream losing it.",
+  "hashtags": [
+   "#caseoh",
+   "#funny",
+   "#shorts"
+  ],
+  "tags": [
+   "caseoh",
+   "caseoh clips",
+   "caseoh funny moments",
+   "caseoh stream",
+   "kyle",
+   "caseoh game"
+  ],
+  "draft": false,
+  "writer": "gemini",
+  "description": "CaseOh reacts to meeting Kyle during his live stream gameplay.\n\nFull stream by CaseOh: https://www.twitch.tv/videos/2935283335?t=3h13m45s\nGo support CaseOh, all credit to them.\n\n#caseoh #funny #shorts",
+  "key": "2935283335@387",
+  "permission": "fan clipping is widespread and tolerated; no official program checked (Nov 2026)",
+  "payoff": "Was this CaseOh's funniest reaction of the night?",
+  "script_source": "comments",
+  "upload_tags": [
+   "caseoh",
+   "caseoh clips",
+   "caseoh funny moments",
+   "caseoh stream",
+   "kyle",
+   "caseoh game",
+   "case oh",
+   "shorts"
+  ]
+ }
+]

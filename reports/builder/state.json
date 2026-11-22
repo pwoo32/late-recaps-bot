@@ -1,20 +1,21 @@
 {
  "source_weight": {
-  "jynxzi": 2.6,
+  "jynxzi": 2.76,
   "kai_cenat": 0.31,
   "ishowspeed": 1.99,
-  "stableronaldo": 2.39,
-  "caseoh": 2.96
+  "stableronaldo": 2.03,
+  "caseoh": 2.98
  },
  "slot_weight": {
-  "2": 1.09,
-  "21": 1.15,
-  "8": 1.81,
+  "2": 1.25,
+  "21": 1.49,
+  "8": 1.89,
   "4": 0.49,
   "22": 2.49,
-  "17": 2.63,
+  "17": 2.78,
   "6": 2.99,
-  "1": 1.01
+  "1": 0.73,
+  "5": 1.8
  },
  "used_moments": [
   "L6S9Vb3RLy4@186",
@@ -154,7 +155,10 @@
   "2933599748@692",
   "OIeLbmyraRQ@625",
   "UgAvjzb6o2g@797",
-  "hwSg39yIBGU@325"
+  "hwSg39yIBGU@325",
+  "qSyo5d-dVzA@246",
+  "OIeLbmyraRQ@663",
+  "2935283335@387"
  ],
  "queued": {
   "L6S9Vb3RLy4@186": {
@@ -2314,6 +2318,93 @@
     "script": 1.0,
     "audience": 0.5
    }
+  },
+  "qSyo5d-dVzA@246": {
+   "title": "Speed Explores Snapmatic In GTA 6 Early Access \ud83d\udc80",
+   "source": "ishowspeed",
+   "post_utc": "2026-11-23 04:00",
+   "recipe": {
+    "length": 30,
+    "punch": 0.14,
+    "beat": "normal",
+    "caption_words": 3,
+    "gap": 0.6,
+    "layout": "face34",
+    "test": null
+   },
+   "council": {
+    "trend": 0.84,
+    "study": 1.0,
+    "analytics": 0.53,
+    "live": 0.45,
+    "script": 1.0,
+    "audience": 0.5
+   }
+  },
+  "OIeLbmyraRQ@663": {
+   "title": "Speed Overwrites His 98% GTA 6 Save File \ud83d\udc80\ud83d\ude2d",
+   "source": "ishowspeed",
+   "post_utc": "2026-11-22 22:00",
+   "recipe": {
+    "length": 30,
+    "punch": 0.14,
+    "beat": "normal",
+    "caption_words": 2,
+    "gap": 0.6,
+    "layout": "face34",
+    "test": "caption_words"
+   },
+   "council": {
+    "trend": 0.84,
+    "study": 1.0,
+    "analytics": 0.82,
+    "live": 0.41,
+    "script": 0.75,
+    "audience": 0.5
+   },
+   "video_id": "THLyzo4ljyU",
+   "words": [
+    "beating",
+    "bruh",
+    "checkpoint",
+    "complete",
+    "completed",
+    "deleted",
+    "deletes",
+    "file",
+    "final",
+    "finishing",
+    "gotta",
+    "hurt",
+    "mission",
+    "misson",
+    "overwrites",
+    "overwrote",
+    "playthrough",
+    "save"
+   ]
+  },
+  "2935283335@387": {
+   "title": "CaseOh Meets Kyle In Horror Game \ud83d\ude2d",
+   "source": "caseoh",
+   "post_utc": "2026-11-22 19:00",
+   "recipe": {
+    "length": 30,
+    "punch": 0.14,
+    "beat": "normal",
+    "caption_words": 3,
+    "gap": 0.35,
+    "layout": "face34",
+    "test": "gap"
+   },
+   "council": {
+    "trend": 1.0,
+    "study": 0.25,
+    "analytics": 0.57,
+    "live": 0.13,
+    "script": 0.35,
+    "audience": 0.5
+   }
   }
  },
  "channel": "UCbK9EejOk5UVzI_l8F3f8kA",
@@ -2486,14 +2577,19 @@
  },
  "own_results": [
   {
+   "title": "Speed Reacts To Bag In GTA 6 \ud83d\ude2d",
+   "views": 0,
+   "lift": 0.0
+  },
+  {
    "title": "Ronaldo Has An Instant Reaction On Stream \ud83d\ude2d",
    "views": 0,
    "lift": 0.0
   },
   {
    "title": "Dinah Starts The Stream Laughing Uncontrollably \ud83d\ude2d\ud83d\ude02",
-   "views": 4,
-   "lift": 4.0
+   "views": 5,
+   "lift": 5.0
   },
   {
    "title": "CaseOh Get Jump Scared Mid Game \ud83d\ude2d",
@@ -2629,11 +2725,6 @@
    "title": "Jynxzi Can't Believe What Just Happened \ud83d\ude2d",
    "views": 1,
    "lift": 1.0
-  },
-  {
-   "title": "Speed Spots Someone In The Crowd And Chases Them \ud83d\udd77\ufe0f\ud83d\ude2d",
-   "views": 1,
-   "lift": 1.0
   }
  ],
  "tiktok": {
@@ -2641,141 +2732,6 @@
   "mode": "inbox"
  },
  "chat_spikes": {
-  "lWDwj15NJWw": [
-   {
-    "t": 3654,
-    "ratio": 23.1,
-    "msgs": 110,
-    "sample": [
-     "W",
-     "W",
-     "W",
-     "W",
-     "W"
-    ]
-   },
-   {
-    "t": 10109,
-    "ratio": 16.9,
-    "msgs": 54,
-    "sample": [
-     "w",
-     "w",
-     "w",
-     "w",
-     "w"
-    ]
-   },
-   {
-    "t": 8059,
-    "ratio": 14.6,
-    "msgs": 95,
-    "sample": [
-     "w",
-     "l",
-     "w",
-     "w",
-     "l"
-    ]
-   },
-   {
-    "t": 7229,
-    "ratio": 12.6,
-    "msgs": 54,
-    "sample": [
-     "w",
-     "w",
-     "w",
-     "w",
-     "Happy Birthday!!! :party_popper::partying_face::confetti_ball:"
-    ]
-   },
-   {
-    "t": 6909,
-    "ratio": 10.6,
-    "msgs": 50,
-    "sample": [
-     "is jynxzi just here to larp around????"
-    ]
-   },
-   {
-    "t": 34,
-    "ratio": 9.2,
-    "msgs": 53,
-    "sample": [
-     "Yo",
-     "Yo",
-     "Yo",
-     "yooo",
-     "broo"
-    ]
-   }
-  ],
-  "Kyv61l2vF6M": [],
-  "rykn3opnCyQ": [
-   {
-    "t": 32729,
-    "ratio": 6.7,
-    "msgs": 58,
-    "sample": [
-     "W",
-     "W",
-     "W",
-     ".W",
-     "W"
-    ]
-   },
-   {
-    "t": 27629,
-    "ratio": 5.2,
-    "msgs": 103,
-    "sample": [
-     "What?"
-    ]
-   },
-   {
-    "t": 40804,
-    "ratio": 5.0,
-    "msgs": 64,
-    "sample": [
-     "w",
-     "w",
-     "w",
-     "w",
-     "w"
-    ]
-   },
-   {
-    "t": 31644,
-    "ratio": 4.6,
-    "msgs": 85,
-    "sample": [
-     "w",
-     "yooo",
-     "w",
-     "lmao",
-     "w"
-    ]
-   },
-   {
-    "t": 20484,
-    "ratio": 4.4,
-    "msgs": 21,
-    "sample": [
-     "w fake sleeper",
-     "GUESS WHAT",
-     "GUESS WHAT",
-     "w fake sleeper",
-     "GUESS WHAT"
-    ]
-   },
-   {
-    "t": 25164,
-    "ratio": 4.2,
-    "msgs": 141,
-    "sample": []
-   }
-  ],
   "nb5uTOtYj3U": [
    {
     "t": 5554,
@@ -4143,7 +4099,84 @@
      "Yo"
     ]
    }
-  ]
+  ],
+  "PHSsdHu2Er0": [
+   {
+    "t": 559,
+    "ratio": 2.9,
+    "msgs": 225,
+    "sample": [
+     "W",
+     "w",
+     "W",
+     "W",
+     "W"
+    ]
+   }
+  ],
+  "S3NEzaumEnQ": [
+   {
+    "t": 5764,
+    "ratio": 9.1,
+    "msgs": 121,
+    "sample": [
+     "Bro Look like Tony Soprano",
+     "nah",
+     "yoooooooooo"
+    ]
+   },
+   {
+    "t": 9734,
+    "ratio": 8.5,
+    "msgs": 66,
+    "sample": [
+     "w",
+     "W eats ",
+     "W",
+     "W",
+     "W KAIYA"
+    ]
+   },
+   {
+    "t": 21714,
+    "ratio": 5.9,
+    "msgs": 33,
+    "sample": [
+     "w",
+     "W",
+     "W",
+     "W",
+     "W"
+    ]
+   },
+   {
+    "t": 4934,
+    "ratio": 5.7,
+    "msgs": 69,
+    "sample": [
+     "w"
+    ]
+   },
+   {
+    "t": 8009,
+    "ratio": 5.1,
+    "msgs": 88,
+    "sample": [
+     "BRO I THOUGHT YOU WANNA DO EASTER"
+    ]
+   },
+   {
+    "t": 3274,
+    "ratio": 4.9,
+    "msgs": 37,
+    "sample": [
+     "bro a red light was flashing it was the alarm :police_car_light:",
+     "yo",
+     "Bro your dumb af Kai"
+    ]
+   }
+  ],
+  "Q31GfI-kGB8": []
  },
  "edit": {
   "stats": {

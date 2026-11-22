@@ -1,0 +1,255 @@
+[
+ {
+  "id": 1,
+  "source": "ishowspeed",
+  "creator": "IShowSpeed",
+  "platform": "youtube",
+  "video_id": "qSyo5d-dVzA",
+  "video_title": "🔴PLAYING GTA 6 EARLY ACCESS GAMEPLAY GET IN HERE!",
+  "url": "https://www.youtube.com/watch?v=qSyo5d-dVzA&t=7383s",
+  "moment": "2:03:03",
+  "start": 7363,
+  "end": 7393,
+  "rank": 42.4,
+  "signal": "6 timestamp comments, 191 likes",
+  "signals": [
+   "comments"
+  ],
+  "quotes": [
+   "THANK ME LATER",
+   "your welcome",
+   "most viewd scene"
+  ],
+  "stream_age_h": 77.5,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": null
+  },
+  "council": {
+   "trend": 0.84,
+   "study": 1.0,
+   "analytics": 0.53,
+   "live": 0.45,
+   "script": 1.0,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 0.84,
+    "why": "Speed clips pull 912,491 views/hour this week, up 20% since the last scan; matches what's viral now: gta"
+   },
+   "study": {
+    "score": 1.0,
+    "why": "6 of the top channels' breakout Shorts are Speed clips; Speed is in 89 of their recent titles"
+   },
+   "analytics": {
+    "score": 0.53,
+    "why": "Speed clips spread 1.2x our typical clip; viewer timestamp comments moments do 0.8x; has a spoken premise (bet/question/challenge); stream is 78h old (other clippers had time)"
+   },
+   "live": {
+    "score": 0.45,
+    "why": "6 timestamp comments, 191 likes"
+   },
+   "script": {
+    "score": 1.0,
+    "why": "draft title: \"Speed Asks Guess \"Oh, What the Freak?\" 😱\""
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-22T18:34:15Z",
+  "council_why": "IShowSpeed at 2:03:03 of '🔴PLAYING GTA 6 EARLY ACCESS GAMEPLAY GET IN HERE!'. High trend match, strong channel study, and a clear spoken premise.",
+  "post_utc": "2026-11-23 04:00",
+  "post_local": "Sun 11:00 PM ET",
+  "title": "Speed THANK ME LATER 🤯",
+  "hook": "THANK ME LATER",
+  "context": "IShowSpeed live, 🔴PLAYING GTA 6 EARLY ACCESS GAMEPLAY GET IN HERE!",
+  "take": "Speed really thought this was a good idea.",
+  "summary": "IShowSpeed live: 🔴PLAYING GTA 6 EARLY ACCESS GAMEPLAY GET IN HERE!",
+  "tiktok_caption": "Speed in 🔴PLAYING GTA 6 EARLY ACCESS GAMEPLAY GET IN HERE!.",
+  "hashtags": [],
+  "tags": [],
+  "draft": true,
+  "writer": "template",
+  "description": "IShowSpeed live, 🔴PLAYING GTA 6 EARLY ACCESS GAMEPLAY GET IN HERE!\n\nFull stream by IShowSpeed: https://www.youtube.com/watch?v=qSyo5d-dVzA&t=7383s\nGo support IShowSpeed, all credit to them.\n\n#ishowspeed #speed #shorts #kaicenat #edit",
+  "key": "qSyo5d-dVzA@246",
+  "permission": "fan clipping is widespread and tolerated; no official paid program found (Oct 2026)"
+ },
+ {
+  "id": 2,
+  "source": "ishowspeed",
+  "creator": "IShowSpeed",
+  "platform": "youtube",
+  "video_id": "OIeLbmyraRQ",
+  "video_title": "🔴 BEATING GTA 6 RIGHT NOW 100% (FINAL MISSION)",
+  "url": "https://www.youtube.com/watch?v=OIeLbmyraRQ&t=19901s",
+  "moment": "5:31:41",
+  "start": 19881,
+  "end": 19911,
+  "rank": 36.93,
+  "signal": "4 timestamp comments, 76 likes",
+  "signals": [
+   "comments"
+  ],
+  "quotes": [
+   "bro overwrote his 98% completed checkpoint. This is gotta hurt",
+   "speed deletes 98% complete save file",
+   "bruh overwrote the 98 % misson"
+  ],
+  "stream_age_h": 47.6,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 2,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": "caption_words"
+  },
+  "council": {
+   "trend": 0.84,
+   "study": 1.0,
+   "analytics": 0.82,
+   "live": 0.41,
+   "script": 0.75,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 0.84,
+    "why": "Speed clips pull 912,491 views/hour this week, up 20% since the last scan; matches what's viral now: gta"
+   },
+   "study": {
+    "score": 1.0,
+    "why": "6 of the top channels' breakout Shorts are Speed clips; Speed is in 89 of their recent titles"
+   },
+   "analytics": {
+    "score": 0.82,
+    "why": "Speed clips spread 1.2x our typical clip; viewer timestamp comments moments do 0.8x; has a spoken premise (bet/question/challenge); news people search for (final), like our only 50+ view Short; stream is 48h old"
+   },
+   "live": {
+    "score": 0.41,
+    "why": "4 timestamp comments, 76 likes"
+   },
+   "script": {
+    "score": 0.75,
+    "why": "draft title: \"Speed: Beating GTA 6 Right NOW 100% (final Mission) 🔥\""
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-22T18:34:15Z",
+  "council_why": "IShowSpeed at 5:31:41 of '🔴 BEATING GTA 6 RIGHT NOW 100% (FINAL MISSION)'. High trend match, strong channel study, and a clear spoken premise.",
+  "post_utc": "2026-11-22 22:00",
+  "post_local": "Sun 05:00 PM ET",
+  "title": "Speed overwrote his 98% completed checkp 🤯",
+  "hook": "OVERWROTE HIS 98% COMPLETED CHECKPOINT. ",
+  "context": "IShowSpeed live, 🔴 BEATING GTA 6 RIGHT NOW 100% (FINAL MISSION)",
+  "take": "Keep your eyes on Speed right here.",
+  "summary": "IShowSpeed live: 🔴 BEATING GTA 6 RIGHT NOW 100% (FINAL MISSION)",
+  "tiktok_caption": "Speed in 🔴 BEATING GTA 6 RIGHT NOW 100% (FINAL MISSION).",
+  "hashtags": [],
+  "tags": [],
+  "draft": true,
+  "writer": "template",
+  "description": "IShowSpeed live, 🔴 BEATING GTA 6 RIGHT NOW 100% (FINAL MISSION)\n\nFull stream by IShowSpeed: https://www.youtube.com/watch?v=OIeLbmyraRQ&t=19901s\nGo support IShowSpeed, all credit to them.\n\n#ishowspeed #speed #shorts #kaicenat #edit",
+  "key": "OIeLbmyraRQ@663",
+  "permission": "fan clipping is widespread and tolerated; no official paid program found (Oct 2026)"
+ },
+ {
+  "id": 3,
+  "source": "caseoh",
+  "creator": "CaseOh",
+  "platform": "twitch",
+  "video_id": "2935283335",
+  "video_title": "kyle 1",
+  "url": "https://www.twitch.tv/videos/2935283335?t=3h13m45s",
+  "moment": "3:13:45",
+  "start": 11605,
+  "end": 11635,
+  "rank": 101.34,
+  "signal": "Twitch clip, 19,927 views (692/h)",
+  "signals": [
+   "twitch clip"
+  ],
+  "quotes": [
+   "kyle 1"
+  ],
+  "stream_age_h": 28.8,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 0.35,
+   "layout": "face34",
+   "test": "gap"
+  },
+  "council": {
+   "trend": 1.0,
+   "study": 0.25,
+   "analytics": 0.57,
+   "live": 0.13,
+   "script": 0.35,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 1.0,
+    "why": "CaseOh clips pull 2,513 views/hour this week, up 424% since the last scan"
+   },
+   "study": {
+    "score": 0.25,
+    "why": "top channels rarely break out with CaseOh"
+   },
+   "analytics": {
+    "score": 0.57,
+    "why": "CaseOh clips spread 2.0x our typical clip; no clear premise, may be visual-only; stream is 29h old"
+   },
+   "live": {
+    "score": 0.13,
+    "why": "Twitch clip at 692/h"
+   },
+   "script": {
+    "score": 0.35,
+    "why": "draft title: \"CaseOh At Kyle 1 😱\"; no captions yet, writing blind"
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-22T18:34:15Z",
+  "council_why": "highest combined vote",
+  "post_utc": "2026-11-22 19:00",
+  "post_local": "Sun 02:00 PM ET",
+  "title": "CaseOh kyle 1 🤯",
+  "hook": "KYLE 1",
+  "context": "CaseOh live, kyle 1",
+  "take": "Nobody in the room saw this coming.",
+  "summary": "CaseOh live: kyle 1",
+  "tiktok_caption": "CaseOh in kyle 1.",
+  "hashtags": [],
+  "tags": [],
+  "draft": true,
+  "writer": "template",
+  "description": "CaseOh live, kyle 1\n\nFull stream by CaseOh: https://www.twitch.tv/videos/2935283335?t=3h13m45s\nGo support CaseOh, all credit to them.\n\n#caseoh #shorts #kaicenat #ishowspeed #edit",
+  "key": "2935283335@387",
+  "permission": "fan clipping is widespread and tolerated; no official program checked (Nov 2026)"
+ }
+]

@@ -1,0 +1,325 @@
+{
+ "study_run": "channels_streamer_2026-11-22_1833",
+ "median_seconds": 31,
+ "length": [
+  {
+   "bucket": "0-15s",
+   "videos": 76,
+   "channels": 4,
+   "median_views": 425246,
+   "median_lift": 1.26
+  },
+  {
+   "bucket": "15-30s",
+   "videos": 148,
+   "channels": 8,
+   "median_views": 676657,
+   "median_lift": 1.06
+  },
+  {
+   "bucket": "30-45s",
+   "videos": 140,
+   "channels": 8,
+   "median_views": 1626012,
+   "median_lift": 0.89
+  },
+  {
+   "bucket": "45-60s",
+   "videos": 79,
+   "channels": 4,
+   "median_views": 3884183,
+   "median_lift": 0.97
+  },
+  {
+   "bucket": "3min+",
+   "videos": 51,
+   "channels": 2,
+   "median_views": 2445590,
+   "median_lift": 1.01
+  }
+ ],
+ "cadence_median": 0.95,
+ "cadence_p75": 1.76,
+ "top_hours": [
+  [
+   4,
+   3.491381799139283
+  ],
+  [
+   18,
+   1.8050968135001748
+  ],
+  [
+   6,
+   1.7087105112315197
+  ],
+  [
+   14,
+   1.4697119472684885
+  ]
+ ],
+ "hashtags": [
+  [
+   "#shorts",
+   112
+  ],
+  [
+   "#kaicenat",
+   107
+  ],
+  [
+   "#ishowspeed",
+   103
+  ],
+  [
+   "#edit",
+   45
+  ],
+  [
+   "#rakai",
+   43
+  ],
+  [
+   "#ray",
+   32
+  ],
+  [
+   "#halloween",
+   17
+  ],
+  [
+   "#gtavi",
+   15
+  ],
+  [
+   "#dukedennis",
+   15
+  ],
+  [
+   "#funny",
+   11
+  ],
+  [
+   "#shrots",
+   11
+  ],
+  [
+   "#gta6",
+   6
+  ]
+ ],
+ "hooks": [
+  [
+   "kai cenat can't",
+   2
+  ],
+  [
+   "kai & pudgie",
+   2
+  ],
+  [
+   "kai & speed",
+   2
+  ]
+ ],
+ "title_chars": 42,
+ "title_cmp": {
+  "emoji": [
+   0.92,
+   0.83
+  ],
+  "question": [
+   0.03,
+   0.01
+  ],
+  "exclaim": [
+   0.31,
+   0.31
+  ],
+  "number": [
+   0.08,
+   0.06
+  ],
+  "quote": [
+   0.05,
+   0.06
+  ],
+  "pipe_or_dash": [
+   0.0,
+   0.0
+  ]
+ },
+ "sources": [
+  [
+   "ishowspeed",
+   89
+  ],
+  [
+   "kai cenat",
+   59
+  ],
+  [
+   "rakai",
+   21
+  ],
+  [
+   "gta 6",
+   12
+  ],
+  [
+   "fanum",
+   12
+  ],
+  [
+   "pudgie",
+   7
+  ],
+  [
+   "duke dennis",
+   7
+  ],
+  [
+   "football",
+   6
+  ],
+  [
+   "tota",
+   3
+  ],
+  [
+   "basketball",
+   3
+  ]
+ ],
+ "winners": [
+  {
+   "title": "Jeffy Knows Ball Fr\ud83d\ude02\ud83d\ude02",
+   "views": 12742146,
+   "lift": 255.4,
+   "seconds": 23,
+   "channel": "ViralSprint"
+  },
+  {
+   "title": "iShowSpeed's Most Expensive Gift Ever\u2764\ufe0f\u200d\ud83e\ude79\u2764\ufe0f\u200d\ud83e\ude79",
+   "views": 10681845,
+   "lift": 214.1,
+   "seconds": 51,
+   "channel": "ViralSprint"
+  },
+  {
+   "title": "Gave The Gift To The Right Person\u2764\ufe0f\u200d\ud83e\ude79\u2764\ufe0f\u200d\ud83e\ude79",
+   "views": 9830824,
+   "lift": 197.1,
+   "seconds": 56,
+   "channel": "ViralSprint"
+  },
+  {
+   "title": "iShowSpeed Crashes OUT When Jamal Guesses Where Pizza Is From! \ud83c\udf55\ud83d\ude02",
+   "views": 25530203,
+   "lift": 179.6,
+   "seconds": 22,
+   "channel": "BKVC"
+  },
+  {
+   "title": "IShowSpeed Unpacks A Signed Ronaldo Jersey To Wear It!\ud83d\udc55\ud83d\ude02",
+   "views": 22389142,
+   "lift": 157.5,
+   "seconds": 28,
+   "channel": "BKVC"
+  },
+  {
+   "title": "IShowSpeed Uses The Wrong Shield In Minecraft!\ud83e\udde0\ud83d\ude02",
+   "views": 21253107,
+   "lift": 149.5,
+   "seconds": 10,
+   "channel": "BKVC"
+  },
+  {
+   "title": "Kai Cenat Can't Believe Tota Ate Cake From The Floor!\ud83c\udf82\ud83d\ude02",
+   "views": 18408098,
+   "lift": 129.5,
+   "seconds": 26,
+   "channel": "BKVC"
+  },
+  {
+   "title": "iShowSpeed Got \"5 Star Skill Moves\"\ud83d\udc80\ud83d\ude2d",
+   "views": 5494827,
+   "lift": 110.1,
+   "seconds": 24,
+   "channel": "ViralSprint"
+  },
+  {
+   "title": "Bro Can't Hide from Chat\ud83d\ude02\ud83d\ude02",
+   "views": 4951816,
+   "lift": 99.3,
+   "seconds": 26,
+   "channel": "ViralSprint"
+  },
+  {
+   "title": "iShowSpeed Spread Love Even After All That\ud83d\udcaf\u2764\ufe0f\u200d\ud83e\ude79",
+   "views": 4881617,
+   "lift": 97.9,
+   "seconds": 46,
+   "channel": "ViralSprint"
+  },
+  {
+   "title": "Henry a Real One For That\ud83d\udc96\ud83d\udcaf",
+   "views": 4394021,
+   "lift": 88.1,
+   "seconds": 42,
+   "channel": "ViralSprint"
+  },
+  {
+   "title": "Kai & Pudgie Recreates Big Smoke Order Food Scene \ud83e\udd23",
+   "views": 13309625,
+   "lift": 87.5,
+   "seconds": 19,
+   "channel": "Snickerly"
+  }
+ ],
+ "young_channels": [
+  {
+   "name": "Nexxo Recaps",
+   "age_months": 10.4,
+   "median_views": 4262769,
+   "views_30d": 78743907,
+   "uploads_per_day": 0.79
+  },
+  {
+   "name": "Rut Ribes",
+   "age_months": 6.2,
+   "median_views": 88763,
+   "views_30d": 36209631,
+   "uploads_per_day": 1.9
+  },
+  {
+   "name": "\u26a1\ufe0fUNIKPLUG\u26a1\ufe0f",
+   "age_months": 5.2,
+   "median_views": 24570,
+   "views_30d": 36208455,
+   "uploads_per_day": 0.69
+  },
+  {
+   "name": "aztrooshorts",
+   "age_months": 10.2,
+   "median_views": 59389,
+   "views_30d": 21947837,
+   "uploads_per_day": 0.73
+  },
+  {
+   "name": "skel3",
+   "age_months": 11.8,
+   "median_views": 106347,
+   "views_30d": 21517757,
+   "uploads_per_day": 0.95
+  },
+  {
+   "name": "Stream Rush",
+   "age_months": 6.4,
+   "median_views": 61226,
+   "views_30d": 17186174,
+   "uploads_per_day": 0.85
+  }
+ ],
+ "benchmark_median_views": 31444
+}
