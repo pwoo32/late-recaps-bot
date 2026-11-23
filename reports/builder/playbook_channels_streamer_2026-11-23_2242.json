@@ -1,0 +1,317 @@
+{
+ "study_run": "channels_streamer_2026-11-23_2242",
+ "median_seconds": 30,
+ "length": [
+  {
+   "bucket": "0-15s",
+   "videos": 72,
+   "channels": 4,
+   "median_views": 341973,
+   "median_lift": 1.12
+  },
+  {
+   "bucket": "15-30s",
+   "videos": 159,
+   "channels": 8,
+   "median_views": 888189,
+   "median_lift": 1.06
+  },
+  {
+   "bucket": "30-45s",
+   "videos": 146,
+   "channels": 8,
+   "median_views": 1742508,
+   "median_lift": 0.95
+  },
+  {
+   "bucket": "45-60s",
+   "videos": 72,
+   "channels": 4,
+   "median_views": 4856461,
+   "median_lift": 1.03
+  },
+  {
+   "bucket": "3min+",
+   "videos": 49,
+   "channels": 2,
+   "median_views": 2445970,
+   "median_lift": 1.0
+  }
+ ],
+ "cadence_median": 1.07,
+ "cadence_p75": 2.3625,
+ "top_hours": [
+  [
+   18,
+   2.03527967758129
+  ],
+  [
+   5,
+   1.8329820047402468
+  ],
+  [
+   4,
+   1.7372941015488679
+  ],
+  [
+   6,
+   1.6883582493404585
+  ]
+ ],
+ "hashtags": [
+  [
+   "#shorts",
+   112
+  ],
+  [
+   "#kaicenat",
+   107
+  ],
+  [
+   "#ishowspeed",
+   102
+  ],
+  [
+   "#edit",
+   45
+  ],
+  [
+   "#rakai",
+   43
+  ],
+  [
+   "#ray",
+   33
+  ],
+  [
+   "#halloween",
+   17
+  ],
+  [
+   "#gtavi",
+   16
+  ],
+  [
+   "#dukedennis",
+   15
+  ],
+  [
+   "#funny",
+   11
+  ],
+  [
+   "#shrots",
+   11
+  ],
+  [
+   "#gta6",
+   7
+  ]
+ ],
+ "hooks": [
+  [
+   "kai cenat can't",
+   2
+  ],
+  [
+   "kai & pudgie",
+   2
+  ],
+  [
+   "kai & speed",
+   2
+  ]
+ ],
+ "title_chars": 43,
+ "title_cmp": {
+  "emoji": [
+   0.94,
+   0.81
+  ],
+  "question": [
+   0.02,
+   0.01
+  ],
+  "exclaim": [
+   0.31,
+   0.24
+  ],
+  "number": [
+   0.09,
+   0.06
+  ],
+  "quote": [
+   0.07,
+   0.04
+  ],
+  "pipe_or_dash": [
+   0.0,
+   0.0
+  ]
+ },
+ "sources": [
+  [
+   "ishowspeed",
+   89
+  ],
+  [
+   "kai cenat",
+   58
+  ],
+  [
+   "gta 6",
+   23
+  ],
+  [
+   "rakai",
+   19
+  ],
+  [
+   "fanum",
+   12
+  ],
+  [
+   "duke dennis",
+   7
+  ],
+  [
+   "pudgie",
+   7
+  ],
+  [
+   "tota",
+   3
+  ]
+ ],
+ "winners": [
+  {
+   "title": "Jeffy Knows Ball Fr\ud83d\ude02\ud83d\ude02",
+   "views": 13495218,
+   "lift": 262.1,
+   "seconds": 23,
+   "channel": "ViralSprint"
+  },
+  {
+   "title": "iShowSpeed's Most Expensive Gift Ever\u2764\ufe0f\u200d\ud83e\ude79\u2764\ufe0f\u200d\ud83e\ude79",
+   "views": 11302222,
+   "lift": 219.5,
+   "seconds": 51,
+   "channel": "ViralSprint"
+  },
+  {
+   "title": "Gave The Gift To The Right Person\u2764\ufe0f\u200d\ud83e\ude79\u2764\ufe0f\u200d\ud83e\ude79",
+   "views": 10572957,
+   "lift": 205.3,
+   "seconds": 56,
+   "channel": "ViralSprint"
+  },
+  {
+   "title": "iShowSpeed Crashes OUT When Jamal Guesses Where Pizza Is From! \ud83c\udf55\ud83d\ude02",
+   "views": 25999039,
+   "lift": 182.5,
+   "seconds": 22,
+   "channel": "BKVC"
+  },
+  {
+   "title": "IShowSpeed Unpacks A Signed Ronaldo Jersey To Wear It!\ud83d\udc55\ud83d\ude02",
+   "views": 23122891,
+   "lift": 162.3,
+   "seconds": 28,
+   "channel": "BKVC"
+  },
+  {
+   "title": "IShowSpeed Uses The Wrong Shield In Minecraft!\ud83e\udde0\ud83d\ude02",
+   "views": 21398135,
+   "lift": 150.2,
+   "seconds": 10,
+   "channel": "BKVC"
+  },
+  {
+   "title": "Kai Cenat Can't Believe Tota Ate Cake From The Floor!\ud83c\udf82\ud83d\ude02",
+   "views": 18668564,
+   "lift": 131.0,
+   "seconds": 26,
+   "channel": "BKVC"
+  },
+  {
+   "title": "iShowSpeed Got \"5 Star Skill Moves\"\ud83d\udc80\ud83d\ude2d",
+   "views": 5638942,
+   "lift": 109.5,
+   "seconds": 24,
+   "channel": "ViralSprint"
+  },
+  {
+   "title": "iShowSpeed Spread Love Even After All That\ud83d\udcaf\u2764\ufe0f\u200d\ud83e\ude79",
+   "views": 5465030,
+   "lift": 106.1,
+   "seconds": 46,
+   "channel": "ViralSprint"
+  },
+  {
+   "title": "Bro Can't Hide from Chat\ud83d\ude02\ud83d\ude02",
+   "views": 5349510,
+   "lift": 103.9,
+   "seconds": 26,
+   "channel": "ViralSprint"
+  },
+  {
+   "title": "She Was Waiting For This Day\ud83e\udd76\ud83d\ude02",
+   "views": 5289651,
+   "lift": 102.7,
+   "seconds": 47,
+   "channel": "ViralSprint"
+  },
+  {
+   "title": "Henry a Real One For That\ud83d\udc96\ud83d\udcaf",
+   "views": 4751477,
+   "lift": 92.3,
+   "seconds": 42,
+   "channel": "ViralSprint"
+  }
+ ],
+ "young_channels": [
+  {
+   "name": "Nexxo Recaps",
+   "age_months": 10.4,
+   "median_views": 4146741,
+   "views_30d": 79998768,
+   "uploads_per_day": 0.79
+  },
+  {
+   "name": "Rut Ribes",
+   "age_months": 6.3,
+   "median_views": 89534,
+   "views_30d": 37301471,
+   "uploads_per_day": 1.82
+  },
+  {
+   "name": "\u26a1\ufe0fUNIKPLUG\u26a1\ufe0f",
+   "age_months": 5.3,
+   "median_views": 23936,
+   "views_30d": 26376167,
+   "uploads_per_day": 0.71
+  },
+  {
+   "name": "skel3",
+   "age_months": 11.8,
+   "median_views": 106809,
+   "views_30d": 22727713,
+   "uploads_per_day": 0.92
+  },
+  {
+   "name": "SpeedyClips",
+   "age_months": 11.3,
+   "median_views": 28274,
+   "views_30d": 16000225,
+   "uploads_per_day": 0.65
+  },
+  {
+   "name": "Heartly",
+   "age_months": 4.7,
+   "median_views": 30113,
+   "views_30d": 8612684,
+   "uploads_per_day": 1.06
+  }
+ ],
+ "benchmark_median_views": 30113
+}

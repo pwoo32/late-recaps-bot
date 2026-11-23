@@ -1,21 +1,21 @@
 {
  "source_weight": {
-  "jynxzi": 2.76,
+  "jynxzi": 2.86,
   "kai_cenat": 0.31,
   "ishowspeed": 1.99,
-  "stableronaldo": 2.03,
-  "caseoh": 2.98
+  "stableronaldo": 1.82,
+  "caseoh": 2.99
  },
  "slot_weight": {
-  "2": 1.25,
-  "21": 1.49,
-  "8": 1.89,
-  "4": 0.49,
-  "22": 2.49,
-  "17": 2.78,
+  "2": 1.35,
+  "21": 1.69,
+  "8": 1.93,
+  "4": 0.41,
+  "22": 2.29,
+  "17": 2.87,
   "6": 2.99,
-  "1": 0.73,
-  "5": 1.8
+  "1": 0.56,
+  "5": 1.88
  },
  "used_moments": [
   "L6S9Vb3RLy4@186",
@@ -158,7 +158,10 @@
   "hwSg39yIBGU@325",
   "qSyo5d-dVzA@246",
   "OIeLbmyraRQ@663",
-  "2935283335@387"
+  "2935283335@387",
+  "2937666104@86",
+  "hwSg39yIBGU@2344",
+  "2936324446@637"
  ],
  "queued": {
   "L6S9Vb3RLy4@186": {
@@ -2405,6 +2408,85 @@
     "script": 0.35,
     "audience": 0.5
    }
+  },
+  "2937666104@86": {
+   "title": "CaseOh At Get Away \ud83d\ude31",
+   "source": "caseoh",
+   "post_utc": "2026-11-24 05:00",
+   "recipe": {
+    "length": 30,
+    "punch": 0.14,
+    "beat": "normal",
+    "caption_words": 3,
+    "gap": 0.6,
+    "layout": "face34",
+    "test": null
+   },
+   "council": {
+    "trend": 1.0,
+    "study": 0.25,
+    "analytics": 0.68,
+    "live": 0.14,
+    "script": 0.35,
+    "audience": 0.5
+   }
+  },
+  "hwSg39yIBGU@2344": {
+   "title": "Speed Crashes GTA 6 Before Saving \ud83d\ude2d",
+   "source": "ishowspeed",
+   "post_utc": "2026-11-24 08:00",
+   "recipe": {
+    "length": 30,
+    "punch": 0.14,
+    "beat": "normal",
+    "caption_words": 2,
+    "gap": 0.6,
+    "layout": "face34",
+    "test": "caption_words"
+   },
+   "council": {
+    "trend": 0.83,
+    "study": 1.0,
+    "analytics": 0.51,
+    "live": 0.39,
+    "script": 0.75,
+    "audience": 0.5
+   },
+   "video_id": "4w3kpLYuzLs",
+   "words": [
+    "crashed",
+    "crashes",
+    "forgot",
+    "game",
+    "here",
+    "marathon",
+    "playing",
+    "save",
+    "saving",
+    "wallahi"
+   ]
+  },
+  "2936324446@637": {
+   "title": "Ronaldo At Caught??? \ud83d\ude31",
+   "source": "stableronaldo",
+   "post_utc": "2026-11-24 00:00",
+   "recipe": {
+    "length": 30,
+    "punch": 0.14,
+    "beat": "normal",
+    "caption_words": 3,
+    "gap": 0.35,
+    "layout": "face34",
+    "test": "gap"
+   },
+   "council": {
+    "trend": 0.69,
+    "study": 0.25,
+    "analytics": 0.58,
+    "live": 0.11,
+    "script": 0.35,
+    "audience": 0.5
+   }
   }
  },
  "channel": "UCbK9EejOk5UVzI_l8F3f8kA",
@@ -2578,6 +2660,16 @@
  },
  "own_results": [
   {
+   "title": "Speed Overwrites His 98% GTA 6 Save File \ud83d\udc80\ud83d\ude2d",
+   "views": 0,
+   "lift": 0.0
+  },
+  {
+   "title": "Speed Finishes GTA 6 After 52 Hours Awake \ud83d\ude2d",
+   "views": 2,
+   "lift": 2.0
+  },
+  {
    "title": "Speed Reacts To Bag In GTA 6 \ud83d\ude2d",
    "views": 0,
    "lift": 0.0
@@ -2589,8 +2681,8 @@
   },
   {
    "title": "Dinah Starts The Stream Laughing Uncontrollably \ud83d\ude2d\ud83d\ude02",
-   "views": 5,
-   "lift": 5.0
+   "views": 6,
+   "lift": 6.0
   },
   {
    "title": "CaseOh Get Jump Scared Mid Game \ud83d\ude2d",
@@ -2716,16 +2808,6 @@
    "title": "Jynxzi Plays For $1000 And Goes Off \ud83d\udd25",
    "views": 2,
    "lift": 2.0
-  },
-  {
-   "title": "Kai Cenat Can't Believe Pooh Shiesty Bro Snapping \ud83e\uddd0\ud83d\ude2d",
-   "views": 3,
-   "lift": 3.0
-  },
-  {
-   "title": "Jynxzi Can't Believe What Just Happened \ud83d\ude2d",
-   "views": 1,
-   "lift": 1.0
   }
  ],
  "tiktok": {
@@ -2733,149 +2815,6 @@
   "mode": "inbox"
  },
  "chat_spikes": {
-  "nb5uTOtYj3U": [
-   {
-    "t": 5554,
-    "ratio": 24.3,
-    "msgs": 173,
-    "sample": [
-     "L ",
-     "What",
-     "Broooooo",
-     "l",
-     "What game is this?"
-    ]
-   },
-   {
-    "t": 16669,
-    "ratio": 23.6,
-    "msgs": 106,
-    "sample": [
-     "w",
-     "Ww",
-     "W",
-     "w",
-     "w"
-    ]
-   },
-   {
-    "t": 15884,
-    "ratio": 17.6,
-    "msgs": 92,
-    "sample": [
-     "W",
-     "w",
-     "w",
-     "w",
-     "w"
-    ]
-   },
-   {
-    "t": 6899,
-    "ratio": 10.0,
-    "msgs": 46,
-    "sample": [
-     "w",
-     "w\\",
-     "w",
-     "w",
-     "w"
-    ]
-   },
-   {
-    "t": 7284,
-    "ratio": 9.6,
-    "msgs": 180,
-    "sample": [
-     "YouTube lagging bro ",
-     "lmao",
-     "what day is it?",
-     "W connection",
-     "l"
-    ]
-   },
-   {
-    "t": 12044,
-    "ratio": 7.0,
-    "msgs": 42,
-    "sample": [
-     "w",
-     "w",
-     "w",
-     "w",
-     "w"
-    ]
-   }
-  ],
-  "jmRH9uvgPNk": [
-   {
-    "t": 40649,
-    "ratio": 19.2,
-    "msgs": 194,
-    "sample": [
-     "yo",
-     "Yo",
-     "yoo",
-     "Yo",
-     "Yooooo"
-    ]
-   },
-   {
-    "t": 37904,
-    "ratio": 9.9,
-    "msgs": 264,
-    "sample": [
-     "AYOOO",
-     "w meh too lmao"
-    ]
-   },
-   {
-    "t": 7934,
-    "ratio": 6.2,
-    "msgs": 73,
-    "sample": [
-     "W",
-     "w",
-     "w",
-     "Lmaooo",
-     "w"
-    ]
-   },
-   {
-    "t": 23674,
-    "ratio": 6.1,
-    "msgs": 291,
-    "sample": [
-     "No brooo ",
-     "You are changing the game from how it was made bro ",
-     "w"
-    ]
-   },
-   {
-    "t": 18094,
-    "ratio": 5.0,
-    "msgs": 58,
-    "sample": [
-     "ww",
-     "wtf",
-     "W",
-     "W",
-     "w"
-    ]
-   },
-   {
-    "t": 34,
-    "ratio": 4.9,
-    "msgs": 249,
-    "sample": [
-     "W",
-     "W",
-     "w",
-     "W",
-     "W"
-    ]
-   }
-  ],
   "kDLY56pnDlo": [
    {
     "t": 32709,
@@ -4177,7 +4116,9 @@
     ]
    }
   ],
-  "Q31GfI-kGB8": []
+  "Q31GfI-kGB8": [],
+  "izXcd-bU72k": [],
+  "0C6u0rRJEIg": []
  },
  "edit": {
   "stats": {

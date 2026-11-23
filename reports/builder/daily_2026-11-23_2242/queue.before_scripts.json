@@ -1,0 +1,253 @@
+[
+ {
+  "id": 1,
+  "source": "caseoh",
+  "creator": "CaseOh",
+  "platform": "twitch",
+  "video_id": "2937666104",
+  "video_title": "get away",
+  "url": "https://www.twitch.tv/videos/2937666104?t=0h43m24s",
+  "moment": "43:24",
+  "start": 2584,
+  "end": 2614,
+  "rank": 94.59,
+  "signal": "Twitch clip, 7,479 views (855/h)",
+  "signals": [
+   "twitch clip"
+  ],
+  "quotes": [
+   "get away"
+  ],
+  "stream_age_h": 8.7,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": null
+  },
+  "council": {
+   "trend": 1.0,
+   "study": 0.25,
+   "analytics": 0.68,
+   "live": 0.14,
+   "script": 0.35,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 1.0,
+    "why": "CaseOh clips pull 24,800 views/hour this week, up 870% since the last scan"
+   },
+   "study": {
+    "score": 0.25,
+    "why": "top channels rarely break out with CaseOh"
+   },
+   "analytics": {
+    "score": 0.68,
+    "why": "CaseOh clips spread 2.0x our typical clip; no clear premise, may be visual-only; stream is 9h old (fresh)"
+   },
+   "live": {
+    "score": 0.14,
+    "why": "Twitch clip at 855/h"
+   },
+   "script": {
+    "score": 0.35,
+    "why": "draft title: \"CaseOh At Get Away 😱\"; no captions yet, writing blind"
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-23T22:42:58Z",
+  "council_why": "CaseOh's clips have a significant increase in views and spread, and the moment has a clear visual premise that can grab the attention of scrollers.",
+  "post_utc": "2026-11-24 05:00",
+  "post_local": "Tue 12:00 AM ET",
+  "title": "CaseOh get away 🤯",
+  "hook": "GET AWAY",
+  "context": "CaseOh live, get away",
+  "take": "CaseOh really thought this was a good idea.",
+  "summary": "CaseOh live: get away",
+  "tiktok_caption": "CaseOh in get away.",
+  "hashtags": [],
+  "tags": [],
+  "draft": true,
+  "writer": "template",
+  "description": "CaseOh live, get away\n\nFull stream by CaseOh: https://www.twitch.tv/videos/2937666104?t=0h43m24s\nGo support CaseOh, all credit to them.\n\n#caseoh #shorts #kaicenat #ishowspeed #edit",
+  "key": "2937666104@86",
+  "permission": "fan clipping is widespread and tolerated; no official program checked (Nov 2026)"
+ },
+ {
+  "id": 2,
+  "source": "ishowspeed",
+  "creator": "IShowSpeed",
+  "platform": "youtube",
+  "video_id": "hwSg39yIBGU",
+  "video_title": "🔴PLAYING GTA 6 RIGHT NOW GET IN HERE!",
+  "url": "https://www.youtube.com/watch?v=hwSg39yIBGU&t=70326s",
+  "moment": "19:32:06",
+  "start": 70306,
+  "end": 70336,
+  "rank": 23.7,
+  "signal": "5 timestamp comments, 57 likes",
+  "signals": [
+   "comments"
+  ],
+  "quotes": [
+   "Crashes.... Say Wallahi !!",
+   "Game crashed",
+   "here the moment ( he forgot to save )"
+  ],
+  "stream_age_h": 81.9,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 2,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": "caption_words"
+  },
+  "council": {
+   "trend": 0.83,
+   "study": 1.0,
+   "analytics": 0.51,
+   "live": 0.39,
+   "script": 0.75,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 0.83,
+    "why": "Speed clips pull 1,047,899 views/hour this week, up 15% since the last scan; matches what's viral now: gta"
+   },
+   "study": {
+    "score": 1.0,
+    "why": "6 of the top channels' breakout Shorts are Speed clips; Speed is in 89 of their recent titles"
+   },
+   "analytics": {
+    "score": 0.51,
+    "why": "Speed clips spread 1.2x our typical clip; viewer timestamp comments moments do 0.8x; has a spoken premise (bet/question/challenge); stream is 82h old (other clippers had time)"
+   },
+   "live": {
+    "score": 0.39,
+    "why": "5 timestamp comments, 57 likes"
+   },
+   "script": {
+    "score": 0.75,
+    "why": "draft title: \"Speed: Playing GTA 6 Right NOW GET IN Here 🔥\""
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-23T22:42:58Z",
+  "council_why": "IShowSpeed's clips are highly engaging with a strong chat spike and a clear spoken premise, and the moment aligns with current trends.",
+  "post_utc": "2026-11-24 08:00",
+  "post_local": "Tue 03:00 AM ET",
+  "title": "Speed Crashes.... Say Wallahi 🤯",
+  "hook": "CRASHES.... SAY WALLAHI",
+  "context": "IShowSpeed live, 🔴PLAYING GTA 6 RIGHT NOW GET IN HERE!",
+  "take": "Nobody in the room saw this coming.",
+  "summary": "IShowSpeed live: 🔴PLAYING GTA 6 RIGHT NOW GET IN HERE!",
+  "tiktok_caption": "Speed in 🔴PLAYING GTA 6 RIGHT NOW GET IN HERE!.",
+  "hashtags": [],
+  "tags": [],
+  "draft": true,
+  "writer": "template",
+  "description": "IShowSpeed live, 🔴PLAYING GTA 6 RIGHT NOW GET IN HERE!\n\nFull stream by IShowSpeed: https://www.youtube.com/watch?v=hwSg39yIBGU&t=70326s\nGo support IShowSpeed, all credit to them.\n\n#ishowspeed #speed #shorts #kaicenat #edit",
+  "key": "hwSg39yIBGU@2344",
+  "permission": "fan clipping is widespread and tolerated; no official paid program found (Oct 2026)"
+ },
+ {
+  "id": 3,
+  "source": "stableronaldo",
+  "creator": "Stable Ronaldo",
+  "platform": "twitch",
+  "video_id": "2936324446",
+  "video_title": "CAUGHT???",
+  "url": "https://www.twitch.tv/videos/2936324446?t=5h18m54s",
+  "moment": "5:18:54",
+  "start": 19114,
+  "end": 19144,
+  "rank": 36.31,
+  "signal": "Twitch clip, 6,877 views (144/h)",
+  "signals": [
+   "twitch clip"
+  ],
+  "quotes": [
+   "CAUGHT???"
+  ],
+  "stream_age_h": 47.9,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 0.35,
+   "layout": "face34",
+   "test": "gap"
+  },
+  "council": {
+   "trend": 0.69,
+   "study": 0.25,
+   "analytics": 0.58,
+   "live": 0.11,
+   "script": 0.35,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 0.69,
+    "why": "Ronaldo clips pull 4,442 views/hour this week, up 271% since the last scan"
+   },
+   "study": {
+    "score": 0.25,
+    "why": "top channels rarely break out with Ronaldo"
+   },
+   "analytics": {
+    "score": 0.58,
+    "why": "Ronaldo clips spread 1.0x our typical clip; has a spoken premise (bet/question/challenge); stream is 48h old"
+   },
+   "live": {
+    "score": 0.11,
+    "why": "Twitch clip at 144/h"
+   },
+   "script": {
+    "score": 0.35,
+    "why": "draft title: \"Ronaldo At Caught??? 😱\"; no captions yet, writing blind"
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-23T22:42:58Z",
+  "council_why": "Stable Ronaldo's clips, while not as high as CaseOh's, still have a clear spoken premise and a relatively high spread rate, making them a strong contender.",
+  "post_utc": "2026-11-24 00:00",
+  "post_local": "Mon 07:00 PM ET",
+  "title": "Ronaldo CAUGHT 🤯",
+  "hook": "CAUGHT",
+  "context": "Stable Ronaldo live, CAUGHT???",
+  "take": "Nobody in the room saw this coming.",
+  "summary": "Stable Ronaldo live: CAUGHT???",
+  "tiktok_caption": "Ronaldo in CAUGHT???.",
+  "hashtags": [],
+  "tags": [],
+  "draft": true,
+  "writer": "template",
+  "description": "Stable Ronaldo live, CAUGHT???\n\nFull stream by Stable Ronaldo: https://www.twitch.tv/videos/2936324446?t=5h18m54s\nGo support Stable Ronaldo, all credit to them.\n\n#stableronaldo #shorts #kaicenat #ishowspeed #edit",
+  "key": "2936324446@637",
+  "permission": "fan clipping is widespread and tolerated; no official program checked (Nov 2026)"
+ }
+]
