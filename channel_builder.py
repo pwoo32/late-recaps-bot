@@ -1745,6 +1745,13 @@ def post_tiktok(qdir, queue, clips, tt):
     """Send every rendered clip that isn't on TikTok yet (enabled with `tiktok-auth --enable`)."""
     import tiktok_upload
     qfile = qdir / "queue.json"
+    stalled = tt.get("stalled")
+    if stalled and not os.environ.get("TIKTOK_IGNORE_STALL"):
+        # set by review_agent.tiktok_reach: the newest posts were never shown to anyone, so more drafts change nothing
+        print(f"  TikTok on hold: the last {stalled.get('dead_run', '?')} posts (since {stalled.get('since')}) got under 10 "
+              "views each, so TikTok isn't showing this account. No drafts until a post is seen again; check Account "
+              "status in the TikTok app (README: TikTok reach). TIKTOK_IGNORE_STALL=1 sends anyway.")
+        return
     inbox = tt.get("mode", "inbox") == "inbox"
     pending = 0
     if inbox:

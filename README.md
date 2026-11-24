@@ -324,6 +324,12 @@ Modes:
   🔥 Rate this duo 1-10 #ishowspeed #serenawilliams #tennis #livestream #ishowspeedclips`
 - Recovery plan (Nov 18): no TikTok drafts through Nov 22, then 1 a day through Nov 29, posted with no added sound
   (`TIKTOK_PAUSE_UNTIL` / `TIKTOK_SLOW_UNTIL` in `channel_builder.py`).
+- TikTok reach check (Nov 24): from Nov 14 every post got 0-19 views (0 since Nov 15), after 30 posts at ~300 each.
+  Nothing was removed or flagged per post and they're public, so TikTok stopped showing the account itself, and the
+  Nov 18-22 pause didn't bring it back. The review now reads every public post (with `tiktok-auth --stats`); when the
+  3 newest day-old posts all have under 10 views it sets `tiktok.stalled` in state.json and the builder sends no
+  drafts until a post is seen again (`TIKTOK_IGNORE_STALL=1` overrides). What to check in the app: Profile > menu >
+  Settings and privacy > Account > Account status, and a post's analytics for "Ineligible for For You feed".
 - At most 3 TikTok drafts a day, never two from the same stream within 24 hours, and each draft comes with a posting
   time (noon, 3 PM, 7 PM or 9:30 PM ET, about 3 hours apart). On Nov 14 six posts in one day, two from one stream,
   left the last three at 0-19 views while the first batch got 2,138.
