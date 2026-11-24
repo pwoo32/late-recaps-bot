@@ -4546,3 +4546,93 @@ Title/description: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/bui
   TikTok: [1] draft in your TikTok inbox. Post it at Mon 07:00 PM ET, no added sound, with this caption:
     CaseOh: "Over Here" | get away 😳 Did you see that coming? #caseoh #livestream #caseohclips #streamerclips #away
   TikTok: 1 drafts already in the last 24h (limit 1); the rest wait for tomorrow.
+[0;93m2026-11-24 05:11:37.863454191 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+Done. Report: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/track_2026-11-24_0506.md  (quota used: 2)
+Looking for streamers going viral right now on Twitch and Kick...
+  trending: 64 Twitch streamers with clips in the last 24h
+  trending: 1 of 6 Kick watchlist channels with clips in the last 24h
+  trending: nobody new above 1,500 views/hour on their best clip today
+[ishowspeed] reading recent streams/videos
+  reading the room on "🔴EXPLORING VICE CITY - GTA 6 STREAM (EASTER EGGS)" (chat replay, most replayed)
+  reading the room on "I RACED USAIN BOLT!" (chat replay, most replayed)
+    1 chat spikes
+[kai_cenat] reading recent streams/videos
+  reading the room on "🗺️EXPLORING GTA 6🗺️" (chat replay, most replayed)
+    6 chat spikes
+  reading the room on "BEATING GTA 6 *FINALE*" (chat replay, most replayed)
+    6 chat spikes
+  19 Twitch clips from kaicenat
+[jynxzi] reading recent streams/videos
+  reading the room on "FIRST TIME PLAYING GTA 6 *DAY 4*" (chat replay, most replayed)
+    6 chat spikes
+  reading the room on "SENSATIONAL SUNDAY STREAM" (chat replay, most replayed)
+  18 Twitch clips from jynxzi
+[adin_ross] reading recent streams/videos
+  40 Kick clips from adinross
+[n3on] reading recent streams/videos
+  38 Kick clips from n3on
+[caseoh] reading recent streams/videos
+  19 Twitch clips from caseoh_
+[xqc] reading recent streams/videos
+  20 Twitch clips from xqc
+  38 Kick clips from xqc
+[lacy] reading recent streams/videos
+  20 Twitch clips from lacy
+[plaqueboymax] reading recent streams/videos
+  19 Twitch clips from plaqueboymax
+[theburntpeanut] reading recent streams/videos
+  19 Twitch clips from theburntpeanut
+[stableronaldo] reading recent streams/videos
+  17 Twitch clips from stableronaldo
+[twitch_blxdxentei] reading recent streams/videos
+  5 Twitch clips from blxdxentei
+Hot topic GTA 6: 61 of 128 trending clips, 42% of views -> moments about it rank x2.0
+Clip council: 16 candidates, every agent votes...
+  picked Jynxzi at 5:48:24 (council 0.51): Jynxzi's clip at 5:48:24 in 'FIRST TIME PLAYING GTA 6 *DAY 4*' has a high trend score and a strong chat spike, indicatin
+  picked CaseOh at 4:32:16 (council 0.40): CaseOh's clip at 4:32:16 in 'omg haha  (nsfw )  LUL' has seen a significant increase in views and a clear, engaging prem
+  picked Speed at 9:17 (council 0.79): IShowSpeed's clip at 9:17 in 'I RACED USAIN BOLT!' has a strong trend score, aligning with current viral content, and a 
+Writing scripts...
+  [1] Jynxzi at 5:48:24: writing from comments
+  [2] CaseOh at 4:32:16: writing from comments
+  [3] IShowSpeed at 9:17: writing from captions (119 words)
+Gemini models: gemini-flash-latest, gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash
+  Gemini gemini-flash-latest: HTTP 503
+  Gemini gemini-flash-latest: HTTP 503
+  Gemini gemini-3.8-flash: HTTP 503
+  Gemini gemini-3.8-flash: HTTP 503
+  Gemini gemini-3.7-flash: HTTP 429
+  Gemini gemini-3.7-flash: HTTP 503
+Gemini answered with gemini-3.6-flash.
+Scripts written by gemini.
+Done. Queue: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-11-24_0506/queue.md  (quota used: 52)
+[1] Jynxzi Hits Day Four Of Playing GTA 6 🎮🔥
+Downloading 5:48:04-5:48:34 of https://www.youtube.com/watch?v=AHtPn8fmJ2Y
+Transcribing with whisper small.en (first run downloads the model)...
+Re-writing the script from what's actually said in the clip...
+  [1] Jynxzi at 5:48:24: writing from transcript (67 words)
+  Gemini gemini-flash-latest: HTTP 503
+  Gemini gemini-flash-latest: HTTP 429
+  Gemini gemini-3.8-flash: HTTP 429
+  Gemini gemini-3.8-flash: HTTP 503
+  Gemini gemini-3.7-flash: HTTP 503
+  Gemini gemini-3.7-flash: HTTP 429
+Gemini answered with gemini-3.6-flash.
+Scripts written by gemini.
+Cut 5.3s of dead air (6 jump cuts).
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Fetching 10 files:  80%|████████  | 8/10 [00:14<00:03,  1.81s/it]Fetching 10 files:  90%|█████████ | 9/10 [00:17<00:02,  2.04s/it]Fetching 10 files: 100%|██████████| 10/10 [00:23<00:00,  2.73s/it]Fetching 10 files: 100%|██████████| 10/10 [00:23<00:00,  2.37s/it]
+/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/diffusers/models/lora.py:393: FutureWarning: `LoRACompatibleLinear` is deprecated and will be removed in version 1.0.0. Use of `LoRACompatibleLinear` is deprecated. Please switch to PEFT backend by installing PEFT: `pip install peft`.
+  deprecate("LoRACompatibleLinear", "1.0.0", deprecation_message)
+  0%|          | 0/1000 [00:00<?, ?it/s]  0%|          | 2/1000 [00:00<01:00, 16.47it/s]  0%|          | 4/1000 [00:00<01:01, 16.30it/s]  1%|          | 6/1000 [00:00<01:01, 16.28it/s]  1%|          | 8/1000 [00:00<01:00, 16.29it/s]  1%|          | 10/1000 [00:00<01:00, 16.25it/s]  1%|          | 12/1000 [00:00<01:00, 16.25it/s]  1%|▏         | 14/1000 [00:00<01:00, 16.38it/s]  2%|▏         | 16/1000 [00:00<01:00, 16.37it/s]  2%|▏         | 18/1000 [00:01<00:59, 16.63it/s]  2%|▏         | 20/1000 [00:01<00:56, 17.29it/s]  2%|▏         | 22/1000 [00:01<00:55, 17.75it/s]  2%|▏         | 24/1000 [00:01<00:54, 18.03it/s]  3%|▎         | 26/1000 [00:01<00:53, 18.18it/s]  3%|▎         | 28/1000 [00:01<00:53, 18.31it/s]  3%|▎         | 30/1000 [00:01<00:52, 18.39it/s]  3%|▎         | 32/1000 [00:01<00:52, 18.27it/s]  3%|▎         | 34/1000 [00:01<00:52, 18.28it/s]  4%|▎         | 36/1000 [00:02<00:52, 18.28it/s]  4%|▍         | 38/1000 [00:02<00:52, 18.28it/s]  4%|▍         | 40/1000 [00:02<00:52, 18.35it/s]  4%|▍         | 42/1000 [00:02<00:52, 18.36it/s]  4%|▍         | 44/1000 [00:02<00:52, 18.31it/s]  5%|▍         | 46/1000 [00:02<00:52, 18.19it/s]  5%|▍         | 48/1000 [00:02<00:52, 18.21it/s]  5%|▌         | 50/1000 [00:02<00:52, 18.26it/s]  5%|▌         | 52/1000 [00:02<00:52, 18.07it/s]  5%|▌         | 54/1000 [00:03<00:55, 17.04it/s]  6%|▌         | 56/1000 [00:03<01:03, 14.86it/s]  6%|▌         | 58/1000 [00:03<01:01, 15.23it/s]  6%|▌         | 60/1000 [00:03<00:58, 16.13it/s]  6%|▌         | 62/1000 [00:03<00:55, 16.79it/s]  6%|▋         | 64/1000 [00:03<00:54, 17.18it/s]  7%|▋         | 66/1000 [00:03<00:53, 17.51it/s]  7%|▋         | 68/1000 [00:03<00:52, 17.75it/s]  7%|▋         | 70/1000 [00:04<00:51, 17.92it/s]  7%|▋         | 72/1000 [00:04<00:50, 18.20it/s]  7%|▋         | 74/1000 [00:04<00:50, 18.28it/s]  8%|▊         | 76/1000 [00:04<00:50, 18.37it/s]  8%|▊         | 78/1000 [00:04<00:50, 18.36it/s]  8%|▊         | 80/1000 [00:04<00:50, 18.39it/s]  8%|▊         | 82/1000 [00:04<00:49, 18.37it/s]  8%|▊         | 84/1000 [00:04<00:49, 18.41it/s]  9%|▊         | 86/1000 [00:04<00:49, 18.46it/s]  9%|▉         | 88/1000 [00:05<00:49, 18.40it/s]  9%|▉         | 90/1000 [00:05<00:49, 18.37it/s]  9%|▉         | 92/1000 [00:05<00:49, 18.32it/s]  9%|▉         | 94/1000 [00:05<00:49, 18.35it/s] 10%|▉         | 96/1000 [00:05<00:49, 18.40it/s] 10%|▉         | 98/1000 [00:05<00:49, 18.40it/s] 10%|█         | 100/1000 [00:05<00:48, 18.38it/s] 10%|█         | 102/1000 [00:05<00:48, 18.38it/s] 10%|█         | 104/1000 [00:05<00:48, 18.44it/s] 11%|█         | 106/1000 [00:05<00:48, 18.41it/s] 11%|█         | 108/1000 [00:06<00:49, 18.13it/s] 11%|█         | 110/1000 [00:06<00:49, 17.90it/s] 11%|█         | 112/1000 [00:06<00:49, 17.77it/s] 11%|█▏        | 114/1000 [00:06<00:49, 17.80it/s] 12%|█▏        | 116/1000 [00:06<00:49, 17.72it/s] 12%|█▏        | 118/1000 [00:06<00:50, 17.63it/s] 12%|█▏        | 120/1000 [00:06<00:49, 17.64it/s] 12%|█▏        | 122/1000 [00:06<00:49, 17.58it/s] 12%|█▏        | 124/1000 [00:07<00:50, 17.46it/s] 13%|█▎        | 126/1000 [00:07<00:50, 17.42it/s] 13%|█▎        | 128/1000 [00:07<00:50, 17.34it/s] 13%|█▎        | 130/1000 [00:07<00:49, 17.43it/s] 13%|█▎        | 132/1000 [00:07<00:49, 17.49it/s] 13%|█▎        | 134/1000 [00:07<00:49, 17.54it/s] 14%|█▎        | 136/1000 [00:07<00:48, 17.75it/s] 14%|█▍        | 138/1000 [00:07<00:48, 17.82it/s] 14%|█▍        | 140/1000 [00:07<00:48, 17.88it/s] 14%|█▍        | 142/1000 [00:08<00:48, 17.86it/s] 14%|█▍        | 144/1000 [00:08<00:48, 17.82it/s] 15%|█▍        | 146/1000 [00:08<00:47, 17.82it/s] 15%|█▍        | 148/1000 [00:08<00:47, 17.77it/s] 15%|█▌        | 150/1000 [00:08<00:47, 17.85it/s] 15%|█▌        | 152/1000 [00:08<00:47, 17.90it/s] 15%|█▌        | 154/1000 [00:08<00:47, 17.92it/s] 16%|█▌        | 156/1000 [00:08<00:47, 17.93it/s] 16%|█▌        | 158/1000 [00:08<00:46, 18.01it/s] 16%|█▌        | 160/1000 [00:09<00:46, 18.05it/s] 16%|█▌        | 162/1000 [00:09<00:46, 18.13it/s] 16%|█▋        | 164/1000 [00:09<00:46, 18.06it/s] 17%|█▋        | 166/1000 [00:09<00:46, 18.00it/s] 17%|█▋        | 168/1000 [00:09<00:46, 17.97it/s] 17%|█▋        | 170/1000 [00:09<00:46, 18.04it/s] 17%|█▋        | 172/1000 [00:09<00:45, 18.08it/s] 17%|█▋        | 174/1000 [00:09<00:45, 18.10it/s] 18%|█▊        | 176/1000 [00:09<00:45, 18.01it/s] 18%|█▊        | 178/1000 [00:10<00:45, 17.92it/s] 18%|█▊        | 180/1000 [00:10<00:45, 17.90it/s] 18%|█▊        | 182/1000 [00:10<00:45, 17.85it/s] 18%|█▊        | 184/1000 [00:10<00:45, 17.81it/s] 19%|█▊        | 186/1000 [00:10<00:45, 17.83it/s] 19%|█▉        | 188/1000 [00:10<00:45, 17.75it/s] 19%|█▉        | 190/1000 [00:10<00:45, 17.75it/s] 19%|█▉        | 192/1000 [00:10<00:45, 17.69it/s] 19%|█▉        | 194/1000 [00:10<00:45, 17.71it/s] 20%|█▉        | 196/1000 [00:11<00:45, 17.75it/s] 20%|█▉        | 198/1000 [00:11<00:49, 16.18it/s] 20%|██        | 200/1000 [00:11<00:56, 14.22it/s] 20%|██        | 202/1000 [00:11<00:55, 14.46it/s] 20%|██        | 204/1000 [00:11<00:59, 13.31it/s] 21%|██        | 206/1000 [00:11<00:55, 14.39it/s] 21%|██        | 208/1000 [00:11<00:51, 15.35it/s] 21%|██        | 210/1000 [00:12<00:49, 15.99it/s] 21%|██        | 212/1000 [00:12<00:47, 16.48it/s] 21%|██▏       | 213/1000 [00:12<00:45, 17.39it/s]
+S3 Token -> Mel Inference...
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:01<00:01,  1.20s/it]100%|██████████| 2/2 [00:02<00:00,  1.18s/it]100%|██████████| 2/2 [00:02<00:00,  1.18s/it]
+  0%|          | 0/1000 [00:00<?, ?it/s]  0%|          | 2/1000 [00:00<00:55, 18.10it/s]  0%|          | 4/1000 [00:00<00:54, 18.15it/s]  1%|          | 6/1000 [00:00<00:55, 17.92it/s]  1%|          | 8/1000 [00:00<00:55, 17.86it/s]  1%|          | 10/1000 [00:00<00:55, 17.84it/s]  1%|          | 12/1000 [00:00<00:55, 17.91it/s]  1%|▏         | 14/1000 [00:00<00:54, 17.94it/s]  2%|▏         | 16/1000 [00:00<00:55, 17.87it/s]  2%|▏         | 18/1000 [00:01<00:55, 17.84it/s]  2%|▏         | 20/1000 [00:01<00:54, 17.85it/s]  2%|▏         | 22/1000 [00:01<00:54, 17.99it/s]  2%|▏         | 24/1000 [00:01<00:54, 18.04it/s]  3%|▎         | 26/1000 [00:01<00:54, 18.02it/s]  3%|▎         | 28/1000 [00:01<00:53, 18.04it/s]  3%|▎         | 30/1000 [00:01<00:53, 18.04it/s]  3%|▎         | 32/1000 [00:01<00:53, 18.06it/s]  3%|▎         | 34/1000 [00:01<00:53, 17.93it/s]  4%|▎         | 36/1000 [00:02<00:54, 17.85it/s]  4%|▍         | 38/1000 [00:02<00:53, 17.91it/s]  4%|▍         | 40/1000 [00:02<00:52, 18.16it/s]  4%|▍         | 42/1000 [00:02<00:52, 18.25it/s]  4%|▍         | 44/1000 [00:02<00:52, 18.20it/s]  5%|▍         | 46/1000 [00:02<00:52, 18.34it/s]  5%|▍         | 48/1000 [00:02<00:51, 18.31it/s]  5%|▌         | 50/1000 [00:02<00:52, 18.18it/s]  5%|▌         | 52/1000 [00:02<00:52, 18.17it/s]  5%|▌         | 54/1000 [00:02<00:52, 18.07it/s]  6%|▌         | 56/1000 [00:03<00:52, 18.08it/s]  6%|▌         | 58/1000 [00:03<00:52, 18.08it/s]  6%|▌         | 60/1000 [00:03<00:52, 17.95it/s]  6%|▌         | 62/1000 [00:03<00:52, 17.92it/s]  6%|▋         | 64/1000 [00:03<00:52, 17.72it/s]  7%|▋         | 66/1000 [00:03<00:53, 17.62it/s]  7%|▋         | 68/1000 [00:03<00:53, 17.49it/s]  7%|▋         | 70/1000 [00:03<00:53, 17.48it/s]  7%|▋         | 72/1000 [00:04<00:53, 17.50it/s]  7%|▋         | 74/1000 [00:04<00:53, 17.36it/s]  8%|▊         | 76/1000 [00:04<00:52, 17.48it/s]  8%|▊         | 78/1000 [00:04<00:52, 17.59it/s]  8%|▊         | 80/1000 [00:04<00:52, 17.58it/s]  8%|▊         | 82/1000 [00:04<00:52, 17.51it/s]  8%|▊         | 84/1000 [00:04<00:52, 17.58it/s]  9%|▊         | 86/1000 [00:04<00:52, 17.55it/s]  9%|▉         | 88/1000 [00:04<00:51, 17.79it/s]  9%|▉         | 90/1000 [00:05<00:50, 17.87it/s]  9%|▉         | 92/1000 [00:05<00:51, 17.76it/s]  9%|▉         | 94/1000 [00:05<00:50, 17.78it/s] 10%|▉         | 96/1000 [00:05<00:51, 17.69it/s] 10%|▉         | 98/1000 [00:05<00:50, 17.76it/s] 10%|█         | 100/1000 [00:05<00:51, 17.61it/s] 10%|█         | 102/1000 [00:05<00:52, 17.04it/s] 10%|█         | 104/1000 [00:05<00:52, 17.16it/s] 11%|█         | 106/1000 [00:05<00:52, 17.18it/s] 11%|█         | 108/1000 [00:06<00:51, 17.16it/s] 11%|█         | 110/1000 [00:06<00:51, 17.24it/s] 11%|█         | 112/1000 [00:06<00:51, 17.23it/s] 11%|█▏        | 114/1000 [00:06<00:51, 17.19it/s] 12%|█▏        | 116/1000 [00:06<00:50, 17.35it/s] 12%|█▏        | 118/1000 [00:06<00:50, 17.44it/s] 12%|█▏        | 120/1000 [00:06<00:50, 17.56it/s] 12%|█▏        | 122/1000 [00:06<00:49, 17.56it/s] 12%|█▏        | 124/1000 [00:06<00:49, 17.58it/s] 13%|█▎        | 126/1000 [00:07<00:49, 17.69it/s] 13%|█▎        | 128/1000 [00:07<00:48, 17.80it/s] 13%|█▎        | 130/1000 [00:07<00:49, 17.74it/s] 13%|█▎        | 132/1000 [00:07<00:48, 17.80it/s] 13%|█▎        | 134/1000 [00:07<00:48, 17.78it/s] 14%|█▎        | 136/1000 [00:07<00:48, 17.68it/s] 14%|█▍        | 138/1000 [00:07<00:49, 17.48it/s] 14%|█▍        | 140/1000 [00:07<00:49, 17.26it/s] 14%|█▍        | 142/1000 [00:08<00:58, 14.74it/s] 14%|█▍        | 144/1000 [00:08<00:55, 15.51it/s] 15%|█▍        | 146/1000 [00:08<00:53, 16.11it/s] 15%|█▍        | 148/1000 [00:08<00:51, 16.63it/s] 15%|█▌        | 150/1000 [00:08<00:50, 16.98it/s] 15%|█▌        | 152/1000 [00:08<00:49, 17.16it/s] 15%|█▌        | 154/1000 [00:08<00:49, 17.17it/s] 16%|█▌        | 156/1000 [00:08<00:48, 17.28it/s] 16%|█▌        | 158/1000 [00:08<00:49, 17.17it/s] 16%|█▌        | 160/1000 [00:09<00:49, 17.02it/s] 16%|█▌        | 162/1000 [00:09<00:49, 16.93it/s] 16%|█▋        | 164/1000 [00:09<00:49, 16.95it/s] 17%|█▋        | 166/1000 [00:09<00:49, 16.95it/s] 17%|█▋        | 168/1000 [00:09<00:48, 17.00it/s] 17%|█▋        | 170/1000 [00:09<00:48, 17.04it/s] 17%|█▋        | 172/1000 [00:09<00:48, 17.21it/s] 17%|█▋        | 174/1000 [00:09<00:49, 16.81it/s] 18%|█▊        | 176/1000 [00:10<00:49, 16.56it/s] 18%|█▊        | 178/1000 [00:10<00:50, 16.43it/s] 18%|█▊        | 180/1000 [00:10<00:50, 16.35it/s] 18%|█▊        | 182/1000 [00:10<00:50, 16.32it/s] 18%|█▊        | 184/1000 [00:10<00:50, 16.28it/s] 19%|█▊        | 186/1000 [00:10<00:50, 16.22it/s] 19%|█▊        | 186/1000 [00:10<00:47, 17.31it/s]
+S3 Token -> Mel Inference...
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:01<00:01,  1.01s/it]100%|██████████| 2/2 [00:02<00:00,  1.01s/it]100%|██████████| 2/2 [00:02<00:00,  1.01s/it]
+Framing on the face at 87% across.
+Done. Video: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-11-24_0506/clips/01_AHtPn8fmJ2Y_696.mp4
+Title/description: /home/runner/work/late-recaps-bot/late-recaps-bot/reports/builder/daily_2026-11-24_0506/clips/01_AHtPn8fmJ2Y_696.txt
+  uploaded https://youtube.com/shorts/LIGWXAzP5-8 (goes public Tue 01:00 AM ET)
+[2] not posted: today's 1 post(s) already went up; kept as a backup
+[3] not posted: today's 1 post(s) already went up; kept as a backup
+  TikTok: 1 drafts already in the last 24h (limit 1); the rest wait for tomorrow.

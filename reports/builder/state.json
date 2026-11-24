@@ -1,21 +1,21 @@
 {
  "source_weight": {
-  "jynxzi": 2.86,
+  "jynxzi": 2.92,
   "kai_cenat": 0.31,
   "ishowspeed": 1.99,
-  "stableronaldo": 1.82,
+  "stableronaldo": 1.69,
   "caseoh": 2.99
  },
  "slot_weight": {
-  "2": 1.35,
-  "21": 1.69,
-  "8": 1.93,
-  "4": 0.41,
-  "22": 2.29,
-  "17": 2.87,
+  "2": 1.41,
+  "21": 1.81,
+  "8": 1.96,
+  "4": 0.37,
+  "22": 2.17,
+  "17": 2.92,
   "6": 2.99,
-  "1": 0.56,
-  "5": 1.88
+  "1": 0.46,
+  "5": 2.33
  },
  "used_moments": [
   "L6S9Vb3RLy4@186",
@@ -161,7 +161,10 @@
   "2935283335@387",
   "2937666104@86",
   "hwSg39yIBGU@2344",
-  "2936324446@637"
+  "2936324446@637",
+  "AHtPn8fmJ2Y@696",
+  "2935283335@544",
+  "PHSsdHu2Er0@18"
  ],
  "queued": {
   "L6S9Vb3RLy4@186": {
@@ -2487,6 +2490,84 @@
     "script": 0.35,
     "audience": 0.5
    }
+  },
+  "AHtPn8fmJ2Y@696": {
+   "title": "Jynxzi Raids AngryGingers After Ending His GTA 6 Stream \ud83d\ude2d",
+   "source": "jynxzi",
+   "post_utc": "2026-11-24 06:00",
+   "recipe": {
+    "length": 30,
+    "punch": 0.14,
+    "beat": "normal",
+    "caption_words": 3,
+    "gap": 0.6,
+    "layout": "face34",
+    "test": null
+   },
+   "council": {
+    "trend": 0.26,
+    "study": 0.25,
+    "analytics": 0.88,
+    "live": 0.55,
+    "script": 0.35,
+    "audience": 0.5
+   },
+   "video_id": "LIGWXAzP5-8",
+   "words": [
+    "angry",
+    "angrygingers",
+    "ending",
+    "gingers",
+    "marathon",
+    "playing",
+    "raiding",
+    "raids",
+    "wraps"
+   ]
+  },
+  "2935283335@544": {
+   "title": "CaseOh reacts to chat during stream \ud83d\ude2d\ud83d\ude02",
+   "source": "caseoh",
+   "post_utc": "2026-11-24 17:00",
+   "recipe": {
+    "length": 30,
+    "punch": 0.14,
+    "beat": "slow",
+    "caption_words": 3,
+    "gap": 0.6,
+    "layout": "face34",
+    "test": "beat"
+   },
+   "council": {
+    "trend": 1.0,
+    "study": 0.25,
+    "analytics": 0.48,
+    "live": 0.13,
+    "script": 0.35,
+    "audience": 0.5
+   }
+  },
+  "PHSsdHu2Er0@18": {
+   "title": "Speed Trains Like A Pro Track Sprinter \ud83c\udfc3\ud83d\udca8",
+   "source": "ishowspeed",
+   "post_utc": "2026-11-24 09:00",
+   "recipe": {
+    "length": 30,
+    "punch": 0.14,
+    "beat": "normal",
+    "caption_words": 2,
+    "gap": 0.6,
+    "layout": "face34",
+    "test": "caption_words"
+   },
+   "council": {
+    "trend": 0.93,
+    "study": 1.0,
+    "analytics": 0.65,
+    "live": 0.73,
+    "script": 1.0,
+    "audience": 0.5
+   }
   }
  },
  "channel": "UCbK9EejOk5UVzI_l8F3f8kA",
@@ -2666,8 +2747,8 @@
   },
   {
    "title": "Speed Finishes GTA 6 After 52 Hours Awake \ud83d\ude2d",
-   "views": 2,
-   "lift": 2.0
+   "views": 3,
+   "lift": 3.0
   },
   {
    "title": "Speed Reacts To Bag In GTA 6 \ud83d\ude2d",
@@ -2815,67 +2896,6 @@
   "mode": "inbox"
  },
  "chat_spikes": {
-  "kDLY56pnDlo": [
-   {
-    "t": 32709,
-    "ratio": 4.7,
-    "msgs": 92,
-    "sample": [
-     "Yooo",
-     "ayooo",
-     "YOOOO",
-     "yo still playing",
-     "AYOOOO"
-    ]
-   },
-   {
-    "t": 559,
-    "ratio": 4.4,
-    "msgs": 270,
-    "sample": [
-     "yo bro gta6 is coming bro are you ready",
-     "ww",
-     "me bro",
-     "yo",
-     "what time we doing the giveaway??"
-    ]
-   },
-   {
-    "t": 31694,
-    "ratio": 4.1,
-    "msgs": 125,
-    "sample": [
-     "LMAOOOO",
-     "yoooo:face_with_tears_of_joy::face_with_tears_of_joy::face_with_tears_of_joy:",
-     "Ggs bro",
-     "lmaooo",
-     "lmfao"
-    ]
-   },
-   {
-    "t": 40454,
-    "ratio": 4.1,
-    "msgs": 76,
-    "sample": [
-     "wait what",
-     "wtf caughtttt",
-     "Bro im shitting idk what you on about ",
-     "Wtf",
-     "yo"
-    ]
-   },
-   {
-    "t": 17634,
-    "ratio": 3.9,
-    "msgs": 38,
-    "sample": [
-     "yo yo",
-     "W",
-     "bro been sleeping for hours",
-     "bro its 7:57 wake up"
-    ]
-   }
-  ],
   "HyidbGBr7lE": [],
   "9aPR9UXI1kY": [],
   "esFGDLr8rSQ": [
@@ -4118,7 +4138,81 @@
   ],
   "Q31GfI-kGB8": [],
   "izXcd-bU72k": [],
-  "0C6u0rRJEIg": []
+  "0C6u0rRJEIg": [],
+  "AHtPn8fmJ2Y": [
+   {
+    "t": 20904,
+    "ratio": 18.5,
+    "msgs": 53,
+    "sample": [
+     "w",
+     "w",
+     "Ww",
+     "w",
+     "w"
+    ]
+   },
+   {
+    "t": 5449,
+    "ratio": 17.0,
+    "msgs": 55,
+    "sample": [
+     "W",
+     "Www",
+     "Www",
+     "w",
+     "w"
+    ]
+   },
+   {
+    "t": 694,
+    "ratio": 16.2,
+    "msgs": 77,
+    "sample": [
+     "L",
+     "L",
+     "L",
+     "L",
+     "L"
+    ]
+   },
+   {
+    "t": 15459,
+    "ratio": 14.1,
+    "msgs": 64,
+    "sample": [
+     "L",
+     "L",
+     "L",
+     "L",
+     "L"
+    ]
+   },
+   {
+    "t": 15969,
+    "ratio": 13.4,
+    "msgs": 53,
+    "sample": [
+     "w",
+     "w",
+     "w",
+     "w",
+     "w"
+    ]
+   },
+   {
+    "t": 3244,
+    "ratio": 11.5,
+    "msgs": 81,
+    "sample": [
+     "W",
+     "W",
+     "W",
+     "W",
+     "W"
+    ]
+   }
+  ]
  },
  "edit": {
   "stats": {

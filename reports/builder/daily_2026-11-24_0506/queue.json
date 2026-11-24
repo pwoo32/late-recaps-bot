@@ -1,0 +1,332 @@
+[
+ {
+  "id": 1,
+  "source": "jynxzi",
+  "creator": "Jynxzi",
+  "platform": "youtube",
+  "video_id": "AHtPn8fmJ2Y",
+  "video_title": "FIRST TIME PLAYING GTA 6 *DAY 4*",
+  "url": "https://www.youtube.com/watch?v=AHtPn8fmJ2Y&t=20904s",
+  "moment": "5:48:24",
+  "start": 20884,
+  "end": 20914,
+  "rank": 60.33,
+  "signal": "chat went 18.5x its normal pace",
+  "signals": [
+   "chat spike"
+  ],
+  "quotes": [
+   "w",
+   "w",
+   "Ww"
+  ],
+  "stream_age_h": 3.0,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": null
+  },
+  "council": {
+   "trend": 0.26,
+   "study": 0.25,
+   "analytics": 0.88,
+   "live": 0.55,
+   "script": 0.35,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 0.26,
+    "why": "Jynxzi clips pull 60,140 views/hour this week, down 12% since the last scan; matches what's viral now: gta"
+   },
+   "study": {
+    "score": 0.25,
+    "why": "top channels rarely break out with Jynxzi"
+   },
+   "analytics": {
+    "score": 0.88,
+    "why": "Jynxzi clips spread 1.6x our typical clip; chat spike moments do 1.1x; has a spoken premise (bet/question/challenge); stream is 3h old (fresh)"
+   },
+   "live": {
+    "score": 0.55,
+    "why": "chat went 18.5x"
+   },
+   "script": {
+    "score": 0.35,
+    "why": "draft title: \"Jynxzi At First Time Playing GTA 🔥\"; no captions yet, writing blind"
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-24T05:06:22Z",
+  "council_why": "Jynxzi's clip at 5:48:24 in 'FIRST TIME PLAYING GTA 6 *DAY 4*' has a high trend score and a strong chat spike, indicating potential for high engagement.",
+  "post_utc": "2026-11-24 06:00",
+  "post_local": "Tue 01:00 AM ET",
+  "title": "Jynxzi Raids AngryGingers After Ending His GTA 6 Stream 😭",
+  "hook": "RAIDING ANGRY GINGERS RIGHT NOW",
+  "context": "Jynxzi wraps up Day 4 of his GTA 6 marathon",
+  "take": "After grinding GTA 6 for hours, Jynxzi ended his stream by raiding AngryGingers and giving his chat very specific instructions on what to spam.",
+  "summary": "Jynxzi ends his GTA 6 stream on Day 4 and raids AngryGingers with a special message for his chat to spam.",
+  "tiktok_caption": "Jynxzi raids AngryGingers after ending his GTA 6 stream! Did you catch this stream live?",
+  "hashtags": [
+   "#shorts",
+   "#jynxzi",
+   "#gta6"
+  ],
+  "tags": [
+   "jynxzi",
+   "jynxzi gta 6",
+   "jynxzi clip",
+   "angrygingers",
+   "jynxzi raid",
+   "jynxzi twitch",
+   "gta 6 stream",
+   "jynxzi highlights"
+  ],
+  "draft": false,
+  "writer": "gemini",
+  "description": "Jynxzi ends his GTA 6 stream on Day 4 and raids AngryGingers with a special message for his chat to spam.\n\nFull stream by Jynxzi: https://www.youtube.com/watch?v=AHtPn8fmJ2Y&t=20904s\nGo support Jynxzi, all credit to them.\n\n#shorts #jynxzi #gta6",
+  "key": "AHtPn8fmJ2Y@696",
+  "permission": "fan clipping tolerated; check for a Whop campaign",
+  "payoff": "Jynxzi always finds a hilarious way to send off his stream, but telling chat to spam relegated is elite level trolling.",
+  "script_source": "transcript",
+  "upload_tags": [
+   "jynxzi",
+   "jynxzi gta 6",
+   "jynxzi clip",
+   "angrygingers",
+   "jynxzi raid",
+   "jynxzi twitch",
+   "gta 6 stream",
+   "jynxzi highlights",
+   "shorts"
+  ],
+  "youtube_id": "LIGWXAzP5-8"
+ },
+ {
+  "id": 2,
+  "source": "caseoh",
+  "creator": "CaseOh",
+  "platform": "twitch",
+  "video_id": "2935283335",
+  "video_title": "omg haha  (nsfw )  LUL",
+  "url": "https://www.twitch.tv/videos/2935283335?t=4h32m16s",
+  "moment": "4:32:16",
+  "start": 16316,
+  "end": 16346,
+  "rank": 85.94,
+  "signal": "Twitch clip, 41,020 views (536/h)",
+  "signals": [
+   "twitch clip"
+  ],
+  "quotes": [
+   "omg haha  (nsfw )  LUL"
+  ],
+  "stream_age_h": 76.5,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "slow",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": "beat"
+  },
+  "council": {
+   "trend": 1.0,
+   "study": 0.25,
+   "analytics": 0.48,
+   "live": 0.13,
+   "script": 0.35,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 1.0,
+    "why": "CaseOh clips pull 24,800 views/hour this week, up 870% since the last scan"
+   },
+   "study": {
+    "score": 0.25,
+    "why": "top channels rarely break out with CaseOh"
+   },
+   "analytics": {
+    "score": 0.48,
+    "why": "CaseOh clips spread 2.0x our typical clip; no clear premise, may be visual-only; stream is 76h old (other clippers had time)"
+   },
+   "live": {
+    "score": 0.13,
+    "why": "Twitch clip at 536/h"
+   },
+   "script": {
+    "score": 0.35,
+    "why": "draft title: \"CaseOh At Omg Haha (nsfw ) 🔥\"; no captions yet, writing blind"
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-24T05:06:22Z",
+  "council_why": "CaseOh's clip at 4:32:16 in 'omg haha  (nsfw )  LUL' has seen a significant increase in views and a clear, engaging premise.",
+  "post_utc": "2026-11-24 17:00",
+  "post_local": "Tue 12:00 PM ET",
+  "title": "CaseOh reacts to chat during stream 😭😂",
+  "hook": "CASEOH CHAT MOMENT",
+  "context": "CaseOh catches a wild comment from chat.",
+  "take": "CaseOh thought he had seen everything his chat could throw at him, but this user managed to completely catch him off guard.",
+  "summary": "CaseOh catches a bizarre viewer comment live on stream and reacts during his broadcast.",
+  "tiktok_caption": "CaseOh gets hit with another unbelievable moment from chat during stream.",
+  "hashtags": [
+   "#caseoh",
+   "#funny",
+   "#shorts"
+  ],
+  "tags": [
+   "CaseOh",
+   "CaseOh funny moments",
+   "CaseOh stream",
+   "CaseOh clips",
+   "twitch funny",
+   "streamer clips"
+  ],
+  "draft": false,
+  "writer": "gemini",
+  "description": "CaseOh catches a bizarre viewer comment live on stream and reacts during his broadcast.\n\nFull stream by CaseOh: https://www.twitch.tv/videos/2935283335?t=4h32m16s\nGo support CaseOh, all credit to them.\n\n#caseoh #funny #shorts",
+  "key": "2935283335@544",
+  "permission": "fan clipping is widespread and tolerated; no official program checked (Nov 2026)",
+  "payoff": "Will CaseOh ever be able to control his chat after a stream moment like this?",
+  "script_source": "comments",
+  "upload_tags": [
+   "CaseOh",
+   "CaseOh funny moments",
+   "CaseOh stream",
+   "CaseOh clips",
+   "twitch funny",
+   "streamer clips",
+   "caseoh",
+   "case oh",
+   "shorts"
+  ]
+ },
+ {
+  "id": 3,
+  "source": "ishowspeed",
+  "creator": "IShowSpeed",
+  "platform": "youtube",
+  "video_id": "PHSsdHu2Er0",
+  "video_title": "I RACED USAIN BOLT!",
+  "url": "https://www.youtube.com/watch?v=PHSsdHu2Er0&t=557s",
+  "moment": "9:17",
+  "start": 537,
+  "end": 567,
+  "rank": 57.07,
+  "signal": "2 timestamp comments, 38 likes; chat went 2.9x its normal pace",
+  "signals": [
+   "comments",
+   "chat spike"
+  ],
+  "quotes": [
+   "He felt it, the guy is a natural. Its so funny that he compares to the one and only Lionel Messi in that regard",
+   "why it looks like gta6"
+  ],
+  "stream_age_h": 34.7,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 2,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": "caption_words"
+  },
+  "council": {
+   "trend": 0.93,
+   "study": 1.0,
+   "analytics": 0.65,
+   "live": 0.73,
+   "script": 1.0,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 0.93,
+    "why": "Speed clips pull 1,047,899 views/hour this week, up 15% since the last scan; matches what's viral now: gta, gta6"
+   },
+   "study": {
+    "score": 1.0,
+    "why": "6 of the top channels' breakout Shorts are Speed clips; Speed is in 89 of their recent titles"
+   },
+   "analytics": {
+    "score": 0.65,
+    "why": "Speed clips spread 1.2x our typical clip; chat spike moments do 1.1x; has a spoken premise (bet/question/challenge); stream is 35h old"
+   },
+   "live": {
+    "score": 0.73,
+    "why": "chat went 2.9x, 2 timestamp comments, 38 likes; it went off"
+   },
+   "script": {
+    "score": 1.0,
+    "why": "draft title: \"Speed Asks Set \"It's Like What?\" 😭\""
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-24T05:06:22Z",
+  "council_why": "IShowSpeed's clip at 9:17 in 'I RACED USAIN BOLT!' has a strong trend score, aligning with current viral content, and a clear, engaging premise.",
+  "post_utc": "2026-11-24 09:00",
+  "post_local": "Tue 04:00 AM ET",
+  "title": "Speed Trains Like A Pro Track Sprinter 🏃💨",
+  "hook": "SPEED TRAINS FOR RACE",
+  "context": "Speed takes track coaching lessons before his big race.",
+  "take": "Speed actually tried learning proper sprinting mechanics instead of relying on pure raw energy, and the coach was genuinely impressed.",
+  "summary": "IShowSpeed gets professional track coaching tips and learns proper form while preparing to race Usain Bolt.",
+  "tiktok_caption": "Speed getting real track coaching tips to fix his running form. Could he beat a pro sprinter?",
+  "hashtags": [
+   "#ishowspeed",
+   "#speed",
+   "#shorts"
+  ],
+  "tags": [
+   "IShowSpeed",
+   "Speed race",
+   "Speed Usain Bolt",
+   "IShowSpeed running",
+   "Speed track",
+   "Speed clips",
+   "ishowspeed funny"
+  ],
+  "draft": false,
+  "writer": "gemini",
+  "description": "IShowSpeed gets professional track coaching tips and learns proper form while preparing to race Usain Bolt.\n\nFull stream by IShowSpeed: https://www.youtube.com/watch?v=PHSsdHu2Er0&t=557s\nGo support IShowSpeed, all credit to them.\n\n#ishowspeed #speed #shorts",
+  "key": "PHSsdHu2Er0@18",
+  "permission": "fan clipping is widespread and tolerated; no official paid program found (Oct 2026)",
+  "payoff": "Does Speed actually have the natural form to beat a real track athlete?",
+  "script_source": "captions",
+  "upload_tags": [
+   "IShowSpeed",
+   "Speed race",
+   "Speed Usain Bolt",
+   "IShowSpeed running",
+   "Speed track",
+   "Speed clips",
+   "ishowspeed funny",
+   "ishowspeed",
+   "speed",
+   "shorts"
+  ]
+ }
+]
