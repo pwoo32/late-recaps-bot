@@ -663,7 +663,14 @@ def fill_tiktok_from_api(rs):
                       "comments": best.get("comment_count", ""), "shares": best.get("share_count", ""),
                       "tiktok_video": best["id"], "source": "TikTok API"})
             filled += 1
-    return f"Read {len(posts)} public TikTok posts and matched {filled} of them to our drafts."
+    note = f"Read {len(posts)} public TikTok posts and matched {filled} of them to our drafts."
+    # Posts whose caption was rewritten by hand don't match a draft; list the newest so their views still show up.
+    extra = sorted((p for p in posts if p["id"] not in taken), key=lambda p: -p.get("create_time", 0))[:5]
+    for p in extra:
+        when = datetime.fromtimestamp(p.get("create_time", 0), timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+        note += (f"\n  - not matched to a draft: {when}, {p.get('view_count', '?')} views, {p.get('like_count', '?')} likes:"
+                 f" {(p.get('video_description') or p.get('title') or '')[:80]}")
+    return note
 
 
 def save_tiktok_rows(rs):
