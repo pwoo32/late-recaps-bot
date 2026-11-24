@@ -327,8 +327,12 @@ Modes:
 - TikTok reach check (Nov 24): from Nov 14 every post got 0-19 views (0 since Nov 15), after 30 posts at ~300 each.
   Nothing was removed or flagged per post and they're public, so TikTok stopped showing the account itself, and the
   Nov 18-22 pause didn't bring it back. The review now reads every public post (with `tiktok-auth --stats`); when the
-  3 newest day-old posts all have under 10 views it sets `tiktok.stalled` in state.json and the builder sends no
-  drafts until a post is seen again (`TIKTOK_IGNORE_STALL=1` overrides). What to check in the app: Profile > menu >
+  3 newest day-old posts all have under 10 views it sets `tiktok.stalled` in state.json. The builder then sends only
+  one test draft every 3 days (`TIKTOK_PROBE_HOURS`), and the hold lifts once a post is seen again
+  (`TIKTOK_IGNORE_STALL=1` overrides).
+- Only clips that passed the originality/copyright gate go to TikTok. From Nov 13 to Nov 23 nearly every TikTok draft
+  was a clip the gate had held from YouTube (template narration from the fill-in writer, stock hooks, no take), and
+  every one of them got 0-19 views. What to check in the app: Profile > menu >
   Settings and privacy > Account > Account status, and a post's analytics for "Ineligible for For You feed".
 - At most 3 TikTok drafts a day, never two from the same stream within 24 hours, and each draft comes with a posting
   time (noon, 3 PM, 7 PM or 9:30 PM ET, about 3 hours apart). On Nov 14 six posts in one day, two from one stream,

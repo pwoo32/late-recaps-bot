@@ -994,8 +994,8 @@ def write_report(out_dir, data, vids, ms, diags, typical, findings, weeks, tt, l
     if reach.get("stalled"):
         L += [f"- **TikTok isn't showing this account to anyone.** The last {reach['dead_run']} public posts (since "
               f"{reach['since']}) all sat under {TT_DEAD_VIEWS} views after a day (newest: "
-              f"{', '.join(str(v) for v in reach['views'])}); even a weak post gets a few hundred. That's an account-level cut, not the clips. New drafts are on hold until a post gets "
-              f"{TT_DEAD_VIEWS}+ views. In the TikTok app check Profile > menu > Settings and privacy > Account > Account "
+              f"{', '.join(str(v) for v in reach['views'])}); even a weak post gets a few hundred. TikTok has stopped showing the account. Until a post gets "
+              f"{TT_DEAD_VIEWS}+ views the builder sends only one test draft every 3 days, a clip that passed every gate. In the TikTok app check Profile > menu > Settings and privacy > Account > Account "
               "status, and open a post's analytics for an \"Ineligible for For You feed\" note; appeal anything listed there."]
     if tt.get("note"):
         L.append(f"- {tt['note']}")
