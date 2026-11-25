@@ -1,21 +1,21 @@
 {
  "source_weight": {
-  "jynxzi": 2.92,
+  "jynxzi": 2.95,
   "kai_cenat": 0.31,
   "ishowspeed": 1.99,
-  "stableronaldo": 1.69,
+  "stableronaldo": 1.61,
   "caseoh": 2.99
  },
  "slot_weight": {
-  "2": 1.41,
-  "21": 1.81,
-  "8": 1.96,
-  "4": 0.37,
-  "22": 2.17,
-  "17": 2.92,
+  "2": 1.65,
+  "21": 1.49,
+  "8": 1.78,
+  "4": 0.34,
+  "22": 2.1,
+  "17": 2.95,
   "6": 2.99,
-  "1": 0.46,
-  "5": 2.33
+  "1": 0.4,
+  "5": 2.6
  },
  "used_moments": [
   "L6S9Vb3RLy4@186",
@@ -164,7 +164,10 @@
   "2936324446@637",
   "AHtPn8fmJ2Y@696",
   "2935283335@544",
-  "PHSsdHu2Er0@18"
+  "PHSsdHu2Er0@18",
+  "2938655753@335",
+  "PHSsdHu2Er0@45",
+  "aOOi7njlTEc@665"
  ],
  "queued": {
   "L6S9Vb3RLy4@186": {
@@ -2568,6 +2571,84 @@
     "script": 1.0,
     "audience": 0.5
    }
+  },
+  "2938655753@335": {
+   "title": "CaseOh Reacts To Slight Scratch \ud83d\ude2d",
+   "source": "caseoh",
+   "post_utc": "2026-11-25 06:00",
+   "recipe": {
+    "length": 30,
+    "punch": 0.14,
+    "beat": "normal",
+    "caption_words": 3,
+    "gap": 0.6,
+    "layout": "face34",
+    "test": null
+   },
+   "council": {
+    "trend": 1.0,
+    "study": 0.25,
+    "analytics": 0.64,
+    "live": 0.12,
+    "script": 0.35,
+    "audience": 0.5
+   }
+  },
+  "PHSsdHu2Er0@45": {
+   "title": "Speed Asks Usain Bolt If He Can Go Pro \ud83c\udfc3\u26a1",
+   "source": "ishowspeed",
+   "post_utc": "2026-11-25 14:00",
+   "recipe": {
+    "length": 45,
+    "punch": 0.14,
+    "beat": "normal",
+    "caption_words": 3,
+    "gap": 0.6,
+    "layout": "face34",
+    "test": "length"
+   },
+   "council": {
+    "trend": 0.83,
+    "study": 1.0,
+    "analytics": 0.53,
+    "live": 0.45,
+    "script": 1.0,
+    "audience": 0.5
+   },
+   "video_id": "5uGaBQK6cLE",
+   "words": [
+    "bolt",
+    "faster",
+    "hard",
+    "metres",
+    "physique",
+    "raced",
+    "than",
+    "trains",
+    "usain"
+   ]
+  },
+  "aOOi7njlTEc@665": {
+   "title": "Jynxzi Praises Team Comms On GTA 6 \ud83d\ude2d\ud83e\udd23",
+   "source": "jynxzi",
+   "post_utc": "2026-11-25 17:00",
+   "recipe": {
+    "length": 30,
+    "punch": 0.08,
+    "beat": "normal",
+    "caption_words": 3,
+    "gap": 0.6,
+    "layout": "face34",
+    "test": "punch"
+   },
+   "council": {
+    "trend": 0.03,
+    "study": 0.25,
+    "analytics": 0.87,
+    "live": 0.55,
+    "script": 0.75,
+    "audience": 0.5
+   }
   }
  },
  "channel": "UCbK9EejOk5UVzI_l8F3f8kA",
@@ -2895,8 +2976,6 @@
   "mode": "inbox"
  },
  "chat_spikes": {
-  "HyidbGBr7lE": [],
-  "9aPR9UXI1kY": [],
   "esFGDLr8rSQ": [
    {
     "t": 179,
@@ -4206,6 +4285,81 @@
     "sample": [
      "W",
      "W",
+     "W",
+     "W",
+     "W"
+    ]
+   }
+  ],
+  "91c96JtcIFg": [],
+  "aOOi7njlTEc": [
+   {
+    "t": 19954,
+    "ratio": 15.6,
+    "msgs": 31,
+    "sample": [
+     "w",
+     "w",
+     "w",
+     "ww",
+     "w"
+    ]
+   },
+   {
+    "t": 20354,
+    "ratio": 12.7,
+    "msgs": 29,
+    "sample": [
+     "l",
+     "l",
+     "l",
+     "l",
+     "l"
+    ]
+   },
+   {
+    "t": 16929,
+    "ratio": 8.6,
+    "msgs": 34,
+    "sample": [
+     "L",
+     "L",
+     "L",
+     "w",
+     "w"
+    ]
+   },
+   {
+    "t": 13854,
+    "ratio": 8.4,
+    "msgs": 63,
+    "sample": [
+     "w",
+     "W bossman fr ",
+     "w",
+     "w",
+     "w"
+    ]
+   },
+   {
+    "t": 18949,
+    "ratio": 8.4,
+    "msgs": 37,
+    "sample": [
+     "w",
+     "w",
+     "w",
+     "w",
+     "w"
+    ]
+   },
+   {
+    "t": 6629,
+    "ratio": 7.3,
+    "msgs": 34,
+    "sample": [
+     "w",
+     "w",
      "W",
      "W",
      "W"

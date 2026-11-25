@@ -1,0 +1,297 @@
+{
+ "study_run": "channels_streamer_2026-11-25_0528",
+ "median_seconds": 31,
+ "length": [
+  {
+   "bucket": "0-15s",
+   "videos": 68,
+   "channels": 4,
+   "median_views": 505123,
+   "median_lift": 1.08
+  },
+  {
+   "bucket": "15-30s",
+   "videos": 138,
+   "channels": 8,
+   "median_views": 1211899,
+   "median_lift": 1.1
+  },
+  {
+   "bucket": "30-45s",
+   "videos": 154,
+   "channels": 8,
+   "median_views": 1795172,
+   "median_lift": 0.93
+  },
+  {
+   "bucket": "45-60s",
+   "videos": 82,
+   "channels": 5,
+   "median_views": 4249444,
+   "median_lift": 0.99
+  },
+  {
+   "bucket": "3min+",
+   "videos": 52,
+   "channels": 3,
+   "median_views": 2599983,
+   "median_lift": 1.05
+  }
+ ],
+ "cadence_median": 0.9750000000000001,
+ "cadence_p75": 2.37,
+ "top_hours": [
+  [
+   4,
+   2.0431961828872165
+  ],
+  [
+   6,
+   1.7231879322069825
+  ],
+  [
+   5,
+   1.5675770761966485
+  ],
+  [
+   14,
+   1.5139511492159863
+  ]
+ ],
+ "hashtags": [
+  [
+   "#ishowspeed",
+   103
+  ],
+  [
+   "#kaicenat",
+   103
+  ],
+  [
+   "#shorts",
+   100
+  ],
+  [
+   "#edit",
+   45
+  ],
+  [
+   "#rakai",
+   42
+  ],
+  [
+   "#ray",
+   33
+  ],
+  [
+   "#gtavi",
+   19
+  ],
+  [
+   "#halloween",
+   17
+  ],
+  [
+   "#dukedennis",
+   15
+  ],
+  [
+   "#gta6",
+   7
+  ],
+  [
+   "#wholesome",
+   5
+  ],
+  [
+   "#messi",
+   4
+  ]
+ ],
+ "hooks": [
+  [
+   "kai & pudgie",
+   2
+  ],
+  [
+   "kai & speed",
+   2
+  ]
+ ],
+ "title_chars": 41,
+ "title_cmp": {
+  "emoji": [
+   0.86,
+   0.77
+  ],
+  "question": [
+   0.02,
+   0.02
+  ],
+  "exclaim": [
+   0.22,
+   0.2
+  ],
+  "number": [
+   0.1,
+   0.06
+  ],
+  "quote": [
+   0.06,
+   0.03
+  ],
+  "pipe_or_dash": [
+   0.0,
+   0.0
+  ]
+ },
+ "sources": [
+  [
+   "ishowspeed",
+   70
+  ],
+  [
+   "kai cenat",
+   42
+  ],
+  [
+   "football",
+   3
+  ],
+  [
+   "basketball",
+   3
+  ]
+ ],
+ "winners": [
+  {
+   "title": "Jeffy Knows Ball Fr\ud83d\ude02\ud83d\ude02",
+   "views": 14361376,
+   "lift": 265.9,
+   "seconds": 23,
+   "channel": "ViralSprint"
+  },
+  {
+   "title": "iShowSpeed's Most Expensive Gift Ever\u2764\ufe0f\u200d\ud83e\ude79\u2764\ufe0f\u200d\ud83e\ude79",
+   "views": 12098908,
+   "lift": 224.0,
+   "seconds": 51,
+   "channel": "ViralSprint"
+  },
+  {
+   "title": "Gave The Gift To The Right Person\u2764\ufe0f\u200d\ud83e\ude79\u2764\ufe0f\u200d\ud83e\ude79",
+   "views": 11227018,
+   "lift": 207.9,
+   "seconds": 56,
+   "channel": "ViralSprint"
+  },
+  {
+   "title": "She Was Waiting For This Day\ud83e\udd76\ud83d\ude02",
+   "views": 9056809,
+   "lift": 167.7,
+   "seconds": 47,
+   "channel": "ViralSprint"
+  },
+  {
+   "title": "iShowSpeed Spread Love Even After All That\ud83d\udcaf\u2764\ufe0f\u200d\ud83e\ude79",
+   "views": 6293117,
+   "lift": 116.5,
+   "seconds": 46,
+   "channel": "ViralSprint"
+  },
+  {
+   "title": "Bro Can't Hide from Chat\ud83d\ude02\ud83d\ude02",
+   "views": 6072376,
+   "lift": 112.4,
+   "seconds": 26,
+   "channel": "ViralSprint"
+  },
+  {
+   "title": "iShowSpeed Got \"5 Star Skill Moves\"\ud83d\udc80\ud83d\ude2d",
+   "views": 5965258,
+   "lift": 110.5,
+   "seconds": 24,
+   "channel": "ViralSprint"
+  },
+  {
+   "title": "Kai & Pudgie Recreates Big Smoke Order Food Scene \ud83e\udd23",
+   "views": 14464849,
+   "lift": 96.5,
+   "seconds": 19,
+   "channel": "Snickerly"
+  },
+  {
+   "title": "Henry a Real One For That\ud83d\udc96\ud83d\udcaf",
+   "views": 5088477,
+   "lift": 94.2,
+   "seconds": 42,
+   "channel": "ViralSprint"
+  },
+  {
+   "title": "Kai Don't Care About Streamer Awards! \ud83e\udd23\ud83d\ude2d",
+   "views": 12459079,
+   "lift": 83.1,
+   "seconds": 12,
+   "channel": "Snickerly"
+  },
+  {
+   "title": "Kai Forgot He Was Streaming! \ud83d\ude2d\ud83e\udd23",
+   "views": 11982583,
+   "lift": 79.9,
+   "seconds": 13,
+   "channel": "Snickerly"
+  },
+  {
+   "title": "Hitting Faster & Faster Targets",
+   "views": 62952813,
+   "lift": 36.4,
+   "seconds": 30,
+   "channel": "Dude Perfect"
+  }
+ ],
+ "young_channels": [
+  {
+   "name": "Nexxo Recaps",
+   "age_months": 10.5,
+   "median_views": 4249444,
+   "views_30d": 78762555,
+   "uploads_per_day": 0.77
+  },
+  {
+   "name": "ICONICSHORTS",
+   "age_months": 6.4,
+   "median_views": 284560,
+   "views_30d": 40143851,
+   "uploads_per_day": 0.63
+  },
+  {
+   "name": "Rut Ribes",
+   "age_months": 6.3,
+   "median_views": 86223,
+   "views_30d": 38320838,
+   "uploads_per_day": 1.75
+  },
+  {
+   "name": "\u26a1\ufe0fUNIKPLUG\u26a1\ufe0f",
+   "age_months": 5.3,
+   "median_views": 23970,
+   "views_30d": 26613377,
+   "uploads_per_day": 0.78
+  },
+  {
+   "name": "skel3",
+   "age_months": 11.9,
+   "median_views": 107277,
+   "views_30d": 24594226,
+   "uploads_per_day": 0.9
+  },
+  {
+   "name": "SpeedyClips",
+   "age_months": 11.3,
+   "median_views": 28047,
+   "views_30d": 16455739,
+   "uploads_per_day": 0.66
+  }
+ ],
+ "benchmark_median_views": 30785
+}

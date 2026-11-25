@@ -1,0 +1,255 @@
+[
+ {
+  "id": 1,
+  "source": "caseoh",
+  "creator": "CaseOh",
+  "platform": "twitch",
+  "video_id": "2938655753",
+  "video_title": "slight scratch",
+  "url": "https://www.twitch.tv/videos/2938655753?t=2h47m31s",
+  "moment": "2:47:31",
+  "start": 10031,
+  "end": 10061,
+  "rank": 96.21,
+  "signal": "Twitch clip, 6,824 views (455/h)",
+  "signals": [
+   "twitch clip"
+  ],
+  "quotes": [
+   "slight scratch"
+  ],
+  "stream_age_h": 15.0,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": null
+  },
+  "council": {
+   "trend": 1.0,
+   "study": 0.25,
+   "analytics": 0.64,
+   "live": 0.12,
+   "script": 0.35,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 1.0,
+    "why": "CaseOh clips pull 158,450 views/hour this week, up 538% since the last scan"
+   },
+   "study": {
+    "score": 0.25,
+    "why": "top channels rarely break out with CaseOh"
+   },
+   "analytics": {
+    "score": 0.64,
+    "why": "CaseOh clips spread 2.0x our typical clip; no clear premise, may be visual-only; stream is 15h old"
+   },
+   "live": {
+    "score": 0.12,
+    "why": "Twitch clip at 455/h"
+   },
+   "script": {
+    "score": 0.35,
+    "why": "draft title: \"CaseOh At Slight Scratch 😱\"; no captions yet, writing blind"
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-25T05:29:13Z",
+  "council_why": "CaseOh's clips are performing exceptionally well, with a significant increase in views and engagement. The clip's visual content and the stream's freshness make it a strong contender.",
+  "post_utc": "2026-11-25 06:00",
+  "post_local": "Wed 01:00 AM ET",
+  "title": "CaseOh slight scratch 🤯",
+  "hook": "SLIGHT SCRATCH",
+  "context": "CaseOh live, slight scratch",
+  "take": "Nobody in the room saw this coming.",
+  "summary": "CaseOh live: slight scratch",
+  "tiktok_caption": "CaseOh in slight scratch.",
+  "hashtags": [],
+  "tags": [],
+  "draft": true,
+  "writer": "template",
+  "description": "CaseOh live, slight scratch\n\nFull stream by CaseOh: https://www.twitch.tv/videos/2938655753?t=2h47m31s\nGo support CaseOh, all credit to them.\n\n#caseoh #ishowspeed #kaicenat #shorts #edit",
+  "key": "2938655753@335",
+  "permission": "fan clipping is widespread and tolerated; no official program checked (Nov 2026)"
+ },
+ {
+  "id": 2,
+  "source": "ishowspeed",
+  "creator": "IShowSpeed",
+  "platform": "youtube",
+  "video_id": "PHSsdHu2Er0",
+  "video_title": "I RACED USAIN BOLT!",
+  "url": "https://www.youtube.com/watch?v=PHSsdHu2Er0&t=1372s",
+  "moment": "22:52",
+  "start": 1343,
+  "end": 1388,
+  "rank": 13.01,
+  "signal": "6 timestamp comments, 135 likes",
+  "signals": [
+   "comments"
+  ],
+  "quotes": [
+   "speed faster than bolt for the first 15 metres",
+   "why is bro hard",
+   "what a physique"
+  ],
+  "stream_age_h": 59.0,
+  "spike": false,
+  "recipe": {
+   "length": 45,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": "length"
+  },
+  "council": {
+   "trend": 0.83,
+   "study": 1.0,
+   "analytics": 0.53,
+   "live": 0.45,
+   "script": 1.0,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 0.83,
+    "why": "Speed clips pull 689,041 views/hour this week, down 34% since the last scan; matches what's viral now: bolt, usain"
+   },
+   "study": {
+    "score": 1.0,
+    "why": "3 of the top channels' breakout Shorts are Speed clips; Speed is in 70 of their recent titles"
+   },
+   "analytics": {
+    "score": 0.53,
+    "why": "Speed clips spread 1.1x our typical clip; viewer timestamp comments moments do 0.8x; has a spoken premise (bet/question/challenge); stream is 59h old (other clippers had time)"
+   },
+   "live": {
+    "score": 0.45,
+    "why": "6 timestamp comments, 135 likes"
+   },
+   "script": {
+    "score": 1.0,
+    "why": "draft title: \"Speed: \">> So, You See What I Did?\" 🔥\""
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-25T05:29:13Z",
+  "council_why": "IShowSpeed's clip has a clear premise and aligns with current trends, making it likely to attract a wide audience. The stream's age and the number of likes indicate potential for growth.",
+  "post_utc": "2026-11-25 14:00",
+  "post_local": "Wed 09:00 AM ET",
+  "title": "Speed speed faster than bolt for the fi 🤯",
+  "hook": "SPEED FASTER THAN BOLT FOR THE FIRST 15 ",
+  "context": "IShowSpeed live, I RACED USAIN BOLT!",
+  "take": "Speed had no idea what was about to happen.",
+  "summary": "IShowSpeed live: I RACED USAIN BOLT!",
+  "tiktok_caption": "Speed in I RACED USAIN BOLT!.",
+  "hashtags": [],
+  "tags": [],
+  "draft": true,
+  "writer": "template",
+  "description": "IShowSpeed live, I RACED USAIN BOLT!\n\nFull stream by IShowSpeed: https://www.youtube.com/watch?v=PHSsdHu2Er0&t=1372s\nGo support IShowSpeed, all credit to them.\n\n#ishowspeed #speed #kaicenat #shorts #edit",
+  "key": "PHSsdHu2Er0@45",
+  "permission": "fan clipping is widespread and tolerated; no official paid program found (Oct 2026)"
+ },
+ {
+  "id": 3,
+  "source": "jynxzi",
+  "creator": "Jynxzi",
+  "platform": "youtube",
+  "video_id": "aOOi7njlTEc",
+  "video_title": "FIRST TIME PLAYING GTA 6 *DAY 5*",
+  "url": "https://www.youtube.com/watch?v=aOOi7njlTEc&t=19954s",
+  "moment": "5:32:34",
+  "start": 19934,
+  "end": 19964,
+  "rank": 29.18,
+  "signal": "chat went 15.6x its normal pace",
+  "signals": [
+   "chat spike"
+  ],
+  "quotes": [
+   "w",
+   "w",
+   "w"
+  ],
+  "stream_age_h": 4.5,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.08,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": "punch"
+  },
+  "council": {
+   "trend": 0.03,
+   "study": 0.25,
+   "analytics": 0.87,
+   "live": 0.55,
+   "script": 0.75,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 0.03,
+    "why": "Jynxzi clips pull 20,238 views/hour this week, down 66% since the last scan"
+   },
+   "study": {
+    "score": 0.25,
+    "why": "top channels rarely break out with Jynxzi"
+   },
+   "analytics": {
+    "score": 0.87,
+    "why": "Jynxzi clips spread 1.6x our typical clip; chat spike moments do 1.1x; has a spoken premise (bet/question/challenge); stream is 4h old (fresh)"
+   },
+   "live": {
+    "score": 0.55,
+    "why": "chat went 15.6x"
+   },
+   "script": {
+    "score": 0.75,
+    "why": "draft title: \"Jynxzi At First Time Playing GTA 🔥\""
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-25T05:29:13Z",
+  "council_why": "Jynxzi's clip shows strong engagement and a fresh stream, which could lead to rapid growth in views. The clip's premise and the high chat spike make it a promising choice.",
+  "post_utc": "2026-11-25 17:00",
+  "post_local": "Wed 12:00 PM ET",
+  "title": "Jynxzi w 🤯",
+  "hook": "W",
+  "context": "Jynxzi live, FIRST TIME PLAYING GTA 6 *DAY 5*",
+  "take": "Keep your eyes on Jynxzi right here.",
+  "summary": "Jynxzi live: FIRST TIME PLAYING GTA 6 *DAY 5*",
+  "tiktok_caption": "Jynxzi in FIRST TIME PLAYING GTA 6 *DAY 5*.",
+  "hashtags": [],
+  "tags": [],
+  "draft": true,
+  "writer": "template",
+  "description": "Jynxzi live, FIRST TIME PLAYING GTA 6 *DAY 5*\n\nFull stream by Jynxzi: https://www.youtube.com/watch?v=aOOi7njlTEc&t=19954s\nGo support Jynxzi, all credit to them.\n\n#jynxzi #ishowspeed #kaicenat #shorts #edit",
+  "key": "aOOi7njlTEc@665",
+  "permission": "fan clipping tolerated; check for a Whop campaign"
+ }
+]
