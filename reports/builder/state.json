@@ -2576,8 +2576,8 @@
   "@TheDiaryOfACEO": "UCGq-a57w-aPwyi3pW7XLiHw"
  },
  "review": {
-  "at": "2026-11-24 05:06",
-  "report": "/home/runner/work/late-recaps-bot/late-recaps-bot/reports/review_2026-11-24_0506/report.md",
+  "at": "2026-11-25 05:28",
+  "report": "/home/runner/work/late-recaps-bot/late-recaps-bot/reports/review_2026-11-25_0528/report.md",
   "lessons": {
    "titles": [
     "Creator name first, then a bet or question in plain verbs, and never the result. Add a named guest or celebrity when one exists.",
@@ -2605,7 +2605,7 @@
   "feed_tested": "1 of 6",
   "make_more": [
    "quote title (Creator: \"line\") (title): 6 clips, 3 got a real feed test, typically 7 views, 1.9x our typical clip, 33% stayed past the swipe",
-   "Twitch clip (found by): 10 clips, 4 got a real feed test, typically 6 views, 1.8x our typical clip, 39% stayed past the swipe",
+   "Twitch clip (found by): 10 clips, 4 got a real feed test, typically 6 views, 1.8x our typical clip, 40% stayed past the swipe",
    "Jynxzi (creator): 13 clips, 4 got a real feed test, typically 5 views, 1.6x our typical clip, 43% stayed past the swipe",
    "20-30s (length): 19 clips, 6 got a real feed test, typically 4 views, 1.4x our typical clip, 34% stayed past the swipe",
    "over 45s (length): 12 clips, typically 237 views, 2.6x our typical TikTok clip (on TikTok)",
@@ -2618,9 +2618,8 @@
   ],
   "make_less": [
    "Kai Cenat (creator): 14 clips, 0 got a real feed test, typically 0 views, 0.5x our typical clip, 53% stayed past the swipe",
-   "31-45s (length): 8 clips, 0 got a real feed test, typically 1 views, 0.7x our typical clip, 48% stayed past the swipe",
-   "viewer timestamp comments (found by): 31 clips, 3 got a real feed test, typically 1 views, 0.8x our typical clip, 63% stayed past the swipe",
-   "stock reaction (Goes Crazy, Can't Believe...) (title): 11 clips, 2 got a real feed test, typically 1 views, 0.8x our typical clip, 33% stayed past the swipe",
+   "31-45s (length): 9 clips, 0 got a real feed test, typically 1 views, 0.6x our typical clip, 50% stayed past the swipe",
+   "viewer timestamp comments (found by): 32 clips, 3 got a real feed test, typically 1 views, 0.8x our typical clip, 63% stayed past the swipe",
    "afternoon (noon-5pm ET) (post time): 3 clips, typically 0 views, 0.1x our typical TikTok clip (on TikTok)",
    "20-30s (length): 13 clips, typically 15 views, 0.3x our typical TikTok clip (on TikTok)",
    "Stable Ronaldo (creator): 3 clips, typically 15 views, 0.5x our typical TikTok clip (on TikTok)",
@@ -2631,38 +2630,38 @@
    "Twitch clip (found by): 7 clips, typically 50 views, 0.8x our typical TikTok clip (on TikTok)"
   ],
   "source_score": {
-   "ishowspeed": 1.16,
-   "stableronaldo": 1.01,
-   "twitch_dinah": 1.21,
-   "caseoh": 1.97,
-   "jynxzi": 1.55,
-   "kai_cenat": 0.5,
+   "ishowspeed": 1.11,
+   "stableronaldo": 1.02,
+   "twitch_dinah": 1.22,
+   "caseoh": 1.98,
+   "jynxzi": 1.57,
+   "kai_cenat": 0.52,
    "xqc": 0.75,
    "n3on": 0.75,
    "adin_ross": 0.89
   },
   "hour_score": {
+   "22": 1.2,
    "5": 1.13,
-   "1": 0.7,
-   "8": 1.12,
+   "1": 0.71,
+   "8": 1.13,
    "18": 0.72,
-   "22": 1.44,
-   "6": 0.99,
+   "6": 1.0,
    "17": 1.22,
-   "21": 1.27,
-   "4": 0.69,
-   "2": 0.7
+   "21": 1.28,
+   "4": 0.7,
+   "2": 0.73
   },
   "levers": {
    "found by": {
-    "Twitch clip": 1.82,
-    "chat spike": 1.08,
-    "viewer timestamp comments": 0.79
+    "Twitch clip": 1.84,
+    "chat spike": 1.09,
+    "viewer timestamp comments": 0.78
    },
    "stream age at post": {
-    "over 48h": 1.15,
-    "12-48h": 1.0,
-    "under 12h": 0.84
+    "over 48h": 1.16,
+    "12-48h": 0.99,
+    "under 12h": 0.85
    }
   },
   "length_hint": 25,
@@ -4218,7 +4217,6 @@
   "stats": {
    "length": {
     "30": [
-     0.405,
      2.303,
      0.0,
      0.405,
@@ -4237,7 +4235,8 @@
      0.407,
      -1.184,
      -1.165,
-     -2.059
+     -2.059,
+     -1.155
     ],
     "20": [
      -0.693
@@ -4245,7 +4244,6 @@
    },
    "punch": {
     "0.14": [
-     -0.693,
      0.405,
      2.303,
      0.0,
@@ -4264,7 +4262,8 @@
      0.407,
      -1.184,
      -1.165,
-     -2.059
+     -2.059,
+     -1.155
     ],
     "0.2": [
      -1.138
@@ -4274,7 +4273,6 @@
     "normal": [
      -0.693,
      -0.693,
-     -0.693,
      0.405,
      2.303,
      0.0,
@@ -4291,7 +4289,8 @@
      0.407,
      -1.184,
      -1.165,
-     -2.059
+     -2.059,
+     -1.155
     ],
     "slow": [
      2.803
@@ -4329,12 +4328,12 @@
      -0.693,
      -0.693,
      0.407,
-     -1.184
+     -1.184,
+     -1.155
     ]
    },
    "gap": {
     "0.6": [
-     0.405,
      2.303,
      0.0,
      0.405,
@@ -4353,7 +4352,8 @@
      0.407,
      -1.184,
      -1.165,
-     -2.059
+     -2.059,
+     -1.155
     ],
     "1.0": [
      -0.693,
@@ -4363,7 +4363,6 @@
    },
    "layout": {
     "face34": [
-     0.405,
      2.303,
      0.0,
      0.405,
@@ -4382,7 +4381,8 @@
      0.407,
      -1.184,
      -1.165,
-     -2.059
+     -2.059,
+     -1.155
     ]
    },
    "narrate": {
@@ -4432,7 +4432,8 @@
    "gS8kyRfLsQ0",
    "Cl8ZNmNqzpk",
    "UPjA5ZOmJB4",
-   "Y_GVl1ZZRwg"
+   "Y_GVl1ZZRwg",
+   "THLyzo4ljyU"
   ],
   "best": {
    "length": 30,
@@ -4448,11 +4449,11 @@
  },
  "council": {
   "weights": {
-   "trend": 0.65,
-   "study": 0.468,
-   "analytics": 0.917,
-   "live": 1.45,
-   "script": 0.765,
+   "trend": 0.615,
+   "study": 0.431,
+   "analytics": 0.87,
+   "live": 1.471,
+   "script": 0.734,
    "audience": 0.5
   }
  },
