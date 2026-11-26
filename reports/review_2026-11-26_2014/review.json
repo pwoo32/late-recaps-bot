@@ -1,0 +1,2965 @@
+{
+ "channel": {
+  "id": "UCbK9EejOk5UVzI_l8F3f8kA",
+  "title": "Late Recaps",
+  "subs": 1,
+  "views": 467,
+  "videos": 60
+ },
+ "typical_views": 2.3705061768058733,
+ "feed_tests": [
+  {
+   "from": "2026-11-17T20:14:30.934209+00:00",
+   "to": "2026-11-24T20:14:30.934209+00:00",
+   "n": 7,
+   "tested": 1,
+   "views": 112,
+   "best": "Jynxzi Raids AngryGingers After Ending His GTA 6 Stream 😭",
+   "best_views": 101
+  },
+  {
+   "from": "2026-11-10T20:14:30.934209+00:00",
+   "to": "2026-11-17T20:14:30.934209+00:00",
+   "n": 5,
+   "tested": 2,
+   "views": 85,
+   "best": "Jynxzi Wins Gamer Of The Year At The Streamer Awards 🏆🔥",
+   "best_views": 57
+  },
+  {
+   "from": "2026-11-03T20:14:30.934209+00:00",
+   "to": "2026-11-10T20:14:30.934209+00:00",
+   "n": 12,
+   "tested": 4,
+   "views": 92,
+   "best": "Ronaldo: \"Laiys. Says Word\" 😱",
+   "best_views": 28
+  }
+ ],
+ "findings": [
+  {
+   "factor": "creator",
+   "value": "CaseOh",
+   "n": 2,
+   "platform": "YouTube",
+   "tested": 2,
+   "views": 16.4928556845359,
+   "stayed": 0.5477941176470589,
+   "stayed_n": 2,
+   "mult": 1.932262984412903,
+   "best": "CaseOh: \"Crazy Viewer\" 😭"
+  },
+  {
+   "factor": "creator",
+   "value": "Jynxzi",
+   "n": 14,
+   "platform": "YouTube",
+   "tested": 5,
+   "views": 5.8064060028900295,
+   "stayed": 0.42806460187614687,
+   "stayed_n": 12,
+   "mult": 1.7838563975646116,
+   "best": "Jynxzi Raids AngryGingers After Ending His GTA 6 Stream 😭"
+  },
+  {
+   "factor": "creator",
+   "value": "Dinah",
+   "n": 1,
+   "platform": "YouTube",
+   "tested": 0,
+   "views": 6.0,
+   "stayed": 0.5,
+   "stayed_n": 1,
+   "mult": 1.2004683877760067,
+   "best": "Dinah Starts The Stream Laughing Uncontrollably 😭😂"
+  },
+  {
+   "factor": "creator",
+   "value": "IShowSpeed",
+   "n": 21,
+   "platform": "YouTube",
+   "tested": 4,
+   "views": 2.5748807141548746,
+   "stayed": 0.536458019105078,
+   "stayed_n": 15,
+   "mult": 1.0528599945038901,
+   "best": "Speed Gets Invited To Cook Up Dubstep With Frost Children 🎧"
+  },
+  {
+   "factor": "creator",
+   "value": "Stable Ronaldo",
+   "n": 4,
+   "platform": "YouTube",
+   "tested": 1,
+   "views": 2.281818034911291,
+   "stayed": 0.41666666666666663,
+   "stayed_n": 2,
+   "mult": 0.9848781377251447,
+   "best": "Ronaldo: \"Laiys. Says Word\" 😱"
+  },
+  {
+   "factor": "creator",
+   "value": "Adin Ross",
+   "n": 1,
+   "platform": "YouTube",
+   "tested": 0,
+   "views": 1.0,
+   "stayed": 1.0,
+   "stayed_n": 1,
+   "mult": 0.8776749780465105,
+   "best": "Adin Watches YK Osiris Hang On Against Deshae 😭🥊"
+  },
+  {
+   "factor": "creator",
+   "value": "xQc",
+   "n": 1,
+   "platform": "YouTube",
+   "tested": 0,
+   "views": 0.0,
+   "stayed": null,
+   "stayed_n": 0,
+   "mult": 0.7380337427971934,
+   "best": "xQc Can't Believe He Pulled This Off At X Presses Lang 🔥"
+  },
+  {
+   "factor": "creator",
+   "value": "N3on",
+   "n": 1,
+   "platform": "YouTube",
+   "tested": 0,
+   "views": 0.0,
+   "stayed": null,
+   "stayed_n": 0,
+   "mult": 0.7380337427971934,
+   "best": "N3on: \"Face Each Other?\" 🔥"
+  },
+  {
+   "factor": "creator",
+   "value": "Kai Cenat",
+   "n": 14,
+   "platform": "YouTube",
+   "tested": 0,
+   "views": 0.42616163522737877,
+   "stayed": 0.4333333333333333,
+   "stayed_n": 5,
+   "mult": 0.4924816369588342,
+   "best": "Kai Cenat Can't Believe Pooh Shiesty Bro Snapping 🧐😭"
+  },
+  {
+   "factor": "found by",
+   "value": "Twitch clip",
+   "n": 10,
+   "platform": "YouTube",
+   "tested": 4,
+   "views": 6.014125698343182,
+   "stayed": 0.40229940660474717,
+   "stayed_n": 8,
+   "mult": 1.7572338137846535,
+   "best": "Jynxzi Wins Gamer Of The Year At The Streamer Awards 🏆🔥"
+  },
+  {
+   "factor": "found by",
+   "value": "chat spike",
+   "n": 12,
+   "platform": "YouTube",
+   "tested": 4,
+   "views": 3.6964881103460723,
+   "stayed": 0.33672409579667645,
+   "stayed_n": 8,
+   "mult": 1.3039546273811913,
+   "best": "Jynxzi Raids AngryGingers After Ending His GTA 6 Stream 😭"
+  },
+  {
+   "factor": "found by",
+   "value": "viewer timestamp comments",
+   "n": 33,
+   "platform": "YouTube",
+   "tested": 3,
+   "views": 1.4579177602290445,
+   "stayed": 0.5824966828836798,
+   "stayed_n": 21,
+   "mult": 0.7486856951153091,
+   "best": "Jynxzi Explains Why Hearing Wins In Rainbow Six 🎧"
+  },
+  {
+   "factor": "found by",
+   "value": "Kick clip",
+   "n": 1,
+   "platform": "YouTube",
+   "tested": 0,
+   "views": 0.0,
+   "stayed": null,
+   "stayed_n": 0,
+   "mult": 0.7380337427971934,
+   "best": "xQc Can't Believe He Pulled This Off At X Presses Lang 🔥"
+  },
+  {
+   "factor": "stream age at post",
+   "value": "over 48h",
+   "n": 14,
+   "platform": "YouTube",
+   "tested": 2,
+   "views": 2.759810805689819,
+   "stayed": 0.41217948717948716,
+   "stayed_n": 13,
+   "mult": 1.0941922968039532,
+   "best": "CaseOh Get Jump Scared Mid Game 😭"
+  },
+  {
+   "factor": "stream age at post",
+   "value": "under 12h",
+   "n": 14,
+   "platform": "YouTube",
+   "tested": 3,
+   "views": 2.394683477031989,
+   "stayed": 0.45939171122994654,
+   "stayed_n": 8,
+   "mult": 1.0059036091406817,
+   "best": "Jynxzi Raids AngryGingers After Ending His GTA 6 Stream 😭"
+  },
+  {
+   "factor": "stream age at post",
+   "value": "12-48h",
+   "n": 28,
+   "platform": "YouTube",
+   "tested": 6,
+   "views": 2.143149934309451,
+   "stayed": 0.5694469585372349,
+   "stayed_n": 16,
+   "mult": 0.9388692926630646,
+   "best": "Jynxzi Wins Gamer Of The Year At The Streamer Awards 🏆🔥"
+  },
+  {
+   "factor": "hook",
+   "value": "says what happens",
+   "n": 25,
+   "platform": "YouTube",
+   "tested": 5,
+   "views": 2.954471553494167,
+   "stayed": 0.5073919014708488,
+   "stayed_n": 18,
+   "mult": 1.1533425879765518,
+   "best": "Jynxzi Raids AngryGingers After Ending His GTA 6 Stream 😭"
+  },
+  {
+   "factor": "hook",
+   "value": "question",
+   "n": 17,
+   "platform": "YouTube",
+   "tested": 3,
+   "views": 2.145346413159997,
+   "stayed": 0.5348474067046173,
+   "stayed_n": 12,
+   "mult": 0.9429254391556339,
+   "best": "Jynxzi: \"What Is It?\" 🔥"
+  },
+  {
+   "factor": "hook",
+   "value": "stake or challenge",
+   "n": 7,
+   "platform": "YouTube",
+   "tested": 1,
+   "views": 1.8124921524049378,
+   "stayed": 0.4057017543859649,
+   "stayed_n": 4,
+   "mult": 0.881002892673888,
+   "best": "Jynxzi Wins Gamer Of The Year At The Streamer Awards 🏆🔥"
+  },
+  {
+   "factor": "hook",
+   "value": "generic tease (WAIT FOR IT...)",
+   "n": 7,
+   "platform": "YouTube",
+   "tested": 2,
+   "views": 1.5776111360276865,
+   "stayed": 0.3235294117647059,
+   "stayed_n": 3,
+   "mult": 0.8288302445846747,
+   "best": "Jynxzi Didn't See This Coming At Biggest Announcement Ever 😱"
+  },
+  {
+   "factor": "title",
+   "value": "quote title (Creator: \"line\")",
+   "n": 6,
+   "platform": "YouTube",
+   "tested": 3,
+   "views": 7.3299375629464745,
+   "stayed": 0.3253004427577483,
+   "stayed_n": 5,
+   "mult": 1.8279504219491287,
+   "best": "Jynxzi: \"What Is It?\" 🔥"
+  },
+  {
+   "factor": "title",
+   "value": "says what happens",
+   "n": 42,
+   "platform": "YouTube",
+   "tested": 7,
+   "views": 2.234060334259904,
+   "stayed": 0.5612122789109373,
+   "stayed_n": 27,
+   "mult": 0.9621647848881896,
+   "best": "Jynxzi Raids AngryGingers After Ending His GTA 6 Stream 😭"
+  },
+  {
+   "factor": "title",
+   "value": "stock reaction (Goes Crazy, Can't Believe...)",
+   "n": 11,
+   "platform": "YouTube",
+   "tested": 2,
+   "views": 1.409270448193389,
+   "stayed": 0.3333333333333333,
+   "stayed_n": 6,
+   "mult": 0.768131074909147,
+   "best": "Jynxzi Didn't See This Coming At Biggest Announcement Ever 😱"
+  },
+  {
+   "factor": "length",
+   "value": "20-30s",
+   "n": 20,
+   "platform": "YouTube",
+   "tested": 6,
+   "views": 3.6347511798338235,
+   "stayed": 0.3221075622524052,
+   "stayed_n": 16,
+   "mult": 1.319131477567458,
+   "best": "Jynxzi Wins Gamer Of The Year At The Streamer Awards 🏆🔥"
+  },
+  {
+   "factor": "length",
+   "value": "under 20s",
+   "n": 4,
+   "platform": "YouTube",
+   "tested": 1,
+   "views": 2.6628415014847064,
+   "stayed": 0.4019607843137255,
+   "stayed_n": 2,
+   "mult": 1.0486769291850488,
+   "best": "CaseOh: \"Crazy Viewer\" 😭"
+  },
+  {
+   "factor": "length",
+   "value": "over 45s",
+   "n": 25,
+   "platform": "YouTube",
+   "tested": 4,
+   "views": 1.8377366112298303,
+   "stayed": 0.6800252705670662,
+   "stayed_n": 15,
+   "mult": 0.8575964929868705,
+   "best": "Speed Gets Invited To Cook Up Dubstep With Frost Children 🎧"
+  },
+  {
+   "factor": "length",
+   "value": "31-45s",
+   "n": 10,
+   "platform": "YouTube",
+   "tested": 1,
+   "views": 1.6508853519300724,
+   "stayed": 0.5242424242424242,
+   "stayed_n": 5,
+   "mult": 0.8313157598897165,
+   "best": "Jynxzi Raids AngryGingers After Ending His GTA 6 Stream 😭"
+  },
+  {
+   "factor": "post time",
+   "value": "morning (6am-noon ET)",
+   "n": 1,
+   "platform": "YouTube",
+   "tested": 1,
+   "views": 31.0,
+   "stayed": 0.3225806451612903,
+   "stayed_n": 1,
+   "mult": 1.7553499560930212,
+   "best": "Jynxzi: \"What Is It?\" 🔥"
+  },
+  {
+   "factor": "post time",
+   "value": "late night (10pm-6am ET)",
+   "n": 30,
+   "platform": "YouTube",
+   "tested": 5,
+   "views": 2.338968115007741,
+   "stayed": 0.5013010996390498,
+   "stayed_n": 19,
+   "mult": 0.991489942508149,
+   "best": "Jynxzi Raids AngryGingers After Ending His GTA 6 Stream 😭"
+  },
+  {
+   "factor": "post time",
+   "value": "afternoon (noon-5pm ET)",
+   "n": 7,
+   "platform": "YouTube",
+   "tested": 2,
+   "views": 2.3295218070729695,
+   "stayed": 0.5941176470588235,
+   "stayed_n": 5,
+   "mult": 0.9914725971237545,
+   "best": "Speed And Derek Jeter Can't Believe It 🔥"
+  },
+  {
+   "factor": "post time",
+   "value": "evening (5-10pm ET)",
+   "n": 21,
+   "platform": "YouTube",
+   "tested": 4,
+   "views": 2.0814377372433013,
+   "stayed": 0.45856492082974576,
+   "stayed_n": 13,
+   "mult": 0.9245405967198485,
+   "best": "Jynxzi Wins Gamer Of The Year At The Streamer Awards 🏆🔥"
+  },
+  {
+   "factor": "creator",
+   "value": "Kai Cenat",
+   "n": 5,
+   "platform": "TikTok",
+   "tested": 5,
+   "views": 224.5796661169756,
+   "stayed": null,
+   "stayed_n": 0,
+   "mult": 2.265249991080568,
+   "best": "Kai Cenat Tells A Guest He's A Rose Boy 🌹😭"
+  },
+  {
+   "factor": "creator",
+   "value": "Jynxzi",
+   "n": 10,
+   "platform": "TikTok",
+   "tested": 8,
+   "views": 126.13749494699435,
+   "stayed": null,
+   "stayed_n": 0,
+   "mult": 1.7599783413468357,
+   "best": "Jynxzi Wins Gamer Of The Year At The Streamer Awards 🏆🔥"
+  },
+  {
+   "factor": "creator",
+   "value": "IShowSpeed",
+   "n": 8,
+   "platform": "TikTok",
+   "tested": 6,
+   "views": 48.45998260062569,
+   "stayed": null,
+   "stayed_n": 0,
+   "mult": 0.8588550547426463,
+   "best": "Speed Takes A Family Photo At His Movie Premiere 📸"
+  },
+  {
+   "factor": "creator",
+   "value": "Stable Ronaldo",
+   "n": 3,
+   "platform": "TikTok",
+   "tested": 1,
+   "views": 15.093205985946936,
+   "stayed": null,
+   "stayed_n": 0,
+   "mult": 0.5137646514371579,
+   "best": "Ronaldo: \"Laiys. Says Word\" 😱"
+  },
+  {
+   "factor": "creator",
+   "value": "CaseOh",
+   "n": 1,
+   "platform": "TikTok",
+   "tested": 0,
+   "views": 0.0,
+   "stayed": null,
+   "stayed_n": 0,
+   "mult": 0.35786684750764036,
+   "best": "CaseOh: \"Over Here\" 😱"
+  },
+  {
+   "factor": "creator",
+   "value": "Lacy",
+   "n": 1,
+   "platform": "TikTok",
+   "tested": 0,
+   "views": 0.0,
+   "stayed": null,
+   "stayed_n": 0,
+   "mult": 0.35786684750764036,
+   "best": "Lacy Goes Off 🔥"
+  },
+  {
+   "factor": "found by",
+   "value": "viewer timestamp comments",
+   "n": 15,
+   "platform": "TikTok",
+   "tested": 13,
+   "views": 104.43994947209278,
+   "stayed": null,
+   "stayed_n": 0,
+   "mult": 1.5784925972673403,
+   "best": "Jynxzi Explains Why Hearing Wins In Rainbow Six 🎧"
+  },
+  {
+   "factor": "found by",
+   "value": "chat spike",
+   "n": 5,
+   "platform": "TikTok",
+   "tested": 3,
+   "views": 33.65404755743705,
+   "stayed": null,
+   "stayed_n": 0,
+   "mult": 0.7025057743399761,
+   "best": "Jynxzi: \"What Is It?\" 🔥"
+  },
+  {
+   "factor": "found by",
+   "value": "Twitch clip",
+   "n": 8,
+   "platform": "TikTok",
+   "tested": 4,
+   "views": 30.0755264691037,
+   "stayed": null,
+   "stayed_n": 0,
+   "mult": 0.6125343488513129,
+   "best": "Ronaldo: \"Laiys. Says Word\" 😱"
+  },
+  {
+   "factor": "stream age at post",
+   "value": "over 48h",
+   "n": 2,
+   "platform": "TikTok",
+   "tested": 2,
+   "views": 304.97385509222835,
+   "stayed": null,
+   "stayed_n": 0,
+   "mult": 1.906461658557273,
+   "best": "Kai Cenat Can't Believe Chat Failed Again 😭"
+  },
+  {
+   "factor": "stream age at post",
+   "value": "12-48h",
+   "n": 23,
+   "platform": "TikTok",
+   "tested": 17,
+   "views": 69.1967022624004,
+   "stayed": null,
+   "stayed_n": 0,
+   "mult": 1.1327674058352701,
+   "best": "Ronaldo: \"Laiys. Says Word\" 😱"
+  },
+  {
+   "factor": "stream age at post",
+   "value": "under 12h",
+   "n": 3,
+   "platform": "TikTok",
+   "tested": 1,
+   "views": 6.060696670652125,
+   "stayed": null,
+   "stayed_n": 0,
+   "mult": 0.3403037323867057,
+   "best": "Jynxzi: \"Chat What's My Kd?\" 🔥"
+  },
+  {
+   "factor": "hook",
+   "value": "question",
+   "n": 14,
+   "platform": "TikTok",
+   "tested": 12,
+   "views": 134.37582180859442,
+   "stayed": null,
+   "stayed_n": 0,
+   "mult": 1.9288249006260152,
+   "best": "Ronaldo: \"Laiys. Says Word\" 😱"
+  },
+  {
+   "factor": "hook",
+   "value": "stake or challenge",
+   "n": 3,
+   "platform": "TikTok",
+   "tested": 2,
+   "views": 90.40283513431399,
+   "stayed": null,
+   "stayed_n": 0,
+   "mult": 1.2243984427884418,
+   "best": "Jynxzi Wins Gamer Of The Year At The Streamer Awards 🏆🔥"
+  },
+  {
+   "factor": "hook",
+   "value": "says what happens",
+   "n": 8,
+   "platform": "TikTok",
+   "tested": 5,
+   "views": 40.65948471914817,
+   "stayed": null,
+   "stayed_n": 0,
+   "mult": 0.7580693179801988,
+   "best": "Jynxzi Explains Why Hearing Wins In Rainbow Six 🎧"
+  },
+  {
+   "factor": "hook",
+   "value": "generic tease (WAIT FOR IT...)",
+   "n": 3,
+   "platform": "TikTok",
+   "tested": 1,
+   "views": 1.7144176165949063,
+   "stayed": null,
+   "stayed_n": 0,
+   "mult": 0.2109994230340194,
+   "best": "Speed At Revealing MY NEW Fortnite 😱"
+  },
+  {
+   "factor": "title",
+   "value": "says what happens",
+   "n": 18,
+   "platform": "TikTok",
+   "tested": 16,
+   "views": 131.48043779421675,
+   "stayed": null,
+   "stayed_n": 0,
+   "mult": 1.9448646953565605,
+   "best": "Jynxzi Wins Gamer Of The Year At The Streamer Awards 🏆🔥"
+  },
+  {
+   "factor": "title",
+   "value": "quote title (Creator: \"line\")",
+   "n": 8,
+   "platform": "TikTok",
+   "tested": 4,
+   "views": 24.907043202697206,
+   "stayed": null,
+   "stayed_n": 0,
+   "mult": 0.5366305985917841,
+   "best": "Ronaldo: \"Laiys. Says Word\" 😱"
+  },
+  {
+   "factor": "title",
+   "value": "stock reaction (Goes Crazy, Can't Believe...)",
+   "n": 2,
+   "platform": "TikTok",
+   "tested": 0,
+   "views": 0.7320508075688772,
+   "stayed": null,
+   "stayed_n": 0,
+   "mult": 0.24064597328605566,
+   "best": "Speed Gets Emotional With Callie ❤️"
+  },
+  {
+   "factor": "length",
+   "value": "over 45s",
+   "n": 12,
+   "platform": "TikTok",
+   "tested": 12,
+   "views": 237.2073043031317,
+   "stayed": null,
+   "stayed_n": 0,
+   "mult": 2.9749026307367226,
+   "best": "Jynxzi Explains Why Hearing Wins In Rainbow Six 🎧"
+  },
+  {
+   "factor": "length",
+   "value": "31-45s",
+   "n": 1,
+   "platform": "TikTok",
+   "tested": 1,
+   "views": 2138.000000000001,
+   "stayed": null,
+   "stayed_n": 0,
+   "mult": 2.4337399083888394,
+   "best": "Jynxzi Wins Gamer Of The Year At The Streamer Awards 🏆🔥"
+  },
+  {
+   "factor": "length",
+   "value": "under 20s",
+   "n": 1,
+   "platform": "TikTok",
+   "tested": 1,
+   "views": 301.0,
+   "stayed": null,
+   "stayed_n": 0,
+   "mult": 1.4918432832691773,
+   "best": "Jynxzi: \"Evan Burger\" 😱"
+  },
+  {
+   "factor": "length",
+   "value": "20-30s",
+   "n": 14,
+   "platform": "TikTok",
+   "tested": 6,
+   "views": 12.11664134954961,
+   "stayed": null,
+   "stayed_n": 0,
+   "mult": 0.2821407620711621,
+   "best": "Ronaldo: \"Laiys. Says Word\" 😱"
+  },
+  {
+   "factor": "post time",
+   "value": "late night (10pm-6am ET)",
+   "n": 12,
+   "platform": "TikTok",
+   "tested": 10,
+   "views": 126.90835868671374,
+   "stayed": null,
+   "stayed_n": 0,
+   "mult": 1.8089553071385562,
+   "best": "Ronaldo: \"Laiys. Says Word\" 😱"
+  },
+  {
+   "factor": "post time",
+   "value": "morning (6am-noon ET)",
+   "n": 1,
+   "platform": "TikTok",
+   "tested": 1,
+   "views": 457.00000000000017,
+   "stayed": null,
+   "stayed_n": 0,
+   "mult": 1.6555329810687625,
+   "best": "Jynxzi: \"What Is It?\" 🔥"
+  },
+  {
+   "factor": "post time",
+   "value": "evening (5-10pm ET)",
+   "n": 12,
+   "platform": "TikTok",
+   "tested": 9,
+   "views": 67.64811029645375,
+   "stayed": null,
+   "stayed_n": 0,
+   "mult": 1.0995413481557832,
+   "best": "Jynxzi Wins Gamer Of The Year At The Streamer Awards 🏆🔥"
+  },
+  {
+   "factor": "post time",
+   "value": "afternoon (noon-5pm ET)",
+   "n": 3,
+   "platform": "TikTok",
+   "tested": 0,
+   "views": 0.0,
+   "stayed": null,
+   "stayed_n": 0,
+   "mult": 0.1280686805450567,
+   "best": "Ronaldo: \"Jynxzi Just Exposed Me\" 💀😭"
+  }
+ ],
+ "steer": {
+  "source_score": {
+   "ishowspeed": 1.05,
+   "jynxzi": 1.78,
+   "stableronaldo": 0.98,
+   "twitch_dinah": 1.2,
+   "caseoh": 1.93,
+   "kai_cenat": 0.5,
+   "xqc": 0.74,
+   "n3on": 0.74,
+   "adin_ross": 0.88
+  },
+  "hour_score": {
+   "8": 1.07,
+   "6": 1.73,
+   "22": 1.16,
+   "5": 1.1,
+   "1": 0.69,
+   "18": 0.71,
+   "17": 1.19,
+   "21": 1.22,
+   "4": 0.67,
+   "2": 0.7
+  },
+  "length_hint": 25,
+  "levers": {
+   "found by": {
+    "Twitch clip": 1.76,
+    "chat spike": 1.3,
+    "viewer timestamp comments": 0.75
+   },
+   "stream age at post": {
+    "over 48h": 1.09,
+    "under 12h": 1.01,
+    "12-48h": 0.94
+   }
+  },
+  "make_more": [
+   "quote title (Creator: \"line\") (title): 6 clips, 3 got a real feed test, typically 7 views, 1.8x our typical clip, 33% stayed past the swipe",
+   "Jynxzi (creator): 14 clips, 5 got a real feed test, typically 6 views, 1.8x our typical clip, 43% stayed past the swipe",
+   "Twitch clip (found by): 10 clips, 4 got a real feed test, typically 6 views, 1.8x our typical clip, 40% stayed past the swipe",
+   "20-30s (length): 20 clips, 6 got a real feed test, typically 4 views, 1.3x our typical clip, 32% stayed past the swipe",
+   "chat spike (found by): 12 clips, 4 got a real feed test, typically 4 views, 1.3x our typical clip, 34% stayed past the swipe",
+   "over 45s (length): 12 clips, typically 237 views, 3.0x our typical TikTok clip (on TikTok)",
+   "Kai Cenat (creator): 5 clips, typically 225 views, 2.3x our typical TikTok clip (on TikTok)",
+   "says what happens (title): 18 clips, typically 131 views, 1.9x our typical TikTok clip (on TikTok)",
+   "question (hook): 14 clips, typically 134 views, 1.9x our typical TikTok clip (on TikTok)",
+   "late night (10pm-6am ET) (post time): 12 clips, typically 127 views, 1.8x our typical TikTok clip (on TikTok)",
+   "Jynxzi (creator): 10 clips, typically 126 views, 1.8x our typical TikTok clip (on TikTok)",
+   "viewer timestamp comments (found by): 15 clips, typically 104 views, 1.6x our typical TikTok clip (on TikTok)"
+  ],
+  "make_less": [
+   "Kai Cenat (creator): 14 clips, 0 got a real feed test, typically 0 views, 0.5x our typical clip, 43% stayed past the swipe",
+   "viewer timestamp comments (found by): 33 clips, 3 got a real feed test, typically 1 views, 0.7x our typical clip, 58% stayed past the swipe",
+   "stock reaction (Goes Crazy, Can't Believe...) (title): 11 clips, 2 got a real feed test, typically 1 views, 0.8x our typical clip, 33% stayed past the swipe",
+   "afternoon (noon-5pm ET) (post time): 3 clips, typically 0 views, 0.1x our typical TikTok clip (on TikTok)",
+   "generic tease (WAIT FOR IT...) (hook): 3 clips, typically 2 views, 0.2x our typical TikTok clip (on TikTok)",
+   "20-30s (length): 14 clips, typically 12 views, 0.3x our typical TikTok clip (on TikTok)",
+   "under 12h (stream age at post): 3 clips, typically 6 views, 0.3x our typical TikTok clip (on TikTok)",
+   "Stable Ronaldo (creator): 3 clips, typically 15 views, 0.5x our typical TikTok clip (on TikTok)",
+   "quote title (Creator: \"line\") (title): 8 clips, typically 25 views, 0.5x our typical TikTok clip (on TikTok)",
+   "Twitch clip (found by): 8 clips, typically 30 views, 0.6x our typical TikTok clip (on TikTok)",
+   "chat spike (found by): 5 clips, typically 34 views, 0.7x our typical TikTok clip (on TikTok)",
+   "says what happens (hook): 8 clips, typically 41 views, 0.8x our typical TikTok clip (on TikTok)"
+  ]
+ },
+ "clips": [
+  {
+   "id": "5uGaBQK6cLE",
+   "title": "Speed Asks Usain Bolt If He Can Go Pro 🏃⚡",
+   "age_h": 30.2,
+   "privacy": "public",
+   "seconds": 46,
+   "source": "ishowspeed",
+   "features": {
+    "creator": "IShowSpeed",
+    "title": "says what happens",
+    "length": "over 45s",
+    "post time": "morning (6am-noon ET)",
+    "hook": "question",
+    "stream age at post": "over 48h",
+    "found by": "viewer timestamp comments"
+   },
+   "views": 3,
+   "vph": 0.09924874921213342,
+   "like_rate": 0.0,
+   "avp": null,
+   "avd": null,
+   "shares": null,
+   "stayed": null,
+   "hold_3s": null,
+   "end": null,
+   "feed_share": null,
+   "drop_s": null,
+   "findings": []
+  },
+  {
+   "id": "4w3kpLYuzLs",
+   "title": "Speed Crashes GTA 6 Before Saving 😭",
+   "age_h": 60.2,
+   "privacy": "public",
+   "seconds": 30,
+   "source": "ishowspeed",
+   "features": {
+    "creator": "IShowSpeed",
+    "title": "says what happens",
+    "length": "20-30s",
+    "post time": "late night (10pm-6am ET)",
+    "hook": "says what happens",
+    "stream age at post": "over 48h",
+    "found by": "viewer timestamp comments"
+   },
+   "views": 2,
+   "vph": 0.03320489613896367,
+   "like_rate": 0.0,
+   "avp": 0,
+   "avd": 0,
+   "shares": 0,
+   "stayed": 0.0,
+   "hold_3s": null,
+   "end": null,
+   "feed_share": 0.0,
+   "drop_s": null,
+   "findings": [
+    {
+     "kind": "reach",
+     "text": "The feed never tested it (2 views in 3 days). Nothing here says the clip was bad; it says YouTube didn't show it. Usually reused-content signals (a moment many channels posted, too little of our own take) or a stale stream."
+    }
+   ]
+  },
+  {
+   "id": "LIGWXAzP5-8",
+   "title": "Jynxzi Raids AngryGingers After Ending His GTA 6 Stream 😭",
+   "age_h": 62.2,
+   "privacy": "public",
+   "seconds": 33,
+   "source": "jynxzi",
+   "features": {
+    "creator": "Jynxzi",
+    "title": "says what happens",
+    "length": "31-45s",
+    "post time": "late night (10pm-6am ET)",
+    "hook": "says what happens",
+    "stream age at post": "under 12h",
+    "found by": "chat spike"
+   },
+   "views": 101,
+   "vph": 1.6230875380258813,
+   "like_rate": 0.0,
+   "avp": 44.21,
+   "avd": 14,
+   "shares": 0,
+   "stayed": 0.45454545454545453,
+   "hold_3s": 0.9667,
+   "end": 0.1333,
+   "feed_share": 0.07575757575757576,
+   "drop_s": 26.4,
+   "findings": [
+    {
+     "kind": "hook",
+     "text": "Only 45% stayed past the swipe; the biggest drop is at 26s. Open on the reaction or the stake, not the setup, and make the hook promise the payoff."
+    },
+    {
+     "kind": "length",
+     "text": "Watched 44% on average: trim dead air and end on the punchline."
+    },
+    {
+     "kind": "reach",
+     "text": "Only 8% of its views came from the Shorts feed, so the feed tried it and stopped. Watch the swipe rate on the next clips like it."
+    },
+    {
+     "kind": "good",
+     "text": "30x our typical clip: make more like this."
+    }
+   ]
+  },
+  {
+   "id": "THLyzo4ljyU",
+   "title": "Speed Overwrites His 98% GTA 6 Save File 💀😭",
+   "age_h": 94.2,
+   "privacy": "public",
+   "seconds": 32,
+   "source": "ishowspeed",
+   "features": {
+    "creator": "IShowSpeed",
+    "title": "says what happens",
+    "length": "31-45s",
+    "post time": "evening (5-10pm ET)",
+    "hook": "stake or challenge",
+    "stream age at post": "12-48h",
+    "found by": "viewer timestamp comments"
+   },
+   "views": 0,
+   "vph": 0.0,
+   "like_rate": null,
+   "avp": null,
+   "avd": null,
+   "shares": null,
+   "stayed": null,
+   "hold_3s": null,
+   "end": null,
+   "feed_share": null,
+   "drop_s": null,
+   "findings": [
+    {
+     "kind": "reach",
+     "text": "The feed never tested it (0 views in 4 days). Nothing here says the clip was bad; it says YouTube didn't show it. Usually reused-content signals (a moment many channels posted, too little of our own take) or a stale stream."
+    }
+   ]
+  },
+  {
+   "id": "Y_GVl1ZZRwg",
+   "title": "Speed Finishes GTA 6 After 52 Hours Awake 😭",
+   "age_h": 111.2,
+   "privacy": "public",
+   "seconds": 33,
+   "source": "ishowspeed",
+   "features": {
+    "creator": "IShowSpeed",
+    "title": "says what happens",
+    "length": "31-45s",
+    "post time": "late night (10pm-6am ET)",
+    "hook": "stake or challenge",
+    "stream age at post": "12-48h",
+    "found by": "viewer timestamp comments"
+   },
+   "views": 3,
+   "vph": 0.026970770948329753,
+   "like_rate": 0.0,
+   "avp": 8.39,
+   "avd": 2,
+   "shares": 0,
+   "stayed": 0.6666666666666666,
+   "hold_3s": null,
+   "end": null,
+   "feed_share": 0.0,
+   "drop_s": null,
+   "findings": [
+    {
+     "kind": "reach",
+     "text": "The feed never tested it (3 views in 5 days). Nothing here says the clip was bad; it says YouTube didn't show it. Usually reused-content signals (a moment many channels posted, too little of our own take) or a stale stream."
+    }
+   ]
+  },
+  {
+   "id": "UPjA5ZOmJB4",
+   "title": "Speed Reacts To Bag In GTA 6 😭",
+   "age_h": 135.2,
+   "privacy": "public",
+   "seconds": 31,
+   "source": "ishowspeed",
+   "features": {
+    "creator": "IShowSpeed",
+    "title": "says what happens",
+    "length": "31-45s",
+    "post time": "late night (10pm-6am ET)",
+    "hook": "stake or challenge",
+    "stream age at post": "under 12h",
+    "found by": "viewer timestamp comments"
+   },
+   "views": 0,
+   "vph": 0.0,
+   "like_rate": null,
+   "avp": null,
+   "avd": null,
+   "shares": null,
+   "stayed": null,
+   "hold_3s": null,
+   "end": null,
+   "feed_share": null,
+   "drop_s": null,
+   "findings": [
+    {
+     "kind": "reach",
+     "text": "The feed never tested it (0 views in 6 days). Nothing here says the clip was bad; it says YouTube didn't show it. Usually reused-content signals (a moment many channels posted, too little of our own take) or a stale stream."
+    }
+   ]
+  },
+  {
+   "id": "Cl8ZNmNqzpk",
+   "title": "Ronaldo Has An Instant Reaction On Stream 😭",
+   "age_h": 163.2,
+   "privacy": "public",
+   "seconds": 35,
+   "source": "stableronaldo",
+   "features": {
+    "creator": "Stable Ronaldo",
+    "title": "says what happens",
+    "length": "31-45s",
+    "post time": "evening (5-10pm ET)",
+    "hook": "says what happens",
+    "stream age at post": "12-48h",
+    "found by": "Twitch clip"
+   },
+   "views": 0,
+   "vph": 0.0,
+   "like_rate": null,
+   "avp": null,
+   "avd": null,
+   "shares": null,
+   "stayed": null,
+   "hold_3s": null,
+   "end": null,
+   "feed_share": null,
+   "drop_s": null,
+   "findings": [
+    {
+     "kind": "reach",
+     "text": "The feed never tested it (0 views in 7 days). Nothing here says the clip was bad; it says YouTube didn't show it. Usually reused-content signals (a moment many channels posted, too little of our own take) or a stale stream."
+    }
+   ]
+  },
+  {
+   "id": "gS8kyRfLsQ0",
+   "title": "Dinah Starts The Stream Laughing Uncontrollably 😭😂",
+   "age_h": 180.2,
+   "privacy": "public",
+   "seconds": 31,
+   "source": "twitch_dinah",
+   "features": {
+    "creator": "Dinah",
+    "title": "says what happens",
+    "length": "31-45s",
+    "post time": "late night (10pm-6am ET)",
+    "hook": "says what happens",
+    "stream age at post": "under 12h",
+    "found by": "Twitch clip"
+   },
+   "views": 6,
+   "vph": 0.03329000021946476,
+   "like_rate": 0.0,
+   "avp": 76.07,
+   "avd": 23,
+   "shares": 0,
+   "stayed": 0.5,
+   "hold_3s": null,
+   "end": null,
+   "feed_share": 0.0,
+   "drop_s": null,
+   "findings": [
+    {
+     "kind": "reach",
+     "text": "The feed never tested it (6 views in 8 days). Nothing here says the clip was bad; it says YouTube didn't show it. Usually reused-content signals (a moment many channels posted, too little of our own take) or a stale stream."
+    }
+   ]
+  },
+  {
+   "id": "sjENCYgL-j0",
+   "title": "CaseOh Get Jump Scared Mid Game 😭",
+   "age_h": 231.2,
+   "privacy": "public",
+   "seconds": 22,
+   "source": "caseoh",
+   "features": {
+    "creator": "CaseOh",
+    "title": "says what happens",
+    "length": "20-30s",
+    "post time": "late night (10pm-6am ET)",
+    "hook": "says what happens",
+    "stream age at post": "over 48h",
+    "found by": "Twitch clip"
+   },
+   "views": 16,
+   "vph": 0.06919588084496164,
+   "like_rate": 0.0625,
+   "avp": 54.620000000000005,
+   "avd": 12,
+   "shares": 0,
+   "stayed": 0.625,
+   "hold_3s": 1,
+   "end": 0.3,
+   "feed_share": 0.25,
+   "drop_s": 5.5,
+   "findings": [
+    {
+     "kind": "length",
+     "text": "Most viewers leave at 6s of 22s: end the clip there or move the payoff earlier."
+    },
+    {
+     "kind": "length",
+     "text": "Watched 55% on average: trim dead air and end on the punchline."
+    },
+    {
+     "kind": "reach",
+     "text": "Only 25% of its views came from the Shorts feed, so the feed tried it and stopped. Watch the swipe rate on the next clips like it."
+    },
+    {
+     "kind": "good",
+     "text": "5x our typical clip: make more like this."
+    }
+   ]
+  },
+  {
+   "id": "bRLS8bfwXqk",
+   "title": "Ronaldo Locks In During Exterminauts Interview 💀",
+   "age_h": 265.9,
+   "privacy": "public",
+   "seconds": 21,
+   "source": "stableronaldo",
+   "features": {
+    "creator": "Stable Ronaldo",
+    "title": "says what happens",
+    "length": "20-30s",
+    "post time": "afternoon (noon-5pm ET)",
+    "hook": "says what happens",
+    "stream age at post": "12-48h",
+    "found by": "Twitch clip"
+   },
+   "views": 0,
+   "vph": 0.0,
+   "like_rate": null,
+   "avp": null,
+   "avd": null,
+   "shares": null,
+   "stayed": null,
+   "hold_3s": null,
+   "end": null,
+   "feed_share": null,
+   "drop_s": null,
+   "findings": [
+    {
+     "kind": "reach",
+     "text": "The feed never tested it (0 views in 11 days). Nothing here says the clip was bad; it says YouTube didn't show it. Usually reused-content signals (a moment many channels posted, too little of our own take) or a stale stream."
+    }
+   ]
+  },
+  {
+   "id": "lyjYSkcZGzE",
+   "title": "Ronaldo Watches His Smooth Emily Interview 😭",
+   "age_h": 283.2,
+   "privacy": "public",
+   "seconds": 20,
+   "source": "stableronaldo",
+   "features": {
+    "creator": "Stable Ronaldo",
+    "title": "says what happens",
+    "length": "20-30s",
+    "post time": "evening (5-10pm ET)",
+    "hook": "says what happens",
+    "stream age at post": "12-48h",
+    "found by": "Twitch clip"
+   },
+   "views": 3,
+   "vph": 0.0105919477482519,
+   "like_rate": 0.0,
+   "avp": 1.05,
+   "avd": 0,
+   "shares": 0,
+   "stayed": 0.3333333333333333,
+   "hold_3s": null,
+   "end": null,
+   "feed_share": 0.0,
+   "drop_s": null,
+   "findings": [
+    {
+     "kind": "reach",
+     "text": "The feed never tested it (3 views in 12 days). Nothing here says the clip was bad; it says YouTube didn't show it. Usually reused-content signals (a moment many channels posted, too little of our own take) or a stale stream."
+    }
+   ]
+  },
+  {
+   "id": "yUTyORTf7GE",
+   "title": "Jynxzi Wins Gamer Of The Year At The Streamer Awards 🏆🔥",
+   "age_h": 310.2,
+   "privacy": "public",
+   "seconds": 29,
+   "source": "jynxzi",
+   "features": {
+    "creator": "Jynxzi",
+    "title": "says what happens",
+    "length": "20-30s",
+    "post time": "evening (5-10pm ET)",
+    "hook": "stake or challenge",
+    "stream age at post": "12-48h",
+    "found by": "Twitch clip"
+   },
+   "views": 57,
+   "vph": 0.18373604814443792,
+   "like_rate": 0.0,
+   "avp": 55.59,
+   "avd": 16,
+   "shares": 0,
+   "stayed": 0.45614035087719296,
+   "hold_3s": 0.9231,
+   "end": 0.15380000000000002,
+   "feed_share": 0.17543859649122806,
+   "drop_s": 19.7,
+   "findings": [
+    {
+     "kind": "hook",
+     "text": "Only 46% stayed past the swipe; the biggest drop is at 20s. Open on the reaction or the stake, not the setup, and make the hook promise the payoff."
+    },
+    {
+     "kind": "length",
+     "text": "Watched 56% on average: trim dead air and end on the punchline."
+    },
+    {
+     "kind": "reach",
+     "text": "Only 18% of its views came from the Shorts feed, so the feed tried it and stopped. Watch the swipe rate on the next clips like it."
+    },
+    {
+     "kind": "good",
+     "text": "17x our typical clip: make more like this."
+    }
+   ]
+  },
+  {
+   "id": "Dy8Y7By6jpI",
+   "title": "Jynxzi: \"Evan Burger\" 😱",
+   "age_h": 326.2,
+   "privacy": "public",
+   "seconds": 8,
+   "source": "jynxzi",
+   "features": {
+    "creator": "Jynxzi",
+    "title": "quote title (Creator: \"line\")",
+    "length": "under 20s",
+    "post time": "late night (10pm-6am ET)",
+    "hook": "says what happens",
+    "stream age at post": "over 48h",
+    "found by": "Twitch clip"
+   },
+   "views": 9,
+   "vph": 0.02758798050731253,
+   "like_rate": 0.0,
+   "avp": 106.04,
+   "avd": 8,
+   "shares": 0,
+   "stayed": 0.3333333333333333,
+   "hold_3s": null,
+   "end": null,
+   "feed_share": 0.0,
+   "drop_s": null,
+   "findings": [
+    {
+     "kind": "reach",
+     "text": "The feed never tested it (9 views in 14 days). Nothing here says the clip was bad; it says YouTube didn't show it. Usually reused-content signals (a moment many channels posted, too little of our own take) or a stale stream."
+    }
+   ]
+  },
+  {
+   "id": "DyyT5L9dkCE",
+   "title": "Kai Cenat Goes Crazy 🔥",
+   "age_h": 396.2,
+   "privacy": "public",
+   "seconds": 12,
+   "source": "kai_cenat",
+   "features": {
+    "creator": "Kai Cenat",
+    "title": "stock reaction (Goes Crazy, Can't Believe...)",
+    "length": "under 20s",
+    "post time": "late night (10pm-6am ET)",
+    "hook": "generic tease (WAIT FOR IT...)",
+    "stream age at post": "12-48h",
+    "found by": "chat spike"
+   },
+   "views": 0,
+   "vph": 0.0,
+   "like_rate": null,
+   "avp": null,
+   "avd": null,
+   "shares": null,
+   "stayed": null,
+   "hold_3s": null,
+   "end": null,
+   "feed_share": null,
+   "drop_s": null,
+   "findings": [
+    {
+     "kind": "reach",
+     "text": "The feed never tested it (0 views in 17 days). Nothing here says the clip was bad; it says YouTube didn't show it. Usually reused-content signals (a moment many channels posted, too little of our own take) or a stale stream."
+    }
+   ]
+  },
+  {
+   "id": "Frwqjuv54FM",
+   "title": "Jynxzi Didn't See This Coming At Biggest Announcement Ever 😱",
+   "age_h": 420.2,
+   "privacy": "public",
+   "seconds": 30,
+   "source": "jynxzi",
+   "features": {
+    "creator": "Jynxzi",
+    "title": "stock reaction (Goes Crazy, Can't Believe...)",
+    "length": "20-30s",
+    "post time": "late night (10pm-6am ET)",
+    "hook": "generic tease (WAIT FOR IT...)",
+    "stream age at post": "12-48h",
+    "found by": "chat spike"
+   },
+   "views": 20,
+   "vph": 0.04759237158271684,
+   "like_rate": 0.0,
+   "avp": 42.12,
+   "avd": 12,
+   "shares": 0,
+   "stayed": 0.5,
+   "hold_3s": 1,
+   "end": 0.2,
+   "feed_share": 0.3,
+   "drop_s": 6.6,
+   "findings": [
+    {
+     "kind": "hook",
+     "text": "Only 50% stayed past the swipe; the biggest drop is at 7s. Open on the reaction or the stake, not the setup, and make the hook promise the payoff."
+    },
+    {
+     "kind": "length",
+     "text": "Watched 42% on average: trim dead air and end on the punchline."
+    },
+    {
+     "kind": "reach",
+     "text": "Only 30% of its views came from the Shorts feed, so the feed tried it and stopped. Watch the swipe rate on the next clips like it."
+    },
+    {
+     "kind": "good",
+     "text": "6x our typical clip: make more like this."
+    }
+   ]
+  },
+  {
+   "id": "po5Kgi8PuMI",
+   "title": "Kai Cenat Didn't See This Coming 😱",
+   "age_h": 451.1,
+   "privacy": "public",
+   "seconds": 13,
+   "source": "kai_cenat",
+   "features": {
+    "creator": "Kai Cenat",
+    "title": "stock reaction (Goes Crazy, Can't Believe...)",
+    "length": "under 20s",
+    "post time": "evening (5-10pm ET)",
+    "hook": "generic tease (WAIT FOR IT...)",
+    "stream age at post": "under 12h",
+    "found by": "chat spike"
+   },
+   "views": 0,
+   "vph": 0.0,
+   "like_rate": null,
+   "avp": null,
+   "avd": null,
+   "shares": null,
+   "stayed": null,
+   "hold_3s": null,
+   "end": null,
+   "feed_share": null,
+   "drop_s": null,
+   "findings": [
+    {
+     "kind": "reach",
+     "text": "The feed never tested it (0 views in 19 days). Nothing here says the clip was bad; it says YouTube didn't show it. Usually reused-content signals (a moment many channels posted, too little of our own take) or a stale stream."
+    }
+   ]
+  },
+  {
+   "id": "UzG-D-_VtH0",
+   "title": "Kai Cenat Goes Crazy 🔥",
+   "age_h": 469.7,
+   "privacy": "public",
+   "seconds": 24,
+   "source": "kai_cenat",
+   "features": {
+    "creator": "Kai Cenat",
+    "title": "stock reaction (Goes Crazy, Can't Believe...)",
+    "length": "20-30s",
+    "post time": "late night (10pm-6am ET)",
+    "hook": "generic tease (WAIT FOR IT...)",
+    "stream age at post": "under 12h",
+    "found by": "chat spike"
+   },
+   "views": 0,
+   "vph": 0.0,
+   "like_rate": null,
+   "avp": null,
+   "avd": null,
+   "shares": null,
+   "stayed": null,
+   "hold_3s": null,
+   "end": null,
+   "feed_share": null,
+   "drop_s": null,
+   "findings": [
+    {
+     "kind": "reach",
+     "text": "The feed never tested it (0 views in 20 days). Nothing here says the clip was bad; it says YouTube didn't show it. Usually reused-content signals (a moment many channels posted, too little of our own take) or a stale stream."
+    }
+   ]
+  },
+  {
+   "id": "GrM3WhdRMxk",
+   "title": "Kai Cenat Can't Believe What Just Happened 😱",
+   "age_h": 476.6,
+   "privacy": "public",
+   "seconds": 21,
+   "source": "kai_cenat",
+   "features": {
+    "creator": "Kai Cenat",
+    "title": "stock reaction (Goes Crazy, Can't Believe...)",
+    "length": "20-30s",
+    "post time": "evening (5-10pm ET)",
+    "hook": "generic tease (WAIT FOR IT...)",
+    "stream age at post": "under 12h",
+    "found by": "chat spike"
+   },
+   "views": 0,
+   "vph": 0.0,
+   "like_rate": null,
+   "avp": null,
+   "avd": null,
+   "shares": null,
+   "stayed": null,
+   "hold_3s": null,
+   "end": null,
+   "feed_share": null,
+   "drop_s": null,
+   "findings": [
+    {
+     "kind": "reach",
+     "text": "The feed never tested it (0 views in 20 days). Nothing here says the clip was bad; it says YouTube didn't show it. Usually reused-content signals (a moment many channels posted, too little of our own take) or a stale stream."
+    }
+   ]
+  },
+  {
+   "id": "jnTt9Z_Ghhw",
+   "title": "CaseOh: \"Crazy Viewer\" 😭",
+   "age_h": 483.2,
+   "privacy": "public",
+   "seconds": 11,
+   "source": "caseoh",
+   "features": {
+    "creator": "CaseOh",
+    "title": "quote title (Creator: \"line\")",
+    "length": "under 20s",
+    "post time": "afternoon (noon-5pm ET)",
+    "hook": "generic tease (WAIT FOR IT...)",
+    "stream age at post": "under 12h",
+    "found by": "Twitch clip"
+   },
+   "views": 17,
+   "vph": 0.035179844175140765,
+   "like_rate": 0.0,
+   "avp": 69.68,
+   "avd": 7,
+   "shares": 0,
+   "stayed": 0.47058823529411764,
+   "hold_3s": null,
+   "end": null,
+   "feed_share": 0.11764705882352941,
+   "drop_s": null,
+   "findings": [
+    {
+     "kind": "hook",
+     "text": "Only 47% stayed past the swipe. Open on the reaction or the stake, not the setup, and make the hook promise the payoff."
+    },
+    {
+     "kind": "reach",
+     "text": "Only 12% of its views came from the Shorts feed, so the feed tried it and stopped. Watch the swipe rate on the next clips like it."
+    },
+    {
+     "kind": "good",
+     "text": "5x our typical clip: make more like this."
+    }
+   ]
+  },
+  {
+   "id": "XrIA9z88oeo",
+   "title": "Ronaldo: \"Laiys. Says Word\" 😱",
+   "age_h": 492.2,
+   "privacy": "public",
+   "seconds": 24,
+   "source": "stableronaldo",
+   "features": {
+    "creator": "Stable Ronaldo",
+    "title": "quote title (Creator: \"line\")",
+    "length": "20-30s",
+    "post time": "late night (10pm-6am ET)",
+    "hook": "question",
+    "stream age at post": "12-48h",
+    "found by": "Twitch clip"
+   },
+   "views": 28,
+   "vph": 0.05688389699828885,
+   "like_rate": 0.0,
+   "avp": 70.69,
+   "avd": 16,
+   "shares": 0,
+   "stayed": 0.5,
+   "hold_3s": 1.0714,
+   "end": 0.2857,
+   "feed_share": 0.0,
+   "drop_s": 4.8,
+   "findings": [
+    {
+     "kind": "hook",
+     "text": "Only 50% stayed past the swipe; the biggest drop is at 5s. Open on the reaction or the stake, not the setup, and make the hook promise the payoff."
+    },
+    {
+     "kind": "reach",
+     "text": "Only 0% of its views came from the Shorts feed, so the feed tried it and stopped. Watch the swipe rate on the next clips like it."
+    },
+    {
+     "kind": "good",
+     "text": "9x our typical clip: make more like this."
+    }
+   ]
+  },
+  {
+   "id": "aMNTMyi6SAs",
+   "title": "xQc Can't Believe He Pulled This Off At X Presses Lang 🔥",
+   "age_h": 516.2,
+   "privacy": "public",
+   "seconds": 37,
+   "source": "xqc",
+   "features": {
+    "creator": "xQc",
+    "title": "stock reaction (Goes Crazy, Can't Believe...)",
+    "length": "31-45s",
+    "post time": "late night (10pm-6am ET)",
+    "hook": "stake or challenge",
+    "stream age at post": "under 12h",
+    "found by": "Kick clip"
+   },
+   "views": 0,
+   "vph": 0.0,
+   "like_rate": null,
+   "avp": null,
+   "avd": null,
+   "shares": null,
+   "stayed": null,
+   "hold_3s": null,
+   "end": null,
+   "feed_share": null,
+   "drop_s": null,
+   "findings": [
+    {
+     "kind": "reach",
+     "text": "The feed never tested it (0 views in 22 days). Nothing here says the clip was bad; it says YouTube didn't show it. Usually reused-content signals (a moment many channels posted, too little of our own take) or a stale stream."
+    }
+   ]
+  },
+  {
+   "id": "I1VuWL5Pji0",
+   "title": "Speed And Derek Jeter Go Crazy 🔥",
+   "age_h": 520.3,
+   "privacy": "public",
+   "seconds": 24,
+   "source": "ishowspeed",
+   "features": {
+    "creator": "IShowSpeed",
+    "title": "says what happens",
+    "length": "20-30s",
+    "post time": "late night (10pm-6am ET)",
+    "hook": "says what happens",
+    "stream age at post": "under 12h",
+    "found by": "chat spike"
+   },
+   "views": 4,
+   "vph": 0.007687439423078643,
+   "like_rate": 0.0,
+   "avp": 99,
+   "avd": 23,
+   "shares": 0,
+   "stayed": 0.25,
+   "hold_3s": null,
+   "end": null,
+   "feed_share": 0.0,
+   "drop_s": null,
+   "findings": [
+    {
+     "kind": "reach",
+     "text": "The feed never tested it (4 views in 22 days). Nothing here says the clip was bad; it says YouTube didn't show it. Usually reused-content signals (a moment many channels posted, too little of our own take) or a stale stream."
+    }
+   ]
+  },
+  {
+   "id": "7m3klzp0Bls",
+   "title": "Speed And Derek Jeter Can't Believe It 🔥",
+   "age_h": 527.0,
+   "privacy": "public",
+   "seconds": 20,
+   "source": "ishowspeed",
+   "features": {
+    "creator": "IShowSpeed",
+    "title": "stock reaction (Goes Crazy, Can't Believe...)",
+    "length": "20-30s",
+    "post time": "afternoon (noon-5pm ET)",
+    "hook": "says what happens",
+    "stream age at post": "under 12h",
+    "found by": "chat spike"
+   },
+   "views": 20,
+   "vph": 0.037948214019185245,
+   "like_rate": 0.0,
+   "avp": 65.39,
+   "avd": 13,
+   "shares": 0,
+   "stayed": 0.5,
+   "hold_3s": 0.9,
+   "end": 0.3,
+   "feed_share": 0.0,
+   "drop_s": 0.8,
+   "findings": [
+    {
+     "kind": "hook",
+     "text": "Only 50% stayed past the swipe; the biggest drop is at 1s. Open on the reaction or the stake, not the setup, and make the hook promise the payoff."
+    },
+    {
+     "kind": "reach",
+     "text": "Only 0% of its views came from the Shorts feed, so the feed tried it and stopped. Watch the swipe rate on the next clips like it."
+    },
+    {
+     "kind": "good",
+     "text": "6x our typical clip: make more like this."
+    }
+   ]
+  },
+  {
+   "id": "ubOFmdf5ecA",
+   "title": "Kai Cenat Is Left Speechless At Was Shook From Ai 😱",
+   "age_h": 531.2,
+   "privacy": "public",
+   "seconds": 42,
+   "source": "kai_cenat",
+   "features": {
+    "creator": "Kai Cenat",
+    "title": "stock reaction (Goes Crazy, Can't Believe...)",
+    "length": "31-45s",
+    "post time": "afternoon (noon-5pm ET)",
+    "hook": "generic tease (WAIT FOR IT...)",
+    "stream age at post": "12-48h",
+    "found by": "Twitch clip"
+   },
+   "views": 1,
+   "vph": 0.0018824184028123636,
+   "like_rate": 0.0,
+   "avp": 0,
+   "avd": 0,
+   "shares": 0,
+   "stayed": 0.0,
+   "hold_3s": null,
+   "end": null,
+   "feed_share": 0.0,
+   "drop_s": null,
+   "findings": [
+    {
+     "kind": "reach",
+     "text": "The feed never tested it (1 views in 22 days). Nothing here says the clip was bad; it says YouTube didn't show it. Usually reused-content signals (a moment many channels posted, too little of our own take) or a stale stream."
+    }
+   ]
+  },
+  {
+   "id": "eUHjyRj5QAY",
+   "title": "Jynxzi Can't Believe What Just Happened 😭",
+   "age_h": 550.2,
+   "privacy": "public",
+   "seconds": 24,
+   "source": "jynxzi",
+   "features": {
+    "creator": "Jynxzi",
+    "title": "stock reaction (Goes Crazy, Can't Believe...)",
+    "length": "20-30s",
+    "post time": "evening (5-10pm ET)",
+    "hook": "says what happens",
+    "stream age at post": "over 48h",
+    "found by": "viewer timestamp comments"
+   },
+   "views": 2,
+   "vph": 0.003634862892772686,
+   "like_rate": 0.0,
+   "avp": 144.48,
+   "avd": 34,
+   "shares": 0,
+   "stayed": 0.5,
+   "hold_3s": null,
+   "end": null,
+   "feed_share": 0.0,
+   "drop_s": null,
+   "findings": [
+    {
+     "kind": "reach",
+     "text": "The feed never tested it (2 views in 23 days). Nothing here says the clip was bad; it says YouTube didn't show it. Usually reused-content signals (a moment many channels posted, too little of our own take) or a stale stream."
+    }
+   ]
+  },
+  {
+   "id": "Hrx-nQ8xhpU",
+   "title": "Jynxzi: \"What Is It?\" 🔥",
+   "age_h": 559.2,
+   "privacy": "public",
+   "seconds": 20,
+   "source": "jynxzi",
+   "features": {
+    "creator": "Jynxzi",
+    "title": "quote title (Creator: \"line\")",
+    "length": "20-30s",
+    "post time": "morning (6am-noon ET)",
+    "hook": "question",
+    "stream age at post": "12-48h",
+    "found by": "chat spike"
+   },
+   "views": 31,
+   "vph": 0.05544034483728669,
+   "like_rate": 0.0,
+   "avp": 65.44,
+   "avd": 13,
+   "shares": 0,
+   "stayed": 0.3225806451612903,
+   "hold_3s": 1.1,
+   "end": 0.3,
+   "feed_share": 0.16129032258064516,
+   "drop_s": 10.6,
+   "findings": [
+    {
+     "kind": "hook",
+     "text": "Only 32% stayed past the swipe; the biggest drop is at 11s. Open on the reaction or the stake, not the setup, and make the hook promise the payoff."
+    },
+    {
+     "kind": "reach",
+     "text": "Only 16% of its views came from the Shorts feed, so the feed tried it and stopped. Watch the swipe rate on the next clips like it."
+    },
+    {
+     "kind": "good",
+     "text": "9x our typical clip: make more like this."
+    }
+   ]
+  },
+  {
+   "id": "bCReu9_ZtZQ",
+   "title": "N3on: \"Face Each Other?\" 🔥",
+   "age_h": 564.2,
+   "privacy": "public",
+   "seconds": 25,
+   "source": "n3on",
+   "features": {
+    "creator": "N3on",
+    "title": "quote title (Creator: \"line\")",
+    "length": "20-30s",
+    "post time": "late night (10pm-6am ET)",
+    "hook": "question",
+    "stream age at post": "under 12h",
+    "found by": "viewer timestamp comments"
+   },
+   "views": 0,
+   "vph": 0.0,
+   "like_rate": null,
+   "avp": null,
+   "avd": null,
+   "shares": null,
+   "stayed": null,
+   "hold_3s": null,
+   "end": null,
+   "feed_share": null,
+   "drop_s": null,
+   "findings": [
+    {
+     "kind": "reach",
+     "text": "The feed never tested it (0 views in 24 days). Nothing here says the clip was bad; it says YouTube didn't show it. Usually reused-content signals (a moment many channels posted, too little of our own take) or a stale stream."
+    }
+   ]
+  },
+  {
+   "id": "6Mmo2ERjIks",
+   "title": "Speed Can't Believe The Look On Her Face 😭",
+   "age_h": 564.2,
+   "privacy": "public",
+   "seconds": 31,
+   "source": "ishowspeed",
+   "features": {
+    "creator": "IShowSpeed",
+    "title": "says what happens",
+    "length": "31-45s",
+    "post time": "late night (10pm-6am ET)",
+    "hook": "says what happens",
+    "stream age at post": "12-48h",
+    "found by": "viewer timestamp comments"
+   },
+   "views": 0,
+   "vph": 0.0,
+   "like_rate": null,
+   "avp": null,
+   "avd": null,
+   "shares": null,
+   "stayed": null,
+   "hold_3s": null,
+   "end": null,
+   "feed_share": null,
+   "drop_s": null,
+   "findings": [
+    {
+     "kind": "reach",
+     "text": "The feed never tested it (0 views in 24 days). Nothing here says the clip was bad; it says YouTube didn't show it. Usually reused-content signals (a moment many channels posted, too little of our own take) or a stale stream."
+    }
+   ]
+  },
+  {
+   "id": "L9Xb6nIoGXc",
+   "title": "Kai Cenat Can't Believe Chat Failed Again 😭",
+   "age_h": 564.2,
+   "privacy": "public",
+   "seconds": 20,
+   "source": "kai_cenat",
+   "features": {
+    "creator": "Kai Cenat",
+    "title": "says what happens",
+    "length": "20-30s",
+    "post time": "late night (10pm-6am ET)",
+    "hook": "question",
+    "stream age at post": "over 48h",
+    "found by": "chat spike"
+   },
+   "views": 1,
+   "vph": 0.0017723072627937716,
+   "like_rate": 0.0,
+   "avp": 0,
+   "avd": 0,
+   "shares": 0,
+   "stayed": 0.0,
+   "hold_3s": null,
+   "end": null,
+   "feed_share": 0.0,
+   "drop_s": null,
+   "findings": [
+    {
+     "kind": "reach",
+     "text": "The feed never tested it (1 views in 24 days). Nothing here says the clip was bad; it says YouTube didn't show it. Usually reused-content signals (a moment many channels posted, too little of our own take) or a stale stream."
+    }
+   ]
+  },
+  {
+   "id": "J7NcAGVrUUs",
+   "title": "Jynxzi: \"Chat What's My Kd?\" 🔥",
+   "age_h": 568.0,
+   "privacy": "public",
+   "seconds": 27,
+   "source": "jynxzi",
+   "features": {
+    "creator": "Jynxzi",
+    "title": "quote title (Creator: \"line\")",
+    "length": "20-30s",
+    "post time": "late night (10pm-6am ET)",
+    "hook": "question",
+    "stream age at post": "under 12h",
+    "found by": "chat spike"
+   },
+   "views": 1,
+   "vph": 0.0017604191820219934,
+   "like_rate": 0.0,
+   "avp": 0,
+   "avd": 0,
+   "shares": 0,
+   "stayed": 0.0,
+   "hold_3s": null,
+   "end": null,
+   "feed_share": 0.0,
+   "drop_s": null,
+   "findings": [
+    {
+     "kind": "reach",
+     "text": "The feed never tested it (1 views in 24 days). Nothing here says the clip was bad; it says YouTube didn't show it. Usually reused-content signals (a moment many channels posted, too little of our own take) or a stale stream."
+    }
+   ]
+  },
+  {
+   "id": "d1M-YQDFTaU",
+   "title": "Speed Can't Believe The Cops Are Outside 🤨",
+   "age_h": 570.2,
+   "privacy": "public",
+   "seconds": 20,
+   "source": "ishowspeed",
+   "features": {
+    "creator": "IShowSpeed",
+    "title": "says what happens",
+    "length": "20-30s",
+    "post time": "evening (5-10pm ET)",
+    "hook": "says what happens",
+    "stream age at post": "over 48h",
+    "found by": "viewer timestamp comments"
+   },
+   "views": 2,
+   "vph": 0.003507360965225206,
+   "like_rate": 0.0,
+   "avp": 0,
+   "avd": 0,
+   "shares": 0,
+   "stayed": 0.0,
+   "hold_3s": null,
+   "end": null,
+   "feed_share": 0.0,
+   "drop_s": null,
+   "findings": [
+    {
+     "kind": "reach",
+     "text": "The feed never tested it (2 views in 24 days). Nothing here says the clip was bad; it says YouTube didn't show it. Usually reused-content signals (a moment many channels posted, too little of our own take) or a stale stream."
+    }
+   ]
+  },
+  {
+   "id": "ixvja1AyEbw",
+   "title": "Speed Can't Believe Vinny Just Robbed His Uncle's Store 😭",
+   "age_h": 570.2,
+   "privacy": "public",
+   "seconds": 31,
+   "source": "ishowspeed",
+   "features": {
+    "creator": "IShowSpeed",
+    "title": "says what happens",
+    "length": "31-45s",
+    "post time": "evening (5-10pm ET)",
+    "hook": "says what happens",
+    "stream age at post": "12-48h",
+    "found by": "viewer timestamp comments"
+   },
+   "views": 2,
+   "vph": 0.003507328503020401,
+   "like_rate": 0.0,
+   "avp": 30.870000000000005,
+   "avd": 9,
+   "shares": 0,
+   "stayed": 1.0,
+   "hold_3s": null,
+   "end": null,
+   "feed_share": 0.0,
+   "drop_s": null,
+   "findings": [
+    {
+     "kind": "fix",
+     "text": "Copyright claim (blocked in 1 country): claimed Shorts get little feed reach. The builder won't clip this stream again."
+    },
+    {
+     "kind": "reach",
+     "text": "The feed never tested it (2 views in 24 days). Nothing here says the clip was bad; it says YouTube didn't show it. Usually reused-content signals (a moment many channels posted, too little of our own take) or a stale stream."
+    }
+   ]
+  },
+  {
+   "id": "5cY8zJsbGvw",
+   "title": "Jynxzi Plays For $1000 And Goes Off 🔥",
+   "age_h": 570.2,
+   "privacy": "public",
+   "seconds": 25,
+   "source": "jynxzi",
+   "features": {
+    "creator": "Jynxzi",
+    "title": "stock reaction (Goes Crazy, Can't Believe...)",
+    "length": "20-30s",
+    "post time": "evening (5-10pm ET)",
+    "hook": "stake or challenge",
+    "stream age at post": "over 48h",
+    "found by": "viewer timestamp comments"
+   },
+   "views": 2,
+   "vph": 0.003507321668948591,
+   "like_rate": 0.0,
+   "avp": 112.00000000000001,
+   "avd": 28,
+   "shares": 0,
+   "stayed": 0.5,
+   "hold_3s": null,
+   "end": null,
+   "feed_share": 0.0,
+   "drop_s": null,
+   "findings": [
+    {
+     "kind": "reach",
+     "text": "The feed never tested it (2 views in 24 days). Nothing here says the clip was bad; it says YouTube didn't show it. Usually reused-content signals (a moment many channels posted, too little of our own take) or a stale stream."
+    }
+   ]
+  },
+  {
+   "id": "RPppa2R0pKc",
+   "title": "Kai Cenat Can't Believe Pooh Shiesty Bro Snapping 🧐😭",
+   "age_h": 574.2,
+   "privacy": "public",
+   "seconds": 27,
+   "source": "kai_cenat",
+   "features": {
+    "creator": "Kai Cenat",
+    "title": "says what happens",
+    "length": "20-30s",
+    "post time": "evening (5-10pm ET)",
+    "hook": "says what happens",
+    "stream age at post": "over 48h",
+    "found by": "chat spike"
+   },
+   "views": 3,
+   "vph": 0.005224383669251495,
+   "like_rate": 0.0,
+   "avp": 19.43,
+   "avd": 5,
+   "shares": 0,
+   "stayed": 0.6666666666666666,
+   "hold_3s": null,
+   "end": null,
+   "feed_share": 0.0,
+   "drop_s": null,
+   "findings": [
+    {
+     "kind": "reach",
+     "text": "The feed never tested it (3 views in 24 days). Nothing here says the clip was bad; it says YouTube didn't show it. Usually reused-content signals (a moment many channels posted, too little of our own take) or a stale stream."
+    }
+   ]
+  },
+  {
+   "id": "jXk5oswaOu4",
+   "title": "Jynxzi Can't Believe What Just Happened 😭",
+   "age_h": 574.2,
+   "privacy": "public",
+   "seconds": 24,
+   "source": "jynxzi",
+   "features": {
+    "creator": "Jynxzi",
+    "title": "stock reaction (Goes Crazy, Can't Believe...)",
+    "length": "20-30s",
+    "post time": "evening (5-10pm ET)",
+    "hook": "stake or challenge",
+    "stream age at post": "over 48h",
+    "found by": "viewer timestamp comments"
+   },
+   "views": 1,
+   "vph": 0.0017414544838050424,
+   "like_rate": 0.0,
+   "avp": 0,
+   "avd": 0,
+   "shares": 0,
+   "stayed": 0.0,
+   "hold_3s": null,
+   "end": null,
+   "feed_share": 0.0,
+   "drop_s": null,
+   "findings": [
+    {
+     "kind": "reach",
+     "text": "The feed never tested it (1 views in 24 days). Nothing here says the clip was bad; it says YouTube didn't show it. Usually reused-content signals (a moment many channels posted, too little of our own take) or a stale stream."
+    }
+   ]
+  },
+  {
+   "id": "P2M-AXHJlOw",
+   "title": "Speed Spots Someone In The Crowd And Chases Them 🕷️😭",
+   "age_h": 589.2,
+   "privacy": "public",
+   "seconds": 53,
+   "source": "ishowspeed",
+   "features": {
+    "creator": "IShowSpeed",
+    "title": "says what happens",
+    "length": "over 45s",
+    "post time": "late night (10pm-6am ET)",
+    "hook": "question",
+    "stream age at post": "12-48h",
+    "found by": "viewer timestamp comments"
+   },
+   "views": 1,
+   "vph": 0.0016971145578826095,
+   "like_rate": 0.0,
+   "avp": 13.4,
+   "avd": 7,
+   "shares": 0,
+   "stayed": 1.0,
+   "hold_3s": null,
+   "end": null,
+   "feed_share": 0.0,
+   "drop_s": null,
+   "findings": [
+    {
+     "kind": "reach",
+     "text": "The feed never tested it (1 views in 25 days). Nothing here says the clip was bad; it says YouTube didn't show it. Usually reused-content signals (a moment many channels posted, too little of our own take) or a stale stream."
+    }
+   ]
+  },
+  {
+   "id": "EL06wqyVyBs",
+   "title": "Kai Cenat Shows Off The AMP House Halloween Party 🎃",
+   "age_h": 594.2,
+   "privacy": "public",
+   "seconds": 53,
+   "source": "kai_cenat",
+   "features": {
+    "creator": "Kai Cenat",
+    "title": "says what happens",
+    "length": "over 45s",
+    "post time": "evening (5-10pm ET)",
+    "hook": "says what happens",
+    "stream age at post": "12-48h",
+    "found by": "viewer timestamp comments"
+   },
+   "views": 0,
+   "vph": 0.0,
+   "like_rate": null,
+   "avp": null,
+   "avd": null,
+   "shares": null,
+   "stayed": null,
+   "hold_3s": null,
+   "end": null,
+   "feed_share": null,
+   "drop_s": null,
+   "findings": [
+    {
+     "kind": "reach",
+     "text": "The feed never tested it (0 views in 25 days). Nothing here says the clip was bad; it says YouTube didn't show it. Usually reused-content signals (a moment many channels posted, too little of our own take) or a stale stream."
+    }
+   ]
+  },
+  {
+   "id": "Ef7SUJlTI_8",
+   "title": "Speed Won't Go Down There In Spider-Man Suit 🕷️",
+   "age_h": 598.4,
+   "privacy": "public",
+   "seconds": 53,
+   "source": "ishowspeed",
+   "features": {
+    "creator": "IShowSpeed",
+    "title": "says what happens",
+    "length": "over 45s",
+    "post time": "afternoon (noon-5pm ET)",
+    "hook": "question",
+    "stream age at post": "12-48h",
+    "found by": "viewer timestamp comments"
+   },
+   "views": 0,
+   "vph": 0.0,
+   "like_rate": null,
+   "avp": null,
+   "avd": null,
+   "shares": null,
+   "stayed": null,
+   "hold_3s": null,
+   "end": null,
+   "feed_share": null,
+   "drop_s": null,
+   "findings": [
+    {
+     "kind": "reach",
+     "text": "The feed never tested it (0 views in 25 days). Nothing here says the clip was bad; it says YouTube didn't show it. Usually reused-content signals (a moment many channels posted, too little of our own take) or a stale stream."
+    }
+   ]
+  },
+  {
+   "id": "mEtPhzxRKuA",
+   "title": "Jynxzi Explains Why Hearing Wins In Rainbow Six 🎧",
+   "age_h": 612.2,
+   "privacy": "public",
+   "seconds": 53,
+   "source": "jynxzi",
+   "features": {
+    "creator": "Jynxzi",
+    "title": "says what happens",
+    "length": "over 45s",
+    "post time": "late night (10pm-6am ET)",
+    "hook": "says what happens",
+    "stream age at post": "12-48h",
+    "found by": "viewer timestamp comments"
+   },
+   "views": 19,
+   "vph": 0.031033954839676976,
+   "like_rate": 0.0,
+   "avp": 28.800000000000004,
+   "avd": 15,
+   "shares": 0,
+   "stayed": 0.7368421052631579,
+   "hold_3s": 0.6429,
+   "end": 0.07139999999999999,
+   "feed_share": 0.0,
+   "drop_s": 31.8,
+   "findings": [
+    {
+     "kind": "hook",
+     "text": "36% are gone by second 3. Start closer to the moment."
+    },
+    {
+     "kind": "length",
+     "text": "Most viewers leave at 32s of 53s: end the clip there or move the payoff earlier."
+    },
+    {
+     "kind": "length",
+     "text": "Watched 29% on average: trim dead air and end on the punchline."
+    },
+    {
+     "kind": "reach",
+     "text": "Only 0% of its views came from the Shorts feed, so the feed tried it and stopped. Watch the swipe rate on the next clips like it."
+    },
+    {
+     "kind": "good",
+     "text": "6x our typical clip: make more like this."
+    }
+   ]
+  },
+  {
+   "id": "aofHIq4a-Q8",
+   "title": "Kai Cenat Keeps Rakai Out Of The Halloween Party 🎃😭",
+   "age_h": 618.2,
+   "privacy": "public",
+   "seconds": 53,
+   "source": "kai_cenat",
+   "features": {
+    "creator": "Kai Cenat",
+    "title": "says what happens",
+    "length": "over 45s",
+    "post time": "late night (10pm-6am ET)",
+    "hook": "says what happens",
+    "stream age at post": "12-48h",
+    "found by": "viewer timestamp comments"
+   },
+   "views": 0,
+   "vph": 0.0,
+   "like_rate": null,
+   "avp": null,
+   "avd": null,
+   "shares": null,
+   "stayed": null,
+   "hold_3s": null,
+   "end": null,
+   "feed_share": null,
+   "drop_s": null,
+   "findings": [
+    {
+     "kind": "reach",
+     "text": "The feed never tested it (0 views in 26 days). Nothing here says the clip was bad; it says YouTube didn't show it. Usually reused-content signals (a moment many channels posted, too little of our own take) or a stale stream."
+    }
+   ]
+  },
+  {
+   "id": "aXwQ5wo-rVs",
+   "title": "Kai Cenat Tells A Guest He's A Rose Boy 🌹😭",
+   "age_h": 623.2,
+   "privacy": "public",
+   "seconds": 53,
+   "source": "kai_cenat",
+   "features": {
+    "creator": "Kai Cenat",
+    "title": "says what happens",
+    "length": "over 45s",
+    "post time": "evening (5-10pm ET)",
+    "hook": "says what happens",
+    "stream age at post": "12-48h",
+    "found by": "viewer timestamp comments"
+   },
+   "views": 0,
+   "vph": 0.0,
+   "like_rate": null,
+   "avp": null,
+   "avd": null,
+   "shares": null,
+   "stayed": null,
+   "hold_3s": null,
+   "end": null,
+   "feed_share": null,
+   "drop_s": null,
+   "findings": [
+    {
+     "kind": "reach",
+     "text": "The feed never tested it (0 views in 26 days). Nothing here says the clip was bad; it says YouTube didn't show it. Usually reused-content signals (a moment many channels posted, too little of our own take) or a stale stream."
+    }
+   ]
+  },
+  {
+   "id": "q7Yq52iK_xE",
+   "title": "Speed Hears Dubstep And Instantly Starts Vibing 😂",
+   "age_h": 636.2,
+   "privacy": "public",
+   "seconds": 53,
+   "source": "ishowspeed",
+   "features": {
+    "creator": "IShowSpeed",
+    "title": "says what happens",
+    "length": "over 45s",
+    "post time": "late night (10pm-6am ET)",
+    "hook": "question",
+    "stream age at post": "12-48h",
+    "found by": "viewer timestamp comments"
+   },
+   "views": 9,
+   "vph": 0.014145738262093395,
+   "like_rate": 0.1111111111111111,
+   "avp": 149.85,
+   "avd": 79,
+   "shares": 0,
+   "stayed": 0.625,
+   "hold_3s": null,
+   "end": null,
+   "feed_share": 0.0,
+   "drop_s": null,
+   "findings": [
+    {
+     "kind": "reach",
+     "text": "The feed never tested it (9 views in 27 days). Nothing here says the clip was bad; it says YouTube didn't show it. Usually reused-content signals (a moment many channels posted, too little of our own take) or a stale stream."
+    }
+   ]
+  },
+  {
+   "id": "ZoyRKpMD62s",
+   "title": "Kai Cenat Rates Japanese Train Breakfast 🍳",
+   "age_h": 642.2,
+   "privacy": "public",
+   "seconds": 53,
+   "source": "kai_cenat",
+   "features": {
+    "creator": "Kai Cenat",
+    "title": "says what happens",
+    "length": "over 45s",
+    "post time": "late night (10pm-6am ET)",
+    "hook": "question",
+    "stream age at post": "12-48h",
+    "found by": "viewer timestamp comments"
+   },
+   "views": 2,
+   "vph": 0.003114145779685249,
+   "like_rate": 0.0,
+   "avp": 5.62,
+   "avd": 2,
+   "shares": 0,
+   "stayed": 0.5,
+   "hold_3s": null,
+   "end": null,
+   "feed_share": 0.0,
+   "drop_s": null,
+   "findings": [
+    {
+     "kind": "reach",
+     "text": "The feed never tested it (2 views in 27 days). Nothing here says the clip was bad; it says YouTube didn't show it. Usually reused-content signals (a moment many channels posted, too little of our own take) or a stale stream."
+    }
+   ]
+  },
+  {
+   "id": "bj9EzdPPHxI",
+   "title": "Speed Meets Two Fans Making Dubstep 🎧😂",
+   "age_h": 647.2,
+   "privacy": "public",
+   "seconds": 53,
+   "source": "ishowspeed",
+   "features": {
+    "creator": "IShowSpeed",
+    "title": "says what happens",
+    "length": "over 45s",
+    "post time": "evening (5-10pm ET)",
+    "hook": "question",
+    "stream age at post": "12-48h",
+    "found by": "viewer timestamp comments"
+   },
+   "views": 0,
+   "vph": 0.0,
+   "like_rate": null,
+   "avp": null,
+   "avd": null,
+   "shares": null,
+   "stayed": null,
+   "hold_3s": null,
+   "end": null,
+   "feed_share": null,
+   "drop_s": null,
+   "findings": [
+    {
+     "kind": "reach",
+     "text": "The feed never tested it (0 views in 27 days). Nothing here says the clip was bad; it says YouTube didn't show it. Usually reused-content signals (a moment many channels posted, too little of our own take) or a stale stream."
+    }
+   ]
+  },
+  {
+   "id": "z6RINvtUOKY",
+   "title": "Speed Checks Who Really Won His $250,000 Giveaway 💰",
+   "age_h": 647.2,
+   "privacy": "public",
+   "seconds": 53,
+   "source": "ishowspeed",
+   "features": {
+    "creator": "IShowSpeed",
+    "title": "says what happens",
+    "length": "over 45s",
+    "post time": "evening (5-10pm ET)",
+    "hook": "question",
+    "stream age at post": "12-48h",
+    "found by": "viewer timestamp comments"
+   },
+   "views": 3,
+   "vph": 0.004635138441859116,
+   "like_rate": 0.0,
+   "avp": 0,
+   "avd": 0,
+   "shares": 0,
+   "stayed": 0.0,
+   "hold_3s": null,
+   "end": null,
+   "feed_share": 0.0,
+   "drop_s": null,
+   "findings": [
+    {
+     "kind": "reach",
+     "text": "The feed never tested it (3 views in 27 days). Nothing here says the clip was bad; it says YouTube didn't show it. Usually reused-content signals (a moment many channels posted, too little of our own take) or a stale stream."
+    }
+   ]
+  },
+  {
+   "id": "bsTfKfehLEY",
+   "title": "Speed Takes A Family Photo At His Movie Premiere 📸",
+   "age_h": 660.2,
+   "privacy": "public",
+   "seconds": 53,
+   "source": "ishowspeed",
+   "features": {
+    "creator": "IShowSpeed",
+    "title": "says what happens",
+    "length": "over 45s",
+    "post time": "late night (10pm-6am ET)",
+    "hook": "question",
+    "stream age at post": "12-48h",
+    "found by": "viewer timestamp comments"
+   },
+   "views": 2,
+   "vph": 0.0030292225409589593,
+   "like_rate": 0.0,
+   "avp": 60.980000000000004,
+   "avd": 32,
+   "shares": 0,
+   "stayed": 1.0,
+   "hold_3s": null,
+   "end": null,
+   "feed_share": 0.0,
+   "drop_s": null,
+   "findings": [
+    {
+     "kind": "reach",
+     "text": "The feed never tested it (2 views in 28 days). Nothing here says the clip was bad; it says YouTube didn't show it. Usually reused-content signals (a moment many channels posted, too little of our own take) or a stale stream."
+    }
+   ]
+  },
+  {
+   "id": "OVl3TBtcYHo",
+   "title": "Speed Won't Stop Waving Until A Stranger Answers 👋🇮🇩",
+   "age_h": 660.2,
+   "privacy": "public",
+   "seconds": 53,
+   "source": "ishowspeed",
+   "features": {
+    "creator": "IShowSpeed",
+    "title": "says what happens",
+    "length": "over 45s",
+    "post time": "late night (10pm-6am ET)"
+   },
+   "views": 0,
+   "vph": 0.0,
+   "like_rate": null,
+   "avp": null,
+   "avd": null,
+   "shares": null,
+   "stayed": null,
+   "hold_3s": null,
+   "end": null,
+   "feed_share": null,
+   "drop_s": null,
+   "findings": [
+    {
+     "kind": "reach",
+     "text": "The feed never tested it (0 views in 28 days). Nothing here says the clip was bad; it says YouTube didn't show it. Usually reused-content signals (a moment many channels posted, too little of our own take) or a stale stream."
+    }
+   ]
+  },
+  {
+   "id": "ZonsrNShgXw",
+   "title": "Jynxzi Begs His Teammate To Get Inside 😭",
+   "age_h": 664.2,
+   "privacy": "public",
+   "seconds": 53,
+   "source": "jynxzi",
+   "features": {
+    "creator": "Jynxzi",
+    "title": "says what happens",
+    "length": "over 45s",
+    "post time": "late night (10pm-6am ET)",
+    "hook": "question",
+    "stream age at post": "12-48h",
+    "found by": "viewer timestamp comments"
+   },
+   "views": 0,
+   "vph": 0.0,
+   "like_rate": null,
+   "avp": null,
+   "avd": null,
+   "shares": null,
+   "stayed": null,
+   "hold_3s": null,
+   "end": null,
+   "feed_share": null,
+   "drop_s": null,
+   "findings": [
+    {
+     "kind": "reach",
+     "text": "The feed never tested it (0 views in 28 days). Nothing here says the clip was bad; it says YouTube didn't show it. Usually reused-content signals (a moment many channels posted, too little of our own take) or a stale stream."
+    }
+   ]
+  },
+  {
+   "id": "JGopxMMkJo8",
+   "title": "Kai Cenat Can't Believe What Happens In Japan 😱",
+   "age_h": 664.2,
+   "privacy": "public",
+   "seconds": 53,
+   "source": "kai_cenat",
+   "features": {
+    "creator": "Kai Cenat",
+    "title": "says what happens",
+    "length": "over 45s",
+    "post time": "late night (10pm-6am ET)"
+   },
+   "views": 0,
+   "vph": 0.0,
+   "like_rate": null,
+   "avp": null,
+   "avd": null,
+   "shares": null,
+   "stayed": null,
+   "hold_3s": null,
+   "end": null,
+   "feed_share": null,
+   "drop_s": null,
+   "findings": [
+    {
+     "kind": "reach",
+     "text": "The feed never tested it (0 views in 28 days). Nothing here says the clip was bad; it says YouTube didn't show it. Usually reused-content signals (a moment many channels posted, too little of our own take) or a stale stream."
+    }
+   ]
+  },
+  {
+   "id": "x4vfvm1uS-Q",
+   "title": "Speed Gets Invited To Cook Up Dubstep With Frost Children 🎧",
+   "age_h": 671.2,
+   "privacy": "public",
+   "seconds": 53,
+   "source": "ishowspeed",
+   "features": {
+    "creator": "IShowSpeed",
+    "title": "says what happens",
+    "length": "over 45s",
+    "post time": "evening (5-10pm ET)"
+   },
+   "views": 52,
+   "vph": 0.07746976810550467,
+   "like_rate": 0.038461538461538464,
+   "avp": 37.38,
+   "avd": 19,
+   "shares": 0,
+   "stayed": 0.6346153846153846,
+   "hold_3s": 0.7576,
+   "end": 0.030299999999999997,
+   "feed_share": 0.038461538461538464,
+   "drop_s": 2.1,
+   "findings": [
+    {
+     "kind": "length",
+     "text": "Watched 37% on average: trim dead air and end on the punchline."
+    },
+    {
+     "kind": "reach",
+     "text": "Only 4% of its views came from the Shorts feed, so the feed tried it and stopped. Watch the swipe rate on the next clips like it."
+    },
+    {
+     "kind": "good",
+     "text": "16x our typical clip: make more like this."
+    }
+   ]
+  },
+  {
+   "id": "BI-meeVnMVE",
+   "title": "Speed Gets a Red Card Against Cole Palmer 😭",
+   "age_h": 863.2,
+   "privacy": "public",
+   "seconds": 53,
+   "source": "ishowspeed",
+   "features": {
+    "creator": "IShowSpeed",
+    "title": "says what happens",
+    "length": "over 45s",
+    "post time": "evening (5-10pm ET)",
+    "hook": "says what happens",
+    "stream age at post": "over 48h",
+    "found by": "viewer timestamp comments"
+   },
+   "views": 15,
+   "vph": 0.01737663358757047,
+   "like_rate": 0.0,
+   "avp": 23.62,
+   "avd": 12,
+   "shares": 0,
+   "stayed": 0.4,
+   "hold_3s": null,
+   "end": null,
+   "feed_share": 0.0,
+   "drop_s": null,
+   "findings": [
+    {
+     "kind": "hook",
+     "text": "Only 40% stayed past the swipe. Open on the reaction or the stake, not the setup, and make the hook promise the payoff."
+    },
+    {
+     "kind": "length",
+     "text": "Watched 24% on average: trim dead air and end on the punchline."
+    },
+    {
+     "kind": "reach",
+     "text": "Only 0% of its views came from the Shorts feed, so the feed tried it and stopped. Watch the swipe rate on the next clips like it."
+    },
+    {
+     "kind": "good",
+     "text": "5x our typical clip: make more like this."
+    }
+   ]
+  },
+  {
+   "id": "8IHtbKb9paU",
+   "title": "Adin Watches YK Osiris Hang On Against Deshae 😭🥊",
+   "age_h": 865.7,
+   "privacy": "public",
+   "seconds": 53,
+   "source": "adin_ross",
+   "features": {
+    "creator": "Adin Ross",
+    "title": "says what happens",
+    "length": "over 45s",
+    "post time": "afternoon (noon-5pm ET)",
+    "hook": "says what happens",
+    "stream age at post": "over 48h",
+    "found by": "viewer timestamp comments"
+   },
+   "views": 1,
+   "vph": 0.0011551970337530873,
+   "like_rate": 0.0,
+   "avp": 10.19,
+   "avd": 5,
+   "shares": 0,
+   "stayed": 1.0,
+   "hold_3s": null,
+   "end": null,
+   "feed_share": 0.0,
+   "drop_s": null,
+   "findings": [
+    {
+     "kind": "reach",
+     "text": "The feed never tested it (1 views in 36 days). Nothing here says the clip was bad; it says YouTube didn't show it. Usually reused-content signals (a moment many channels posted, too little of our own take) or a stale stream."
+    }
+   ]
+  },
+  {
+   "id": "wEDoM1r7Dy8",
+   "title": "Jynxzi Calls This Player Copper Off His Name Alone 😭",
+   "age_h": 858.2,
+   "privacy": "public",
+   "seconds": 53,
+   "source": "jynxzi",
+   "features": {
+    "creator": "Jynxzi",
+    "title": "says what happens",
+    "length": "over 45s",
+    "post time": "late night (10pm-6am ET)",
+    "hook": "says what happens",
+    "stream age at post": "over 48h",
+    "found by": "viewer timestamp comments"
+   },
+   "views": 3,
+   "vph": 0.0034955670309860087,
+   "like_rate": 0.0,
+   "avp": 77.01,
+   "avd": 40,
+   "shares": 0,
+   "stayed": 0.6666666666666666,
+   "hold_3s": null,
+   "end": null,
+   "feed_share": 0.0,
+   "drop_s": null,
+   "findings": [
+    {
+     "kind": "reach",
+     "text": "The feed never tested it (3 views in 36 days). Nothing here says the clip was bad; it says YouTube didn't show it. Usually reused-content signals (a moment many channels posted, too little of our own take) or a stale stream."
+    }
+   ]
+  },
+  {
+   "id": "fBGYZb4GhpM",
+   "title": "Kai Cenat Tells Ray To Stay Behind Him In Japan 😭❤️‍🩹",
+   "age_h": 815.2,
+   "privacy": "public",
+   "seconds": 53,
+   "source": "kai_cenat",
+   "features": {
+    "creator": "Kai Cenat",
+    "title": "says what happens",
+    "length": "over 45s",
+    "post time": "evening (5-10pm ET)",
+    "hook": "question",
+    "stream age at post": "12-48h",
+    "found by": "viewer timestamp comments"
+   },
+   "views": 0,
+   "vph": 0.0,
+   "like_rate": null,
+   "avp": null,
+   "avd": null,
+   "shares": null,
+   "stayed": null,
+   "hold_3s": null,
+   "end": null,
+   "feed_share": null,
+   "drop_s": null,
+   "findings": [
+    {
+     "kind": "reach",
+     "text": "The feed never tested it (0 views in 34 days). Nothing here says the clip was bad; it says YouTube didn't show it. Usually reused-content signals (a moment many channels posted, too little of our own take) or a stale stream."
+    }
+   ]
+  },
+  {
+   "id": "VPsWXlECTvY",
+   "title": "Kai Cenat Meets Japan's Most Popular Dog 🐕😭",
+   "age_h": 819.2,
+   "privacy": "public",
+   "seconds": 53,
+   "source": "kai_cenat",
+   "features": {
+    "creator": "Kai Cenat",
+    "title": "says what happens",
+    "length": "over 45s",
+    "post time": "afternoon (noon-5pm ET)",
+    "hook": "question",
+    "stream age at post": "12-48h",
+    "found by": "viewer timestamp comments"
+   },
+   "views": 2,
+   "vph": 0.0024413197499465653,
+   "like_rate": 0.0,
+   "avp": 4.86,
+   "avd": 2,
+   "shares": 0,
+   "stayed": 1.0,
+   "hold_3s": null,
+   "end": null,
+   "feed_share": 0.0,
+   "drop_s": null,
+   "findings": [
+    {
+     "kind": "reach",
+     "text": "The feed never tested it (2 views in 34 days). Nothing here says the clip was bad; it says YouTube didn't show it. Usually reused-content signals (a moment many channels posted, too little of our own take) or a stale stream."
+    }
+   ]
+  },
+  {
+   "id": "SqcY4ZfXFyI",
+   "title": "Jynxzi Reads Fan Mail About The Art Of Seduction 😭📚",
+   "age_h": 810.2,
+   "privacy": "public",
+   "seconds": 53,
+   "source": "jynxzi",
+   "features": {
+    "creator": "Jynxzi",
+    "title": "says what happens",
+    "length": "over 45s",
+    "post time": "late night (10pm-6am ET)",
+    "hook": "says what happens",
+    "stream age at post": "over 48h",
+    "found by": "viewer timestamp comments"
+   },
+   "views": 0,
+   "vph": 0.0,
+   "like_rate": null,
+   "avp": null,
+   "avd": null,
+   "shares": null,
+   "stayed": null,
+   "hold_3s": null,
+   "end": null,
+   "feed_share": null,
+   "drop_s": null,
+   "findings": [
+    {
+     "kind": "reach",
+     "text": "The feed never tested it (0 views in 34 days). Nothing here says the clip was bad; it says YouTube didn't show it. Usually reused-content signals (a moment many channels posted, too little of our own take) or a stale stream."
+    }
+   ]
+  },
+  {
+   "id": "EfEnV35MiRA",
+   "title": "Speed Argues He's Taller Than Everyone 😭",
+   "age_h": 671.2,
+   "privacy": "public",
+   "seconds": 53,
+   "source": "ishowspeed",
+   "features": {
+    "creator": "IShowSpeed",
+    "title": "says what happens",
+    "length": "over 45s",
+    "post time": "evening (5-10pm ET)",
+    "hook": "question",
+    "stream age at post": "under 12h",
+    "found by": "viewer timestamp comments"
+   },
+   "views": 1,
+   "vph": 0.0014897946014061144,
+   "like_rate": 0.0,
+   "avp": 50.38,
+   "avd": 26,
+   "shares": 0,
+   "stayed": 1.0,
+   "hold_3s": null,
+   "end": null,
+   "feed_share": 0.0,
+   "drop_s": null,
+   "findings": [
+    {
+     "kind": "reach",
+     "text": "The feed never tested it (1 views in 28 days). Nothing here says the clip was bad; it says YouTube didn't show it. Usually reused-content signals (a moment many channels posted, too little of our own take) or a stale stream."
+    }
+   ]
+  },
+  {
+   "id": "iHwu_lGD17w",
+   "title": "Speed Finds His Own Name On The Premiere Wall 😭",
+   "age_h": 684.2,
+   "privacy": "public",
+   "seconds": 53,
+   "source": "ishowspeed",
+   "features": {
+    "creator": "IShowSpeed",
+    "title": "says what happens",
+    "length": "over 45s",
+    "post time": "late night (10pm-6am ET)",
+    "hook": "says what happens",
+    "stream age at post": "under 12h",
+    "found by": "viewer timestamp comments"
+   },
+   "views": 4,
+   "vph": 0.005846007651856172,
+   "like_rate": 0.0,
+   "avp": 25.920000000000005,
+   "avd": 13,
+   "shares": 0,
+   "stayed": 0.5,
+   "hold_3s": null,
+   "end": null,
+   "feed_share": 0.0,
+   "drop_s": null,
+   "findings": [
+    {
+     "kind": "reach",
+     "text": "The feed never tested it (4 views in 29 days). Nothing here says the clip was bad; it says YouTube didn't show it. Usually reused-content signals (a moment many channels posted, too little of our own take) or a stale stream."
+    }
+   ]
+  },
+  {
+   "id": "avg_CY5SDWA",
+   "title": "Jynxzi Pushes Through Promised Consort Radahn 😭",
+   "age_h": 688.2,
+   "privacy": "public",
+   "seconds": 53,
+   "source": "jynxzi",
+   "features": {
+    "creator": "Jynxzi",
+    "title": "says what happens",
+    "length": "over 45s",
+    "post time": "late night (10pm-6am ET)",
+    "hook": "says what happens",
+    "stream age at post": "over 48h",
+    "found by": "viewer timestamp comments"
+   },
+   "views": 3,
+   "vph": 0.00435898415234959,
+   "like_rate": 0.0,
+   "avp": 31.819999999999997,
+   "avd": 16,
+   "shares": 0,
+   "stayed": 0.6666666666666666,
+   "hold_3s": null,
+   "end": null,
+   "feed_share": 0.0,
+   "drop_s": null,
+   "findings": [
+    {
+     "kind": "reach",
+     "text": "The feed never tested it (3 views in 29 days). Nothing here says the clip was bad; it says YouTube didn't show it. Usually reused-content signals (a moment many channels posted, too little of our own take) or a stale stream."
+    }
+   ]
+  },
+  {
+   "id": "fAr4J59O1i4",
+   "title": "Speed Meets Two Strangers Making Dubstep 🎧😂",
+   "age_h": 671.2,
+   "privacy": "public",
+   "seconds": 53,
+   "source": "ishowspeed",
+   "features": {
+    "creator": "IShowSpeed",
+    "title": "says what happens",
+    "length": "over 45s",
+    "post time": "evening (5-10pm ET)",
+    "hook": "question",
+    "stream age at post": "12-48h",
+    "found by": "viewer timestamp comments"
+   },
+   "views": 17,
+   "vph": 0.025326508223903945,
+   "like_rate": 0.0,
+   "avp": 53.87,
+   "avd": 28,
+   "shares": 0,
+   "stayed": 0.47058823529411764,
+   "hold_3s": null,
+   "end": null,
+   "feed_share": 0.0,
+   "drop_s": null,
+   "findings": [
+    {
+     "kind": "hook",
+     "text": "Only 47% stayed past the swipe. Open on the reaction or the stake, not the setup, and make the hook promise the payoff."
+    },
+    {
+     "kind": "length",
+     "text": "Watched 54% on average: trim dead air and end on the punchline."
+    },
+    {
+     "kind": "reach",
+     "text": "Only 0% of its views came from the Shorts feed, so the feed tried it and stopped. Watch the swipe rate on the next clips like it."
+    },
+    {
+     "kind": "good",
+     "text": "5x our typical clip: make more like this."
+    }
+   ]
+  }
+ ],
+ "written": null,
+ "writer": null
+}
