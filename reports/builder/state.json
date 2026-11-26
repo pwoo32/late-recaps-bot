@@ -1,21 +1,21 @@
 {
  "source_weight": {
-  "jynxzi": 2.95,
+  "jynxzi": 2.97,
   "kai_cenat": 0.31,
-  "ishowspeed": 1.99,
-  "stableronaldo": 1.61,
+  "ishowspeed": 1.59,
+  "stableronaldo": 1.27,
   "caseoh": 2.99
  },
  "slot_weight": {
-  "2": 1.65,
-  "21": 1.49,
-  "8": 1.78,
-  "4": 0.34,
-  "22": 2.1,
-  "17": 2.95,
+  "2": 1.39,
+  "21": 1.19,
+  "8": 1.47,
+  "4": 0.32,
+  "22": 1.66,
+  "17": 2.97,
   "6": 2.99,
-  "1": 0.4,
-  "5": 2.6
+  "1": 0.36,
+  "5": 2.16
  },
  "used_moments": [
   "L6S9Vb3RLy4@186",
@@ -167,7 +167,10 @@
   "PHSsdHu2Er0@18",
   "2938655753@335",
   "PHSsdHu2Er0@45",
-  "aOOi7njlTEc@665"
+  "aOOi7njlTEc@665",
+  "aOOi7njlTEc@678",
+  "aOOi7njlTEc@461",
+  "91c96JtcIFg@34"
  ],
  "queued": {
   "L6S9Vb3RLy4@186": {
@@ -2649,6 +2652,88 @@
     "script": 0.75,
     "audience": 0.5
    }
+  },
+  "aOOi7njlTEc@678": {
+   "title": "Jynxzi At First Time Playing GTA \ud83d\ude31",
+   "source": "jynxzi",
+   "post_utc": "2026-11-27 06:00",
+   "recipe": {
+    "length": 30,
+    "punch": 0.14,
+    "beat": "normal",
+    "caption_words": 3,
+    "gap": 0.6,
+    "layout": "face34",
+    "test": null
+   },
+   "council": {
+    "trend": 0.33,
+    "study": 0.25,
+    "analytics": 0.77,
+    "live": 0.55,
+    "script": 0.65,
+    "audience": 0.5
+   }
+  },
+  "aOOi7njlTEc@461": {
+   "title": "Jynxzi Reacts To Flaming GTA 6 Car \ud83d\ude31",
+   "source": "jynxzi",
+   "post_utc": "2026-11-26 21:00",
+   "recipe": {
+    "length": 30,
+    "punch": 0.14,
+    "beat": "normal",
+    "caption_words": 3,
+    "gap": 0.35,
+    "layout": "face34",
+    "test": "gap"
+   },
+   "council": {
+    "trend": 0.33,
+    "study": 0.25,
+    "analytics": 0.77,
+    "live": 0.55,
+    "script": 0.65,
+    "audience": 0.5
+   }
+  },
+  "91c96JtcIFg@34": {
+   "title": "Speed Listens To The 2011 Jupiter Incident \ud83d\ude2d",
+   "source": "ishowspeed",
+   "post_utc": "2026-11-27 00:00",
+   "recipe": {
+    "length": 30,
+    "punch": 0.14,
+    "beat": "normal",
+    "caption_words": 3,
+    "gap": 0.6,
+    "layout": "crop43",
+    "test": "layout"
+   },
+   "council": {
+    "trend": 1.0,
+    "study": 1.0,
+    "analytics": 0.79,
+    "live": 0.27,
+    "script": 1.0,
+    "audience": 0.5
+   },
+   "video_id": "-7KL9oBjx9E",
+   "words": [
+    "cenat",
+    "explaining",
+    "getting",
+    "incident",
+    "jupiter",
+    "listens",
+    "lore",
+    "make",
+    "meme",
+    "million",
+    "told",
+    "video",
+    "wins"
+   ]
   }
  },
  "channel": "UCbK9EejOk5UVzI_l8F3f8kA",
@@ -2823,6 +2908,21 @@
  },
  "own_results": [
   {
+   "title": "Speed Asks Usain Bolt If He Can Go Pro \ud83c\udfc3\u26a1",
+   "views": 3,
+   "lift": 1.5
+  },
+  {
+   "title": "Speed Crashes GTA 6 Before Saving \ud83d\ude2d",
+   "views": 2,
+   "lift": 1.0
+  },
+  {
+   "title": "Jynxzi Raids AngryGingers After Ending His GTA 6 Stream \ud83d\ude2d",
+   "views": 101,
+   "lift": 50.5
+  },
+  {
    "title": "Speed Overwrites His 98% GTA 6 Save File \ud83d\udc80\ud83d\ude2d",
    "views": 0,
    "lift": 0.0
@@ -2830,7 +2930,7 @@
   {
    "title": "Speed Finishes GTA 6 After 52 Hours Awake \ud83d\ude2d",
    "views": 3,
-   "lift": 3.0
+   "lift": 1.5
   },
   {
    "title": "Speed Reacts To Bag In GTA 6 \ud83d\ude2d",
@@ -2845,12 +2945,12 @@
   {
    "title": "Dinah Starts The Stream Laughing Uncontrollably \ud83d\ude2d\ud83d\ude02",
    "views": 6,
-   "lift": 6.0
+   "lift": 3.0
   },
   {
    "title": "CaseOh Get Jump Scared Mid Game \ud83d\ude2d",
    "views": 16,
-   "lift": 16.0
+   "lift": 8.0
   },
   {
    "title": "Ronaldo Locks In During Exterminauts Interview \ud83d\udc80",
@@ -2860,17 +2960,17 @@
   {
    "title": "Ronaldo Watches His Smooth Emily Interview \ud83d\ude2d",
    "views": 3,
-   "lift": 3.0
+   "lift": 1.5
   },
   {
    "title": "Jynxzi Wins Gamer Of The Year At The Streamer Awards \ud83c\udfc6\ud83d\udd25",
    "views": 57,
-   "lift": 57.0
+   "lift": 28.5
   },
   {
    "title": "Jynxzi: \"Evan Burger\" \ud83d\ude31",
    "views": 9,
-   "lift": 9.0
+   "lift": 4.5
   },
   {
    "title": "Kai Cenat Goes Crazy \ud83d\udd25",
@@ -2880,7 +2980,7 @@
   {
    "title": "Jynxzi Didn't See This Coming At Biggest Announcement Ever \ud83d\ude31",
    "views": 20,
-   "lift": 20.0
+   "lift": 10.0
   },
   {
    "title": "Kai Cenat Didn't See This Coming \ud83d\ude31",
@@ -2900,12 +3000,12 @@
   {
    "title": "CaseOh: \"Crazy Viewer\" \ud83d\ude2d",
    "views": 17,
-   "lift": 17.0
+   "lift": 8.5
   },
   {
    "title": "Ronaldo: \"Laiys. Says Word\" \ud83d\ude31",
    "views": 28,
-   "lift": 28.0
+   "lift": 14.0
   },
   {
    "title": "xQc Can't Believe He Pulled This Off At X Presses Lang \ud83d\udd25",
@@ -2915,27 +3015,27 @@
   {
    "title": "Speed And Derek Jeter Go Crazy \ud83d\udd25",
    "views": 4,
-   "lift": 4.0
+   "lift": 2.0
   },
   {
    "title": "Speed And Derek Jeter Can't Believe It \ud83d\udd25",
    "views": 20,
-   "lift": 20.0
+   "lift": 10.0
   },
   {
    "title": "Kai Cenat Is Left Speechless At Was Shook From Ai \ud83d\ude31",
    "views": 1,
-   "lift": 1.0
+   "lift": 0.5
   },
   {
    "title": "Jynxzi Can't Believe What Just Happened \ud83d\ude2d",
    "views": 2,
-   "lift": 2.0
+   "lift": 1.0
   },
   {
    "title": "Jynxzi: \"What Is It?\" \ud83d\udd25",
    "views": 31,
-   "lift": 31.0
+   "lift": 15.5
   },
   {
    "title": "N3on: \"Face Each Other?\" \ud83d\udd25",
@@ -2950,27 +3050,12 @@
   {
    "title": "Kai Cenat Can't Believe Chat Failed Again \ud83d\ude2d",
    "views": 1,
-   "lift": 1.0
+   "lift": 0.5
   },
   {
    "title": "Jynxzi: \"Chat What's My Kd?\" \ud83d\udd25",
    "views": 1,
-   "lift": 1.0
-  },
-  {
-   "title": "Speed Can't Believe The Cops Are Outside \ud83e\udd28",
-   "views": 2,
-   "lift": 2.0
-  },
-  {
-   "title": "Speed Can't Believe Vinny Just Robbed His Uncle's Store \ud83d\ude2d",
-   "views": 2,
-   "lift": 2.0
-  },
-  {
-   "title": "Jynxzi Plays For $1000 And Goes Off \ud83d\udd25",
-   "views": 2,
-   "lift": 2.0
+   "lift": 0.5
   }
  ],
  "tiktok": {
@@ -2978,78 +3063,6 @@
   "mode": "inbox"
  },
  "chat_spikes": {
-  "esFGDLr8rSQ": [
-   {
-    "t": 179,
-    "ratio": 6.4,
-    "msgs": 268,
-    "sample": [
-     "Yo ",
-     "W",
-     "W",
-     "Yo",
-     "yoo"
-    ]
-   },
-   {
-    "t": 4464,
-    "ratio": 5.3,
-    "msgs": 180,
-    "sample": [
-     "Ps5 bro lmaoooo",
-     "w",
-     "me pls bro",
-     "Bro pls I\u2019m broke",
-     "W"
-    ]
-   },
-   {
-    "t": 22309,
-    "ratio": 5.3,
-    "msgs": 98,
-    "sample": [
-     "w",
-     "what after san andreas",
-     "Yo "
-    ]
-   },
-   {
-    "t": 17899,
-    "ratio": 5.1,
-    "msgs": 55,
-    "sample": [
-     "REALLY DONATED $50 TO BE READ ONCE IN YOUR LIFE LMFAO MAKING THE RICH RICHER",
-     "W YKOREOO",
-     "W yk",
-     "W!!",
-     "w yk"
-    ]
-   },
-   {
-    "t": 8099,
-    "ratio": 4.9,
-    "msgs": 67,
-    "sample": [
-     "W",
-     "w",
-     "W",
-     "w",
-     "Bro i genuinely thought someone was knocking on my window with my headphones on"
-    ]
-   },
-   {
-    "t": 14544,
-    "ratio": 4.8,
-    "msgs": 77,
-    "sample": [
-     "BIG W",
-     "nah lol ",
-     "nah",
-     "Nah",
-     " Nah"
-    ]
-   }
-  ],
   "AaMF4bAqxO8": [
    {
     "t": 36754,
@@ -4365,6 +4378,68 @@
      "W",
      "W",
      "W"
+    ]
+   }
+  ],
+  "oDbeULQ-RQw": [
+   {
+    "t": 13594,
+    "ratio": 9.2,
+    "msgs": 32,
+    "sample": [
+     "w",
+     "W",
+     "w",
+     "w",
+     "WWW"
+    ]
+   },
+   {
+    "t": 18144,
+    "ratio": 8.8,
+    "msgs": 23,
+    "sample": [
+     "w",
+     "w",
+     "w",
+     "w",
+     "w"
+    ]
+   },
+   {
+    "t": 14374,
+    "ratio": 8.4,
+    "msgs": 41,
+    "sample": [
+     "w",
+     "w",
+     "w",
+     "w",
+     "w"
+    ]
+   },
+   {
+    "t": 679,
+    "ratio": 8.3,
+    "msgs": 45,
+    "sample": [
+     "W",
+     "W",
+     "W",
+     "W",
+     "W"
+    ]
+   },
+   {
+    "t": 12624,
+    "ratio": 7.3,
+    "msgs": 31,
+    "sample": [
+     "yo",
+     "W",
+     "yo",
+     "yo",
+     "w"
     ]
    }
   ]
