@@ -1702,6 +1702,7 @@ def tiktok_daily_limit(now=None):
     """Drafts allowed in 24h today: 0 while paused, 1 during the slow week, else TIKTOK_PER_DAY."""
     today = (now or datetime.now(timezone.utc)).astimezone(LOCAL_TZ).date().isoformat()
     return 0 if today < TIKTOK_PAUSE_UNTIL else 1 if today < TIKTOK_SLOW_UNTIL else TIKTOK_PER_DAY
+TIKTOK_PROBE_HOURS = 72  # while TikTok shows the account to nobody: one test draft this often, nothing else
 TIKTOK_SLOTS = (12, 15, 19, 21.5)  # ET posting times, about 3 hours apart, in the noon and evening windows
 
 
@@ -1745,6 +1746,17 @@ def post_tiktok(qdir, queue, clips, tt):
     """Send every rendered clip that isn't on TikTok yet (enabled with `tiktok-auth --enable`)."""
     import tiktok_upload
     qfile = qdir / "queue.json"
+    stalled = tt.get("stalled")
+    probe = False
+    if stalled and not os.environ.get("TIKTOK_IGNORE_STALL"):
+        # set by review_agent.tiktok_reach: the newest posts were never shown to anyone. Instead of more drafts, send one
+        # clip that passed every gate every TIKTOK_PROBE_HOURS as a test; the review lifts the hold once one gets seen.
+        if recent_tiktok(hours=TIKTOK_PROBE_HOURS):
+            print(f"  TikTok on hold: the last {stalled.get('dead_run', '?')} posts (since {stalled.get('since')}) got under 10 "
+                  f"views each, so TikTok isn't showing this account. A test draft went out in the last "
+                  f"{TIKTOK_PROBE_HOURS}h; waiting on its views (README: TikTok reach).")
+            return
+        probe = True
     inbox = tt.get("mode", "inbox") == "inbox"
     pending = 0
     if inbox:
@@ -1761,7 +1773,12 @@ def post_tiktok(qdir, queue, clips, tt):
         # hold must not prevent an approved, rendered clip from reaching TikTok.
         if c.get("tiktok_id") or not path.exists():
             continue
-        recent, limit = recent_tiktok(), tiktok_daily_limit()
+        if c.get("held"):
+            # the originality/copyright gate turned it down for YouTube (template narration, stock hook, no take,
+            # music). From Nov 13 to Nov 23 these rejects were nearly all TikTok got, and every one of them sat at 0.
+            print(f"  TikTok skipped for [{c['id']}]: held by the gate ({c['held'][:90]}).")
+            continue
+        recent, limit = recent_tiktok(), (1 if probe else tiktok_daily_limit())
         if limit == 0:
             print(f"  TikTok paused until {TIKTOK_PAUSE_UNTIL} so the account can recover; no drafts sent.")
             break
@@ -1794,6 +1811,9 @@ def post_tiktok(qdir, queue, clips, tt):
         qfile.write_text(json.dumps(queue, indent=1, ensure_ascii=False), encoding="utf-8")
         if inbox:
             pending += 1
+        if probe:
+            print(f"  TikTok test draft: the account has had no reach since {stalled.get('since')}; this clip passed every "
+                  "gate, and the next review checks whether TikTok shows it to anyone.")
         print(f"  TikTok: [{c['id']}] " + ("posted" if tt.get("mode") == "direct" else
               "draft in your TikTok inbox. Post it at " +
               datetime.fromisoformat(c["tiktok_post_at"]).strftime("%a %I:%M %p ET") +

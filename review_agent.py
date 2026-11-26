@@ -624,21 +624,48 @@ def _words(text):
     return re.sub(r"#\w+|[^a-z0-9 ]", " ", (text or "").lower()).split()
 
 
+TT_DEAD_VIEWS = 10   # a public TikTok under this after a day was never shown in the For You feed at all
+TT_DEAD_POSTS = 3    # this many of the newest day-old posts all under it means the account's reach is cut
+
+
+def tiktok_reach(posts, now):
+    """Is the account being shown at all? A weak post still gets a 200-300 view feed test; posts that sit at 0-9
+    views for a day were never tested. When the newest TT_DEAD_POSTS day-old posts are all like that, TikTok has
+    cut the account's reach (from Nov 14 every post got 0-19 views, after 30 posts at ~300 each), and more
+    drafts only feed the same dead account. Looks at every public post, matched to a draft or not."""
+    if posts is None:
+        return None
+    aged = sorted((p for p in posts if (now - datetime.fromtimestamp(p.get("create_time", 0), timezone.utc)).total_seconds()
+                   >= SETTLED_H * 3600), key=lambda p: -p.get("create_time", 0))
+    newest = aged[:TT_DEAD_POSTS]
+    if len(newest) < TT_DEAD_POSTS:
+        return {"stalled": False, "views": [p.get("view_count", 0) for p in newest]}
+    views = [p.get("view_count", 0) or 0 for p in newest]
+    dead = []  # the unbroken run of never-shown posts, newest first
+    for p in aged:
+        if (p.get("view_count", 0) or 0) >= TT_DEAD_VIEWS:
+            break
+        dead.append(p)
+    stalled = len(dead) >= TT_DEAD_POSTS
+    return {"stalled": stalled, "views": views, "dead_run": len(dead),
+            "since": datetime.fromtimestamp(dead[-1]["create_time"], timezone.utc).strftime("%Y-%m-%d") if dead else None}
+
+
 def fill_tiktok_from_api(rs):
     """Fill views/likes/comments/shares from TikTok itself when the login has video.list (`tiktok-auth --stats`).
     Our posts are drafts Philip finishes in the app, so a post is matched to its draft by caption (he pastes ours)
     and by being posted after the draft was sent. Rows nobody posted stay blank; numbers he typed for a post the API
-    can't match are kept. Returns a note for the report."""
+    can't match are kept. Returns a note for the report and the posts read (None when TikTok couldn't be read)."""
     import difflib
     try:
         import tiktok_upload
         if not tiktok_upload.can_read_stats():
-            return None
+            return None, None
         times = [datetime.strptime(r["_c"]["post_utc"], "%Y-%m-%d %H:%M").replace(tzinfo=timezone.utc)
                  for r in rs if r.get("_c") and r["_c"].get("post_utc")]
         posts = tiktok_upload.my_videos(since=min(times) - timedelta(days=2) if times else None)
     except Exception as e:  # TikTok trouble never stops the review
-        return f"Couldn't read TikTok views ({type(e).__name__}: {str(e)[:160]}); using the numbers in the sheet."
+        return f"Couldn't read TikTok views ({type(e).__name__}: {str(e)[:160]}); using the numbers in the sheet.", None
     taken, filled = set(), 0
     for r in rs:
         c = r.get("_c")
@@ -663,7 +690,7 @@ def fill_tiktok_from_api(rs):
                       "comments": best.get("comment_count", ""), "shares": best.get("share_count", ""),
                       "tiktok_video": best["id"], "source": "TikTok API"})
             filled += 1
-    return f"Read {len(posts)} public TikTok posts and matched {filled} of them to our drafts."
+    return f"Read {len(posts)} public TikTok posts and matched {filled} of them to our drafts.", posts
 
 
 def save_tiktok_rows(rs):
@@ -963,6 +990,13 @@ def write_report(out_dir, data, vids, ms, diags, typical, findings, weeks, tt, l
         L += [f"{len(untested)} other clips never got a feed test, so they say nothing about content.", ""]
 
     L += ["## TikTok", ""]
+    reach = tt.get("reach") or {}
+    if reach.get("stalled"):
+        L += [f"- **TikTok isn't showing this account to anyone.** The last {reach['dead_run']} public posts (since "
+              f"{reach['since']}) all sat under {TT_DEAD_VIEWS} views after a day (newest: "
+              f"{', '.join(str(v) for v in reach['views'])}); even a weak post gets a few hundred. TikTok has stopped showing the account. Until a post gets "
+              f"{TT_DEAD_VIEWS}+ views the builder sends only one test draft every 3 days, a clip that passed every gate. In the TikTok app check Profile > menu > Settings and privacy > Account > Account "
+              "status, and open a post's analytics for an \"Ineligible for For You feed\" note; appeal anything listed there."]
     if tt.get("note"):
         L.append(f"- {tt['note']}")
     filled = [r for r in tt["rows"] if _num(r.get("views")) is not None]
@@ -1044,9 +1078,9 @@ def cmd_review(args):
     weeks = distribution(vids, ms, now)
 
     rows_tt = tiktok_rows()
-    tt_note = fill_tiktok_from_api(rows_tt)
+    tt_note, tt_posts = fill_tiktok_from_api(rows_tt)
     tt_pairs = [(v, m) for v, m in tiktok_clips(rows_tt, now) if v["age_h"] >= SETTLED_H]
-    tt = {"rows": rows_tt, "note": tt_note, "findings": factor_findings(tt_pairs, typical_views(tt_pairs), "TikTok") if tt_pairs else []}
+    tt = {"rows": rows_tt, "note": tt_note, "reach": tiktok_reach(tt_posts, now), "findings": factor_findings(tt_pairs, typical_views(tt_pairs), "TikTok") if tt_pairs else []}
     save_tiktok_rows(rows_tt)
 
     llm, writer = (None, None)
@@ -1116,6 +1150,15 @@ def cmd_review(args):
     if claimed:
         state["claimed_streams"] = list(dict.fromkeys((state.get("claimed_streams") or []) + claimed))[-200:]
         print(f"Copyright claims on clips from {len(claimed)} stream(s); the builder won't clip those streams again.")
+    # a TikTok account nobody is shown gets no more drafts until a post is seen again (channel_builder.post_tiktok)
+    if tt.get("reach") is not None:
+        ttstate = state.setdefault("tiktok", {})
+        if tt["reach"]["stalled"]:
+            ttstate["stalled"] = {"since": tt["reach"]["since"], "checked": now.strftime("%Y-%m-%d %H:%M"),
+                                  "views": tt["reach"]["views"], "dead_run": tt["reach"]["dead_run"]}
+            print(f"TikTok reach is cut: last {tt['reach']['dead_run']} posts under {TT_DEAD_VIEWS} views; drafts on hold.")
+        elif ttstate.pop("stalled", None):
+            print("TikTok reach is back; drafts resume.")
     if not state.get("channel"):
         state["channel"] = data["channel"]["id"]  # lets `channel_builder.py run` start its daily `track` too
     save_state(state)
