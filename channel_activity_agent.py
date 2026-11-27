@@ -20,8 +20,10 @@ Usage:
     python channel_activity_agent.py --no-llm      # schedule check only, no drafting
 
 Drafts are written by a free writer: Gemini or Groq (GEMINI_API_KEY / GROQ_API_KEY, as the script agent uses), else a
-local Ollama model. Claude Code or ANTHROPIC_API_KEY only if picked with --writer. The cloud daily run
-(.github/workflows/daily.yml) runs it with --post after the review; its login goes up as the ACTIVITY_TOKEN secret.
+local Ollama model. Claude Code or ANTHROPIC_API_KEY only if picked with --writer. The drafting prompt includes the
+reply guide from reply_study_agent.py (reports/activity/reply_playbook.json): how the top clip channels reply.
+The cloud daily run (.github/workflows/daily.yml) runs it after the review, signed in with the ACTIVITY_TOKEN secret.
+It drafts only: it adds --post only once the repo variable ACTIVITY_POST is set to true.
 Quota: reading costs ~3-6 units; each posted reply/comment/hold costs 50, capped by --max-replies (default 20).
 Its login is its own file (~/.config/clip-builder/activity_token.json), so uploading and reviewing are never affected.
 """
@@ -44,6 +46,7 @@ REPORTS_DIR = HERE / "reports"
 ACTIVITY_DIR = REPORTS_DIR / "activity"
 STATE_FILE = ACTIVITY_DIR / "state.json"
 BUILDER_STATE = REPORTS_DIR / "builder" / "state.json"  # read only: video ids the builder uploaded
+REPLY_PLAYBOOK = ACTIVITY_DIR / "reply_playbook.json"  # written by reply_study_agent.py: how top clip channels reply
 LOCAL_TZ = ZoneInfo("America/New_York")
 TOKEN_DIR = Path.home() / ".config" / "clip-builder"
 ACTIVITY_TOKEN = TOKEN_DIR / "activity_token.json"
@@ -238,7 +241,41 @@ def new_comments(yt, cid, since, titles, state):
 
 # ---------- drafting ----------
 
-def build_prompt(comments, fresh, top, ch_name):
+def reply_playbook(max_age_days=30):
+    """The reply study agent's guide, if there's a recent one."""
+    if not REPLY_PLAYBOOK.exists():
+        return None
+    try:
+        pb = json.loads(REPLY_PLAYBOOK.read_text(encoding="utf-8"))
+        if datetime.now(timezone.utc) - parse_time(pb["generated_at"]) > timedelta(days=max_age_days):
+            print(f"Reply playbook is over {max_age_days} days old; drafting without it. Run reply_study_agent.py.")
+            return None
+        return pb
+    except (ValueError, KeyError):
+        return None
+
+
+def playbook_section(pb):
+    """What the top clip channels do in their comments, as style notes under the fixed rules."""
+    if not pb:
+        return ""
+    L = ["WHAT THE TOP STREAMER CLIP CHANNELS DO IN THEIR COMMENTS (from our study of their replies; follow it for "
+         "style, but the rules above always win):"]
+    if pb.get("summary"):
+        L.append(pb["summary"])
+    for title, key in [("Replies", "reply_rules"), ("First comments", "first_comment_rules"), ("Avoid", "avoid")]:
+        if pb.get(key):
+            L.append(f"{title}:\n" + "\n".join(f"- {r}" for r in pb[key][:8]))
+    ex = [e for e in pb.get("reply_examples") or [] if isinstance(e, dict) and e.get("reply")][:8]
+    if ex:
+        L.append("Example replies (match the feel, never copy them word for word):\n"
+                 + "\n".join(f"- \"{e.get('comment', '')[:120]}\" -> {e['reply'][:150]}" for e in ex))
+    if pb.get("first_comment_examples"):
+        L.append("Example first comments:\n" + "\n".join(f"- {e[:150]}" for e in pb["first_comment_examples"][:6]))
+    return "\n".join(L) + "\n\n"
+
+
+def build_prompt(comments, fresh, top, ch_name, pb=None):
     rules = (
         f"You run the comment section of {ch_name}, a YouTube Shorts channel that posts short captioned clips of "
         "streamers (IShowSpeed, Kai Cenat, Jynxzi, Adin Ross, N3on) and podcasts, with a narrator line at the start. "
@@ -256,6 +293,7 @@ def build_prompt(comments, fresh, top, ch_name):
                             "creator or moment to clip next, built from the top clips below, and one text post "
                             "(a teaser or question, options empty). Under 30 words each."
                             if top is not None else "return an empty list.") + "\n\n")
+    rules += playbook_section(pb)
     body = "COMMENTS (JSON):\n" + json.dumps([{k: c[k] for k in ("id", "video", "author", "text", "likes", "spam")}
                                              for c in comments], ensure_ascii=False)
     body += "\n\nNEW VIDEOS (JSON):\n" + json.dumps([{"video_id": v["id"], "title": v["snippet"]["title"],
@@ -428,7 +466,7 @@ def notify(title, text):
 
 # ---------- report ----------
 
-def write_report(out_dir, ch, sched, drafts, posted, writer, args, can_write, now, hold_file):
+def write_report(out_dir, ch, sched, drafts, posted, writer, args, can_write, now, hold_file, pb=None):
     vid_title = {}
     for _, v in sched["public"] + sched["scheduled"]:
         vid_title[v["id"]] = v["snippet"]["title"]
@@ -473,7 +511,12 @@ def write_report(out_dir, ch, sched, drafts, posted, writer, args, can_write, no
             L.append(f"- **{p['kind'].title()}:** {p['text']}" + (" | Options: " + " / ".join(p["options"]) if p["options"] else ""))
     if not can_write:
         L += ["", "_Signed in read-only, so nothing can post. Run `python channel_activity_agent.py auth` once._"]
-    L += ["", f"_Drafts by {writer or 'no writer'}. API calls that posted or held: {posted} (50 units each)._", ""]
+    if not args.post:
+        L += ["", "_Draft only: nothing was posted or held. Posting is off until it's switched on (repo variable "
+                  "ACTIVITY_POST=true for the cloud run, or `python channel_activity_agent.py post`)._"]
+    L += ["", f"_Drafts by {writer or 'no writer'}"
+          + (f", following the reply guide from {pb.get('study_run')}" if pb else ", without a reply guide (run reply_study_agent.py)")
+          + f". API calls that posted or held: {posted} (50 units each)._", ""]
     (out_dir / "report.md").write_text("\n".join(L), encoding="utf-8")
 
 
@@ -491,7 +534,7 @@ def cmd_run(args):
     for a in sched["alerts"]:
         print("  ALERT: " + a)
 
-    drafts, writer = {"replies": [], "holds": [], "first_comments": [], "community": []}, None
+    drafts, writer, pb = {"replies": [], "holds": [], "first_comments": [], "community": []}, None, None
     if not args.no_llm:
         since = parse_time(state["last_comment_at"]) or now - timedelta(days=7)
         titles = {v["id"]: v["snippet"]["title"] for v in vids}
@@ -507,7 +550,10 @@ def cmd_run(args):
         print(f"{len(comments)} new comment(s), {len(fresh)} new Short(s) without a first comment.")
         out = None
         if comments or fresh or top is not None:
-            out, writer = draft(build_prompt(comments, fresh, top, ch["snippet"]["title"]),
+            pb = reply_playbook()
+            if pb:
+                print(f"Using the reply playbook from {pb.get('study_run', 'the reply study')}.")
+            out, writer = draft(build_prompt(comments, fresh, top, ch["snippet"]["title"], pb),
                                 args.writer or os.environ.get("SCRIPT_WRITER"))
         drafts = to_drafts(out, comments, fresh, args.max_replies)
         if drafts["community"]:
@@ -525,7 +571,7 @@ def cmd_run(args):
     out_dir = REPORTS_DIR / f"activity_{datetime.now():%Y-%m-%d_%H%M}"
     out_dir.mkdir(parents=True, exist_ok=True)
     (out_dir / "drafts.json").write_text(json.dumps(drafts, indent=1, ensure_ascii=False), encoding="utf-8")
-    write_report(out_dir, ch, sched, drafts, posted, writer, args, can_write, now, hold_file)
+    write_report(out_dir, ch, sched, drafts, posted, writer, args, can_write, now, hold_file, pb)
     if sched["alerts"] and args.notify:
         notify("Late Recaps needs you", " ".join(sched["alerts"]))
     print(f"Done. Report: {out_dir / 'report.md'}")

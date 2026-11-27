@@ -51,6 +51,32 @@ python channel_agent.py --niche streamer --from-run channels_streamer_<date>   #
 Report lands in `reports/channels_<niche>_<date>/report.md`. About 420 quota units a run (120 with `--from-run`).
 It studies what works; it never downloads or reuploads anyone's videos (that gets copyright strikes and demonetized).
 
+## Reply study agent
+
+`reply_study_agent.py` learns how the top streamer clip channels run their comment sections, so our replies copy what
+works. It takes the top channels from the latest channel study, reads the comments on their recent Shorts and
+measures how often each channel replies, which comments it answers (liked ones, questions, early ones), what its
+replies look like (length, questions back, emoji, lowercase, jokes, @mentions), the channel's own pinned comment on
+each Short, and what goes with more talk (comments per 1k views when the channel shows up vs when it doesn't, and
+how many replies a thread gets once the channel replies). A free writer (Gemini or Groq) turns that into a short
+reply guide with rules, things to avoid and example replies and first comments; without one the guide is built
+from the numbers.
+
+```
+python reply_study_agent.py                  # top 12 channels, 6 Shorts each (~120 quota units)
+python reply_study_agent.py --if-older 7     # what the daily run does: re-study once a week
+python reply_study_agent.py --no-llm         # numbers-only guide
+```
+
+Report lands in `reports/replies_<niche>_<date>/report.md`; the guide goes to `reports/activity/reply_playbook.json`,
+which `channel_activity_agent.py` puts into its drafting prompt (it ignores a guide older than 30 days). It reads
+public comments with `YOUTUBE_API_KEY` only: it never signs in and never posts.
+
+**Comment posting is off.** The cloud run signs in with `ACTIVITY_TOKEN` and drafts replies and first comments to
+`reports/activity_<date>/`, but posts nothing (and holds no spam) until the repo variable `ACTIVITY_POST` is set to
+`true` (GitHub > Settings > Secrets and variables > Actions > Variables). Read a few days of drafts first. To post one
+batch by hand: `python channel_activity_agent.py post`.
+
 ## Script agent
 
 `script_agent.py` writes everything that goes out with each clip: a real title in the breakout pattern
