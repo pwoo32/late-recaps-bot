@@ -1,21 +1,21 @@
 {
  "source_weight": {
-  "jynxzi": 2.97,
+  "jynxzi": 2.98,
   "kai_cenat": 0.31,
-  "ishowspeed": 1.59,
-  "stableronaldo": 1.27,
+  "ishowspeed": 1.35,
+  "stableronaldo": 1.06,
   "caseoh": 2.99
  },
  "slot_weight": {
-  "2": 1.39,
-  "21": 1.19,
-  "8": 1.47,
-  "4": 0.32,
-  "22": 1.66,
-  "17": 2.97,
+  "2": 1.23,
+  "21": 0.83,
+  "8": 1.28,
+  "4": 0.31,
+  "22": 1.4,
+  "17": 2.98,
   "6": 2.99,
-  "1": 0.36,
-  "5": 2.16
+  "1": 0.34,
+  "5": 1.9
  },
  "used_moments": [
   "L6S9Vb3RLy4@186",
@@ -170,7 +170,10 @@
   "aOOi7njlTEc@665",
   "aOOi7njlTEc@678",
   "aOOi7njlTEc@461",
-  "91c96JtcIFg@34"
+  "91c96JtcIFg@34",
+  "PHSsdHu2Er0@40",
+  "oDbeULQ-RQw@604",
+  "UuJUZhyPiu8@194"
  ],
  "queued": {
   "L6S9Vb3RLy4@186": {
@@ -2734,6 +2737,85 @@
     "video",
     "wins"
    ]
+  },
+  "PHSsdHu2Er0@40": {
+   "title": "Usain Bolt Tells Speed If He Can Go Pro \ud83c\udfc3\u26a1",
+   "source": "ishowspeed",
+   "post_utc": "2026-11-28 06:00",
+   "recipe": {
+    "length": 30,
+    "punch": 0.14,
+    "beat": "normal",
+    "caption_words": 3,
+    "gap": 0.6,
+    "layout": "face34",
+    "test": null
+   },
+   "council": {
+    "trend": 0.76,
+    "study": 1.0,
+    "analytics": 0.47,
+    "live": 0.45,
+    "script": 1.0,
+    "audience": 0.5
+   }
+  },
+  "oDbeULQ-RQw@604": {
+   "title": "Jynxzi Tries Double Flanking In Legends Division \ud83d\ude2d",
+   "source": "jynxzi",
+   "post_utc": "2026-11-27 22:00",
+   "recipe": {
+    "length": 30,
+    "punch": 0.14,
+    "beat": "normal",
+    "caption_words": 3,
+    "gap": 0.35,
+    "layout": "face34",
+    "test": "gap"
+   },
+   "council": {
+    "trend": 0.14,
+    "study": 0.25,
+    "analytics": 0.79,
+    "live": 0.55,
+    "script": 1.0,
+    "audience": 0.5
+   },
+   "video_id": "qzOjXSuxUy8",
+   "words": [
+    "division",
+    "double",
+    "flank",
+    "flanking",
+    "high",
+    "legends",
+    "pushing",
+    "ranked",
+    "sets",
+    "stakes"
+   ]
+  },
+  "UuJUZhyPiu8@194": {
+   "title": "Jynxzi Asks Takes \"We Have This Coming, Right?\" \ud83d\udd25",
+   "source": "jynxzi",
+   "post_utc": "2026-11-28 03:00",
+   "recipe": {
+    "length": 30,
+    "punch": 0.14,
+    "beat": "normal",
+    "caption_words": 3,
+    "gap": 0.6,
+    "layout": "crop43",
+    "test": "layout"
+   },
+   "council": {
+    "trend": 0.14,
+    "study": 0.25,
+    "analytics": 0.88,
+    "live": 0.6,
+    "script": 1.0,
+    "audience": 0.5
+   }
   }
  },
  "channel": "UCbK9EejOk5UVzI_l8F3f8kA",
@@ -2944,8 +3026,8 @@
   },
   {
    "title": "Dinah Starts The Stream Laughing Uncontrollably \ud83d\ude2d\ud83d\ude02",
-   "views": 6,
-   "lift": 3.0
+   "views": 7,
+   "lift": 3.5
   },
   {
    "title": "CaseOh Get Jump Scared Mid Game \ud83d\ude2d",
@@ -2979,8 +3061,8 @@
   },
   {
    "title": "Jynxzi Didn't See This Coming At Biggest Announcement Ever \ud83d\ude31",
-   "views": 20,
-   "lift": 10.0
+   "views": 22,
+   "lift": 11.0
   },
   {
    "title": "Kai Cenat Didn't See This Coming \ud83d\ude31",
@@ -3063,59 +3145,6 @@
   "mode": "inbox"
  },
  "chat_spikes": {
-  "AaMF4bAqxO8": [
-   {
-    "t": 36754,
-    "ratio": 8.0,
-    "msgs": 57,
-    "sample": [
-     "W",
-     "w",
-     "W",
-     "SPAM W",
-     "W"
-    ]
-   },
-   {
-    "t": 104,
-    "ratio": 5.6,
-    "msgs": 120,
-    "sample": [
-     "yo yoy yo",
-     "Yooo",
-     "yooooo",
-     "yo twitch",
-     "yoo"
-    ]
-   },
-   {
-    "t": 28259,
-    "ratio": 4.8,
-    "msgs": 128,
-    "sample": [
-     "bro",
-     "Jersey baby!!!!",
-     "What are the giveaway rules"
-    ]
-   },
-   {
-    "t": 12084,
-    "ratio": 4.5,
-    "msgs": 22,
-    "sample": [
-     "W KAI",
-     "ww"
-    ]
-   },
-   {
-    "t": 16714,
-    "ratio": 4.5,
-    "msgs": 19,
-    "sample": [
-     "Yooooo"
-    ]
-   }
-  ],
   "6dhayer-a90": [
    {
     "t": 37264,
@@ -4440,6 +4469,68 @@
      "yo",
      "yo",
      "w"
+    ]
+   }
+  ],
+  "UuJUZhyPiu8": [
+   {
+    "t": 5834,
+    "ratio": 5.0,
+    "msgs": 49,
+    "sample": [
+     "LMAO",
+     "mate bro",
+     "LMAOOOOOOO",
+     "WTF",
+     "mate broooooo"
+    ]
+   },
+   {
+    "t": 2704,
+    "ratio": 4.4,
+    "msgs": 42,
+    "sample": [
+     "What\u2019s the dc ",
+     "w",
+     "w",
+     "w",
+     "w"
+    ]
+   },
+   {
+    "t": 694,
+    "ratio": 4.2,
+    "msgs": 25,
+    "sample": [
+     "Ww",
+     "Www",
+     "Ww",
+     "BRO YOUSHOULDVE DONE BARATIE",
+     "W"
+    ]
+   },
+   {
+    "t": 2924,
+    "ratio": 3.8,
+    "msgs": 44,
+    "sample": [
+     "W",
+     "W",
+     "W",
+     "W",
+     "Www"
+    ]
+   },
+   {
+    "t": 6119,
+    "ratio": 3.2,
+    "msgs": 69,
+    "sample": [
+     "LMAOOOOOO",
+     "ww",
+     "ww",
+     "ww",
+     "ww"
     ]
    }
   ]

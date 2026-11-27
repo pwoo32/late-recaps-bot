@@ -1,0 +1,258 @@
+[
+ {
+  "id": 1,
+  "source": "ishowspeed",
+  "creator": "IShowSpeed",
+  "platform": "youtube",
+  "video_id": "PHSsdHu2Er0",
+  "video_title": "I RACED USAIN BOLT!",
+  "url": "https://www.youtube.com/watch?v=PHSsdHu2Er0&t=1225s",
+  "moment": "20:25",
+  "start": 1205,
+  "end": 1235,
+  "rank": 10.72,
+  "signal": "7 timestamp comments, 166 likes",
+  "signals": [
+   "comments"
+  ],
+  "quotes": [
+   "”10.5 is average” yeah righttt",
+   "10.3 is a crazy score imagine if he trained consistently",
+   "“speed I am speed”"
+  ],
+  "stream_age_h": 121.6,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "face34",
+   "test": null
+  },
+  "council": {
+   "trend": 0.76,
+   "study": 1.0,
+   "analytics": 0.47,
+   "live": 0.45,
+   "script": 1.0,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 0.76,
+    "why": "Speed clips pull 983,980 views/hour this week, up 31% since the last scan"
+   },
+   "study": {
+    "score": 1.0,
+    "why": "6 of the top channels' breakout Shorts are Speed clips; Speed is in 97 of their recent titles"
+   },
+   "analytics": {
+    "score": 0.47,
+    "why": "Speed clips spread 1.0x our typical clip; viewer timestamp comments moments do 0.8x; has a spoken premise (bet/question/challenge); stream is 122h old (other clippers had time)"
+   },
+   "live": {
+    "score": 0.45,
+    "why": "7 timestamp comments, 166 likes"
+   },
+   "script": {
+    "score": 1.0,
+    "why": "draft title: \"Speed Asks Damn \">> Think He Could Hang With You?\" 😡\""
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-27T20:00:30Z",
+  "council_why": "IShowSpeed's clips are currently trending significantly higher than Jynxzi's, and the channel study shows that Speed's clips have a much higher chance of breaking out.",
+  "post_utc": "2026-11-28 06:00",
+  "post_local": "Sat 01:00 AM ET",
+  "title": "Speed ”10.5 is average” yeah righttt 🤯",
+  "hook": "”10.5 IS AVERAGE” YEAH RIGHTTT",
+  "context": "IShowSpeed live, I RACED USAIN BOLT!",
+  "take": "Speed had no idea what was about to happen.",
+  "summary": "IShowSpeed live: I RACED USAIN BOLT!",
+  "tiktok_caption": "Speed in I RACED USAIN BOLT!.",
+  "hashtags": [],
+  "tags": [],
+  "draft": true,
+  "writer": "template",
+  "description": "IShowSpeed live, I RACED USAIN BOLT!\n\nFull stream by IShowSpeed: https://www.youtube.com/watch?v=PHSsdHu2Er0&t=1225s\nGo support IShowSpeed, all credit to them.\n\n#ishowspeed #speed #shorts #kaicenat",
+  "key": "PHSsdHu2Er0@40",
+  "permission": "fan clipping is widespread and tolerated; no official paid program found (Oct 2026)"
+ },
+ {
+  "id": 2,
+  "source": "jynxzi",
+  "creator": "Jynxzi",
+  "platform": "youtube",
+  "video_id": "oDbeULQ-RQw",
+  "video_title": "PUSHING LEGENDS DIVISION",
+  "url": "https://www.youtube.com/watch?v=oDbeULQ-RQw&t=18144s",
+  "moment": "5:02:24",
+  "start": 18124,
+  "end": 18154,
+  "rank": 22.39,
+  "signal": "chat went 8.8x its normal pace",
+  "signals": [
+   "chat spike"
+  ],
+  "quotes": [
+   "w",
+   "w",
+   "w"
+  ],
+  "stream_age_h": 42.4,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 0.35,
+   "layout": "face34",
+   "test": "gap"
+  },
+  "council": {
+   "trend": 0.14,
+   "study": 0.25,
+   "analytics": 0.79,
+   "live": 0.55,
+   "script": 1.0,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 0.14,
+    "why": "Jynxzi clips pull 30,315 views/hour this week, down 16% since the last scan"
+   },
+   "study": {
+    "score": 0.25,
+    "why": "top channels rarely break out with Jynxzi"
+   },
+   "analytics": {
+    "score": 0.79,
+    "why": "Jynxzi clips spread 1.9x our typical clip; chat spike moments do 1.4x; has a spoken premise (bet/question/challenge); stream is 42h old"
+   },
+   "live": {
+    "score": 0.55,
+    "why": "chat went 8.8x"
+   },
+   "script": {
+    "score": 1.0,
+    "why": "draft title: \"Jynxzi Asks Watch \">> Do You Hear This Guy?\" 🔥\""
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-27T20:00:30Z",
+  "council_why": "Jynxzi's clip at 5:02:24 in 'PUSHING LEGENDS DIVISION' has a strong chat spike and a clear spoken premise, which could attract more views.",
+  "post_utc": "2026-11-27 22:00",
+  "post_local": "Fri 05:00 PM ET",
+  "title": "Jynxzi w 🤯",
+  "hook": "W",
+  "context": "Jynxzi live, PUSHING LEGENDS DIVISION",
+  "take": "This is why chat can't stop clipping Jynxzi.",
+  "summary": "Jynxzi live: PUSHING LEGENDS DIVISION",
+  "tiktok_caption": "Jynxzi in PUSHING LEGENDS DIVISION.",
+  "hashtags": [],
+  "tags": [],
+  "draft": true,
+  "writer": "template",
+  "description": "Jynxzi live, PUSHING LEGENDS DIVISION\n\nFull stream by Jynxzi: https://www.youtube.com/watch?v=oDbeULQ-RQw&t=18144s\nGo support Jynxzi, all credit to them.\n\n#jynxzi #ishowspeed #shorts #kaicenat #speed",
+  "key": "oDbeULQ-RQw@604",
+  "permission": "fan clipping tolerated; check for a Whop campaign"
+ },
+ {
+  "id": 3,
+  "source": "jynxzi",
+  "creator": "Jynxzi",
+  "platform": "youtube",
+  "video_id": "UuJUZhyPiu8",
+  "video_title": "HAPPY THANKSGIVING STREAM",
+  "url": "https://www.youtube.com/watch?v=UuJUZhyPiu8&t=5837s",
+  "moment": "1:37:17",
+  "start": 5817,
+  "end": 5847,
+  "rank": 25.98,
+  "signal": "3 timestamp comments, 1 likes; chat went 5.0x its normal pace",
+  "signals": [
+   "comments",
+   "chat spike"
+  ],
+  "quotes": [
+   "I was following what he said then looked up and saw his rook and thought to my self \"isnt that mate?\" And it was the most perfectly timed th",
+   "Don't mind me, I just like this part",
+   "lol someone said \"and he sacrifice's the game!\""
+  ],
+  "stream_age_h": 18.7,
+  "spike": false,
+  "recipe": {
+   "length": 30,
+   "punch": 0.14,
+   "beat": "normal",
+   "caption_words": 3,
+   "gap": 0.6,
+   "layout": "crop43",
+   "test": "layout"
+  },
+  "council": {
+   "trend": 0.14,
+   "study": 0.25,
+   "analytics": 0.88,
+   "live": 0.6,
+   "script": 1.0,
+   "audience": 0.5
+  },
+  "council_votes": {
+   "trend": {
+    "score": 0.14,
+    "why": "Jynxzi clips pull 30,315 views/hour this week, down 16% since the last scan"
+   },
+   "study": {
+    "score": 0.25,
+    "why": "top channels rarely break out with Jynxzi"
+   },
+   "analytics": {
+    "score": 0.88,
+    "why": "Jynxzi clips spread 1.9x our typical clip; chat spike moments do 1.4x; has a spoken premise (bet/question/challenge); stream is 19h old"
+   },
+   "live": {
+    "score": 0.6,
+    "why": "chat went 5.0x, 3 timestamp comments, 1 likes"
+   },
+   "script": {
+    "score": 1.0,
+    "why": "draft title: \"Jynxzi Asks Takes \"We Have This Coming, Right?\" 🔥\""
+   },
+   "audience": {
+    "score": 0.5,
+    "why": "no comments on our channel asking for anyone yet"
+   }
+  },
+  "council_chair": true,
+  "council_meeting_at": "2026-11-27T20:00:30Z",
+  "council_why": "Jynxzi's clip at 1:37:17 in 'HAPPY THANKSGIVING STREAM' has a clear spoken premise and a strong chat reaction, despite the trend researcher showing a slight decline in views.",
+  "post_utc": "2026-11-28 03:00",
+  "post_local": "Fri 10:00 PM ET",
+  "title": "Jynxzi I was following what he said then 😭",
+  "hook": "I WAS FOLLOWING WHAT HE SAID THEN LOOKED",
+  "context": "Jynxzi live, HAPPY THANKSGIVING STREAM",
+  "take": "Jynxzi really thought this was a good idea.",
+  "summary": "Jynxzi live: HAPPY THANKSGIVING STREAM",
+  "tiktok_caption": "Jynxzi in HAPPY THANKSGIVING STREAM.",
+  "hashtags": [],
+  "tags": [],
+  "draft": true,
+  "writer": "template",
+  "description": "Jynxzi live, HAPPY THANKSGIVING STREAM\n\nFull stream by Jynxzi: https://www.youtube.com/watch?v=UuJUZhyPiu8&t=5837s\nGo support Jynxzi, all credit to them.\n\n#jynxzi #ishowspeed #shorts #kaicenat #speed",
+  "key": "UuJUZhyPiu8@194",
+  "permission": "fan clipping tolerated; check for a Whop campaign"
+ }
+]
